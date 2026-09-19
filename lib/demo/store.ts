@@ -4,12 +4,9 @@ import type { DemoUser, StudentState } from "@/lib/types/domain";
 import { DEMO_USERS } from "@/lib/demo/users";
 import { listUsers } from "@/lib/demo/admin-store";
 import { newId } from "@/lib/demo/ids";
+import { ensureDemoDataDir } from "@/lib/demo/data-dir";
 
 export { DEMO_USERS, newId };
-
-const DATA_DIR = path.join(process.cwd(), ".data");
-const SESSION_FILE = path.join(DATA_DIR, "session.json");
-const LEGACY_STATE_FILE = path.join(DATA_DIR, "student-state.json");
 
 function emptyState(userId: string): StudentState {
   return {
@@ -25,45 +22,58 @@ function emptyState(userId: string): StudentState {
   };
 }
 
-function stateFileFor(userId: string) {
-  const safe = userId.replace(/[^a-zA-Z0-9_-]/g, "_");
-  return path.join(DATA_DIR, `progress-${safe}.json`);
+async function paths() {
+  const dir = await ensureDemoDataDir();
+  return {
+    dir,
+    session: path.join(dir, "session.json"),
+    legacy: path.join(dir, "student-state.json"),
+    stateFor: (userId: string) => {
+      const safe = userId.replace(/[^a-zA-Z0-9_-]/g, "_");
+      return path.join(dir, `progress-${safe}.json`);
+    },
+  };
 }
 
-async function ensureDataDir() {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-}
+/** In-memory fallback when disk is unavailable mid-request. */
+const memoryState = new Map<string, StudentState>();
+let memorySessionUserId: string | null = null;
 
 export async function readStudentState(userId?: string): Promise<StudentState> {
   const id = userId ?? (await getSessionUserId());
-  await ensureDataDir();
-  const file = stateFileFor(id);
   try {
-    const raw = await fs.readFile(file, "utf8");
-    const parsed = JSON.parse(raw) as StudentState;
-    return { ...parsed, userId: id };
-  } catch {
-    // migrate legacy single-file store for default student
-    if (id === "user-student-1") {
-      try {
-        const legacy = JSON.parse(
-          await fs.readFile(LEGACY_STATE_FILE, "utf8"),
-        ) as StudentState;
-        if (legacy.userId === id) {
-          await writeStudentState(legacy);
-          return legacy;
+    const p = await paths();
+    try {
+      const raw = await fs.readFile(p.stateFor(id), "utf8");
+      const parsed = JSON.parse(raw) as StudentState;
+      return { ...parsed, userId: id };
+    } catch {
+      if (id === "user-student-1") {
+        try {
+          const legacy = JSON.parse(await fs.readFile(p.legacy, "utf8")) as StudentState;
+          if (legacy.userId === id) {
+            await writeStudentState(legacy);
+            return legacy;
+          }
+        } catch {
+          /* no legacy */
         }
-      } catch {
-        /* no legacy */
       }
     }
-    return emptyState(id);
+  } catch {
+    /* disk unavailable */
   }
+  return memoryState.get(id) ?? emptyState(id);
 }
 
 export async function writeStudentState(state: StudentState) {
-  await ensureDataDir();
-  await fs.writeFile(stateFileFor(state.userId), JSON.stringify(state, null, 2), "utf8");
+  memoryState.set(state.userId, state);
+  try {
+    const p = await paths();
+    await fs.writeFile(p.stateFor(state.userId), JSON.stringify(state, null, 2), "utf8");
+  } catch {
+    /* keep memory copy on serverless write failure */
+  }
 }
 
 export async function updateStudentState(
@@ -79,9 +89,10 @@ export async function updateStudentState(
 }
 
 export async function getSessionUserId(): Promise<string> {
-  await ensureDataDir();
+  if (memorySessionUserId) return memorySessionUserId;
   try {
-    const raw = await fs.readFile(SESSION_FILE, "utf8");
+    const p = await paths();
+    const raw = await fs.readFile(p.session, "utf8");
     const parsed = JSON.parse(raw) as { userId: string };
     return parsed.userId || "user-student-1";
   } catch {
@@ -90,8 +101,13 @@ export async function getSessionUserId(): Promise<string> {
 }
 
 export async function setSessionUserId(userId: string) {
-  await ensureDataDir();
-  await fs.writeFile(SESSION_FILE, JSON.stringify({ userId }, null, 2), "utf8");
+  memorySessionUserId = userId;
+  try {
+    const p = await paths();
+    await fs.writeFile(p.session, JSON.stringify({ userId }, null, 2), "utf8");
+  } catch {
+    /* memory session only */
+  }
 }
 
 export async function getSessionUser(): Promise<DemoUser> {

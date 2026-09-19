@@ -12,12 +12,17 @@ import { DEMO_USERS } from "@/lib/demo/users";
 import { program as seedProgram } from "@/lib/curriculum/seed";
 import { applyCurriculumExpansions } from "@/lib/curriculum/expansions";
 import { newId } from "@/lib/demo/ids";
+import { ensureDemoDataDir } from "@/lib/demo/data-dir";
 
-const DATA_DIR = path.join(process.cwd(), ".data");
-const INVITES_FILE = path.join(DATA_DIR, "invites.json");
-const UNLOCK_FILE = path.join(DATA_DIR, "unlock-rules.json");
-const OVERRIDES_FILE = path.join(DATA_DIR, "curriculum-overrides.json");
-const USERS_FILE = path.join(DATA_DIR, "users.json");
+async function dataFiles() {
+  const dir = await ensureDemoDataDir();
+  return {
+    invites: path.join(dir, "invites.json"),
+    unlock: path.join(dir, "unlock-rules.json"),
+    overrides: path.join(dir, "curriculum-overrides.json"),
+    users: path.join(dir, "users.json"),
+  };
+}
 
 export type LessonOverride = {
   lessonId: string;
@@ -58,13 +63,9 @@ export type FacultyQuestion = {
   updatedBy: string;
 };
 
-async function ensureDataDir() {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-}
-
 async function readJson<T>(file: string, fallback: T): Promise<T> {
-  await ensureDataDir();
   try {
+    await ensureDemoDataDir();
     return JSON.parse(await fs.readFile(file, "utf8")) as T;
   } catch {
     return fallback;
@@ -72,8 +73,12 @@ async function readJson<T>(file: string, fallback: T): Promise<T> {
 }
 
 async function writeJson(file: string, value: unknown) {
-  await ensureDataDir();
-  await fs.writeFile(file, JSON.stringify(value, null, 2), "utf8");
+  try {
+    await ensureDemoDataDir();
+    await fs.writeFile(file, JSON.stringify(value, null, 2), "utf8");
+  } catch {
+    /* serverless: ignore durable write failures */
+  }
 }
 
 export function hashToken(token: string) {
@@ -115,7 +120,8 @@ const DEFAULT_UNLOCK_RULES: UnlockRule[] = [
 ];
 
 export async function listUsers(): Promise<DemoUser[]> {
-  const extra = await readJson<DemoUser[]>(USERS_FILE, []);
+  const files = await dataFiles();
+  const extra = await readJson<DemoUser[]>(files.users, []);
   const byId = new Map<string, DemoUser>();
   for (const u of [...DEMO_USERS, ...extra]) byId.set(u.id, u);
   return [...byId.values()];
@@ -126,14 +132,16 @@ export async function addProvisionedUser(user: DemoUser) {
   if (users.some((u) => u.email === user.email)) {
     throw new Error("User already exists");
   }
-  const extra = await readJson<DemoUser[]>(USERS_FILE, []);
+  const files = await dataFiles();
+  const extra = await readJson<DemoUser[]>(files.users, []);
   extra.push(user);
-  await writeJson(USERS_FILE, extra);
+  await writeJson(files.users, extra);
   return user;
 }
 
 export async function listInvites(): Promise<Invite[]> {
-  return readJson<Invite[]>(INVITES_FILE, []);
+  const files = await dataFiles();
+  return readJson<Invite[]>(files.invites, []);
 }
 
 export async function createInvite(input: {
@@ -157,7 +165,8 @@ export async function createInvite(input: {
   };
   const invites = await listInvites();
   invites.unshift(invite);
-  await writeJson(INVITES_FILE, invites);
+  const files = await dataFiles();
+  await writeJson(files.invites, invites);
   return { invite, token };
 }
 
@@ -166,7 +175,8 @@ export async function revokeInvite(inviteId: string) {
   const next = invites.map((i) =>
     i.id === inviteId ? { ...i, status: "revoked" as const } : i,
   );
-  await writeJson(INVITES_FILE, next);
+  const files = await dataFiles();
+  await writeJson(files.invites, next);
 }
 
 export async function acceptInvite(token: string, fullName: string) {
@@ -187,26 +197,31 @@ export async function acceptInvite(token: string, fullName: string) {
   await addProvisionedUser(user);
   invite.status = "accepted";
   invite.acceptedAt = new Date().toISOString();
-  await writeJson(INVITES_FILE, invites);
+  const files = await dataFiles();
+  await writeJson(files.invites, invites);
   return user;
 }
 
 export async function listUnlockRules(): Promise<UnlockRule[]> {
-  return readJson<UnlockRule[]>(UNLOCK_FILE, DEFAULT_UNLOCK_RULES);
+  const files = await dataFiles();
+  return readJson<UnlockRule[]>(files.unlock, DEFAULT_UNLOCK_RULES);
 }
 
 export async function saveUnlockRules(rules: UnlockRule[]) {
-  await writeJson(UNLOCK_FILE, rules);
+  const files = await dataFiles();
+  await writeJson(files.unlock, rules);
 }
 
 export async function getCurriculumOverrides(): Promise<CurriculumOverrides> {
-  return readJson<CurriculumOverrides>(OVERRIDES_FILE, { lessons: {} });
+  const files = await dataFiles();
+  return readJson<CurriculumOverrides>(files.overrides, { lessons: {} });
 }
 
 export async function saveLessonOverride(override: LessonOverride) {
   const current = await getCurriculumOverrides();
   current.lessons[override.lessonId] = override;
-  await writeJson(OVERRIDES_FILE, current);
+  const files = await dataFiles();
+  await writeJson(files.overrides, current);
   return override;
 }
 
@@ -228,14 +243,16 @@ export async function upsertFacultyFlashcard(
   if (idx >= 0) cards[idx] = next;
   else cards.push(next);
   current.flashcards = cards;
-  await writeJson(OVERRIDES_FILE, current);
+  const files = await dataFiles();
+  await writeJson(files.overrides, current);
   return next;
 }
 
 export async function deleteFacultyFlashcard(id: string) {
   const current = await getCurriculumOverrides();
   current.flashcards = (current.flashcards ?? []).filter((c) => c.id !== id);
-  await writeJson(OVERRIDES_FILE, current);
+  const files = await dataFiles();
+  await writeJson(files.overrides, current);
 }
 
 export async function listFacultyQuestions(): Promise<FacultyQuestion[]> {
@@ -256,14 +273,16 @@ export async function upsertFacultyQuestion(
   if (idx >= 0) questions[idx] = next;
   else questions.push(next);
   current.questions = questions;
-  await writeJson(OVERRIDES_FILE, current);
+  const files = await dataFiles();
+  await writeJson(files.overrides, current);
   return next;
 }
 
 export async function deleteFacultyQuestion(id: string) {
   const current = await getCurriculumOverrides();
   current.questions = (current.questions ?? []).filter((q) => q.id !== id);
-  await writeJson(OVERRIDES_FILE, current);
+  const files = await dataFiles();
+  await writeJson(files.overrides, current);
 }
 
 /** Resolve live curriculum with expansions + faculty overrides applied. */

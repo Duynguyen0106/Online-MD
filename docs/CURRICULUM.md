@@ -13,13 +13,15 @@ Online MD follows the architecture of leading US MD programs: **integrated precl
 
 Assumptions: **40 hours/week × 46 weeks/year**, mastery multiplier **≈2×** first-pass study (re-reads, quizzes ≥80%, exams, spaced cards, cases).
 
-| Block | First-pass lesson hours (catalog) | With mastery (~2×) | Full-time duration |
+| Block | First-pass lesson hours | With mastery (~2×) | Full-time duration |
 | --- | --- | --- | --- |
-| Preclinical Y1–Y2 | ~1,860 h | ~3,720 h | **≥2.0 years** |
-| Clinical Y3–Y4 | ~624 h | ~1,248 h | ~0.7 years catalog + clerkship immersion framing |
-| **Program total (catalog)** | ~2,484 h | ~4,968 h | **~2.7 years** of structured Online MD study units |
+| Preclinical Y1–Y2 | ~2,377 h (538 lessons) | ~4,753 h | **~2.58 years** |
+| Clinical Y3–Y4 | ~1,238 h (346 lessons) | ~2,476 h | **~1.35 years** catalog + clerkship immersion framing |
+| **Program total** | ~3,615 h (884 lessons) | ~7,229 h | **~3.9 years** of structured Online MD study units |
 
-> Residential MD still includes ~2 years of clinical immersion that online modules approximate but do not fully replace (procedural volume, longitudinal clinics, overnight call). Online MD’s **preclinical** load is sized so a full-time student needs **at least 2 years** before clerkship Qbank unlocks.
+1,840 h/year (40×46). Catalog topics (771) supply ~2,335 preclinical first-pass hours; seed + expansions bring the live graph to **538 preclinical / 346 clinical**. Recount: `npx tsx scripts/hour-budget.ts`.
+
+> Residential MD still includes ~2 years of clinical immersion that online modules approximate but do not fully replace (procedural volume, longitudinal clinics, overnight call). Online MD’s **preclinical** load is sized so a full-time student needs **≈2.5–2.6 years** of mastery study before clerkship Qbank unlocks (≥2-year design floor).
 
 ## Module map (sticks to curriculum)
 
@@ -45,5 +47,5 @@ Sub-I / ICU / complex ambulatory topics layered on clerkship modules + advanced 
 
 - Original educational writing; USMLE Content Outline–aligned domains.
 - No proprietary question banks or school LMS text.
-- Catalog generator: `lib/curriculum/catalog/` (528+ topics) layered on seed + waves 1–7.
+- Catalog generator: `lib/curriculum/catalog/` (771 topics) layered on seed + waves 1–7 → **884** published lessons in the live graph.
 - Sync path: same graph → Supabase tables when Auth/DB cutover completes.
