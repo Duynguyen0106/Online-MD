@@ -39,6 +39,14 @@ import {
   wave5QbankQuestions,
   wave5QuizQuestions,
 } from "@/lib/curriculum/expansions-wave5";
+import {
+  applyWave6Expansions,
+  wave6ClinicalCases,
+  wave6Flashcards,
+  wave6Objectives,
+  wave6QbankQuestions,
+  wave6QuizQuestions,
+} from "@/lib/curriculum/expansions-wave6";
 
 export {
   depthClinicalCases,
@@ -61,6 +69,11 @@ export {
   wave5Objectives,
   wave5QbankQuestions,
   wave5QuizQuestions,
+  wave6ClinicalCases,
+  wave6Flashcards,
+  wave6Objectives,
+  wave6QbankQuestions,
+  wave6QuizQuestions,
 };
 
 /** Additional original educational content layered onto the base seed. */
@@ -600,6 +613,7 @@ export function applyCurriculumExpansions(program: Program): Program {
   applyWave3Expansions(program);
   applyWave4Expansions(program);
   applyWave5Expansions(program);
+  applyWave6Expansions(program);
   for (const phase of program.phases) {
     for (const mod of phase.modules) {
       if (mod.id === IDS.modEndo) {
