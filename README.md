@@ -32,9 +32,11 @@ Open [http://localhost:3000](http://localhost:3000). Progress persists in `.data
 
 ```bash
 npm test
+npm run mastery   # Cell module → Qbank unlock path
 npm run build
 ```
 
+Auth routes: `/login` (students), `/invite/[token]` (faculty/admin). Admin: `/admin/invites`, `/admin/users`, `/admin/unlock-rules`.
 ## Faculty AI
 
 `lib/ai/medical-educator.ts` uses a board-level medical educator system prompt. Responses are validated with Zod.
