@@ -42,6 +42,9 @@ import {
   wave7Objectives,
   wave7QbankQuestions,
   wave7QuizQuestions,
+  catalogFlashcards,
+  catalogObjectives,
+  catalogQuizQuestions,
 } from "@/lib/curriculum/expansions";
 import type {
   Lesson,
@@ -60,6 +63,7 @@ const quizQuestions = [
   ...wave5QuizQuestions,
   ...wave6QuizQuestions,
   ...wave7QuizQuestions,
+  ...catalogQuizQuestions,
 ];
 const objectives = [
   ...baseObjectives,
@@ -70,6 +74,7 @@ const objectives = [
   ...wave5Objectives,
   ...wave6Objectives,
   ...wave7Objectives,
+  ...catalogObjectives,
 ];
 const flashcards = [
   ...baseFlashcards,
@@ -80,6 +85,7 @@ const flashcards = [
   ...wave5Flashcards,
   ...wave6Flashcards,
   ...wave7Flashcards,
+  ...catalogFlashcards,
 ];
 const qbankQuestions = [
   ...baseQbank,
