@@ -31,6 +31,17 @@ export type LessonOverride = {
 
 export type CurriculumOverrides = {
   lessons: Record<string, LessonOverride>;
+  flashcards?: FacultyFlashcard[];
+};
+
+export type FacultyFlashcard = {
+  id: string;
+  lessonId?: string;
+  front: string;
+  back: string;
+  objectiveId?: string;
+  updatedAt: string;
+  updatedBy: string;
 };
 
 async function ensureDataDir() {
@@ -183,6 +194,34 @@ export async function saveLessonOverride(override: LessonOverride) {
   current.lessons[override.lessonId] = override;
   await writeJson(OVERRIDES_FILE, current);
   return override;
+}
+
+export async function listFacultyFlashcards(): Promise<FacultyFlashcard[]> {
+  const current = await getCurriculumOverrides();
+  return current.flashcards ?? [];
+}
+
+export async function upsertFacultyFlashcard(
+  card: Omit<FacultyFlashcard, "updatedAt"> & { updatedAt?: string },
+) {
+  const current = await getCurriculumOverrides();
+  const cards = current.flashcards ?? [];
+  const next: FacultyFlashcard = {
+    ...card,
+    updatedAt: new Date().toISOString(),
+  };
+  const idx = cards.findIndex((c) => c.id === card.id);
+  if (idx >= 0) cards[idx] = next;
+  else cards.push(next);
+  current.flashcards = cards;
+  await writeJson(OVERRIDES_FILE, current);
+  return next;
+}
+
+export async function deleteFacultyFlashcard(id: string) {
+  const current = await getCurriculumOverrides();
+  current.flashcards = (current.flashcards ?? []).filter((c) => c.id !== id);
+  await writeJson(OVERRIDES_FILE, current);
 }
 
 /** Resolve live curriculum with expansions + faculty overrides applied. */

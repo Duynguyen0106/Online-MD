@@ -6,7 +6,7 @@ import { addProvisionedUser, listUsers } from "@/lib/demo/admin-store";
 import {
   newId,
   setSessionUserId,
-  writeStudentState,
+  resetCurrentUserProgress,
 } from "@/lib/demo/store";
 
 const signupSchema = z.object({
@@ -32,18 +32,7 @@ export async function signupStudent(input: unknown) {
 }
 
 export async function resetDemoProgress() {
-  await writeStudentState({
-    userId: "user-student-1",
-    lessonProgress: {},
-    moduleProgress: {},
-    quizAttempts: [],
-    examAttempts: [],
-    cardReviews: {},
-    qbankAttempts: [],
-    caseAttempts: [],
-    tutorThreads: [],
-  });
-  await setSessionUserId("user-student-1");
+  await resetCurrentUserProgress();
   revalidatePath("/", "layout");
   revalidatePath("/dashboard");
   revalidatePath("/qbank");

@@ -1,17 +1,8 @@
 import { AppShell } from "@/components/shared/app-shell";
 import { Badge } from "@/components/ui/badge";
-import { getSessionUser } from "@/lib/demo/store";
 import { listUsers } from "@/lib/demo/admin-store";
 
 export default async function AdminUsersPage() {
-  const user = await getSessionUser();
-  if (user.role !== "admin") {
-    return (
-      <AppShell title="Users">
-        <p className="text-sm text-[var(--muted)]">Admin only.</p>
-      </AppShell>
-    );
-  }
   const users = await listUsers();
   return (
     <AppShell title="Users">

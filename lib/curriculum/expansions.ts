@@ -44,6 +44,50 @@ export const extraObjectives: Objective[] = [
     moduleId: IDS.modIm,
     lessonIds: ["les-im-2"],
   },
+  {
+    id: "obj-neuro-3",
+    code: "OBJ-P1-NEURO-003",
+    statement: "Localize stroke syndromes using vascular territory patterns.",
+    usmleStep: "step1",
+    organSystem: "Nervous System",
+    physicianTask: "Diagnosis",
+    contentCategory: "Neuroscience",
+    moduleId: IDS.modNeuro,
+    lessonIds: ["les-neuro-3"],
+  },
+  {
+    id: "obj-heme-2",
+    code: "OBJ-P1-HEME-002",
+    statement: "Distinguish intrinsic vs extrinsic coagulation pathway defects clinically.",
+    usmleStep: "step1",
+    organSystem: "Hematopoietic / Lymphoreticular",
+    physicianTask: "Diagnosis",
+    contentCategory: "Pathophysiology",
+    moduleId: IDS.modHeme,
+    lessonIds: ["les-heme-2"],
+  },
+  {
+    id: "obj-psych-2",
+    code: "OBJ-P2-PSY-002",
+    statement: "Differentiate mania, hypomania, and mixed features in mood disorders.",
+    usmleStep: "step2ck",
+    organSystem: "Behavioral Health",
+    physicianTask: "Diagnosis",
+    contentCategory: "Psychiatry",
+    moduleId: IDS.modPsych,
+    lessonIds: ["les-psych-2"],
+  },
+  {
+    id: "obj-surg-2",
+    code: "OBJ-P2-SURG-002",
+    statement: "Prioritize evaluation of the acute abdomen by peritonitis vs obstruction patterns.",
+    usmleStep: "step2ck",
+    organSystem: "Gastrointestinal",
+    physicianTask: "Diagnosis",
+    contentCategory: "Surgery",
+    moduleId: IDS.modSurg,
+    lessonIds: ["les-surg-2"],
+  },
 ];
 
 export const extraQuizQuestions: QuizQuestion[] = [
@@ -100,6 +144,70 @@ export const extraQuizQuestions: QuizQuestion[] = [
     correctChoiceId: "qq-im-2-c0",
     explanation:
       "Rapid ECG + antiplatelet (when appropriate) + biomarker pathway guide STEMI vs NSTE-ACS decisions.",
+  },
+  {
+    id: "qq-neuro-3",
+    lessonId: "les-neuro-3",
+    sequence: 1,
+    objectiveId: "obj-neuro-3",
+    stem: "Sudden right face/arm weakness with aphasia most suggests occlusion in which territory?",
+    choices: [
+      { id: "qq-neuro-3-c0", text: "Left MCA superior/perisylvian language regions" },
+      { id: "qq-neuro-3-c1", text: "Right PCA occipital pole only" },
+      { id: "qq-neuro-3-c2", text: "Anterior spinal artery" },
+      { id: "qq-neuro-3-c3", text: "Bilateral ACA watershed exclusively" },
+    ],
+    correctChoiceId: "qq-neuro-3-c0",
+    explanation:
+      "Dominant (usually left) MCA lesions produce contralateral face/arm weakness with aphasia.",
+  },
+  {
+    id: "qq-heme-2",
+    lessonId: "les-heme-2",
+    sequence: 1,
+    objectiveId: "obj-heme-2",
+    stem: "Isolated prolonged PTT that corrects with mixing, with normal PT, suggests deficiency of:",
+    choices: [
+      { id: "qq-heme-2-c0", text: "An intrinsic pathway factor (e.g., VIII, IX, XI)" },
+      { id: "qq-heme-2-c1", text: "Factor VII alone" },
+      { id: "qq-heme-2-c2", text: "Fibrinogen only" },
+      { id: "qq-heme-2-c3", text: "Vitamin K–dependent factor VII exclusively without PTT change" },
+    ],
+    correctChoiceId: "qq-heme-2-c0",
+    explanation:
+      "Intrinsic pathway defects prolong PTT; mixing correction implies factor deficiency rather than inhibitor.",
+  },
+  {
+    id: "qq-psych-2",
+    lessonId: "les-psych-2",
+    sequence: 1,
+    objectiveId: "obj-psych-2",
+    stem: "A 5-day episode of elevated mood, decreased need for sleep, and grandiose plans causing job loss is best classified as:",
+    choices: [
+      { id: "qq-psych-2-c0", text: "Manic episode (functional impairment / severity)" },
+      { id: "qq-psych-2-c1", text: "Hypomania without impairment by definition" },
+      { id: "qq-psych-2-c2", text: "Major depression with seasonal pattern only" },
+      { id: "qq-psych-2-c3", text: "Brief psychotic disorder without mood findings" },
+    ],
+    correctChoiceId: "qq-psych-2-c0",
+    explanation:
+      "Mania includes marked impairment or hospitalization; hypomania is milder without major impairment.",
+  },
+  {
+    id: "qq-surg-2",
+    lessonId: "les-surg-2",
+    sequence: 1,
+    objectiveId: "obj-surg-2",
+    stem: "Diffuse peritonitis after sudden-onset severe abdominal pain most urgently raises concern for:",
+    choices: [
+      { id: "qq-surg-2-c0", text: "Hollow viscus perforation until proven otherwise" },
+      { id: "qq-surg-2-c1", text: "Uncomplicated viral gastroenteritis" },
+      { id: "qq-surg-2-c2", text: "Constipation alone" },
+      { id: "qq-surg-2-c3", text: "Stable inguinal hernia without incarceration risk" },
+    ],
+    correctChoiceId: "qq-surg-2-c0",
+    explanation:
+      "Sudden severe pain with peritonitis is a surgical emergency differential led by perforation.",
   },
 ];
 
@@ -168,6 +276,20 @@ export const extraFlashcards: Flashcard[] = [
     back: "ECG immediately; aspirin if appropriate; troponin pathway.",
     objectiveId: "obj-im-2",
   },
+  {
+    id: "fc-12",
+    lessonId: "les-neuro-3",
+    front: "Aphasia + right face/arm weakness territory?",
+    back: "Usually left MCA language cortex / superior division territory.",
+    objectiveId: "obj-neuro-3",
+  },
+  {
+    id: "fc-13",
+    lessonId: "les-heme-2",
+    front: "Isolated ↑PTT that corrects on mixing?",
+    back: "Intrinsic pathway factor deficiency (VIII/IX/XI…).",
+    objectiveId: "obj-heme-2",
+  },
 ];
 
 export const extraClinicalCases: ClinicalCase[] = [
@@ -215,6 +337,29 @@ export const extraClinicalCases: ClinicalCase[] = [
     teachingPoints:
       "Troponin-positive ischemia without STEMI criteria is NSTEMI; stabilize and risk-stratify for invasive strategy timing.",
     objectiveIds: ["obj-im-2"],
+    status: "published",
+  },
+  {
+    id: "case-surg-1",
+    moduleId: IDS.modSurg,
+    title: "Sudden Severe Abdominal Pain",
+    presentationMd:
+      "45-year-old with sudden-onset diffuse abdominal pain, board-like rigidity, and absent bowel sounds. HR 120, BP 95/60. Upright CXR pending.",
+    stages: [
+      {
+        id: "s1",
+        prompt: "What is your leading diagnosis category and why?",
+        expectedFocus: "Perforated viscus / peritonitis — rigid abdomen, systemic signs",
+      },
+      {
+        id: "s2",
+        prompt: "List resuscitation and surgical priorities before imaging delays care.",
+        expectedFocus: "ABCs, IV access, fluids, broad antibiotics, surgical consult, avoid delaying OR for unstable peritonitis",
+      },
+    ],
+    teachingPoints:
+      "Diffuse peritonitis is a surgical emergency. Resuscitate in parallel with definitive source control planning.",
+    objectiveIds: ["obj-surg-2"],
     status: "published",
   },
 ];
@@ -401,6 +546,157 @@ Online clerkship goal: practice *problem representation* and order-set reasoning
         if (mod.exam) {
           mod.exam.questionIds = [...mod.exam.questionIds, "qq-im-2"];
         }
+      }
+
+      if (mod.id === IDS.modNeuro) {
+        mod.lessons.push({
+          id: "les-neuro-3",
+          moduleId: IDS.modNeuro,
+          title: "Stroke Localization by Territory",
+          slug: "neuro-stroke",
+          sequence: 2,
+          estimatedMinutes: 35,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-neuro-3"],
+          concepts: [
+            {
+              id: "con-neuro-3a",
+              lessonId: "les-neuro-3",
+              title: "MCA / ACA / PCA patterns",
+              sequence: 1,
+              summary: "Map deficits to arterial territories before imaging details.",
+              blocks: [
+                reading(
+                  "blk-neuro-3a-r",
+                  "con-neuro-3a",
+                  "Vascular localization",
+                  1,
+                  `## High-yield territories
+- **MCA**: face/arm > leg; aphasia (dominant) or neglect (non-dominant)
+- **ACA**: contralateral leg weakness, frontal behavioral changes
+- **PCA**: visual field cuts, alexia without agraphia (classic variants)
+
+Always pair localization with time-last-known-well reasoning for reperfusion eligibility (clerkship/Step 2 overlap).`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-neuro-3"];
+      }
+
+      if (mod.id === IDS.modHeme) {
+        mod.lessons.push({
+          id: "les-heme-2",
+          moduleId: IDS.modHeme,
+          title: "Coagulation Pathways Clinically",
+          slug: "heme-coag",
+          sequence: 2,
+          estimatedMinutes: 30,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-heme-2"],
+          concepts: [
+            {
+              id: "con-heme-2a",
+              lessonId: "les-heme-2",
+              title: "PT, PTT, and mixing studies",
+              sequence: 1,
+              summary: "Use screening assays to place defects on the cascade map.",
+              blocks: [
+                reading(
+                  "blk-heme-2a-r",
+                  "con-heme-2a",
+                  "Coag screen logic",
+                  1,
+                  `PT ≈ extrinsic (VII) + common pathway. PTT ≈ intrinsic (XII, XI, IX, VIII) + common.  
+Mixing study: corrects → deficiency; fails to correct → inhibitor (e.g., lupus anticoagulant, factor VIII inhibitor patterns differ clinically).`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-heme-2"];
+      }
+
+      if (mod.id === IDS.modPsych) {
+        mod.lessons.push({
+          id: "les-psych-2",
+          moduleId: IDS.modPsych,
+          title: "Bipolar Spectrum — Mania vs Hypomania",
+          slug: "psych-bipolar",
+          sequence: 2,
+          estimatedMinutes: 30,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-psych-2"],
+          concepts: [
+            {
+              id: "con-psych-2a",
+              lessonId: "les-psych-2",
+              title: "Severity and impairment thresholds",
+              sequence: 1,
+              summary: "Duration + impairment/hospitalization separate mania from hypomania.",
+              blocks: [
+                reading(
+                  "blk-psych-2a-r",
+                  "con-psych-2a",
+                  "Mood elevation framework",
+                  1,
+                  `Mania: elevated/irritable mood + energy, ≥1 week (or any duration if hospitalized), marked impairment or psychosis.  
+Hypomania: similar symptoms, shorter/milder, observable change without major impairment.  
+Always assess safety, substances, and medical mimics.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-psych-2"];
+      }
+
+      if (mod.id === IDS.modSurg) {
+        mod.lessons.push({
+          id: "les-surg-2",
+          moduleId: IDS.modSurg,
+          title: "Acute Abdomen Patterns",
+          slug: "surg-abdomen",
+          sequence: 2,
+          estimatedMinutes: 35,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-surg-2"],
+          concepts: [
+            {
+              id: "con-surg-2a",
+              lessonId: "les-surg-2",
+              title: "Peritonitis vs obstruction vs ischemia",
+              sequence: 1,
+              summary: "Pattern recognition drives urgency more than a single lab value.",
+              blocks: [
+                reading(
+                  "blk-surg-2a-r",
+                  "con-surg-2a",
+                  "Surgical abdomen map",
+                  1,
+                  `**Peritonitis**: rigid, rebound, silent abdomen → perforation/contamination until proven otherwise.  
+**Obstruction**: colicky pain, distension, vomiting, obstipation.  
+**Mesenteric ischemia**: pain out of proportion; respect lactate/acidosis but do not wait on a single normal value.
+
+Resuscitate while arranging definitive imaging/OR — do not serial-exam an unstable acute abdomen forever.`,
+                ),
+                vignette(
+                  "blk-surg-2a-x",
+                  "con-surg-2a",
+                  "Vignette: board-like abdomen",
+                  2,
+                  `List your top 3 diagnoses and the first 5 actions in parallel.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-surg-2"];
       }
     }
   }

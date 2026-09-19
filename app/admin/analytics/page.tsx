@@ -1,23 +1,14 @@
 import { AppShell } from "@/components/shared/app-shell";
 import { ProgressBar } from "@/components/ui/badge";
 import { getAllLessons, getAllModules, getObjectives } from "@/lib/curriculum/accessors";
-import { getSessionUser, readStudentState } from "@/lib/demo/store";
+import { readStudentState } from "@/lib/demo/store";
 import {
   canAccessStep1Qbank,
   canAccessStep2CkQbank,
 } from "@/lib/mastery/gates";
 
 export default async function AdminAnalyticsPage() {
-  const user = await getSessionUser();
-  if (user.role !== "admin") {
-    return (
-      <AppShell title="Admin analytics">
-        <p className="text-sm text-[var(--muted)]">Switch to admin role to view analytics.</p>
-      </AppShell>
-    );
-  }
-
-  const state = await readStudentState();
+  const state = await readStudentState("user-student-1");
   const modules = await getAllModules();
   const lessons = await getAllLessons();
   const objectives = getObjectives();

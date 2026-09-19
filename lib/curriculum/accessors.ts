@@ -99,8 +99,26 @@ export function getObjectivesForLesson(lessonId: string) {
 }
 
 export function getFlashcards(lessonId?: string) {
+  // base + expansion cards; faculty cards merged async via getAllFlashcards
   if (!lessonId) return flashcards;
   return flashcards.filter((f) => f.lessonId === lessonId);
+}
+
+export async function getAllFlashcards(lessonId?: string) {
+  const { listFacultyFlashcards } = await import("@/lib/demo/admin-store");
+  const faculty = await listFacultyFlashcards();
+  const merged = [
+    ...flashcards,
+    ...faculty.map((f) => ({
+      id: f.id,
+      lessonId: f.lessonId,
+      front: f.front,
+      back: f.back,
+      objectiveId: f.objectiveId,
+    })),
+  ];
+  if (!lessonId) return merged;
+  return merged.filter((f) => f.lessonId === lessonId);
 }
 
 export function getQbankQuestions(opts?: {

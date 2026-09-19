@@ -22,7 +22,7 @@ import { IDS } from "../lib/curriculum/seed";
 import type { StudentState } from "../lib/types/domain";
 
 const DATA_DIR = path.join(process.cwd(), ".data");
-const STATE_FILE = path.join(DATA_DIR, "student-state.json");
+const STATE_FILE = path.join(DATA_DIR, "progress-user-student-1.json");
 
 function emptyState(): StudentState {
   return {

@@ -2,28 +2,20 @@ import Link from "next/link";
 import { AppShell } from "@/components/shared/app-shell";
 import { Badge } from "@/components/ui/badge";
 import { getObjectives, getPhases } from "@/lib/curriculum/accessors";
-import { getSessionUser } from "@/lib/demo/store";
 
 export default async function FacultyPage() {
-  const user = await getSessionUser();
-  if (user.role === "student") {
-    return (
-      <AppShell title="Faculty library">
-        <p className="text-sm text-[var(--muted)]">
-          Switch to faculty or admin in the header to edit curriculum structure.
-        </p>
-      </AppShell>
-    );
-  }
-
   const phases = await getPhases();
   const objectives = getObjectives();
 
   return (
     <AppShell title="Faculty content library">
       <p className="mb-6 max-w-3xl text-sm text-[var(--muted)]">
-        Curriculum mirrors integrated organ-system preclerkship + core clerkships used across top US
-        MD programs. Open a lesson to edit content blocks (Zod-validated).
+        Curriculum mirrors integrated organ-system preclerkship + core clerkships. Open a lesson to
+        edit content blocks, or manage{" "}
+        <Link className="text-[var(--brand-strong)] underline" href="/faculty/flashcards">
+          flashcards
+        </Link>
+        .
       </p>
       <div className="space-y-8">
         {phases.map((phase) => (

@@ -13,6 +13,7 @@ const adminLinks = [
 
 const facultyLinks = [
   { href: "/faculty", label: "Content" },
+  { href: "/faculty/flashcards", label: "Flashcards" },
   { href: "/dashboard", label: "Student view" },
   { href: "/login", label: "Login" },
 ];

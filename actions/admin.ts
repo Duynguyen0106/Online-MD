@@ -5,12 +5,15 @@ import { z } from "zod";
 import {
   acceptInvite,
   createInvite,
+  deleteFacultyFlashcard,
   listInvites,
   listUnlockRules,
   listUsers,
+  newId,
   revokeInvite,
   saveLessonOverride,
   saveUnlockRules,
+  upsertFacultyFlashcard,
 } from "@/lib/demo/admin-store";
 import { getSessionUser, setSessionUserId } from "@/lib/demo/store";
 import { getLesson } from "@/lib/curriculum/accessors";
@@ -154,6 +157,38 @@ export async function setUnlockRuleActive(input: unknown) {
   await saveUnlockRules(next);
   revalidatePath("/admin/unlock-rules");
   revalidatePath("/qbank");
+  return { ok: true as const };
+}
+
+const flashcardSchema = z.object({
+  id: z.string().optional(),
+  lessonId: z.string().optional(),
+  front: z.string().min(1).max(500),
+  back: z.string().min(1).max(2000),
+  objectiveId: z.string().optional(),
+});
+
+export async function saveFacultyFlashcard(input: unknown) {
+  const user = await requireRoles(["faculty", "admin"]);
+  const parsed = flashcardSchema.parse(input);
+  const saved = await upsertFacultyFlashcard({
+    id: parsed.id ?? newId("fc"),
+    lessonId: parsed.lessonId,
+    front: parsed.front,
+    back: parsed.back,
+    objectiveId: parsed.objectiveId,
+    updatedBy: user.id,
+  });
+  revalidatePath("/faculty/flashcards");
+  revalidatePath("/flashcards");
+  return { ok: true as const, card: saved };
+}
+
+export async function removeFacultyFlashcard(id: string) {
+  await requireRoles(["faculty", "admin"]);
+  await deleteFacultyFlashcard(id);
+  revalidatePath("/faculty/flashcards");
+  revalidatePath("/flashcards");
   return { ok: true as const };
 }
 
