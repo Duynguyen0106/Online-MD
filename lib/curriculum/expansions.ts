@@ -110,6 +110,28 @@ export const extraObjectives: Objective[] = [
     moduleId: IDS.modPeds,
     lessonIds: ["les-peds-2"],
   },
+  {
+    id: "obj-obgyn-2",
+    code: "OBJ-P2-OB-002",
+    statement: "Recognize preeclampsia warning signs and initial stabilization priorities.",
+    usmleStep: "step2ck",
+    organSystem: "Reproductive",
+    physicianTask: "Diagnosis",
+    contentCategory: "Obstetrics & Gynecology",
+    moduleId: IDS.modObgyn,
+    lessonIds: ["les-obgyn-2"],
+  },
+  {
+    id: "obj-msk-2",
+    code: "OBJ-P1-MSK-002",
+    statement: "Differentiate septic arthritis from crystal arthropathy using synovial fluid logic.",
+    usmleStep: "step1",
+    organSystem: "Musculoskeletal",
+    physicianTask: "Diagnosis",
+    contentCategory: "Pathology",
+    moduleId: IDS.modMsk,
+    lessonIds: ["les-msk-2"],
+  },
 ];
 
 export const extraQuizQuestions: QuizQuestion[] = [
@@ -265,6 +287,38 @@ export const extraQuizQuestions: QuizQuestion[] = [
     correctChoiceId: "qq-peds-2-c0",
     explanation:
       "Well-child visits center prevention: vaccines on schedule plus age-specific safety counseling.",
+  },
+  {
+    id: "qq-obgyn-2",
+    lessonId: "les-obgyn-2",
+    sequence: 1,
+    objectiveId: "obj-obgyn-2",
+    stem: "A pregnant patient at 34 weeks with severe headache, visual changes, and BP 168/110 most urgently suggests:",
+    choices: [
+      { id: "qq-obgyn-2-c0", text: "Preeclampsia with severe features — stabilize and obstetric escalation" },
+      { id: "qq-obgyn-2-c1", text: "Uncomplicated migraine; discharge without evaluation" },
+      { id: "qq-obgyn-2-c2", text: "Normal third-trimester physiology alone" },
+      { id: "qq-obgyn-2-c3", text: "Primary hyperthyroidism as the only diagnosis" },
+    ],
+    correctChoiceId: "qq-obgyn-2-c0",
+    explanation:
+      "Severe-range BP with neurologic symptoms in pregnancy is preeclampsia with severe features until proven otherwise.",
+  },
+  {
+    id: "qq-msk-2",
+    lessonId: "les-msk-2",
+    sequence: 1,
+    objectiveId: "obj-msk-2",
+    stem: "Acute monoarthritis of the knee; synovial WBC 80,000 with neutrophils. Next priority?",
+    choices: [
+      { id: "qq-msk-2-c0", text: "Treat as septic arthritis until excluded (aspirate/culture/urgent care)" },
+      { id: "qq-msk-2-c1", text: "Assume gout and delay aspiration indefinitely" },
+      { id: "qq-msk-2-c2", text: "Start only oral antihistamines" },
+      { id: "qq-msk-2-c3", text: "Ignore because OA never needs arthrocentesis" },
+    ],
+    correctChoiceId: "qq-msk-2-c0",
+    explanation:
+      "Hot monoarthritis with inflammatory fluid is septic arthritis until proven otherwise.",
   },
 ];
 
@@ -822,6 +876,82 @@ Document parental concerns and follow national schedule frameworks rather than i
           ],
         });
         if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-peds-2"];
+      }
+
+      if (mod.id === IDS.modObgyn) {
+        mod.lessons.push({
+          id: "les-obgyn-2",
+          moduleId: IDS.modObgyn,
+          title: "Preeclampsia Warning Signs",
+          slug: "obgyn-preeclampsia",
+          sequence: 2,
+          estimatedMinutes: 30,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-obgyn-2"],
+          concepts: [
+            {
+              id: "con-obgyn-2a",
+              lessonId: "les-obgyn-2",
+              title: "Recognition and initial priorities",
+              sequence: 1,
+              summary: "Hypertension plus end-organ clues drive urgency in pregnancy.",
+              blocks: [
+                reading(
+                  "blk-obgyn-2a-r",
+                  "con-obgyn-2a",
+                  "Preeclampsia framework",
+                  1,
+                  `After 20 weeks: new hypertension + proteinuria or end-organ dysfunction.  
+Severe features include severe-range BP, neurologic symptoms, pulmonary edema, hepatic/renal injury, thrombocytopenia.  
+Educational priorities: recognize, stabilize mother, involve obstetrics early — exact delivery timing follows guidelines/gestational age.`,
+                ),
+                vignette(
+                  "blk-obgyn-2a-x",
+                  "con-obgyn-2a",
+                  "Vignette: headache and visual changes at 34w",
+                  2,
+                  `List red flags, first bedside actions, and what you communicate to obstetrics.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-obgyn-2"];
+      }
+
+      if (mod.id === IDS.modMsk) {
+        mod.lessons.push({
+          id: "les-msk-2",
+          moduleId: IDS.modMsk,
+          title: "Hot Joint — Septic vs Crystal",
+          slug: "msk-septic-joint",
+          sequence: 2,
+          estimatedMinutes: 30,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-msk-2"],
+          concepts: [
+            {
+              id: "con-msk-2a",
+              lessonId: "les-msk-2",
+              title: "Synovial fluid decision tree",
+              sequence: 1,
+              summary: "Never miss septic arthritis in acute monoarthritis.",
+              blocks: [
+                reading(
+                  "blk-msk-2a-r",
+                  "con-msk-2a",
+                  "Monoarthritis algorithm",
+                  1,
+                  `Acute hot joint → aspirate when feasible. High WBC with PMNs → treat as infection until cultures/clinical course say otherwise.  
+Crystals (gout/CPPD) can coexist with infection — crystals alone do not exclude septic arthritis.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-msk-2"];
       }
     }
   }

@@ -34,11 +34,14 @@ Open [http://localhost:3000](http://localhost:3000). Progress persists in `.data
 npm test
 npm run mastery   # Cell module → Qbank unlock path
 npm run build
+curl -s http://localhost:3000/api/health | jq
 ```
 
 Auth routes: `/signup` + `/login` (students), `/invite/[token]` (faculty/admin). Admin: `/admin/invites`, `/admin/users`, `/admin/unlock-rules`.
 
-Supabase wiring is ready in `lib/supabase/*` and `supabase/migrations/` — connect credentials when available; demo mode continues without them.## Faculty AI
+Supabase wiring is ready in `lib/supabase/*` and `supabase/migrations/` — set `NEXT_PUBLIC_SUPABASE_URL` plus `NEXT_PUBLIC_SUPABASE_ANON_KEY` or `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Demo mode continues without them.
+
+## Faculty AI
 
 `lib/ai/medical-educator.ts` uses a board-level medical educator system prompt. Responses are validated with Zod.
 
@@ -47,7 +50,7 @@ Supabase wiring is ready in `lib/supabase/*` and `supabase/migrations/` — conn
 
 ## Supabase
 
-Schema + RLS sketch: [`supabase/migrations/00001_init.sql`](supabase/migrations/00001_init.sql). Demo mode runs without Supabase; connect credentials in `.env` to migrate off the file store.
+Schema + RLS sketch: [`supabase/migrations/00001_init.sql`](supabase/migrations/00001_init.sql). Demo mode runs without Supabase; connect credentials in `.env.local` to begin migration off the file store. Service role key is required for invite provisioning.
 
 ## Docs
 

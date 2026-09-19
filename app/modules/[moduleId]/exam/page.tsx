@@ -1,8 +1,12 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shared/app-shell";
 import { ExamRunner } from "@/components/student/exam-runner";
-import { getModule, getQuestionsByIds } from "@/lib/curriculum/accessors";
+import {
+  getMergedQuestionMap,
+  getModule,
+} from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
+import type { QuizQuestion } from "@/lib/types/domain";
 
 export default async function ModuleExamPage({
   params,
@@ -16,7 +20,10 @@ export default async function ModuleExamPage({
   const lessonsOk = mod.lessons.every(
     (l) => state.lessonProgress[l.id]?.state === "mastered",
   );
-  const questions = getQuestionsByIds(mod.exam.questionIds);
+  const qmap = await getMergedQuestionMap();
+  const questions: QuizQuestion[] = mod.exam.questionIds
+    .map((id) => qmap[id])
+    .filter(Boolean);
 
   return (
     <AppShell title={mod.exam.title}>
