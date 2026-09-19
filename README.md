@@ -50,7 +50,15 @@ Supabase wiring is ready in `lib/supabase/*` and `supabase/migrations/` — set 
 
 ## Supabase
 
-Schema + RLS sketch: [`supabase/migrations/00001_init.sql`](supabase/migrations/00001_init.sql). Demo mode runs without Supabase; connect credentials in `.env.local` to begin migration off the file store. Service role key is required for invite provisioning.
+Schema + RLS sketch: [`supabase/migrations/00001_init.sql`](supabase/migrations/00001_init.sql).
+
+1. Copy `.env.example` → `.env.local`
+2. Set `NEXT_PUBLIC_SUPABASE_URL` and either `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (new) or `NEXT_PUBLIC_SUPABASE_ANON_KEY` (classic JWT)
+3. Apply the migration in the Supabase SQL editor or CLI
+4. Add `SUPABASE_SERVICE_ROLE_KEY` for invite provisioning (server-only — never `NEXT_PUBLIC_`)
+
+Demo file store (`.data/`) remains active while `DEMO_MODE=true`. Health check: `GET /api/health` reports `supabaseConfigured`, `supabaseReachable`, and `hasServiceRole`.
+
 
 ## Docs
 
