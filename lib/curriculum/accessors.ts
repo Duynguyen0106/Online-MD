@@ -17,6 +17,11 @@ import {
   extraObjectives,
   extraQbankQuestions,
   extraQuizQuestions,
+  wave3ClinicalCases,
+  wave3Flashcards,
+  wave3Objectives,
+  wave3QbankQuestions,
+  wave3QuizQuestions,
 } from "@/lib/curriculum/expansions";
 import type {
   Lesson,
@@ -30,18 +35,31 @@ const quizQuestions = [
   ...baseQuiz,
   ...extraQuizQuestions,
   ...depthQuizQuestions,
+  ...wave3QuizQuestions,
 ];
-const objectives = [...baseObjectives, ...extraObjectives, ...depthObjectives];
-const flashcards = [...baseFlashcards, ...extraFlashcards, ...depthFlashcards];
+const objectives = [
+  ...baseObjectives,
+  ...extraObjectives,
+  ...depthObjectives,
+  ...wave3Objectives,
+];
+const flashcards = [
+  ...baseFlashcards,
+  ...extraFlashcards,
+  ...depthFlashcards,
+  ...wave3Flashcards,
+];
 const qbankQuestions = [
   ...baseQbank,
   ...extraQbankQuestions,
   ...depthQbankQuestions,
+  ...wave3QbankQuestions,
 ];
 const clinicalCases = [
   ...baseCases,
   ...extraClinicalCases,
   ...depthClinicalCases,
+  ...wave3ClinicalCases,
 ];
 
 export function getQuestionMap() {

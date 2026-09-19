@@ -33,4 +33,5 @@ Top US MD schools increasingly use **integrated organ-system preclerkship** bloc
 | Inflammation & immunity | `les-cell-3`, `les-cell-4` |
 | Hyponatremia / thyroid crises | `les-renal-4`, `les-endo-3` |
 | Syncope / status | `les-im-3`, `les-neuro-4` |
+| Heme / ID / Psych / Peds / OB / Surg / FM / MSK / AKI | `les-heme-3/4`, `les-id-3/4`, `les-psych-3/4`, `les-peds-3/4`, `les-obgyn-3/4`, `les-surg-3`, `les-fm-3`, `les-msk-3`, `les-im-4` |
 | Clerkship expansions | DKA/HHS, ACS, sepsis, acute abdomen, preeclampsia, septic joint, FM screening, etc. |

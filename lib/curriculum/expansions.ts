@@ -15,6 +15,14 @@ import {
   depthQbankQuestions,
   depthQuizQuestions,
 } from "@/lib/curriculum/expansions-depth";
+import {
+  applyWave3Expansions,
+  wave3ClinicalCases,
+  wave3Flashcards,
+  wave3Objectives,
+  wave3QbankQuestions,
+  wave3QuizQuestions,
+} from "@/lib/curriculum/expansions-wave3";
 
 export {
   depthClinicalCases,
@@ -22,6 +30,11 @@ export {
   depthObjectives,
   depthQbankQuestions,
   depthQuizQuestions,
+  wave3ClinicalCases,
+  wave3Flashcards,
+  wave3Objectives,
+  wave3QbankQuestions,
+  wave3QuizQuestions,
 };
 
 /** Additional original educational content layered onto the base seed. */
@@ -558,6 +571,7 @@ function vignette(
 /** Mutates a cloned program by appending new lessons to existing modules. */
 export function applyCurriculumExpansions(program: Program): Program {
   applyDepthExpansions(program);
+  applyWave3Expansions(program);
   for (const phase of program.phases) {
     for (const mod of phase.modules) {
       if (mod.id === IDS.modEndo) {
