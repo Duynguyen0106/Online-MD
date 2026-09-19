@@ -36,8 +36,9 @@ npm run mastery   # Cell module → Qbank unlock path
 npm run build
 ```
 
-Auth routes: `/login` (students), `/invite/[token]` (faculty/admin). Admin: `/admin/invites`, `/admin/users`, `/admin/unlock-rules`.
-## Faculty AI
+Auth routes: `/signup` + `/login` (students), `/invite/[token]` (faculty/admin). Admin: `/admin/invites`, `/admin/users`, `/admin/unlock-rules`.
+
+Supabase wiring is ready in `lib/supabase/*` and `supabase/migrations/` — connect credentials when available; demo mode continues without them.## Faculty AI
 
 `lib/ai/medical-educator.ts` uses a board-level medical educator system prompt. Responses are validated with Zod.
 

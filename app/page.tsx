@@ -28,6 +28,9 @@ export default function HomePage() {
             <Link href="/dashboard">Enter student dashboard</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10">
+            <Link href="/signup">Student signup</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10">
             <Link href="/faculty">Faculty library</Link>
           </Button>
         </div>

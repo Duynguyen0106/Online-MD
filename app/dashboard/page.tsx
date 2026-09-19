@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AppShell } from "@/components/shared/app-shell";
 import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ResetProgressButton } from "@/components/student/reset-progress-button";
 import {
   getAllLessons,
   getAllModules,
@@ -34,6 +35,9 @@ export default async function DashboardPage() {
 
   return (
     <AppShell title="Student dashboard">
+      <div className="mb-4 flex justify-end">
+        <ResetProgressButton />
+      </div>
       <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
         <section className="animate-fade-up rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
           <p className="text-sm text-[var(--muted)]">Continue learning</p>

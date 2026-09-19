@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
-import { loginDemoStudent } from "@/actions/admin";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signupStudent } from "@/actions/auth";
+import { Button } from "@/components/ui/button";
 
-export function LoginForm() {
-  const [email, setEmail] = useState("student@online-md.local");
+export function SignupForm() {
+  const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
   const router = useRouter();
@@ -20,37 +21,49 @@ export function LoginForm() {
         setError(null);
         startTransition(async () => {
           try {
-            await loginDemoStudent(email);
+            await signupStudent({ email, fullName });
             router.push("/dashboard");
             router.refresh();
           } catch (err) {
-            setError(err instanceof Error ? err.message : "Login failed");
+            setError(err instanceof Error ? err.message : "Signup failed");
           }
         });
       }}
     >
-      <h1 className="font-[family-name:var(--font-display)] text-2xl">Student login</h1>
+      <h1 className="font-[family-name:var(--font-display)] text-2xl">
+        Student signup
+      </h1>
       <p className="text-sm text-[var(--muted)]">
-        Demo auth. Faculty/admin accounts are invite-only — use an invite link or the role switcher.
+        Public student registration. Faculty and admin remain invite-only.
       </p>
+      <label className="block text-sm">
+        <span className="mb-1 block text-[var(--muted)]">Full name</span>
+        <input
+          className="h-10 w-full rounded-md border border-[var(--border)] px-3"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+          required
+        />
+      </label>
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Email</span>
         <input
+          type="email"
           className="h-10 w-full rounded-md border border-[var(--border)] px-3"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </label>
       <Button disabled={pending} type="submit" className="w-full">
-        Continue
+        Create student account
       </Button>
       {error ? <p className="text-sm text-[var(--danger)]">{error}</p> : null}
       <p className="text-xs text-[var(--muted)]">
-        Need an account?{" "}
-        <Link href="/signup" className="underline">
-          Student signup
+        Already have an account?{" "}
+        <Link href="/login" className="underline">
+          Log in
         </Link>
-        . Faculty/admin need an invite.
       </p>
     </form>
   );

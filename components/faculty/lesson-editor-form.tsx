@@ -3,7 +3,8 @@
 import { useState, useTransition } from "react";
 import { saveFacultyLesson } from "@/actions/admin";
 import { Button } from "@/components/ui/button";
-import type { Concept, Lesson } from "@/lib/types/domain";
+import { newId } from "@/lib/demo/ids";
+import type { Concept, ContentBlockType, Lesson } from "@/lib/types/domain";
 
 export function LessonEditorForm({ lesson }: { lesson: Lesson }) {
   const [title, setTitle] = useState(lesson.title);
@@ -26,6 +27,25 @@ export function LessonEditorForm({ lesson }: { lesson: Lesson }) {
         ...next[conceptIdx].blocks[blockIdx],
         ...patch,
       };
+      return next;
+    });
+  }
+
+  function addBlock(conceptIdx: number, blockType: ContentBlockType) {
+    setConcepts((prev) => {
+      const next = structuredClone(prev);
+      const concept = next[conceptIdx];
+      const id = newId("blk");
+      concept.blocks.push({
+        id,
+        conceptId: concept.id,
+        blockType,
+        title: `New ${blockType.replace(/_/g, " ")}`,
+        sequence: concept.blocks.length + 1,
+        bodyMd: "",
+        mediaUrl: blockType === "video" || blockType === "audio" ? "" : undefined,
+        mediaProvider: blockType === "video" ? "youtube" : undefined,
+      });
       return next;
     });
   }
@@ -136,6 +156,26 @@ export function LessonEditorForm({ lesson }: { lesson: Lesson }) {
                 />
               </div>
             ))}
+            <div className="flex flex-wrap gap-2">
+              {(
+                [
+                  "reading",
+                  "clinical_vignette",
+                  "diagram",
+                  "video",
+                ] as ContentBlockType[]
+              ).map((t) => (
+                <Button
+                  key={t}
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  onClick={() => addBlock(ci, t)}
+                >
+                  Add {t.replace(/_/g, " ")}
+                </Button>
+              ))}
+            </div>
           </div>
         </section>
       ))}

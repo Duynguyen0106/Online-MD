@@ -1,12 +1,18 @@
 import { getResolvedProgram } from "@/lib/demo/admin-store";
 import {
-  clinicalCases,
-  flashcards,
-  getQuestionMap,
-  objectives,
-  qbankQuestions,
-  quizQuestions,
+  clinicalCases as baseCases,
+  flashcards as baseFlashcards,
+  objectives as baseObjectives,
+  qbankQuestions as baseQbank,
+  quizQuestions as baseQuiz,
 } from "@/lib/curriculum/seed";
+import {
+  extraClinicalCases,
+  extraFlashcards,
+  extraObjectives,
+  extraQbankQuestions,
+  extraQuizQuestions,
+} from "@/lib/curriculum/expansions";
 import type {
   Lesson,
   Module,
@@ -15,7 +21,15 @@ import type {
   QuizQuestion,
 } from "@/lib/types/domain";
 
-export { getQuestionMap };
+const quizQuestions = [...baseQuiz, ...extraQuizQuestions];
+const objectives = [...baseObjectives, ...extraObjectives];
+const flashcards = [...baseFlashcards, ...extraFlashcards];
+const qbankQuestions = [...baseQbank, ...extraQbankQuestions];
+const clinicalCases = [...baseCases, ...extraClinicalCases];
+
+export function getQuestionMap() {
+  return Object.fromEntries(quizQuestions.map((q) => [q.id, q]));
+}
 
 export async function getProgram(): Promise<Program> {
   return getResolvedProgram();

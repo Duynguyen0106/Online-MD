@@ -10,6 +10,7 @@ import type {
 } from "@/lib/types/domain";
 import { DEMO_USERS } from "@/lib/demo/users";
 import { program as seedProgram } from "@/lib/curriculum/seed";
+import { applyCurriculumExpansions } from "@/lib/curriculum/expansions";
 import { newId } from "@/lib/demo/ids";
 
 const DATA_DIR = path.join(process.cwd(), ".data");
@@ -184,10 +185,10 @@ export async function saveLessonOverride(override: LessonOverride) {
   return override;
 }
 
-/** Resolve live curriculum with faculty overrides applied. */
+/** Resolve live curriculum with expansions + faculty overrides applied. */
 export async function getResolvedProgram() {
   const overrides = await getCurriculumOverrides();
-  const cloned = structuredClone(seedProgram);
+  const cloned = applyCurriculumExpansions(structuredClone(seedProgram));
   for (const phase of cloned.phases) {
     for (const mod of phase.modules) {
       mod.lessons = mod.lessons.map((lesson) => {

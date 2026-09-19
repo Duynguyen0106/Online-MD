@@ -1,7 +1,6 @@
 import { AppShell } from "@/components/shared/app-shell";
 import { QbankPanel } from "@/components/student/qbank-panel";
-import { getQbankQuestions } from "@/lib/curriculum/accessors";
-import { IDS } from "@/lib/curriculum/seed";
+import { getAllModules, getQbankQuestions } from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
 import {
   canAccessModuleQbank,
@@ -11,7 +10,12 @@ import {
 
 export default async function QbankPage() {
   const state = await readStudentState();
-  const moduleGate = await canAccessModuleQbank(state, IDS.modCvb);
+  const modules = await getAllModules();
+  const moduleGates: Record<string, string | undefined> = {};
+  for (const mod of modules) {
+    const gate = await canAccessModuleQbank(state, mod.id);
+    moduleGates[mod.id] = gate.unlocked ? undefined : gate.reason;
+  }
   const step1 = await canAccessStep1Qbank(state);
   const step2 = await canAccessStep2CkQbank(state);
   const questions = getQbankQuestions();
@@ -23,8 +27,8 @@ export default async function QbankPage() {
         modules; Step 2 CK after all core clerkships. Server actions reject locked starts.
       </p>
       <QbankPanel
-        moduleId={IDS.modCvb}
-        moduleGateReason={moduleGate.unlocked ? undefined : moduleGate.reason}
+        modules={modules.map((m) => ({ id: m.id, title: m.title }))}
+        moduleGates={moduleGates}
         step1Reason={step1.unlocked ? undefined : step1.reason}
         step2Reason={step2.unlocked ? undefined : step2.reason}
         questionsPreview={questions}

@@ -22,7 +22,7 @@ const studentLinks = [
   { href: "/flashcards", label: "Flashcards" },
   { href: "/qbank", label: "Qbank" },
   { href: "/tutor", label: "Faculty AI" },
-  { href: "/cases/case-cv-1", label: "Cases" },
+  { href: "/cases", label: "Cases" },
   { href: "/login", label: "Login" },
 ];
 

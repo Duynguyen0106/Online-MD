@@ -1,24 +1,29 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { startQbankAttempt, submitQbankAttempt } from "@/actions/learning";
 import { Button } from "@/components/ui/button";
 import type { QbankQuestion } from "@/lib/types/domain";
 import { cn, percent } from "@/lib/utils";
 
 export function QbankPanel({
-  moduleGateReason,
+  modules,
+  moduleGates,
   step1Reason,
   step2Reason,
-  moduleId,
   questionsPreview,
 }: {
-  moduleGateReason?: string;
+  modules: { id: string; title: string }[];
+  moduleGates: Record<string, string | undefined>;
   step1Reason?: string;
   step2Reason?: string;
-  moduleId?: string;
   questionsPreview: QbankQuestion[];
 }) {
+  const unlockedModules = useMemo(
+    () => modules.filter((m) => !moduleGates[m.id]),
+    [modules, moduleGates],
+  );
+  const [moduleId, setModuleId] = useState(unlockedModules[0]?.id ?? modules[0]?.id ?? "");
   const [attemptId, setAttemptId] = useState<string | null>(null);
   const [questionIds, setQuestionIds] = useState<string[]>([]);
   const [responses, setResponses] = useState<Record<string, string>>({});
@@ -29,25 +34,50 @@ export function QbankPanel({
   const activeQuestions = questionsPreview.filter((q) =>
     questionIds.length ? questionIds.includes(q.id) : false,
   );
+  const selectedLocked = Boolean(moduleGates[moduleId]);
 
   return (
     <div className="space-y-6">
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
+        <label className="text-sm">
+          <span className="mb-1 block text-[var(--muted)]">Module bank</span>
+          <select
+            className="h-10 w-full max-w-md rounded-md border border-[var(--border)] px-3"
+            value={moduleId}
+            onChange={(e) => setModuleId(e.target.value)}
+          >
+            {modules.map((m) => (
+              <option key={m.id} value={m.id}>
+                {m.title}
+                {moduleGates[m.id] ? " (locked)" : ""}
+              </option>
+            ))}
+          </select>
+        </label>
+        <p className="mt-2 text-xs text-[var(--muted)]">
+          {selectedLocked
+            ? moduleGates[moduleId]
+            : "Module mastered — assessment bank available"}
+        </p>
+      </div>
+
       <div className="grid gap-4 md:grid-cols-3">
         <GateCard
           title="Module Qbank"
-          reason={moduleGateReason}
-          unlocked={!moduleGateReason}
+          reason={selectedLocked ? moduleGates[moduleId] : undefined}
+          unlocked={!selectedLocked}
           onStart={() =>
             startTransition(async () => {
               setError(null);
               try {
-                if (!moduleId) throw new Error("Pick a mastered module");
                 const res = await startQbankAttempt({
                   moduleId,
                   mode: "tutor",
                 });
                 setAttemptId(res.attemptId);
                 setQuestionIds(res.questionIds);
+                setScore(null);
+                setResponses({});
               } catch (e) {
                 setError(e instanceof Error ? e.message : "Locked");
               }
@@ -69,6 +99,8 @@ export function QbankPanel({
                 });
                 setAttemptId(res.attemptId);
                 setQuestionIds(res.questionIds);
+                setScore(null);
+                setResponses({});
               } catch (e) {
                 setError(e instanceof Error ? e.message : "Locked");
               }
@@ -90,6 +122,8 @@ export function QbankPanel({
                 });
                 setAttemptId(res.attemptId);
                 setQuestionIds(res.questionIds);
+                setScore(null);
+                setResponses({});
               } catch (e) {
                 setError(e instanceof Error ? e.message : "Locked");
               }
