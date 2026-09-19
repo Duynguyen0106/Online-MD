@@ -595,6 +595,108 @@ Foregut septation failures yield TEF patterns. Thoracic wall neurovascular bundl
 
 Breast lymphatics drain to axillary levels I–III; mediastinal masses use the anterior 4Ts teaching. Prostate peripheral zone hosts most cancers; transition zone drives BPH. Foot arches and tarsal tunnel entrapments explain plantar pain differentials. Draw once, label vessels/nerves, then predict the deficit.`,
   },
+  {
+    test: /tolac|vbac|uterine rupture|prior cesarean/i,
+    prose: `**TOLAC / VBAC counseling — textbook chapter.**
+
+Trial of labor after cesarean trades uterine rupture risk against repeat-cesarean morbidity. Prior incision type (low transverse vs classical), number of prior cesareans, and institutional readiness for emergency cesarean dominate counseling. Continuous fetal monitoring and clear stop criteria are non-negotiable.
+
+Shared decision-making documents absolute risks in plain numbers, not slogans. Successful VBAC reduces cumulative surgical risk for future pregnancies; failed TOLAC raises morbidity versus planned repeat cesarean. Contraindications (classical scar, some obstetric complications) must be named explicitly.`,
+  },
+  {
+    test: /stem cell|differentiation|pluripotent|multipotent|lineage commitment/i,
+    prose: `**Stem cells & differentiation — textbook chapter.**
+
+Potency declines from totipotent → pluripotent → multipotent → committed progenitors. Niche signals (growth factors, matrix, cell–cell contacts) decide self-renewal versus differentiation. Cancer stem-cell models explain relapse after cytoreduction; regenerative therapies depend on controlled differentiation without teratoma risk.
+
+Epigenetic marks lock lineage identity; reprogramming erases them experimentally. Clinical vignettes connect marrow stem cells to transplantation, embryonic pathways to congenital anomalies, and failed differentiation to dysplasia/neoplasia.`,
+  },
+  {
+    test: /transcription.*rna|rna processing|splicing|translation.*targeting|signal recognition particle/i,
+    prose: `**Transcription, RNA processing & translation targeting — textbook chapter.**
+
+Transcription uses RNA polymerases with promoters, enhancers, and chromatin states. Splicing joins exons; errors yield disease alleles (β-thalassemia teaching). mRNA export, stability, and miRNA control set protein output.
+
+Translation initiation and elongation map to antibiotic targets in bacteria and to eukaryotic initiation-factor disease. Signal recognition particle targeting sends proteins to the secretory pathway; nuclear localization signals route transcription factors. Mutation at any step changes phenotype without altering DNA coding sense alone.`,
+  },
+  {
+    test: /vaccine counseling|immunization counseling|vaccine hesitancy/i,
+    prose: `**Vaccine counseling essentials — textbook chapter.**
+
+Start with the disease prevented, not the needle. Address specific concerns (schedule density, ingredients, autism myths) with evidence and empathy—confrontational correction backfires. True contraindications are uncommon; mild illness rarely permanently defers vaccination.
+
+Catch-up schedules matter for missed doses. Live vaccines have immunocompromise rules. Document refusal and revisit; VAERS reporting is for safety surveillance, not proof of causation from temporal association alone.`,
+  },
+  {
+    test: /confidentiality|error disclosure|scarce resource|allocation ethics|public health limits/i,
+    prose: `**Clinical ethics procedures — textbook chapter.**
+
+Confidentiality yields to mandated reporting and imminent serious harm pathways—explain limits when safe. Error disclosure: what happened, why it matters, apology where appropriate, and prevention plan. Scarce-resource allocation uses explicit, revisable criteria rather than stealth bedside rationing.
+
+Document capacity, surrogates, and goals. Digital professionalism protects PHI. Ethics without an operational next step is incomplete care.`,
+  },
+  {
+    test: /confidentiality & public|medical error disclosure ethics|insomnia prescribing caution/i,
+    prose: `**Ethics disclosure & insomnia prescribing — chapter addendum.**
+
+Confidentiality limits and error disclosure scripts must be practiced until automatic: what happened, impact, apology, prevention. Insomnia care starts with CBT-I and comorbidity treatment; hypnotics are brief, monitored, and avoided as chronic sole therapy in older adults whenever alternatives exist. Revisit refused vaccines and declined workups with the same procedural clarity.`,
+  },
+  {
+    test: /biostatistics essentials|enzyme kinetics|km |vmax|lineweaver/i,
+    prose: `**Biostatistics & enzyme kinetics essentials — textbook chapter.**
+
+Sensitivity/specificity vs predictive values, relative vs absolute risk, and confounding literacy prevent misreading papers. NNT from ARR communicates benefit better than relative risk alone.
+
+Km and Vmax describe enzyme–substrate behavior; competitive inhibitors raise apparent Km, noncompetitive lower Vmax. Clinical drugs are often enzyme inhibitors—map the kinetic pattern to dose–response and toxicity.`,
+  },
+  {
+    test: /third.?trimester bleeding|placenta previa|abruption|rh incompatibility|rho.?gam|anti-?d/i,
+    prose: `**Late-pregnancy bleeding & Rh prevention — textbook chapter.**
+
+Third-trimester bleeding differentials: previa (painless), abruption (painful, rigid uterus), labor, vasa previa. Stabilize mother, avoid digital exam until previa excluded by ultrasound, and prepare for hemorrhage.
+
+Rh-negative patients need anti-D immune globulin after sensitizing events and at routine gestational windows to prevent alloimmunization and future hydrops. Document blood type early and treat postpartum hemorrhage protocols as rehearsed team events.`,
+  },
+  {
+    test: /heme pharmacology|chemotherapy mechanism|alkylat|antimetabolite|microtubule.*chemo/i,
+    prose: `**Heme & chemotherapy pharmacology — textbook chapter.**
+
+Anticoagulants, antiplatelets, and thrombolytics hit distinct clotting nodes—bleed risk is the shared toxicity language. Chemotherapy classes: alkylators, antimetabolites, antitubulins, topoisomerase inhibitors, and targeted kinase/antibody agents—each has a nadir and organ-toxicity fingerprint.
+
+Supportive care (growth factors, antiemetics, infection precautions) is part of the prescription. Tumor lysis risk rises with bulky, chemosensitive disease—hydrate and monitor electrolytes before celebrating the response.`,
+  },
+  {
+    test: /or safety|burn resuscitation|cholecystitis|hernia incarceration|strangulation|perioperative fluid|acute limb ischemia|6 ?ps/i,
+    prose: `**Surgical acute-care essentials — textbook chapter.**
+
+OR safety checklists catch wrong-site and equipment failures before incision. Burn resuscitation uses weight-based fluids titrated to urine output. Cholecystitis escalates from antibiotics to source control; hernia incarceration vs strangulation is a perfusion clock.
+
+Perioperative fluids match losses and cardiac reserve—avoid reflexive liters. Acute limb ischemia uses the 6 Ps; time to revascularization saves tissue. Name the complication you are watching for tonight after every case.`,
+  },
+  {
+    test: /chronic inflammation.*cancer|spirochetes|ob analgesia|gyn oncology surgical/i,
+    prose: `**Inflammation–cancer, spirochetes & perinatal surgical care — textbook chapter.**
+
+Chronic inflammation promotes DNA damage, proliferation, and stromal remodeling that favor neoplasia—H. pylori, viral hepatitis, and IBD are teaching bridges. Spirochetes (Treponema, Borrelia, Leptospira) have stage-specific syndromes and serology pitfalls.
+
+OB analgesia balances maternal comfort with fetal monitoring constraints; neuraxial techniques dominate labor pathways when available. Gyn oncology surgical care is staging discipline plus complication surveillance after radical procedures.`,
+  },
+  {
+    test: /hemostasis pathology|innate immune sensor|complement deficienc|cellular redox|fatty acid synthesis|cardiovascular drug mechanism|diuretic.*renal drug|pulmonary pharmacology|gi pharmacology|rct critical|health economics/i,
+    prose: `**Cross-cutting foundations — textbook chapter.**
+
+Hemostasis pathology separates primary (platelet/vessel) from secondary (factor) bleeding and DIC consumptive patterns. Innate sensors (TLRs, inflammasomes) and complement deficiencies explain pyogenic and Neisseria risk. Redox balance and fatty-acid synthesis vs oxidation coordinate fed/fasting fuel choice.
+
+CV, pulmonary, GI, diuretic, and renal drug maps start from receptor/transporter → physiologic effect → toxicity fingerprint. RCT appraisal checks randomization, blinding, follow-up, and applicability; basic health economics keeps absolute benefit and cost visible without denying high-value care.`,
+  },
+  {
+    test: /lipoprotein assembly|urea cycle regulation|one-carbon metabolism|stem cells & differentiation|prevention levels|emerging infection|hand intrinsic|koch|molecular postulate|biostatistics essentials|\barr\b|\brrr\b|nnt\/nnh|justice.*allocation|health equity/i,
+    prose: `**Final coverage bridges — textbook chapter.**
+
+Lipoprotein assembly/clearance and urea-cycle regulation explain atherosclerosis risk and hyperammonemia. One-carbon metabolism links folate/B12 to megaloblastic anemia. Stem-cell potency and niche signals underpin regeneration and cancer stem-cell teaching.
+
+Prevention levels organize public-health action; emerging infections need isolation and surveillance logic. Hand intrinsic anatomy predicts claw patterns. Koch’s postulates became molecular criteria—PCR alone is not causation. ARR/RRR/NNT/NNH and biostat essentials keep evidence numerate. Justice and health equity demand allocation criteria that are explicit, revisable, and free of stealth bedside rationing.`,
+  },
 ];
 
 export const DEEP_CATEGORY: { test: RegExp; prose: string }[] = [
@@ -622,7 +724,9 @@ For each lesson, practice a 30-second verbal compact: leading diagnosis likeliho
 
 Prioritize the sickest physiology first (airway, perfusion, glucose, seizure, hemorrhage) even when the chart says “routine follow-up.” Bundle related orders to reduce missed steps: cultures with antibiotics when indicated, ECG with electrolytes in syncope, pregnancy test with pelvic pain. Write contingency lines—“if lactate rises, then…”—so night coverage inherits your thinking. Prevention (vaccines, screening, deprescribing) belongs in the same note as acute care when the visit allows.
 
-Problem representation skill: one sentence with syndrome + acuity + key risk + leading diagnosis + can’t-miss alternative. Then a three-item plan with timing. Teach this aloud until it is automatic. Clinic chapters add continuity: what changes at the next visit, what labs prove response, and what patient education prevents the bounce-back. Cross-cover medicine rewards explicit if–then plans more than exhaustive differentials without actions.`,
+Problem representation skill: one sentence with syndrome + acuity + key risk + leading diagnosis + can’t-miss alternative. Then a three-item plan with timing. Teach this aloud until it is automatic. Clinic chapters add continuity: what changes at the next visit, what labs prove response, and what patient education prevents the bounce-back. Cross-cover medicine rewards explicit if–then plans more than exhaustive differentials without actions.
+
+When uncertainty is high, time-box the workup: which test in the next hour changes disposition, which can wait until morning, and which consultant needs a precise question. Document allergies, anticoagulants, and code status early—these change every branch. Family Medicine and Advanced Clinical chapters emphasize longitudinal risk reduction alongside the acute visit agenda.`,
   },
   {
     test: /psychiatr|behavioral/i,
@@ -632,7 +736,9 @@ Organize every encounter around safety, syndrome, substrate (medical/substance c
 
 Separate delirium from primary psychosis, mania from stimulant intoxication, and depression from hypothyroidism or sleep apnea. Collateral is clinical data. Trauma-informed interviewing reduces re-traumatization without omitting safety questions. The endpoint of a psychiatry chapter is a learner who can write a problem representation and a risk formulation that guides level of care.
 
-Acute agitation pathways escalate from verbal de-escalation to oral then IM medications while protecting airway and avoiding over-sedation stacks. Insomnia prescribing caution means sleep hygiene and treating underlying mood/anxiety/OSA before chronic benzodiazepines. Document target symptoms and stop dates for sedatives. Substance intoxication and withdrawal remain on every behavioral emergency differential.`,
+Acute agitation pathways escalate from verbal de-escalation to oral then IM medications while protecting airway and avoiding over-sedation stacks. Insomnia prescribing caution means sleep hygiene and treating underlying mood/anxiety/OSA before chronic benzodiazepines. Document target symptoms and stop dates for sedatives. Substance intoxication and withdrawal remain on every behavioral emergency differential.
+
+Lithium and serotonergic stacks need level/toxicity literacy (renal/thyroid monitoring; Hunter clonus framing). Measurement-based care repeats severity scales at follow-up. Safety planning is concrete: means counseling, contacts, and a timed next appointment—not “follow up PRN.”`,
   },
   {
     test: /cell biology|molecular/i,
@@ -670,7 +776,9 @@ Vaccines, monoclonal antibodies, and immunosuppressants are applied immunology�
 
 Hypersensitivity types I–IV are teaching scaffolds: anaphylaxis and atopy; cytotoxic antibody; immune-complex disease; delayed T-cell injury. Complement deficiencies map to Neisseria risk and SLE-like syndromes. Transplant rejection timing (hyperacute, acute, chronic) is applied MHC and antibody biology. When checkpoint inhibitors appear, predict irAE organ systems and steroid-first thinking for many toxicities.
 
-Vaccine platforms (live attenuated, inactivated, subunit, mRNA, viral vector) differ in risk for immunocompromised patients and in how memory is generated. Cytokine names matter when a drug blocks them—infection surveillance follows. Primary immunodeficiency age-of-onset patterns remain the fastest sorting tool at the bedside.`,
+Vaccine platforms (live attenuated, inactivated, subunit, mRNA, viral vector) differ in risk for immunocompromised patients and in how memory is generated. Cytokine names matter when a drug blocks them—infection surveillance follows. Primary immunodeficiency age-of-onset patterns remain the fastest sorting tool at the bedside.
+
+Complement regulation failure (AH50/CH50 patterns, atypical HUS teaching) and neutrophil defects (CGD, LAD) convert abstract pathways into organism lists you can predict. When a checkpoint inhibitor causes colitis or endocrinopathy, that is applied tolerance biology—not a random side effect.`,
   },
   {
     test: /biochem/i,
@@ -694,7 +802,9 @@ Agonist versus antagonist versus partial agonist versus inverse agonist language
 
 Dopamine pathways explain antipsychotics (D2), Parkinson therapies, and addiction reinforcement teaching—name the tract before the drug. Autonomic pharmacology pairs receptor (α1, α2, β1, β2, M) with organ effect and overdose toxidrome. Narrow therapeutic index drugs (warfarin, digoxin, lithium, aminoglycosides, phenytoin teaching) demand level/monitoring literacy. Always ask what happens if the patient cannot clear the drug tomorrow.
 
-Special populations (pregnancy, lactation, pediatrics, geriatrics, hepatic/renal failure) change Vd and clearance—dose is not “adult tablet, smaller human.” Chemotherapy classes map to cell-cycle phase and DNA/microtubule targets; heme drugs map to coagulation pathways. Endocrine pharmacology is receptor agonism/antagonism plus feedback consequences.`,
+Special populations (pregnancy, lactation, pediatrics, geriatrics, hepatic/renal failure) change Vd and clearance—dose is not “adult tablet, smaller human.” Chemotherapy classes map to cell-cycle phase and DNA/microtubule targets; heme drugs map to coagulation pathways. Endocrine pharmacology is receptor agonism/antagonism plus feedback consequences.
+
+Pharmacodynamics language (full/partial/inverse agonist, competitive vs noncompetitive antagonist) prevents mechanism errors on boards and wards. Always pair a new drug with its monitoring plan and the toxicity you refuse to miss.`,
   },
   {
     test: /microbiol/i,
@@ -706,7 +816,9 @@ Therapy without source control fails; therapy without stewardship breeds resista
 
 Bite wounds mix oral flora (including anaerobes and Eikenella in human bites)—prophylaxis and tetanus status matter. Stain and culture before antibiotics when the patient is stable enough. Resistance mechanisms (β-lactamases, altered PBPs, efflux) explain drug failure better than “stronger antibiotic” instincts. Opportunistic pathogens declare host immune defects—ask which arm of immunity failed.
 
-Koch’s postulates evolved into molecular criteria—causation still needs more than PCR positivity. Biofilm on hardware explains why antibiotics alone fail prosthetic infections. Stewardship: right drug, right dose, right duration, right de-escalation after cultures.`,
+Koch’s postulates evolved into molecular criteria—causation still needs more than PCR positivity. Biofilm on hardware explains why antibiotics alone fail prosthetic infections. Stewardship: right drug, right dose, right duration, right de-escalation after cultures.
+
+Spirochetes and atypical organisms teach serology timing and false negatives early in disease. Always pair the organism with the host defect when opportunistic infection appears. Source control remains the missing antibiotic when abscess or hardware infection persists.`,
   },
   {
     test: /epidemiolog|biostat/i,
@@ -750,7 +862,9 @@ Safety nets—vaccines, safe sleep, abuse screening, growth charts, vision/heari
 
 Vital-sign tables by age should be memorized enough to feel wrong numbers in your bones—tachycardia in a toddler is not “anxiety” until fever, hypoxia, and volume loss are addressed. Fever without source algorithms differ by age in months, not years. Medication errors concentrate at transitions (mg/kg versus mg/m², mL versus mg). Ask who feeds, who smokes in the home, and who can consent. Developmental delay workups start with hearing/vision and social determinants before exotic metabolic panels, unless red flags demand urgency.
 
-Obesity counseling is family-based BMI-percentile work with comorbidity screening. Strep testing follows Centor-like pediatric pathways—treat positives, avoid shotgun antibiotics for viral URI. Anticipatory guidance (nutrition, screens, safety) is billed clinical care, not small talk. Adolescent confidentiality rules change the interview structure when sexual/mental health arises.`,
+Obesity counseling is family-based BMI-percentile work with comorbidity screening. Strep testing follows Centor-like pediatric pathways—treat positives, avoid shotgun antibiotics for viral URI. Anticipatory guidance (nutrition, screens, safety) is billed clinical care, not small talk. Adolescent confidentiality rules change the interview structure when sexual/mental health arises.
+
+Vaccine counseling starts with disease risk and addresses hesitancy without ridicule. Growth failure and obesity both deserve longitudinal charts, not one-time lectures. Ask who can actually execute the plan tonight.`,
   },
   {
     test: /obstetric|gynecol/i,
@@ -762,7 +876,9 @@ In gynecology, pregnancy testing is part of the abdominal/pelvic pain pathway fo
 
 Maternal physiology increases cardiac output and decreases oncotic pressure—edema and dyspnea need thoughtful differentials, not automatic reassurance. Drug categories in pregnancy are evolving frameworks; use current resources rather than memorized letter grades alone. Postpartum care includes hemorrhage, hypertension, infection, thrombosis, depression, and lactation—each with a clock. Respect reproductive autonomy in counseling; coercion has no place in method selection after delivery or abortion care.
 
-TOLAC/VBAC counseling balances uterine rupture risk against cesarean morbidity using prior incision type and institutional readiness. Rh immune globulin prevents alloimmunization when indicated—timing and dose literacy prevent future hydrops. Every prenatal visit is also a hypertension, glucose, and mental-health screen.`,
+TOLAC/VBAC counseling balances uterine rupture risk against cesarean morbidity using prior incision type and institutional readiness. Rh immune globulin prevents alloimmunization when indicated—timing and dose literacy prevent future hydrops. Every prenatal visit is also a hypertension, glucose, and mental-health screen.
+
+Menopause symptom care is shared decision-making on hormones vs nonhormonal options. Vaginitis diagnosis uses pH/wet mount, not endless empiric cream. Fetal heart tracing categories drive timed corrective steps and delivery decisions—Category III is a clock.`,
   },
   {
     test: /patholog/i,
@@ -772,7 +888,9 @@ Gross and microscopic patterns are crystallized mechanisms. Link inflammation ty
 
 Pathology vocabulary exists to make mechanism visible—use it to predict complications (e.g., squamous metaplasia locations, granuloma differential). Immunohistochemistry and molecular pathology extend the morphologic differential; they do not replace it. A complete answer names the pattern and the process that produced it.
 
-Wound healing timelines (hemostasis, inflammation, proliferation, remodeling) explain dehiscence and keloid teaching. Pathologic calcification (dystrophic vs metastatic) mirrors local injury versus systemic calcium-phosphate imbalance. Cellular aging (telomeres, senescence, proteostasis failure) links to cancer risk and degenerative disease. Always ask whether the slide shows cause, effect, or both.`,
+Wound healing timelines (hemostasis, inflammation, proliferation, remodeling) explain dehiscence and keloid teaching. Pathologic calcification (dystrophic vs metastatic) mirrors local injury versus systemic calcium-phosphate imbalance. Cellular aging (telomeres, senescence, proteostasis failure) links to cancer risk and degenerative disease. Always ask whether the slide shows cause, effect, or both.
+
+Chemical and physical injury patterns (burns, radiation, toxins) and the metastatic cascade (EMT → intravasation → colonization) complete the injury–repair–spread arc. Pathology vocabulary exists to forecast complications, not to decorate reports.`,
   },
 ];
 

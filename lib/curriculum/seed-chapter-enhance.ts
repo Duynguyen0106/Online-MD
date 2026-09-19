@@ -48,6 +48,59 @@ function nonReadingBlocks(lesson: Lesson): ContentBlock[] {
   return out;
 }
 
+/** Map seed modules to catalog enrichment category/organ labels. */
+function enrichmentContext(module: Module): {
+  contentCategory: string;
+  organSystem: string;
+} {
+  const id = module.id;
+  if (id === "mod-cell-mol")
+    return { contentCategory: "Cell Biology", organSystem: "Multisystem" };
+  if (id === "mod-cv")
+    return { contentCategory: "Pathophysiology", organSystem: "Cardiovascular" };
+  if (id === "mod-pulm")
+    return { contentCategory: "Pathophysiology", organSystem: "Respiratory" };
+  if (id === "mod-renal")
+    return { contentCategory: "Pathophysiology", organSystem: "Renal / Urinary" };
+  if (id === "mod-gi")
+    return {
+      contentCategory: "Pathophysiology",
+      organSystem: "Gastrointestinal",
+    };
+  if (id === "mod-endo")
+    return { contentCategory: "Pathophysiology", organSystem: "Endocrine" };
+  if (id === "mod-heme")
+    return {
+      contentCategory: "Pathophysiology",
+      organSystem: "Hematopoietic / Lymphoreticular",
+    };
+  if (id === "mod-neuro")
+    return { contentCategory: "Pathophysiology", organSystem: "Nervous System" };
+  if (id === "mod-msk")
+    return {
+      contentCategory: "Pathophysiology",
+      organSystem: "Musculoskeletal",
+    };
+  if (id === "mod-id")
+    return { contentCategory: "Microbiology", organSystem: "Multisystem" };
+  if (id === "mod-im")
+    return { contentCategory: "Internal Medicine", organSystem: "Multisystem" };
+  if (id === "mod-surg")
+    return { contentCategory: "Surgery", organSystem: "Multisystem" };
+  if (id === "mod-peds")
+    return { contentCategory: "Pediatrics", organSystem: "Pediatric" };
+  if (id === "mod-obgyn")
+    return {
+      contentCategory: "Obstetrics & Gynecology",
+      organSystem: "Reproductive",
+    };
+  if (id === "mod-psych")
+    return { contentCategory: "Psychiatry", organSystem: "Behavioral Health" };
+  if (id === "mod-fm")
+    return { contentCategory: "Family Medicine", organSystem: "Multisystem" };
+  return { contentCategory: "Pathophysiology", organSystem: "Multisystem" };
+}
+
 /**
  * Expand thin seed/expansion lessons into textbook-style chapter blocks
  * while preserving diagrams, videos, and vignettes.
@@ -60,13 +113,14 @@ export function enhanceThinSeedLesson(
   if (readingChars(lesson) >= MIN_READING_CHARS) return lesson;
 
   const points = collectPoints(lesson);
+  const ctx = enrichmentContext(module);
   const enrichment = factualEnrichmentForTopic({
     title: lesson.title,
     points: points.length ? points : [lesson.title],
     quizExplain: points[0] ?? lesson.title,
     cardBack: module.title,
-    contentCategory: "Pathophysiology",
-    organSystem: module.title,
+    contentCategory: ctx.contentCategory,
+    organSystem: ctx.organSystem,
   });
 
   const prior = existingReadingMarkdown(lesson);
