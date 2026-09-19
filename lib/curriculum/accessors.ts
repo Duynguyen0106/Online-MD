@@ -37,6 +37,11 @@ import {
   wave6Objectives,
   wave6QbankQuestions,
   wave6QuizQuestions,
+  wave7ClinicalCases,
+  wave7Flashcards,
+  wave7Objectives,
+  wave7QbankQuestions,
+  wave7QuizQuestions,
 } from "@/lib/curriculum/expansions";
 import type {
   Lesson,
@@ -54,6 +59,7 @@ const quizQuestions = [
   ...wave4QuizQuestions,
   ...wave5QuizQuestions,
   ...wave6QuizQuestions,
+  ...wave7QuizQuestions,
 ];
 const objectives = [
   ...baseObjectives,
@@ -63,6 +69,7 @@ const objectives = [
   ...wave4Objectives,
   ...wave5Objectives,
   ...wave6Objectives,
+  ...wave7Objectives,
 ];
 const flashcards = [
   ...baseFlashcards,
@@ -72,6 +79,7 @@ const flashcards = [
   ...wave4Flashcards,
   ...wave5Flashcards,
   ...wave6Flashcards,
+  ...wave7Flashcards,
 ];
 const qbankQuestions = [
   ...baseQbank,
@@ -81,6 +89,7 @@ const qbankQuestions = [
   ...wave4QbankQuestions,
   ...wave5QbankQuestions,
   ...wave6QbankQuestions,
+  ...wave7QbankQuestions,
 ];
 const clinicalCases = [
   ...baseCases,
@@ -90,6 +99,7 @@ const clinicalCases = [
   ...wave4ClinicalCases,
   ...wave5ClinicalCases,
   ...wave6ClinicalCases,
+  ...wave7ClinicalCases,
 ];
 
 export function getQuestionMap() {

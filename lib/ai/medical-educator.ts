@@ -4,39 +4,44 @@ import {
   type CaseFeedback,
   type TutorOutput,
 } from "@/lib/validations/schemas";
+import {
+  TEXTBOOK_DOMAIN_MAP,
+  buildTutorCurriculumPreamble,
+} from "@/lib/ai/knowledge-domains";
 
-export const MEDICAL_EDUCATOR_SYSTEM = `You are Online MD Faculty AI — an expert medical educator with the knowledge standard of a board-certified physician-educator experienced in USMLE Step 1 and Step 2 CK teaching at top US MD schools.
+export const MEDICAL_EDUCATOR_SYSTEM = `You are Online MD Faculty AI — a board-certified-level physician-educator who teaches at the standard of top US MD schools (USMLE Step 1 & Step 2 CK).
 
-Knowledge standard (public medical science domains — not verbatim copyrighted textbooks):
-- Foundational pathology & mechanisms: cell injury, inflammation, neoplasia, hemodynamics, acid–base, endocrine feedback loops (Robbins-class conceptual depth).
-- Organ physiology & disease: CV (shock, ACS, HF, arrhythmias, valves, atherosclerosis), pulmonary (V/Q, PE, ARDS, asthma/COPD), renal (GFR, sodium/water, acid–base, hyperkalemia, CKD), GI/hepatology (portal HTN, UGIB, pancreatitis, IBD), heme (anemia, platelets, transfusion), neuro (localization, seizure/status, meningitis, ICP), ID/sepsis/UTI/HIV OIs, MSK (septic joint, crystals, compartment), endocrine (DKA/HHS, thyroid, adrenal, calcium).
-- Clinical reasoning: problem representation, illness scripts, pretest probability, urgent vs elective pathways (Harrison-/clerkship-style frameworks); psychiatry safety and withdrawal; OB emergencies (ectopic, PPH, labor stages); pediatrics fever/dehydration/milestones.
-- Assessment literacy: USMLE Content Outline organ systems and physician tasks; teach mechanisms before rote lists.
+You have internalized the conceptual depth of major medical teaching corpora (physiology, pathology, pharmacology, microbiology, and clinical medicine) as domain expertise — without reproducing copyrighted textbook prose or proprietary question banks.
+
+${TEXTBOOK_DOMAIN_MAP}
 
 Role constraints:
-- Teach like a top US MD school faculty tutor (Socratic when helpful; direct when safety or clarity requires it).
-- Prioritize mechanistic reasoning, differential diagnosis structure, and guideline-aware clinical decision frameworks.
-- Prefer the provided curriculum context as ground truth for course-specific claims. If the student asks beyond loaded lessons, draw on the knowledge standard above, label uncertainty, and point to the best Online MD module/lesson to study next.
-- Never invent drug doses, trial names, or guideline years unless present in context; if estimating, label uncertainty.
-- Do not provide personalized medical advice for real patients; this is educational simulation only.
-- Prefer precise terminology (e.g., preload vs volume status; V/Q mismatch vs shunt; hydrostatic vs permeability edema).
-- When discussing management, distinguish emergency stabilization from definitive therapy.
-- Output MUST be valid JSON matching the schema described by the user message.`;
+- Teach like elite faculty: Socratic when helpful; direct when safety or clarity requires it.
+- Always prefer mechanism → clinical phenotype → differential → urgent vs elective action.
+- Use loaded Online MD lesson context as course ground truth; when students go beyond it, draw on the domain map, label uncertainty, and name the best module/lesson to study next.
+- Never invent drug doses, trial names, or guideline years unless present in context; if estimating, label uncertainty explicitly.
+- Educational simulation only — not personalized advice for real patients.
+- Precise terminology (preload vs volume; V/Q vs shunt; nephritic vs nephrotic; SS vs NMS).
+- Separate emergency stabilization from definitive therapy.
+- Output MUST be valid JSON matching the schema in the user message.`;
 
 function offlineTutor(message: string, context: string): TutorOutput {
+  const excerpt = context.slice(0, 1200);
   return tutorOutputSchema.parse({
-    reply: `**Faculty AI (offline expert mode)**\n\nYou asked: “${message.trim()}”\n\nBased on the loaded curriculum context, focus on mechanism → clinical consequence → next learning step.\n\n${context.slice(0, 900)}\n\nWhen AI_ENABLED is on with an API key, answers use a full medical-educator model. Always verify critical clinical decisions with primary sources and faculty.`,
+    reply: `**Faculty AI (offline expert mode)**\n\nYou asked: “${message.trim()}”\n\nApply the Online MD teaching arc:\n1. Name the core mechanism\n2. Link mechanism → bedside findings\n3. Build a short differential\n4. Separate what is urgent now vs what can wait for workup\n5. Return to the relevant lesson for mastery before Qbank\n\nCurriculum/domain context:\n${excerpt}\n\nEnable AI_ENABLED + AI_API_KEY for full live medical-educator responses. Verify critical decisions with primary sources and faculty.`,
     relatedObjectiveIds: [],
     keyTeachingPoints: [
-      "Anchor on mechanism before memorization",
-      "Map findings to anatomy/physiology first",
-      "Qbank is for assessment after mastery — return to lessons for gaps",
+      "Mechanism before memorization",
+      "Urgent stabilization vs definitive therapy",
+      "Master lessons before using Qbank as assessment",
     ],
     disclaimers: [
       "Educational simulation only — not clinical advice for real patients",
-      "Offline fallback response (configure AI_API_KEY for live expert model)",
+      "Offline fallback (configure AI_API_KEY for live expert model)",
     ],
-    uncertaintyNotes: ["Live model unavailable; response is heuristic scaffolding"],
+    uncertaintyNotes: [
+      "Live model unavailable; scaffolding uses curriculum + domain map heuristics",
+    ],
   });
 }
 
@@ -45,14 +50,15 @@ function offlineCaseFeedback(responses: Record<string, string>): CaseFeedback {
   return caseFeedbackSchema.parse({
     overallAssessment:
       answered.length === 0
-        ? "No substantive responses yet. Structure answers as diagnosis → physiology → management priorities."
-        : "Solid attempt at clinical reasoning. Strengthen links between hemodynamics and exam findings, and separate acute stabilization from chronic disease-modifying therapy.",
+        ? "No substantive responses yet. Structure answers as problem representation → pathophysiology → urgent priorities → definitive plan."
+        : "Reasonable clinical engagement. Strengthen explicit mechanisms, name the syndrome precisely, and separate ABCs/resuscitation from disease-modifying therapy.",
     strengths: answered.length
-      ? ["Attempted a structured written assessment", "Engaged the staged case prompts"]
+      ? ["Attempted structured written assessment", "Engaged staged case prompts"]
       : [],
     gaps: [
-      "Explicitly name the heart-failure phenotype if relevant",
-      "List GDMT pillars with mechanisms, not only diuretics",
+      "State a one-sentence problem representation",
+      "Link each major finding to a mechanism",
+      "List time-critical actions before elective tests",
     ],
     rubricScores: [
       { criterion: "Problem representation", score: answered.length ? 3 : 1 },
@@ -60,8 +66,8 @@ function offlineCaseFeedback(responses: Record<string, string>): CaseFeedback {
       { criterion: "Management prioritization", score: answered.length ? 2 : 1 },
     ],
     followUpQuestions: [
-      "What physical exam findings track left-sided vs right-sided filling pressures?",
-      "Which therapies improve survival in HFrEF versus those that mainly relieve congestion?",
+      "What is the single most dangerous diagnosis you must not miss?",
+      "Which findings force action in the next 15 minutes vs the next day?",
     ],
     safetyFlags: [],
     disclaimers: [
@@ -86,7 +92,7 @@ async function callChatJson(system: string, user: string): Promise<string> {
     },
     body: JSON.stringify({
       model,
-      temperature: 0.3,
+      temperature: 0.25,
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: system },
@@ -107,14 +113,15 @@ export async function generateTutorReply(opts: {
   message: string;
   curriculumContext: string;
 }): Promise<TutorOutput> {
+  const enriched = buildTutorCurriculumPreamble(opts.curriculumContext);
   try {
     const content = await callChatJson(
       MEDICAL_EDUCATOR_SYSTEM,
-      `Return JSON with keys: reply, relatedObjectiveIds, suggestedNextBlockId, keyTeachingPoints, disclaimers, uncertaintyNotes.\n\nCurriculum context:\n${opts.curriculumContext}\n\nStudent message:\n${opts.message}`,
+      `Return JSON with keys: reply, relatedObjectiveIds, suggestedNextBlockId, keyTeachingPoints, disclaimers, uncertaintyNotes.\n\n${enriched}\n\nStudent message:\n${opts.message}`,
     );
     return tutorOutputSchema.parse(JSON.parse(content));
   } catch {
-    return offlineTutor(opts.message, opts.curriculumContext);
+    return offlineTutor(opts.message, enriched);
   }
 }
 
@@ -128,7 +135,7 @@ export async function generateCaseFeedback(opts: {
   try {
     const content = await callChatJson(
       MEDICAL_EDUCATOR_SYSTEM,
-      `Return JSON with keys: overallAssessment, strengths, gaps, rubricScores[{criterion,score,comment}], followUpQuestions, safetyFlags, disclaimers.\nScore rubric 0-5.\n\nCase: ${opts.caseTitle}\n${opts.presentation}\nTeaching points: ${opts.teachingPoints}\nStages: ${JSON.stringify(opts.stages)}\nStudent responses: ${JSON.stringify(opts.responses)}`,
+      `Return JSON with keys: overallAssessment, strengths, gaps, rubricScores[{criterion,score,comment}], followUpQuestions, safetyFlags, disclaimers.\nScore rubric 0-5.\nUse specialty-expert standards for this case type.\n\nCase: ${opts.caseTitle}\n${opts.presentation}\nTeaching points: ${opts.teachingPoints}\nStages: ${JSON.stringify(opts.stages)}\nStudent responses: ${JSON.stringify(opts.responses)}`,
     );
     return caseFeedbackSchema.parse(JSON.parse(content));
   } catch {
