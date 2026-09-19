@@ -26,6 +26,214 @@ Perimortem cesarean delivery (resuscitative hysterotomy) is considered early—c
 Team roles must be pre-assigned: compressor, airway, uterine displacement, timer/recorder, obstetrician for perimortem delivery, neonatology for the newborn. Causes unique to pregnancy (hemorrhage, amniotic fluid embolism, magnesium toxicity, preeclampsia/eclampsia complications, anesthetic toxicity) sit beside the usual Hs and Ts. The educational endpoint is automatic LUD + early perimortem decision, not adult ACLS with pregnancy as an afterthought.`,
   },
   {
+    test: /special populations|geriatric pk|pediatric dosing by weight|pregnancy categories conceptual/i,
+    prose: `**Pharmacology in special populations — textbook chapter.**
+
+Pediatrics: dose by weight or surface area, immature clearance pathways, and formulation literacy (mg vs mL). Pregnancy: physiologic changes in Vd and GFR alter levels; use current resources rather than memorized letter categories alone; fetal risk is indication-specific. Lactation: choose agents with low milk transfer when possible and counsel on timing.
+
+Geriatrics: reduced GFR, increased sensitivity to CNS/anticholinergic effects, Beers criteria caution, and start-low go-slow with explicit stop dates for sedatives. Hepatic/renal failure change first-pass and renally cleared drugs—write the adjusted plan. Always name which population rule changed the adult dose before prescribing.`,
+  },
+  {
+    test: /forensic psychiatry|competence to stand trial|insanity standard|duty to protect|malingering vs factitious/i,
+    prose: `**Forensic psychiatry essentials — textbook chapter.**
+
+Competency to stand trial (understand charges/proceedings and assist counsel) differs from criminal responsibility/insanity at the time of the act—do not conflate them. Duty-to-protect pathways after credible threats follow jurisdictional Tarasoff-era rules and documentation standards. Malpractice risk rises with poor risk assessment, abandoned follow-up, and boundary violations.
+
+Malingering is intentional symptom production for external gain; factitious disorder seeks the sick role—both require careful, non-collusive documentation. Court reports stick to opinions within expertise and cited data. Clinical care still comes first: treat withdrawal, psychosis, and suicide risk even when legal questions loom.`,
+  },
+  {
+    test: /pediatric asthma|asthma exacerbation|status asthmaticus|inhaled corticosteroid.*child/i,
+    prose: `**Pediatric asthma exacerbation — textbook chapter.**
+
+Assess work of breathing, SpO₂, speech, and mental status—quiet child with poor air entry is danger, not reassurance. Dual oxygen/bronchodilator strategy: repeated SABA ± ipratropium in severe flares, early systemic steroids, and escalation (Mg, continuous nebs, ventilatory support) per severity. Chest radiograph is not routine for typical flares—use when focal findings suggest pneumonia or complication.
+
+Controller therapy (ICS) and spacer technique prevent the next admission. Distinguish bronchiolitis age bands (supportive care) from asthma phenotype. Action plans and trigger counseling (smoke, allergens, viral URI) are discharge requirements, not paperwork afterthoughts.`,
+  },
+  {
+    test: /branched-?chain|maple syrup|bckdh|isoleucine|leucine\/valine|msud/i,
+    prose: `**Branched-chain amino acid metabolism — textbook chapter.**
+
+Leucine, isoleucine, and valine are metabolized by the branched-chain α-ketoacid dehydrogenase (BCKDH) complex. Maple syrup urine disease (MSUD) is BCKDH deficiency: sweet-smelling urine, ketoacidosis, neurologic toxicity, and encephalopathy in neonates—dietary protein restriction and emergency management of crises are life-saving. Thiamine-responsive forms exist in some variants.
+
+Do not confuse MSUD ketoacids with diabetic ketoacidosis—glucose patterns and age/context differ. Newborn screening catches many cases, but clinical vigilance still matters when screening is missed. Name the enzyme complex, the accumulating metabolites, and the first stabilizing step (stop protein, provide calories, dialyze if needed) before listing every amino acid.`,
+  },
+  {
+    test: /spare receptor|potency vs efficacy|intrinsic efficacy|partial agonist|occupancy.?response/i,
+    prose: `**Spare receptors, potency & efficacy — textbook chapter.**
+
+Efficacy is the maximal effect a drug can produce; potency is the concentration/dose needed for a given effect (often EC50). Spare receptors exist when maximal response occurs with only a fraction of receptors occupied—irreversible antagonists must inactivate “extras” before the max response falls. Partial agonists have lower intrinsic efficacy than full agonists and can antagonize full agonists when competing for the same receptor.
+
+Shift versus depression of dose–response curves distinguishes competitive antagonists (parallel right shift) from noncompetitive/irreversible antagonists (max depression). Therapeutic index compares toxicity and efficacy dose ranges. Always say which axis you mean—students confuse “stronger” with potency when they mean efficacy.`,
+  },
+  {
+    test: /suicide risk|ideation plan intent|lethal.?means|protective factors.*suicid|suicidality/i,
+    prose: `**Suicide risk assessment — textbook chapter.**
+
+Risk assessment is a procedure, not a vibe: ask directly about ideation, plan, intent, means, prior attempts, and protective factors. Document access to firearms and medications; lethal-means counseling is an intervention. Static risk (prior attempts, psychiatric history, family history) plus dynamic risk (intoxication, agitation, acute loss, command hallucinations) guide level of care.
+
+Safety plans are concrete: warning signs, internal coping, social contacts, professional contacts, and environmental safety—with a timed follow-up. Do not discharge high-intent patients with vague “follow up with PCP.” Involuntary holds use jurisdictional criteria with facts that survive peer review. Substance intoxication raises near-term risk even when “chronic ideation” is familiar—reassess when sober.`,
+  },
+  {
+    test: /four principles|autonomy|beneficence|nonmaleficence|clinical ethics|justice.*allocation|informed consent & capacity/i,
+    prose: `**Four principles & clinical ethics procedures — textbook chapter.**
+
+Autonomy, beneficence, nonmaleficence, and justice are starting vocabulary—not the note. Capacity is decision-specific: understanding, appreciation, reasoning, and expression of choice. Informed consent needs indication, benefits, material risks, alternatives, and voluntariness. When capacity is absent, surrogates use substituted judgment then best interest.
+
+Justice demands transparent triage under scarcity and equitable access—not stealth bedside rationing. Error disclosure follows truth, apology where appropriate, and prevention. Conscientious objection requires transfer of care without abandonment. Write the values conversation with the same specificity you write the creatinine.`,
+  },
+  {
+    test: /quality measures|patient safety|run chart|structure\/process\/outcome|incident report|near miss/i,
+    prose: `**Quality measures & patient safety — textbook chapter.**
+
+Donabedian’s structure–process–outcome frame organizes measurement: what resources exist, what care is delivered, what happens to patients. Run charts and control charts separate common-cause from special-cause variation—do not redesign a system for one anecdotal failure without a denominator.
+
+Safety culture reports near misses without pure blame; Swiss-cheese thinking stacks defenses (checklists, barcoding, read-backs). Balancing measures catch harm from a well-intended metric (e.g., throughput that worsens readmissions). Absolute rates and risk adjustment beat vanity percentages. A chapter ends when the learner can name a measure, its denominator, and one unintended consequence.`,
+  },
+  {
+    test: /epigenetics|dna methylation|histone|imprinting disorder|chromatin/i,
+    prose: `**Epigenetics in medicine — textbook chapter.**
+
+Epigenetic marks (DNA methylation, histone modifications, chromatin remodeling) change expression without changing DNA sequence. Imprinting disorders (Prader–Willi/Angelman) reflect parent-of-origin silencing—same deletion, different phenotype by parental source. Environmental exposures and development leave marks that can persist across cell divisions.
+
+Cancer epigenetics includes promoter hypermethylation silencing tumor suppressors and chromatin-modifier mutations. Therapies (DNMT inhibitors, HDAC inhibitors in selected diseases) are proof that marks are sometimes reversible. Always ask whether the vignette is a sequence mutation, a copy-number change, or an imprint/epigenetic lesion before naming the syndrome.`,
+  },
+  {
+    test: /cytogenetics|karyotype|FISH |chromosomal microarray|translocation|aneuploid/i,
+    prose: `**Cytogenetics clinical patterns — textbook chapter.**
+
+Karyotype detects large aneuploidies and rearrangements; FISH targets known loci; chromosomal microarray finds copy-number variants below karyotype resolution; NGS finds sequence variants. Match the test to the question—microarray will miss balanced translocations that karyotype/FISH may catch.
+
+Classic oncology: Philadelphia t(9;22) BCR–ABL, PML–RARA t(15;17), MYC rearrangements. Prenatal and pediatric patterns (trisomies, microdeletion syndromes) use the same toolkit with counseling urgency. Always state limitations: no single test sees everything.`,
+  },
+  {
+    test: /blood & tissue parasites|tissue parasite|malaria|babesia|trypanosom|leishman|helminth|parasite tissue/i,
+    prose: `**Blood & tissue parasites — textbook chapter.**
+
+Thick/thin smears diagnose malaria; species and density drive therapy urgency—P. falciparum can kill quickly. Babesia shares smear pitfalls and is often in asplenic or northeastern exposures. Trypanosomes and Leishmania map to geography and vector. Helminths (Strongyloides especially) matter before immunosuppression—dissemination risk is the teaching point.
+
+Eosinophilia suggests tissue invasion but is neither sensitive nor specific. Serology timing and empiric treatment decisions need exposure history. Always pair the organism with the host immune defect and the travel/occupational story.`,
+  },
+  {
+    test: /bias, confounding|effect modification|selection bias|information bias|confounding criteria/i,
+    prose: `**Bias, confounding & effect modification — textbook chapter.**
+
+Bias is systematic error (selection, information/misclassification) that distorts association away from truth. Confounding is mixing of effects from a third variable associated with exposure and outcome, not on the causal pathway—control by randomization, restriction, matching, or adjustment. Effect modification (interaction) is real heterogeneity of effect across strata—report it, do not “adjust it away.”
+
+Ask whether a surprising observational result could be confounding by indication or healthy-user bias before changing practice. Randomized trials address known and unknown confounders but still face bias from attrition and unblinding. Mastery is naming the threat and the design defense in one sentence.`,
+  },
+  {
+    test: /aortic aneurysm|aortic dissection|stanford |debakey|aneurysm.*dissection/i,
+    prose: `**Aortic aneurysm & dissection — textbook chapter.**
+
+Aneurysm is pathologic dilation; rupture risk rises with diameter, rate of growth, and connective-tissue disease. Dissection is an intimal tear with false-lumen propagation—classified by Stanford A (involves ascending) versus B (descending only). Abrupt tearing chest/back pain, pulse deficits, aortic regurgitation, and tamponade physiology are stopwatch findings. Type A needs emergent surgical pathways; uncomplicated Type B is often managed with impulse control (β-blocker first) plus endovascular options when complicated.
+
+Never anticoagulate or thrombolyse a dissection mistaken for ACS. Imaging (CTA/TEE/MR) follows stability. Marfan, Loeys–Dietz, bicuspid aortic valve, and hypertension are risk languages. Postoperative and chronic surveillance watch residual false lumen and branch ischemia.`,
+  },
+  {
+    test: /pheochromocytoma|catecholamine biology|metanephrine|adrenal medulla|paroxysm.*hypertension/i,
+    prose: `**Catecholamines & pheochromocytoma — textbook chapter.**
+
+Adrenal medulla secretes epinephrine/norepinephrine; pheochromocytoma and paraganglioma produce paroxysmal hypertension, headache, palpitations, and sweating. Plasma or urinary metanephrines are the screening language—draw calmly, interpret with context (critical illness raises false positives). Imaging follows biochemistry, not the reverse.
+
+α-blockade before β-blockade prevents unopposed α-constriction when preparing for resection. Heritable syndromes (MEN2, VHL, SDH mutations) demand family counseling. Crisis care is vasodilators and volume, not pure β-blockade first. Always ask about pressor responses to anesthesia or drugs that release catecholamines.`,
+  },
+  {
+    test: /osmotic vs secretory|secretory diarrhea|osmotic diarrhea|malabsorption|nutrient absorption/i,
+    prose: `**Diarrhea osmotic vs secretory & malabsorption — textbook chapter.**
+
+Osmotic diarrhea improves with fasting; stool osmotic gap is high as nonabsorbed solutes hold water. Secretory diarrhea persists while NPO; gap is low as active ion secretion drives volume (toxins, neuroendocrine tumors, bile acids). Inflammatory diarrhea adds blood, fever, and urgency—think invasion or IBD.
+
+Malabsorption localizes: pancreatic (fat, fat-soluble vitamins), biliary, celiac/brush-border, bacterial overgrowth, short bowel. Steatorrhea, weight loss, and deficiency syndromes (B12, iron, Ca/Vit D) are phenotype clues. Always ask about diet, travel, surgery, and whether fasting changes output before shotgun cultures.`,
+  },
+  {
+    test: /synaptic transmission|neuroplasticity|long-?term potentiation|basal ganglia circuit|direct.*indirect pathway/i,
+    prose: `**Synaptic transmission, plasticity & basal ganglia — textbook chapter.**
+
+Chemical synapses convert action potentials into transmitter release (calcium-dependent vesicle fusion); receptors are ionotropic (fast) or metabotropic (modulatory). Long-term potentiation/depression remodel synaptic weights—learning physiology that disease and drugs can hijack.
+
+Basal ganglia circuits: cortex → striatum → direct (Go) and indirect (NoGo) pathways → thalamus → cortex. Dopamine from SNc facilitates direct and inhibits indirect pathways—Parkinsonism is dopamine loss (bradykinesia, rigidity, tremor); Huntington’s early preferential indirect-path loss yields chorea. Name the node before the drug (levodopa, dopamine agonists, anticholinergics, tetrabenazine).`,
+  },
+  {
+    test: /csf production|icp dynamics|choroid plexus|arachnoid granulation|monro-?kellie/i,
+    prose: `**CSF production & ICP dynamics — textbook chapter.**
+
+CSF made by choroid plexus circulates ventricles → subarachnoid space → arachnoid granulations. Monro–Kellie doctrine: fixed cranial volume means brain, blood, and CSF trade space—mass, edema, or venous obstruction raises ICP. Cerebral perfusion pressure ≈ MAP − ICP.
+
+Hydrocephalus is obstructive versus communicating; papilledema, CN VI palsy, and Cushing triad are late danger signs. LP is contraindicated when a mass lesion threatens herniation—image first when focal signs or papilledema exist. ICP treatment ladders (head of bed, CO₂, osmotherapy, CSF diversion, decompression) follow the physiology of the box you are in.`,
+  },
+  {
+    test: /neurodegeneration|proteinopath|alzheimer|parkinson pathobiology|lewy body|prion/i,
+    prose: `**Neurodegeneration proteinopathies — textbook chapter.**
+
+Misfolded protein aggregates define clinicopathologic entities: amyloid-β/tau (Alzheimer), α-synuclein (Parkinson/Lewy), TDP-43 (ALS/FTLD spectrum), prion protein (CJD). Tempo, cognitive versus motor onset, and autonomic features sort syndromes before biomarkers return.
+
+Selective neuronal vulnerability explains why the same proteinopathy hits substantia nigra versus cortex first. Symptomatic therapies (cholinesterase inhibitors, levodopa) do not stop protein spread—counsel honestly. Rapidly progressive dementia still needs reversible metabolic/infectious/autoimmune rule-outs before “neurodegeneration” closes the case.`,
+  },
+  {
+    test: /anticoagulant mechanism|antiplatelet mechanism|vwf|gpib|gpiib|p2y12|factor xa|thrombin inhibit/i,
+    prose: `**Anticoagulant & antiplatelet mechanisms — textbook chapter.**
+
+Primary hemostasis: platelet adhesion (vWF–GpIb), activation, aggregation (GpIIb/IIIa). Antiplatelets hit COX-1 (aspirin), P2Y12 (clopidogrel/ticagrelor), or GpIIb/IIIa. Secondary hemostasis: coagulation cascade to fibrin—heparin potentiates antithrombin; warfarin depletes vitamin K–dependent factors (II, VII, IX, X, C, S); direct oral anticoagulants inhibit Xa or thrombin.
+
+Match drug to indication and reversal plan (protamine, vitamin K/PCC, idarucizumab, andexanet in pathways). Bridging is for the highest-risk mechanical valves/thrombi—not every AF patient. Bleeding plus clotting history demands mechanism thinking, not random stacking.`,
+  },
+  {
+    test: /sickle|thalassemia|hemoglobinopath|hbss|hbs /i,
+    prose: `**Sickle cell & thalassemia — textbook chapter.**
+
+Sickle hemoglobin polymerizes when deoxygenated, distorting RBCs, shortening survival, and occluding microvasculature. Vaso-occlusive pain, acute chest syndrome, stroke risk (especially in children), splenic infarction/functional asplenia, and aplastic crisis with parvovirus B19 are the classic crises. Trigger search (infection, dehydration, hypoxia, acidosis) is part of every acute visit. Hydroxyurea elevates HbF and reduces crises; transfusion pathways and exchange consider iron load and alloimmunization. Fever in functional asplenia is an emergency until proven otherwise—encapsulated organisms drive prophylaxis and vaccine urgency.
+
+Thalassemias are quantitative globin-chain defects: ineffective erythropoiesis, hemolysis, and extramedullary hematopoiesis. Distinguish trait (mild indices, counseling) from major/intermedia (transfusion dependence, chelation, bone changes). Microcytosis with normal/high RBC count hints at thalassemia trait versus iron deficiency. Mentzer index teaching is a screen, not a diagnosis—hemoglobin electrophoresis or HPLC confirms. Genetic counseling belongs in both sickle and thalassemia chapters because reproductive risk is part of the disease.`,
+  },
+  {
+    test: /thrombophilia|factor v leiden|prothrombin g20210|antiphospholipid|protein c|protein s|antithrombin/i,
+    prose: `**Thrombophilia — textbook chapter.**
+
+Virchow’s triad still organizes risk: stasis, endothelial injury, hypercoagulability. Hereditary thrombophilias (Factor V Leiden, prothrombin G20210A, antithrombin/protein C/S deficiencies) raise VTE risk especially when combined with acquired hits (surgery, estrogen, pregnancy, immobilization, cancer). Testing is not automatic after every clot—yield and management change are highest in unprovoked, recurrent, or unusual-site thrombosis and in strong family histories.
+
+Antiphospholipid syndrome is an acquired thrombophilia with arterial and venous events plus pregnancy morbidity; diagnosis needs persistent antibodies and the clinical syndrome. Anticoagulation duration after VTE balances provocation, bleeding risk, and sex/hormone plans. Do not start lifelong anticoagulation from a lab label alone without a clot history. Perioperative bridging decisions require the indication, not the anxiety of stopping.`,
+  },
+  {
+    test: /vaughan williams|antiarrhythmic class|class i anti|class iii anti|use-?dependent/i,
+    prose: `**Antiarrhythmic Vaughan Williams map — textbook chapter.**
+
+Class I agents block Na⁺ channels (Ia quinidine/procainamide, Ib lidocaine/mexiletine, Ic flecainide/propafenone) with use-dependence that matters in ischemic or scarred ventricle—Ic drugs are contraindicated in structural heart disease for that reason. Class II β-blockers slow AV nodal conduction and reduce triggers. Class III prolong repolarization (K⁺ block: amiodarone, sotalol, dofetilide) and carry torsades risk—watch QTc, electrolytes, and renal dosing. Class IV non-dihydropyridine calcium-channel blockers slow the AV node (verapamil/diltiazem).
+
+Amiodarone spans classes and needs thyroid, liver, lung, and eye toxicity literacy. Rhythm versus rate control in AF still starts with stability, anticoagulation need, and whether a Ic or III agent is safe for this heart. Always name the channel, the ECG effect, and the toxicity fingerprint before picking a drug from memory.`,
+  },
+  {
+    test: /skull base|foramina|cavernous sinus|orbital apex|cranial nerve exit/i,
+    prose: `**Skull base, orbital apex & cavernous sinus — textbook chapter.**
+
+Foramina are named highways: olfactory filaments through cribriform; optic nerve and ophthalmic artery through optic canal; CN III/IV/V1/VI through superior orbital fissure; V2 through foramen rotundum; V3 through foramen ovale; middle meningeal through foramen spinosum; CN VII/VIII through internal acoustic meatus; CN IX/X/XI through jugular foramen; XII through hypoglossal canal. Compression syndromes become predictable once the canal is named.
+
+Cavernous sinus contains CN III, IV, V1, V2, VI, and the internal carotid—septic thrombosis and carotid-cavernous fistula present with painful ophthalmoplegia, chemosis, and possible contralateral spread via intercavernous sinuses. Orbital apex lesions threaten vision early (optic nerve); superior orbital fissure lesions spare the optic nerve but still paralyze extraocular muscles. Draw the sinus once from memory; the board vignette will ask which nerve is inside versus which is outside (V3).`,
+  },
+  {
+    test: /men syndrome|men1|men2|sipple|wermer|medullary thyroid|pheochromocytoma.*thyroid/i,
+    prose: `**MEN syndromes — textbook chapter.**
+
+MEN1 (Wermer): parathyroid adenomas, pituitary adenomas, enteropancreatic tumors (gastrinoma/insulinoma)—think “3 Ps.” Hypercalcemia often declares first. MEN2A (Sipple): medullary thyroid carcinoma, pheochromocytoma, hyperparathyroidism. MEN2B adds mucosal neuromas, marfanoid habitus, and very early MTC—prophylactic thyroidectomy timing is genotype-driven. Always exclude pheo before elective surgery in MEN2.
+
+RET versus MEN1 (menin) genetics change cascade screening for relatives. Calcitonin and plasma metanephrines are surveillance languages, not optional labs. A single endocrine tumor in a young patient should trigger family history and syndrome pattern recognition before you call it sporadic.`,
+  },
+  {
+    test: /menstrual cycle|follicular phase|luteal phase|lh surge|ovulation endocrinology|reproductive endocrinology axis/i,
+    prose: `**Menstrual cycle & reproductive endocrine axis — textbook chapter.**
+
+Hypothalamic GnRH pulses → pituitary FSH/LH → ovarian follicles and corpus luteum → estradiol/progesterone feedback. Follicular phase: FSH recruits follicles; estradiol rises and eventually triggers the LH surge → ovulation. Luteal phase: progesterone dominates, preparing endometrium; without pregnancy, corpus luteum fails and menses occurs. Anovulation presents as irregular bleeding or infertility—PCOS, thyroid disease, hyperprolactinemia, and hypothalamic amenorrhea are common forks.
+
+Primary versus secondary amenorrhea uses FSH, pregnancy test, and anatomy. Estrogen deficiency risks bone loss; unopposed estrogen risks endometrium. When teaching the axis, always state what feedback is negative versus the midcycle positive feedback that creates the LH surge—missing that point loses the ovulation question.`,
+  },
+  {
+    test: /leukemogenesis|plasma cell dyscrasia|multiple myeloma|mgus|waldenstrom|eosinophilia|hypereosinophilic|basophil/i,
+    prose: `**Leukemia, plasma-cell & eosinophil pathobiology — textbook chapter.**
+
+Leukemogenesis is clonal hematopoietic failure plus proliferative advantage—blasts crowd normal lineages (cytopenias) and may invade (gum hypertrophy, CNS, bone pain). Lineage (ALL vs AML vs chronic leukemias) and genetics drive therapy more than eponyms. Tumor lysis risk travels with burden and sensitivity to therapy.
+
+Plasma-cell dyscrasias span MGUS → smoldering → myeloma (CRAB: hyperCalcemia, Renal failure, Anemia, Bone lesions) and Waldenström (IgM, hyperviscosity). SPEP/UPEP, light chains, and marrow percentage stage the threat. Eosinophilia forks: allergy/drugs/parasites versus hypereosinophilic syndromes with organ damage (heart, lung, nerve)—absolute count plus end-organ evidence decides urgency. Basophils tip toward myeloproliferative overlap when accompanied by other lineage clues.`,
+  },
+  {
     test: /mse|mental status|psychosis|delusion|hallucin|thought disorder|first-?episode/i,
     prose: `**Psychosis & mental status examination — textbook chapter.**
 
@@ -40,7 +248,7 @@ Treat agitation with the least restrictive effective approach: verbal de-escalat
 Discriminate schizophrenia-spectrum illness from mood disorders with psychosis by polarity history, not by the presence of hallucinations alone. Brief psychotic disorder and substance-induced psychosis have time-limited courses when the trigger remits; schizophreniform and schizophrenia diagnoses require duration and functional criteria. Catatonia may coexist and changes the first medication choice. Always reassess medical status when the sensorium waxes and wanes—psychosis in clear consciousness differs from delirium with psychotic features. Mastery is a one-sentence problem representation that includes syndrome, duration, substances, medical rule-outs, and risk.`,
   },
   {
-    test: /mood disorder|mdd|bipolar|mania|depression|phq|antidepressant|ssri|snri|ect /i,
+    test: /mood disorder|\bmdd\b|bipolar|\bmania\b|(?<![a-z])depression\b|phq|antidepressant|\bssri\b|\bsnri\b|\bect\b/i,
     prose: `**Mood disorders — textbook chapter.**
 
 Major depressive disorder is a syndrome of persistent low mood and/or anhedonia plus neurovegetative and cognitive features causing clinically significant impairment. Specifiers (anxious distress, mixed features, melancholic, atypical, psychotic, seasonal, peripartum) change prognosis and treatment urgency. Severity screening tools such as the PHQ-9 quantify symptom burden and track response; they do not replace a clinical interview that explores suicide risk, psychosis, bipolar history, substances, medical mimics, and functional collapse. Ask specifically about sleep, appetite, energy, concentration, guilt/worthlessness, psychomotor change, and recurrent thoughts of death—then ask about plan, intent, means, protective factors, and lethal-means access.
@@ -262,7 +470,7 @@ Localize: MCA, ACA, PCA, brainstem, and lacunar syndromes produce characteristic
 BP targets differ for ischemic versus hemorrhagic pathways and for post-thrombolysis care—know which protocol you are in. Dysphagia screening before oral intake prevents aspiration. DVT prophylaxis, glucose control, and fever management are supportive care that changes outcomes. Cryptogenic stroke evaluation may include prolonged rhythm monitoring for occult AF. When deficits fluctuate, reconsider seizure, migraine, or hypoperfusion rather than reflexively redosing thrombolytics.`,
   },
   {
-    test: /dka|hhs|diabetic keto|anion.?gap.*glucose|insulin drip/i,
+    test: /\bdka\b|\bhhs\b|diabetic keto|anion.?gap.*glucose|insulin drip|ketoacidosis/i,
     prose: `**DKA & HHS — textbook chapter.**
 
 DKA combines anion-gap metabolic acidosis, ketones, and hyperglycemia (glucose may be near-normal in pregnancy or SGLT2 contexts—euglycemic DKA). HHS features extreme hyperglycemia and hyperosmolality with profound dehydration, usually without major ketoacidosis. Both are insulin-deficiency/resistance plus counterregulatory hormone states often triggered by infection, ischemia, nonadherence, or new diabetes.

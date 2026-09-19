@@ -118,7 +118,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**ILD patterns.** Fibrotic ILDs show restriction and low DLCO; HRCT patterns (UIP honeycombing vs NSIP ground-glass) guide differential. Hypersensitivity pneumonitis and connective-tissue disease–ILD require exposure and serologic framing beyond idiopathic IPF.`,
   },
   {
-    test: /sleep.?apnea|osa|hypoventilation|obesity hypovent/i,
+    test: /sleep.?apnea|\bosa\b|hypoventilation|obesity hypovent/i,
     prose: `**Sleep-disordered breathing.** OSA features collapsible upper airway with apneas/hypopneas and daytime sleepiness; CPAP is first-line for many. Obesity hypoventilation adds daytime hypercapnia. Screen for pulmonary hypertension and arrhythmias in severe disease.`,
   },
   {
@@ -126,7 +126,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Pneumonia pathogenesis.** Aspiration, inhalation, and hematogenous seeding initiate infection; alveolar inflammation impairs gas exchange. Severity scores plus comorbidities guide site of care; resistance risk factors expand coverage. De-escalate with cultures and clinical response.`,
   },
   {
-    test: /\btb\b|tubercul|granuloma|caseat/i,
+    test: /\btb\b|tubercul|caseating granuloma|mycobacter/i,
     prose: `**TB granulomas.** Cell-mediated immunity walls off mycobacteria in caseating granulomas. Primary vs post-primary patterns differ radiographically. Latent infection lacks symptoms but can reactivate with TNF inhibitors or immunodeficiency—screen before biologics.`,
   },
   {
@@ -134,7 +134,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Heart failure.** HFrEF is systolic pump failure; HFpEF is often stiff diastolic filling with comorbidity drivers. Congestion (rales, edema, elevated filling pressures) dominates many admissions. BNP supports diagnosis; treatment pairs decongestion with disease-modifying therapy when indicated.`,
   },
   {
-    test: /arrhythmia|atrial fibril|svt|vt |torsades|brady/i,
+    test: /arrhythmia|atrial fibril|\bsvt\b|v-?tach|ventricular tachy|torsades|bradyarrhythmia|bradycardia/i,
     prose: `**Arrhythmias.** Unstable tachyarrhythmias need immediate cardioversion. AF rate vs rhythm control and anticoagulation (CHA₂DS₂-VASc) are parallel decisions. VT/VF are shockable arrest rhythms; polymorphic VT with long QT suggests torsades—magnesium and remove QT drugs.`,
   },
   {
@@ -148,7 +148,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
 
   // ——— Clinical medicine / clerkships ———
   {
-    test: /stemi|nste|acs|troponin|reperfusion|door-to-balloon|fibrinolys/i,
+    test: /\bstemi\b|\bnstemi\b|\bnste\b|\bacs\b|troponin|reperfusion|door-to-balloon|fibrinolys/i,
     prose: `**ACS.** ECG within minutes. STEMI prioritizes emergent reperfusion (PCI preferred; fibrinolysis if PCI delayed and no contraindications). NSTE-ACS uses risk stratification and antithrombotic therapy with selective invasive timing. Avoid nitrates in RV infarct or recent PDE-5 inhibitors.`,
   },
   {
@@ -156,7 +156,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Sepsis.** Pair suspected infection with organ dysfunction. Cultures before antibiotics when they do not delay therapy. Fluids and norepinephrine support septic shock; source control is mandatory for drainable foci. Reassess perfusion and de-escalate antibiotics.`,
   },
   {
-    test: /dka|hhs|anion gap|insulin infusion|ketoacid/i,
+    test: /\bdka\b|\bhhs\b|anion gap|insulin infusion|ketoacidosis|diabetic keto/i,
     prose: `**DKA/HHS.** Shared insulin deficiency/resistance plus counter-regulatory hormones. DKA adds ketogenesis/HAGMA; HHS shows extreme hyperosmolality with minimal ketones. Fluids first, potassium before/with insulin, close the gap in DKA before SQ transition, treat precipitants.`,
   },
   {
@@ -208,7 +208,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Clinical reasoning.** Build a problem representation (who + tempo + syndrome). Activate illness scripts, then test them with discriminating data. Premature closure and anchoring are common errors—force a can’t-miss alternative onto the board.`,
   },
   {
-    test: /dermatology emerg|sjs|ten |necrotizing|purpura fulminans|erythroderma/i,
+    test: /dermatology emerg|sjs|\bten\b|necrotizing fasciitis|purpura fulminans|erythroderma/i,
     prose: `**Derm emergencies.** SJS/TEN: mucosal involvement, detachment, stop offenders, burn-unit logic. Necrotizing infection: pain out of proportion—surgical emergency. Purpura fulminans and acute meningococcemia are resuscitation + antibiotics, not outpatient rash care.`,
   },
   {
@@ -226,7 +226,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**ATLS mindset.** ABCDE with hemorrhage control. Airway while protecting C-spine; breathing (pneumothorax/hemothorax); circulation with blood products as indicated; disability; exposure. Tertiary survey catches missed injuries after resuscitation.`,
   },
   {
-    test: /hernia|incarcerat|strangulat|inguinal/i,
+    test: /incarcerat|strangulat|inguinal hernia|femoral hernia|umbilical hernia|ventral hernia|hernias\b|hernia incarcer/i,
     prose: `**Hernias.** Incarceration is irreducible; strangulation adds ischemia (pain out of proportion, skin changes, lactate/acidosis). Strangulation is operative urgency. Inguinal anatomy (Hesselbach, processus vaginalis) explains direct vs indirect patterns.`,
   },
   {
@@ -234,7 +234,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Burns.** Airway edema can progress—intubate early when inhalation injury is likely. Estimate TBSA (rule of nines/Lund-Browder) to guide resuscitation. Infection, nutrition, and early rehab dominate burn ICU care after the first hours.`,
   },
   {
-    test: /ards|prone|low tidal|mechanical vent|peep|plateau pressure/i,
+    test: /\bards\b|prone positioning|low tidal|mechanical vent|peep|plateau pressure/i,
     prose: `**ARDS / ventilation.** Berlin hypoxemia categories guide severity. Lung-protective ventilation uses low tidal volumes and plateau-pressure limits. Prone positioning helps severe ARDS. PEEP supports recruitment; liberation needs adequate gas exchange and airway protection.`,
   },
   {
@@ -254,7 +254,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**SSI prevention.** Time antibiotics before incision, control glucose, maintain normothermia, and use appropriate hair removal. Wound class predicts risk. Bundles beat single heroic interventions.`,
   },
   {
-    test: /postoperative fever|5 w|atelectasis|dvt|anastomotic leak/i,
+    test: /postoperative fever|5 ws?\b|atelectasis|anastomotic leak|post-?op(?:erative)? (?:dvt|vte)/i,
     prose: `**Post-op fever & leaks.** Timing suggests wind/water/wound/walking/wonder-drugs. Unexplained tachycardia after bowel anastomosis raises leak concern until proven otherwise—resuscitate and escalate surgically when indicated.`,
   },
 
@@ -376,7 +376,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**RAAS & diuretics.** ACEI/ARB interrupt angiotensin II effects (efferent dilation → ↓GFR in some settings). Loops act on NKCC2; thiazides on NCC; mineralocorticoid antagonists spare potassium and help HFrEF/resistant HTN teaching cases.`,
   },
   {
-    test: /antibiotic|pk\/pd|mic |time.?dependent|concentration.?dependent|beta-?lactam/i,
+    test: /antibiotic|pk\/pd|(?<![a-z])mic\b|time.?dependent|concentration.?dependent|beta-?lactam/i,
     prose: `**Antibiotic PK/PD.** Time-dependent killers (many β-lactams) need adequate time above MIC; concentration-dependent killers benefit from high peaks. Stewardship: right drug, source control, IV-to-PO, and stop dates.`,
   },
   {
@@ -384,7 +384,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Toxicology.** Toxidromes (anticholinergic, cholinergic, opioid, sympathomimetic, sedative-hypnotic) guide empiric care. Antidotes are adjuncts to ABCs: naloxone, NAC, fomepizole, atropine/pralidoxime, etc., matched to the agent.`,
   },
   {
-    test: /incidence|prevalence|\bbias\b|confound|\bnnt\b|\brrr\b|\barr\b|sensitivity|specificity|\bppv\b|\bnpv\b|odds ratio|hazard ratio/i,
+    test: /incidence|prevalence|\bbias\b|confound|\bnnt\b|\brrr\b|\barr\b|\bsensitivity\b|\bspecificity\b|\bppv\b|\bnpv\b|odds ratio|hazard ratio/i,
     prose: `**Epi & biostats.** Prevalence is burden; incidence is new events. Sensitivity/specificity are test properties; PPV/NPV depend on prevalence. ARR/RRR/NNT communicate treatment magnitude. Confounding ≠ bias, but both threaten causal claims.`,
   },
   {
