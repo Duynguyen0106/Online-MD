@@ -55,6 +55,12 @@ import {
   wave7QbankQuestions,
   wave7QuizQuestions,
 } from "@/lib/curriculum/expansions-wave7";
+import {
+  applyFourYearCatalog,
+  catalogFlashcards,
+  catalogObjectives,
+  catalogQuizQuestions,
+} from "@/lib/curriculum/catalog/apply";
 
 export {
   depthClinicalCases,
@@ -87,6 +93,9 @@ export {
   wave7Objectives,
   wave7QbankQuestions,
   wave7QuizQuestions,
+  catalogFlashcards,
+  catalogObjectives,
+  catalogQuizQuestions,
 };
 
 /** Additional original educational content layered onto the base seed. */
@@ -628,6 +637,7 @@ export function applyCurriculumExpansions(program: Program): Program {
   applyWave5Expansions(program);
   applyWave6Expansions(program);
   applyWave7Expansions(program);
+  applyFourYearCatalog(program);
   for (const phase of program.phases) {
     for (const mod of phase.modules) {
       if (mod.id === IDS.modEndo) {
