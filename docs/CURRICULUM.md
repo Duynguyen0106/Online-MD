@@ -39,7 +39,7 @@ Sub-I / ICU / complex ambulatory topics layered on clerkship modules + advanced 
 
 ## Online adaptations
 
-- Lessons are **multi-hour study units** (preclinical ≈5 h; clinical ≈4 h) with reading, integration, vignette, formative quiz, and flashcard.
+- Lessons are **multi-hour study units** (preclinical ≈5 h; clinical ≈4 h). Catalog lessons open as **textbook-style chapters**: Foundations → Core mechanisms/pathway → Clinical correlation → Synthesis/pitfalls → Case/board vignette, plus formative quiz and flashcard.
 - **Mastery gates** replace seat time; Qbank remains assessment-after-mastery.
 - Faculty AI uses the textbook-domain map (`lib/ai/knowledge-domains.ts`) plus lesson context.
 
