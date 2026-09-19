@@ -5,6 +5,13 @@ import type {
   QuizQuestion,
 } from "@/lib/types/domain";
 import type { CatalogBundle, CatalogTopic } from "@/lib/curriculum/catalog/types";
+import {
+  buildChapterClinical,
+  buildChapterCore,
+  buildChapterFraming,
+  buildChapterSynthesis,
+  buildChapterVignette,
+} from "@/lib/curriculum/catalog/chapter-writer";
 
 function reading(
   id: string,
@@ -38,29 +45,6 @@ function vignette(
     sequence,
     bodyMd,
   };
-}
-
-function buildReadingBody(topic: CatalogTopic): string {
-  const bullets = topic.points.map((p) => `- ${p}`).join("\n");
-  return `## ${topic.title}
-
-**Academic year ${topic.year}** · ${topic.contentCategory} · ${topic.organSystem}
-
-### Learning goals
-Master the mechanism well enough to explain it aloud, predict clinical findings, and avoid dangerous misconceptions before moving on.
-
-### Core teaching points
-${bullets}
-
-### Study method (mastery)
-1. Read and sketch the mechanism from memory.
-2. Teach the vignette answer out loud (2 minutes).
-3. Complete the formative quiz (≥80% to pass).
-4. Add the flashcard to your spaced-repetition queue.
-
-### Integrity note
-Original Online MD teaching — aligned to USMLE Content Outline domains. Not copied from proprietary banks or school LMS text. Verify doses/guidelines with primary sources in clinical care.
-`;
 }
 
 export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
@@ -117,6 +101,7 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
       objectiveId: objId,
     });
 
+    const clinical = topic.year >= 3;
     const lesson: Lesson = {
       id: lessonId,
       moduleId: topic.moduleId,
@@ -136,38 +121,43 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
           summary: topic.points[0] ?? topic.title,
           blocks: [
             reading(
-              `blk-${topic.key}-r1`,
+              `blk-${topic.key}-ch1`,
               conceptId,
-              "Core reading",
+              "I. Foundations & learning goals",
               1,
-              buildReadingBody(topic),
+              buildChapterFraming(topic),
             ),
             reading(
-              `blk-${topic.key}-r2`,
+              `blk-${topic.key}-ch2`,
               conceptId,
-              "Mechanism integration",
+              clinical
+                ? "II. Clinical pathway (core chapter)"
+                : "II. Core mechanisms (core chapter)",
               2,
-              `## Integration
-
-Connect **${topic.title}** to neighboring Offline MD lessons in this module. Ask:
-
-1. What molecule, cell, or circuit failed?
-2. What bedside finding must follow if the mechanism is true?
-3. What is the most dangerous look-alike diagnosis?
-
-### High-yield anchors
-${topic.points
-  .slice(0, 3)
-  .map((p, i) => `${i + 1}. ${p}`)
-  .join("\n")}
-`,
+              buildChapterCore(topic),
+            ),
+            reading(
+              `blk-${topic.key}-ch3`,
+              conceptId,
+              clinical
+                ? "III. Bedside application"
+                : "III. Clinical correlation",
+              3,
+              buildChapterClinical(topic),
+            ),
+            reading(
+              `blk-${topic.key}-ch4`,
+              conceptId,
+              "IV. Synthesis, pitfalls & self-check",
+              4,
+              buildChapterSynthesis(topic),
             ),
             vignette(
-              `blk-${topic.key}-x`,
+              `blk-${topic.key}-case`,
               conceptId,
-              "Clinical vignette",
-              3,
-              topic.vignette,
+              clinical ? "Case conference" : "Board vignette",
+              5,
+              buildChapterVignette(topic),
             ),
           ],
         },
