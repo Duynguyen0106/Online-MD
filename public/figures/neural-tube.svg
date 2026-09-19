@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Neural tube closure">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="238" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Neural tube — close on time</text>
+      <rect x="40" y="85" width="160" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="120" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Neural plate</text>
+<text x="120" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">→ fold</text>
+      <line x1="200" y1="112" x2="240" y2="112" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="240" y="85" width="160" height="55" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Cranial &</text>
+<text x="320" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">caudal neuropores</text>
+      <line x1="400" y1="112" x2="440" y2="112" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="440" y="85" width="160" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="520" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Closed tube</text>
+<text x="520" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">or defect</text>
+      <text x="40" y="185" font-family="Georgia, serif" font-size="12" fill="#5c7268">Folate before closure window · Defect level predicts phenotype</text>
+    
+</svg>

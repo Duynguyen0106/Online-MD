@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="270" viewBox="0 0 640 270" role="img" aria-label="HPO axis schematic">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="268" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Hypothalamic–pituitary–ovarian axis</text>
+      <rect x="240" y="55" width="160" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="68" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Hypothalamus</text>
+<text x="320" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">GnRH pulses</text>
+      <line x1="320" y1="95" x2="320" y2="120" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="240" y="120" width="160" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="133" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Pituitary</text>
+<text x="320" y="147" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">FSH / LH</text>
+      <line x1="320" y1="160" x2="320" y2="185" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="240" y="185" width="160" height="45" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="200.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Ovary</text>
+<text x="320" y="214.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">E2 / P4</text>
+      <path d="M220 205 Q80 140 240 75" fill="none" stroke="#b86b3c" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="50" y="140" font-family="Georgia, serif" font-size="11" fill="#b86b3c">Feedback</text>
+      <text x="40" y="250" font-family="Georgia, serif" font-size="11" fill="#5c7268">Midcycle: high E2 → positive feedback → LH surge → ovulation</text>
+    
+</svg>

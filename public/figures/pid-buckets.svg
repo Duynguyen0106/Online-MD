@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-label="Primary immunodeficiency buckets">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="248" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">PID — infection pattern names the arm</text>
+      <rect x="20" y="85" width="140" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="90" y="98.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">B cell</text>
+<text x="90" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Pyogenic</text>
+<text x="90" y="126.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">+ enteric viruses</text>
+      <rect x="175" y="85" width="140" height="55" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="245" y="98.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">T cell</text>
+<text x="245" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Viral /</text>
+<text x="245" y="126.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">opportunistic</text>
+      <rect x="330" y="85" width="140" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="400" y="98.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Phagocyte</text>
+<text x="400" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Catalase+</text>
+<text x="400" y="126.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">abscesses</text>
+      <rect x="485" y="85" width="130" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="550" y="98.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Complement</text>
+<text x="550" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Neisseria</text>
+<text x="550" y="126.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">± SLE</text>
+      <text x="20" y="185" font-family="Georgia, serif" font-size="12" fill="#5c7268">Age of onset + organism list → which arm to test first</text>
+    
+</svg>

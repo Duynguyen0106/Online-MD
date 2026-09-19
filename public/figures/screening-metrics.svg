@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-label="Screening test metrics map">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="248" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">2×2 — which number answers which question</text>
+      <rect x="40" y="80" width="130" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="105" y="100.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Sensitivity</text>
+<text x="105" y="114.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Disease → +</text>
+      <rect x="185" y="80" width="130" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="250" y="100.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Specificity</text>
+<text x="250" y="114.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">No disease → −</text>
+      <rect x="330" y="80" width="130" height="55" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="395" y="100.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">PPV</text>
+<text x="395" y="114.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">+ → disease</text>
+      <rect x="475" y="80" width="130" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="540" y="100.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">NPV</text>
+<text x="540" y="114.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">− → well</text>
+      <text x="40" y="180" font-family="Georgia, serif" font-size="12" fill="#5c7268">Prevalence moves PPV/NPV · Sn/Sp stay put for the same test</text>
+    
+</svg>

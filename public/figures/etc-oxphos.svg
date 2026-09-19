@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Electron transport chain schematic">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="238" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">ETC → proton motive force → ATP</text>
+      <rect x="30" y="90" width="90" height="45" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="75" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">I</text>
+      <rect x="140" y="90" width="90" height="45" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="185" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">II</text>
+      <rect x="250" y="90" width="90" height="45" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="295" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">III</text>
+      <rect x="360" y="90" width="90" height="45" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="405" y="112.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">IV</text>
+      <rect x="490" y="90" width="120" height="45" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="550" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">ATP</text>
+<text x="550" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">synthase</text>
+      <line x1="120" y1="112" x2="140" y2="112" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <line x1="230" y1="112" x2="250" y2="112" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <line x1="340" y1="112" x2="360" y2="112" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <line x1="450" y1="112" x2="490" y2="112" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <text x="30" y="170" font-family="Georgia, serif" font-size="12" fill="#5c7268">NADH/FADH₂ → e⁻ → O₂ · H⁺ pumped out · ATP when H⁺ returns</text>
+      <text x="30" y="195" font-family="Georgia, serif" font-size="12" fill="#b86b3c">Cyanide/CO @ IV · Oligomycin @ synthase · Uncouplers: heat, ↓ATP</text>
+    
+</svg>

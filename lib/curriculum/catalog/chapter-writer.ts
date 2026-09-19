@@ -3,6 +3,7 @@ import {
   factualEnrichment,
   factualEnrichmentForTopic,
 } from "@/lib/curriculum/catalog/factual-enrichment";
+import { figuresMarkdownForTopic } from "@/lib/curriculum/catalog/chapter-figures";
 
 function yearLabel(year: 1 | 2 | 3 | 4): string {
   if (year === 1) return "Year 1 — Mechanisms & Foundations";
@@ -109,6 +110,8 @@ Section II is the didactic core with detailed mechanism content. Section III bri
 export function buildChapterCore(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
   const bank = factualEnrichmentForTopic(topic);
+  const figures = figuresMarkdownForTopic(topic);
+  const figuresBlock = figures ? `\n${figures}\n` : "";
   const sections = topic.points
     .map((p, i) => proseForPoint(p, topic, i))
     .join("\n");
@@ -123,7 +126,7 @@ Patients do not arrive labeled **${topic.title}**. They arrive with symptoms, vi
 ### High-yield reference detail
 
 ${bank || `Use the chapter sections below to rebuild the full pathway for **${topic.title}** from first principles.`}
-
+${figuresBlock}
 ### Decision spine
 
 1. **Syndrome** — What is failing?  
@@ -151,7 +154,7 @@ A regulated process in **${topic.organSystem}** ${topic.contentCategory.toLowerC
 ### High-yield reference detail
 
 ${bank || `Rebuild **${topic.title}** from the control-point sections below, tying each node to regulation and phenotype.`}
-
+${figuresBlock}
 ### Chapter sections
 
 ${sections}

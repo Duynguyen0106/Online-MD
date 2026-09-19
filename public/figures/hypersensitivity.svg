@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-label="Hypersensitivity types schematic">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="248" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Hypersensitivity map</text>
+      <rect x="30" y="80" width="130" height="70" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="95" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">I</text>
+<text x="95" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">IgE / mast</text>
+<text x="95" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Anaphylaxis</text>
+      <rect x="180" y="80" width="130" height="70" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="245" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">II</text>
+<text x="245" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">IgG/IgM</text>
+<text x="245" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Cytotoxic</text>
+      <rect x="330" y="80" width="130" height="70" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="395" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">III</text>
+<text x="395" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Complexes</text>
+<text x="395" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Serum sickness</text>
+      <rect x="480" y="80" width="130" height="70" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="545" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">IV</text>
+<text x="545" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">T cells</text>
+<text x="545" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">TB skin / contact</text>
+      <text x="30" y="190" font-family="Georgia, serif" font-size="12" fill="#5c7268">Epinephrine first in anaphylaxis · Type IV is not histamine-primary</text>
+    
+</svg>

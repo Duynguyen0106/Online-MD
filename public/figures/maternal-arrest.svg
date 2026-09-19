@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="Maternal cardiac arrest modifications">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="258" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Maternal cardiac arrest — parallel actions</text>
+      <rect x="40" y="70" width="170" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="125" y="90.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Standard</text>
+<text x="125" y="104.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">ACLS</text>
+      <rect x="235" y="70" width="170" height="55" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="90.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Left uterine</text>
+<text x="320" y="104.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">displacement</text>
+      <rect x="430" y="70" width="170" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="515" y="90.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Airway</text>
+<text x="515" y="104.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">expertise</text>
+      <rect x="180" y="160" width="280" height="55" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="180.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Perimortem CS early</text>
+<text x="320" y="194.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">if no ROSC (~4–5 min)</text>
+      <text x="40" y="245" font-family="Georgia, serif" font-size="11" fill="#5c7268">Do not delay hysterotomy for OR transport when still in the bay</text>
+    
+</svg>

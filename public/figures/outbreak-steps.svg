@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="230" viewBox="0 0 640 230" role="img" aria-label="Outbreak investigation steps">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="228" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Outbreak — disciplined sequence</text>
+      <rect x="15" y="90" width="90" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="60" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Confirm</text>
+      <line x1="105" y1="110" x2="120" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="120" y="90" width="90" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="165" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Define</text>
+      <line x1="210" y1="110" x2="225" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="225" y="90" width="90" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="270" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Describe</text>
+      <line x1="315" y1="110" x2="330" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="330" y="90" width="100" height="40" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="380" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Hypothesize</text>
+      <line x1="430" y1="110" x2="445" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="445" y="90" width="160" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="525" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Test / control</text>
+      <text x="15" y="175" font-family="Georgia, serif" font-size="12" fill="#5c7268">Case definition before epicurve theories</text>
+    
+</svg>

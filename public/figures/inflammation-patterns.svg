@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Inflammation and necrosis patterns">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="238" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Pathology patterns → clinical forecast</text>
+      <rect x="30" y="85" width="140" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="100" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Acute</text>
+<text x="100" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">neutrophilic</text>
+      <rect x="190" y="85" width="140" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="260" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Granulomatous</text>
+<text x="260" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">persistent Ag</text>
+      <rect x="350" y="85" width="140" height="55" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="420" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Coagulative</text>
+<text x="420" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">ischemia</text>
+      <rect x="510" y="85" width="110" height="55" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="565" y="105.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Apoptosis</text>
+<text x="565" y="119.5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">quiet</text>
+      <text x="30" y="180" font-family="Georgia, serif" font-size="12" fill="#5c7268">Pattern names the process — then name the next complication</text>
+    
+</svg>
