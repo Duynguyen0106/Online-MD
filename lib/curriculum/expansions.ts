@@ -132,6 +132,17 @@ export const extraObjectives: Objective[] = [
     moduleId: IDS.modMsk,
     lessonIds: ["les-msk-2"],
   },
+  {
+    id: "obj-fm-2",
+    code: "OBJ-P2-FM-002",
+    statement: "Apply shared-decision framing to common adult preventive screening discussions.",
+    usmleStep: "step2ck",
+    organSystem: "Multisystem",
+    physicianTask: "Management",
+    contentCategory: "Family Medicine",
+    moduleId: IDS.modFm,
+    lessonIds: ["les-fm-2"],
+  },
 ];
 
 export const extraQuizQuestions: QuizQuestion[] = [
@@ -319,6 +330,25 @@ export const extraQuizQuestions: QuizQuestion[] = [
     correctChoiceId: "qq-msk-2-c0",
     explanation:
       "Hot monoarthritis with inflammatory fluid is septic arthritis until proven otherwise.",
+  },
+  {
+    id: "qq-fm-2",
+    lessonId: "les-fm-2",
+    sequence: 1,
+    objectiveId: "obj-fm-2",
+    stem: "When counseling an average-risk adult about a screening test, the best first step is:",
+    choices: [
+      {
+        id: "qq-fm-2-c0",
+        text: "Clarify benefits, harms, and patient values before ordering",
+      },
+      { id: "qq-fm-2-c1", text: "Order every available screening test at once" },
+      { id: "qq-fm-2-c2", text: "Refuse all screening indefinitely" },
+      { id: "qq-fm-2-c3", text: "Use only social media anecdotes as evidence" },
+    ],
+    correctChoiceId: "qq-fm-2-c0",
+    explanation:
+      "Prevention counseling is shared decision-making: benefits, harms, alternatives, and values.",
   },
 ];
 
@@ -952,6 +982,47 @@ Crystals (gout/CPPD) can coexist with infection — crystals alone do not exclud
           ],
         });
         if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-msk-2"];
+      }
+
+      if (mod.id === IDS.modFm) {
+        mod.lessons.push({
+          id: "les-fm-2",
+          moduleId: IDS.modFm,
+          title: "Shared Decisions in Screening",
+          slug: "fm-screening",
+          sequence: 2,
+          estimatedMinutes: 25,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-fm-2"],
+          concepts: [
+            {
+              id: "con-fm-2a",
+              lessonId: "les-fm-2",
+              title: "Benefits, harms, values",
+              sequence: 1,
+              summary: "Prevention visits are conversations, not checklists alone.",
+              blocks: [
+                reading(
+                  "blk-fm-2a-r",
+                  "con-fm-2a",
+                  "Screening counseling map",
+                  1,
+                  `State the target condition, test performance in plain language, downstream consequences of positives, and reasonable alternatives.  
+Anchor to guideline families (e.g., USPSTF-style reasoning) while adapting to comorbidity and patient priorities.`,
+                ),
+                vignette(
+                  "blk-fm-2a-x",
+                  "con-fm-2a",
+                  "Vignette: 52-year-old asking about cancer screening",
+                  2,
+                  `Outline a 2-minute shared-decision script: benefit, harm, uncertainty, next step.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-fm-2"];
       }
     }
   }

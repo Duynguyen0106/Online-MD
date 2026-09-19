@@ -1,11 +1,29 @@
 import Link from "next/link";
 import { AppShell } from "@/components/shared/app-shell";
-import { Badge } from "@/components/ui/badge";
+import { FacultyLibrary } from "@/components/faculty/faculty-library";
 import { getObjectives, getPhases } from "@/lib/curriculum/accessors";
+import { Badge } from "@/components/ui/badge";
 
 export default async function FacultyPage() {
   const phases = await getPhases();
   const objectives = getObjectives();
+  const library = phases.map((phase) => ({
+    id: phase.id,
+    name: phase.name,
+    modules: phase.modules.map((mod) => ({
+      id: mod.id,
+      title: mod.title,
+      status: mod.status,
+      isCoreClerkship: mod.isCoreClerkship,
+      lessons: mod.lessons.map((lesson) => ({
+        id: lesson.id,
+        title: lesson.title,
+        sequence: lesson.sequence,
+        conceptCount: lesson.concepts.length,
+        blockCount: lesson.concepts.reduce((n, c) => n + c.blocks.length, 0),
+      })),
+    })),
+  }));
 
   return (
     <AppShell title="Faculty content library">
@@ -14,44 +32,14 @@ export default async function FacultyPage() {
         edit content blocks, or manage{" "}
         <Link className="text-[var(--brand-strong)] underline" href="/faculty/flashcards">
           flashcards
+        </Link>{" "}
+        /{" "}
+        <Link className="text-[var(--brand-strong)] underline" href="/faculty/questions">
+          questions
         </Link>
         .
       </p>
-      <div className="space-y-8">
-        {phases.map((phase) => (
-          <section key={phase.id}>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl">{phase.name}</h2>
-            <div className="mt-3 space-y-3">
-              {phase.modules.map((mod) => (
-                <div
-                  key={mod.id}
-                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4"
-                >
-                  <div className="mb-2 flex flex-wrap items-center gap-2">
-                    <h3 className="font-medium">{mod.title}</h3>
-                    <Badge>{mod.status}</Badge>
-                    {mod.isCoreClerkship ? <Badge>core clerkship</Badge> : null}
-                  </div>
-                  <ul className="space-y-1 text-sm text-[var(--muted)]">
-                    {mod.lessons.map((lesson) => (
-                      <li key={lesson.id}>
-                        <Link
-                          className="text-[var(--brand-strong)] hover:underline"
-                          href={`/faculty/lessons/${lesson.id}`}
-                        >
-                          {lesson.sequence}. {lesson.title}
-                        </Link>{" "}
-                        · {lesson.concepts.length} concepts ·{" "}
-                        {lesson.concepts.reduce((n, c) => n + c.blocks.length, 0)} blocks
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+      <FacultyLibrary phases={library} />
 
       <section className="mt-10">
         <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl">
