@@ -5,7 +5,13 @@
 const SNIPPETS: { test: RegExp; prose: string }[] = [
   {
     test: /glycolys|pfk|hexokinase|glucokinase|pyruvate kinase/i,
-    prose: `**Glycolysis detail.** Glucose is trapped by hexokinase (most tissues; low Km) or glucokinase (liver/β-cell; high Km, inducible). The committed step is PFK-1, activated by fructose-2,6-bisphosphate and AMP and inhibited by ATP and citrate. Pyruvate kinase yields net ATP in the payoff phase. Under anaerobic conditions, lactate dehydrogenase regenerates NAD⁺ so glycolysis can continue—hence lactate rise in hypoperfusion. Pyruvate kinase deficiency impairs RBC ATP supply and is a classic cause of extravascular hemolysis teaching cases.`,
+    prose: `**Glycolysis — textbook core.**
+
+Glucose enters cells and is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by glucose-6-phosphate) or **glucokinase** (liver and pancreatic β-cells; high Km; inducible by insulin). Phosphorylation traps glucose and commits it to intracellular metabolism.
+
+The committed step is **PFK-1**, converting fructose-6-phosphate to fructose-1,6-bisphosphate. PFK-1 is activated by **fructose-2,6-bisphosphate** and AMP and inhibited by ATP and citrate—linking glycolysis to energy charge and TCA sufficiency. In liver, the bifunctional enzyme PFK-2/FBPase-2 raises F2,6BP in the fed (insulin) state and lowers it in fasting (glucagon), coordinating glycolysis with gluconeogenesis.
+
+The payoff phase regenerates ATP and produces pyruvate. **Pyruvate kinase** completes that phase; its deficiency depletes RBC ATP and is a classic cause of extravascular hemolysis. When oxygen or mitochondria are limiting, **lactate dehydrogenase** regenerates NAD⁺ so upstream glycolysis can continue—explaining lactate accumulation in hypoperfusion and intense anaerobic work.`,
   },
   {
     test: /gluconeogenes|pepck|fructose-1,6|glucose-6-phosphatase/i,

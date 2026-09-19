@@ -1,5 +1,8 @@
 import type { CatalogTopic } from "@/lib/curriculum/catalog/types";
-import { factualEnrichmentForTopic } from "@/lib/curriculum/catalog/factual-enrichment";
+import {
+  factualEnrichment,
+  factualEnrichmentForTopic,
+} from "@/lib/curriculum/catalog/factual-enrichment";
 
 function yearLabel(year: 1 | 2 | 3 | 4): string {
   if (year === 1) return "Year 1 — Mechanisms & Foundations";
@@ -14,7 +17,7 @@ function isClinical(year: 1 | 2 | 3 | 4): boolean {
 
 /**
  * Turn a compact teaching bullet into textbook-style prose.
- * Content-first: explain the science/clinical rule; keep study tips out of the core chapter.
+ * Declarative content only — no “fill in the blank” study prompts.
  */
 function proseForPoint(
   point: string,
@@ -26,35 +29,34 @@ function proseForPoint(
   const organ = topic.organSystem;
   const cat = topic.contentCategory;
   const clinical = isClinical(topic.year);
+  const localFacts = factualEnrichment(`${point} ${title}`);
 
   if (clinical) {
     return `### ${n}. ${point}
 
-In the care of patients with **${title}**, this rule sits inside ${cat} practice focused on the **${organ}** system.
+**${point}.** In **${title}** (${cat}; **${organ}**), this rule structures the encounter from the first minutes. It tells you which symptoms and exam findings to privilege, which complications to hunt for, and which orders are time-critical versus deferrable.
 
-**What it means at the bedside.** ${point}. Treat this as a decision node: if the rule is true, one set of actions follows; if it is false, you must revise the working diagnosis. It changes what you ask, what you examine, and what you order first.
+Clinically, the rule maps onto a limited set of ${organ} failure modes—ischemia, obstruction, infection, inflammation, bleeding, metabolic crisis, toxidrome, or pump/ventilatory failure. Once you name the failure mode, vitals and labs stop being a checklist and become evidence for or against **${title}**.
 
-**Pathophysiology link.** Map the rule onto a ${organ} failure mode (ischemia, obstruction, infection, inflammation, bleeding, metabolic derangement, toxidrome, or pump/ventilatory failure) so vitals and labs have a place in the story of **${title}**.
+${localFacts ? `${localFacts}\n\n` : ""}Initial actions should follow the rule’s implied branch: stabilize what is unstable, obtain the two or three data points that change management, and start disease-directed therapy when delay itself causes harm. Reassess on a short clock; if the trajectory is wrong, escalate rather than repeating the same orders.
 
-**What you do next.** State the immediate action this rule implies, then the finding that would make you switch pathways. Delaying that branch is a common source of harm in ${cat.toLowerCase()}.
+Keep a look-alike on the board that shares early features with **${title}** but would be worsened by the same first move. Discriminating those paths is the practical heart of this section.
 
-**Look-alikes.** Name a neighboring syndrome that shares surface features with **${title}** but would be worsened by the same action.
-
-**Teaching emphasis.** ${topic.quizExplain}
+**Bottom line.** ${topic.quizExplain}
 `;
   }
 
   return `### ${n}. ${point}
 
-**Place in the pathway.** Within **${title}** (${cat}, ${organ}), locate this node precisely: enzyme, transporter, receptor, channel, structural protein, cell type, or anatomic relation. Name substrates, ligands, compartments, or neighbors so the idea is concrete.
+**${point}.** This node belongs to the mechanism of **${title}** in ${cat}, framed in the **${organ}** map. It is best understood as a control point: a place where the pathway’s rate, direction, structure, or signaling can be increased, decreased, blocked, or constitutively driven.
 
-**Regulation.** State what increases and decreases activity—substrate supply, allosteric effectors, hormones, autonomic tone, cytokines, drugs, pH/oxygen, or expression. Write the “on” and “off” conditions.
+${localFacts ? `${localFacts}\n\n` : ""}Regulation is the rest of the story. Physiologic “on” signals (substrate supply, allosteric activators, hormones, hypoxia, inflammatory mediators, or increased expression) and “off” signals (product inhibition, energy charge, hormones in the opposite state, drugs, or loss-of-function variants) determine whether this node supports homeostasis or produces disease.
 
-**Failure → phenotype.** If this node is absent, blocked, constitutively active, or mistargeted, what bedside or laboratory finding must appear in **${organ}** physiology?
+When the node fails—absent, inhibited, overactive, mistargeted, or structurally disrupted—a predictable phenotype follows. That phenotype should be nameable as a clinical finding, laboratory pattern, imaging clue, or drug effect. The same logic explains toxins and therapeutics that act here: they are experiments on the pathway.
 
-**Bridge.** Give one disease/toxin/drug association and one measurement that would support your explanation.
+Learners commonly confuse this node with a neighboring step in **${title}**. The discriminator is usually location (compartment/tissue), cofactor requirement, hormonal state (fed/fasting), or the specific clinical syndrome that appears when only this node is hit.
 
-**Contrast.** Name the most important look-alike and the discriminator that separates them.
+**Bottom line for this section.** Hold the control point, its regulators, and one phenotype together as a single paragraph you could teach at the board.
 `;
 }
 
