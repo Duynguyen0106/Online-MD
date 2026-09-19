@@ -20,18 +20,18 @@ Top US MD schools increasingly use **integrated organ-system preclerkship** bloc
 
 - No copyrighted question banks or school LMS text.
 - Objectives tagged with USMLE step, organ system, physician task, content category.
-- Base graph: [`lib/curriculum/seed.ts`](../lib/curriculum/seed.ts). Layered expansions: [`lib/curriculum/expansions.ts`](../lib/curriculum/expansions.ts) + [`lib/curriculum/expansions-depth.ts`](../lib/curriculum/expansions-depth.ts).
+- Base graph: [`lib/curriculum/seed.ts`](../lib/curriculum/seed.ts). Layered expansions: [`expansions.ts`](../lib/curriculum/expansions.ts), [`expansions-depth.ts`](../lib/curriculum/expansions-depth.ts), [`expansions-wave3.ts`](../lib/curriculum/expansions-wave3.ts), [`expansions-wave4.ts`](../lib/curriculum/expansions-wave4.ts).
 - Production path syncs the same graph into Supabase tables.
 
 ## Depth coverage (expansions)
 
 | Domain | Example lessons |
 | --- | --- |
-| Shock & arrhythmias | `les-cv-4`, `les-cv-5` |
-| PE & ARDS | `les-pulm-3`, `les-pulm-4` |
-| Portal HTN & UGIB | `les-gi-3`, `les-gi-4` |
-| Inflammation & immunity | `les-cell-3`, `les-cell-4` |
-| Hyponatremia / thyroid crises | `les-renal-4`, `les-endo-3` |
-| Syncope / status | `les-im-3`, `les-neuro-4` |
-| Heme / ID / Psych / Peds / OB / Surg / FM / MSK / AKI | `les-heme-3/4`, `les-id-3/4`, `les-psych-3/4`, `les-peds-3/4`, `les-obgyn-3/4`, `les-surg-3`, `les-fm-3`, `les-msk-3`, `les-im-4` |
-| Clerkship expansions | DKA/HHS, ACS, sepsis, acute abdomen, preeclampsia, septic joint, FM screening, etc. |
+| Shock & arrhythmias & valves | `les-cv-4`, `les-cv-5`, `les-cv-6` |
+| PE, ARDS, asthma/COPD | `les-pulm-3`–`5` |
+| Portal HTN, UGIB, pancreatitis | `les-gi-3`–`5` |
+| Inflammation, immunity, neoplasia | `les-cell-3`–`6` |
+| Hyponatremia, hyperkalemia, adrenal | `les-renal-4/5`, `les-endo-3/4` |
+| Syncope, status, meningitis | `les-im-3`, `les-neuro-4/5` |
+| Heme / ID / Psych / Peds / OB / Surg / FM / MSK / AKI / CAP / trauma / T2DM | wave-3 + wave-4 clerkship lessons |
+| First-wave clerkship expansions | DKA/HHS, ACS, sepsis, acute abdomen, preeclampsia, septic joint, FM screening |
