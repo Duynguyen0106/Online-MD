@@ -1,30 +1,49 @@
-# Curriculum architecture notes
+# Curriculum architecture — 4-year MD map
 
 ## Pedigree (public patterns, not copied syllabi)
 
-Top US MD schools increasingly use **integrated organ-system preclerkship** blocks followed by **core clinical clerkships**. Online MD mirrors that architecture for asynchronous mastery learning:
+Online MD follows the architecture of leading US MD programs: **integrated preclinical foundations + organ systems**, then **core clerkships**, then **advanced clinical / sub-internship** work — redesigned for asynchronous mastery learning.
 
-| Online MD phase | Analogous residential pattern |
-| --- | --- |
-| Phase 1 Foundations | Organ-system / mechanism blocks (e.g., Bridges-style, Genes-to-Society-style integration) |
-| Phase 2 Core clerkships | IM, Surgery, Peds, OB/GYN, Psychiatry, Family Medicine |
+| Online MD phase | Academic years | Analogous residential pattern |
+| --- | --- | --- |
+| Years 1–2 Preclinical | ≥2 full-time years | Mechanisms + organ-system blocks (Bridges / Genes-to-Society–style integration) |
+| Year 3 Core clerkships + Year 4 advanced | ~1–2 years | IM, Surgery, Peds, OB/GYN, Psychiatry, FM (+ sub-I / ICU / complex ambulatory topics) |
+
+## Full-time hour budget (design target)
+
+Assumptions: **40 hours/week × 46 weeks/year**, mastery multiplier **≈2×** first-pass study (re-reads, quizzes ≥80%, exams, spaced cards, cases).
+
+| Block | First-pass lesson hours (catalog) | With mastery (~2×) | Full-time duration |
+| --- | --- | --- | --- |
+| Preclinical Y1–Y2 | ~1,860 h | ~3,720 h | **≥2.0 years** |
+| Clinical Y3–Y4 | ~624 h | ~1,248 h | ~0.7 years catalog + clerkship immersion framing |
+| **Program total (catalog)** | ~2,484 h | ~4,968 h | **~2.7 years** of structured Online MD study units |
+
+> Residential MD still includes ~2 years of clinical immersion that online modules approximate but do not fully replace (procedural volume, longitudinal clinics, overnight call). Online MD’s **preclinical** load is sized so a full-time student needs **at least 2 years** before clerkship Qbank unlocks.
+
+## Module map (sticks to curriculum)
+
+### Year 1 — Mechanisms
+Biochemistry & Metabolism · Anatomy/Embryology · Cells/Molecules/Pathology · Immunology · Microbiology/ID foundations · Pharmacology · Epidemiology/Biostats · Ethics/Systems
+
+### Year 2 — Organ systems & pathophysiology
+Cardiovascular · Respiratory · Renal · GI/Hepatology · Endocrine · Hematology · Neurosciences · MSK/Rheum · Host defense/ID (systems)
+
+### Year 3 — Core clerkships
+Internal Medicine · Surgery · Pediatrics · OB/GYN · Psychiatry · Family Medicine
+
+### Year 4 — Advanced
+Sub-I / ICU / complex ambulatory topics layered on clerkship modules + advanced clinical phase
 
 ## Online adaptations
 
-- Lessons replace lecture days; **content blocks** mix reading, diagram notes, vignettes, and external videos.
-- **Mastery gates** replace seat-time progression.
-- **Qbank** unlocks only after module/phase mastery (assessment, not primary instruction).
-- **Faculty AI** tutors against loaded lesson context with a medical-educator system prompt.
+- Lessons are **multi-hour study units** (preclinical ≈5 h; clinical ≈4 h) with reading, integration, vignette, formative quiz, and flashcard.
+- **Mastery gates** replace seat time; Qbank remains assessment-after-mastery.
+- Faculty AI uses the textbook-domain map (`lib/ai/knowledge-domains.ts`) plus lesson context.
 
 ## Content integrity
 
-- No copyrighted question banks or school LMS text.
-- Objectives tagged with USMLE step, organ system, physician task, content category.
-- Layered expansions: `expansions.ts`, `expansions-depth.ts`, `expansions-wave3.ts` … `expansions-wave7.ts`.
-- Faculty AI domain map: [`lib/ai/knowledge-domains.ts`](../lib/ai/knowledge-domains.ts) (Guyton/Robbins/Katzung/Harrison-class conceptual depth — not copyrighted prose).
-- Production path syncs the same graph into Supabase tables.
-
-## Depth coverage (expansions)
-
-Current build targets **100+ original lessons** with ≥6 per module. High-yield additions include Parkinson/MG, RA/SLE, TB/endocarditis, shoulder dystocia, previa/abruption, nephritic/nephrotic, diuretics, Mendelian genetics, ADME, tamponade, cirrhosis decompensation, SS vs NMS, and pediatric asthma exacerbation, layered on prior waves (shock, PE, IBD, TLS, etc.).
-
+- Original educational writing; USMLE Content Outline–aligned domains.
+- No proprietary question banks or school LMS text.
+- Catalog generator: `lib/curriculum/catalog/` (528+ topics) layered on seed + waves 1–7.
+- Sync path: same graph → Supabase tables when Auth/DB cutover completes.
