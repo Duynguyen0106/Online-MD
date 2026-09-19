@@ -451,6 +451,150 @@ Anemia forks into underproduction (low reticulocytes) versus loss/hemolysis (hig
 
 Oncologic emergencies—neutropenic fever, TLS, hyperviscosity, cord compression—have clocks. Transfusion decisions need indication, antibodies, and volume tolerance. Thrombosis chapters always ask provoked versus unprovoked and bleeding risk before indefinite anticoagulation.`,
   },
+  {
+    test: /somatic symptom|illness anxiety|health anxiety|somatiz/i,
+    prose: `**Somatic symptom & illness anxiety — textbook chapter.**
+
+Somatic symptom disorder features distressing physical symptoms plus disproportionate thoughts, anxiety, or behaviors—not “faking.” Illness anxiety centers on preoccupation with having a serious disease with minimal somatic findings. Rule out medical disease proportionally; avoid endless negative workups that reinforce threat perception.
+
+Schedule regular visits, acknowledge symptoms as real experiences, treat comorbid depression/anxiety, and limit PRN emergency testing without new red flags. CBT and collaborative care outperform confrontation. Document a clear follow-up plan so every clinician does not restart the diagnostic odyssey.`,
+  },
+  {
+    test: /act team|housing first|public psychiatry|serious mental illness|systems of mental/i,
+    prose: `**Public psychiatry & systems of care — textbook chapter.**
+
+Serious mental illness outcomes depend on housing, income, and continuous community treatment as much as on the right antipsychotic. Assertive community treatment (ACT) teams bring intensive outreach to high-utilizers. Housing First reduces homelessness without requiring sobriety-first gates in evidence-based models.
+
+Levels of care (outpatient, IOP, PHP, inpatient, residential) should match risk and function, not insurance convenience alone. Continuity after discharge prevents revolving-door admissions. Measure engagement, not only symptom scales. Advocacy for benefits and disability paperwork is clinical work.`,
+  },
+  {
+    test: /eating disorder|anorexia|bulimia|binge.?eating|refeeding/i,
+    prose: `**Eating disorders — textbook chapter.**
+
+Anorexia nervosa combines restriction, weight/shape overvaluation, and low weight; medical instability (bradycardia, electrolyte shifts, refeeding risk) can kill. Bulimia involves binge–purge cycles at normal or higher weight with dental erosion, parotid enlargement, and electrolyte risks. Binge-eating disorder lacks compensatory purging but still impairs health.
+
+Medical stabilization precedes psychotherapy when unstable. Refeeding syndrome risk demands phosphate monitoring and measured caloric advancement. CBT-E and family-based therapy (adolescents) are first-line psychosocial tools. Screen for suicide risk and misuse of laxatives/diuretics. Avoid weight-focused shaming language that worsens secrecy.`,
+  },
+  {
+    test: /cbt-?i|insomnia prescribing|beers criteria|sleep.?psychiatry|psychotherapy modalities/i,
+    prose: `**Sleep psychiatry & psychotherapy map — textbook chapter.**
+
+CBT-I is first-line for chronic insomnia; hypnotics are short-term adjuncts with fall, confusion, and dependence risks—especially in older adults (Beers caution). Screen for OSA when snoring, obesity, or resistant depression appears; untreated OSA sabotages mood treatment.
+
+Psychotherapy modalities: CBT targets thoughts/behaviors; psychodynamic explores patterns and relationships; DBT skills suit emotion dysregulation; motivational interviewing supports change ambivalence. Match modality to problem, not to therapist preference alone. Document goals and session structure.`,
+  },
+  {
+    test: /lithium toxicity|lithium.*monitor|serotonin syndrome|hunter criteria/i,
+    prose: `**Lithium toxicity & serotonin syndrome — textbook chapter.**
+
+Lithium has a narrow therapeutic index; toxicity rises with dehydration, NSAIDs, ACEi/ARB, and reduced GFR. Tremor, GI upset, ataxia, and confusion escalate toward seizures—check a level and vitals, hydrate, and escalate for severe toxicity (dialysis in selected cases). Monitor renal and thyroid function chronically.
+
+Serotonin syndrome (Hunter framing) features clonus/hyperreflexia, agitation, and autonomic signs after serotonergic stacks (SSRI + MAOI/tramadol/linezolid teaching). Stop offenders, support critically, and use benzodiazepines; cyproheptadine enters selected pathways. Distinguish from NMS (rigidity, bradyreflexia, dopamine-blocker context).`,
+  },
+  {
+    test: /gbs prophylaxis|group b strep|intrapartum.*penicillin/i,
+    prose: `**Intrapartum GBS prophylaxis — textbook chapter.**
+
+Screen at the guideline window in pregnancy; give penicillin (or appropriate alternative for allergy) during labor when indicated to reduce early-onset neonatal GBS disease. Adequate prophylaxis timing before delivery matters. Neonatal sepsis evaluation still depends on clinical status and risk factors—not culture results alone at birth.
+
+Document allergy details (reaction type) to avoid unnecessary broad agents. Prematurity, prolonged ROM, and maternal fever change neonatal risk pathways. GBS bacteriuria earlier in pregnancy is already an indication for intrapartum prophylaxis.`,
+  },
+  {
+    test: /dopamine pathway|nigrostriatal|mesolimbic|mesocortical/i,
+    prose: `**Dopamine pathways pharmacology — textbook chapter.**
+
+Nigrostriatal blockade explains EPS and tardive risk; mesolimbic blockade relates to antipsychotic efficacy for positive symptoms; mesocortical effects relate to negative/cognitive domains; tuberoinfundibular blockade raises prolactin. Name the tract when predicting side effects.
+
+Parkinson drugs and stimulants act on related circuits with different therapeutic goals. Partial D2 agonists try to balance tone. Understanding pathways prevents treating EPS with more dopamine blockade or missing NMS.`,
+  },
+  {
+    test: /collagen synthesis|scurvy|osteogenesis imperfecta|gly-?x-?y|hydroxylation.*vitamin c/i,
+    prose: `**Collagen synthesis & scurvy/OI — textbook chapter.**
+
+Collagen’s Gly-X-Y repeats and vitamin C–dependent hydroxylation enable triple-helix stability and cross-linking. Scurvy is a hydroxylation failure with bleeding gums, poor wound healing, and perifollicular hemorrhage. Osteogenesis imperfecta reflects collagen type I quantity/quality defects with fractures and blue sclerae teaching.
+
+Wound strength depends on collagen remodeling over weeks—early suture removal risks dehiscence. Connective-tissue drug and disease vignettes (copper, vitamin C, genetic collagenopathies) all map to this assembly line.`,
+  },
+  {
+    test: /gpcr|receptor tyrosine kinase|nuclear receptor|second messenger|camp|cgmp/i,
+    prose: `**Receptor signaling & second messengers — textbook chapter.**
+
+GPCRs couple to G proteins and second messengers (cAMP, IP3/DAG, ion channels). RTKs dimerize and autophosphorylate, recruiting adaptor cascades (RAS–MAPK, PI3K–AKT). Nuclear receptors transcriptionally regulate genes after ligand binding (steroids, thyroid hormone).
+
+cAMP and cGMP pathways explain many autonomic and vasodilator drugs; phosphodiesterase inhibitors raise cyclic nucleotide tone. Pathology is wrong ligand, wrong receptor number, or downstream mutation (oncogenic kinases). Draw the cascade before memorizing drug lists.`,
+  },
+  {
+    test: /wound healing|pathologic calcification|psammoma|cellular aging|telomere|senescence|metastatic cascade|emt /i,
+    prose: `**Pathology mechanisms — healing, calcification, aging, metastasis.**
+
+Wound healing: hemostasis → inflammation → proliferation → remodeling; disruption yields dehiscence, hernia, or keloid. Dystrophic calcification occurs in damaged tissue with normal serum calcium; metastatic calcification follows systemic Ca/P imbalance. Psammoma bodies are laminated calcifications in specific tumors teaching.
+
+Cellular aging involves telomere attrition, senescence-associated secretory phenotype (SASP), and proteostasis failure. Metastatic cascade: EMT, invasion, intravasation, survival in transit, extravasation, colonization—each step is inefficient, which is why micrometastases matter clinically.`,
+  },
+  {
+    test: /bite wound|eikenella|micro lab|culture media|naat|dimorphic|histoplasma|blastomyces|sterilization|disinfection|parasitology|helminth|transplant infection|cmv |gram stain|peptidoglycan|dna virus|rna virus|herpes latency|prosthetic joint infection/i,
+    prose: `**Microbiology methods & high-yield organisms — textbook chapter.**
+
+Gram stain logic: thick peptidoglycan retains crystal violet (Gram+); outer membrane/LPS defines Gram−. Culture media and NAAT choices follow pre-test probability. Dimorphic fungi (Histoplasma Midwest river valleys; Blastomyces; Coccidioides deserts) switch mold/yeast with temperature—geography is the stem.
+
+Bite wounds are polymicrobial; human bites implicate Eikenella. Sterilization kills spores; disinfection levels match critical/semicritical/noncritical instruments. Parasitology pairs life cycles with eosinophilia and travel. Post-transplant timelines predict CMV and other opportunists. Prosthetic joint infection: early vs late, sinus tract, and staged revision thinking. DNA viruses (herpes latency, HBV) versus RNA virus families organize antiviral targets.`,
+  },
+  {
+    test: /iron.*copper.*zinc|hemochromatosis|wilson|atp7b|phagocyte|chronic granulomatous|leukocyte adhesion/i,
+    prose: `**Trace metals & phagocyte immunodeficiencies — textbook chapter.**
+
+Iron overload (hemochromatosis) deposits in liver/heart/pancreas; copper overload (Wilson, ATP7B) hits liver and basal ganglia with low ceruloplasmin teaching; zinc deficiency impairs immunity and wound healing. Interpret ferritin with inflammation context.
+
+CGD (NADPH oxidase failure) causes catalase-positive organism infections and granulomas; LAD impairs neutrophil migration with omphalitis/high WBC without pus. Match organism pattern to the missing host defense.`,
+  },
+  {
+    test: /breast care|lactation mastitis|sexual assault|vaginitis|candida vs bv|wet mount/i,
+    prose: `**Women’s health office emergencies & breast care — textbook chapter.**
+
+Breast masses need triple assessment; lactation mastitis differs from abscess (drain the latter). Sexual assault care prioritizes safety, consent for exam, forensic options, STI/pregnancy prophylaxis, and trauma-informed follow-up—never coerce the exam.
+
+Vaginitis office diagnosis uses pH and wet mount: Candida (yeast/pseudohyphae), BV (clue cells, high pH), trichomonads (motile). Treat partners when indicated (trich). Avoid empiric “yeast cream” forever without a diagnosis.`,
+  },
+  {
+    test: /digital age|privacy.*boundar|research ethics|irb|equipoise|grade spirit|outbreak investigation|incidence.*prevalence|diagnostic study appraisal|spectrum bias/i,
+    prose: `**Evidence, ethics & professionalism extensions — textbook chapter.**
+
+Incidence is new cases over time; prevalence is existing disease burden—screening and chronicity change their relationship. Outbreak steps: confirm diagnosis, define cases, describe time/place/person, generate hypotheses, implement control. Diagnostic studies fail via spectrum bias and imperfect gold standards.
+
+GRADE separates strong versus conditional recommendations. Research ethics needs IRB review and equipoise. Digital professionalism: privacy, boundaries, and no PHI on personal devices/social media. Document thoughtfully—charts are legal and clinical instruments.`,
+  },
+  {
+    test: /surgical drain|neonatal surgical|malrotation|volvulus|nec |gyn oncology staging|cardio-?obstetric|maternal medical disease|antibiotic pk|t>mic|auc\/mic/i,
+    prose: `**Surgical & perinatal advanced care — textbook chapter.**
+
+Drain fluid character (serous, bilious, feculent, bloody) plus output trends detect leaks early. Neonatal surgical emergencies: malrotation/midgut volvulus is a green-vomit clock; NEC combines prematurity, feeding intolerance, and pneumatosis pathways. Gyn oncology staging is surgical/pathologic discipline that drives chemo/radiation.
+
+Cardio-obstetrics optimizes preconception risk for cardiomyopathy, aortopathy, and pulmonary hypertension. Antibiotic PK/PD: β-lactams care about time above MIC; vancomycin/fluoroquinolones about AUC/MIC—dosing interval follows the kill pattern, not vibes.`,
+  },
+  {
+    test: /agitation de-?escalation|verbal de-?escalation|offer po when safe/i,
+    prose: `**Acute agitation de-escalation — textbook chapter.**
+
+Start with scene safety, space, and calm voice—aggression often escalates when staff crowd or argue content of delusions. Offer oral medications when the patient can cooperate; IM routes are for imminent danger after verbal strategies fail. Avoid stacking sedatives that depress respiration; reassess after each dose.
+
+Medical clearance thinking still applies: hypoxia, hypoglycemia, withdrawal, intracranial injury, and toxidromes mimic “psych agitation.” Document least-restrictive steps attempted. Seclusion/restraints are last resorts with time limits and monitoring. Teach-back with the team after every event to improve the next response.`,
+  },
+  {
+    test: /medical complications in pregnancy|preexisting htn|preexisting.*dm|physiologic changes.*pregnan/i,
+    prose: `**Medical complications in pregnancy — textbook chapter.**
+
+Preexisting hypertension and diabetes require preconception optimization and trimester-specific targets; physiologic rises in blood volume and GFR change drug dosing and lab norms. Distinguish chronic hypertension from superimposed preeclampsia using timelines and end-organ criteria.
+
+Cardiac, renal, autoimmune, and thyroid disease each need specialty co-management and delivery planning. Imaging and medication choices weigh fetal risk against maternal harm from undertreatment—undertreating maternal disease also harms the fetus. Postpartum is a high-risk window for hypertension, cardiomyopathy, and thrombosis; schedule early follow-up deliberately.`,
+  },
+  {
+    test: /foregut|tracheoesophageal|lung fissure|intercostal|sciatic|peroneal|foot drop|median.*benediction|ulnar claw|axillary levels|mediastinal mass|prostate zone|tarsal tunnel|plantar fascia/i,
+    prose: `**High-yield regional anatomy — textbook chapter.**
+
+Foregut septation failures yield TEF patterns. Thoracic wall neurovascular bundles hide at rib inferior margins—chest tubes go over the rib. Limb nerves: sciatic injury and common peroneal foot drop; median “benediction” and ulnar claw patterns localize lesions.
+
+Breast lymphatics drain to axillary levels I–III; mediastinal masses use the anterior 4Ts teaching. Prostate peripheral zone hosts most cancers; transition zone drives BPH. Foot arches and tarsal tunnel entrapments explain plantar pain differentials. Draw once, label vessels/nerves, then predict the deficit.`,
+  },
 ];
 
 export const DEEP_CATEGORY: { test: RegExp; prose: string }[] = [
@@ -502,7 +646,9 @@ Structure predicts injury only when relationships are explicit: what borders it,
 
 Clinical anatomy chapters should end in procedures and syndromes: nerve blocks, surgical approaches, referred pain maps, and congenital lesion patterns. Surface landmarks exist to keep needles and knives out of trouble. Embryology earns its place when a congenital heart or branchial cleft vignette becomes inevitable from a failed developmental step.
 
-For limb and nerve chapters, name the root, cord, or peripheral nerve and the muscles/sensation lost—then predict the gait or hand posture. For thoracic and abdominal maps, name the pleural reflections, peritoneal recesses, and lymphatic drainage that explain effusion, metastasis, and referred pain. Mediastinal compartments localize masses before biopsy. Breast lymphatic pathways explain sentinel-node logic. Male and female pelvic viscera chapters should end in continence, fertility, and surgical hazard (ureter, nerves, vessels).`,
+For limb and nerve chapters, name the root, cord, or peripheral nerve and the muscles/sensation lost—then predict the gait or hand posture. For thoracic and abdominal maps, name the pleural reflections, peritoneal recesses, and lymphatic drainage that explain effusion, metastasis, and referred pain. Mediastinal compartments localize masses before biopsy. Breast lymphatic pathways explain sentinel-node logic. Male and female pelvic viscera chapters should end in continence, fertility, and surgical hazard (ureter, nerves, vessels).
+
+Cross-sectional imaging literacy still starts with cadaver relationships: what is anterior/posterior, what canal connects spaces, and which fascia contains infection. Embryologic remnants (vitelline duct, urachus, branchial clefts) explain cysts and fistulas in adults and children. If you cannot sketch it from memory in two minutes, you do not own it yet.`,
   },
   {
     test: /immunol/i,
