@@ -18,6 +18,7 @@ function isClinical(year: 1 | 2 | 3 | 4): boolean {
 /**
  * Turn a compact teaching bullet into textbook-style prose.
  * Declarative content only — no “fill in the blank” study prompts.
+ * Each section leads with point-specific enrichment; scaffolding is short and varied.
  */
 function proseForPoint(
   point: string,
@@ -30,33 +31,40 @@ function proseForPoint(
   const cat = topic.contentCategory;
   const clinical = isClinical(topic.year);
   const localFacts = factualEnrichment(`${point} ${title}`);
+  const factsBlock = localFacts
+    ? `${localFacts}\n\n`
+    : `**${point}** is a primary teaching node in **${title}**. State what increases or decreases its activity, what fails when it is lost, and what bedside or laboratory finding follows.\n\n`;
 
   if (clinical) {
+    const openers = [
+      `**${point}.** This is often the first branch that sorts acuity in **${title}**. In ${cat} care focused on **${organ}**, treat it as a rule that changes orders in the first minutes—not as background reading.`,
+      `**${point}.** Once the syndrome of **${title}** is on the board, this rule decides which data are decision-changing versus decorative. Privilege findings that would alter the next action for a **${organ}** problem.`,
+      `**${point}.** Later in the encounter, this checkpoint prevents premature closure. Ask what look-alike in **${organ}** disease would be worsened by the same first move used for **${title}**.`,
+      `**${point}.** Use this rule at reassessment: if the trajectory after initial therapy is wrong, this is usually where the pathway was misidentified.`,
+    ];
+    const opener = openers[Math.min(index, openers.length - 1)];
+
     return `### ${n}. ${point}
 
-**${point}.** In **${title}** (${cat}; **${organ}**), this rule structures the encounter from the first minutes. It tells you which symptoms and exam findings to privilege, which complications to hunt for, and which orders are time-critical versus deferrable.
+${opener}
 
-Clinically, the rule maps onto a limited set of ${organ} failure modes—ischemia, obstruction, infection, inflammation, bleeding, metabolic crisis, toxidrome, or pump/ventilatory failure. Once you name the failure mode, vitals and labs stop being a checklist and become evidence for or against **${title}**.
-
-${localFacts ? `${localFacts}\n\n` : ""}Initial actions should follow the rule’s implied branch: stabilize what is unstable, obtain the two or three data points that change management, and start disease-directed therapy when delay itself causes harm. Reassess on a short clock; if the trajectory is wrong, escalate rather than repeating the same orders.
-
-Keep a look-alike on the board that shares early features with **${title}** but would be worsened by the same first move. Discriminating those paths is the practical heart of this section.
-
-**Bottom line.** ${topic.quizExplain}
+${factsBlock}Translate the rule into a timed plan: stabilize what is unstable, obtain the two or three results that change the branch, start disease-directed therapy when delay harms, and name the finding that would force escalation. Exact doses belong to current guidelines; the chapter skill is the physiologic order of operations for **${title}**.
 `;
   }
 
+  const openers = [
+    `**${point}.** Begin here: this is a control point in the mechanism of **${title}** (${cat}; **${organ}**). Rate, direction, structure, or signaling can be increased, decreased, blocked, or driven constitutively at this node.`,
+    `**${point}.** Regulation decides whether this node supports homeostasis or produces disease in **${title}**. Physiologic “on” and “off” signals (substrates, hormones, energy charge, hypoxia, inflammatory mediators, drugs, variants) belong in the same paragraph as the definition.`,
+    `**${point}.** Failure at this node should predict a nameable phenotype—clinical finding, lab pattern, imaging clue, or drug effect—inside the **${organ}** map. If you cannot name the phenotype, the mechanism is still incomplete.`,
+    `**${point}.** Discriminate this node from its neighbor in **${title}** by compartment, cofactor, hormonal state (fed/fasting), or the syndrome that appears when only this step is hit.`,
+  ];
+  const opener = openers[Math.min(index, openers.length - 1)];
+
   return `### ${n}. ${point}
 
-**${point}.** This node belongs to the mechanism of **${title}** in ${cat}, framed in the **${organ}** map. It is best understood as a control point: a place where the pathway’s rate, direction, structure, or signaling can be increased, decreased, blocked, or constitutively driven.
+${opener}
 
-${localFacts ? `${localFacts}\n\n` : ""}Regulation is the rest of the story. Physiologic “on” signals (substrate supply, allosteric activators, hormones, hypoxia, inflammatory mediators, or increased expression) and “off” signals (product inhibition, energy charge, hormones in the opposite state, drugs, or loss-of-function variants) determine whether this node supports homeostasis or produces disease.
-
-When the node fails—absent, inhibited, overactive, mistargeted, or structurally disrupted—a predictable phenotype follows. That phenotype should be nameable as a clinical finding, laboratory pattern, imaging clue, or drug effect. The same logic explains toxins and therapeutics that act here: they are experiments on the pathway.
-
-Learners commonly confuse this node with a neighboring step in **${title}**. The discriminator is usually location (compartment/tissue), cofactor requirement, hormonal state (fed/fasting), or the specific clinical syndrome that appears when only this node is hit.
-
-**Bottom line for this section.** Hold the control point, its regulators, and one phenotype together as a single paragraph you could teach at the board.
+${factsBlock}Toxins and therapeutics that act here are experiments on the pathway: name the target, the expected physiologic change, and the on-target toxicity. Hold the control point, its regulators, and one phenotype as a single teachable paragraph.
 `;
 }
 
@@ -157,7 +165,14 @@ ${topic.quizExplain}
 export function buildChapterClinical(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
   const rows = topic.points
-    .map((p, i) => `| ${i + 1} | ${p} | ${clinical ? "Next action / confirming finding" : "Expected phenotype / test"} |`)
+    .map(
+      (p, i) =>
+        `| ${i + 1} | ${p} | ${
+          clinical
+            ? "Decision-changing finding or next timed action"
+            : "Expected phenotype, lab, or drug effect"
+        } |`,
+    )
     .join("\n");
 
   if (clinical) {
@@ -167,9 +182,9 @@ export function buildChapterClinical(topic: CatalogTopic): string {
 
 Build the history around onset, severity, associated features, medications, prior episodes, and red-flag symptoms for **${topic.organSystem}** disease. The exam should be hypothesis-driven: every maneuver should support or weaken **${topic.title}** or a can’t-miss alternative.
 
-### Differential that is forced to stay honest
+### Differential that stays honest
 
-Always carry three lines on the board:
+Carry three lines on the board:
 
 1. Most likely explanation given base rate and the story  
 2. Most dangerous explanation you cannot miss  
@@ -181,13 +196,13 @@ Choose tests that change management. For each major result, know the branch: *if
 
 ### Working table
 
-| # | Chapter rule | Fill in while studying |
+| # | Chapter rule | Clinical prediction |
 | --- | --- | --- |
 ${rows}
 
 ### Disposition thinking
 
-Before you leave the case, state level of care, pending results, precautions, and what would force immediate return to the bedside. Reassessment literacy is part of the chapter, not an afterthought.
+Before leaving the case, state level of care, pending results, precautions, and what would force immediate return to the bedside. Reassessment literacy is part of the chapter, not an afterthought.
 
 **Remember:** ${topic.quizExplain}
 `;
@@ -199,7 +214,7 @@ Before you leave the case, state level of care, pending results, precautions, an
 
 A preclerkship chapter is unfinished until the mechanism predicts a patient. For each control point in **${topic.title}**, name a symptom, exam finding, imaging pattern, lab disturbance, or drug effect inside **${topic.organSystem}** care.
 
-### Clinical threads to keep active while you read
+### Clinical threads
 
 1. **Loss of function** — What syndrome appears when the pathway cannot meet demand?  
 2. **Gain of function / constitutive activity** — What phenotype appears when the brake is lost?  
