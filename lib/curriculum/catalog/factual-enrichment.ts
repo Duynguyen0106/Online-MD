@@ -1,8 +1,14 @@
 /**
  * Keyword-triggered textbook enrichments for catalog chapter prose.
  * Matched against teaching-point + title text; multiple snippets may apply.
- * Category/organ fallbacks ensure nearly every lesson gets didactic depth.
+ * Category/organ fallbacks + deep banks ensure nearly every lesson gets didactic depth.
  */
+
+import {
+  DEEP_CATEGORY,
+  DEEP_ORGAN,
+  DEEP_SNIPPETS,
+} from "@/lib/curriculum/catalog/factual-enrichment-deep";
 
 type TopicLike = {
   title: string;
@@ -515,7 +521,7 @@ const ORGAN_FALLBACK: { test: RegExp; prose: string }[] = [
 
 export function factualEnrichment(text: string): string {
   const hits: string[] = [];
-  for (const snip of SNIPPETS) {
+  for (const snip of [...SNIPPETS, ...DEEP_SNIPPETS]) {
     if (snip.test.test(text) && !hits.includes(snip.prose)) {
       hits.push(snip.prose);
     }
@@ -527,7 +533,17 @@ function pushUnique(hits: string[], prose: string) {
   if (prose && !hits.includes(prose)) hits.push(prose);
 }
 
-/** Collect unique enrichments for an entire topic (keywords + category/organ fallbacks). */
+function matchFallback(
+  hits: string[],
+  value: string,
+  banks: { test: RegExp; prose: string }[],
+) {
+  for (const fb of banks) {
+    if (fb.test.test(value)) pushUnique(hits, fb.prose);
+  }
+}
+
+/** Collect unique enrichments for an entire topic (keywords + always-on category/organ depth). */
 export function factualEnrichmentForTopic(topic: TopicLike): string {
   const blob = [
     topic.title,
@@ -539,23 +555,18 @@ export function factualEnrichmentForTopic(topic: TopicLike): string {
   ].join(" \n ");
 
   const hits: string[] = [];
-  for (const snip of SNIPPETS) {
+  for (const snip of [...SNIPPETS, ...DEEP_SNIPPETS]) {
     if (snip.test.test(blob)) pushUnique(hits, snip.prose);
   }
 
-  // If thin, add category then organ fallbacks for guaranteed textbook depth.
-  if (hits.length < 2) {
-    const cat = topic.contentCategory ?? "";
-    for (const fb of CATEGORY_FALLBACK) {
-      if (fb.test.test(cat)) pushUnique(hits, fb.prose);
-    }
-  }
-  if (hits.length < 2) {
-    const organ = topic.organSystem ?? "";
-    for (const fb of ORGAN_FALLBACK) {
-      if (fb.test.test(organ)) pushUnique(hits, fb.prose);
-    }
-  }
+  const cat = topic.contentCategory ?? "";
+  const organ = topic.organSystem ?? "";
+
+  // Always layer category + organ depth (base + deep) so chapters stay textbook-dense.
+  matchFallback(hits, cat, CATEGORY_FALLBACK);
+  matchFallback(hits, cat, DEEP_CATEGORY);
+  matchFallback(hits, organ, ORGAN_FALLBACK);
+  matchFallback(hits, organ, DEEP_ORGAN);
 
   return hits.join("\n\n");
 }
