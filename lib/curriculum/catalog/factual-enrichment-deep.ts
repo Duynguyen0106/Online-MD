@@ -6,6 +6,26 @@
 
 export const DEEP_SNIPPETS: { test: RegExp; prose: string }[] = [
   {
+    test: /whipple|insulinoma|hypoglycemia mechanism|exogenous insulin|sulfonylurea.*hypo|critical illness hypoglycemia/i,
+    prose: `**Hypoglycemia mechanisms — textbook chapter.**
+
+Whipple’s triad remains the clinical definition: symptoms consistent with hypoglycemia, a low measured glucose, and resolution with glucose restoration. Without the triad, isolated low point-of-care values can be artifact or asymptomatic biochemical dips. Once true hypoglycemia is established, mechanism forks by insulin and C-peptide pattern, medication list, illness severity, and hepatic/renal reserve.
+
+Endogenous hyperinsulinism (insulinoma, noninsulinoma pancreatogenous hypoglycemia) typically shows high insulin and high C-peptide during a documented low glucose, often after a supervised fast. Exogenous insulin shows high insulin with suppressed C-peptide. Sulfonylureas raise both insulin and C-peptide and are identified on a drug screen when the story fits—missing this leads to wrong localization surgery. Critical illness, sepsis, adrenal insufficiency, glucagon deficiency, and malnutrition produce hypoketotic or illness-context hypoglycemia without a primary β-cell tumor.
+
+Counter-regulatory failure (recurrent hypoglycemia blunting adrenergic warning, β-blockers masking tremor/tachycardia) explains why some patients present with neuroglycopenia alone—confusion, seizure, or focal deficits. Immediate care is glucose (oral if safe, IV dextrose or IM glucagon if not) while drawing the critical sample: glucose, insulin, C-peptide, cortisol, and sulfonylurea screen when endogenous hyperinsulinism is plausible. Long-term prevention matches the mechanism: medication adjustment, treating infection/cortisol deficiency, or endocrine/surgical pathways for insulinoma after localization.`,
+  },
+  {
+    test: /perimortem|maternal cardiac arrest|left uterine displacement|aortocaval|acls mod/i,
+    prose: `**Maternal cardiac arrest — textbook chapter.**
+
+After ~20 weeks, aortocaval compression by the gravid uterus reduces venous return in the supine position. Continuous left uterine displacement (or left lateral tilt with effective chest compression quality) is a simultaneous first action with ACLS—not a step you remember after the third epinephrine. Airway is harder: expect edema, desaturation speed, and aspiration risk; the most experienced airway clinician should own the first attempt with prep for difficult airway.
+
+Perimortem cesarean delivery (resuscitative hysterotomy) is considered early—classically aiming for incision by ~4–5 minutes of arrest without ROSC—to relieve aortocaval compression and improve maternal (and potentially fetal) outcomes. Do not delay for fetal monitors or transport to an OR if the patient is still in the ED/L&D bay; bring the scalpel to the resuscitation. Standard ACLS drugs and defibrillation doses are used; remove fetal monitors before shocking. Hemorrhage carts, uterotonics after delivery, and massive-transfusion readiness belong in the same protocol when arrest follows hemorrhage.
+
+Team roles must be pre-assigned: compressor, airway, uterine displacement, timer/recorder, obstetrician for perimortem delivery, neonatology for the newborn. Causes unique to pregnancy (hemorrhage, amniotic fluid embolism, magnesium toxicity, preeclampsia/eclampsia complications, anesthetic toxicity) sit beside the usual Hs and Ts. The educational endpoint is automatic LUD + early perimortem decision, not adult ACLS with pregnancy as an afterthought.`,
+  },
+  {
     test: /mse|mental status|psychosis|delusion|hallucin|thought disorder|first-?episode/i,
     prose: `**Psychosis & mental status examination — textbook chapter.**
 
@@ -160,7 +180,7 @@ Naive T-cell activation requires signal 1 (TCR recognition of peptide–MHC) plu
 Exhaustion in chronic infection and cancer features sustained inhibitory-receptor expression and poor effector function; checkpoint blockade attempts to reverse parts of that program. Regulatory T cells and inhibitory cytokines (IL-10, TGF-β) add further brakes. Clinical mastery links vaccination (costimulation and adjuvants), transplant (costimulation blockade concepts), autoimmunity (failure of anergy/Treg control), and immuno-oncology (checkpoint inhibitors) to the same two-signal diagram. When a vignette mentions CTLA-4 or PD-1, draw the synapse and predict both efficacy and organ-specific toxicity.`,
   },
   {
-    test: /shock micro|lactate clearance|capillary refill|skin perfusion|sepsis|lactate/i,
+    test: /shock micro|lactate clearance|capillary refill|skin perfusion|\bsepsis\b|septic shock|shock phenotype|microcircul/i,
     prose: `**Shock microcirculation, lactate & sepsis perfusion — textbook chapter.**
 
 Macro-hemodynamics (blood pressure, cardiac output) can look acceptable while capillary exchange fails. Microcirculatory dysfunction—heterogeneous perfusion, endothelial injury, and shunting—explains persistent lactate and organ failure after “normalization” of MAP. Lactate rises from anaerobic metabolism and from adrenergic aerobic glycolysis; clearance trends after resuscitation often matter more than a single value, but rising lactate always demands a mechanism search. Mottling, cool clammy skin, delayed capillary refill, oliguria, and altered mentation are bedside perfusion exams that complement numbers.
@@ -832,7 +852,9 @@ Signal termination matters as much as activation: phosphatases, GTPase timers, r
 
 Cell–cell junctions and polarity decide barrier integrity in gut, lung, and blood–brain barrier disease. Loss of polarity is an early cancer theme as much as a developmental one. Extracellular vesicles and paracrine signals explain how local injury becomes systemic.
 
-CRISPR and gene-therapy teaching still rests on delivery, off-target risk, and which cell must be corrected permanently versus transiently. When a vignette gives a receptor tyrosine kinase or ion-channel mutation, predict dominant-negative versus haploinsufficiency phenotypes before naming the syndrome.`,
+CRISPR and gene-therapy teaching still rests on delivery, off-target risk, and which cell must be corrected permanently versus transiently. When a vignette gives a receptor tyrosine kinase or ion-channel mutation, predict dominant-negative versus haploinsufficiency phenotypes before naming the syndrome.
+
+Splicing and targeting failures produce disease as often as coding mutations—read the vignette for the compartment that never received the protein.`,
   },
   {
     test: /anatom|embryo/i,
@@ -862,7 +884,9 @@ Imaging correlation drills: on CT/MRI, name the compartment, the vessel, and the
 
 Peritoneal compartments and fascia planes explain where pus tracks and why a “simple” abscess is actually a surgical anatomy problem. Retroperitoneal versus intraperitoneal collections change both imaging and approach.
 
-Cranial fossa relationships and dural reflections turn headache and trauma vignettes into localization exercises. Embryologic timing of teratogen exposure (weeks) should be memorized as ranges tied to organogenesis—not as trivia dates. Sketch the anomaly, the missed developmental step, and the adult remnant in one diagram.`,
+Cranial fossa relationships and dural reflections turn headache and trauma vignettes into localization exercises. Embryologic timing of teratogen exposure (weeks) should be memorized as ranges tied to organogenesis—not as trivia dates. Sketch the anomaly, the missed developmental step, and the adult remnant in one diagram.
+
+Clinical surface anatomy for procedures (lumbar puncture landmarks, cricothyroid membrane, chest-tube triangle of safety) must be spoken aloud before the needle or knife moves.`,
   },
   {
     test: /immunol/i,
@@ -922,7 +946,9 @@ Redox balance and NADPH supply link G6PD, oxidative hemolysis, and infections/dr
 
 Purine/pyrimidine and one-carbon disorders present with megaloblastic change, immunodeficiency, or neurologic injury depending on the node—map the accumulating metabolite to the organ. Clinical biochemistry ends when you can defend a diet, dialysis, scavenger, or vitamin cofactor as the first stabilizing move from the pathway alone.
 
-Name the missing cofactor and the first stabilizing substrate or vitamin before the exotic workup expands.`,
+Name the missing cofactor and the first stabilizing substrate or vitamin before the exotic workup expands.
+
+ETC poisons and uncouplers separate ATP failure from heat-without-ATP physiology—name the complex before the antidote.`,
   },
   {
     test: /pharmacol/i,
@@ -984,7 +1010,11 @@ Biofilm and foreign-body infection physiology explain why antibiotics without re
 
 Mycobacteria and dimorphic fungi teach slow timelines and immune-status modifiers. Parasites demand exposure geography and eosinophilia context. When the Gram stain and the syndrome disagree, believe the patient and broaden thoughtfully—then narrow hard when identity returns.
 
-Match host defect to organism before escalating to ever-broader regimens.`,
+Match host defect to organism before escalating to ever-broader regimens.
+
+Diarrheal illness still needs host risk and public-health notification when reportable organisms appear—culture and exposure history remain part of stewardship.
+
+Name the controllable focus before the day-3 antibiotic autopilot continues.`,
   },
   {
     test: /epidemiolog|biostat/i,
@@ -1068,7 +1098,11 @@ Enhanced recovery pathways (multimodal analgesia, early feeding, early mobilizat
 
 Hemostasis strategy (pressure, suture, energy device, topical agents, systemic reversal) is chosen by bleeding character and anatomy. Ongoing transfusion without a surgical plan is delay dressed as resuscitation.
 
-Wound classification and antibiotic prophylaxis windows are timed safety rules. Oncologic and bariatric pathways add nutritional and VTE risk layers to the same leak/bleed clocks. Before leaving the OR, state the most likely failure mode in the next twelve hours and how it will declare.`,
+Wound classification and antibiotic prophylaxis windows are timed safety rules. Oncologic and bariatric pathways add nutritional and VTE risk layers to the same leak/bleed clocks. Before leaving the OR, state the most likely failure mode in the next twelve hours and how it will declare.
+
+Indication, anatomy, and the complication you are watching tonight remain the three sentences every operative chapter must leave in the handoff.
+
+SSI bundles only work when antibiotic timing and glucose control are actually executed.`,
   },
   {
     test: /pediatr/i,
@@ -1100,7 +1134,9 @@ Respiratory chapters separate upper-airway obstruction, bronchiolitis, asthma, a
 
 Neonatal jaundice pathways separate physiologic from pathologic by timing, rate of rise, and hemolysis labs—kernicterus prevention is a clock. Congenital adrenal hyperplasia salt-wasting crises present as shock with electrolyte clues in the first weeks.
 
-Behavioral and school concerns still need medical mimics (hearing, sleep, thyroid, substances, abuse) on the list. Medication counseling for caregivers includes measuring devices, concentration checks, and what to do if a dose is vomited. Discharge is safe only when the caregiver can teach back red flags and the next appointment exists.`,
+Behavioral and school concerns still need medical mimics (hearing, sleep, thyroid, substances, abuse) on the list. Medication counseling for caregivers includes measuring devices, concentration checks, and what to do if a dose is vomited. Discharge is safe only when the caregiver can teach back red flags and the next appointment exists.
+
+Critical congenital heart screening and prostaglandin thinking belong in the first hours of neonatal distress with differential cyanosis or ductal-dependent shock.`,
   },
   {
     test: /obstetric|gynecol/i,

@@ -138,7 +138,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Arrhythmias.** Unstable tachyarrhythmias need immediate cardioversion. AF rate vs rhythm control and anticoagulation (CHA₂DS₂-VASc) are parallel decisions. VT/VF are shockable arrest rhythms; polymorphic VT with long QT suggests torsades—magnesium and remove QT drugs.`,
   },
   {
-    test: /nephrotic|nephritic|glomerul|proteinuria|hematuria.*rbc cast/i,
+    test: /nephrotic|nephritic|glomerulonephr|glomerular syndrom|rbc cast|heavy proteinuria|nephritic syndrome|nephrotic syndrome/i,
     prose: `**Glomerular syndromes.** Nephrotic: heavy proteinuria, hypoalbuminemia, edema, hyperlipidemia. Nephritic: hematuria, RBC casts, hypertension, rising creatinine. Pattern recognition narrows the biopsy differential before immunofluorescence/EM details.`,
   },
   {
@@ -184,7 +184,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Oncologic emergencies.** Neutropenic fever needs prompt empiric antibiotics. TLS needs prevention/monitoring of K, Phos, Ca, uric acid, and renal function. Cord compression is steroids + urgent imaging/specialties. SVCS and severe hypercalcemia are airway/volume/oncology problems.`,
   },
   {
-    test: /hyponatremia|siadh|osmolality|hypertonic saline|ods/i,
+    test: /hyponatremia|siadh|osmolality|hypertonic saline|osmotic demyelination|\bods\b/i,
     prose: `**Hyponatremia.** Serum osmolality → urine studies → volume status. Severe symptoms may need careful hypertonic saline; overly rapid correction risks ODS. SIADH is euvolemic hypo-osmolar hyponatremia with inappropriate antidiuresis.`,
   },
   {
@@ -250,7 +250,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Ruptured AAA.** Hypotension + back/abdominal pain ± pulsatile mass. Unstable patients need operative/endovascular pathways—do not delay for perfect imaging. Permissive hypotension concepts appear in transport/OR planning.`,
   },
   {
-    test: /ssi|surgical site infection|prophylactic antibiotic|wound class/i,
+    test: /\bssi\b|surgical site infection|prophylactic antibiotic|wound class/i,
     prose: `**SSI prevention.** Time antibiotics before incision, control glucose, maintain normothermia, and use appropriate hair removal. Wound class predicts risk. Bundles beat single heroic interventions.`,
   },
   {
@@ -284,7 +284,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Primary-care behavioral health.** PHQ-9 severity guides therapy/meds and forces suicide questions when positive. SBIRT reduces unhealthy alcohol use. Tobacco: counseling + pharmacotherapy. Opioids: PDMP, MME awareness, naloxone, and taper when harm outweighs benefit.`,
   },
   {
-    test: /uspstf|screening|nnt|prevention|statin.*primary|ascvd/i,
+    test: /uspstf|\bnnt\b|primary prevention|statin.*primary|\bascvd\b|cancer screening/i,
     prose: `**Prevention science.** Match Grade A/B services to age/sex/risk. Shared decisions matter for close-call screenings. ASCVD risk estimation guides primary-prevention statins. Avoid low-value cascades that create more harm than benefit.`,
   },
   {
@@ -384,7 +384,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Toxicology.** Toxidromes (anticholinergic, cholinergic, opioid, sympathomimetic, sedative-hypnotic) guide empiric care. Antidotes are adjuncts to ABCs: naloxone, NAC, fomepizole, atropine/pralidoxime, etc., matched to the agent.`,
   },
   {
-    test: /incidence|prevalence|bias|confound|nnt|rrr|arr|sensitivity|specificity|ppv|npv|odds ratio|hazard ratio/i,
+    test: /incidence|prevalence|\bbias\b|confound|\bnnt\b|\brrr\b|\barr\b|sensitivity|specificity|\bppv\b|\bnpv\b|odds ratio|hazard ratio/i,
     prose: `**Epi & biostats.** Prevalence is burden; incidence is new events. Sensitivity/specificity are test properties; PPV/NPV depend on prevalence. ARR/RRR/NNT communicate treatment magnitude. Confounding ≠ bias, but both threaten causal claims.`,
   },
   {
