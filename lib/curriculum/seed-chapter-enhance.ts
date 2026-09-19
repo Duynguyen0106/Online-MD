@@ -202,7 +202,7 @@ Translate each control point into something observable in a patient cared for un
 
 | # | Anchor | Clinical prediction |
 | --- | --- | --- |
-${(points.length ? points : [lesson.title]).map((p, i) => `| ${i + 1} | ${p} | Expected finding / next action |`).join("\n")}
+${(points.length ? points : [lesson.title]).map((p, i) => `| ${i + 1} | ${p} | Phenotype, lab, imaging, or drug effect when this node fails |`).join("\n")}
 `,
     },
     {
