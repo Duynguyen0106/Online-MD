@@ -232,7 +232,7 @@ Management: restore perfusion if prerenal, stop nephrotoxins, relieve obstructio
 Cardiorenal and hepatorenal syndromes remind you that the kidney often fails secondarily—fix the parent organ while supporting filtration. Contrast exposure risk is multiplicative with GFR, diabetes, and volume depletion; hydration strategies and alternative imaging matter. Rhabdomyolysis AKI needs volume and monitoring for electrolyte storms. Post-obstructive diuresis can be profound after relief of chronic obstruction—replace thoughtfully. Never ignore anuria; it is obstruction, vascular catastrophe, or severe ATN until proven otherwise.`,
   },
   {
-    test: /stroke|tia|nihss|thrombolysis|alteplase|large.?vessel|hemorrhag/i,
+    test: /\bstroke\b|\btia\b|nihss|thrombolysis|alteplase|large.?vessel|hemorrhag/i,
     prose: `**Acute stroke syndromes — textbook chapter.**
 
 Hyperacute focal neurologic deficits are vascular until proven otherwise. Time last known well, glucose, NIHSS, and noncontrast CT (to exclude hemorrhage) gate thrombolysis decisions; vascular imaging identifies large-vessel occlusion for thrombectomy pathways. Hemorrhagic stroke management prioritizes ABC, blood-pressure parameters, coagulopathy reversal, and neurosurgical consultation as indicated. Mimics include seizure with Todd paresis, migraine, hypoglycemia, and functional neurologic disorder—still treat as stroke until imaging and course declare otherwise when uncertainty is high.
@@ -642,7 +642,9 @@ Track information flow (DNA→RNA→protein), quality control (DNA repair, UPR, 
 
 Ask which compartment fails (nucleus, mitochondria, lysosome, peroxisome, plasma membrane) and whether the problem is too much signal, too little signal, or signal at the wrong time. Experimental medicine vignettes (knockouts, inhibitors, reporters) should be translated into human disease correlates. Memorizing organelle lists without regulation is not mastery.
 
-Receptor classes (GPCR, RTK, nuclear receptors) explain rapid versus transcriptional drug effects and why scurvy/OI collagen defects produce connective-tissue phenotypes. Second messengers and phosphorylation cascades are the wiring diagrams behind endocrine and oncology therapies. Tie each signaling node to a disease or drug before leaving the section.`,
+Receptor classes (GPCR, RTK, nuclear receptors) explain rapid versus transcriptional drug effects and why scurvy/OI collagen defects produce connective-tissue phenotypes. Second messengers and phosphorylation cascades are the wiring diagrams behind endocrine and oncology therapies. Tie each signaling node to a disease or drug before leaving the section.
+
+Stem cells and differentiation chapters track potency (totipotent → pluripotent → multipotent), niche signals, and lineage commitment—cancer stem-cell concepts and regenerative medicine both depend on this map. Epigenetic marks lock or reopen fate; disease is often failed differentiation or failed restraint of self-renewal.`,
   },
   {
     test: /anatom|embryo/i,

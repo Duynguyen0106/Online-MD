@@ -196,11 +196,11 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Obstructive lung care.** COPD exacerbations: controlled O₂ targets, bronchodilators, steroids, selective antibiotics, NIV for hypercapnic failure. Asthma: repeated SABA, early steroids, escalate for severe obstruction. Teach inhaler technique.`,
   },
   {
-    test: /pe\b|pulm(?:onary)? embol|wells|ctpa|d-?dimer/i,
+    test: /\bpe\b|pulm(?:onary)?\s+embol|wells\s+score|ctpa|\bd-?dimer\b/i,
     prose: `**PE.** Pretest probability guides D-dimer vs CTPA/VQ. Massive PE = hypotension; submassive shows RV strain. Anticoagulate when suspicion is high and bleeding risk allows; systemic thrombolysis is for selected high-risk cases.`,
   },
   {
-    test: /stroke|tpa|tnk|last known well|ich|intracranial hemorrhage/i,
+    test: /\bstroke\b|\btpa\b|\btnk\b|last known well|\bich\b|intracranial hemorrhage/i,
     prose: `**Stroke.** Last known well, glucose, noncontrast CT to exclude bleed. Thrombolysis is time-bound; LVO may need thrombectomy. BP targets differ around thrombolysis. Do not give antiplatelets until hemorrhage is excluded when reperfusion is planned.`,
   },
   {
@@ -268,7 +268,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Ectopic & Rh.** Unstable suspected ectopic → surgery. Stable methotrexate candidates need reliable follow-up and β-hCG pathways. Give anti-D immune globulin to eligible Rh-negative patients after sensitizing events.`,
   },
   {
-    test: /bronchiolitis|ors|oral rehydration|otitis media|strep pharyng|pediatric uti/i,
+    test: /bronchiolitis|\bors\b|oral rehydration|otitis media|strep pharyng|pediatric uti/i,
     prose: `**Core pediatrics.** Bronchiolitis is supportive care—avoid routine bronchodilators/steroids. Mild–moderate dehydration: ORS first. AOM needs good otoscopy and selective antibiotics. Strep testing prevents unnecessary antibiotics. Infant UTI demands quality specimens and selective imaging.`,
   },
   {
