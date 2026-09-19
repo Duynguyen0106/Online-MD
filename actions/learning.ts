@@ -3,9 +3,10 @@
 import { revalidatePath } from "next/cache";
 import {
   getClinicalCase,
-  getFormativeQuestions,
+  getFormativeQuestionsLive,
   getLesson,
   getLessonBlocks,
+  getMergedQuestionMap,
   getModule,
   getObjectivesForLesson,
   getQbankQuestions,
@@ -86,10 +87,10 @@ export async function markBlockViewed(input: unknown) {
 
 export async function submitFormativeQuiz(input: unknown) {
   const parsed = submitQuizSchema.parse(input);
-  const questions = getFormativeQuestions(parsed.lessonId);
+  const questions = await getFormativeQuestionsLive(parsed.lessonId);
   const lesson = await getLesson(parsed.lessonId);
   if (!lesson) throw new Error("Lesson not found");
-  const qmap = getQuestionMap();
+  const qmap = await getMergedQuestionMap();
   const score = scoreResponses(
     questions.map((q) => q.id),
     parsed.responses,
@@ -151,7 +152,7 @@ export async function submitModuleExam(input: unknown) {
     throw new Error("Module exam locked until all lessons are mastered");
   }
 
-  const qmap = getQuestionMap();
+  const qmap = await getMergedQuestionMap();
   const score = scoreResponses(
     mod.exam.questionIds,
     parsed.responses,

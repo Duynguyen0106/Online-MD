@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shared/app-shell";
 import { QuizRunner } from "@/components/student/quiz-runner";
-import { getFormativeQuestions, getLesson } from "@/lib/curriculum/accessors";
+import {
+  getFormativeQuestionsLive,
+  getLesson,
+} from "@/lib/curriculum/accessors";
 
 export default async function LessonQuizPage({
   params,
@@ -11,7 +14,7 @@ export default async function LessonQuizPage({
   const { lessonId } = await params;
   const lesson = await getLesson(lessonId);
   if (!lesson) notFound();
-  const questions = getFormativeQuestions(lessonId);
+  const questions = await getFormativeQuestionsLive(lessonId);
 
   return (
     <AppShell title={`Formative quiz · ${lesson.title}`}>

@@ -6,6 +6,7 @@ import {
   acceptInvite,
   createInvite,
   deleteFacultyFlashcard,
+  deleteFacultyQuestion,
   listInvites,
   listUnlockRules,
   listUsers,
@@ -14,6 +15,7 @@ import {
   saveLessonOverride,
   saveUnlockRules,
   upsertFacultyFlashcard,
+  upsertFacultyQuestion,
 } from "@/lib/demo/admin-store";
 import { getSessionUser, setSessionUserId } from "@/lib/demo/store";
 import { getLesson } from "@/lib/curriculum/accessors";
@@ -189,6 +191,46 @@ export async function removeFacultyFlashcard(id: string) {
   await deleteFacultyFlashcard(id);
   revalidatePath("/faculty/flashcards");
   revalidatePath("/flashcards");
+  return { ok: true as const };
+}
+
+const questionSchema = z.object({
+  id: z.string().optional(),
+  lessonId: z.string().min(1),
+  stem: z.string().min(10).max(2000),
+  choices: z
+    .array(z.object({ id: z.string(), text: z.string().min(1) }))
+    .length(4),
+  correctIndex: z.number().int().min(0).max(3),
+  explanation: z.string().min(5).max(2000),
+});
+
+export async function saveFacultyQuestion(input: unknown) {
+  const user = await requireRoles(["faculty", "admin"]);
+  const parsed = questionSchema.parse(input);
+  const choices = parsed.choices.map((c, i) => ({
+    id: c.id || `${parsed.id ?? "q"}-c${i}`,
+    text: c.text,
+  }));
+  const saved = await upsertFacultyQuestion({
+    id: parsed.id ?? newId("qq"),
+    lessonId: parsed.lessonId,
+    stem: parsed.stem,
+    choices,
+    correctChoiceId: choices[parsed.correctIndex].id,
+    explanation: parsed.explanation,
+    sequence: 99,
+    updatedBy: user.id,
+  });
+  revalidatePath("/faculty/questions");
+  revalidatePath(`/lessons/${parsed.lessonId}/quiz`);
+  return { ok: true as const, question: saved };
+}
+
+export async function removeFacultyQuestion(id: string) {
+  await requireRoles(["faculty", "admin"]);
+  await deleteFacultyQuestion(id);
+  revalidatePath("/faculty/questions");
   return { ok: true as const };
 }
 

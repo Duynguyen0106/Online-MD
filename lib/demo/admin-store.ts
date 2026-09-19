@@ -32,6 +32,7 @@ export type LessonOverride = {
 export type CurriculumOverrides = {
   lessons: Record<string, LessonOverride>;
   flashcards?: FacultyFlashcard[];
+  questions?: FacultyQuestion[];
 };
 
 export type FacultyFlashcard = {
@@ -40,6 +41,19 @@ export type FacultyFlashcard = {
   front: string;
   back: string;
   objectiveId?: string;
+  updatedAt: string;
+  updatedBy: string;
+};
+
+export type FacultyQuestion = {
+  id: string;
+  lessonId?: string;
+  moduleExamId?: string;
+  stem: string;
+  choices: { id: string; text: string }[];
+  correctChoiceId: string;
+  explanation: string;
+  sequence: number;
   updatedAt: string;
   updatedBy: string;
 };
@@ -221,6 +235,34 @@ export async function upsertFacultyFlashcard(
 export async function deleteFacultyFlashcard(id: string) {
   const current = await getCurriculumOverrides();
   current.flashcards = (current.flashcards ?? []).filter((c) => c.id !== id);
+  await writeJson(OVERRIDES_FILE, current);
+}
+
+export async function listFacultyQuestions(): Promise<FacultyQuestion[]> {
+  const current = await getCurriculumOverrides();
+  return current.questions ?? [];
+}
+
+export async function upsertFacultyQuestion(
+  question: Omit<FacultyQuestion, "updatedAt"> & { updatedAt?: string },
+) {
+  const current = await getCurriculumOverrides();
+  const questions = current.questions ?? [];
+  const next: FacultyQuestion = {
+    ...question,
+    updatedAt: new Date().toISOString(),
+  };
+  const idx = questions.findIndex((q) => q.id === question.id);
+  if (idx >= 0) questions[idx] = next;
+  else questions.push(next);
+  current.questions = questions;
+  await writeJson(OVERRIDES_FILE, current);
+  return next;
+}
+
+export async function deleteFacultyQuestion(id: string) {
+  const current = await getCurriculumOverrides();
+  current.questions = (current.questions ?? []).filter((q) => q.id !== id);
   await writeJson(OVERRIDES_FILE, current);
 }
 

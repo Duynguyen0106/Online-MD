@@ -90,6 +90,48 @@ export function getFormativeQuestions(lessonId: string) {
   return quizQuestions.filter((q) => q.lessonId === lessonId);
 }
 
+export async function getFormativeQuestionsLive(lessonId: string) {
+  const { listFacultyQuestions } = await import("@/lib/demo/admin-store");
+  const faculty = await listFacultyQuestions();
+  const base = getFormativeQuestions(lessonId);
+  const extra = faculty
+    .filter((q) => q.lessonId === lessonId)
+    .map((q) => ({
+      id: q.id,
+      lessonId: q.lessonId,
+      moduleExamId: q.moduleExamId,
+      stem: q.stem,
+      choices: q.choices,
+      correctChoiceId: q.correctChoiceId,
+      explanation: q.explanation,
+      sequence: q.sequence,
+    }));
+  return [...base, ...extra];
+}
+
+export function getQuestionMapLiveSync() {
+  return getQuestionMap();
+}
+
+export async function getMergedQuestionMap() {
+  const { listFacultyQuestions } = await import("@/lib/demo/admin-store");
+  const faculty = await listFacultyQuestions();
+  const map = getQuestionMap();
+  for (const q of faculty) {
+    map[q.id] = {
+      id: q.id,
+      lessonId: q.lessonId,
+      moduleExamId: q.moduleExamId,
+      stem: q.stem,
+      choices: q.choices,
+      correctChoiceId: q.correctChoiceId,
+      explanation: q.explanation,
+      sequence: q.sequence,
+    };
+  }
+  return map;
+}
+
 export function getObjectives() {
   return objectives;
 }

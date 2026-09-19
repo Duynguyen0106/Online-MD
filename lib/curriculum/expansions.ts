@@ -88,6 +88,28 @@ export const extraObjectives: Objective[] = [
     moduleId: IDS.modSurg,
     lessonIds: ["les-surg-2"],
   },
+  {
+    id: "obj-id-2",
+    code: "OBJ-P1-ID-002",
+    statement: "Choose empiric coverage logic for sepsis source control thinking.",
+    usmleStep: "step1",
+    organSystem: "Multisystem",
+    physicianTask: "Management",
+    contentCategory: "Microbiology",
+    moduleId: IDS.modId,
+    lessonIds: ["les-id-2"],
+  },
+  {
+    id: "obj-peds-2",
+    code: "OBJ-P2-PEDS-002",
+    statement: "Apply age-based vaccine and anticipatory guidance frameworks.",
+    usmleStep: "step2ck",
+    organSystem: "Multisystem",
+    physicianTask: "Management",
+    contentCategory: "Pediatrics",
+    moduleId: IDS.modPeds,
+    lessonIds: ["les-peds-2"],
+  },
 ];
 
 export const extraQuizQuestions: QuizQuestion[] = [
@@ -208,6 +230,41 @@ export const extraQuizQuestions: QuizQuestion[] = [
     correctChoiceId: "qq-surg-2-c0",
     explanation:
       "Sudden severe pain with peritonitis is a surgical emergency differential led by perforation.",
+  },
+  {
+    id: "qq-id-2",
+    lessonId: "les-id-2",
+    sequence: 1,
+    objectiveId: "obj-id-2",
+    stem: "In suspected bacterial sepsis, the earliest management priority after ABCs is:",
+    choices: [
+      { id: "qq-id-2-c0", text: "Obtain cultures promptly and start timely empiric antibiotics" },
+      { id: "qq-id-2-c1", text: "Wait 24h for culture finalization before any antibiotics" },
+      { id: "qq-id-2-c2", text: "Start antifungals for all adults first-line" },
+      { id: "qq-id-2-c3", text: "Avoid fluids in hypotensive septic patients" },
+    ],
+    correctChoiceId: "qq-id-2-c0",
+    explanation:
+      "Sepsis care prioritizes rapid cultures (when they do not delay therapy) and early empiric antimicrobials with resuscitation.",
+  },
+  {
+    id: "qq-peds-2",
+    lessonId: "les-peds-2",
+    sequence: 1,
+    objectiveId: "obj-peds-2",
+    stem: "A well 2-month-old at a routine visit should receive counseling that emphasizes:",
+    choices: [
+      {
+        id: "qq-peds-2-c0",
+        text: "Age-appropriate immunizations and anticipatory safety guidance",
+      },
+      { id: "qq-peds-2-c1", text: "Skipping vaccines if the child looks well" },
+      { id: "qq-peds-2-c2", text: "Adult tetanus schedule only" },
+      { id: "qq-peds-2-c3", text: "No car seat until age 2" },
+    ],
+    correctChoiceId: "qq-peds-2-c0",
+    explanation:
+      "Well-child visits center prevention: vaccines on schedule plus age-specific safety counseling.",
   },
 ];
 
@@ -697,6 +754,74 @@ Resuscitate while arranging definitive imaging/OR — do not serial-exam an unst
           ],
         });
         if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-surg-2"];
+      }
+
+      if (mod.id === IDS.modId) {
+        mod.lessons.push({
+          id: "les-id-2",
+          moduleId: IDS.modId,
+          title: "Sepsis Recognition & Empiric Logic",
+          slug: "id-sepsis",
+          sequence: 2,
+          estimatedMinutes: 30,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-id-2"],
+          concepts: [
+            {
+              id: "con-id-2a",
+              lessonId: "les-id-2",
+              title: "Source, severity, spectrum",
+              sequence: 1,
+              summary: "Resuscitate, culture, cover likely pathogens, control source.",
+              blocks: [
+                reading(
+                  "blk-id-2a-r",
+                  "con-id-2a",
+                  "Sepsis bedside framework",
+                  1,
+                  `Think in parallel: ABCs/perfusion → cultures without delaying drugs → empiric antibiotics matched to suspected source and local resistance → source control.  
+Narrow therapy when microbiology returns. Educational goal is reasoning, not memorizing one hospital antibiogram.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-id-2"];
+      }
+
+      if (mod.id === IDS.modPeds) {
+        mod.lessons.push({
+          id: "les-peds-2",
+          moduleId: IDS.modPeds,
+          title: "Well-Child Prevention Visit",
+          slug: "peds-prevention",
+          sequence: 2,
+          estimatedMinutes: 25,
+          status: "published",
+          quizPassThreshold: 0.8,
+          quizQuestionIds: ["qq-peds-2"],
+          concepts: [
+            {
+              id: "con-peds-2a",
+              lessonId: "les-peds-2",
+              title: "Vaccines and anticipatory guidance",
+              sequence: 1,
+              summary: "Prevention is the core of outpatient pediatrics clerkship thinking.",
+              blocks: [
+                reading(
+                  "blk-peds-2a-r",
+                  "con-peds-2a",
+                  "Prevention visit map",
+                  1,
+                  `Pair growth/development surveillance with immunization review and age-specific safety (sleep, car seats, choking, screens).  
+Document parental concerns and follow national schedule frameworks rather than inventing catch-up plans from memory under pressure.`,
+                ),
+              ],
+            },
+          ],
+        });
+        if (mod.exam) mod.exam.questionIds = [...mod.exam.questionIds, "qq-peds-2"];
       }
     }
   }
