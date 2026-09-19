@@ -20,4 +20,17 @@ Top US MD schools increasingly use **integrated organ-system preclerkship** bloc
 
 - No copyrighted question banks or school LMS text.
 - Objectives tagged with USMLE step, organ system, physician task, content category.
-- Expand depth by editing [`lib/curriculum/seed.ts`](../lib/curriculum/seed.ts); production path syncs the same graph into Supabase tables.
+- Base graph: [`lib/curriculum/seed.ts`](../lib/curriculum/seed.ts). Layered expansions: [`lib/curriculum/expansions.ts`](../lib/curriculum/expansions.ts) + [`lib/curriculum/expansions-depth.ts`](../lib/curriculum/expansions-depth.ts).
+- Production path syncs the same graph into Supabase tables.
+
+## Depth coverage (expansions)
+
+| Domain | Example lessons |
+| --- | --- |
+| Shock & arrhythmias | `les-cv-4`, `les-cv-5` |
+| PE & ARDS | `les-pulm-3`, `les-pulm-4` |
+| Portal HTN & UGIB | `les-gi-3`, `les-gi-4` |
+| Inflammation & immunity | `les-cell-3`, `les-cell-4` |
+| Hyponatremia / thyroid crises | `les-renal-4`, `les-endo-3` |
+| Syncope / status | `les-im-3`, `les-neuro-4` |
+| Clerkship expansions | DKA/HHS, ACS, sepsis, acute abdomen, preeclampsia, septic joint, FM screening, etc. |

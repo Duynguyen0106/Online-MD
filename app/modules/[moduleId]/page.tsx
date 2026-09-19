@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shared/app-shell";
 import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getLessonBlocks, getModule } from "@/lib/curriculum/accessors";
+import {
+  getClinicalCases,
+  getLessonBlocks,
+  getModule,
+} from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
 import {
   canAccessModuleQbank,
@@ -23,6 +27,7 @@ export default async function ModulePage({
   const mastery = await evaluateModuleMastery(moduleId, state);
   const qbank = await canAccessModuleQbank(state, moduleId);
   const mp = state.moduleProgress[moduleId];
+  const relatedCases = getClinicalCases(moduleId);
 
   const checklist = await Promise.all(
     mod.lessons.map(async (lesson) => {
@@ -115,6 +120,26 @@ export default async function ModulePage({
           </div>
         ))}
       </div>
+
+      {relatedCases.length > 0 ? (
+        <section className="mt-8">
+          <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl">
+            Related clinical cases
+          </h2>
+          <ul className="space-y-2 text-sm">
+            {relatedCases.map((c) => (
+              <li key={c.id}>
+                <Link
+                  className="text-[var(--brand-strong)] underline"
+                  href={`/cases/${c.id}`}
+                >
+                  {c.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       <div className="mt-8 flex flex-wrap gap-3">
         <Button asChild>

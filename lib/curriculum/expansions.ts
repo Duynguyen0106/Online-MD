@@ -7,6 +7,22 @@ import type {
   QuizQuestion,
 } from "@/lib/types/domain";
 import { IDS } from "@/lib/curriculum/seed";
+import {
+  applyDepthExpansions,
+  depthClinicalCases,
+  depthFlashcards,
+  depthObjectives,
+  depthQbankQuestions,
+  depthQuizQuestions,
+} from "@/lib/curriculum/expansions-depth";
+
+export {
+  depthClinicalCases,
+  depthFlashcards,
+  depthObjectives,
+  depthQbankQuestions,
+  depthQuizQuestions,
+};
 
 /** Additional original educational content layered onto the base seed. */
 export const extraObjectives: Objective[] = [
@@ -541,6 +557,7 @@ function vignette(
 
 /** Mutates a cloned program by appending new lessons to existing modules. */
 export function applyCurriculumExpansions(program: Program): Program {
+  applyDepthExpansions(program);
   for (const phase of program.phases) {
     for (const mod of phase.modules) {
       if (mod.id === IDS.modEndo) {

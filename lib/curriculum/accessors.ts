@@ -7,6 +7,11 @@ import {
   quizQuestions as baseQuiz,
 } from "@/lib/curriculum/seed";
 import {
+  depthClinicalCases,
+  depthFlashcards,
+  depthObjectives,
+  depthQbankQuestions,
+  depthQuizQuestions,
   extraClinicalCases,
   extraFlashcards,
   extraObjectives,
@@ -21,11 +26,23 @@ import type {
   QuizQuestion,
 } from "@/lib/types/domain";
 
-const quizQuestions = [...baseQuiz, ...extraQuizQuestions];
-const objectives = [...baseObjectives, ...extraObjectives];
-const flashcards = [...baseFlashcards, ...extraFlashcards];
-const qbankQuestions = [...baseQbank, ...extraQbankQuestions];
-const clinicalCases = [...baseCases, ...extraClinicalCases];
+const quizQuestions = [
+  ...baseQuiz,
+  ...extraQuizQuestions,
+  ...depthQuizQuestions,
+];
+const objectives = [...baseObjectives, ...extraObjectives, ...depthObjectives];
+const flashcards = [...baseFlashcards, ...extraFlashcards, ...depthFlashcards];
+const qbankQuestions = [
+  ...baseQbank,
+  ...extraQbankQuestions,
+  ...depthQbankQuestions,
+];
+const clinicalCases = [
+  ...baseCases,
+  ...extraClinicalCases,
+  ...depthClinicalCases,
+];
 
 export function getQuestionMap() {
   return Object.fromEntries(quizQuestions.map((q) => [q.id, q]));
