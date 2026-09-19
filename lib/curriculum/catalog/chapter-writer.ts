@@ -1,5 +1,5 @@
 import type { CatalogTopic } from "@/lib/curriculum/catalog/types";
-import { factualEnrichment } from "@/lib/curriculum/catalog/factual-enrichment";
+import { factualEnrichmentForTopic } from "@/lib/curriculum/catalog/factual-enrichment";
 
 function yearLabel(year: 1 | 2 | 3 | 4): string {
   if (year === 1) return "Year 1 — Mechanisms & Foundations";
@@ -26,40 +26,35 @@ function proseForPoint(
   const organ = topic.organSystem;
   const cat = topic.contentCategory;
   const clinical = isClinical(topic.year);
-  const facts = factualEnrichment(`${point} ${title} ${topic.quizExplain} ${topic.cardBack}`);
 
   if (clinical) {
     return `### ${n}. ${point}
 
 In the care of patients with **${title}**, this rule sits inside ${cat} practice focused on the **${organ}** system.
 
-**What it means at the bedside.** ${point} is not optional flavor—it changes what you ask, what you examine, and what you order first. Treat it as a decision node: if the rule is true, one set of actions follows; if it is false, you must revise the working diagnosis.
+**What it means at the bedside.** ${point}. Treat this as a decision node: if the rule is true, one set of actions follows; if it is false, you must revise the working diagnosis. It changes what you ask, what you examine, and what you order first.
 
-**How the pathophysiology supports it.** ${organ} disease produces a limited set of failure modes (ischemia, obstruction, infection, inflammation, bleeding, metabolic derangement, toxidrome, or pump/ventilatory failure). Map this rule onto that failure mode so every vital-sign change and every lab has a place in the story of **${title}**.
+**Pathophysiology link.** Map the rule onto a ${organ} failure mode (ischemia, obstruction, infection, inflammation, bleeding, metabolic derangement, toxidrome, or pump/ventilatory failure) so vitals and labs have a place in the story of **${title}**.
 
-${facts ? `${facts}\n` : ""}**What you do next.** State the immediate action this rule implies (stabilize, image, anticoagulate, operate, give antidote, start antibiotics, escalate care). Then name the finding that would make you stop and switch pathways. Delaying that branch is a common source of harm in ${cat.toLowerCase()}.
+**What you do next.** State the immediate action this rule implies, then the finding that would make you switch pathways. Delaying that branch is a common source of harm in ${cat.toLowerCase()}.
 
-**Look-alikes.** Ask which neighboring syndrome shares surface features with **${title}** but would be worsened by the same action. Keeping that contrast explicit is how clerkship chapters prevent cognitive lock-in.
+**Look-alikes.** Name a neighboring syndrome that shares surface features with **${title}** but would be worsened by the same action.
 
-**Teaching emphasis for this lesson.** ${topic.quizExplain}
+**Teaching emphasis.** ${topic.quizExplain}
 `;
   }
 
   return `### ${n}. ${point}
 
-This control point is central to **${title}** within ${cat} (${organ}).
+**Place in the pathway.** Within **${title}** (${cat}, ${organ}), locate this node precisely: enzyme, transporter, receptor, channel, structural protein, cell type, or anatomic relation. Name substrates, ligands, compartments, or neighbors so the idea is concrete.
 
-**Definition and place in the pathway.** ${point} Identify where this molecule, cell, structure, or signal sits: upstream sensor, rate-limiting enzyme, structural scaffold, ion channel, receptor, transcription node, or effector limb. Name its substrates, ligands, anatomic neighbors, or second messengers so the pathway is concrete rather than a label.
+**Regulation.** State what increases and decreases activity—substrate supply, allosteric effectors, hormones, autonomic tone, cytokines, drugs, pH/oxygen, or expression. Write the “on” and “off” conditions.
 
-**Regulation.** Ask what increases and what decreases its activity—substrate supply, allosteric effectors, hormones, autonomic tone, inflammatory cytokines, drugs, pH/oxygen tension, or expression level. Write the “on” and “off” conditions explicitly; textbook chapters earn their keep by making regulation visible.
+**Failure → phenotype.** If this node is absent, blocked, constitutively active, or mistargeted, what bedside or laboratory finding must appear in **${organ}** physiology?
 
-${facts ? `${facts}\n` : ""}**Failure modes and phenotype.** If this node is absent, blocked, constitutively active, mistargeted, or structurally disrupted, what bedside or laboratory finding must appear? Tie the phenotype back to **${organ}** physiology so the mechanism predicts disease rather than floating as trivia.
+**Bridge.** Give one disease/toxin/drug association and one measurement that would support your explanation.
 
-**Clinical and pharmacologic bridges.** Name at least one disease association, toxin, or drug class that acts at this node, and one measurement (lab, imaging, vital sign, or provocative test) that would support your explanation. Prefer causal links over memorized name lists.
-
-**Contrast.** State the most important look-alike pathway a learner might confuse with this one, and the single discriminator that separates them.
-
-**Anchor.** ${topic.quizExplain}
+**Contrast.** Name the most important look-alike and the discriminator that separates them.
 `;
 }
 
@@ -95,7 +90,7 @@ ${
 
 ## How the chapter is organized
 
-Sections II–III are the didactic core (read carefully). Section IV consolidates pitfalls and a self-check. The final vignette is a case/board box for teach-back before the formative quiz (≥80% to pass).
+Section II is the didactic core with detailed mechanism content. Section III bridges to patients. Section IV consolidates pitfalls. The vignette is a teach-back box before the formative quiz (≥80% to pass).
 
 > Original Online MD teaching aligned to USMLE Content Outline domains. Verify doses and guidelines with primary sources in clinical care.
 `;
@@ -103,6 +98,7 @@ Sections II–III are the didactic core (read carefully). Section IV consolidate
 
 export function buildChapterCore(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
+  const bank = factualEnrichmentForTopic(topic);
   const sections = topic.points
     .map((p, i) => proseForPoint(p, topic, i))
     .join("\n");
@@ -112,25 +108,27 @@ export function buildChapterCore(topic: CatalogTopic): string {
 
 ### Opening physiologic frame
 
-Patients do not arrive labeled **${topic.title}**. They arrive with symptoms, vital-sign trajectories, and risk factors. Begin by naming the dominant physiologic problem (for example ischemia, infection, obstruction, bleeding, ventilatory failure, or metabolic crisis) inside the **${topic.organSystem}** domain of ${topic.contentCategory}. Acuity decides whether you stabilize in parallel with diagnosis or can gather data first.
+Patients do not arrive labeled **${topic.title}**. They arrive with symptoms, vital-sign trajectories, and risk factors. Begin by naming the dominant physiologic problem inside the **${topic.organSystem}** domain of ${topic.contentCategory}. Acuity decides whether you stabilize in parallel with diagnosis or can gather data first.
 
-### Decision spine used throughout this chapter
+### High-yield reference detail
+
+${bank || `Use the chapter sections below to rebuild the full pathway for **${topic.title}** from first principles.`}
+
+### Decision spine
 
 1. **Syndrome** — What is failing?  
-2. **Time** — What must happen in minutes versus hours?  
+2. **Time** — Minutes versus hours?  
 3. **Discriminating data** — Which tests change the branch point?  
-4. **Initial therapy** — What treatment starts before perfect certainty when delay harms?  
-5. **Reassessment** — What finding tells you the pathway is working or wrong?
+4. **Initial therapy** — What starts before perfect certainty when delay harms?  
+5. **Reassessment** — What finding says the pathway is working or wrong?
 
 ### Chapter sections
 
 ${sections}
 
-### Integrating the quiz teaching point
+### Integrating the teaching point
 
 ${topic.quizExplain}
-
-Keep that sentence visible while you read the sections above; a clerkship chapter is successful when the “answer” is the natural end of the physiologic story, not a disconnected fact.
 `;
   }
 
@@ -138,17 +136,19 @@ Keep that sentence visible while you read the sections above; a clerkship chapte
 
 ### Scientific frame
 
-Start with a single narrative arc: a regulated process in **${topic.organSystem}** ${topic.contentCategory.toLowerCase()} maintains homeostasis; disease appears when the process is deficient, excessive, mistimed, or mislocalized. **${topic.title}** is the chapter-length development of that arc. Each heading below is a major control point—read it as a mini-section with definition, regulation, failure, and clinical bridge.
+A regulated process in **${topic.organSystem}** ${topic.contentCategory.toLowerCase()} maintains homeostasis; disease appears when the process is deficient, excessive, mistimed, or mislocalized. **${topic.title}** develops that arc in chapter form. Each heading below is a major control point.
+
+### High-yield reference detail
+
+${bank || `Rebuild **${topic.title}** from the control-point sections below, tying each node to regulation and phenotype.`}
 
 ### Chapter sections
 
 ${sections}
 
-### Synthesis line for this mechanism
+### Synthesis line
 
 ${topic.quizExplain}
-
-If you can derive that statement from the sections above without looking back, you are reading at chapter depth rather than skimming a summary list.
 `;
 }
 

@@ -36,7 +36,7 @@ const SNIPPETS: { test: RegExp; prose: string }[] = [
     prose: `**ACS detail.** Obtain ECG within minutes of arrival. STEMI pathways prioritize emergent reperfusion (PCI preferred when timely; fibrinolysis when PCI cannot be delivered in time and no contraindications). NSTE-ACS uses risk stratification, antiplatelet/anticoagulant therapy, and selective invasive timing. Dual antiplatelet therapy, anticoagulation, and caution with nitrates in right-ventricular infarct or PDE-5 inhibitor use are high-yield safety points.`,
   },
   {
-    test: /sepsis|lactate|vasopressor|norepinephrine|source control/i,
+    test: /\bsepsis\b|vasopressor|norepinephrine|source control|qsofa|septic shock/i,
     prose: `**Sepsis detail.** Early recognition pairs suspected infection with organ dysfunction. Cultures precede antibiotics when they do not delay therapy. Empiric coverage should match likely source and local resistance; fluids and norepinephrine are first-line supports in septic shock after/with volume assessment; source control is not optional when an abscess, obstruction, or necrotic focus exists.`,
   },
   {
@@ -109,4 +109,16 @@ export function factualEnrichment(text: string): string {
     }
   }
   return hits.join("\n\n");
+}
+
+/** Collect unique enrichments for an entire topic (title + all points). */
+export function factualEnrichmentForTopic(topic: {
+  title: string;
+  points: string[];
+  quizExplain: string;
+  cardBack: string;
+}): string {
+  return factualEnrichment(
+    [topic.title, topic.quizExplain, topic.cardBack, ...topic.points].join(" \n "),
+  );
 }
