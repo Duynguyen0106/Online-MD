@@ -20,18 +20,11 @@ Top US MD schools increasingly use **integrated organ-system preclerkship** bloc
 
 - No copyrighted question banks or school LMS text.
 - Objectives tagged with USMLE step, organ system, physician task, content category.
-- Base graph: [`lib/curriculum/seed.ts`](../lib/curriculum/seed.ts). Layered expansions: [`expansions.ts`](../lib/curriculum/expansions.ts), [`expansions-depth.ts`](../lib/curriculum/expansions-depth.ts), [`expansions-wave3.ts`](../lib/curriculum/expansions-wave3.ts), [`expansions-wave4.ts`](../lib/curriculum/expansions-wave4.ts).
+- Layered expansions: `expansions.ts`, `expansions-depth.ts`, `expansions-wave3.ts` … `expansions-wave7.ts`.
+- Faculty AI domain map: [`lib/ai/knowledge-domains.ts`](../lib/ai/knowledge-domains.ts) (Guyton/Robbins/Katzung/Harrison-class conceptual depth — not copyrighted prose).
 - Production path syncs the same graph into Supabase tables.
 
 ## Depth coverage (expansions)
 
-| Domain | Example lessons |
-| --- | --- |
-| Shock & arrhythmias & valves | `les-cv-4`, `les-cv-5`, `les-cv-6` |
-| PE, ARDS, asthma/COPD | `les-pulm-3`–`5` |
-| Portal HTN, UGIB, pancreatitis | `les-gi-3`–`5` |
-| Inflammation, immunity, neoplasia | `les-cell-3`–`6` |
-| Hyponatremia, hyperkalemia, adrenal | `les-renal-4/5`, `les-endo-3/4` |
-| Syncope, status, meningitis | `les-im-3`, `les-neuro-4/5` |
-| Heme / ID / Psych / Peds / OB / Surg / FM / MSK / AKI / CAP / trauma / T2DM | wave-3 + wave-4 clerkship lessons |
-| First-wave clerkship expansions | DKA/HHS, ACS, sepsis, acute abdomen, preeclampsia, septic joint, FM screening |
+Current build targets **100+ original lessons** with ≥6 per module. High-yield additions include Parkinson/MG, RA/SLE, TB/endocarditis, shoulder dystocia, previa/abruption, nephritic/nephrotic, diuretics, Mendelian genetics, ADME, tamponade, cirrhosis decompensation, SS vs NMS, and pediatric asthma exacerbation, layered on prior waves (shock, PE, IBD, TLS, etc.).
+
