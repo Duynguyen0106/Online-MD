@@ -1,4 +1,5 @@
 import type { CatalogTopic } from "@/lib/curriculum/catalog/types";
+import { factualEnrichment } from "@/lib/curriculum/catalog/factual-enrichment";
 
 function yearLabel(year: 1 | 2 | 3 | 4): string {
   if (year === 1) return "Year 1 — Mechanisms & Foundations";
@@ -11,347 +12,282 @@ function isClinical(year: 1 | 2 | 3 | 4): boolean {
   return year >= 3;
 }
 
-function domainLens(topic: CatalogTopic): string {
-  const c = topic.contentCategory.toLowerCase();
-  if (c.includes("biochem")) {
-    return "Follow carbons, cofactors, compartmentation (cytosol vs mitochondria), and fed/fasting hormonal control. Ask which enzyme is rate-limiting and what allosteric signal flips it.";
-  }
-  if (c.includes("physio") || c.includes("pathophys")) {
-    return "Separate structure, baseline tone/set-point, and acute regulation. Then predict the bedside vital-sign or lab signature of failure.";
-  }
-  if (c.includes("immuno") || c.includes("micro") || c.includes("id")) {
-    return "Name the host defense layer (barrier, innate, adaptive) or pathogen strategy, then the clinical syndrome that follows when that layer fails.";
-  }
-  if (c.includes("pharm")) {
-    return "State receptor/enzyme target, agonist vs antagonist logic, on-target therapeutic effect, and the toxicity that proves pathway engagement.";
-  }
-  if (c.includes("anatomy") || c.includes("embryo")) {
-    return "Localize the structure in three dimensions, name its relationships, and connect malformation or injury to a precise deficit.";
-  }
-  if (
-    c.includes("internal") ||
-    c.includes("surgery") ||
-    c.includes("pediatr") ||
-    c.includes("obstetric") ||
-    c.includes("gynecol") ||
-    c.includes("psychiatr") ||
-    c.includes("family") ||
-    c.includes("advanced")
-  ) {
-    return "Sequence recognition → stabilization → decision-changing data → initial therapy → reassessment. Keep can’t-miss diagnoses on the board.";
-  }
-  return "Keep mechanism and phenotype coupled: every abstract claim should predict a finding you could defend on rounds.";
-}
-
-function expandPoint(point: string, topic: CatalogTopic, index: number): string {
+/**
+ * Turn a compact teaching bullet into textbook-style prose.
+ * Content-first: explain the science/clinical rule; keep study tips out of the core chapter.
+ */
+function proseForPoint(
+  point: string,
+  topic: CatalogTopic,
+  index: number,
+): string {
   const n = index + 1;
+  const title = topic.title;
+  const organ = topic.organSystem;
+  const cat = topic.contentCategory;
   const clinical = isClinical(topic.year);
+  const facts = factualEnrichment(`${point} ${title} ${topic.quizExplain} ${topic.cardBack}`);
+
   if (clinical) {
-    return `#### ${n}. ${point}
+    return `### ${n}. ${point}
 
-Treat this as a working rule at the bedside, not a slogan. When **${topic.title}** is in play, ask: *What must I do in the next minutes, what data confirms or refutes the working diagnosis, and what harm follows if I delay?*
+In the care of patients with **${title}**, this rule sits inside ${cat} practice focused on the **${organ}** system.
 
-**How it shows up.** ${point} shapes the history you take, the exam maneuvers you prioritize, and the first labs/imaging you order. Link each finding back to the organ system (**${topic.organSystem}**) so the case does not become a disconnected checklist.
+**What it means at the bedside.** ${point} is not optional flavor—it changes what you ask, what you examine, and what you order first. Treat it as a decision node: if the rule is true, one set of actions follows; if it is false, you must revise the working diagnosis.
 
-**Why it matters clinically.** Missing or mis-ordering this step is a common source of preventable morbidity in ${topic.contentCategory.toLowerCase()} care. Write the next action in one sentence before you leave the room or the chart.
+**How the pathophysiology supports it.** ${organ} disease produces a limited set of failure modes (ischemia, obstruction, infection, inflammation, bleeding, metabolic derangement, toxidrome, or pump/ventilatory failure). Map this rule onto that failure mode so every vital-sign change and every lab has a place in the story of **${title}**.
 
-**Domain lens.** ${domainLens(topic)}
+${facts ? `${facts}\n` : ""}**What you do next.** State the immediate action this rule implies (stabilize, image, anticoagulate, operate, give antidote, start antibiotics, escalate care). Then name the finding that would make you stop and switch pathways. Delaying that branch is a common source of harm in ${cat.toLowerCase()}.
 
-**How to study it.** Close the page and restate the rule, one confirmatory finding, and one look-alike that could fool you. If you cannot, re-read this section before the quiz. Keep the lesson’s teaching emphasis in view: *${topic.quizExplain}*
+**Look-alikes.** Ask which neighboring syndrome shares surface features with **${title}** but would be worsened by the same action. Keeping that contrast explicit is how clerkship chapters prevent cognitive lock-in.
+
+**Teaching emphasis for this lesson.** ${topic.quizExplain}
 `;
   }
 
-  return `#### ${n}. ${point}
+  return `### ${n}. ${point}
 
-Build this idea from first principles before you memorize a list. In **${topic.title}**, the teaching point above is a control node: something that changes rate, direction, structure, or signaling so that a predictable phenotype follows.
+This control point is central to **${title}** within ${cat} (${organ}).
 
-**Physiology / mechanism.** Explain *what* is regulated, *where* it sits in the pathway, and *what increases or decreases* its activity. Use the language of molecules, cells, or circuits in the **${topic.organSystem}** domain of ${topic.contentCategory.toLowerCase()}.
+**Definition and place in the pathway.** ${point} Identify where this molecule, cell, structure, or signal sits: upstream sensor, rate-limiting enzyme, structural scaffold, ion channel, receptor, transcription node, or effector limb. Name its substrates, ligands, anatomic neighbors, or second messengers so the pathway is concrete rather than a label.
 
-**Domain lens.** ${domainLens(topic)}
+**Regulation.** Ask what increases and what decreases its activity—substrate supply, allosteric effectors, hormones, autonomic tone, inflammatory cytokines, drugs, pH/oxygen tension, or expression level. Write the “on” and “off” conditions explicitly; textbook chapters earn their keep by making regulation visible.
 
-**Clinical bridge.** Name at least one bedside or laboratory consequence that must be true if this mechanism is operating. If you cannot name a consequence, you do not yet own the mechanism.
+${facts ? `${facts}\n` : ""}**Failure modes and phenotype.** If this node is absent, blocked, constitutively active, mistargeted, or structurally disrupted, what bedside or laboratory finding must appear? Tie the phenotype back to **${organ}** physiology so the mechanism predicts disease rather than floating as trivia.
 
-**Common misconception.** Students often treat this point as trivia. Instead, predict what happens if the node fails, is blocked pharmacologically, or is constitutively active—then check your prediction against the vignette and quiz. Correct teaching emphasis for this lesson: *${topic.quizExplain}*
+**Clinical and pharmacologic bridges.** Name at least one disease association, toxin, or drug class that acts at this node, and one measurement (lab, imaging, vital sign, or provocative test) that would support your explanation. Prefer causal links over memorized name lists.
+
+**Contrast.** State the most important look-alike pathway a learner might confuse with this one, and the single discriminator that separates them.
+
+**Anchor.** ${topic.quizExplain}
 `;
 }
 
-/** Opening chapter: framing, objectives, map of the lesson. */
 export function buildChapterFraming(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
-  const goals = clinical
-    ? [
-        "Recognize when this problem is present or imminent from history, exam, and early data.",
-        "State the first stabilizing actions and the critical diagnoses not to miss.",
-        "Choose an initial diagnostic and management pathway that is safe, sequenced, and explainable.",
-        "Anticipate complications, disposition needs, and common cognitive traps.",
-      ]
-    : [
-        "Explain the core mechanism aloud without notes, including regulators and failure modes.",
-        "Predict the clinical or laboratory findings that must follow if the mechanism is true.",
-        "Contrast this pathway with the most important look-alike mechanisms.",
-        "Connect the idea to neighboring lessons in this organ-system or foundational block.",
-      ];
+  const pointList = topic.points.map((p, i) => `${i + 1}. ${p}`).join("\n");
 
   return `# ${topic.title}
 
 **${yearLabel(topic.year)}** · ${topic.contentCategory} · ${topic.organSystem}${
-    topic.physicianTask ? ` · Task focus: ${topic.physicianTask}` : ""
+    topic.physicianTask ? ` · ${topic.physicianTask}` : ""
   }
 
-## Why this chapter exists
+## Chapter overview
 
 ${
   clinical
-    ? `This chapter is written like a clerkship teaching conference, not a bullet sheet. **${topic.title}** is a pattern you will meet on wards, in clinic, and on call. The goal is that you can walk a team through *recognition → stabilization → diagnosis → initial management → pitfalls* with the same clarity you would expect from a well-edited textbook chapter.`
-    : `This chapter is written like a preclerkship textbook section, not a flashcard stack. **${topic.title}** sits inside ${topic.contentCategory.toLowerCase()} and the **${topic.organSystem}** map. Read it to understand *mechanism → phenotype → clinical consequence*, then prove that understanding on the vignette and formative quiz.`
+    ? `This chapter develops **${topic.title}** the way a strong clerkship text would: syndrome recognition, physiologic rationale, sequenced evaluation, initial management, and the mistakes that cause harm. It belongs to **${topic.contentCategory}** with primary focus on the **${topic.organSystem}** system.`
+    : `This chapter develops **${topic.title}** the way a strong preclerkship text would: define the process, locate its control points, explain regulation, predict the phenotype of failure, and bridge to clinical findings. It belongs to **${topic.contentCategory}** within the **${topic.organSystem}** map.`
 }
+
+## What this chapter covers
+
+${pointList}
 
 ## Learning objectives
 
-${goals.map((g, i) => `${i + 1}. ${g}`).join("\n")}
+${
+  clinical
+    ? `1. Recognize presentations of **${topic.title}** and triage acuity.\n2. Explain the physiologic basis for the first diagnostic and therapeutic moves.\n3. Sequence initial management and name can’t-miss alternatives.\n4. Anticipate complications and reassessment checkpoints.`
+    : `1. Explain the core mechanism of **${topic.title}** without notes.\n2. Identify regulators and failure modes at each major control point.\n3. Predict clinical or laboratory consequences of pathway disruption.\n4. Discriminate this mechanism from its most important look-alike.`
+}
 
-## How to read this lesson
+## How the chapter is organized
 
-1. Read **Foundations** once without taking notes—get the story.
-2. Re-read **Core mechanisms / Clinical pathway** and sketch the flow from memory.
-3. Use **Clinical correlation** to connect mechanism to a patient.
-4. Finish with **Synthesis & pitfalls**, then teach the vignette answer out loud for two minutes.
-5. Only then attempt the formative quiz (pass threshold ≥80%).
+Sections II–III are the didactic core (read carefully). Section IV consolidates pitfalls and a self-check. The final vignette is a case/board box for teach-back before the formative quiz (≥80% to pass).
 
-> **Integrity.** Original Online MD teaching aligned to USMLE Content Outline domains. Not copied from proprietary question banks or school LMS text. Verify doses, thresholds, and guidelines with primary sources before clinical use.
+> Original Online MD teaching aligned to USMLE Content Outline domains. Verify doses and guidelines with primary sources in clinical care.
 `;
 }
 
-/** Main didactic chapter expanded from teaching points. */
 export function buildChapterCore(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
-  const pointSections = topic.points
-    .map((p, i) => expandPoint(p, topic, i))
+  const sections = topic.points
+    .map((p, i) => proseForPoint(p, topic, i))
     .join("\n");
 
   if (clinical) {
-    return `## Clinical pathway — ${topic.title}
+    return `## ${topic.title} — clinical pathway
 
-### The clinical story
+### Opening physiologic frame
 
-On a busy service, **${topic.title}** usually announces itself as a cluster of symptoms, vital-sign changes, and risk factors rather than a single lab value. Begin with the patient’s stability: airway, breathing, circulation, disability, and exposure when the presentation is acute. Parallel to resuscitation, build a short differential that always includes the can’t-miss entities for **${topic.organSystem}** disease in ${topic.contentCategory}.
+Patients do not arrive labeled **${topic.title}**. They arrive with symptoms, vital-sign trajectories, and risk factors. Begin by naming the dominant physiologic problem (for example ischemia, infection, obstruction, bleeding, ventilatory failure, or metabolic crisis) inside the **${topic.organSystem}** domain of ${topic.contentCategory}. Acuity decides whether you stabilize in parallel with diagnosis or can gather data first.
 
-### Orientation to the domain
+### Decision spine used throughout this chapter
 
-This lesson lives in **${topic.contentCategory}** with an organ-system focus on **${topic.organSystem}**. Keep that frame visible: every order and every reassessment should either support the working diagnosis, exclude a dangerous alternative, or buy time safely while you gather data.
+1. **Syndrome** — What is failing?  
+2. **Time** — What must happen in minutes versus hours?  
+3. **Discriminating data** — Which tests change the branch point?  
+4. **Initial therapy** — What treatment starts before perfect certainty when delay harms?  
+5. **Reassessment** — What finding tells you the pathway is working or wrong?
 
-### Stepwise teaching points
+### Chapter sections
 
-${pointSections}
+${sections}
 
-### Diagnostic reasoning spine
+### Integrating the quiz teaching point
 
-Use a repeatable spine so the chapter becomes transferable to other cases:
+${topic.quizExplain}
 
-1. **Syndrome first** — name the physiologic problem (shock, ischemia, obstruction, infection, metabolic failure, etc.).
-2. **Time sensitivity** — decide what must happen in minutes vs hours.
-3. **High-yield data** — choose tests that change management, not tests that decorate the chart.
-4. **Initial therapy** — start disease-directed care when delay harms, while continuing to refine the diagnosis.
-5. **Reassess** — after each intervention, ask whether perfusion, pain, gas exchange, mentation, or labs moved in the expected direction.
-
-### Communication script (teach-back)
-
-Practice saying: *“I think this is ${topic.title.toLowerCase()} because of X and Y. The danger if I’m wrong is Z. My next three actions are…”* If that sentence is fuzzy, the chapter is not finished for you yet.
+Keep that sentence visible while you read the sections above; a clerkship chapter is successful when the “answer” is the natural end of the physiologic story, not a disconnected fact.
 `;
   }
 
-  return `## Core mechanisms — ${topic.title}
+  return `## ${topic.title} — core mechanisms
 
-### The scientific story
+### Scientific frame
 
-Before lists and mnemonics, hold a single narrative: in **${topic.title}**, a regulated process in the **${topic.organSystem}** domain is set up so that energy, structure, signaling, or host defense can meet physiologic demand. Disease appears when the process is absent, excessive, mistimed, or mislocalized. ${topic.contentCategory} gives you the vocabulary; clinical medicine asks you to predict the phenotype.
+Start with a single narrative arc: a regulated process in **${topic.organSystem}** ${topic.contentCategory.toLowerCase()} maintains homeostasis; disease appears when the process is deficient, excessive, mistimed, or mislocalized. **${topic.title}** is the chapter-length development of that arc. Each heading below is a major control point—read it as a mini-section with definition, regulation, failure, and clinical bridge.
 
-### Map of the chapter’s control points
+### Chapter sections
 
-The teaching points below are the “chapter headings inside the chapter.” Master each as a mini-section: definition → regulation → failure mode → clinical consequence.
+${sections}
 
-${pointSections}
+### Synthesis line for this mechanism
 
-### From molecule to bedside
+${topic.quizExplain}
 
-For every control point, complete this four-line note in your own words:
-
-1. **Normal job** of the molecule/cell/circuit  
-2. **What increases / decreases** its activity  
-3. **Phenotype** when it fails or is overactive  
-4. **One test or finding** that would support your explanation  
-
-If you can fill those four lines without looking back, you are reading at textbook depth rather than skimming summaries.
-
-### Pharmacologic and pathologic modifiers
-
-Ask how drugs, toxins, genetic variants, inflammation, ischemia, or nutritional deficiency would shift the same pathway. This habit converts ${topic.contentCategory.toLowerCase()} facts into transferable Step 1 reasoning and prepares you for organ-system blocks in Year 2.
+If you can derive that statement from the sections above without looking back, you are reading at chapter depth rather than skimming a summary list.
 `;
 }
 
-/** Clinical correlation / applied chapter. */
 export function buildChapterClinical(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
-  const anchors = topic.points
-    .slice(0, 4)
-    .map((p, i) => `| ${i + 1} | ${p} | Restate the expected finding or next action |`)
+  const rows = topic.points
+    .map((p, i) => `| ${i + 1} | ${p} | ${clinical ? "Next action / confirming finding" : "Expected phenotype / test"} |`)
     .join("\n");
 
   if (clinical) {
-    return `## Bedside application — putting ${topic.title} to work
+    return `## Applied care — ${topic.title}
 
-### Opening moves
+### Recognition
 
-When the chief concern suggests **${topic.title}**, protect the patient first. Stabilize ABCs as needed, obtain a focused history (onset, severity, associated features, medications, prior episodes), and perform a targeted exam of the **${topic.organSystem}** system while you decide what data you need immediately.
+Build the history around onset, severity, associated features, medications, prior episodes, and red-flag symptoms for **${topic.organSystem}** disease. The exam should be hypothesis-driven: every maneuver should support or weaken **${topic.title}** or a can’t-miss alternative.
 
-### Working differential
+### Differential that is forced to stay honest
 
-Keep a short differential that is *forced* to include:
+Always carry three lines on the board:
 
-- The most likely explanation given prevalence and the story  
-- The most dangerous explanation you cannot afford to miss  
-- One common mimic that shares surface features with **${topic.title}**
+1. Most likely explanation given base rate and the story  
+2. Most dangerous explanation you cannot miss  
+3. Common mimic that shares early features with **${topic.title}**
 
-### Data that changes management
+### Data and therapy
 
-Order tests that branch the pathway. For each result, know in advance: *If positive, I do A; if negative, I do B.* Avoid shotgun panels that delay care without changing decisions in ${topic.contentCategory.toLowerCase()}.
+Choose tests that change management. For each major result, know the branch: *if A, do X; if B, do Y*. Start disease-directed therapy when waiting for certainty causes harm, then reassess on a short clock. Exact drug doses and institutional pathways belong to current guidelines—this chapter teaches the physiologic order of operations.
 
-### Initial management principles
+### Working table
 
-Management in this chapter is educational scaffolding, not a substitute for institutional protocols or current guidelines:
-
-1. Address life threats and reversible precipitants early.  
-2. Start disease-directed therapy when waiting for perfect certainty would cause harm.  
-3. Monitor the response on a short clock (minutes to hours, depending on acuity).  
-4. Escalate early if the trajectory is wrong (ICU, surgery, specialty procedural care).  
-5. Document the rationale so the next clinician can continue the same story.
-
-### Teaching table — anchors from this lesson
-
-| # | Teaching anchor | Your teach-back |
+| # | Chapter rule | Fill in while studying |
 | --- | --- | --- |
-${anchors}
+${rows}
 
-### Disposition and follow-up thinking
+### Disposition thinking
 
-Before leaving the case, state disposition needs (floor vs higher care), pending results, precautions, and what would make you bring the patient back to the bedside immediately. Clerkship excellence is often *reassessment literacy*, not only the first order set.
+Before you leave the case, state level of care, pending results, precautions, and what would force immediate return to the bedside. Reassessment literacy is part of the chapter, not an afterthought.
+
+**Remember:** ${topic.quizExplain}
 `;
   }
 
-  return `## Clinical correlation — when ${topic.title} meets a patient
+  return `## Clinical correlation — ${topic.title}
 
-### Bridging basic science to the ward
+### From mechanism to a person
 
-A mechanism is mastered only when it predicts a person. For **${topic.title}**, translate each control point into something a clinician could observe: a symptom, exam finding, imaging pattern, lab disturbance, or pharmacologic effect within **${topic.organSystem}** care.
+A preclerkship chapter is unfinished until the mechanism predicts a patient. For each control point in **${topic.title}**, name a symptom, exam finding, imaging pattern, lab disturbance, or drug effect inside **${topic.organSystem}** care.
 
-### Illustrative clinical threads
+### Clinical threads to keep active while you read
 
-Use these threads while you study (they are teaching frames, not complete cases):
+1. **Loss of function** — What syndrome appears when the pathway cannot meet demand?  
+2. **Gain of function / constitutive activity** — What phenotype appears when the brake is lost?  
+3. **Toxic or pharmacologic hit** — Which drugs or toxins act here, and what clue follows?  
+4. **Developmental or genetic variant** — How might a congenital defect present across the lifespan?
 
-1. **Failure of regulation** — What syndrome appears when the pathway cannot meet demand?  
-2. **Toxic or pharmacologic interruption** — What drug or toxin targets this node, and what bedside clue follows?  
-3. **Genetic or developmental variant** — How would a congenital defect in this pathway present across the lifespan?  
-4. **Inflammation, ischemia, or neoplasia** — How do tissue stress states remodel the same mechanism?
+### Correlation table
 
-### High-yield correlation table
-
-| # | Mechanism anchor | Clinical prediction to practice |
+| # | Mechanism anchor | Clinical prediction |
 | --- | --- | --- |
-${anchors}
+${rows}
 
-### Laboratory and imaging logic
+### Labs and imaging as experiments
 
-Do not memorize isolated lab names. Ask which result would rise, fall, or redistribute if your mechanism story is correct—and which result would force you to revise the story. That habit is the difference between summary notes and chapter-level understanding in ${topic.contentCategory.toLowerCase()}.
+Do not memorize isolated test names. Ask which result must rise, fall, or redistribute if your mechanism story is correct—and which result would force revision. Therapy, when relevant, is the same experiment in reverse: target → expected physiologic change → clinical endpoint → on-target toxicity.
 
-### Therapy as a physiologic experiment
-
-When a treatment exists for this pathway, treat the drug as an experiment: receptor/enzyme target → expected physiologic change → clinical endpoint → toxicity that proves the same pathway was engaged. You will reuse that pattern across organ-system blocks.
+**Chapter anchor:** ${topic.quizExplain}
 `;
 }
 
-/** Synthesis, pitfalls, self-check. */
 export function buildChapterSynthesis(topic: CatalogTopic): string {
-  const clinical = isClinical(topic.year);
   const checklist = topic.points
-    .map((p, i) => `- [ ] ${i + 1}. I can explain: *${p}*`)
+    .map((p, i) => `- [ ] ${i + 1}. I can teach: *${p}*`)
     .join("\n");
 
   return `## Synthesis, pitfalls, and self-check
 
-### One-paragraph chapter summary
+### Chapter in one paragraph
 
-**${topic.title}** (${yearLabel(topic.year)}; ${topic.contentCategory}; ${topic.organSystem}) asks you to master a coherent story: ${
-    clinical
-      ? "recognize the syndrome, stabilize the patient, gather decision-changing data, start sequenced therapy, and avoid the traps that turn a recoverable case into a catastrophe."
-      : "name the regulated process, locate its control points, predict the phenotype of failure, and carry that prediction to the bedside."
-  } The teaching anchors of this chapter are: ${topic.points.join("; ")}.
+**${topic.title}** (${yearLabel(topic.year)}; ${topic.contentCategory}; ${topic.organSystem}) is mastered when you can tell a continuous story through these anchors: ${topic.points.join("; ")}. The chapter’s teaching emphasis is: ${topic.quizExplain}
 
-### Dangerous pitfalls
+### Pitfalls this chapter is designed to prevent
 
-1. **Summary-only studying** — recognizing the title without being able to teach the mechanism or pathway.  
-2. **Isolated facts** — memorizing one bullet while ignoring how it links to the next step in the story.  
-3. **Missing the look-alike** — failing to contrast **${topic.title}** with its most important mimic.  
-4. **Skipping reassessment** — ${
-    clinical
-      ? "ordering therapy without a clock for response."
-      : "stating a mechanism without naming a clinical consequence."
+1. Stopping at buzzwords without regulation or phenotype  
+2. Treating each bullet as unrelated trivia instead of one pathway  
+3. Missing the look-alike diagnosis or mechanism  
+4. ${
+    isClinical(topic.year)
+      ? "Starting therapy without a reassessment clock"
+      : "Stating a mechanism without a clinical consequence"
   }  
-5. **Guideline theater** — reciting names of tests or drugs without knowing *why this one, why now*.
+5. Confusing recognition of the title with the ability to teach the chapter aloud  
 
-### Self-check (close the book)
+### Self-check
 
 ${checklist}
-- [ ] I can teach the vignette answer out loud in ≤2 minutes.
-- [ ] I can name one can’t-miss alternative diagnosis or mechanism.
-- [ ] I can state what I would do first if this appeared tonight on call / on an exam stem.
+- [ ] I can teach the vignette in ≤2 minutes without notes.  
+- [ ] I can name one can’t-miss alternative.  
+- [ ] I can state the first action I would take if this appeared tonight.
 
-### Mastery gate for this lesson
+### Ready for quiz
 
-You are ready for the formative quiz when you can reproduce the chapter’s story without scrolling. Pass requires ≥80%. Afterward, add the lesson flashcard to spaced repetition so the chapter does not decay into a vague summary again.
-
-### Quiz preview (think before you click)
-
-${topic.quizStem}
-
-Correct choice teaching point: ${topic.quizExplain}
+Pass threshold ≥80%. Afterward, add the flashcard (**${topic.cardFront}** → ${topic.cardBack}) to spaced repetition so the chapter does not collapse back into a summary.
 `;
 }
 
-/** Expanded vignette written like a textbook case box. */
 export function buildChapterVignette(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
-  const lead = topic.vignette?.trim();
+  const stem =
+    topic.vignette?.trim() ||
+    (clinical
+      ? `You are called about a patient whose presentation centers on **${topic.title}**. Decide what matters in the next minutes.`
+      : `At the board, explain **${topic.title}**: mechanism, one clinical consequence, and one misconception.`);
 
   if (clinical) {
     return `## Case conference — ${topic.title}
 
 ### Stem
 
-${
-      lead && lead.length > 40
-        ? lead
-        : `A clerkship student is called about a patient whose presentation centers on **${topic.title}**. Vitals may be abnormal or trending the wrong way. The nurse asks what to do next.`
-    }
+${stem}
 
-### Your tasks (write before revealing your answer)
+### Work the case
 
-1. **Immediate priorities** — What do you protect or stabilize first?  
-2. **Working diagnosis** — Why does **${topic.title}** fit, and what is the main can’t-miss alternative?  
-3. **Next data** — Which 2–3 tests or findings would most change management?  
-4. **Initial plan** — State the first therapeutic moves in order.  
-5. **Pitfall** — Name one error that commonly worsens this case.
+1. Immediate priorities (ABCs / time-critical actions)  
+2. Working diagnosis and can’t-miss alternative  
+3. Two or three decision-changing data points  
+4. Initial management in order  
+5. One pitfall that commonly worsens care  
 
-### Facilitator notes (after you attempt)
-
-Anchor your discussion to these chapter rules:
+### Chapter rules to use
 
 ${topic.points.map((p) => `- ${p}`).join("\n")}
 
-Expected teaching emphasis: **${topic.quizExplain}**
+### Facilitator emphasis
 
-### Take-home sentence
+${topic.quizExplain}
 
-If you remember only one line from this case box: *${topic.cardFront} → ${topic.cardBack}.*
+### Pocket card
+
+**${topic.cardFront}** — ${topic.cardBack}
 `;
   }
 
@@ -359,20 +295,16 @@ If you remember only one line from this case box: *${topic.cardFront} → ${topi
 
 ### Stem
 
-${
-    lead && lead.length > 40
-      ? lead
-      : `A classmate is asked at the board to explain **${topic.title}**. The facilitator wants mechanism, one clinical consequence, and one misconception—not a list of buzzwords.`
-}
+${stem}
 
-### Your tasks
+### Teach-back checklist
 
-1. Draw or narrate the pathway / structure from memory.  
-2. Mark the key control points:  
+1. Narrate or sketch the pathway/structure.  
+2. Mark each control point:  
 ${topic.points.map((p) => `   - ${p}`).join("\n")}
-3. State one clinical or laboratory consequence that must follow.  
-4. Name a dangerous misconception and correct it.  
-5. Connect this chapter to a neighboring lesson in **${topic.organSystem}** or ${topic.contentCategory.toLowerCase()}.
+3. State one clinical or laboratory consequence.  
+4. Correct one dangerous misconception.  
+5. Link this chapter to a neighboring **${topic.organSystem}** or ${topic.contentCategory.toLowerCase()} lesson.
 
 ### Model emphasis
 
@@ -380,7 +312,6 @@ ${topic.quizExplain}
 
 ### Pocket card
 
-**${topic.cardFront}**  
-${topic.cardBack}
+**${topic.cardFront}** — ${topic.cardBack}
 `;
 }
