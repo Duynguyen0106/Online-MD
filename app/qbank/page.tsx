@@ -11,9 +11,9 @@ import {
 
 export default async function QbankPage() {
   const state = await readStudentState();
-  const moduleGate = canAccessModuleQbank(state, IDS.modCvb);
-  const step1 = canAccessStep1Qbank(state);
-  const step2 = canAccessStep2CkQbank(state);
+  const moduleGate = await canAccessModuleQbank(state, IDS.modCvb);
+  const step1 = await canAccessStep1Qbank(state);
+  const step2 = await canAccessStep2CkQbank(state);
   const questions = getQbankQuestions();
 
   return (

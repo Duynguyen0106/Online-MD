@@ -16,11 +16,11 @@ export default async function ModulePage({
   params: Promise<{ moduleId: string }>;
 }) {
   const { moduleId } = await params;
-  const mod = getModule(moduleId);
+  const mod = await getModule(moduleId);
   if (!mod) notFound();
   const state = await readStudentState();
-  const mastery = evaluateModuleMastery(moduleId, state);
-  const qbank = canAccessModuleQbank(state, moduleId);
+  const mastery = await evaluateModuleMastery(moduleId, state);
+  const qbank = await canAccessModuleQbank(state, moduleId);
   const mp = state.moduleProgress[moduleId];
 
   return (

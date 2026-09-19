@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shared/app-shell";
 import { LessonPlayer } from "@/components/student/lesson-player";
+import { Badge } from "@/components/ui/badge";
 import {
   getLesson,
   getLessonBlocks,
@@ -8,7 +9,6 @@ import {
   getObjectivesForLesson,
 } from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
-import { Badge } from "@/components/ui/badge";
 
 export default async function LessonPage({
   params,
@@ -16,9 +16,9 @@ export default async function LessonPage({
   params: Promise<{ lessonId: string }>;
 }) {
   const { lessonId } = await params;
-  const lesson = getLesson(lessonId);
+  const lesson = await getLesson(lessonId);
   if (!lesson) notFound();
-  const mod = getModuleForLesson(lessonId);
+  const mod = await getModuleForLesson(lessonId);
   const blocks = getLessonBlocks(lesson);
   const objectives = getObjectivesForLesson(lessonId);
   const state = await readStudentState();

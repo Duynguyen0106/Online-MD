@@ -1,9 +1,9 @@
+import { getResolvedProgram } from "@/lib/demo/admin-store";
 import {
   clinicalCases,
   flashcards,
   getQuestionMap,
   objectives,
-  program,
   qbankQuestions,
   quizQuestions,
 } from "@/lib/curriculum/seed";
@@ -11,41 +11,51 @@ import type {
   Lesson,
   Module,
   Phase,
+  Program,
   QuizQuestion,
 } from "@/lib/types/domain";
 
 export { getQuestionMap };
 
-export function getProgram() {
-  return program;
+export async function getProgram(): Promise<Program> {
+  return getResolvedProgram();
 }
 
-export function getPhases(): Phase[] {
+export async function getPhases(): Promise<Phase[]> {
+  const program = await getProgram();
   return program.phases;
 }
 
-export function getAllModules(): Module[] {
-  return program.phases.flatMap((p) => p.modules);
+export async function getAllModules(): Promise<Module[]> {
+  const phases = await getPhases();
+  return phases.flatMap((p) => p.modules);
 }
 
-export function getModule(moduleId: string): Module | undefined {
-  return getAllModules().find((m) => m.id === moduleId);
+export async function getModule(moduleId: string): Promise<Module | undefined> {
+  return (await getAllModules()).find((m) => m.id === moduleId);
 }
 
-export function getPhaseForModule(moduleId: string): Phase | undefined {
-  return program.phases.find((p) => p.modules.some((m) => m.id === moduleId));
+export async function getPhaseForModule(
+  moduleId: string,
+): Promise<Phase | undefined> {
+  const phases = await getPhases();
+  return phases.find((p) => p.modules.some((m) => m.id === moduleId));
 }
 
-export function getAllLessons(): Lesson[] {
-  return getAllModules().flatMap((m) => m.lessons);
+export async function getAllLessons(): Promise<Lesson[]> {
+  return (await getAllModules()).flatMap((m) => m.lessons);
 }
 
-export function getLesson(lessonId: string): Lesson | undefined {
-  return getAllLessons().find((l) => l.id === lessonId);
+export async function getLesson(lessonId: string): Promise<Lesson | undefined> {
+  return (await getAllLessons()).find((l) => l.id === lessonId);
 }
 
-export function getModuleForLesson(lessonId: string): Module | undefined {
-  return getAllModules().find((m) => m.lessons.some((l) => l.id === lessonId));
+export async function getModuleForLesson(
+  lessonId: string,
+): Promise<Module | undefined> {
+  return (await getAllModules()).find((m) =>
+    m.lessons.some((l) => l.id === lessonId),
+  );
 }
 
 export function getLessonBlocks(lesson: Lesson) {
@@ -99,8 +109,11 @@ export function getClinicalCase(caseId: string) {
   return clinicalCases.find((c) => c.id === caseId);
 }
 
-export function getNextLesson(masteredLessonIds: Set<string>): Lesson | null {
-  for (const lesson of getAllLessons()) {
+export function getNextLesson(
+  lessons: Lesson[],
+  masteredLessonIds: Set<string>,
+): Lesson | null {
+  for (const lesson of lessons) {
     if (lesson.status !== "published") continue;
     if (!masteredLessonIds.has(lesson.id)) return lesson;
   }

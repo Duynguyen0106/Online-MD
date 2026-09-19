@@ -1,10 +1,11 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { nanoid } from "nanoid";
 import type { DemoUser, StudentState } from "@/lib/types/domain";
 import { DEMO_USERS } from "@/lib/demo/users";
+import { listUsers } from "@/lib/demo/admin-store";
+import { newId } from "@/lib/demo/ids";
 
-export { DEMO_USERS };
+export { DEMO_USERS, newId };
 
 const DATA_DIR = path.join(process.cwd(), ".data");
 const STATE_FILE = path.join(DATA_DIR, "student-state.json");
@@ -73,9 +74,6 @@ export async function setSessionUserId(userId: string) {
 
 export async function getSessionUser(): Promise<DemoUser> {
   const id = await getSessionUserId();
-  return DEMO_USERS.find((u) => u.id === id) ?? DEMO_USERS[0];
-}
-
-export function newId(prefix: string) {
-  return `${prefix}_${nanoid(10)}`;
+  const users = await listUsers();
+  return users.find((u) => u.id === id) ?? DEMO_USERS[0];
 }

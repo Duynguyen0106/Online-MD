@@ -18,8 +18,8 @@ export default async function AdminAnalyticsPage() {
   }
 
   const state = await readStudentState();
-  const modules = getAllModules();
-  const lessons = getAllLessons();
+  const modules = await getAllModules();
+  const lessons = await getAllLessons();
   const objectives = getObjectives();
   const masteredLessons = Object.values(state.lessonProgress).filter(
     (p) => p.state === "mastered",
@@ -27,11 +27,22 @@ export default async function AdminAnalyticsPage() {
   const masteredModules = Object.values(state.moduleProgress).filter(
     (p) => p.state === "mastered",
   ).length;
-  const step1 = canAccessStep1Qbank(state);
-  const step2 = canAccessStep2CkQbank(state);
+  const step1 = await canAccessStep1Qbank(state);
+  const step2 = await canAccessStep2CkQbank(state);
 
   return (
     <AppShell title="Admin analytics">
+      <div className="mb-4 flex flex-wrap gap-3 text-sm">
+        <a className="text-[var(--brand-strong)] underline" href="/admin/users">
+          Users
+        </a>
+        <a className="text-[var(--brand-strong)] underline" href="/admin/invites">
+          Invites
+        </a>
+        <a className="text-[var(--brand-strong)] underline" href="/admin/unlock-rules">
+          Unlock rules
+        </a>
+      </div>
       <div className="grid gap-4 md:grid-cols-4">
         <Stat label="Modules in catalog" value={String(modules.length)} />
         <Stat label="Lessons" value={String(lessons.length)} />
@@ -64,15 +75,6 @@ export default async function AdminAnalyticsPage() {
             Step 2 CK Qbank: {step2.unlocked ? "unlocked" : step2.reason}
           </p>
         </div>
-      </section>
-
-      <section className="mt-8 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 text-sm text-[var(--muted)]">
-        <h2 className="mb-2 font-medium text-[var(--foreground)]">Production notes</h2>
-        <ul className="list-disc space-y-1 pl-5">
-          <li>Wire these aggregates to Supabase views with RLS admin policies.</li>
-          <li>Invite-only faculty/admin provisioning via hashed invite tokens.</li>
-          <li>Qbank attempts remain student-isolated under RLS.</li>
-        </ul>
       </section>
     </AppShell>
   );

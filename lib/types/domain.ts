@@ -15,6 +15,37 @@ export type UsmleStep = "step1" | "step2ck";
 export type AttemptStatus = "in_progress" | "submitted" | "abandoned";
 export type PublishStatus = "draft" | "published" | "archived";
 export type PhaseKind = "foundations" | "clerkship_core" | "advanced";
+export type InviteStatus = "pending" | "accepted" | "revoked" | "expired";
+export type UnlockScope =
+  | "module_qbank"
+  | "phase_step1_qbank"
+  | "clerkship_step2_qbank"
+  | "custom";
+
+export interface Invite {
+  id: string;
+  email: string;
+  role: "faculty" | "admin";
+  tokenHash: string;
+  status: InviteStatus;
+  invitedBy: string;
+  expiresAt: string;
+  acceptedAt?: string;
+  createdAt: string;
+}
+
+export interface UnlockRule {
+  id: string;
+  scope: UnlockScope;
+  name: string;
+  targetModuleId?: string;
+  targetPhaseId?: string;
+  requiresAllModulesInPhase: boolean;
+  requiresCoreClerkship: boolean;
+  minModuleState: ProgressState;
+  isActive: boolean;
+  config?: Record<string, unknown>;
+}
 
 export interface Choice {
   id: string;

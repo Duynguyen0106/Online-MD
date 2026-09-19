@@ -9,7 +9,7 @@ export default async function LessonQuizPage({
   params: Promise<{ lessonId: string }>;
 }) {
   const { lessonId } = await params;
-  const lesson = getLesson(lessonId);
+  const lesson = await getLesson(lessonId);
   if (!lesson) notFound();
   const questions = getFormativeQuestions(lessonId);
 

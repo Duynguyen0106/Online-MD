@@ -16,15 +16,14 @@ export default async function FacultyPage() {
     );
   }
 
-  const phases = getPhases();
+  const phases = await getPhases();
   const objectives = getObjectives();
 
   return (
     <AppShell title="Faculty content library">
       <p className="mb-6 max-w-3xl text-sm text-[var(--muted)]">
         Curriculum mirrors integrated organ-system preclerkship + core clerkships used across top US
-        MD programs. Every objective carries USMLE step, organ system, physician task, and content
-        category tags.
+        MD programs. Open a lesson to edit content blocks (Zod-validated).
       </p>
       <div className="space-y-8">
         {phases.map((phase) => (

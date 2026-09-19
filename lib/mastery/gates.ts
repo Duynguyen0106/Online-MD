@@ -11,12 +11,18 @@ import type {
   ProgressState,
   StudentState,
 } from "@/lib/types/domain";
+import { listUnlockRules } from "@/lib/demo/admin-store";
 
-export function evaluateLessonMastery(
+export async function evaluateLessonMastery(
   lessonId: string,
   progress: LessonProgress | undefined,
-): { mastered: boolean; reason: string; allBlocksViewed: boolean; quizPass: boolean } {
-  const lesson = getLesson(lessonId);
+): Promise<{
+  mastered: boolean;
+  reason: string;
+  allBlocksViewed: boolean;
+  quizPass: boolean;
+}> {
+  const lesson = await getLesson(lessonId);
   if (!lesson) {
     return {
       mastered: false,
@@ -44,11 +50,16 @@ export function evaluateLessonMastery(
   };
 }
 
-export function evaluateModuleMastery(
+export async function evaluateModuleMastery(
   moduleId: string,
   state: StudentState,
-): { mastered: boolean; lessonsMastered: boolean; examPassed: boolean; reason: string } {
-  const mod = getModule(moduleId);
+): Promise<{
+  mastered: boolean;
+  lessonsMastered: boolean;
+  examPassed: boolean;
+  reason: string;
+}> {
+  const mod = await getModule(moduleId);
   if (!mod) {
     return {
       mastered: false,
@@ -77,11 +88,11 @@ export function evaluateModuleMastery(
   };
 }
 
-export function recomputeModuleProgress(
+export async function recomputeModuleProgress(
   moduleId: string,
   state: StudentState,
-): ModuleProgress {
-  const mod = getModule(moduleId);
+): Promise<ModuleProgress> {
+  const mod = await getModule(moduleId);
   if (!mod) {
     return { moduleId, state: "not_started", percentComplete: 0 };
   }
@@ -90,7 +101,7 @@ export function recomputeModuleProgress(
     (l) => state.lessonProgress[l.id]?.state === "mastered",
   ).length;
   const started = lessons.some((l) => state.lessonProgress[l.id]);
-  const evalResult = evaluateModuleMastery(moduleId, state);
+  const evalResult = await evaluateModuleMastery(moduleId, state);
   let progressState: ProgressState = "not_started";
   if (evalResult.mastered) progressState = "mastered";
   else if (started || masteredCount > 0) progressState = "in_progress";
@@ -112,11 +123,16 @@ export type QbankUnlock =
   | { unlocked: true; scope: string }
   | { unlocked: false; scope: string; reason: string };
 
-export function canAccessModuleQbank(
+export async function canAccessModuleQbank(
   userState: StudentState,
   moduleId: string,
-): QbankUnlock {
-  const evaluation = evaluateModuleMastery(moduleId, userState);
+): Promise<QbankUnlock> {
+  const rules = await listUnlockRules();
+  const rule = rules.find((r) => r.scope === "module_qbank" && r.isActive);
+  if (rule && !rule.isActive) {
+    return { unlocked: false, scope: `module:${moduleId}`, reason: "Rule inactive" };
+  }
+  const evaluation = await evaluateModuleMastery(moduleId, userState);
   if (evaluation.mastered) {
     return { unlocked: true, scope: `module:${moduleId}` };
   }
@@ -127,9 +143,21 @@ export function canAccessModuleQbank(
   };
 }
 
-/** Step 1 Qbank: all Phase 1 (foundations) modules mastered */
-export function canAccessStep1Qbank(userState: StudentState): QbankUnlock {
-  const foundations = getPhases().find((p) => p.phaseKind === "foundations");
+export async function canAccessStep1Qbank(
+  userState: StudentState,
+): Promise<QbankUnlock> {
+  const rules = await listUnlockRules();
+  const rule = rules.find((r) => r.scope === "phase_step1_qbank");
+  if (rule && !rule.isActive) {
+    return {
+      unlocked: false,
+      scope: "step1",
+      reason: "Step 1 Qbank unlock rule is disabled by admin.",
+    };
+  }
+  const foundations = (await getPhases()).find(
+    (p) => p.phaseKind === "foundations",
+  );
   if (!foundations) {
     return { unlocked: false, scope: "step1", reason: "Foundations phase missing" };
   }
@@ -146,9 +174,19 @@ export function canAccessStep1Qbank(userState: StudentState): QbankUnlock {
   };
 }
 
-/** Step 2 CK Qbank: all core clerkship modules mastered */
-export function canAccessStep2CkQbank(userState: StudentState): QbankUnlock {
-  const clerkships = getAllModules().filter((m) => m.isCoreClerkship);
+export async function canAccessStep2CkQbank(
+  userState: StudentState,
+): Promise<QbankUnlock> {
+  const rules = await listUnlockRules();
+  const rule = rules.find((r) => r.scope === "clerkship_step2_qbank");
+  if (rule && !rule.isActive) {
+    return {
+      unlocked: false,
+      scope: "step2ck",
+      reason: "Step 2 CK Qbank unlock rule is disabled by admin.",
+    };
+  }
+  const clerkships = (await getAllModules()).filter((m) => m.isCoreClerkship);
   const pending = clerkships.filter(
     (m) => userState.moduleProgress[m.id]?.state !== "mastered",
   );

@@ -22,8 +22,8 @@ function emptyState(): StudentState {
 }
 
 describe("mastery gates", () => {
-  it("requires blocks + quiz for lesson mastery", () => {
-    const result = evaluateLessonMastery("les-cv-1", {
+  it("requires blocks + quiz for lesson mastery", async () => {
+    const result = await evaluateLessonMastery("les-cv-1", {
       lessonId: "les-cv-1",
       state: "in_progress",
       viewedBlockIds: [],
@@ -35,13 +35,13 @@ describe("mastery gates", () => {
     assert.equal(result.allBlocksViewed, false);
   });
 
-  it("locks module qbank until module mastered", () => {
-    const gate = canAccessModuleQbank(emptyState(), "mod-cv");
+  it("locks module qbank until module mastered", async () => {
+    const gate = await canAccessModuleQbank(emptyState(), "mod-cv");
     assert.equal(gate.unlocked, false);
   });
 
-  it("locks step1 qbank until foundations mastered", () => {
-    const gate = canAccessStep1Qbank(emptyState());
+  it("locks step1 qbank until foundations mastered", async () => {
+    const gate = await canAccessStep1Qbank(emptyState());
     assert.equal(gate.unlocked, false);
   });
 });

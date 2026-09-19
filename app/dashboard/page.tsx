@@ -3,6 +3,7 @@ import { AppShell } from "@/components/shared/app-shell";
 import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
+  getAllLessons,
   getAllModules,
   getNextLesson,
   getPhases,
@@ -21,14 +22,15 @@ export default async function DashboardPage() {
       .filter((p) => p.state === "mastered")
       .map((p) => p.lessonId),
   );
-  const next = getNextLesson(masteredLessons);
-  const phases = getPhases();
-  const modules = getAllModules();
+  const lessons = await getAllLessons();
+  const next = getNextLesson(lessons, masteredLessons);
+  const phases = await getPhases();
+  const modules = await getAllModules();
   const masteredModules = modules.filter(
     (m) => state.moduleProgress[m.id]?.state === "mastered",
   ).length;
-  const step1 = canAccessStep1Qbank(state);
-  const step2 = canAccessStep2CkQbank(state);
+  const step1 = await canAccessStep1Qbank(state);
+  const step2 = await canAccessStep2CkQbank(state);
 
   return (
     <AppShell title="Student dashboard">

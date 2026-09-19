@@ -26,6 +26,7 @@ import { initialCardReview, reviewSm2 } from "@/lib/spaced-repetition/supermemo2
 import {
   getSessionUser,
   newId,
+  setSessionUserId,
   updateStudentState,
 } from "@/lib/demo/store";
 import {
@@ -38,7 +39,6 @@ import {
   submitQuizSchema,
   tutorMessageSchema,
 } from "@/lib/validations/schemas";
-import { setSessionUserId } from "@/lib/demo/store";
 
 export async function switchDemoUser(userId: string) {
   await setSessionUserId(userId);
@@ -48,14 +48,14 @@ export async function switchDemoUser(userId: string) {
 
 export async function markBlockViewed(input: unknown) {
   const parsed = markBlockSchema.parse(input);
-  const lesson = getLesson(parsed.lessonId);
+  const lesson = await getLesson(parsed.lessonId);
   if (!lesson) throw new Error("Lesson not found");
   const blocks = getLessonBlocks(lesson);
   if (!blocks.some((b) => b.id === parsed.blockId)) {
     throw new Error("Block not in lesson");
   }
 
-  const state = await updateStudentState((s) => {
+  const state = await updateStudentState(async (s) => {
     const lp = ensureLessonProgress(s, parsed.lessonId);
     const viewed = new Set(lp.viewedBlockIds);
     viewed.add(parsed.blockId);
@@ -66,15 +66,15 @@ export async function markBlockViewed(input: unknown) {
       startedAt: lp.startedAt ?? new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    const mastery = evaluateLessonMastery(parsed.lessonId, nextLp);
+    const mastery = await evaluateLessonMastery(parsed.lessonId, nextLp);
     if (mastery.mastered) {
       nextLp.state = "mastered";
       nextLp.masteredAt = nextLp.masteredAt ?? new Date().toISOString();
     }
     s.lessonProgress[parsed.lessonId] = nextLp;
-    const mod = getModule(lesson.moduleId);
+    const mod = await getModule(lesson.moduleId);
     if (mod) {
-      s.moduleProgress[mod.id] = recomputeModuleProgress(mod.id, s);
+      s.moduleProgress[mod.id] = await recomputeModuleProgress(mod.id, s);
     }
     return s;
   });
@@ -87,7 +87,7 @@ export async function markBlockViewed(input: unknown) {
 export async function submitFormativeQuiz(input: unknown) {
   const parsed = submitQuizSchema.parse(input);
   const questions = getFormativeQuestions(parsed.lessonId);
-  const lesson = getLesson(parsed.lessonId);
+  const lesson = await getLesson(parsed.lessonId);
   if (!lesson) throw new Error("Lesson not found");
   const qmap = getQuestionMap();
   const score = scoreResponses(
@@ -96,17 +96,16 @@ export async function submitFormativeQuiz(input: unknown) {
     (id) => qmap[id]?.correctChoiceId,
   );
 
-  const state = await updateStudentState((s) => {
-    const attempt = {
+  const state = await updateStudentState(async (s) => {
+    s.quizAttempts.push({
       id: newId("quiz"),
       lessonId: parsed.lessonId,
-      status: "submitted" as const,
+      status: "submitted",
       score,
       responses: parsed.responses,
       startedAt: new Date().toISOString(),
       submittedAt: new Date().toISOString(),
-    };
-    s.quizAttempts.push(attempt);
+    });
     const lp = ensureLessonProgress(s, parsed.lessonId);
     const nextLp = {
       ...lp,
@@ -115,13 +114,16 @@ export async function submitFormativeQuiz(input: unknown) {
       updatedAt: new Date().toISOString(),
       startedAt: lp.startedAt ?? new Date().toISOString(),
     };
-    const mastery = evaluateLessonMastery(parsed.lessonId, nextLp);
+    const mastery = await evaluateLessonMastery(parsed.lessonId, nextLp);
     if (mastery.mastered) {
       nextLp.state = "mastered";
       nextLp.masteredAt = nextLp.masteredAt ?? new Date().toISOString();
     }
     s.lessonProgress[parsed.lessonId] = nextLp;
-    s.moduleProgress[lesson.moduleId] = recomputeModuleProgress(lesson.moduleId, s);
+    s.moduleProgress[lesson.moduleId] = await recomputeModuleProgress(
+      lesson.moduleId,
+      s,
+    );
     return s;
   });
 
@@ -138,10 +140,9 @@ export async function submitFormativeQuiz(input: unknown) {
 
 export async function submitModuleExam(input: unknown) {
   const parsed = submitExamSchema.parse(input);
-  const mod = getModule(parsed.moduleId);
+  const mod = await getModule(parsed.moduleId);
   if (!mod?.exam) throw new Error("Exam not found");
 
-  // Gate: all lessons mastered
   const userState = await updateStudentState((s) => s);
   const lessonsOk = mod.lessons.every(
     (l) => userState.lessonProgress[l.id]?.state === "mastered",
@@ -158,7 +159,7 @@ export async function submitModuleExam(input: unknown) {
   );
   const passed = score >= mod.exam.passThreshold;
 
-  await updateStudentState((s) => {
+  await updateStudentState(async (s) => {
     s.examAttempts.push({
       id: newId("exam"),
       moduleExamId: mod.exam!.id,
@@ -170,8 +171,8 @@ export async function submitModuleExam(input: unknown) {
       startedAt: new Date().toISOString(),
       submittedAt: new Date().toISOString(),
     });
-    s.moduleProgress[mod.id] = recomputeModuleProgress(mod.id, s);
-    const evaluation = evaluateModuleMastery(mod.id, s);
+    s.moduleProgress[mod.id] = await recomputeModuleProgress(mod.id, s);
+    const evaluation = await evaluateModuleMastery(mod.id, s);
     if (evaluation.mastered) {
       s.moduleProgress[mod.id] = {
         ...s.moduleProgress[mod.id],
@@ -228,13 +229,13 @@ export async function startQbankAttempt(input: unknown) {
   if (user.role === "student") {
     const state = await updateStudentState((s) => s);
     if (parsed.moduleId) {
-      const gate = canAccessModuleQbank(state, parsed.moduleId);
+      const gate = await canAccessModuleQbank(state, parsed.moduleId);
       if (!gate.unlocked) throw new Error(gate.reason);
     } else if (parsed.usmleStep === "step1") {
-      const gate = canAccessStep1Qbank(state);
+      const gate = await canAccessStep1Qbank(state);
       if (!gate.unlocked) throw new Error(gate.reason);
     } else if (parsed.usmleStep === "step2ck") {
-      const gate = canAccessStep2CkQbank(state);
+      const gate = await canAccessStep2CkQbank(state);
       if (!gate.unlocked) throw new Error(gate.reason);
     } else {
       throw new Error("Specify moduleId or usmleStep");
@@ -268,23 +269,21 @@ export async function startQbankAttempt(input: unknown) {
 
 export async function submitQbankAttempt(input: unknown) {
   const parsed = submitQbankSchema.parse(input);
-  const qmap = Object.fromEntries(
-    getQbankQuestions().map((q) => [q.id, q]),
-  );
+  const qmap = Object.fromEntries(getQbankQuestions().map((q) => [q.id, q]));
   let score = 0;
-  await updateStudentState((s) => {
+  await updateStudentState(async (s) => {
     const attempt = s.qbankAttempts.find((a) => a.id === parsed.attemptId);
     if (!attempt) throw new Error("Attempt not found");
     if (attempt.moduleId) {
-      const gate = canAccessModuleQbank(s, attempt.moduleId);
+      const gate = await canAccessModuleQbank(s, attempt.moduleId);
       if (!gate.unlocked) throw new Error(gate.reason);
     }
     if (attempt.usmleStep === "step1") {
-      const gate = canAccessStep1Qbank(s);
+      const gate = await canAccessStep1Qbank(s);
       if (!gate.unlocked) throw new Error(gate.reason);
     }
     if (attempt.usmleStep === "step2ck") {
-      const gate = canAccessStep2CkQbank(s);
+      const gate = await canAccessStep2CkQbank(s);
       if (!gate.unlocked) throw new Error(gate.reason);
     }
     score = scoreResponses(
@@ -304,7 +303,7 @@ export async function submitQbankAttempt(input: unknown) {
 
 export async function sendTutorMessage(input: unknown) {
   const parsed = tutorMessageSchema.parse(input);
-  const lesson = parsed.lessonId ? getLesson(parsed.lessonId) : undefined;
+  const lesson = parsed.lessonId ? await getLesson(parsed.lessonId) : undefined;
   const objectives = parsed.lessonId
     ? getObjectivesForLesson(parsed.lessonId)
     : [];

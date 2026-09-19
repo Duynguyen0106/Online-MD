@@ -2,23 +2,28 @@ import Link from "next/link";
 import { getSessionUser } from "@/lib/demo/store";
 import { RoleSwitcher } from "@/components/shared/role-switcher";
 
+const adminLinks = [
+  { href: "/admin/analytics", label: "Analytics" },
+  { href: "/admin/invites", label: "Invites" },
+  { href: "/admin/unlock-rules", label: "Unlock rules" },
+  { href: "/admin/users", label: "Users" },
+  { href: "/faculty", label: "Content" },
+  { href: "/dashboard", label: "Student view" },
+];
+
+const facultyLinks = [
+  { href: "/faculty", label: "Content" },
+  { href: "/dashboard", label: "Student view" },
+  { href: "/login", label: "Login" },
+];
+
 const studentLinks = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/flashcards", label: "Flashcards" },
   { href: "/qbank", label: "Qbank" },
   { href: "/tutor", label: "Faculty AI" },
   { href: "/cases/case-cv-1", label: "Cases" },
-];
-
-const facultyLinks = [
-  { href: "/faculty", label: "Content" },
-  { href: "/dashboard", label: "Student view" },
-];
-
-const adminLinks = [
-  { href: "/admin/analytics", label: "Analytics" },
-  { href: "/faculty", label: "Content" },
-  { href: "/dashboard", label: "Student view" },
+  { href: "/login", label: "Login" },
 ];
 
 export async function AppShell({

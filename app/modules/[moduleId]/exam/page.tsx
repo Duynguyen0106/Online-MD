@@ -10,7 +10,7 @@ export default async function ModuleExamPage({
   params: Promise<{ moduleId: string }>;
 }) {
   const { moduleId } = await params;
-  const mod = getModule(moduleId);
+  const mod = await getModule(moduleId);
   if (!mod?.exam) notFound();
   const state = await readStudentState();
   const lessonsOk = mod.lessons.every(

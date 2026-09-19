@@ -1033,7 +1033,22 @@ ARNI/ACEI/ARB, evidence-based beta-blockers, mineralocorticoid receptor antagoni
                       1,
                       `Five causes of hypoxemia: (1) low FiO2, (2) hypoventilation, (3) diffusion limitation, (4) shunt, (5) V/Q mismatch.  
 A-a gradient helps separate hypoventilation/low FiO2 (normal A-a) from the others (elevated A-a).  
-Shunt does not correct fully with 100% O2; V/Q mismatch usually does improve.`,
+Shunt does not correct fully with 100% O2; V/Q mismatch usually does improve.
+
+### West zones (upright lung)
+- Zone 1: PA > Pa > Pv — little flow (alveolar dead space tendency)
+- Zone 2: Pa > PA > Pv — intermittent flow
+- Zone 3: Pa > Pv > PA — continuous flow (base)
+
+Online mastery tip: sketch zones, then explain why PE (dead space) and pneumonia (shunt-like units) behave differently with supplemental O2.`,
+                    ),
+                    vignette(
+                      "blk-pulm-1a-x",
+                      "con-pulm-1a",
+                      "Vignette: postoperative hypoxemia",
+                      2,
+                      `A patient is SpO2 88% on room air after abdominal surgery; ABG shows low PaO2 with elevated A-a gradient that improves on 100% O2.  
+Reason through atelectasis-related V/Q mismatch vs true shunt, and list bedside interventions (upright positioning, incentive spirometry, treat causes of hypoventilation).`,
                     ),
                   ],
                 },
@@ -1193,7 +1208,29 @@ Loops are most potent; thiazides preferred in HTN; spironolactone disease-modify
                       "Portal HTN clinical map",
                       1,
                       `Increased portal pressure → portosystemic shunts (esophageal varices, caput medusae, hemorrhoids), congestive splenomegaly, ascites (underfill + overflow + hypoalbuminemia).  
-Hepatic encephalopathy: ammonia and other neurotoxins bypass detoxification. Synthetic dysfunction → ↑INR, ↓albumin.`,
+Hepatic encephalopathy: ammonia and other neurotoxins bypass detoxification. Synthetic dysfunction → ↑INR, ↓albumin.
+
+### Mechanism checklist
+1. Increased resistance (cirrhotic architecture, sinusoidal)
+2. Increased portal inflow (splanchnic vasodilation)
+3. Collateral formation and variceal risk
+4. Volume dysregulation → ascites
+
+Study habit: for each complication, name the vessel/path and the bedside finding.`,
+                    ),
+                    diagram(
+                      "blk-gi-2a-d",
+                      "con-gi-2a",
+                      "Diagram: portosystemic anastomoses",
+                      2,
+                      `\`\`\`
+Portal vein hypertension
+  ├─ left gastric ↔ esophageal veins → varices / hematemesis risk
+  ├─ paraumbilical ↔ abdominal wall veins → caput medusae
+  └─ superior rectal ↔ middle/inferior rectal → hemorrhoids
+
+Splenic congestion → splenomegaly ± thrombocytopenia
+\`\`\``,
                     ),
                   ],
                 },
