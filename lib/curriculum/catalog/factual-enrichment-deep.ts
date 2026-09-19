@@ -642,6 +642,12 @@ Document capacity, surrogates, and goals. Digital professionalism protects PHI. 
 Confidentiality limits and error disclosure scripts must be practiced until automatic: what happened, impact, apology, prevention. Insomnia care starts with CBT-I and comorbidity treatment; hypnotics are brief, monitored, and avoided as chronic sole therapy in older adults whenever alternatives exist. Revisit refused vaccines and declined workups with the same procedural clarity.`,
   },
   {
+    test: /acute agitation de-?escalation|ovarian torsion urgency|pediatric obesity counseling|lithium toxicity & monitoring|gi motility|bile formation|swallowing & esophageal|spleen immunology|motility disorders expanded|serotonin syndrome recognition|tolac \/ vbac|strep pharyngitis testing|vaccine counseling essentials|study designs|public psychiatry|survival analysis basics|somatic symptom|professionalism digital|vaginitis office|pediatric dehydration|menopause symptom management|intrapartum fetal heart|research ethics|pulmonary hypertension groups|cardiovascular aging/i,
+    prose: `**Coverage completion — textbook chapter.**
+
+These high-frequency topics share a method: name the stopwatch diagnosis (torsion, agitation, serotonin toxicity, Category III tracing), the prevention skill (vaccines, GBS, Rh, SSI), and the counseling skill (TOLAC, menopause, obesity, digital professionalism). Motility, bile, esophageal, and hyposplenism chapters are mechanism → complication maps. Study design and survival analysis keep evidence numerate. Pulmonary hypertension groups and cardiovascular aging remind you that phenotype—not a single pressure number—drives therapy.`,
+  },
+  {
     test: /biostatistics essentials|enzyme kinetics|km |vmax|lineweaver/i,
     prose: `**Biostatistics & enzyme kinetics essentials — textbook chapter.**
 
@@ -746,7 +752,11 @@ Separate delirium from primary psychosis, mania from stimulant intoxication, and
 
 Acute agitation pathways escalate from verbal de-escalation to oral then IM medications while protecting airway and avoiding over-sedation stacks. Insomnia prescribing caution means sleep hygiene and treating underlying mood/anxiety/OSA before chronic benzodiazepines. Document target symptoms and stop dates for sedatives. Substance intoxication and withdrawal remain on every behavioral emergency differential.
 
-Lithium and serotonergic stacks need level/toxicity literacy (renal/thyroid monitoring; Hunter clonus framing). Measurement-based care repeats severity scales at follow-up. Safety planning is concrete: means counseling, contacts, and a timed next appointment—not “follow up PRN.”`,
+Lithium and serotonergic stacks need level/toxicity literacy (renal/thyroid monitoring; Hunter clonus framing). Measurement-based care repeats severity scales at follow-up. Safety planning is concrete: means counseling, contacts, and a timed next appointment—not “follow up PRN.”
+
+Psychopharmacology chapters always include metabolic, cardiac, and overdose fingerprints beside efficacy. Therapy modalities are prescriptions with indications—match CBT, DBT, IPT, or motivational interviewing to the problem. Document level of care and the reason for change when stepping up or down.
+
+Acute agitation, lithium toxicity, serotonin syndrome, and insomnia prescribing are high-frequency safety chapters—rehearse the first five minutes until automatic. Public psychiatry and somatic symptom care remind you that housing, validation, and systems of care are clinical interventions.`,
   },
   {
     test: /cell biology|molecular/i,
@@ -760,7 +770,9 @@ Receptor classes (GPCR, RTK, nuclear receptors) explain rapid versus transcripti
 
 Stem cells and differentiation chapters track potency (totipotent → pluripotent → multipotent), niche signals, and lineage commitment—cancer stem-cell concepts and regenerative medicine both depend on this map. Epigenetic marks lock or reopen fate; disease is often failed differentiation or failed restraint of self-renewal.
 
-Protein quality control (chaperones, UPR, proteasome, autophagy) explains many conformational diseases. Trafficking motifs and post-translational modifications turn sequence into localization—CFTR and LDL-receptor teaching live here.`,
+Protein quality control (chaperones, UPR, proteasome, autophagy) explains many conformational diseases. Trafficking motifs and post-translational modifications turn sequence into localization—CFTR and LDL-receptor teaching live here.
+
+DNA→RNA→protein information flow fails at splicing, proofreading, or targeting as often as at the gene itself. Tie each failure to a board-style vignette (thalassemia splicing, collagen hydroxylation, receptor trafficking) before leaving the section.`,
   },
   {
     test: /anatom|embryo/i,
@@ -776,7 +788,9 @@ Cross-sectional imaging literacy still starts with cadaver relationships: what i
 
 Fascia planes explain how infections spread in the neck and perineum. Portal versus systemic venous anastomoses explain varices. Dermatomes and myotomes convert imaging into bedside neurologic localization. Anatomy without clinical consequence is trivia; consequence without anatomy is unsafe.
 
-Space–occupying relationships matter under pressure: compartments in the limb, epidural vs subdural planes, and retroperitoneal vs intraperitoneal collections change both imaging and operative approach. Name the fascial boundary before you name the antibiotic.`,
+Space–occupying relationships matter under pressure: compartments in the limb, epidural vs subdural planes, and retroperitoneal vs intraperitoneal collections change both imaging and operative approach. Name the fascial boundary before you name the antibiotic.
+
+Embryologic timing tables (weeks of teratogen vulnerability, neural crest migration, gut rotation) convert anomalies from trivia into predictable clusters. If two anomalies share a field, look for a third.`,
   },
   {
     test: /immunol/i,
@@ -824,7 +838,9 @@ Special populations (pregnancy, lactation, pediatrics, geriatrics, hepatic/renal
 
 Pharmacodynamics language (full/partial/inverse agonist, competitive vs noncompetitive antagonist) prevents mechanism errors on boards and wards. Always pair a new drug with its monitoring plan and the toxicity you refuse to miss.
 
-Therapeutic drug monitoring exists because kinetics vary—know which drugs need levels and when trough vs peak matters. QT, serotonergic, and CYP collision rules prevent polypharmacy disasters better than memorizing infinite pairwise lists.`,
+Therapeutic drug monitoring exists because kinetics vary—know which drugs need levels and when trough vs peak matters. QT, serotonergic, and CYP collision rules prevent polypharmacy disasters better than memorizing infinite pairwise lists.
+
+Special-population dosing (CKD, liver failure, pregnancy, geriatrics) is not optional trivia—write the adjusted plan. Antibiotic PK/PD (T>MIC vs AUC/MIC) explains interval choice; heme and chemo drugs need nadir and organ-toxicity calendars.`,
   },
   {
     test: /microbiol/i,
@@ -854,7 +870,9 @@ Intention-to-treat preserves randomization benefits; per-protocol analyses answe
 
 RCT appraisal checks randomization, blinding, allocation concealment, loss to follow-up, and applicability. Health economics for clinicians starts with cost-effectiveness literacy without letting price alone deny high-value care. Guidelines are tools—know the strength of recommendation and the evidence behind it.
 
-Study design literacy (RCT, cohort, case-control, cross-sectional) and survival analysis basics prevent misreading Kaplan–Meier curves and hazard ratios. Always ask what the comparator was and who was excluded.`,
+Study design literacy (RCT, cohort, case-control, cross-sectional) and survival analysis basics prevent misreading Kaplan–Meier curves and hazard ratios. Always ask what the comparator was and who was excluded.
+
+Bias checklists (selection, confounding, measurement) belong in every journal club. Absolute risk language (ARR/NNT) is how you counsel patients without relative-risk theater.`,
   },
   {
     test: /ethic|profession/i,
@@ -864,7 +882,9 @@ Translate principles (autonomy, beneficence, nonmaleficence, justice) into proce
 
 Conflicts of interest, boundary issues, and social media pitfalls are clinical risk domains. When patients refuse recommended care, document understanding and offer the least harmful alternative still aligned with goals. Resource allocation decisions should use explicit criteria rather than stealth bedside rationing. Cultural humility improves history quality and trust.
 
-Error disclosure follows institutional pathways: truth, apology where appropriate, prevention plan, and support for the patient. Confidentiality breaks for mandated reporting (abuse, certain threats) must be explained when safe. Professionalism includes timely notes, closed-loop handoffs, and refusing to cut safety corners for throughput.`,
+Error disclosure follows institutional pathways: truth, apology where appropriate, prevention plan, and support for the patient. Confidentiality breaks for mandated reporting (abuse, certain threats) must be explained when safe. Professionalism includes timely notes, closed-loop handoffs, and refusing to cut safety corners for throughput.
+
+Digital-age professionalism covers PHI on personal devices, social media boundaries, and documenting only what serves care. Research ethics (IRB, equipoise, informed consent for protocols) belongs beside clinical ethics—same principles, different paperwork.`,
   },
   {
     test: /surgery/i,
@@ -876,7 +896,9 @@ Postoperative fever, tachycardia, and oliguria have timed differentials (atelect
 
 Drains report quality and quantity—bilious, feculent, bloody, or high-output serous fluid each change the differential for leak versus expected drainage. Nutrition timing (early enteric feeding when appropriate) supports anastomotic healing. OR safety checklists catch wrong-site and equipment failures before incision. Hernia incarceration versus strangulation is a perfusion clock; cholecystitis pathways escalate from antibiotics to source control. Burn resuscitation uses weight-based fluid formulas with urine-output titration—not blind liter dumps.
 
-Acute limb ischemia, appendicitis decision pathways, and surgical site infection prevention close the loop from indication to recovery. Name the complication window (bleed, leak, infection, ischemia) you are watching tonight.`,
+Acute limb ischemia, appendicitis decision pathways, and surgical site infection prevention close the loop from indication to recovery. Name the complication window (bleed, leak, infection, ischemia) you are watching tonight.
+
+Preoperative optimization (glucose, smoking, anemia, VTE risk) and consent that names material alternatives are the start of the operation. Drains, nutrition, and early mobilization are therapy—not afterthoughts.`,
   },
   {
     test: /pediatr/i,
@@ -892,7 +914,9 @@ Obesity counseling is family-based BMI-percentile work with comorbidity screenin
 
 Vaccine counseling starts with disease risk and addresses hesitancy without ridicule. Growth failure and obesity both deserve longitudinal charts, not one-time lectures. Ask who can actually execute the plan tonight.
 
-Fever without source, bronchiolitis, and dehydration pathways are the daily grammar of pediatrics—memorize age-banded vitals and when a “well-appearing” infant still needs workup. Nonaccidental trauma recognition and mandated reporting are clinical skills, not optional extras.`,
+Fever without source, bronchiolitis, and dehydration pathways are the daily grammar of pediatrics—memorize age-banded vitals and when a “well-appearing” infant still needs workup. Nonaccidental trauma recognition and mandated reporting are clinical skills, not optional extras.
+
+Weight-based dosing errors concentrate at transitions—write the mg/kg and the absolute dose. Developmental screening and school function are vital signs for the older child. Family-centered rounds mean the caregiver can teach back the plan.`,
   },
   {
     test: /obstetric|gynecol/i,
@@ -908,7 +932,9 @@ TOLAC/VBAC counseling balances uterine rupture risk against cesarean morbidity u
 
 Menopause symptom care is shared decision-making on hormones vs nonhormonal options. Vaginitis diagnosis uses pH/wet mount, not endless empiric cream. Fetal heart tracing categories drive timed corrective steps and delivery decisions—Category III is a clock.
 
-Postpartum hemorrhage, hypertensive disorders after discharge, and contraception counseling are the unfinished chapter of every delivery. Treat the fourth trimester as high-risk medicine with a scheduled visit, not a goodbye at discharge.`,
+Postpartum hemorrhage, hypertensive disorders after discharge, and contraception counseling are the unfinished chapter of every delivery. Treat the fourth trimester as high-risk medicine with a scheduled visit, not a goodbye at discharge.
+
+TOLAC counseling, GBS prophylaxis, gestational diabetes targets, and third-trimester bleeding differentials are high-frequency skills—rehearse them until the protocol is automatic. Reproductive emergencies (ectopic, torsion, TOA) remain stopwatch diagnoses in every ED and clinic.`,
   },
   {
     test: /patholog/i,
@@ -922,7 +948,9 @@ Wound healing timelines (hemostasis, inflammation, proliferation, remodeling) ex
 
 Chemical and physical injury patterns (burns, radiation, toxins) and the metastatic cascade (EMT → intravasation → colonization) complete the injury–repair–spread arc. Pathology vocabulary exists to forecast complications, not to decorate reports.
 
-Inflammation types and necrosis patterns should predict complications (abscess, fistula, scarring, carcinogenesis). When the report says “invasion,” the clinical chapter has already changed stage and therapy.`,
+Inflammation types and necrosis patterns should predict complications (abscess, fistula, scarring, carcinogenesis). When the report says “invasion,” the clinical chapter has already changed stage and therapy.
+
+Aging, calcification, and wound-healing timelines explain why the same injury looks different weeks later. Metastatic cascade steps are inefficient—which is why staging and adjuvant decisions matter even after “clear margins.”`,
   },
 ];
 
@@ -945,7 +973,9 @@ Localize the lesion and tempo first. Hyperacute focal deficits are vascular unti
 
 Central versus peripheral patterns, upper versus lower motor neuron signs, and cortical versus subcortical features prevent shotgun imaging without a hypothesis. Seizure versus syncope discrimination uses prodrome, tonic–clonic activity, recovery, and injury pattern. Psychiatric formulations include risk, capacity, and social supports as clinical data.
 
-For behavioral health crises, toxidromes and medical encephalopathy stay on the board until excluded. Document MSE findings specifically—not “psychosis” alone. Continuity after acute stabilization (sleep, meds, follow-up within days) prevents rapid readmission. Localization still matters when “altered mental status” is actually a focal stroke or nonconvulsive seizure.`,
+For behavioral health crises, toxidromes and medical encephalopathy stay on the board until excluded. Document MSE findings specifically—not “psychosis” alone. Continuity after acute stabilization (sleep, meds, follow-up within days) prevents rapid readmission. Localization still matters when “altered mental status” is actually a focal stroke or nonconvulsive seizure.
+
+Serious mental illness care includes ACT teams, housing, and medication monitoring as one plan. Somatic symptom and illness-anxiety pathways need scheduled visits and restrained testing—not confrontation.`,
   },
   {
     test: /multisystem/i,
@@ -961,7 +991,9 @@ Multisystem pathophysiology also includes fever of unknown origin, weight loss w
 
 When the unifier is still missing after 48 hours, broaden deliberately: travel, exposures, drugs, immunodeficiency, and occult infection/malignancy. Avoid adding every organ’s consult without a shared question—parallel work needs a conductor.
 
-SIRS physiology without infection, toxidromes that span many organs, and endocrine crises that look like sepsis are classic multisystem traps—name the mechanism before the antibiotic or the pressor.`,
+SIRS physiology without infection, toxidromes that span many organs, and endocrine crises that look like sepsis are classic multisystem traps—name the mechanism before the antibiotic or the pressor.
+
+Lab patterns that unify systems—cytopenias with schistocytes, anion-gap acidosis with osmolar gap, fever with eosinophilia—should trigger a named syndrome, not another organ-specific consult without a question.`,
   },
   {
     test: /respirat/i,
@@ -981,7 +1013,9 @@ Volume first, then filter, then tubules. Obstruction is reversible blindness if 
 
 AKI mechanisms (prerenal, ATN, AIN, glomerular, vascular) and CKD complications (anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safety issues. Dialysis indications (AEIOU) are decisions, not automatic creatinine cutoffs.
 
-Urine microscopy still earns its keep: muddy brown casts, RBC casts, crystals, and sterile pyuria each point differently. Hyperkalemia with ECG changes is a membrane emergency treated before the “perfect” etiology workup finishes. In CKD, medication reconciliation for dosing is as important as the GFR number itself.`,
+Urine microscopy still earns its keep: muddy brown casts, RBC casts, crystals, and sterile pyuria each point differently. Hyperkalemia with ECG changes is a membrane emergency treated before the “perfect” etiology workup finishes. In CKD, medication reconciliation for dosing is as important as the GFR number itself.
+
+Nephron transporter maps explain diuretic class and stone risk. Nephrotoxin stacks (NSAIDs, aminoglycosides, contrast, ACEi/ARB in hypovolemia) are daily prevention. Metabolic evaluation of stones follows the crystal type—not endless “drink more water” alone.`,
   },
   {
     test: /gastro|hepat|digest/i,
@@ -991,7 +1025,9 @@ Bleed, obstruct, perforate, inflame, and fail to absorb—these verbs organize a
 
 Ischemic bowel, cholangitis, and pancreatitis are time-sensitive. Chronic disease chapters connect H. pylori, IBD immune dysregulation, and cirrhosis complication surveillance. Always ask whether the abdomen needs an operation tonight versus medical management with serial exams.
 
-GI bleed pathways separate upper vs lower, variceal vs nonvariceal, and stable vs exsanguinating—resuscitation and reverse coagulopathy run in parallel with localization. Ascites analysis (SAAG) sorts portal hypertension from other causes. Hepatic encephalopathy is a diagnosis of ammonia-context plus exam, not a number alone.`,
+GI bleed pathways separate upper vs lower, variceal vs nonvariceal, and stable vs exsanguinating—resuscitation and reverse coagulopathy run in parallel with localization. Ascites analysis (SAAG) sorts portal hypertension from other causes. Hepatic encephalopathy is a diagnosis of ammonia-context plus exam, not a number alone.
+
+Motility and ENS disorders, bile formation/gallstones, swallowing/esophageal disease, and hyposplenism infection risk are mechanism chapters that predict specific complications. Ask which lumen, which wall layer, and which hormone or nerve failed.`,
   },
   {
     test: /endocrin/i,
@@ -1001,7 +1037,9 @@ Hormone axes are negative-feedback loops; interpret levels with the tropic hormo
 
 Diabetes complications are microvascular and macrovascular teaching maps; insulin physiology explains both DKA and iatrogenic hypoglycemia. Pituitary mass effects add neurosurgical timing to endocrine labs. Replacement therapy must mimic physiology (circadian steroids, titrated thyroid hormone) and include sick-day rules.
 
-Adrenal crisis is volume and steroid first; thyroid storm and myxedema are ICU endocrine diagnoses. Calcium disorders need albumin context and PTH interpretation. Continuous glucose data and insulin pharmacokinetics belong in outpatient chapters that prevent the next DKA admission.`,
+Adrenal crisis is volume and steroid first; thyroid storm and myxedema are ICU endocrine diagnoses. Calcium disorders need albumin context and PTH interpretation. Continuous glucose data and insulin pharmacokinetics belong in outpatient chapters that prevent the next DKA admission.
+
+Pituitary mass effects (visual fields, headache, hormone excess/deficiency) mix neurosurgery with endocrine labs. Always interpret hormone levels with the clinical state and binding proteins—free hormone thinking prevents false reassurance.`,
   },
   {
     test: /hematol|oncolog|blood|hematopoietic|lymphoreticular/i,
@@ -1023,7 +1061,9 @@ Age recalibrates every normal range and every differential. Neonates and young i
 
 Congenital anomalies, inborn errors, and nonaccidental trauma occupy larger shares of the differential than in adults. Vaccination status is part of the infectious-disease history. Caregiver capacity and social determinants determine whether an outpatient plan is safe. Always ask: is this child toxic, and can this caregiver execute the plan tonight?
 
-Growth charts and developmental milestones are longitudinal vital signs. Dehydration percentage estimates drive fluid plans. Antibiotic stewardship still applies—viral bronchiolitis does not need antibacterial coverage. Transition-of-care teaching for adolescents with chronic disease prevents drop-off from pediatric specialty care.`,
+Growth charts and developmental milestones are longitudinal vital signs. Dehydration percentage estimates drive fluid plans. Antibiotic stewardship still applies—viral bronchiolitis does not need antibacterial coverage. Transition-of-care teaching for adolescents with chronic disease prevents drop-off from pediatric specialty care.
+
+Safe sleep, vaccine counseling, and obesity prevention are population health delivered one family at a time. Document anticipatory guidance; it is clinical work with a code and a purpose.`,
   },
   {
     test: /reproduct/i,
@@ -1033,7 +1073,9 @@ Pregnancy testing gates abdominal/pelvic pain evaluation in appropriate patients
 
 Gynecologic emergencies (torsion, TOA, hemorrhage) need surgical timing literacy. Hormonal axes (HPO) explain amenorrhea, AUB, and infertility better than organ-by-organ lists. Contraception and preconception counseling are core reproductive care, not electives. Document gestational age dating clearly—every subsequent decision hangs on it.
 
-Postpartum hemorrhage protocols, Rh status, and lactation medication safety are daily skills. Hypertensive disorders can present after discharge—early postpartum visits catch them. Reproductive justice framing means offering options without coercion and documenting informed refusal when patients decline recommended interventions.`,
+Postpartum hemorrhage protocols, Rh status, and lactation medication safety are daily skills. Hypertensive disorders can present after discharge—early postpartum visits catch them. Reproductive justice framing means offering options without coercion and documenting informed refusal when patients decline recommended interventions.
+
+Preconception optimization for diabetes, hypertension, and teratogen exposure changes outcomes more than heroic intrapartum saves. Dating accuracy is the foundation of every later decision—write how gestational age was established.`,
   },
   {
     test: /musculoskeletal|rheum|msk/i,
@@ -1043,6 +1085,8 @@ Separate articular from periarticular pain, inflammatory from mechanical pattern
 
 Fracture, compartment syndrome, and cauda equina are stopwatch diagnoses. Growth plates change pediatric injury patterns. Rheumatologic labs (RF, anti-CCP, ANA, ANCA, HLA-B27) support syndromes—they do not replace the joint exam. Function and work status belong in every MSK note.
 
-Back pain red flags (cancer history, IVDU, neurologic deficits, incontinence) change imaging urgency. Crystal vs septic arthritis can coexist in teaching—when in doubt, aspirate. Rehab and weight-bearing status are prescriptions, not afterthoughts.`,
+Back pain red flags (cancer history, IVDU, neurologic deficits, incontinence) change imaging urgency. Crystal vs septic arthritis can coexist in teaching—when in doubt, aspirate. Rehab and weight-bearing status are prescriptions, not afterthoughts.
+
+Fracture description (open/closed, displacement, joint involvement) drives urgency. Compartment syndrome pain out of proportion is a surgical clock. Rheumatologic serologies support syndromes—they never replace the joint exam and the time course.`,
   },
 ];
