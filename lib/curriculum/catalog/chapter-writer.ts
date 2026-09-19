@@ -271,13 +271,57 @@ Pass threshold ≥80%. Afterward, add the flashcard (**${topic.cardFront}** → 
 `;
 }
 
+/** True when the stored vignette is a meta study-prompt rather than a case stem. */
+function isThinVignette(vignette: string | undefined): boolean {
+  const v = vignette?.trim() ?? "";
+  if (v.length < 200) return true;
+  return (
+    /Teach .+ using mechanism/i.test(v) ||
+    /A learner is asked to explain/i.test(v) ||
+    /Outline the mechanism, one clinical consequence/i.test(v) ||
+    /On rounds, a patient presentation hinges on/i.test(v) ||
+    /State the mechanism, expected findings/i.test(v)
+  );
+}
+
+/**
+ * Synthesize a declarative case/board stem from topic metadata when the
+ * catalog vignette is only a study prompt.
+ */
+function synthesizeVignetteStem(topic: CatalogTopic): string {
+  const clinical = isClinical(topic.year);
+  const p0 = topic.points[0] ?? topic.title;
+  const p1 = topic.points[1] ?? topic.cardFront;
+  const p2 = topic.points[2] ?? topic.cardBack;
+  const anchors = [p0, p1, p2].filter(Boolean);
+
+  if (clinical) {
+    return `A patient presents for care in the **${topic.organSystem}** domain with a problem that centers on **${topic.title}** (${topic.contentCategory}).
+
+Early clues align with this chapter rule: *${anchors[0]}*. As the encounter unfolds, a second decision point appears: *${anchors[1]}*.${
+      anchors[2] ? ` A third checkpoint—*${anchors[2]}*—separates the leading diagnosis from a can’t-miss alternative.` : ""
+    }
+
+Vital signs, focused exam, and the first labs/imaging must sort acuity from deferrable detail. Your task is to name the syndrome, the most dangerous mimic, the two or three data points that change the branch, and the first timed actions—before perfect certainty—consistent with: ${topic.quizExplain}
+
+Pocket emphasis while you work: **${topic.cardFront}** → ${topic.cardBack}.`;
+  }
+
+  return `At the teaching board you must explain **${topic.title}** (${topic.contentCategory}; **${topic.organSystem}**) as a continuous mechanism story—not a buzzword list.
+
+Start with this control point: *${anchors[0]}*. Show how it is regulated and what phenotype appears when it fails. Then connect the next node: *${anchors[1]}*.${
+    anchors[2] ? ` Close the pathway with: *${anchors[2]}*.` : ""
+  }
+
+End by stating one bedside or laboratory consequence and one misconception that would harm a patient if believed. The chapter’s emphasis is: ${topic.quizExplain}
+
+Memory hook: **${topic.cardFront}** → ${topic.cardBack}.`;
+}
+
 export function buildChapterVignette(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
-  const stem =
-    topic.vignette?.trim() ||
-    (clinical
-      ? `You are called about a patient whose presentation centers on **${topic.title}**. Decide what matters in the next minutes.`
-      : `At the board, explain **${topic.title}**: mechanism, one clinical consequence, and one misconception.`);
+  const raw = topic.vignette?.trim() ?? "";
+  const stem = isThinVignette(raw) ? synthesizeVignetteStem(topic) : raw;
 
   if (clinical) {
     return `## Case conference — ${topic.title}

@@ -722,7 +722,9 @@ Compare paired mechanisms explicitly (systolic vs diastolic failure; obstructive
 
 Time course is a fifth hidden question: hyperacute (seconds–minutes), acute (hours), subacute (days), chronic (weeks–years). The same organ can fail by hemorrhage, ischemia, inflammation, or degeneration—tempo sorts them before the scan returns. Write the tempo into your problem representation so the differential does not become an unsorted encyclopedia.
 
-Threshold concepts: reserve capacity, critical closing pressure, oxygen delivery vs consumption, and feedback gain. When reserve is exhausted, small insults produce nonlinear collapse—that is why compensated shock becomes uncompensated so quickly. Predict the cliff, not only the plateau.`,
+Threshold concepts: reserve capacity, critical closing pressure, oxygen delivery vs consumption, and feedback gain. When reserve is exhausted, small insults produce nonlinear collapse—that is why compensated shock becomes uncompensated so quickly. Predict the cliff, not only the plateau.
+
+Integrative drills: given a drug or toxin, name the node it hits and the expected vital-sign/lab change; given a lab pattern, name the disrupted variable. Pathophysiology becomes clinical skill when prediction precedes the answer key.`,
   },
   {
     test: /clinical medicine|internal medicine|advanced clinical|family medicine/i,
@@ -740,7 +742,9 @@ When uncertainty is high, time-box the workup: which test in the next hour chang
 
 Handoffs are clinical procedures: illness severity, pending actions, if–then contingencies, and who to call. A chapter that ends without a handoff plan is unfinished ward medicine. Outpatient chapters close with return precautions written in the patient’s language and a scheduled follow-up that matches risk, not convenience.
 
-Medication reconciliation at every transition prevents the silent killer of omitted anticoagulants, insulin, and antiepileptics. Social determinants—housing, food, transport, language—are often the true rate-limiting step after the “perfect” plan is written.`,
+Medication reconciliation at every transition prevents the silent killer of omitted anticoagulants, insulin, and antiepileptics. Social determinants—housing, food, transport, language—are often the true rate-limiting step after the “perfect” plan is written.
+
+Night-float skill: inherit the problem representation, not only the to-do list. Ask what would make you wake the senior, and write that threshold explicitly. Clinic skill: close every visit with one behavior change the patient can repeat aloud.`,
   },
   {
     test: /psychiatr|behavioral/i,
@@ -993,7 +997,9 @@ When the unifier is still missing after 48 hours, broaden deliberately: travel, 
 
 SIRS physiology without infection, toxidromes that span many organs, and endocrine crises that look like sepsis are classic multisystem traps—name the mechanism before the antibiotic or the pressor.
 
-Lab patterns that unify systems—cytopenias with schistocytes, anion-gap acidosis with osmolar gap, fever with eosinophilia—should trigger a named syndrome, not another organ-specific consult without a question.`,
+Lab patterns that unify systems—cytopenias with schistocytes, anion-gap acidosis with osmolar gap, fever with eosinophilia—should trigger a named syndrome, not another organ-specific consult without a question.
+
+When multiple organs fail in hours, think shock, toxin, adrenal crisis, and catastrophic infection first. When they fail over weeks, think inflammation, malignancy, and chronic endocrine/metabolic disease. Tempo remains the first sorter.`,
   },
   {
     test: /respirat/i,
