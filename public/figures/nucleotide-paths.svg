@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Nucleotide pathway overview">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="238" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Nucleotides — de novo vs salvage</text>
+      <rect x="40" y="85" width="200" height="60" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="140" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">De novo</text>
+<text x="140" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">PRPP → IMP/UMP</text>
+<text x="140" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Energy-expensive</text>
+      <rect x="280" y="85" width="200" height="60" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="380" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Salvage</text>
+<text x="380" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">HGPRT / APRT</text>
+<text x="380" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Recycle bases</text>
+      <rect x="500" y="85" width="110" height="60" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="555" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Uric acid</text>
+<text x="555" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">XO</text>
+      <text x="40" y="185" font-family="Georgia, serif" font-size="12" fill="#5c7268">Allopurinol blocks XO · Lesch-Nyhan = HGPRT failure</text>
+    
+</svg>

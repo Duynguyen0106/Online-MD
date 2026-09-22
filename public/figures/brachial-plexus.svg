@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Brachial plexus organization">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="238" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Brachial plexus — level names the deficit</text>
+      <rect x="20" y="90" width="90" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="65" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Roots</text>
+      <line x1="110" y1="110" x2="135" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="135" y="90" width="90" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="180" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Trunks</text>
+      <line x1="225" y1="110" x2="250" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="250" y="90" width="100" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="300" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Divisions</text>
+      <line x1="350" y1="110" x2="375" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="375" y="90" width="90" height="40" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="420" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Cords</text>
+      <line x1="465" y1="110" x2="490" y2="110" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <rect x="490" y="85" width="120" height="50" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="550" y="103" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Terminal</text>
+<text x="550" y="117" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">nerves</text>
+      <text x="20" y="175" font-family="Georgia, serif" font-size="12" fill="#5c7268">Erb (upper trunk) waiter's tip · Klumpke (lower) claw / Horner possible</text>
+    
+</svg>

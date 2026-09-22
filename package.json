@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test lib/spaced-repetition/supermemo2.test.ts lib/mastery/gates.test.ts",
+    "test": "tsx --test lib/spaced-repetition/supermemo2.test.ts lib/mastery/gates.test.ts lib/curriculum/seed-chapter-enhance.test.ts",
     "mastery": "tsx scripts/mastery-path.ts",
     "hours": "tsx scripts/hour-budget.ts"
   },

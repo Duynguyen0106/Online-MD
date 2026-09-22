@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="Nephron diuretic target map">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="258" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Nephron — diuretic targets</text>
+      <rect x="30" y="90" width="100" height="50" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="80" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">PCT</text>
+<text x="80" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">CA / SGLT</text>
+      <rect x="150" y="90" width="120" height="50" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="210" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">TAL</text>
+<text x="210" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">NKCC2</text>
+      <rect x="290" y="90" width="120" height="50" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="350" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">DCT</text>
+<text x="350" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">NCC</text>
+      <rect x="430" y="90" width="120" height="50" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="490" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">CD</text>
+<text x="490" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">ENaC/AQP</text>
+      <line x1="130" y1="115" x2="150" y2="115" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <line x1="270" y1="115" x2="290" y2="115" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <line x1="410" y1="115" x2="430" y2="115" stroke="#2f6f5e" stroke-width="2" marker-end="url(#ah)"/>
+  
+      <text x="150" y="170" font-family="Georgia, serif" font-size="11" fill="#b86b3c">Loops @ NKCC2</text>
+      <text x="300" y="170" font-family="Georgia, serif" font-size="11" fill="#b86b3c">Thiazides @ NCC</text>
+      <text x="440" y="170" font-family="Georgia, serif" font-size="11" fill="#b86b3c">MRA / amiloride</text>
+      <text x="30" y="220" font-family="Georgia, serif" font-size="12" fill="#5c7268">Where you block Na⁺ reabsorption predicts K⁺, Ca²⁺, and volume effects</text>
+    
+</svg>

@@ -13,6 +13,7 @@ import { program as seedProgram } from "@/lib/curriculum/seed";
 import { applyCurriculumExpansions } from "@/lib/curriculum/expansions";
 import { newId } from "@/lib/demo/ids";
 import { ensureDemoDataDir } from "@/lib/demo/data-dir";
+import { enhanceProgramSeedLessons } from "@/lib/curriculum/seed-chapter-enhance";
 
 async function dataFiles() {
   const dir = await ensureDemoDataDir();
@@ -288,7 +289,9 @@ export async function deleteFacultyQuestion(id: string) {
 /** Resolve live curriculum with expansions + faculty overrides applied. */
 export async function getResolvedProgram() {
   const overrides = await getCurriculumOverrides();
-  const cloned = applyCurriculumExpansions(structuredClone(seedProgram));
+  const cloned = enhanceProgramSeedLessons(
+    applyCurriculumExpansions(structuredClone(seedProgram)),
+  );
   for (const phase of cloned.phases) {
     for (const mod of phase.modules) {
       mod.lessons = mod.lessons.map((lesson) => {

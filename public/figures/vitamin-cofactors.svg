@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Vitamin cofactor class map">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="238" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Vitamin logic — solubility predicts stores</text>
+      <rect x="40" y="80" width="260" height="70" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="170" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Water-soluble</text>
+<text x="170" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">B / C coenzymes</text>
+<text x="170" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Low stores → early deficiency</text>
+      <rect x="340" y="80" width="260" height="70" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="470" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Fat-soluble</text>
+<text x="470" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">A D E K</text>
+<text x="470" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Stores + malabsorption risk</text>
+      <text x="40" y="190" font-family="Georgia, serif" font-size="12" fill="#5c7268">Name the reaction the vitamin enables before memorizing a rash list</text>
+    
+</svg>

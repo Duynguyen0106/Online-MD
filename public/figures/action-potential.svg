@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="Cardiac action potential and drug classes">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="258" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Ventricular action potential → drug classes</text>
+      <polyline points="60,180 100,180 130,70 180,90 320,90 400,180 560,180" fill="none" stroke="#2f6f5e" stroke-width="3"/>
+      <text x="115" y="60" font-family="Georgia, serif" font-size="12" fill="#b86b3c">0 Na⁺ (I)</text>
+      <text x="230" y="80" font-family="Georgia, serif" font-size="12" fill="#b86b3c">2 Ca²⁺</text>
+      <text x="350" y="140" font-family="Georgia, serif" font-size="12" fill="#b86b3c">3 K⁺ (III)</text>
+      <text x="60" y="210" font-family="Georgia, serif" font-size="12" fill="#5c7268">Class I: Na⁺ block · II: β-block · III: K⁺ block · IV: Ca²⁺ (nodal)</text>
+      <text x="60" y="235" font-family="Georgia, serif" font-size="12" fill="#5c7268">Ic contraindicated in structural heart disease · III: watch QTc</text>
+    
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-label="Transplant rejection timing">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="248" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Rejection — clock + mechanism</text>
+      <rect x="30" y="85" width="170" height="60" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="115" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Hyperacute</text>
+<text x="115" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Minutes–hours</text>
+<text x="115" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Preformed Ab</text>
+      <rect x="230" y="85" width="170" height="60" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="315" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Acute</text>
+<text x="315" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Days–months</text>
+<text x="315" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">T cells ± Ab</text>
+      <rect x="430" y="85" width="170" height="60" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="515" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Chronic</text>
+<text x="515" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Months–years</text>
+<text x="515" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Vasculopathy</text>
+      <text x="30" y="185" font-family="Georgia, serif" font-size="12" fill="#5c7268">Crossmatch prevents hyperacute · Biopsy guides rescue immunosuppression</text>
+    
+</svg>
