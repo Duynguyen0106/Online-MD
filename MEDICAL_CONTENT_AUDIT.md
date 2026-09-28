@@ -91,15 +91,14 @@ Curriculum
 
 | Metric | Value |
 | --- | --- |
-| Lessons with 0 objectives | **5** |
-| Lessons with 1 objective | 876 |
-| Lessons with 2 objectives | 3 |
-| Lessons with 3–5 objectives | **0** |
-| Vague verb objectives (`know` / `understand` / etc.) | 1 (`obj-peds-6`) |
+| Lessons with 0 objectives (audit baseline) | **5** |
+| Lessons with 0 objectives (after safe fix) | **0** |
+| Objective records (after catalog expansion) | **~3,206** |
+| Vague verb objectives (`know` / `understand` / etc.) | 1 fixed (`obj-peds-6`) |
 
-**Gap:** Nearly all lessons have a single objective record. Catalog lessons use a generic `Explain and apply: {title}` pattern. Student-facing chapter framing often lists 4 objectives in markdown, but these are **not** first-class `Objective` records and are not linked to quiz items.
+**Baseline gap (now remediated for coverage):** Five seed lessons lacked objectives; catalog lessons used a generic `Explain and apply: {title}` pattern. Catalog factory now emits 3–4 measurable objectives per topic from existing teaching points. Student-facing chapter framing still lists objectives in markdown as well.
 
-**Lessons missing objectives:**
+**Previously missing (objectives added):**
 
 1. `les-msk-1` — Approach to Joint Pain  
 2. `les-peds-1` — Fever in the Young Infant — Reasoning Frame  
