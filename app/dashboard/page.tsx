@@ -4,6 +4,7 @@ import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ResetProgressButton } from "@/components/student/reset-progress-button";
 import {
+  STUDENT_COPY,
   formatProgressState,
   lessonActionLabel,
   moduleDescription,
@@ -38,9 +39,6 @@ export default async function DashboardPage() {
   const step1 = await canAccessStep1Qbank(state);
   const step2 = await canAccessStep2CkQbank(state);
   const nextProgress = next ? state.lessonProgress[next.id] : undefined;
-  const nextSummary =
-    next?.concepts[0]?.summary ??
-    "Work through the core concepts, clinical connections, and a short check of your understanding.";
 
   return (
     <AppShell title="Your learning dashboard">
@@ -58,8 +56,8 @@ export default async function DashboardPage() {
           </h2>
           <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
             {next
-              ? nextSummary
-              : "You’ve finished the available lessons. Practice with the question bank when you’re ready."}
+              ? STUDENT_COPY.continueSupporting
+              : STUDENT_COPY.curriculumComplete}
           </p>
           {next ? (
             <Button asChild className="mt-5">
@@ -87,10 +85,12 @@ export default async function DashboardPage() {
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Badge className={step1.unlocked ? "bg-emerald-50 text-emerald-800" : ""}>
-              Step 1 question bank · {step1.unlocked ? "Available" : "Not yet available"}
+              Step 1 question bank
+              {step1.unlocked ? " · Available" : ""}
             </Badge>
             <Badge className={step2.unlocked ? "bg-emerald-50 text-emerald-800" : ""}>
-              Step 2 CK question bank · {step2.unlocked ? "Available" : "Not yet available"}
+              Step 2 CK question bank
+              {step2.unlocked ? " · Available" : ""}
             </Badge>
           </div>
         </section>
