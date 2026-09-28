@@ -40,7 +40,7 @@ export function QbankPanel({
     <div className="space-y-6">
       <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
         <label className="text-sm">
-          <span className="mb-1 block text-[var(--muted)]">Module bank</span>
+          <span className="mb-1 block text-[var(--muted)]">Module questions</span>
           <select
             className="h-10 w-full max-w-md rounded-md border border-[var(--border)] px-3"
             value={moduleId}
@@ -49,7 +49,7 @@ export function QbankPanel({
             {modules.map((m) => (
               <option key={m.id} value={m.id}>
                 {m.title}
-                {moduleGates[m.id] ? " (locked)" : ""}
+                {moduleGates[m.id] ? " (not yet available)" : ""}
               </option>
             ))}
           </select>
@@ -57,13 +57,13 @@ export function QbankPanel({
         <p className="mt-2 text-xs text-[var(--muted)]">
           {selectedLocked
             ? moduleGates[moduleId]
-            : "Module mastered — assessment bank available"}
+            : "Questions are available for this module."}
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
         <GateCard
-          title="Module Qbank"
+          title="Module question bank"
           reason={selectedLocked ? moduleGates[moduleId] : undefined}
           unlocked={!selectedLocked}
           onStart={() =>
@@ -79,14 +79,18 @@ export function QbankPanel({
                 setScore(null);
                 setResponses({});
               } catch (e) {
-                setError(e instanceof Error ? e.message : "Locked");
+                setError(
+                  e instanceof Error
+                    ? e.message
+                    : "These questions aren’t available yet.",
+                );
               }
             })
           }
           pending={pending}
         />
         <GateCard
-          title="Step 1 Qbank"
+          title="Step 1 question bank"
           reason={step1Reason}
           unlocked={!step1Reason}
           onStart={() =>
@@ -102,14 +106,18 @@ export function QbankPanel({
                 setScore(null);
                 setResponses({});
               } catch (e) {
-                setError(e instanceof Error ? e.message : "Locked");
+                setError(
+                  e instanceof Error
+                    ? e.message
+                    : "These questions aren’t available yet.",
+                );
               }
             })
           }
           pending={pending}
         />
         <GateCard
-          title="Step 2 CK Qbank"
+          title="Step 2 CK question bank"
           reason={step2Reason}
           unlocked={!step2Reason}
           onStart={() =>
@@ -125,7 +133,11 @@ export function QbankPanel({
                 setScore(null);
                 setResponses({});
               } catch (e) {
-                setError(e instanceof Error ? e.message : "Locked");
+                setError(
+                  e instanceof Error
+                    ? e.message
+                    : "These questions aren’t available yet.",
+                );
               }
             })
           }
@@ -142,14 +154,14 @@ export function QbankPanel({
       {attemptId ? (
         <div className="space-y-4">
           <h2 className="font-[family-name:var(--font-display)] text-xl">
-            Assessment session
+            Practice session
           </h2>
           {activeQuestions.map((q, i) => (
             <fieldset
               key={q.id}
               className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
             >
-              <legend className="text-sm text-[var(--muted)]">Q{i + 1}</legend>
+              <legend className="text-sm text-[var(--muted)]">Question {i + 1}</legend>
               <p className="mb-3 text-sm leading-7">{q.stem}</p>
               <div className="space-y-2">
                 {q.choices.map((c) => (
@@ -183,7 +195,7 @@ export function QbankPanel({
               });
             }}
           >
-            Submit assessment
+            Submit answers
           </Button>
           {score !== null ? (
             <p className="text-sm">Session score {percent(score)}</p>
@@ -191,8 +203,8 @@ export function QbankPanel({
         </div>
       ) : (
         <p className="text-sm text-[var(--muted)]">
-          Qbank is an assessment layer. Master the related content first — gates are enforced in
-          server actions, not only in the UI.
+          Complete the related lessons and assessments first. The question bank is for practice
+          after you’ve learned the material.
         </p>
       )}
     </div>
@@ -215,8 +227,11 @@ function GateCard({
   return (
     <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
       <h3 className="font-medium">{title}</h3>
-      <p className="mt-2 min-h-16 text-xs text-[var(--muted)]">
-        {unlocked ? "Unlocked" : reason}
+      <p className="mt-2 min-h-16 text-xs leading-5 text-[var(--muted)]">
+        {unlocked
+          ? "Ready when you are."
+          : reason ??
+            "Complete the module lessons and assessment before these questions become available."}
       </p>
       <Button
         className="mt-3"
@@ -224,7 +239,7 @@ function GateCard({
         disabled={!unlocked || pending}
         onClick={onStart}
       >
-        {unlocked ? "Start" : "Locked"}
+        {unlocked ? "Start questions" : "Not yet available"}
       </Button>
     </div>
   );

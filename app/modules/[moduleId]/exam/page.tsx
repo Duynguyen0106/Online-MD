@@ -26,17 +26,20 @@ export default async function ModuleExamPage({
     .filter(Boolean);
 
   return (
-    <AppShell title={mod.exam.title}>
-      <p className="mb-6 text-sm text-[var(--muted)]">
-        Pass ≥{Math.round(mod.exam.passThreshold * 100)}% after mastering all lessons to master the
-        module and unlock its Qbank.
+    <AppShell title="Module assessment">
+      <p className="mb-2 text-sm text-[var(--muted)]">{mod.title}</p>
+      <p className="mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
+        You’ve reached the end of this module. Use the assessment to check whether you’re ready to
+        move on. Pass threshold: {Math.round(mod.exam.passThreshold * 100)}%.
       </p>
       <ExamRunner
         moduleId={moduleId}
         questions={questions}
         passThreshold={mod.exam.passThreshold}
         lockedReason={
-          lessonsOk ? undefined : "Master all lessons in this module before sitting the exam."
+          lessonsOk
+            ? undefined
+            : "Complete the lessons in this module before starting the assessment."
         }
       />
     </AppShell>

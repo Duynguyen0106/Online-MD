@@ -123,16 +123,14 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
             reading(
               `blk-${topic.key}-ch1`,
               conceptId,
-              "I. Foundations & learning goals",
+              "1. The basics",
               1,
               buildChapterFraming(topic),
             ),
             reading(
               `blk-${topic.key}-ch2`,
               conceptId,
-              clinical
-                ? "II. Clinical pathway (core chapter)"
-                : "II. Core mechanisms (core chapter)",
+              clinical ? "2. Clinical approach" : "2. How it works",
               2,
               buildChapterCore(topic),
             ),
@@ -140,22 +138,22 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
               `blk-${topic.key}-ch3`,
               conceptId,
               clinical
-                ? "III. Bedside application"
-                : "III. Clinical correlation",
+                ? "3. Why it matters clinically"
+                : "3. Why it matters clinically",
               3,
               buildChapterClinical(topic),
             ),
             reading(
               `blk-${topic.key}-ch4`,
               conceptId,
-              "IV. Synthesis, pitfalls & self-check",
+              "4. Put it together",
               4,
               buildChapterSynthesis(topic),
             ),
             vignette(
               `blk-${topic.key}-case`,
               conceptId,
-              clinical ? "Case conference" : "Board vignette",
+              "Clinical case",
               5,
               buildChapterVignette(topic),
             ),

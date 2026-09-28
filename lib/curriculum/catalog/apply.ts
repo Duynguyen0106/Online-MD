@@ -1,4 +1,5 @@
 import type { Module, Program } from "@/lib/types/domain";
+import { MODULE_DESCRIPTIONS } from "@/lib/copy/student";
 import { IDS } from "@/lib/curriculum/seed";
 import { buildCatalogBundle } from "@/lib/curriculum/catalog/factory";
 import { FOUR_YEAR_TOPICS } from "@/lib/curriculum/catalog/topics-generated";
@@ -51,7 +52,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "biochemistry",
     sequence: 0,
     description:
-      "Year-1 metabolic biochemistry: fuels, vitamins, inborn errors — foundation for every organ-system block.",
+      "Build the metabolic foundations you’ll use throughout medicine.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,
@@ -63,7 +64,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "anatomy-embryology",
     sequence: 0,
     description:
-      "Gross anatomy, embryologic malformations, and clinical imaging correlation for Year 1.",
+      "Connect anatomy and development to clinical findings and medical imaging.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,
@@ -75,7 +76,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "immunology",
     sequence: 0,
     description:
-      "Innate/adaptive immunity, hypersensitivity, autoimmunity, transplant, and vaccines.",
+      "Understand innate and adaptive immunity, hypersensitivity, autoimmunity, transplantation, and vaccines.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,
@@ -87,7 +88,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "pharmacology",
     sequence: 0,
     description:
-      "ADME, autonomic pharmacology, toxidromes, and mechanism-class maps used across clerkships.",
+      "Learn how drugs move through the body, how they work, and how to recognize important drug effects and toxicities.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,
@@ -99,7 +100,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "epidemiology",
     sequence: 0,
     description:
-      "Study design, bias, screening metrics, biostatistics literacy, and prevention science.",
+      "Learn how to interpret medical evidence, understand risk, and evaluate clinical studies.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,
@@ -111,7 +112,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "ethics-systems",
     sequence: 0,
     description:
-      "Clinical ethics, consent/capacity, justice/equity, and systems professionalism.",
+      "Work through the ethical and professional issues that come up in clinical practice.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,
@@ -120,14 +121,14 @@ export function ensureFourYearModules(program: Program): Program {
   // Rename phase display names to 4-year map without breaking IDs
   for (const phase of program.phases) {
     if (phase.id === IDS.phase1) {
-      phase.name = "Years 1–2 — Preclinical Foundations & Organ Systems";
+      phase.name = "Years 1–2 · Preclinical medicine";
       phase.description =
-        "Full-time preclinical map (≥2 academic years): Year-1 mechanisms (biochem, anatomy, immuno, micro, pharm, path) and Year-2 organ-system pathophysiology. Mastery required before Step 1 Qbank unlock.";
+        "Build the basic science and organ-system knowledge you’ll use throughout medical school.";
     }
     if (phase.id === IDS.phase2) {
-      phase.name = "Years 3–4 — Core Clerkships & Advanced Clinical";
+      phase.name = "Years 3–4 · Clinical medicine";
       phase.description =
-        "Year-3 core clerkships plus Year-4 sub-internship / ICU / complex ambulatory topics on the same clerkship spines. Step 2 CK Qbank after core clerkship mastery.";
+        "Put the science into practice through the core clinical rotations.";
     }
   }
 
@@ -135,6 +136,14 @@ export function ensureFourYearModules(program: Program): Program {
   program.phases = program.phases.filter(
     (p) => p.id !== "phase-advanced" || p.modules.length > 0,
   );
+
+  // Keep module IDs stable; refresh student-facing descriptions where we have better copy.
+  for (const phase of program.phases) {
+    for (const mod of phase.modules) {
+      const next = MODULE_DESCRIPTIONS[mod.id];
+      if (next) mod.description = next;
+    }
+  }
 
   return program;
 }

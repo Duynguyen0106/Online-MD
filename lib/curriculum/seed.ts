@@ -57,11 +57,11 @@ function q(
 }
 
 /**
- * Curriculum architecture mirrors common patterns at top US MD schools
- * (integrated organ-system preclerkship + core clerkships), adapted for
- * asynchronous online mastery learning. Content is original educational
- * writing aligned to public USMLE Content Outline domains — not copied
- * from any school LMS, First Aid, UWorld, or other copyrighted banks.
+ * Curriculum structure mirrors common US MD patterns
+ * (organ-system preclinical blocks + core clerkships).
+ * Content is original educational writing aligned to public USMLE Content
+ * Outline domains — not copied from any school LMS, First Aid, UWorld, or
+ * other copyrighted banks.
  */
 export const quizQuestions: QuizQuestion[] = [
   q(
@@ -637,7 +637,7 @@ export const program: Program = {
   name: "Online MD — Integrated Curriculum",
   slug: "online-md",
   description:
-    "A content-first MD curriculum modeled on integrated organ-system preclerkship and core clerkship structures used across leading US medical schools, redesigned for asynchronous online mastery learning.",
+    "A structured medical curriculum from basic science to organ systems and the core clinical rotations.",
   phases: [
     {
       id: IDS.phase1,
@@ -648,7 +648,7 @@ export const program: Program = {
       phaseKind: "foundations",
       usmleFocus: "step1",
       description:
-        "Preclerkship foundational science integrated by organ system and disease mechanism — analogous to block curricula at schools such as UCSF Bridges, Vanderbilt, and other organ-based programs. Mastery required before Step 1 Qbank unlock.",
+        "Build the basic science and organ-system knowledge you’ll use throughout medical school.",
       modules: [
         {
           id: IDS.modCell,
@@ -657,7 +657,7 @@ export const program: Program = {
           slug: "cell-molecular",
           sequence: 1,
           description:
-            "Genetics, cell signaling, and cell injury — the shared language of every organ-system block.",
+            "Learn the cellular and molecular processes that underlie disease.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -711,7 +711,7 @@ Cystic fibrosis (CFTR folding/trafficking), sickle cell (HbS polymerization), an
                     video(
                       "blk-cell-1a-v",
                       "con-cell-1a",
-                      "External primer: gene expression overview (public)",
+                      "Recommended video: gene expression overview (public)",
                       2,
                       "https://www.youtube.com/watch?v=gG7uCskUOrA",
                     ),
@@ -742,7 +742,7 @@ Annotate where NMD, chaperones, and proteasomes intervene.`,
                       "con-cell-1b",
                       "Signal transduction essentials",
                       1,
-                      `## Receptor classes high-yield for USMLE Step 1
+                      `## Receptor classes for clinical pharmacology
 1. **GPCR** → Gα (Gs/Gi/Gq) → adenylate cyclase / PLC → cAMP or IP3/DAG.
 2. **Receptor tyrosine kinase** → autophosphorylation → Ras–MAPK, PI3K–AKT.
 3. **Nuclear receptors** → ligand-dependent transcription (steroids, thyroid hormone).
@@ -816,7 +816,7 @@ Reversible injury: cellular swelling, fatty change. Irreversible: membrane damag
           slug: "cardiovascular",
           sequence: 2,
           description:
-            "Integrated CV block: electrophysiology, coronary disease, heart failure, and foundational therapy — a centerpiece of organ-system curricula.",
+            "Understand the heart, circulation, and the major diseases that affect them.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -869,7 +869,7 @@ Atrial depolarization → P wave; ventricular depolarization → QRS; ventricula
                     video(
                       "blk-cv-1a-v",
                       "con-cv-1a",
-                      "External primer: cardiac AP (public anatomy/physiology)",
+                      "Recommended video: cardiac AP (public anatomy/physiology)",
                       2,
                       "https://www.youtube.com/watch?v=UTAIas9bEwk",
                     ),
@@ -996,7 +996,7 @@ ARNI/ACEI/ARB, evidence-based beta-blockers, mineralocorticoid receptor antagoni
           title: "Respiratory System",
           slug: "respiratory",
           sequence: 3,
-          description: "Gas exchange, mechanics, obstructive/restrictive disease.",
+          description: "Learn how ventilation and gas exchange work, then apply them to common lung diseases.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1040,7 +1040,7 @@ Shunt does not correct fully with 100% O2; V/Q mismatch usually does improve.
 - Zone 2: Pa > PA > Pv — intermittent flow
 - Zone 3: Pa > Pv > PA — continuous flow (base)
 
-Online mastery tip: sketch zones, then explain why PE (dead space) and pneumonia (shunt-like units) behave differently with supplemental O2.`,
+Study tip: sketch the zones, then explain why PE (dead space) and pneumonia (shunt-like units) behave differently with supplemental O₂.`,
                     ),
                     vignette(
                       "blk-pulm-1a-x",
@@ -1092,7 +1092,7 @@ DLCO low in emphysema, ILD, pulmonary vascular disease; relatively preserved in 
           title: "Renal & Acid–Base",
           slug: "renal",
           sequence: 4,
-          description: "GFR, tubular transport, diuretics, acid–base scaffolds.",
+          description: "Understand kidney function, fluid balance, electrolytes, and acid–base disorders.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1172,7 +1172,7 @@ Loops are most potent; thiazides preferred in HTN; spironolactone disease-modify
           title: "Gastrointestinal & Hepatology",
           slug: "gi-hepatology",
           sequence: 5,
-          description: "Digestion, absorption, liver pathophysiology, portal hypertension.",
+          description: "Learn how the GI tract and liver work and how common diseases disrupt them.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1244,7 +1244,7 @@ Splenic congestion → splenomegaly ± thrombocytopenia
           title: "Endocrine & Reproductive",
           slug: "endocrine",
           sequence: 6,
-          description: "Feedback axes, thyroid, diabetes foundations, reproductive endocrinology intro.",
+          description: "Understand hormonal regulation and the major endocrine and reproductive disorders.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1294,7 +1294,7 @@ Hashimoto vs Graves are autoimmune prototypes; learn mechanism before memorizing
           title: "Hematology & Oncology Foundations",
           slug: "hematology",
           sequence: 7,
-          description: "Anemia classification, hemostasis overview, neoplasia principles.",
+          description: "Build a framework for anemia, bleeding, clotting, and cancer.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1345,7 +1345,7 @@ Microcytic: iron deficiency, thalassemia, anemia of chronic disease, sideroblast
           title: "Neurosciences & Behavior",
           slug: "neurosciences",
           sequence: 8,
-          description: "Localization, motor pathways, and behavioral science foundations.",
+          description: "Learn how the nervous system works and how to approach common neurologic problems.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1395,7 +1395,7 @@ Facial weakness: UMN spares forehead; LMN (CN VII) involves forehead — classic
           title: "Musculoskeletal & Rheumatology",
           slug: "msk",
           sequence: 9,
-          description: "Bone, joint, and autoimmune connective-tissue foundations.",
+          description: "Understand bones, joints, muscles, and the immune diseases that affect connective tissue.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1410,7 +1410,7 @@ Facial weakness: UMN spares forehead; LMN (CN VII) involves forehead — classic
             {
               id: "les-msk-1",
               moduleId: IDS.modMsk,
-              title: "Joint Pain Framework",
+              title: "Approach to Joint Pain",
               slug: "msk-joints",
               sequence: 1,
               estimatedMinutes: 30,
@@ -1445,7 +1445,7 @@ Monoarthritis → always consider septic arthritis until proven otherwise in acu
           title: "Host Defense, Microbiology & Infectious Disease",
           slug: "infectious-disease",
           sequence: 10,
-          description: "Immune principles and high-yield organism identification strategies.",
+          description: "Learn how the immune system responds to infection and how to recognize important pathogens.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -1481,7 +1481,7 @@ Monoarthritis → always consider septic arthritis until proven otherwise in acu
                       "Bug desk reference habits",
                       1,
                       `Build branching algorithms rather than isolated flashcards: Gram → shape → arrangement → catalase → coagulase/hemolysis → specialty tests.  
-S. aureus vs strep vs enterococcus distinctions unlock dozens of clinical vignettes.`,
+S. aureus vs strep vs enterococcus distinctions clarify dozens of clinical vignettes.`,
                     ),
                   ],
                 },
@@ -1500,7 +1500,7 @@ S. aureus vs strep vs enterococcus distinctions unlock dozens of clinical vignet
       phaseKind: "clerkship_core",
       usmleFocus: "step2ck",
       description:
-        "Core clinical clerkships aligned with the standard US MD core (IM, Surgery, Pediatrics, OB/GYN, Psychiatry, Family Medicine). Online model emphasizes clinical reasoning cases and Step 2 CK–style decision making. Step 2 CK Qbank unlocks after core clerkship modules are mastered.",
+        "Put the science into practice through the core clinical rotations.",
       modules: [
         {
           id: IDS.modIm,
@@ -1508,7 +1508,7 @@ S. aureus vs strep vs enterococcus distinctions unlock dozens of clinical vignet
           title: "Internal Medicine Clerkship",
           slug: "internal-medicine",
           sequence: 1,
-          description: "Adult medicine clinical reasoning: pneumonia, ACS, AKI, glycemic emergencies.",
+          description: "Learn how to approach common adult patients, from the first presentation through diagnosis and initial management.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,
@@ -1567,7 +1567,7 @@ Always reconsider TB, influenza, COVID-19, aspiration, and immunocompromised hos
           title: "Surgery Clerkship",
           slug: "surgery",
           sequence: 2,
-          description: "Perioperative physiology, acute abdomen, shock, wound healing.",
+          description: "Build a practical framework for common surgical presentations, perioperative care, and the initial assessment of the surgical patient.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,
@@ -1618,7 +1618,7 @@ Surgical priority: stop bleeding, restore volume/oxygen delivery, treat cause.`,
           title: "Pediatrics Clerkship",
           slug: "pediatrics",
           sequence: 3,
-          description: "Growth, development, fever, and pediatric preventive care.",
+          description: "Learn how common pediatric problems present differently from adults and how to approach the child and family in clinical practice.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,
@@ -1668,7 +1668,7 @@ Online clerkship goal: practice *risk stratification reasoning*, not memorize a 
           title: "Obstetrics & Gynecology Clerkship",
           slug: "obgyn",
           sequence: 4,
-          description: "Pregnancy physiology, prenatal care, and common gynecologic presentations.",
+          description: "Understand common problems in pregnancy, reproductive health, and women’s health through a clinical framework.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,
@@ -1718,7 +1718,7 @@ Teach red flags: bleeding, severe headache/visual changes, decreased fetal movem
           title: "Psychiatry Clerkship",
           slug: "psychiatry",
           sequence: 5,
-          description: "Mental status, mood/psychosis frameworks, safety assessment.",
+          description: "Learn how to approach common psychiatric presentations, establish a differential diagnosis, and understand the principles of treatment.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,
@@ -1768,7 +1768,7 @@ Major depressive disorder requires persistent syndromic features with functional
           title: "Family Medicine Clerkship",
           slug: "family-medicine",
           sequence: 6,
-          description: "Continuity care, prevention, and undifferentiated outpatient complaints.",
+          description: "Apply clinical reasoning across common problems seen in primary care and longitudinal medicine.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,

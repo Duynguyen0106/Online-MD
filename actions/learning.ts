@@ -149,7 +149,9 @@ export async function submitModuleExam(input: unknown) {
     (l) => userState.lessonProgress[l.id]?.state === "mastered",
   );
   if (!lessonsOk) {
-    throw new Error("Module exam locked until all lessons are mastered");
+    throw new Error(
+      "Complete the lessons in this module before starting the assessment.",
+    );
   }
 
   const qmap = await getMergedQuestionMap();
@@ -247,7 +249,9 @@ export async function startQbankAttempt(input: unknown) {
     moduleId: parsed.moduleId,
     usmleStep: parsed.usmleStep,
   });
-  if (questions.length === 0) throw new Error("No qbank questions available");
+  if (questions.length === 0) {
+    throw new Error("No questions are available for this selection yet.");
+  }
 
   const attemptId = newId("qbank");
   await updateStudentState((s) => {

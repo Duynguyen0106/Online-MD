@@ -45,8 +45,8 @@ export function TutorChat({
         <div className="mb-4 max-h-[480px] space-y-3 overflow-y-auto">
           {log.length === 0 ? (
             <p className="text-sm text-[var(--muted)]">
-              Ask about mechanisms in <strong>{lessonTitle}</strong>. Responses are Zod-validated
-              JSON from a medical-educator system prompt.
+              Ask a question about <strong>{lessonTitle}</strong>. Keep it focused on the mechanism
+              or clinical point you’re stuck on.
             </p>
           ) : null}
           {log.map((m, i) => (

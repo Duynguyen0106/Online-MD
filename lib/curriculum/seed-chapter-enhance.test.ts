@@ -32,7 +32,7 @@ describe("seed-chapter-enhance", () => {
     assert.ok(enhanced.estimatedMinutes >= 90);
     assert.ok(
       enhanced.concepts[0].blocks.some((b) =>
-        b.title?.includes("Core mechanisms"),
+        b.title?.includes("How it works"),
       ),
     );
   });

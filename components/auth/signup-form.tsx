@@ -25,16 +25,20 @@ export function SignupForm() {
             router.push("/dashboard");
             router.refresh();
           } catch (err) {
-            setError(err instanceof Error ? err.message : "Signup failed");
+            setError(
+              err instanceof Error
+                ? err.message
+                : "We couldn’t create your account. Please try again.",
+            );
           }
         });
       }}
     >
       <h1 className="font-[family-name:var(--font-display)] text-2xl">
-        Student signup
+        Create your student account
       </h1>
       <p className="text-sm text-[var(--muted)]">
-        Public student registration. Faculty and admin remain invite-only.
+        Start working through the Online MD curriculum at your own pace.
       </p>
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Full name</span>
@@ -56,7 +60,7 @@ export function SignupForm() {
         />
       </label>
       <Button disabled={pending} type="submit" className="w-full">
-        Create student account
+        Create account
       </Button>
       {error ? <p className="text-sm text-[var(--danger)]">{error}</p> : null}
       <p className="text-xs text-[var(--muted)]">
@@ -64,6 +68,9 @@ export function SignupForm() {
         <Link href="/login" className="underline">
           Log in
         </Link>
+      </p>
+      <p className="text-xs text-[var(--muted)]">
+        Faculty and administrator accounts require an invitation.
       </p>
     </form>
   );

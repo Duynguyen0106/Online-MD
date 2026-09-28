@@ -101,7 +101,7 @@ ${
 
 ## How the chapter is organized
 
-Section II is the didactic core with detailed mechanism content. Section III bridges to patients. Section IV consolidates pitfalls. The vignette is a teach-back box before the formative quiz (≥80% to pass).
+Section 2 is the main teaching content. Section 3 connects the science to patients. Section 4 reviews key points and common mistakes. The clinical case is a short teach-back before the quiz (≥80% to pass).
 
 > Original Online MD teaching aligned to USMLE Content Outline domains. Verify doses and guidelines with primary sources in clinical care.
 `;
@@ -117,13 +117,13 @@ export function buildChapterCore(topic: CatalogTopic): string {
     .join("\n");
 
   if (clinical) {
-    return `## ${topic.title} — clinical pathway
+    return `## ${topic.title} — clinical approach
 
 ### Opening physiologic frame
 
 Patients do not arrive labeled **${topic.title}**. They arrive with symptoms, vital-sign trajectories, and risk factors. Begin by naming the dominant physiologic problem inside the **${topic.organSystem}** domain of ${topic.contentCategory}. Acuity decides whether you stabilize in parallel with diagnosis or can gather data first.
 
-### High-yield reference detail
+### Key points
 
 ${bank || `Use the chapter sections below to rebuild the full pathway for **${topic.title}** from first principles.`}
 ${figuresBlock}
@@ -151,7 +151,7 @@ ${topic.quizExplain}
 
 A regulated process in **${topic.organSystem}** ${topic.contentCategory.toLowerCase()} maintains homeostasis; disease appears when the process is deficient, excessive, mistimed, or mislocalized. **${topic.title}** develops that arc in chapter form. Each heading below is a major control point.
 
-### High-yield reference detail
+### Key points
 
 ${bank || `Rebuild **${topic.title}** from the control-point sections below, tying each node to regulation and phenotype.`}
 ${figuresBlock}
@@ -211,7 +211,7 @@ Before leaving the case, state level of care, pending results, precautions, and 
 `;
   }
 
-  return `## Clinical correlation — ${topic.title}
+  return `## Why it matters clinically — ${topic.title}
 
 ### From mechanism to a person
 
@@ -243,7 +243,7 @@ export function buildChapterSynthesis(topic: CatalogTopic): string {
     .map((p, i) => `- [ ] ${i + 1}. I can teach: *${p}*`)
     .join("\n");
 
-  return `## Synthesis, pitfalls, and self-check
+  return `## Put it together
 
 ### Chapter in one paragraph
 

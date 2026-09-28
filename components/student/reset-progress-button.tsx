@@ -20,7 +20,7 @@ export function ResetProgressButton() {
         });
       }}
     >
-      Reset demo progress
+      Reset my progress
     </Button>
   );
 }

@@ -5,27 +5,27 @@ import { RoleSwitcher } from "@/components/shared/role-switcher";
 const adminLinks = [
   { href: "/admin/analytics", label: "Analytics" },
   { href: "/admin/invites", label: "Invites" },
-  { href: "/admin/unlock-rules", label: "Unlock rules" },
+  { href: "/admin/unlock-rules", label: "Access rules" },
   { href: "/admin/users", label: "Users" },
-  { href: "/faculty", label: "Content" },
+  { href: "/faculty", label: "Curriculum" },
   { href: "/dashboard", label: "Student view" },
 ];
 
 const facultyLinks = [
-  { href: "/faculty", label: "Content" },
+  { href: "/faculty", label: "Curriculum" },
   { href: "/faculty/flashcards", label: "Flashcards" },
   { href: "/faculty/questions", label: "Questions" },
   { href: "/dashboard", label: "Student view" },
-  { href: "/login", label: "Login" },
+  { href: "/login", label: "Log in" },
 ];
 
 const studentLinks = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/flashcards", label: "Flashcards" },
-  { href: "/qbank", label: "Qbank" },
-  { href: "/tutor", label: "Faculty AI" },
-  { href: "/cases", label: "Cases" },
-  { href: "/login", label: "Login" },
+  { href: "/qbank", label: "Question bank" },
+  { href: "/tutor", label: "Ask a question" },
+  { href: "/cases", label: "Clinical cases" },
+  { href: "/login", label: "Log in" },
 ];
 
 export async function AppShell({
