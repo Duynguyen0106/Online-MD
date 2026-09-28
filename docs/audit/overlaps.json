@@ -1,0 +1,1312 @@
+[
+  {
+    "a": "les-pulm-2",
+    "aTitle": "Obstructive & Restrictive Patterns",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y2-pulm-obstruct-restrict",
+    "bTitle": "Obstructive vs Restrictive Patterns",
+    "bModule": "Respiratory System",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-msk-3",
+    "aTitle": "Low Back Pain Red Flags",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-cat-y3-fm-back-pain",
+    "bTitle": "Low Back Pain Red Flags",
+    "bModule": "Family Medicine Clerkship",
+    "score": 1,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y1-id-viruses-dna",
+    "aTitle": "DNA Virus Families",
+    "aModule": "Host Defense, Microbiology & Infectious Disease",
+    "b": "les-cat-y1-id-viruses-rna",
+    "bTitle": "RNA Virus Families",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-im-5",
+    "aTitle": "Community Pneumonia Disposition",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y3-im-cap-admit",
+    "bTitle": "Community Pneumonia Disposition",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-im-goals-care",
+    "aTitle": "Goals of Care Conversations",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y4-im-goals-icu",
+    "bTitle": "ICU Goals-of-Care Conversations",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 1,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y3-im-onc-emerg",
+    "aTitle": "Oncologic Emergencies",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y4-im-onco-emerg",
+    "bTitle": "Oncologic Emergencies",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-peds-7",
+    "aTitle": "Pediatric Asthma Exacerbation",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-peds-asthma-exac",
+    "bTitle": "Pediatric Asthma Exacerbation",
+    "bModule": "Pediatrics Clerkship",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-psych-3",
+    "aTitle": "Suicide Risk Assessment Essentials",
+    "aModule": "Psychiatry Clerkship",
+    "b": "les-cat-y3-psych-si-assess",
+    "bTitle": "Suicide Risk Assessment Essentials",
+    "bModule": "Psychiatry Clerkship",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-depression-pc",
+    "bTitle": "PHQ-9 in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 1,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-path-heart-path",
+    "aTitle": "Cardiac Pathology High-Yield",
+    "aModule": "Cells, Molecules & Mechanisms of Disease",
+    "b": "les-cat-y2-path-gi-path",
+    "bTitle": "GI Pathology High-Yield",
+    "bModule": "Cells, Molecules & Mechanisms of Disease",
+    "score": 0.75,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-path-lung-path",
+    "aTitle": "Pulmonary Pathology High-Yield",
+    "aModule": "Cells, Molecules & Mechanisms of Disease",
+    "b": "les-cat-y2-path-gi-path",
+    "bTitle": "GI Pathology High-Yield",
+    "bModule": "Cells, Molecules & Mechanisms of Disease",
+    "score": 0.75,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-gi-3",
+    "aTitle": "Portal Hypertension & Cirrhosis Complications",
+    "aModule": "Gastrointestinal & Hepatology",
+    "b": "les-cat-y2-gi-portal",
+    "bTitle": "Portal Hypertension Complications Map",
+    "bModule": "Gastrointestinal & Hepatology",
+    "score": 0.75,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-peds-4",
+    "aTitle": "Bronchiolitis — Supportive Care Reasoning",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-peds-bronchiolitis",
+    "bTitle": "Bronchiolitis Supportive Care",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.75,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-palliative-fm",
+    "aTitle": "Primary Palliative Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y4-fm-palliative-pc",
+    "bTitle": "Primary Palliative Care Skills",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.75,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-im-vte-ward",
+    "aTitle": "VTE Diagnosis & Treatment Principles",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y3-gyn-pid",
+    "bTitle": "PID Diagnosis & Treatment",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.67,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y3-surg-pediatric-surg",
+    "aTitle": "Pediatric Surgical Emergencies",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-peds-gi-peds",
+    "bTitle": "Pediatric GI Emergencies",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.67,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y3-surg-surgical-nutrition",
+    "aTitle": "Surgical Nutrition",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-surg-nutrition",
+    "bTitle": "Surgical Nutrition Timing",
+    "bModule": "Surgery Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-surg-onc-surg",
+    "aTitle": "Surgical Oncology Principles",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y4-surg-subi-onc-surg",
+    "bTitle": "Surgical Oncology Sub-I",
+    "bModule": "Surgery Clerkship",
+    "score": 0.67,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y4-surg-subi-onc-surg",
+    "aTitle": "Surgical Oncology Sub-I",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y4-ob-gynonc",
+    "bTitle": "Gyn Oncology Surgical Care",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.67,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y3-peds-resp-peds",
+    "aTitle": "Pediatric Respiratory Emergencies",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-peds-gi-peds",
+    "bTitle": "Pediatric GI Emergencies",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-peds-allergy-peds",
+    "aTitle": "Pediatric Allergy & Anaphylaxis",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-peds-anaphylaxis",
+    "bTitle": "Pediatric Anaphylaxis",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-obgyn-4",
+    "aTitle": "Postpartum Hemorrhage — 4 Ts",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-ob-pp-hemorrhage",
+    "bTitle": "Postpartum Hemorrhage Algorithm",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-ob-contraception",
+    "aTitle": "Contraception Mechanisms & Counseling",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-gyn-contraception",
+    "bTitle": "Contraception Counseling MEC",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-psych-7",
+    "aTitle": "Serotonin Syndrome vs NMS",
+    "aModule": "Psychiatry Clerkship",
+    "b": "les-cat-y3-psych-serotonin",
+    "bTitle": "Serotonin Syndrome Recognition",
+    "bModule": "Psychiatry Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-derm-fm",
+    "bTitle": "Primary Care Dermatology",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-palliative-fm",
+    "bTitle": "Primary Palliative Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-mens",
+    "bTitle": "Men's Health Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-geriatrics",
+    "bTitle": "Geriatric Primary Care 5Ms",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-ckd",
+    "bTitle": "CKD Staging in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-derm-fm",
+    "aTitle": "Primary Care Dermatology",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-depression-pc",
+    "bTitle": "PHQ-9 in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-palliative-fm",
+    "aTitle": "Primary Palliative Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-depression-pc",
+    "bTitle": "PHQ-9 in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-depression-pc",
+    "aTitle": "PHQ-9 in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-mens",
+    "bTitle": "Men's Health Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-depression-pc",
+    "aTitle": "PHQ-9 in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-geriatrics",
+    "bTitle": "Geriatric Primary Care 5Ms",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-depression-pc",
+    "aTitle": "PHQ-9 in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-ckd",
+    "bTitle": "CKD Staging in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.67,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-path-heart-path",
+    "aTitle": "Cardiac Pathology High-Yield",
+    "aModule": "Cells, Molecules & Mechanisms of Disease",
+    "b": "les-cat-y2-path-lung-path",
+    "bTitle": "Pulmonary Pathology High-Yield",
+    "bModule": "Cells, Molecules & Mechanisms of Disease",
+    "score": 0.6,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-surg-appendicitis-surg",
+    "aTitle": "Appendicitis Evidence-Based Care",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-psych-ptsd",
+    "bTitle": "PTSD Evidence-Based Care",
+    "bModule": "Psychiatry Clerkship",
+    "score": 0.6,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-peds-1",
+    "aTitle": "Fever in the Young Infant — Reasoning Frame",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-peds-3",
+    "bTitle": "Fever in the Young Infant",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.6,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-path-gi-path",
+    "aTitle": "GI Pathology High-Yield",
+    "aModule": "Cells, Molecules & Mechanisms of Disease",
+    "b": "les-cat-y2-id-zoonoses",
+    "bTitle": "Zoonoses High-Yield",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-path-gi-path",
+    "aTitle": "GI Pathology High-Yield",
+    "aModule": "Cells, Molecules & Mechanisms of Disease",
+    "b": "les-cat-y1-ph-tox2",
+    "bTitle": "Antidote Map High-Yield",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cv-1",
+    "aTitle": "Cardiac Electrophysiology & Mechanics",
+    "aModule": "Cardiovascular System",
+    "b": "les-cat-y2-cv-excitation",
+    "bTitle": "Cardiac Electrophysiology Gradients",
+    "bModule": "Cardiovascular System",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-cv-acs-path",
+    "aTitle": "ACS Pathophysiology Deep Dive",
+    "aModule": "Cardiovascular System",
+    "b": "les-cat-y2-endo-dka-hhs-path",
+    "bTitle": "DKA vs HHS Mechanisms Deep Dive",
+    "bModule": "Endocrine & Reproductive",
+    "score": 0.5,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y2-cv-pericardium",
+    "aTitle": "Pericardial Disease Spectrum",
+    "aModule": "Cardiovascular System",
+    "b": "les-cat-y1-id-strep2",
+    "bTitle": "Streptococcal Disease Spectrum",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-pulm-3",
+    "aTitle": "Pulmonary Embolism Physiology",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y2-pulm-rehab",
+    "bTitle": "Pulmonary Rehabilitation Physiology",
+    "bModule": "Respiratory System",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-pulm-3",
+    "aTitle": "Pulmonary Embolism Physiology",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y3-im-pe-workup",
+    "bTitle": "Pulmonary Embolism Workup",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-pulm-asthma-path",
+    "aTitle": "Asthma Pathobiology",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y2-id-sti",
+    "bTitle": "STI Pathobiology",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-pulm-pe-path",
+    "aTitle": "PE Pathophysiology Expanded",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y2-ren-ckd-mbd",
+    "bTitle": "CKD–MBD Pathophysiology",
+    "bModule": "Renal & Acid–Base",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-pulm-ards-path",
+    "aTitle": "ARDS Pathobiology",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y2-id-sti",
+    "bTitle": "STI Pathobiology",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-renal-4",
+    "aTitle": "Hyponatremia Diagnostic Framework",
+    "aModule": "Renal & Acid–Base",
+    "b": "les-cat-y1-bc-urea-lab",
+    "bTitle": "Hyperammonemia Diagnostic Framework",
+    "bModule": "Biochemistry & Metabolism",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-renal-4",
+    "aTitle": "Hyponatremia Diagnostic Framework",
+    "aModule": "Renal & Acid–Base",
+    "b": "les-cat-y3-im-hyponatremia",
+    "bTitle": "Hyponatremia Diagnostic Approach",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-ren-ckd-mbd",
+    "aTitle": "CKD–MBD Pathophysiology",
+    "aModule": "Renal & Acid–Base",
+    "b": "les-cat-y2-ren-hepatorenal",
+    "bTitle": "Hepatorenal Pathophysiology",
+    "bModule": "Renal & Acid–Base",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-ren-nephrotic-detail",
+    "aTitle": "Nephrotic Syndrome Mechanisms",
+    "aModule": "Renal & Acid–Base",
+    "b": "les-cat-y2-ren-nephritic-detail",
+    "bTitle": "Nephritic Syndrome Mechanisms",
+    "bModule": "Renal & Acid–Base",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-ren-diuretic-deep",
+    "aTitle": "Diuretic Resistance Mechanisms",
+    "aModule": "Renal & Acid–Base",
+    "b": "les-cat-y2-id-abx-resist",
+    "bTitle": "Antibiotic Resistance Mechanisms",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-gi-hep-b-c",
+    "aTitle": "Hepatitis B & C Pathobiology",
+    "aModule": "Gastrointestinal & Hepatology",
+    "b": "les-cat-y2-id-sti",
+    "bTitle": "STI Pathobiology",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-gi-motility-disorders",
+    "aTitle": "Motility Disorders Expanded",
+    "aModule": "Gastrointestinal & Hepatology",
+    "b": "les-cat-y2-neuro-csf-leak",
+    "bTitle": "CSF Dynamics Disorders Expanded",
+    "bModule": "Neurosciences & Behavior",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-endo-repro-endo",
+    "aTitle": "Reproductive Endocrinology Axis",
+    "aModule": "Endocrine & Reproductive",
+    "b": "les-cat-y2-endo-repro-male",
+    "bTitle": "Male Reproductive Endocrinology",
+    "bModule": "Endocrine & Reproductive",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-endo-repro-endo",
+    "aTitle": "Reproductive Endocrinology Axis",
+    "aModule": "Endocrine & Reproductive",
+    "b": "les-cat-y4-ob-rei",
+    "bTitle": "Reproductive Endocrinology & Infertility",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-endo-repro-male",
+    "aTitle": "Male Reproductive Endocrinology",
+    "aModule": "Endocrine & Reproductive",
+    "b": "les-cat-y4-ob-rei",
+    "bTitle": "Reproductive Endocrinology & Infertility",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-heme-anemia-micro",
+    "aTitle": "Microcytic Anemia Mechanisms",
+    "aModule": "Hematology & Oncology Foundations",
+    "b": "les-cat-y2-heme-anemia-macro",
+    "bTitle": "Macrocytic Anemia Mechanisms",
+    "bModule": "Hematology & Oncology Foundations",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-heme-b12folate",
+    "aTitle": "B12/Folate Pathways in DNA Synthesis",
+    "aModule": "Hematology & Oncology Foundations",
+    "b": "les-cat-y1-bc-eicosanoids",
+    "bTitle": "Eicosanoid Synthesis Pathways",
+    "bModule": "Biochemistry & Metabolism",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-msk-5",
+    "aTitle": "Compartment Syndrome Recognition",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-cat-y3-psych-serotonin",
+    "bTitle": "Serotonin Syndrome Recognition",
+    "bModule": "Psychiatry Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-msk-7",
+    "aTitle": "SLE Clinical Map",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-cat-y1-anat-ear",
+    "bTitle": "Ear Anatomy Clinical",
+    "bModule": "Anatomy, Embryology & Imaging Correlation",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-msk-7",
+    "aTitle": "SLE Clinical Map",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-cat-y3-fm-informatics-fm",
+    "bTitle": "Clinical Informatics for FM",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-msk-cartilage",
+    "aTitle": "Cartilage & OA Pathobiology",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-cat-y2-id-sti",
+    "bTitle": "STI Pathobiology",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-msk-fracture-phys",
+    "aTitle": "Fracture Healing Biology",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-surg-6",
+    "bTitle": "Wound Healing Biology",
+    "bModule": "Surgery Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-id-7",
+    "aTitle": "Infective Endocarditis Suspicion",
+    "aModule": "Host Defense, Microbiology & Infectious Disease",
+    "b": "les-cat-y3-im-endocarditis",
+    "bTitle": "Infective Endocarditis Approach",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-id-sti",
+    "aTitle": "STI Pathobiology",
+    "aModule": "Host Defense, Microbiology & Infectious Disease",
+    "b": "les-cat-y2-id-hiv-path",
+    "bTitle": "HIV Pathobiology Expanded",
+    "bModule": "Host Defense, Microbiology & Infectious Disease",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y2-id-travel",
+    "aTitle": "Travel Medicine Pathogen Map",
+    "aModule": "Host Defense, Microbiology & Infectious Disease",
+    "b": "les-cat-y3-fm-travel",
+    "bTitle": "Travel Medicine Brief",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y2-id-zoonoses",
+    "aTitle": "Zoonoses High-Yield",
+    "aModule": "Host Defense, Microbiology & Infectious Disease",
+    "b": "les-cat-y1-ph-tox2",
+    "bTitle": "Antidote Map High-Yield",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y2-id-transplant-inf",
+    "aTitle": "Infections After Solid Organ Transplant",
+    "aModule": "Host Defense, Microbiology & Infectious Disease",
+    "b": "les-cat-y4-surg-transplant-basic",
+    "bTitle": "Solid Organ Transplant Basics",
+    "bModule": "Surgery Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y1-bc-collagen-biochem",
+    "aTitle": "ECM Biochemistry Expanded",
+    "aModule": "Biochemistry & Metabolism",
+    "b": "les-cat-y1-bc-starvation",
+    "bTitle": "Starvation Biochemistry Timeline Expanded",
+    "bModule": "Biochemistry & Metabolism",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-anat-brachial",
+    "aTitle": "Brachial Plexus Clinical Anatomy",
+    "aModule": "Anatomy, Embryology & Imaging Correlation",
+    "b": "les-cat-y1-anat-ear",
+    "bTitle": "Ear Anatomy Clinical",
+    "bModule": "Anatomy, Embryology & Imaging Correlation",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-anat-perineum",
+    "aTitle": "Pelvic Floor & Perineum",
+    "aModule": "Anatomy, Embryology & Imaging Correlation",
+    "b": "les-cat-y4-ob-urogyn",
+    "bTitle": "Urogynecology & Pelvic Floor",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y1-anat-lower-limb",
+    "aTitle": "Lower Limb Nerve Injuries",
+    "aModule": "Anatomy, Embryology & Imaging Correlation",
+    "b": "les-cat-y1-anat-upper-limb",
+    "bTitle": "Upper Limb Nerve Injuries Expanded",
+    "bModule": "Anatomy, Embryology & Imaging Correlation",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-anat-ear",
+    "aTitle": "Ear Anatomy Clinical",
+    "aModule": "Anatomy, Embryology & Imaging Correlation",
+    "b": "les-cat-y1-anat-larynx",
+    "bTitle": "Larynx & Airway Clinical Anatomy",
+    "bModule": "Anatomy, Embryology & Imaging Correlation",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-imm-allergy",
+    "aTitle": "Allergy & Anaphylaxis Mechanisms",
+    "aModule": "Immunology",
+    "b": "les-cat-y3-peds-allergy-peds",
+    "bTitle": "Pediatric Allergy & Anaphylaxis",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-cat-y1-ph-ans-ach",
+    "aTitle": "Cholinergic Pharmacology",
+    "aModule": "Pharmacology Foundations",
+    "b": "les-cat-y1-ph-gi",
+    "bTitle": "GI Pharmacology",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-ph-ans-ne",
+    "aTitle": "Adrenergic Pharmacology",
+    "aModule": "Pharmacology Foundations",
+    "b": "les-cat-y1-ph-gi",
+    "bTitle": "GI Pharmacology",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-ph-cv",
+    "aTitle": "Cardiovascular Drug Mechanisms Map",
+    "aModule": "Pharmacology Foundations",
+    "b": "les-cat-y1-ph-neuro",
+    "bTitle": "CNS Drug Mechanisms Expanded",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-ph-pulm",
+    "aTitle": "Pulmonary Pharmacology",
+    "aModule": "Pharmacology Foundations",
+    "b": "les-cat-y1-ph-gi",
+    "bTitle": "GI Pharmacology",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-ph-gi",
+    "aTitle": "GI Pharmacology",
+    "aModule": "Pharmacology Foundations",
+    "b": "les-cat-y1-ph-endo",
+    "bTitle": "Endocrine Pharmacology",
+    "bModule": "Pharmacology Foundations",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y1-epi-quality",
+    "aTitle": "Quality Measures & Patient Safety Stats",
+    "aModule": "Epidemiology, Biostatistics & Prevention",
+    "b": "les-cat-y4-im-qi-safety",
+    "bTitle": "Quality Improvement & Patient Safety",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
+  },
+  {
+    "a": "les-im-1",
+    "aTitle": "Community-Acquired Pneumonia",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-im-5",
+    "bTitle": "Community Pneumonia Disposition",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-im-1",
+    "aTitle": "Community-Acquired Pneumonia",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y3-im-cap-admit",
+    "bTitle": "Community Pneumonia Disposition",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-im-chest-pain",
+    "aTitle": "Chest Pain Pathways",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-im-2",
+    "bTitle": "Chest Pain & ACS Reasoning",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-im-gi-bleed-ward",
+    "aTitle": "GI Bleed Risk Stratification",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y3-im-syncope",
+    "bTitle": "Syncope Risk Stratification",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y4-im-icu-vent",
+    "aTitle": "Mechanical Ventilation Basics",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y4-im-vent-basics",
+    "bTitle": "Mechanical Ventilation Goals",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y4-im-nephro-adv",
+    "aTitle": "Advanced Nephrology Consults",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y4-im-heme-adv",
+    "bTitle": "Advanced Hematology Consults",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y4-im-nephro-adv",
+    "aTitle": "Advanced Nephrology Consults",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y4-im-endocrinology-adv",
+    "bTitle": "Advanced Endocrinology Consults",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y4-im-heme-adv",
+    "aTitle": "Advanced Hematology Consults",
+    "aModule": "Internal Medicine Clerkship",
+    "b": "les-cat-y4-im-endocrinology-adv",
+    "bTitle": "Advanced Endocrinology Consults",
+    "bModule": "Internal Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-surg-7",
+    "aTitle": "Preoperative Risk Thinking",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-surg-preop-risk",
+    "bTitle": "Preoperative Risk Assessment",
+    "bModule": "Surgery Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-surg-vascular-surg",
+    "aTitle": "Limb Ischemia & Aneurysms",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-surg-vascular-limb",
+    "bTitle": "Acute Limb Ischemia 6 Ps",
+    "bModule": "Surgery Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-surg-pediatric-surg",
+    "aTitle": "Pediatric Surgical Emergencies",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-peds-resp-peds",
+    "bTitle": "Pediatric Respiratory Emergencies",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y3-surg-pediatric-surg",
+    "aTitle": "Pediatric Surgical Emergencies",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y4-peds-congenital-surg",
+    "bTitle": "Neonatal Surgical Emergencies",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y3-surg-onc-surg",
+    "aTitle": "Surgical Oncology Principles",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y4-ob-gynonc",
+    "bTitle": "Gyn Oncology Surgical Care",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y4-surg-subi-surgical-icu",
+    "aTitle": "Surgical ICU Essentials",
+    "aModule": "Surgery Clerkship",
+    "b": "les-cat-y3-surg-informed",
+    "bTitle": "Surgical Informed Consent Essentials",
+    "bModule": "Surgery Clerkship",
+    "score": 0.5,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y3-peds-card-peds",
+    "aTitle": "Pediatric Cardiology Essentials",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-peds-neuro-peds",
+    "bTitle": "Pediatric Neurology Essentials",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-peds-card-peds",
+    "aTitle": "Pediatric Cardiology Essentials",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y4-peds-cards-adv",
+    "bTitle": "Pediatric Cardiology Advanced",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y3-peds-heme-peds",
+    "aTitle": "Pediatric Hematology",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y4-peds-hemeonc",
+    "bTitle": "Pediatric Hematology-Oncology Urgencies",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-peds-obesity",
+    "aTitle": "Pediatric Obesity Counseling",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-fm-obesity-pc",
+    "bTitle": "Obesity Counseling in Clinic",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-obgyn-1",
+    "aTitle": "Prenatal Care Foundations",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-ob-prenatal",
+    "bTitle": "Prenatal Care Framework",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-obgyn-3",
+    "aTitle": "Ectopic Pregnancy Recognition",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-gyn-ectopic",
+    "bTitle": "Ectopic Pregnancy Emergency",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-obgyn-6",
+    "aTitle": "Shoulder Dystocia Maneuvers",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-ob-shoulder",
+    "bTitle": "Shoulder Dystocia HELPERR",
+    "bModule": "Obstetrics & Gynecology Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-ob-breast-obgyn",
+    "aTitle": "Breast Care in Women's Health",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-fm-womens-fm",
+    "bTitle": "Women's Health in FM",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y3-ob-gdm",
+    "aTitle": "Gestational Diabetes Care",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-fm-dm-fm",
+    "bTitle": "Outpatient Diabetes Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-cat-y3-gyn-vulvovaginitis",
+    "aTitle": "Vaginitis Office Diagnosis",
+    "aModule": "Obstetrics & Gynecology Clerkship",
+    "b": "les-cat-y3-fm-htn-office",
+    "bTitle": "Office Hypertension Diagnosis",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "CROSS_MODULE_OVERLAP"
+  },
+  {
+    "a": "les-psych-6",
+    "aTitle": "Alcohol Withdrawal",
+    "aModule": "Psychiatry Clerkship",
+    "b": "les-cat-y3-psych-alcohol-withdraw",
+    "bTitle": "Alcohol Withdrawal CIWA Care",
+    "bModule": "Psychiatry Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-psych-child-psych",
+    "aTitle": "Child & Adolescent Psychiatry",
+    "aModule": "Psychiatry Clerkship",
+    "b": "les-cat-y4-psych-child-adv",
+    "bTitle": "Advanced Child Psychiatry",
+    "bModule": "Psychiatry Clerkship",
+    "score": 0.5,
+    "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-cat-y3-psych-law-psych",
+    "aTitle": "Forensic Psychiatry Basics",
+    "aModule": "Psychiatry Clerkship",
+    "b": "les-cat-y4-psych-forensic",
+    "bTitle": "Forensic Basics for Clinicians",
+    "bModule": "Psychiatry Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-fm-6",
+    "aTitle": "Primary Care Depression & Anxiety",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-msk-fm",
+    "bTitle": "MSK Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-fm-6",
+    "aTitle": "Primary Care Depression & Anxiety",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-depression-pc",
+    "bTitle": "PHQ-9 in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-htn-fm",
+    "aTitle": "Hypertension Longitudinal Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-obesity-fm",
+    "bTitle": "Obesity Care Longitudinal",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-pain-fm",
+    "bTitle": "Chronic Pain in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-headache",
+    "bTitle": "Primary Care Headache Sort",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-dermatology",
+    "bTitle": "Primary Care Rash Decisions",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-msk-fm",
+    "aTitle": "MSK Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y4-fm-palliative-pc",
+    "bTitle": "Primary Palliative Care Skills",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-derm-fm",
+    "aTitle": "Primary Care Dermatology",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-palliative-fm",
+    "bTitle": "Primary Palliative Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-derm-fm",
+    "aTitle": "Primary Care Dermatology",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-mens",
+    "bTitle": "Men's Health Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-derm-fm",
+    "aTitle": "Primary Care Dermatology",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-geriatrics",
+    "bTitle": "Geriatric Primary Care 5Ms",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-derm-fm",
+    "aTitle": "Primary Care Dermatology",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-ckd",
+    "bTitle": "CKD Staging in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-bh-fm",
+    "aTitle": "Behavioral Health in FM",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-mens-fm",
+    "bTitle": "Men's Health in FM",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-womens-fm",
+    "aTitle": "Women's Health in FM",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-mens-fm",
+    "bTitle": "Men's Health in FM",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-palliative-fm",
+    "aTitle": "Primary Palliative Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-mens",
+    "bTitle": "Men's Health Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-palliative-fm",
+    "aTitle": "Primary Palliative Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-geriatrics",
+    "bTitle": "Geriatric Primary Care 5Ms",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-palliative-fm",
+    "aTitle": "Primary Palliative Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-ckd",
+    "bTitle": "CKD Staging in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-pain-fm",
+    "aTitle": "Chronic Pain in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-depression-pc",
+    "bTitle": "PHQ-9 in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-depression-pc",
+    "aTitle": "PHQ-9 in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-headache",
+    "bTitle": "Primary Care Headache Sort",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-depression-pc",
+    "aTitle": "PHQ-9 in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-dermatology",
+    "bTitle": "Primary Care Rash Decisions",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-depression-pc",
+    "aTitle": "PHQ-9 in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y4-fm-palliative-pc",
+    "bTitle": "Primary Palliative Care Skills",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-mens",
+    "aTitle": "Men's Health Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-geriatrics",
+    "bTitle": "Geriatric Primary Care 5Ms",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-mens",
+    "aTitle": "Men's Health Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-ckd",
+    "bTitle": "CKD Staging in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-geriatrics",
+    "aTitle": "Geriatric Primary Care 5Ms",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-ckd",
+    "bTitle": "CKD Staging in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  }
+]

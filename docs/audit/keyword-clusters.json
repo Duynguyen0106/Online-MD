@@ -1,0 +1,722 @@
+{
+  "cardiac electrophysiology": [
+    {
+      "id": "les-cv-1",
+      "title": "Cardiac Electrophysiology & Mechanics",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-excitation",
+      "title": "Cardiac Electrophysiology Gradients",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    }
+  ],
+  "ischemic heart / ACS": [
+    {
+      "id": "les-cv-2",
+      "title": "Ischemic Heart Disease & ACS",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cv-7",
+      "title": "Atherosclerosis to Plaque Rupture",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-coronary",
+      "title": "Coronary Anatomy & Ischemia Territories",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-acs-path",
+      "title": "ACS Pathophysiology Deep Dive",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-gi-ischemia",
+      "title": "Mesenteric Ischemia Mechanisms",
+      "module": "Gastrointestinal & Hepatology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-neuro-stroke-path",
+      "title": "Ischemic vs Hemorrhagic Stroke Biology",
+      "module": "Neurosciences & Behavior",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-msk-connective",
+      "title": "Systemic Sclerosis & Overlap",
+      "module": "Musculoskeletal & Rheumatology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y1-anat-portal",
+      "title": "Portal Vein Tributaries & Portosystemic Anastomoses",
+      "module": "Anatomy, Embryology & Imaging Correlation",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-acs-ed",
+      "title": "ACS Pathway in the ED",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-acs-icu",
+      "title": "Complicated ACS ICU Care",
+      "module": "Internal Medicine Clerkship",
+      "level": "ADVANCED_CLINICAL",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-im-2",
+      "title": "Chest Pain & ACS Reasoning",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-surg-vascular-surg",
+      "title": "Limb Ischemia & Aneurysms",
+      "module": "Surgery Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-surg-vascular-limb",
+      "title": "Acute Limb Ischemia 6 Ps",
+      "module": "Surgery Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "heart failure": [
+    {
+      "id": "les-cv-3",
+      "title": "Heart Failure & Foundational Therapy",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-hf-mechanisms",
+      "title": "Heart Failure Mechanisms HFrEF/HFpEF",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-hf-admit",
+      "title": "Acute Heart Failure Admission Decisions",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "shock": [
+    {
+      "id": "les-cat-y2-path-hemodynamic",
+      "title": "Edema, Congestion, Shock Pathology",
+      "module": "Cells, Molecules & Mechanisms of Disease",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cv-4",
+      "title": "Shock Classification by Mechanism",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-shock-micro",
+      "title": "Shock Microcirculation & Lactate",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-icu-shock",
+      "title": "ICU Shock Teams & Monitoring",
+      "module": "Internal Medicine Clerkship",
+      "level": "ADVANCED_CLINICAL",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-shock-types",
+      "title": "Shock Differentiation at the Bedside",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-septic-shock",
+      "title": "Septic Shock Beyond Hour-1",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-surg-1",
+      "title": "Shock & Resuscitation Priorities",
+      "module": "Surgery Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-peds-picu-sepsis",
+      "title": "Pediatric Septic Shock Nuances",
+      "module": "Pediatrics Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "valvular": [
+    {
+      "id": "les-cv-6",
+      "title": "Valvular Heart Disease Hemodynamics",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-valves-path",
+      "title": "Valvular Stenosis & Regurgitation Physics",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-endocardium",
+      "title": "Endocardial & Valvular Infection Pathology",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    }
+  ],
+  "pericardial / tamponade": [
+    {
+      "id": "les-cv-8",
+      "title": "Cardiac Tamponade Physiology",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-pericardium",
+      "title": "Pericardial Disease Spectrum",
+      "module": "Cardiovascular System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-pericarditis-path",
+      "title": "Pericarditis Etiologies & Constraints",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    }
+  ],
+  "pulmonary hypertension": [
+    {
+      "id": "les-cat-y2-cv-pulmonary-htn",
+      "title": "Pulmonary Hypertension Groups",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    }
+  ],
+  "pneumonia": [
+    {
+      "id": "les-cat-y2-pulm-pneumonia-path",
+      "title": "Pneumonia Pathogenesis",
+      "module": "Respiratory System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-id-pneumonia-bugs",
+      "title": "Pneumonia Syndromes by Host",
+      "module": "Host Defense, Microbiology & Infectious Disease",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-im-1",
+      "title": "Community-Acquired Pneumonia",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-im-5",
+      "title": "Community Pneumonia Disposition",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-cap-ward",
+      "title": "Pneumonia Severity & Abx Stewardship",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-cap-admit",
+      "title": "Community Pneumonia Disposition",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "sepsis": [
+    {
+      "id": "les-cat-y2-id-sepsis-path",
+      "title": "Sepsis Immunopathophysiology",
+      "module": "Host Defense, Microbiology & Infectious Disease",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-id-2",
+      "title": "Sepsis Recognition & Empiric Logic",
+      "module": "Host Defense, Microbiology & Infectious Disease",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y1-imm-cytokine2",
+      "title": "Cytokine Storm & Sepsis Immunology",
+      "module": "Immunology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-fever-inpatient",
+      "title": "Inpatient Fever & Sepsis Bundles",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-sepsis-hour1",
+      "title": "Hour-1 Sepsis Bundle",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-septic-shock",
+      "title": "Septic Shock Beyond Hour-1",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-peds-picu-sepsis",
+      "title": "Pediatric Septic Shock Nuances",
+      "module": "Pediatrics Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "aki": [
+    {
+      "id": "les-cat-y2-ren-aki-path",
+      "title": "AKI Pathotypes",
+      "module": "Renal & Acid–Base",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-im-4",
+      "title": "AKI Bedside Framework",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-aki-ward",
+      "title": "AKI on the Wards",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-aki-workup",
+      "title": "Inpatient AKI Framework",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "electrolytes": [
+    {
+      "id": "les-renal-4",
+      "title": "Hyponatremia Diagnostic Framework",
+      "module": "Renal & Acid–Base",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-renal-5",
+      "title": "Hyperkalemia Emergency Framework",
+      "module": "Renal & Acid–Base",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-electrolytes-ward",
+      "title": "Ward Electrolyte Emergencies",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-hyponatremia",
+      "title": "Hyponatremia Diagnostic Approach",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "chest pain": [
+    {
+      "id": "les-cat-y3-im-chest-pain",
+      "title": "Chest Pain Pathways",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-im-2",
+      "title": "Chest Pain & ACS Reasoning",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "vte": [
+    {
+      "id": "les-cell-1",
+      "title": "From Gene to Protein to Phenotype",
+      "module": "Cells, Molecules & Mechanisms of Disease",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-cv-syncope-phys",
+      "title": "Syncope Physiology Deep Dive",
+      "module": "Cardiovascular System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-pulm-3",
+      "title": "Pulmonary Embolism Physiology",
+      "module": "Respiratory System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-pulm-pe-path",
+      "title": "PE Pathophysiology Expanded",
+      "module": "Respiratory System",
+      "level": "STEP_1",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-endo-5",
+      "title": "Hypercalcemia — PTH Fork",
+      "module": "Endocrine & Reproductive",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-neuro-4",
+      "title": "Seizure vs Syncope & Status Priorities",
+      "module": "Neurosciences & Behavior",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y1-imm-eosinophil-mast",
+      "title": "Mast Cells & Type 2 Immunity",
+      "module": "Immunology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-im-3",
+      "title": "Syncope — Cardiac vs Reflex",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-im-6",
+      "title": "Inpatient VTE Prophylaxis",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-vte-ward",
+      "title": "VTE Diagnosis & Treatment Principles",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-pe-workup",
+      "title": "Pulmonary Embolism Workup",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-syncope",
+      "title": "Syncope Risk Stratification",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-fm-4",
+      "title": "Type 2 Diabetes First Steps",
+      "module": "Family Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-fm-diabetes-outpt",
+      "title": "Outpatient Type 2 Diabetes Intensification",
+      "module": "Family Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "diabetes emergencies": [
+    {
+      "id": "les-cat-y2-endo-dka-hhs-path",
+      "title": "DKA vs HHS Mechanisms Deep Dive",
+      "module": "Endocrine & Reproductive",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-endo-2",
+      "title": "DKA & Hyperosmolar States",
+      "module": "Endocrine & Reproductive",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-dka-hhs",
+      "title": "DKA vs HHS Management",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-peds-dka-cerebral",
+      "title": "Pediatric DKA Cerebral Edema",
+      "module": "Pediatrics Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "gi bleed": [
+    {
+      "id": "les-gi-4",
+      "title": "Acute Upper GI Bleeding Priorities",
+      "module": "Gastrointestinal & Hepatology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-gi-gi-bleed-mech",
+      "title": "GI Bleed Mechanisms Upper vs Lower",
+      "module": "Gastrointestinal & Hepatology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-gi-gi-bleed-phys",
+      "title": "Hemodynamic Responses to GI Bleed",
+      "module": "Gastrointestinal & Hepatology",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-gi-bleed-ward",
+      "title": "GI Bleed Risk Stratification",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-gi-bleed",
+      "title": "Upper GI Bleed Stabilization",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-gi-bleed-icu",
+      "title": "Massive GI Bleed ICU",
+      "module": "Internal Medicine Clerkship",
+      "level": "ADVANCED_CLINICAL",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "stroke": [
+    {
+      "id": "les-cat-y2-neuro-stroke-path",
+      "title": "Ischemic vs Hemorrhagic Stroke Biology",
+      "module": "Neurosciences & Behavior",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-neuro-3",
+      "title": "Stroke Localization by Territory",
+      "module": "Neurosciences & Behavior",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-afib-ward",
+      "title": "Atrial Fibrillation Rate/Rhythm/Stroke Risk",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-stroke-alert",
+      "title": "Acute Stroke Code on Wards",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ],
+  "respiratory failure / vent": [
+    {
+      "id": "les-pulm-4",
+      "title": "ARDS & Pulmonary Edema Distinctions",
+      "module": "Respiratory System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-pulm-ards-path",
+      "title": "ARDS Pathobiology",
+      "module": "Respiratory System",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y2-id-stewardship2",
+      "title": "Antimicrobial Stewardship Metrics",
+      "module": "Host Defense, Microbiology & Infectious Disease",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-cat-y1-eth-surrogate",
+      "title": "Surrogate Decision-Making Standards",
+      "module": "Ethics, Professionalism & Health Systems",
+      "level": "PRECLINICAL",
+      "phase": "Years 1–2 · Preclinical medicine"
+    },
+    {
+      "id": "les-im-7",
+      "title": "Cirrhosis Decompensation on the Wards",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-aki-ward",
+      "title": "AKI on the Wards",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-cap-ward",
+      "title": "Pneumonia Severity & Abx Stewardship",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-substance-ward",
+      "title": "Substance Withdrawal on Wards",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-icu-vent",
+      "title": "Mechanical Ventilation Basics",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-im-stroke-alert",
+      "title": "Acute Stroke Code on Wards",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-vent-basics",
+      "title": "Mechanical Ventilation Goals",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y4-im-ards",
+      "title": "ARDS Berlin Definition Care",
+      "module": "Internal Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-fm-opioid",
+      "title": "Opioid Stewardship in Clinic",
+      "module": "Family Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    },
+    {
+      "id": "les-cat-y3-fm-uri",
+      "title": "URI Antibiotic Stewardship",
+      "module": "Family Medicine Clerkship",
+      "level": "CLERKSHIP",
+      "phase": "Years 3–4 · Clinical medicine"
+    }
+  ]
+}

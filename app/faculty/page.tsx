@@ -2,7 +2,6 @@ import Link from "next/link";
 import { AppShell } from "@/components/shared/app-shell";
 import { FacultyLibrary } from "@/components/faculty/faculty-library";
 import { getObjectives, getPhases } from "@/lib/curriculum/accessors";
-import { Badge } from "@/components/ui/badge";
 
 export default async function FacultyPage() {
   const phases = await getPhases();
@@ -29,7 +28,7 @@ export default async function FacultyPage() {
     <AppShell title="Faculty content library">
       <p className="mb-6 max-w-3xl text-sm text-[var(--muted)]">
         Curriculum mirrors integrated organ-system preclerkship + core clerkships. Open a lesson to
-        edit content blocks, or manage{" "}
+        edit content blocks, manage{" "}
         <Link className="text-[var(--brand-strong)] underline" href="/faculty/flashcards">
           flashcards
         </Link>{" "}
@@ -37,7 +36,11 @@ export default async function FacultyPage() {
         <Link className="text-[var(--brand-strong)] underline" href="/faculty/questions">
           questions
         </Link>
-        .
+        , or open the{" "}
+        <Link className="text-[var(--brand-strong)] underline" href="/faculty/medical-review">
+          medical content review
+        </Link>{" "}
+        queue.
       </p>
       <FacultyLibrary phases={library} />
 

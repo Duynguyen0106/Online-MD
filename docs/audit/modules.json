@@ -1,0 +1,5526 @@
+[
+  {
+    "moduleId": "mod-cell-mol",
+    "title": "Cells, Molecules & Mechanisms of Disease",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 48,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cell-1",
+        "title": "From Gene to Protein to Phenotype",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-2",
+        "title": "Cell Injury, Death & Adaptation",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-3",
+        "title": "Acute Inflammation Mediator Sequence",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-4",
+        "title": "Innate vs Adaptive Immunity",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-5",
+        "title": "Cellular Adaptations & Dysplasia",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-6",
+        "title": "Invasion & Metastasis Steps",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-7",
+        "title": "Mendelian Inheritance Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cell-8",
+        "title": "Pharmacokinetics — ADME Essentials",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y1-cell-dna-rep",
+        "title": "DNA Replication Fidelity & Repair",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-transcribe",
+        "title": "Transcription & RNA Processing",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-translate",
+        "title": "Translation & Targeting",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-collagen",
+        "title": "Collagen Synthesis & Scurvy/OI",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-ecm",
+        "title": "ECM, Integrins & Metastasis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-apoptosis",
+        "title": "Apoptosis Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-cellcycle",
+        "title": "Cell Cycle Checkpoints",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-oncogenes",
+        "title": "Oncogenes vs Tumor Suppressors",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-signaling",
+        "title": "GPCR, RTK & Nuclear Receptor Signaling",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-lysosome",
+        "title": "Lysosomes, Autophagy & Storage Diseases",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-mito",
+        "title": "Mitochondrial Genetics & Disease",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-stem",
+        "title": "Stem Cells & Differentiation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-hemodynamic",
+        "title": "Edema, Congestion, Shock Pathology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-thrombosis-path",
+        "title": "Thrombosis, Embolism & Infarction Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-inflammation-path",
+        "title": "Acute & Chronic Inflammation Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-neoplasia-path",
+        "title": "Neoplasia Pathology Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-environment-path",
+        "title": "Environmental Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-genetic-path",
+        "title": "Genetic Disorders Pathology Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-immuno-path",
+        "title": "Immunopathology Tissue Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-infectious-path",
+        "title": "Infectious Disease Pathology Patterns",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-vascular-path",
+        "title": "Blood Vessel Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-heart-path",
+        "title": "Cardiac Pathology High-Yield",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-lung-path",
+        "title": "Pulmonary Pathology High-Yield",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-path-gi-path",
+        "title": "GI Pathology High-Yield",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-wound",
+        "title": "Wound Healing Pathology Timeline",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-calcify",
+        "title": "Pathologic Calcification",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-aging",
+        "title": "Cellular Aging Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-pigments",
+        "title": "Pathologic Pigments & Storage",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-edema-micro",
+        "title": "Microscopic Correlates of Hemodynamic Injury",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-epigenetics",
+        "title": "Epigenetics in Medicine",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-chromosomes",
+        "title": "Cytogenetics Clinical Patterns",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-apoptosis-disease",
+        "title": "Disorders of Cell Death",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-dna-repair2",
+        "title": "DNA Repair Syndrome Clinics",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-oncogenes2",
+        "title": "Oncogene Addiction Concepts",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-tsg2",
+        "title": "Tumor Suppressor Networks",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-metastasis2",
+        "title": "Metastatic Cascade Details",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-inflam2",
+        "title": "Chronic Inflammation & Cancer Link",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-hemostasis-path",
+        "title": "Hemostasis Pathology Overview",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-immunopath2",
+        "title": "Hypersensitivity Tissue Examples",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-cell-environ2",
+        "title": "Chemical & Physical Injury Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-cv",
+    "title": "Cardiovascular System",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 33,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cv-1",
+        "title": "Cardiac Electrophysiology & Mechanics",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-2",
+        "title": "Ischemic Heart Disease & ACS",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-3",
+        "title": "Heart Failure & Foundational Therapy",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-4",
+        "title": "Shock Classification by Mechanism",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-5",
+        "title": "Tachyarrhythmia Safety Framework",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-6",
+        "title": "Valvular Heart Disease Hemodynamics",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-7",
+        "title": "Atherosclerosis to Plaque Rupture",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cv-8",
+        "title": "Cardiac Tamponade Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-cv-hemodynamics",
+        "title": "CV Hemodynamics — Pressure, Flow, Resistance",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-cardiac-cycle",
+        "title": "Cardiac Cycle Wiggers Correlation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-excitation",
+        "title": "Cardiac Electrophysiology Gradients",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-ecg-intervals",
+        "title": "ECG Intervals & Blocks",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-coronary",
+        "title": "Coronary Anatomy & Ischemia Territories",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-acs-path",
+        "title": "ACS Pathophysiology Deep Dive",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-hf-mechanisms",
+        "title": "Heart Failure Mechanisms HFrEF/HFpEF",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-valves-path",
+        "title": "Valvular Stenosis & Regurgitation Physics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-shock-micro",
+        "title": "Shock Microcirculation & Lactate",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-htn-path",
+        "title": "Hypertension Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-pericardium",
+        "title": "Pericardial Disease Spectrum",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-congenital-leftouts",
+        "title": "Adult Congenital Lesions Overview",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-lipids-ath",
+        "title": "Lipoprotein Metabolism & Atherogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-vascular",
+        "title": "Aortic Aneurysm & Dissection Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-venous",
+        "title": "Venous Thrombosis Pathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-pulmonary-htn",
+        "title": "Pulmonary Hypertension Groups",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-arrhythmia-mech",
+        "title": "Arrhythmogenesis Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-syncope-phys",
+        "title": "Syncope Physiology Deep Dive",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-pregnancy",
+        "title": "Cardiovascular Adaptations in Pregnancy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-aging",
+        "title": "Cardiovascular Aging",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-sports",
+        "title": "Athlete’s Heart vs Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-devices",
+        "title": "CIEDs & Hemodynamic Support Concepts",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-pericarditis-path",
+        "title": "Pericarditis Etiologies & Constraints",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-endocardium",
+        "title": "Endocardial & Valvular Infection Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-cv-revascular",
+        "title": "Revascularization Physiology PCI vs CABG",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-pulm",
+    "title": "Respiratory System",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 32,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-pulm-1",
+        "title": "Ventilation–Perfusion & Gas Exchange",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-pulm-2",
+        "title": "Obstructive & Restrictive Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-pulm-3",
+        "title": "Pulmonary Embolism Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-pulm-4",
+        "title": "ARDS & Pulmonary Edema Distinctions",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-pulm-5",
+        "title": "Asthma & COPD Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-pulm-6",
+        "title": "ABG Interpretation Framework",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-pulm-7",
+        "title": "Pleural Effusion — Transudate vs Exudate",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-pulm-mech-ventil",
+        "title": "Respiratory Mechanics & Compliance",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-gas-exchange",
+        "title": "Gas Exchange & Diffusion Limitation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-control-breath",
+        "title": "Control of Breathing",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-obstruct-restrict",
+        "title": "Obstructive vs Restrictive Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-asthma-path",
+        "title": "Asthma Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-copd-path",
+        "title": "COPD — Emphysema & Chronic Bronchitis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-ild",
+        "title": "Interstitial Lung Disease Patterns",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-pe-path",
+        "title": "PE Pathophysiology Expanded",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-ards-path",
+        "title": "ARDS Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-pleural-path",
+        "title": "Pleural Fluid Formation Physics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-sleep-resp",
+        "title": "Sleep-Disordered Breathing Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-lung-cancer",
+        "title": "Lung Cancer Biology & Paraneoplasms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-pneumonia-path",
+        "title": "Pneumonia Pathogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-tb-immuno",
+        "title": "TB Granuloma Immunology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-oxygen-delivery",
+        "title": "Oxygen Content & Delivery Equations",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-abg-advanced",
+        "title": "Advanced Acid–Base with Mixed Disorders",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-alt",
+        "title": "High-Altitude Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-dive",
+        "title": "Diving Physiology & Barotrauma",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-pregnancy",
+        "title": "Respiratory Changes in Pregnancy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-obesity",
+        "title": "Obesity Hypoventilation & Mechanics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-hemoptysis",
+        "title": "Hemoptysis Mechanisms & Sources",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-pulm-renal",
+        "title": "Pulmonary–Renal Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-aspiration",
+        "title": "Aspiration Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-ventilator-phys",
+        "title": "Applied Respiratory Physiology on Ventilators",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-pulm-rehab",
+        "title": "Pulmonary Rehabilitation Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-renal",
+    "title": "Renal & Acid–Base",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 33,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-renal-1",
+        "title": "GFR & Filtration Barrier",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-renal-2",
+        "title": "Tubular Transport & Diuretics",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-renal-4",
+        "title": "Hyponatremia Diagnostic Framework",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-renal-5",
+        "title": "Hyperkalemia Emergency Framework",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-renal-6",
+        "title": "CKD Staging & Complications",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-renal-7",
+        "title": "Nephritic vs Nephrotic Syndromes",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-renal-8",
+        "title": "Diuretic Sites of Action",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-ren-gfr-auto",
+        "title": "GFR Autoregulation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-tubular-transport",
+        "title": "Nephron Transport Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-concentrating",
+        "title": "Urine Concentration & Dilution",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-volume-sensors",
+        "title": "Volume Sensing & RAAS–ANP",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-na-disorders",
+        "title": "Sodium Disorders Framework",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-k-homeostasis",
+        "title": "Potassium Internal/External Balance",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-acidbase-renal",
+        "title": "Renal Acid–Base Handling",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-aki-path",
+        "title": "AKI Pathotypes",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-ckd-mbd",
+        "title": "CKD–MBD Pathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-nephrotic-detail",
+        "title": "Nephrotic Syndrome Mechanisms",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-nephritic-detail",
+        "title": "Nephritic Syndrome Mechanisms",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-stones",
+        "title": "Kidney Stone Pathogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-uti-ascent",
+        "title": "UTI Ascending Infection Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-diuretic-deep",
+        "title": "Diuretic Resistance Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-renal-pharm",
+        "title": "Drugs and the Kidney",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-ca-phos-renal",
+        "title": "Renal Calcium–Phosphate Handling",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-pregnancy",
+        "title": "Renal Physiology of Pregnancy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-obstruction",
+        "title": "Obstructive Uropathy Pathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-transplant",
+        "title": "Transplant Kidney Physiology Concepts",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-toxins",
+        "title": "Nephrotoxin Mechanisms Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-genetic",
+        "title": "Genetic Kidney Diseases Overview",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-cardiorenal",
+        "title": "Cardiorenal Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-hepatorenal",
+        "title": "Hepatorenal Pathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-stone-meta",
+        "title": "Metabolic Evaluation of Stones",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-ren-dialysis",
+        "title": "Dialysis Physiology Comparison",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-renal-3",
+        "title": "Acid–Base Disorder Framework",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-gi",
+    "title": "Gastrointestinal & Hepatology",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 31,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-gi-2",
+        "title": "Portal Hypertension & Liver Failure",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-gi-3",
+        "title": "Portal Hypertension & Cirrhosis Complications",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-gi-4",
+        "title": "Acute Upper GI Bleeding Priorities",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-gi-5",
+        "title": "Acute Pancreatitis Essentials",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-gi-6",
+        "title": "IBD — Crohn vs Ulcerative Colitis",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-gi-7",
+        "title": "Liver Test Pattern Recognition",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-gi-motility",
+        "title": "GI Motility & ENS",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-secretion-acid",
+        "title": "Gastric Acid Secretion & Ulcer Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-pancreas-exocrine",
+        "title": "Exocrine Pancreas Physiology & Pancreatitis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-bile",
+        "title": "Bile Formation & Gallstone Pathogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-absorb",
+        "title": "Nutrient Absorption & Malabsorption",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-liver-basic",
+        "title": "Hepatic Lobule & Injury Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-portal",
+        "title": "Portal Hypertension Complications Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-ibd-path",
+        "title": "IBD Immunopathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-gi-bleed-mech",
+        "title": "GI Bleed Mechanisms Upper vs Lower",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-nutrition-gi",
+        "title": "Clinical Nutrition & Refeeding",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-hep-b-c",
+        "title": "Hepatitis B & C Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-gi-cancers",
+        "title": "GI Oncogenesis Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-swallow",
+        "title": "Swallowing & Esophageal Disorders",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-diarrhea",
+        "title": "Diarrhea Osmotic vs Secretory",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-peritonitis",
+        "title": "Peritonitis & Peritoneal Defense",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-spleen",
+        "title": "Spleen Immunology & Hyposplenism Risk",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-swallow-phys",
+        "title": "Swallowing Physiology & Dysphagia Localization",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-microbiome",
+        "title": "Gut Microbiome in Health & Disease",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-ischemia",
+        "title": "Mesenteric Ischemia Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-motility-disorders",
+        "title": "Motility Disorders Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-liver-fail",
+        "title": "Acute Liver Failure Pathobiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-biliary-phys",
+        "title": "Sphincter of Oddi & Biliary Motility",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-nutrition-def",
+        "title": "Micronutrient Deficiency Syndromes GI",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-gi-bleed-phys",
+        "title": "Hemodynamic Responses to GI Bleed",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-gi-microbiome2",
+        "title": "Short-Chain Fatty Acids & Barrier",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-endo",
+    "title": "Endocrine & Reproductive",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 31,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-endo-1",
+        "title": "Thyroid Axis & Clinical Patterns",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-endo-3",
+        "title": "Thyroid Emergencies",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-endo-4",
+        "title": "Adrenal Insufficiency & Cushing Axis",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-endo-5",
+        "title": "Hypercalcemia — PTH Fork",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-endo-6",
+        "title": "Diabetes Chronic Complications",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-endo-hpa",
+        "title": "HPA Axis Feedback",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-thyroid-phys",
+        "title": "Thyroid Hormone Synthesis & Action",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-thyroid-disease",
+        "title": "Hyper/Hypothyroid Pathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-islet",
+        "title": "Islet Physiology & Insulin Action",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-dm-path",
+        "title": "Diabetes Mellitus Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-dka-hhs-path",
+        "title": "DKA vs HHS Mechanisms Deep Dive",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-calcium-axis",
+        "title": "Calcium–PTH–Vitamin D Axis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-adrenal-cortex",
+        "title": "Adrenal Steroidogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-adrenal-medulla",
+        "title": "Catecholamine Biology & Pheochromocytoma",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-pituitary",
+        "title": "Pituitary Mass Effects & Hormone Excess/Deficiency",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-repro-endo",
+        "title": "Reproductive Endocrinology Axis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-bone-endo",
+        "title": "Bone Remodeling Endocrine Control",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-obesity",
+        "title": "Energy Homeostasis & Obesity Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-lipodystrophy",
+        "title": "Lipodystrophy & Insulin Resistance Extremes",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-multiple-endo",
+        "title": "MEN Syndromes Overview",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-hypoglycemia",
+        "title": "Hypoglycemia Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-growth",
+        "title": "GH–IGF1 Axis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-prolactin",
+        "title": "Prolactin Physiology & Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-water",
+        "title": "Water Balance Endocrine Control",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-stress",
+        "title": "Endocrine Stress Response",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-bone-peak",
+        "title": "Peak Bone Mass & Osteoporosis Path",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-repro-male",
+        "title": "Male Reproductive Endocrinology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-repro-female",
+        "title": "Menstrual Cycle Endocrinology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-carcinoid",
+        "title": "Neuroendocrine Tumor Hormone Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-endo-obesity2",
+        "title": "Incretin Biology & Obesity Pharmacology Concepts",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-endo-2",
+        "title": "DKA & Hyperosmolar States",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-heme",
+    "title": "Hematology & Oncology Foundations",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 32,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-heme-1",
+        "title": "Approach to Anemia",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-heme-3",
+        "title": "Anemia Classification Framework",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-heme-4",
+        "title": "Platelet Disorders Clinically",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-heme-5",
+        "title": "Acute Transfusion Reactions",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-heme-6",
+        "title": "Acute Leukemia Recognition",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-heme-7",
+        "title": "Tumor Lysis Syndrome",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-heme-heme-synth",
+        "title": "Heme Synthesis & Porphyrias",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-rbc-metab",
+        "title": "RBC Metabolism & Hemolysis Lab Pattern",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-anemia-micro",
+        "title": "Microcytic Anemia Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-anemia-macro",
+        "title": "Macrocytic Anemia Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-hemolysis-immune",
+        "title": "Immune Hemolysis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-hemoglobinopathies",
+        "title": "Sickle Cell & Thalassemia Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-hemostasis",
+        "title": "Primary vs Secondary Hemostasis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-coag-tests",
+        "title": "PT/PTT/INR Interpretation Logic",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-thrombocytopenia",
+        "title": "Thrombocytopenia Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-leukemia-path",
+        "title": "Leukemogenesis Overview",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-lymphoma",
+        "title": "Lymphoma Biology Hodgkin vs NHL",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-plasma-cell",
+        "title": "Plasma Cell Dyscrasias",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-transfusion-deep",
+        "title": "Transfusion Medicine Deep Dive",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-heme-pharm",
+        "title": "Anticoagulant & Antiplatelet Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-bone-marrow",
+        "title": "Bone Marrow Failure Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-eosinophil",
+        "title": "Eosinophilia & Basophil Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-iron",
+        "title": "Iron Cycle Deep Dive",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-b12folate",
+        "title": "B12/Folate Pathways in DNA Synthesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-platelet-prod",
+        "title": "Platelet Production & Clearance",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-thrombophilia",
+        "title": "Hereditary & Acquired Thrombophilia",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-sickle-crisis",
+        "title": "Sickle Crisis Types & Triggers",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-transfusion-massive",
+        "title": "Massive Transfusion Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-marrow-micro",
+        "title": "Marrow Microenvironment & Metastasis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-eosinophil-disorders",
+        "title": "Hypereosinophilic Clinical Frameworks",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-heme-transfusion2",
+        "title": "Patient Blood Management",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-heme-2",
+        "title": "Coagulation Pathways Clinically",
+        "level": "STEP_1",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-neuro",
+    "title": "Neurosciences & Behavior",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 32,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-neuro-2",
+        "title": "Motor Systems & Localization",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-neuro-4",
+        "title": "Seizure vs Syncope & Status Priorities",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-neuro-5",
+        "title": "Meningitis & Encephalitis Urgency",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-neuro-6",
+        "title": "Raised ICP & Herniation Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-neuro-7",
+        "title": "Parkinson Disease Mechanisms",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-neuro-8",
+        "title": "Myasthenia Gravis & NMJ Failure",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-neuro-neurotrans",
+        "title": "CNS Neurotransmitters Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-synapses",
+        "title": "Synaptic Transmission & Plasticity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-ascending",
+        "title": "Ascending Sensory Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-descending",
+        "title": "Descending Motor Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-brainstem",
+        "title": "Brainstem Syndromes Localization",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-cerebellum",
+        "title": "Cerebellar Function & Lesions",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-basal-ganglia",
+        "title": "Basal Ganglia Circuits",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-cortex",
+        "title": "Cortical Localization Language/Visuospatial",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-csf",
+        "title": "CSF Production & ICP Dynamics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-stroke-path",
+        "title": "Ischemic vs Hemorrhagic Stroke Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-seizure-path",
+        "title": "Seizure Mechanisms & Status",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-demyelination",
+        "title": "Central vs Peripheral Demyelination",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-neurodegen",
+        "title": "Neurodegeneration Proteinopathies",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-headache-path",
+        "title": "Headache Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-ans-neuro",
+        "title": "Central Autonomic Control",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-neuro-pharm",
+        "title": "Neuropharmacology High-Yield Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-csf-leak",
+        "title": "CSF Dynamics Disorders Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-pain",
+        "title": "Nociception Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-sleep",
+        "title": "Sleep Neurobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-autonomic-fail",
+        "title": "Autonomic Failure Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-infection-path",
+        "title": "CNS Infection Neuropathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-vascular-malform",
+        "title": "CNS Vascular Malformations",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-muscle-channel",
+        "title": "Channelopathies of Nerve & Muscle",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-dev",
+        "title": "Neurodevelopmental Disorders Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-neuro-imaging",
+        "title": "Neuroimaging Modality Choice",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-neuro-3",
+        "title": "Stroke Localization by Territory",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-msk",
+    "title": "Musculoskeletal & Rheumatology",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 32,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-msk-1",
+        "title": "Approach to Joint Pain",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-msk-3",
+        "title": "Low Back Pain Red Flags",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-msk-4",
+        "title": "Crystal Arthropathy vs Infection",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-msk-5",
+        "title": "Compartment Syndrome Recognition",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-msk-6",
+        "title": "RA vs Osteoarthritis",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-msk-7",
+        "title": "SLE Clinical Map",
+        "level": "STEP_1",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y2-msk-bone-phys",
+        "title": "Bone Physiology & Remodeling",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-cartilage",
+        "title": "Cartilage & OA Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-synovium",
+        "title": "Synovial Inflammation RA Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-crystal",
+        "title": "Crystal Arthritis Pathogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-muscle",
+        "title": "Skeletal Muscle Contraction & Myopathies",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-peripheral-nerve",
+        "title": "Peripheral Nerve Injury Grades",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-spine",
+        "title": "Spine Biomechanics & Disc Disease",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-vasculitis",
+        "title": "Vasculitis Pathobiology Overview",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-spondylo",
+        "title": "Spondyloarthropathy Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-soft-tissue",
+        "title": "Bursitis/Tendinopathy Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-pediatric-ortho",
+        "title": "Pediatric Orthopedic Growth Issues",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-bone-tumor",
+        "title": "Bone Tumor Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-infection-ortho",
+        "title": "Osteomyelitis & Septic Joint Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-msk-pharm",
+        "title": "MSK Therapeutics Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-connective",
+        "title": "Systemic Sclerosis & Overlap",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-pain-sensitize",
+        "title": "Chronic Pain Sensitization",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-bone-infection",
+        "title": "Osteomyelitis Pathogenesis Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-fracture-phys",
+        "title": "Fracture Healing Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-spine-cord",
+        "title": "Cord Compression Pathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-autoinflam",
+        "title": "Autoinflammatory vs Autoimmune",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-joint-infect",
+        "title": "Septic Arthritis Cartilage Destruction Timeline",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-metabolic-bone",
+        "title": "Metabolic Bone Disease Spectrum",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-soft-infection",
+        "title": "Necrotizing Soft Tissue Infection Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-rehab",
+        "title": "Muscle Adaptation & Rehabilitation Science",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-msk-imaging",
+        "title": "MSK Imaging Selection",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-msk-2",
+        "title": "Hot Joint — Septic vs Crystal",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-id",
+    "title": "Host Defense, Microbiology & Infectious Disease",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 54,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-id-1",
+        "title": "Bacteriology Laboratory Logic",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-id-3",
+        "title": "Community Infection Empiric Logic",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-id-4",
+        "title": "HIV Opportunistic Infection Map",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-id-5",
+        "title": "UTI vs Pyelonephritis",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-id-6",
+        "title": "Tuberculosis — Latent vs Active",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-id-7",
+        "title": "Infective Endocarditis Suspicion",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y1-id-gram",
+        "title": "Gram Stain Logic & Cell Walls",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-staph-strep",
+        "title": "Staph vs Strep Clinical Bacteriology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-enterobacterales",
+        "title": "Enterobacterales & Diarrheal Pathogens",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-anaerobes",
+        "title": "Anaerobes & Abscess Microbiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-mycobacteria",
+        "title": "Mycobacteria Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-spirochetes",
+        "title": "Spirochetes",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-viruses-dna",
+        "title": "DNA Virus Families",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-viruses-rna",
+        "title": "RNA Virus Families",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-fungi",
+        "title": "Medical Mycology Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-parasites",
+        "title": "Parasitology High-Yield Cycles",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-sterilization",
+        "title": "Sterilization & Disinfection",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-labdx",
+        "title": "Micro Lab Diagnostics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-sepsis-path",
+        "title": "Sepsis Immunopathophysiology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-fever",
+        "title": "Fever Physiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-pneumonia-bugs",
+        "title": "Pneumonia Syndromes by Host",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-meningitis-bugs",
+        "title": "CNS Infection Pathogens by Age",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-endocarditis-bugs",
+        "title": "Endocarditis Microbiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-sti",
+        "title": "STI Pathobiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-vector",
+        "title": "Vector-Borne Diseases Overview",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-travel",
+        "title": "Travel Medicine Pathogen Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-infection-control",
+        "title": "Hospital Infection Control",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-viral-hepatitis",
+        "title": "Viral Hepatitis Comparison",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-hiv-path",
+        "title": "HIV Pathobiology Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-fungal-deep",
+        "title": "Invasive Fungal Disease Host Risks",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-abx-resist",
+        "title": "Antibiotic Resistance Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-vaccines-adult",
+        "title": "Adult Immunization Logic",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-zoonoses",
+        "title": "Zoonoses High-Yield",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-bioterror",
+        "title": "Select Agents Clinical Recognition",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-biofilm",
+        "title": "Biofilm Infections",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-neutropenic",
+        "title": "Infections in Neutropenia",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-transplant-inf",
+        "title": "Infections After Solid Organ Transplant",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-prosthetic",
+        "title": "Prosthetic Joint Infection",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-cns-device",
+        "title": "CNS Device Infections",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-bite",
+        "title": "Bite Wound Microbiology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-foodborne",
+        "title": "Foodborne Outbreak Pathogens",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-emerging",
+        "title": "Emerging Infections Framework",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-staph2",
+        "title": "Staphylococcal Toxin Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-strep2",
+        "title": "Streptococcal Disease Spectrum",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-neisseria",
+        "title": "Neisseria Pathogenesis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-enteric2",
+        "title": "Invasive vs Toxin Diarrhea Algorithms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-mycobacteria2",
+        "title": "TB Diagnostics & Latency Biology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-viral-resp",
+        "title": "Respiratory Viruses Comparative",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-hepatitis2",
+        "title": "Hepatitis Serology Interpretation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-fungi2",
+        "title": "Dimorphic Fungi Geography",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-parasites2",
+        "title": "Blood & Tissue Parasites",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-id-principles",
+        "title": "Koch & Molecular Postulates Modern",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y2-id-stewardship2",
+        "title": "Antimicrobial Stewardship Metrics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-id-2",
+        "title": "Sepsis Recognition & Empiric Logic",
+        "level": "PRECLINICAL",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-biochem",
+    "title": "Biochemistry & Metabolism",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 48,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cat-y1-bc-glycolysis",
+        "title": "Glycolysis Regulation & Clinical Failure Points",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-gluconeogenesis",
+        "title": "Gluconeogenesis — Bypass Steps",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-tca",
+        "title": "TCA Cycle & Anaplerosis",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-etc",
+        "title": "ETC, OXPHOS & Uncouplers",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-glycogen",
+        "title": "Glycogen Synthesis & Breakdown",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-ppp",
+        "title": "Pentose Phosphate Pathway",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-fafox",
+        "title": "Fatty Acid Oxidation & Carnitine Shuttle",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-ketones",
+        "title": "Ketone Body Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-aa",
+        "title": "Amino Acid Metabolism & Urea Cycle",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-purine-pyrimidine",
+        "title": "Purine & Pyrimidine Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-nutrition",
+        "title": "Vitamins as Enzyme Cofactors",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-fed-fast",
+        "title": "Fed–Fasting Metabolic Integration",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-cholesterol",
+        "title": "Cholesterol Synthesis & Transport",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-metals",
+        "title": "Trace Metals in Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-ethanol",
+        "title": "Ethanol Metabolism & Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-hormones-signal",
+        "title": "Hormone Receptor Classes Biochemistry",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-eicosanoids",
+        "title": "Eicosanoid Synthesis Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-collagen-biochem",
+        "title": "ECM Biochemistry Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-muscle-energy",
+        "title": "Muscle Energy Systems",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-inborn",
+        "title": "Approach to Inborn Errors",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-lipoprotein-detail",
+        "title": "Lipoprotein Assembly & Clearance Disorders",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-nucleotide-salvage",
+        "title": "Nucleotide Salvage vs De Novo Tradeoffs",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-porphyrin",
+        "title": "Porphyrin Chemistry & Photosensitivity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-membrane",
+        "title": "Membrane Lipids & Transport Biochemistry",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-signal-second",
+        "title": "Second Messenger Systems Deep Dive",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-starvation",
+        "title": "Starvation Biochemistry Timeline Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-exercise",
+        "title": "Exercise Biochemistry",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-redox",
+        "title": "Cellular Redox & Antioxidant Systems",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-one-carbon",
+        "title": "One-Carbon Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-urea-detail",
+        "title": "Urea Cycle Regulation & Disorders Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-fa-synth",
+        "title": "Fatty Acid Synthesis vs Oxidation Coordination",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-glycoconjugates",
+        "title": "Glycoproteins & Lysosomal Storage Chemistry",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-fructose",
+        "title": "Fructose & Galactose Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-ppp-detail",
+        "title": "PPP Clinical Correlations Expanded",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-aa-branch",
+        "title": "Branched-Chain Amino Acid Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-aa-aromatic",
+        "title": "Phenylalanine & Tyrosine Pathways",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-aa-sulfur",
+        "title": "Methionine & Cysteine Metabolism",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-urea-lab",
+        "title": "Hyperammonemia Diagnostic Framework",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-lipids-eicos",
+        "title": "Eicosanoid Pathophysiology Clinical",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-vitamins2",
+        "title": "Water-Soluble Vitamin Deficiency Clinics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-fatvit",
+        "title": "Fat-Soluble Vitamin Pathology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-trace2",
+        "title": "Iron Copper Zinc Clinical Biochemistry",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-mucopoly",
+        "title": "Glycosaminoglycans & Mucopolysaccharidoses",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-sphingo",
+        "title": "Sphingolipidoses Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-glycogen2",
+        "title": "Glycogen Storage Diseases Clinical",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-mito-metab",
+        "title": "Mitochondrial Metabolic Disorders",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-fedfast2",
+        "title": "Fed-Fast Cycle Quantitative Thinking",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-bc-enzyme-kinetics",
+        "title": "Enzyme Kinetics for Medicine",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-anatomy",
+    "title": "Anatomy, Embryology & Imaging Correlation",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 40,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cat-y1-anat-embryo-fold",
+        "title": "Embryonic Folding & Body Cavities",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-pharyngeal",
+        "title": "Pharyngeal Apparatus",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-heart-embryo",
+        "title": "Cardiac Embryology & Fetal Circulation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-cns-embryo",
+        "title": "CNS Neural Tube Development",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-foregut",
+        "title": "Foregut Development & Malformations",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-midgut",
+        "title": "Midgut Rotation & Hernias",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-autonomic",
+        "title": "Autonomic Neuroanatomy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-brachial",
+        "title": "Brachial Plexus Clinical Anatomy",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-inguinal",
+        "title": "Inguinal Canal & Hernias",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-perineum",
+        "title": "Pelvic Floor & Perineum",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-mediastinum",
+        "title": "Mediastinal Compartments",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-retroperitoneum",
+        "title": "Retroperitoneal Anatomy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-cranial",
+        "title": "Cranial Nerves Clinical Testing",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-orbit",
+        "title": "Orbit & Extraocular Muscles",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-neck",
+        "title": "Neck Triangles & Thyroid Anatomy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-thorax-wall",
+        "title": "Thoracic Wall & Lung Fissures",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-heart-ext",
+        "title": "External Heart Anatomy & Coronaries",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-abdomen-wall",
+        "title": "Abdominal Wall & Hernia Orifices",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-gi-blood",
+        "title": "GI Blood Supply & Watershed Areas",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-pelvis",
+        "title": "Pelvic Viscera & Spaces",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-lower-limb",
+        "title": "Lower Limb Nerve Injuries",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-upper-limb",
+        "title": "Upper Limb Nerve Injuries Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-spine",
+        "title": "Vertebral Column & Cord Segments",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-lymph",
+        "title": "Lymphatic Drainage Clinical Maps",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-skull",
+        "title": "Skull Base Foramina & CN Exits",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-orbit2",
+        "title": "Orbital Apex & Cavernous Sinus",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-ear",
+        "title": "Ear Anatomy Clinical",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-larynx",
+        "title": "Larynx & Airway Clinical Anatomy",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-breast",
+        "title": "Breast Anatomy & Lymphatics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-mediastinum2",
+        "title": "Mediastinal Mass Localization",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-peritoneum",
+        "title": "Peritoneal Reflections & Spaces",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-portal",
+        "title": "Portal Vein Tributaries & Portosystemic Anastomoses",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-kidney",
+        "title": "Kidney & Retroperitoneal Relations",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-pelvis-female",
+        "title": "Female Pelvic Viscera & Supports",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-pelvis-male",
+        "title": "Male Pelvic Viscera & Prostate Zones",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-hand",
+        "title": "Hand Intrinsics & Injury Patterns",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-foot",
+        "title": "Foot Arches & Nerve Entrapments",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-spine2",
+        "title": "Spine Ligaments & Cord Cross-Section",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-ans2",
+        "title": "Autonomic Plexuses Clinical",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-anat-embryo2",
+        "title": "Branchial Cleft Cysts & Thyroid Descent",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-immuno",
+    "title": "Immunology",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 32,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cat-y1-imm-innate",
+        "title": "Innate Immune Sensors & Effectors",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-mhc",
+        "title": "MHC Restriction & Antigen Presentation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-bcell",
+        "title": "B Cell Development & Antibodies",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-tcell",
+        "title": "T Cell Activation & Tolerance",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-hypersense",
+        "title": "Hypersensitivity Types I–IV",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-complement",
+        "title": "Complement Deficiencies & Regulation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-primary",
+        "title": "Primary Immunodeficiencies Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-transplant",
+        "title": "Transplant Rejection Timing",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-cytokines",
+        "title": "Cytokine Networks",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-vaccines",
+        "title": "Vaccine Immunology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-allergy",
+        "title": "Allergy & Anaphylaxis Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-tumor",
+        "title": "Tumor Immunology Basics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-inflam-resolve",
+        "title": "Resolution of Inflammation & Chronicity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-autoimmune",
+        "title": "Autoimmunity Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-immuno-pharm",
+        "title": "Immunopharmacology Basics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-lab",
+        "title": "Clinical Immunology Labs",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-mucosal",
+        "title": "Mucosal Immunity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-pregnancy",
+        "title": "Immunology of Pregnancy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-vaccine-adv",
+        "title": "Advanced Vaccine Design Concepts",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-eosinophil-mast",
+        "title": "Mast Cells & Type 2 Immunity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-inflam-cells",
+        "title": "Leukocyte Migration Molecular Steps",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-complement2",
+        "title": "Complement Clinical Syndromes",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-tcell2",
+        "title": "CD4 Subset Differentiation",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-bcell2",
+        "title": "Germinal Center Reaction",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-tolerance2",
+        "title": "Central & Peripheral Tolerance Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-tumor2",
+        "title": "Cancer Immunoediting",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-allergy2",
+        "title": "Urticaria Angioedema Anaphylaxis Spectrum",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-transplant2",
+        "title": "HLA Matching & Crossmatch",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-pid2",
+        "title": "Phagocyte Immunodeficiencies",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-mucosal2",
+        "title": "Secretory IgA & Barrier Immunity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-cytokine2",
+        "title": "Cytokine Storm & Sepsis Immunology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-imm-lab2",
+        "title": "Flow Cytometry Clinical Uses",
+        "level": "STEP_1",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-pharm",
+    "title": "Pharmacology Foundations",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 34,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cat-y1-ph-pd",
+        "title": "Pharmacodynamics — Agonists & Antagonists",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-adme",
+        "title": "ADME Deep Dive for Year 1",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-cyp",
+        "title": "CYP450 Induction & Inhibition",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-ans-ach",
+        "title": "Cholinergic Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-ans-ne",
+        "title": "Adrenergic Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-autacoids",
+        "title": "Histamine, Serotonin & Eicosanoids",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-sedative",
+        "title": "Sedative-Hypnotic Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-opioid",
+        "title": "Opioid Receptor Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-abx-mech",
+        "title": "Antibiotic Mechanism Families",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-autonomic-tox",
+        "title": "Autonomic Toxidromes",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-dose-response",
+        "title": "Dose–Response & Therapeutic Index",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-special-pop",
+        "title": "Pharmacology in Special Populations",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-cv",
+        "title": "Cardiovascular Drug Mechanisms Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-renal",
+        "title": "Diuretic & Renal Drug Mechanisms",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-pulm",
+        "title": "Pulmonary Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-gi",
+        "title": "GI Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-endo",
+        "title": "Endocrine Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-heme",
+        "title": "Heme Pharmacology Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-neuro",
+        "title": "CNS Drug Mechanisms Expanded",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-abx2",
+        "title": "Antibiotic Clinical Pharmacology",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-toxicology",
+        "title": "General Toxicology Frameworks",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-chemo",
+        "title": "Chemotherapy Mechanism Classes",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-pk-advanced",
+        "title": "Clinical Pharmacokinetics Problem Solving",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-pd-advanced",
+        "title": "Spare Receptors & Potency vs Efficacy",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-ans-mixed",
+        "title": "Mixed Autonomic Clinical Scenarios",
+        "level": "STEP_1",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-cns-gaba",
+        "title": "GABA-A Modulators Comparative",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-cns-da",
+        "title": "Dopamine Pathways Pharmacology",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-cv2",
+        "title": "Antiarrhythmic Vaughan Williams Map",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-renal2",
+        "title": "RAAS Drug Sequence Reasoning",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-abx3",
+        "title": "Antibiotic PK/PD Targets",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-tox2",
+        "title": "Antidote Map High-Yield",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-repro",
+        "title": "Reproductive Pharmacology Basics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-geri",
+        "title": "Geriatric Prescribing Principles",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-ph-peds",
+        "title": "Pediatric Pharmacology Principles",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-epi",
+    "title": "Epidemiology, Biostatistics & Prevention",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 14,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cat-y1-epi-measures",
+        "title": "Incidence, Prevalence & Risk",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-study",
+        "title": "Study Designs",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-bias",
+        "title": "Bias, Confounding & Effect Modification",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-screening",
+        "title": "Screening Test Metrics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-biostats",
+        "title": "Biostatistics Essentials",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-outbreak",
+        "title": "Outbreak Investigation Steps",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-prevention",
+        "title": "Prevention Levels",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-nnt",
+        "title": "ARR, RRR, NNT/NNH",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-survival",
+        "title": "Survival Analysis Basics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-diag",
+        "title": "Diagnostic Study Appraisal",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-rct",
+        "title": "RCT Critical Appraisal",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-guidelines",
+        "title": "Evidence Hierarchies & Guidelines",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-quality",
+        "title": "Quality Measures & Patient Safety Stats",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-epi-health-econ",
+        "title": "Basic Health Economics for Clinicians",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-ethics",
+    "title": "Ethics, Professionalism & Health Systems",
+    "phase": "Years 1–2 · Preclinical medicine",
+    "phaseKind": "foundations",
+    "lessonCount": 12,
+    "coreClerkship": false,
+    "lessons": [
+      {
+        "id": "les-cat-y1-eth-principles",
+        "title": "Four Principles & Clinical Ethics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-consent",
+        "title": "Informed Consent & Capacity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-privacy",
+        "title": "Confidentiality & Public Health Limits",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-eol",
+        "title": "End-of-Life Ethics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-research",
+        "title": "Research Ethics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-justice",
+        "title": "Justice, Allocation & Health Equity",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-capacity2",
+        "title": "Capacity Assessment Practical Framework",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-surrogate",
+        "title": "Surrogate Decision-Making Standards",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-errors",
+        "title": "Medical Error Disclosure Ethics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-resource",
+        "title": "Scarce Resource Allocation Ethics",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-trainee",
+        "title": "Trainee Ethics & Supervision",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      },
+      {
+        "id": "les-cat-y1-eth-social-media",
+        "title": "Professionalism Digital Age",
+        "level": "PRECLINICAL",
+        "minutes": 300
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-im",
+    "title": "Internal Medicine Clerkship",
+    "phase": "Years 3–4 · Clinical medicine",
+    "phaseKind": "clerkship_core",
+    "lessonCount": 71,
+    "coreClerkship": true,
+    "lessons": [
+      {
+        "id": "les-im-1",
+        "title": "Community-Acquired Pneumonia",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-im-3",
+        "title": "Syncope — Cardiac vs Reflex",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-im-4",
+        "title": "AKI Bedside Framework",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-im-5",
+        "title": "Community Pneumonia Disposition",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-im-6",
+        "title": "Inpatient VTE Prophylaxis",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-im-7",
+        "title": "Cirrhosis Decompensation on the Wards",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y3-im-ward-sbar",
+        "title": "Clinical Reasoning & Problem Representation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-chest-pain",
+        "title": "Chest Pain Pathways",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-dyspnea",
+        "title": "Acute Dyspnea Differential",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-fever-inpatient",
+        "title": "Inpatient Fever & Sepsis Bundles",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-electrolytes-ward",
+        "title": "Ward Electrolyte Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-gi-bleed-ward",
+        "title": "GI Bleed Risk Stratification",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-cirrhosis-ward",
+        "title": "Cirrhosis Ward Management",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-aki-ward",
+        "title": "AKI on the Wards",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-cap-ward",
+        "title": "Pneumonia Severity & Abx Stewardship",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-vte-ward",
+        "title": "VTE Diagnosis & Treatment Principles",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-dm-ward",
+        "title": "Inpatient Glucose Management",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-afib-ward",
+        "title": "Atrial Fibrillation Rate/Rhythm/Stroke Risk",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-anemia-ward",
+        "title": "Anemia Workup on Medicine",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-altered-mental",
+        "title": "Altered Mental Status Framework",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-perioperative",
+        "title": "Medical Perioperative Assessment",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-goals-care",
+        "title": "Goals of Care Conversations",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-derm-inpatient",
+        "title": "Inpatient Dermatology Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-rheum-consult",
+        "title": "Rheumatology Urgencies for IM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-onc-emerg",
+        "title": "Oncologic Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-substance-ward",
+        "title": "Substance Withdrawal on Wards",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-icu-shock",
+        "title": "ICU Shock Teams & Monitoring",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-icu-vent",
+        "title": "Mechanical Ventilation Basics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-icu-sedation",
+        "title": "ICU Pain/Agitation/Delirium",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-complex-id",
+        "title": "Complex ID Decision Making",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-hdu-cards",
+        "title": "Cardiology Intermediate Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-nephro-adv",
+        "title": "Advanced Nephrology Consults",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-heme-adv",
+        "title": "Advanced Hematology Consults",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-pulm-adv",
+        "title": "Advanced Pulmonology",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-endocrinology-adv",
+        "title": "Advanced Endocrinology Consults",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-rheum-adv",
+        "title": "Advanced Rheumatology",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-geri-adv",
+        "title": "Geriatric Syndromes Deep Dive",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-qi-safety",
+        "title": "Quality Improvement & Patient Safety",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-acs-ed",
+        "title": "ACS Pathway in the ED",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-hf-admit",
+        "title": "Acute Heart Failure Admission Decisions",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-sepsis-hour1",
+        "title": "Hour-1 Sepsis Bundle",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-dka-hhs",
+        "title": "DKA vs HHS Management",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-gi-bleed",
+        "title": "Upper GI Bleed Stabilization",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-stroke-alert",
+        "title": "Acute Stroke Code on Wards",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-afib-rvr",
+        "title": "Atrial Fibrillation with RVR",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-cap-admit",
+        "title": "Community Pneumonia Disposition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-aki-workup",
+        "title": "Inpatient AKI Framework",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-hyponatremia",
+        "title": "Hyponatremia Diagnostic Approach",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-pe-workup",
+        "title": "Pulmonary Embolism Workup",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-copd-exac",
+        "title": "COPD Exacerbation Inpatient Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-pancreatitis",
+        "title": "Acute Pancreatitis Early Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-cellulitis-vs-dvt",
+        "title": "Leg Redness Differential",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-delirium",
+        "title": "Hospital Delirium Workup",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-transfusion",
+        "title": "Inpatient Transfusion Thresholds",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-syncope",
+        "title": "Syncope Risk Stratification",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-thyroid-storm",
+        "title": "Thyroid Storm Recognition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-adrenal-crisis",
+        "title": "Adrenal Crisis Emergency",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-im-endocarditis",
+        "title": "Infective Endocarditis Approach",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-shock-types",
+        "title": "Shock Differentiation at the Bedside",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-vent-basics",
+        "title": "Mechanical Ventilation Goals",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-ards",
+        "title": "ARDS Berlin Definition Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-septic-shock",
+        "title": "Septic Shock Beyond Hour-1",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-acs-icu",
+        "title": "Complicated ACS ICU Care",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-gi-bleed-icu",
+        "title": "Massive GI Bleed ICU",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-aki-icu",
+        "title": "CRRT Indications Mindset",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-neuro-icu",
+        "title": "Status Epilepticus Escalation",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-onco-emerg",
+        "title": "Oncologic Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-goals-icu",
+        "title": "ICU Goals-of-Care Conversations",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-procedure-line",
+        "title": "Central Line Infection Prevention",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-im-acidbase",
+        "title": "Complex Acid-Base ICU Cases",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-im-2",
+        "title": "Chest Pain & ACS Reasoning",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-surg",
+    "title": "Surgery Clerkship",
+    "phase": "Years 3–4 · Clinical medicine",
+    "phaseKind": "clerkship_core",
+    "lessonCount": 60,
+    "coreClerkship": true,
+    "lessons": [
+      {
+        "id": "les-surg-1",
+        "title": "Shock & Resuscitation Priorities",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-surg-3",
+        "title": "Appendicitis Clinical Pattern",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-surg-4",
+        "title": "Trauma Primary Survey",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-surg-5",
+        "title": "Biliary Colic & Cholecystitis",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-surg-6",
+        "title": "Wound Healing Biology",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-surg-7",
+        "title": "Preoperative Risk Thinking",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y3-surg-acute-abd",
+        "title": "Acute Abdomen Decision Making",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-trauma-atls",
+        "title": "ATLS Primary/Secondary Survey Deep Dive",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-preop-opt",
+        "title": "Preoperative Optimization",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-postop-fever",
+        "title": "Postoperative Fever Timing",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-wound-care",
+        "title": "Surgical Infections & Wound Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-biliary-surg",
+        "title": "Biliary Surgical Disease",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-hernia-surg",
+        "title": "Hernia Complications",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-bowel-obstruct",
+        "title": "SBO vs LBO",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-appendicitis-surg",
+        "title": "Appendicitis Evidence-Based Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-breast",
+        "title": "Breast Disease Surgical Framework",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-thyroid-surg",
+        "title": "Thyroid/Parathyroid Surgical Disease",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-vascular-surg",
+        "title": "Limb Ischemia & Aneurysms",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-transplant-surg",
+        "title": "Transplant Basics for Students",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-pediatric-surg",
+        "title": "Pediatric Surgical Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-burn",
+        "title": "Burn Physiology & Care Priorities",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-surgical-nutrition",
+        "title": "Surgical Nutrition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-anesthesia-for-surg",
+        "title": "Anesthesia Risks for Surgeons",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-onc-surg",
+        "title": "Surgical Oncology Principles",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-trauma-chest",
+        "title": "Thoracic Trauma",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-ethics-surg",
+        "title": "Surgical Consent & Error Disclosure",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-trauma",
+        "title": "Trauma Sub-Internship Decision Making",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-acute-care",
+        "title": "Acute Care Surgery Service",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-surgical-icu",
+        "title": "Surgical ICU Essentials",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-elective",
+        "title": "Elective Surgery Pathway Leadership",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-onc-surg",
+        "title": "Surgical Oncology Sub-I",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-transplant",
+        "title": "Transplant Surgery Exposure",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-vascular",
+        "title": "Vascular Surgery Decision Making",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-subi-peds-surg",
+        "title": "Pediatric Surgery Sub-I",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-appy",
+        "title": "Appendicitis Decision Pathway",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-cholecystitis",
+        "title": "Acute Cholecystitis Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-trauma-abc",
+        "title": "ATLS Primary Survey Mindset",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-preop-risk",
+        "title": "Preoperative Risk Assessment",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-wound-inf",
+        "title": "Surgical Site Infection Prevention",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-hernias",
+        "title": "Hernia Incarceration vs Strangulation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-vascular-limb",
+        "title": "Acute Limb Ischemia 6 Ps",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-anastomotic-leak",
+        "title": "Anastomotic Leak Recognition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-burns",
+        "title": "Burn Resuscitation Basics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-thyroid-nodule",
+        "title": "Thyroid Nodule Surgical Decision",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-breast-mass",
+        "title": "Breast Mass Triple Assessment",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-fluids",
+        "title": "Perioperative Fluid Strategy",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-pain",
+        "title": "Multimodal Postoperative Analgesia",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-nutrition",
+        "title": "Surgical Nutrition Timing",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-drains",
+        "title": "Surgical Drain Interpretation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-informed",
+        "title": "Surgical Informed Consent Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-surg-or-safety",
+        "title": "OR Safety Checklist Mindset",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-icu-resusc",
+        "title": "Surgical ICU Resuscitation",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-trauma-icu",
+        "title": "Trauma ICU Secondary Survey Gaps",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-transplant-basic",
+        "title": "Solid Organ Transplant Basics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-vascular-rupture",
+        "title": "Ruptured AAA Recognition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-bariatric-comp",
+        "title": "Bariatric Surgery Complications",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-burn-icu",
+        "title": "Burn ICU Critical Care",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-ent-airway",
+        "title": "Difficult Surgical Airway Prep",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-surg-nights",
+        "title": "Nightfloat Cross-Cover Priorities",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-surg-2",
+        "title": "Acute Abdomen Patterns",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-peds",
+    "title": "Pediatrics Clerkship",
+    "phase": "Years 3–4 · Clinical medicine",
+    "phaseKind": "clerkship_core",
+    "lessonCount": 52,
+    "coreClerkship": true,
+    "lessons": [
+      {
+        "id": "les-peds-1",
+        "title": "Fever in the Young Infant — Reasoning Frame",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-peds-3",
+        "title": "Fever in the Young Infant",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-peds-4",
+        "title": "Bronchiolitis — Supportive Care Reasoning",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-peds-5",
+        "title": "Dehydration in Gastroenteritis",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-peds-6",
+        "title": "Developmental Milestone Surveillance",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-peds-7",
+        "title": "Pediatric Asthma Exacerbation",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y3-peds-growth",
+        "title": "Growth Charts & Failure to Thrive",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-newborn",
+        "title": "Newborn Transition & Screening",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-fever-infant",
+        "title": "Febrile Infant Pathways",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-resp-peds",
+        "title": "Pediatric Respiratory Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-card-peds",
+        "title": "Pediatric Cardiology Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-gi-peds",
+        "title": "Pediatric GI Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-neuro-peds",
+        "title": "Pediatric Neurology Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-heme-peds",
+        "title": "Pediatric Hematology",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-endo-peds",
+        "title": "Pediatric Endocrinology",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-id-peds",
+        "title": "Pediatric Infectious Rashes & Exanthems",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-adolescent",
+        "title": "Adolescent Medicine",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-allergy-peds",
+        "title": "Pediatric Allergy & Anaphylaxis",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-rheum-peds",
+        "title": "Pediatric Rheumatology",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-neonatal-jaundice",
+        "title": "Neonatal Jaundice Mechanisms",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-cong-anomalies",
+        "title": "Congenital Anomaly Patterns",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-child-abuse",
+        "title": "Child Maltreatment Recognition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-vaccine-peds",
+        "title": "Pediatric Immunization Schedule Logic",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-pulm-peds-cf",
+        "title": "Cystic Fibrosis Pathobiology",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-peds-surgery-ref",
+        "title": "When Pediatrics Refers to Surgery",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-peds-ethics",
+        "title": "Pediatric Ethics & Assent",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-icu",
+        "title": "Pediatric Critical Care Essentials",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-nicu",
+        "title": "NICU Foundations for the Sub-I",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-hemeonc",
+        "title": "Pediatric Hematology-Oncology Urgencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-cards-adv",
+        "title": "Pediatric Cardiology Advanced",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-dehydration",
+        "title": "Pediatric Dehydration & ORS",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-asthma-exac",
+        "title": "Pediatric Asthma Exacerbation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-bronchiolitis",
+        "title": "Bronchiolitis Supportive Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-otitis",
+        "title": "Acute Otitis Media Decisions",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-pharyngitis",
+        "title": "Strep Pharyngitis Testing",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-uti",
+        "title": "Pediatric UTI & Imaging",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-vaccines",
+        "title": "Vaccine Counseling Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-abuse",
+        "title": "Child Abuse Recognition Duties",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-congenital-heart",
+        "title": "Critical Congenital Heart Clues",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-seizure",
+        "title": "Pediatric Seizure First Aid & Workup",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-anaphylaxis",
+        "title": "Pediatric Anaphylaxis",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-diabetes-new",
+        "title": "New-Onset Pediatric Diabetes",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-developmental",
+        "title": "Developmental Delay Screening",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-lead",
+        "title": "Lead Exposure Screening Actions",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-obesity",
+        "title": "Pediatric Obesity Counseling",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-sleep",
+        "title": "Pediatric Sleep & Safety",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-peds-ortho-limp",
+        "title": "Limping Child Not-to-Miss",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-picu-sepsis",
+        "title": "Pediatric Septic Shock Nuances",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-congenital-surg",
+        "title": "Neonatal Surgical Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-dka-cerebral",
+        "title": "Pediatric DKA Cerebral Edema",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-peds-child-life",
+        "title": "Procedural Comfort & Child Life",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-peds-2",
+        "title": "Well-Child Prevention Visit",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-obgyn",
+    "title": "Obstetrics & Gynecology Clerkship",
+    "phase": "Years 3–4 · Clinical medicine",
+    "phaseKind": "clerkship_core",
+    "lessonCount": 55,
+    "coreClerkship": true,
+    "lessons": [
+      {
+        "id": "les-obgyn-1",
+        "title": "Prenatal Care Foundations",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-obgyn-3",
+        "title": "Ectopic Pregnancy Recognition",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-obgyn-4",
+        "title": "Postpartum Hemorrhage — 4 Ts",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-obgyn-5",
+        "title": "Stages of Labor",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-obgyn-6",
+        "title": "Shoulder Dystocia Maneuvers",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-obgyn-7",
+        "title": "Previa vs Abruption",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y3-ob-prenatal",
+        "title": "Prenatal Care Framework",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-medical-ob",
+        "title": "Medical Complications in Pregnancy",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-htn-preg",
+        "title": "Hypertensive Disorders of Pregnancy",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-labor-abnormal",
+        "title": "Labor Dystocia & Fetal Monitoring",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-pp-care",
+        "title": "Postpartum Care & Complications",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-contraception",
+        "title": "Contraception Mechanisms & Counseling",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-abnormal-uterine",
+        "title": "Abnormal Uterine Bleeding",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-gyn-infection",
+        "title": "Gynecologic Infections",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-gyn-onc",
+        "title": "Gyn Oncology Screening & Warnings",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-infertility",
+        "title": "Infertility Evaluation Basics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-sexual-assault",
+        "title": "Sexual Assault Care Principles",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-menopause",
+        "title": "Menopause Physiology & Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-fetal-growth",
+        "title": "Fetal Growth Disorders",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-multiple-gest",
+        "title": "Multiple Gestation Risks",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-ob-anesthesia",
+        "title": "OB Analgesia & Anesthesia Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-gyn-surgery",
+        "title": "Common Gyn Surgeries & Complications",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-breast-obgyn",
+        "title": "Breast Care in Women's Health",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-ob-hemorrhage",
+        "title": "Massive Obstetric Hemorrhage Systems",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-ob-infection",
+        "title": "Obstetric Infections",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-reproductive-ethics",
+        "title": "Reproductive Ethics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-mfm",
+        "title": "Maternal–Fetal Medicine Complex Care",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-gynonc",
+        "title": "Gyn Oncology Surgical Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-rei",
+        "title": "Reproductive Endocrinology & Infertility",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-urogyn",
+        "title": "Urogynecology & Pelvic Floor",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-preeclampsia",
+        "title": "Preeclampsia Recognition & Mag",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-pp-hemorrhage",
+        "title": "Postpartum Hemorrhage Algorithm",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-shoulder",
+        "title": "Shoulder Dystocia HELPERR",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-gdm",
+        "title": "Gestational Diabetes Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-preterm-labor",
+        "title": "Preterm Labor Evaluation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-vbac",
+        "title": "TOLAC / VBAC Counseling",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-ectopic",
+        "title": "Ectopic Pregnancy Emergency",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-pid",
+        "title": "PID Diagnosis & Treatment",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-abnormal-uterine",
+        "title": "AUB PALM-COEIN Framework",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-contraception",
+        "title": "Contraception Counseling MEC",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-cervical-ca-screen",
+        "title": "Cervical Cancer Screening Updates",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-rhogam",
+        "title": "Rh Incompatibility Prevention",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-third-trimester-bleed",
+        "title": "Third-Trimester Bleeding Differential",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-ovarian-torsion",
+        "title": "Ovarian Torsion Urgency",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-gbs",
+        "title": "Intrapartum GBS Prophylaxis",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-menopause",
+        "title": "Menopause Symptom Management",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-pp-depression",
+        "title": "Postpartum Depression Screen",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-endometriosis",
+        "title": "Endometriosis Clinical Approach",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-ob-fetal-monitoring",
+        "title": "Intrapartum Fetal Heart Tracing Categories",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-gyn-vulvovaginitis",
+        "title": "Vaginitis Office Diagnosis",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-mfm-complex",
+        "title": "Complex Maternal Medical Disease",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-obcrash",
+        "title": "Maternal Cardiac Arrest ACLS Mods",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-gyn-onc-staging",
+        "title": "Gyn Oncology Staging Mindset",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-ob-crit-care",
+        "title": "Obstetric Critical Care Pearls",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-obgyn-2",
+        "title": "Preeclampsia Warning Signs",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-psych",
+    "title": "Psychiatry Clerkship",
+    "phase": "Years 3–4 · Clinical medicine",
+    "phaseKind": "clerkship_core",
+    "lessonCount": 53,
+    "coreClerkship": true,
+    "lessons": [
+      {
+        "id": "les-psych-1",
+        "title": "Safety Assessment & Mood Disorders Intro",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-psych-3",
+        "title": "Suicide Risk Assessment Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-psych-4",
+        "title": "Delirium vs Primary Psychosis",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-psych-5",
+        "title": "Major Depression Diagnosis & First Steps",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-psych-6",
+        "title": "Alcohol Withdrawal",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-psych-7",
+        "title": "Serotonin Syndrome vs NMS",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y3-psych-psych-exam",
+        "title": "MSE & Diagnostic Formulation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-psychosis",
+        "title": "Psychosis Differential",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-mood",
+        "title": "Mood Disorder Spectrum",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-anxiety",
+        "title": "Anxiety Disorders",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-trauma",
+        "title": "Trauma-Related Disorders",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-personality",
+        "title": "Personality Disorders Clusters",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-eating",
+        "title": "Eating Disorders",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-neurocog",
+        "title": "Neurocognitive Disorders",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-child-psych",
+        "title": "Child & Adolescent Psychiatry",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-psych-pharm",
+        "title": "Psychopharmacology Mechanisms",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-emergency-psych",
+        "title": "Psychiatric Emergencies",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-addiction",
+        "title": "Addiction Medicine",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-sleep-psych",
+        "title": "Sleep & Psychiatry",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-somatic",
+        "title": "Somatic Symptom & Related",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-consult-liaison",
+        "title": "CL Psychiatry Frameworks",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-psychotherapy",
+        "title": "Psychotherapy Modalities Map",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-law-psych",
+        "title": "Forensic Psychiatry Basics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-women-psych",
+        "title": "Reproductive Psychiatry",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-geriatric-psych",
+        "title": "Geriatric Psychiatry",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-psych-systems",
+        "title": "Systems of Mental Health Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-cl",
+        "title": "Advanced Consultation-Liaison Cases",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-addiction",
+        "title": "Advanced Addiction Care",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-public",
+        "title": "Public Psychiatry & Serious Mental Illness",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-child-adv",
+        "title": "Advanced Child Psychiatry",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-si-assess",
+        "title": "Suicide Risk Assessment Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-psychosis-ed",
+        "title": "First-Episode Psychosis ED Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-serotonin",
+        "title": "Serotonin Syndrome Recognition",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-nms",
+        "title": "Neuroleptic Malignant Syndrome",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-lithium",
+        "title": "Lithium Toxicity & Monitoring",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-benzo-withdraw",
+        "title": "Benzodiazepine Withdrawal Danger",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-alcohol-withdraw",
+        "title": "Alcohol Withdrawal CIWA Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-depression-tx",
+        "title": "MDD Treatment Ladder Basics",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-bipolar-manic",
+        "title": "Acute Mania Management Priorities",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-adhd-adult",
+        "title": "Adult ADHD Evaluation Caution",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-capacity",
+        "title": "Decision-Making Capacity Elements",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-catatonia",
+        "title": "Catatonia Recognition & Lorazepam",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-ptsd",
+        "title": "PTSD Evidence-Based Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-personality-borderline",
+        "title": "Borderline Crisis Skills",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-sleep-meds",
+        "title": "Insomnia Prescribing Caution",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-clozapine",
+        "title": "Clozapine Monitoring Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-qtc",
+        "title": "Psychotropics & QTc Risk",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-psych-agitation",
+        "title": "Acute Agitation De-escalation",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-cl-psych",
+        "title": "Consultation-Liaison Priorities",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-addiction-icu",
+        "title": "ICU Sedation & Withdrawal Overlap",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-forensic",
+        "title": "Forensic Basics for Clinicians",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-psych-edmhs",
+        "title": "ED Mental Health Holds Process",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-psych-2",
+        "title": "Bipolar Spectrum — Mania vs Hypomania",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      }
+    ]
+  },
+  {
+    "moduleId": "mod-fm",
+    "title": "Family Medicine Clerkship",
+    "phase": "Years 3–4 · Clinical medicine",
+    "phaseKind": "clerkship_core",
+    "lessonCount": 55,
+    "coreClerkship": true,
+    "lessons": [
+      {
+        "id": "les-fm-1",
+        "title": "Preventive Care & Undifferentiated Symptoms",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-fm-3",
+        "title": "Hypertension First-Line Reasoning",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-fm-4",
+        "title": "Type 2 Diabetes First Steps",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-fm-5",
+        "title": "Outpatient Asthma Control",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-fm-6",
+        "title": "Primary Care Depression & Anxiety",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-fm-7",
+        "title": "Lipids & Statin Benefit Groups",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      },
+      {
+        "id": "les-cat-y3-fm-continuity",
+        "title": "Continuity & Comprehensive Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-prevention-fm",
+        "title": "Adult Preventive Care Framework",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-htn-fm",
+        "title": "Hypertension Longitudinal Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-lipids-fm",
+        "title": "Lipids & ASCVD Prevention",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-dm-fm",
+        "title": "Outpatient Diabetes Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-asthma-copd-fm",
+        "title": "Outpatient Airway Disease",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-msk-fm",
+        "title": "MSK Primary Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-derm-fm",
+        "title": "Primary Care Dermatology",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-bh-fm",
+        "title": "Behavioral Health in FM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-womens-fm",
+        "title": "Women's Health in FM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-mens-fm",
+        "title": "Men's Health in FM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-geri-fm",
+        "title": "Geriatrics in FM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-palliative-fm",
+        "title": "Primary Palliative Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-procedure-fm",
+        "title": "Office Procedures & Safety",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-occupational",
+        "title": "Occupational & Environmental Health",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-global-fm",
+        "title": "Global & Community Health",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-informatics-fm",
+        "title": "Clinical Informatics for FM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-pain-fm",
+        "title": "Chronic Pain in Primary Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-obesity-fm",
+        "title": "Obesity Care Longitudinal",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-multimorbidity",
+        "title": "Multimorbidity & Complexity",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-leadership",
+        "title": "Practice Leadership & Population Health",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-complex",
+        "title": "Ambulatory Complexity Clinic",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-maternity",
+        "title": "Family Medicine Maternity Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-sports",
+        "title": "Sports Medicine for FM",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-htn-office",
+        "title": "Office Hypertension Diagnosis",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-lipids",
+        "title": "Primary Prevention Statin Decisions",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-diabetes-outpt",
+        "title": "Outpatient Type 2 Diabetes Intensification",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-depression-pc",
+        "title": "PHQ-9 in Primary Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-opioid",
+        "title": "Opioid Stewardship in Clinic",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-prevention",
+        "title": "USPSTF Prevention Prioritization",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-uri",
+        "title": "URI Antibiotic Stewardship",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-back-pain",
+        "title": "Low Back Pain Red Flags",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-headache",
+        "title": "Primary Care Headache Sort",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-dermatology",
+        "title": "Primary Care Rash Decisions",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-msk-shoulder",
+        "title": "Shoulder Pain Office Exam",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-womens",
+        "title": "Well-Woman Visit Essentials",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-mens",
+        "title": "Men's Health Primary Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-geriatrics",
+        "title": "Geriatric Primary Care 5Ms",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-obesity-pc",
+        "title": "Obesity Counseling in Clinic",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-smoking",
+        "title": "Tobacco Cessation 5As",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-alcohol-sbirt",
+        "title": "Alcohol SBIRT in Clinic",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-ckd",
+        "title": "CKD Staging in Primary Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-asthma-copd",
+        "title": "Outpatient Asthma/COPD Overlap Care",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y3-fm-travel",
+        "title": "Travel Medicine Brief",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-complex-amb",
+        "title": "Complex Ambulatory Multimorbidity",
+        "level": "ADVANCED_CLINICAL",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-transitions",
+        "title": "Hospital-to-Home Transitions",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-palliative-pc",
+        "title": "Primary Palliative Care Skills",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-cat-y4-fm-telehealth",
+        "title": "High-Quality Telehealth Visits",
+        "level": "CLERKSHIP",
+        "minutes": 240
+      },
+      {
+        "id": "les-fm-2",
+        "title": "Shared Decisions in Screening",
+        "level": "CLERKSHIP",
+        "minutes": 90
+      }
+    ]
+  }
+]

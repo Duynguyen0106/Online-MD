@@ -9,9 +9,14 @@ import {
   moduleDescription,
 } from "@/lib/copy/student";
 import {
+  buildLessonMeta,
+  formatLearnerLevel,
+} from "@/lib/curriculum/content-metadata";
+import {
   getClinicalCases,
   getLessonBlocks,
   getModule,
+  getPhaseForModule,
 } from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
 import {
@@ -29,6 +34,7 @@ export default async function ModulePage({
   const { moduleId } = await params;
   const mod = await getModule(moduleId);
   if (!mod) notFound();
+  const phase = await getPhaseForModule(moduleId);
   const state = await readStudentState();
   const mastery = await evaluateModuleMastery(moduleId, state);
   const qbank = await canAccessModuleQbank(state, moduleId);
@@ -42,6 +48,13 @@ export default async function ModulePage({
       const blocks = getLessonBlocks(lesson);
       const viewed = new Set(lp?.viewedBlockIds ?? []);
       const evalLesson = await evaluateLessonMastery(lesson.id, lp);
+      const meta = buildLessonMeta({
+        lessonId: lesson.id,
+        moduleId: mod.id,
+        title: lesson.title,
+        phaseKind: phase?.phaseKind,
+        isCoreClerkship: mod.isCoreClerkship,
+      });
       return {
         index: index + 1,
         lesson,
@@ -50,6 +63,8 @@ export default async function ModulePage({
         blocksViewed: blocks.filter((b) => viewed.has(b.id)).length,
         quizScore: lp?.lastFormativeScore,
         mastery: evalLesson,
+        learnerLevel: meta.learnerLevel,
+        educationalRole: meta.educationalRole,
         summary:
           lesson.concepts[0]?.summary ??
           "Core concepts, clinical connections, and a short check of your understanding.",
@@ -141,6 +156,14 @@ export default async function ModulePage({
               </div>
               <div className="flex flex-col items-end gap-2">
                 <Badge>{formatProgressState(row.lp?.state)}</Badge>
+                <Badge className="border-[var(--border)] bg-transparent">
+                  {formatLearnerLevel(row.learnerLevel)}
+                </Badge>
+                {row.educationalRole === "ADVANCED" ? (
+                  <Badge className="border-amber-300 bg-amber-50 text-amber-900">
+                    Advanced
+                  </Badge>
+                ) : null}
                 <Button asChild size="sm">
                   <Link href={`/lessons/${row.lesson.id}`}>
                     {lessonActionLabel(row.lp?.state)}

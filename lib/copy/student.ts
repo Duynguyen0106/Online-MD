@@ -107,7 +107,7 @@ export const MODULE_DESCRIPTIONS: Record<string, string> = {
   "mod-ethics":
     "Work through the ethical and professional issues that come up in clinical practice.",
   "mod-cv":
-    "Understand the heart, circulation, and the major diseases that affect them.",
+    "Build from cardiac electrophysiology and hemodynamics to ischemic disease, heart failure phenotypes, shock, and valvular/pericardial pathophysiology.",
   "mod-pulm":
     "Learn how ventilation and gas exchange work, then apply them to common lung diseases.",
   "mod-renal":

@@ -549,7 +549,7 @@ export const objectives: Objective[] = [
     moduleId: IDS.modIm,
     lessonIds: ["les-im-1"],
   },
-  {
+    {
     id: "obj-surg-1",
     code: "OBJ-P2-SURG-001",
     statement: "Recognize compensatory responses to hypovolemic shock and prioritize resuscitation.",
@@ -559,6 +559,150 @@ export const objectives: Objective[] = [
     contentCategory: "Surgery",
     moduleId: IDS.modSurg,
     lessonIds: ["les-surg-1"],
+  },
+  {
+    id: "obj-msk-1",
+    code: "OBJ-P1-MSK-001",
+    statement:
+      "Differentiate inflammatory from mechanical joint pain using stiffness pattern, systemic features, and urgency of monoarthritis.",
+    usmleStep: "step1",
+    organSystem: "Musculoskeletal",
+    physicianTask: "Diagnosis",
+    contentCategory: "Rheumatology",
+    moduleId: IDS.modMsk,
+    lessonIds: ["les-msk-1"],
+  },
+  {
+    id: "obj-msk-1b",
+    code: "OBJ-P1-MSK-001B",
+    statement:
+      "Recognize why acute monoarthritis requires exclusion of septic arthritis before attributing symptoms to crystal or mechanical disease.",
+    usmleStep: "step1",
+    organSystem: "Musculoskeletal",
+    physicianTask: "Diagnosis",
+    contentCategory: "Rheumatology",
+    moduleId: IDS.modMsk,
+    lessonIds: ["les-msk-1"],
+  },
+  {
+    id: "obj-peds-1",
+    code: "OBJ-P2-PEDS-001",
+    statement:
+      "Risk-stratify fever in young infants using age, appearance, immunization status, and need for escalation rather than a single memorized protocol.",
+    usmleStep: "step2ck",
+    organSystem: "Pediatric",
+    physicianTask: "Diagnosis",
+    contentCategory: "Pediatrics",
+    moduleId: IDS.modPeds,
+    lessonIds: ["les-peds-1"],
+  },
+  {
+    id: "obj-peds-1b",
+    code: "OBJ-P2-PEDS-001B",
+    statement:
+      "Explain why neonates and young infants warrant a lower threshold for serious bacterial infection evaluation than older children.",
+    usmleStep: "step2ck",
+    organSystem: "Pediatric",
+    physicianTask: "Medical Knowledge / Scientific Concepts",
+    contentCategory: "Pediatrics",
+    moduleId: IDS.modPeds,
+    lessonIds: ["les-peds-1"],
+  },
+  {
+    id: "obj-obgyn-1",
+    code: "OBJ-P2-OB-001",
+    statement:
+      "Outline prenatal dating, routine gestational-age–specific screens, and red-flag symptoms that require escalation.",
+    usmleStep: "step2ck",
+    organSystem: "Reproductive",
+    physicianTask: "Patient Care",
+    contentCategory: "Obstetrics & Gynecology",
+    moduleId: IDS.modObgyn,
+    lessonIds: ["les-obgyn-1"],
+  },
+  {
+    id: "obj-obgyn-1b",
+    code: "OBJ-P2-OB-001B",
+    statement:
+      "Recognize warning symptoms in pregnancy (bleeding, severe headache/visual change, decreased fetal movement, preterm contractions, fever) that change urgency.",
+    usmleStep: "step2ck",
+    organSystem: "Reproductive",
+    physicianTask: "Diagnosis",
+    contentCategory: "Obstetrics & Gynecology",
+    moduleId: IDS.modObgyn,
+    lessonIds: ["les-obgyn-1"],
+  },
+  {
+    id: "obj-psych-1",
+    code: "OBJ-P2-PSY-001",
+    statement:
+      "Perform a structured suicide-risk assessment covering ideation, plan, intent, means, and protective factors.",
+    usmleStep: "step2ck",
+    organSystem: "Behavioral Health",
+    physicianTask: "Patient Care",
+    contentCategory: "Psychiatry",
+    moduleId: IDS.modPsych,
+    lessonIds: ["les-psych-1"],
+  },
+  {
+    id: "obj-psych-1b",
+    code: "OBJ-P2-PSY-001B",
+    statement:
+      "Describe syndromic features of major depressive disorder that indicate functional impairment beyond isolated low mood.",
+    usmleStep: "step2ck",
+    organSystem: "Behavioral Health",
+    physicianTask: "Diagnosis",
+    contentCategory: "Psychiatry",
+    moduleId: IDS.modPsych,
+    lessonIds: ["les-psych-1"],
+  },
+  {
+    id: "obj-fm-1",
+    code: "OBJ-P2-FM-001",
+    statement:
+      "Apply screening principles (prevalence, test performance, net benefit, shared decision-making) to preventive care counseling.",
+    usmleStep: "step2ck",
+    organSystem: "Multisystem",
+    physicianTask: "Patient Care",
+    contentCategory: "Family Medicine",
+    moduleId: IDS.modFm,
+    lessonIds: ["les-fm-1"],
+  },
+  {
+    id: "obj-fm-1b",
+    code: "OBJ-P2-FM-001B",
+    statement:
+      "Approach undifferentiated primary-care symptoms by excluding red flags before probabilistic workup.",
+    usmleStep: "step2ck",
+    organSystem: "Multisystem",
+    physicianTask: "Diagnosis",
+    contentCategory: "Family Medicine",
+    moduleId: IDS.modFm,
+    lessonIds: ["les-fm-1"],
+  },
+  {
+    id: "obj-cv-3b",
+    code: "OBJ-P1-CV-003B",
+    statement:
+      "Differentiate STEMI, NSTEMI, and unstable angina using ECG and troponin concepts without inventing numeric cutoffs.",
+    usmleStep: "step1",
+    organSystem: "Cardiovascular",
+    physicianTask: "Diagnosis",
+    contentCategory: "Pathophysiology",
+    moduleId: IDS.modCvb,
+    lessonIds: ["les-cv-2"],
+  },
+  {
+    id: "obj-cv-4b",
+    code: "OBJ-P1-CV-004B",
+    statement:
+      "Differentiate HFrEF, HFmrEF, and HFpEF as ejection-fraction phenotypes and name the major disease-modifying drug classes used in HFrEF teaching frameworks.",
+    usmleStep: "step1",
+    organSystem: "Cardiovascular",
+    physicianTask: "Management",
+    contentCategory: "Pharmacology",
+    moduleId: IDS.modCvb,
+    lessonIds: ["les-cv-3"],
   },
 ];
 
@@ -816,7 +960,7 @@ Reversible injury: cellular swelling, fatty change. Irreversible: membrane damag
           slug: "cardiovascular",
           sequence: 2,
           description:
-            "Understand the heart, circulation, and the major diseases that affect them.",
+            "Build from cardiac electrophysiology and hemodynamics to ischemic disease, heart failure phenotypes, shock, and valvular/pericardial pathophysiology.",
           isCoreClerkship: false,
           status: "published",
           examPassThreshold: 0.7,
@@ -974,14 +1118,19 @@ Localize the wall, anticipate RCA vs LCx, and list immediate goals: MONA-BASH hi
                       "Heart failure frameworks",
                       1,
                       `## Phenotypes
-- **HFrEF**: reduced EF, often eccentric remodeling; ischemic and nonischemic cardiomyopathies.
-- **HFpEF**: preserved EF, diastolic dysfunction, concentric remodeling; aging, HTN, obesity, diabetes.
+- **HFrEF** (heart failure with reduced ejection fraction): reduced EF, often eccentric remodeling; ischemic and nonischemic cardiomyopathies.
+- **HFmrEF** (mildly reduced EF): intermediate phenotype; management concepts overlap with HFrEF in many frameworks — verify current society guidance before applying regimens.
+- **HFpEF** (preserved EF): diastolic dysfunction, concentric remodeling; aging, hypertension, obesity, diabetes.
 
 ## Neurohormonal model
 RAAS and sympathetic activation are initially compensatory then maladaptive → fibrosis, remodeling, arrhythmias.
 
 ## Foundational HFrEF therapy (conceptual pillars)
-ARNI/ACEI/ARB, evidence-based beta-blockers, mineralocorticoid receptor antagonists, SGLT2 inhibitors — plus diuretics for volume. Exact regimens evolve with guidelines; learn *mechanisms* and *why remodeling improves survival*.`,
+Contemporary teaching centers on disease-modifying classes — ARNI/ACEI/ARB, evidence-based beta-blockers, mineralocorticoid receptor antagonists, and SGLT2 inhibitors — with diuretics for congestion. This is **not** an outdated “ACE inhibitor + beta blocker + diuretic only” frame. Exact regimens, sequencing, and HFpEF-directed options evolve with guidelines; learn *mechanisms* and *why remodeling and congestion control matter for outcomes*.
+
+### Sources
+- Heart failure guideline-directed medical therapy — \`REFERENCE_REVIEW_REQUIRED\` (attach current AHA/ACC/HFSA or equivalent after faculty review).
+- Last reviewed: not yet medically approved.`,
                     ),
                   ],
                 },

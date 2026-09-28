@@ -162,7 +162,7 @@ export const wave7Objectives: Objective[] = [
     id: "obj-cv-9",
     code: "OBJ-P1-CV-009",
     statement:
-      "Distinguish tamponade physiology using Beck triad and pulsus paradoxus thinking.",
+      "Explain how elevated intrapericardial pressure impairs diastolic filling and reduces cardiac output, and recognize bedside clues (Beck triad, pulsus paradoxus).",
     usmleStep: "step1",
     organSystem: "Cardiovascular",
     physicianTask: "Diagnosis",
@@ -1074,18 +1074,22 @@ Half-life guides dosing interval conceptually. Never invent numeric regimens her
     "qq-cv-8",
     "con-cv-8a",
     "Obstructive filling failure",
-    "Pericardial pressure equalizes diastolic pressures and kills preload.",
+    "Rising intrapericardial pressure compresses chambers in diastole, impairs ventricular filling, and reduces stroke volume and cardiac output (obstructive shock).",
     [
       reading(
         "blk-cv-8a-r",
         "con-cv-8a",
         "Tamponade",
         1,
-        `Fluid in pericardial sac ↑ intrapericardial pressure → impaired diastolic filling → ↓CO.  
-Beck triad teaching: hypotension, elevated JVP, muffled sounds; pulsus paradoxus.  
+        `Fluid (or other material) in the pericardial sac raises **intrapericardial pressure**.  
+As pressure rises, chambers are compressed in **diastole**, ventricular filling falls, stroke volume falls, and cardiac output falls — an **obstructive shock** physiology. Diastolic pressures equalize across chambers when intrapericardial pressure dominates filling pressures.
 
-Trauma, post-MI rupture, malignancy, uremia, idiopathic pericarditis complications.  
-Treatment: urgent pericardiocentesis/surgical drainage — obstructive shock pathway.`,
+Compensatory tachycardia and vasoconstriction may temporarily support blood pressure before frank hypotension.
+
+Classic teaching signs: hypotension, elevated JVP, muffled heart sounds (Beck triad); pulsus paradoxus may be present.  
+
+Contexts: trauma, post-MI rupture, malignancy, uremia, complications of pericarditis.  
+Management concept: urgent drainage (pericardiocentesis or surgical window) — exact technique/setting is clinical and guideline-sensitive.`,
       ),
     ],
   );
