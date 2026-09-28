@@ -123,7 +123,7 @@ export function ensureFourYearModules(program: Program): Program {
     if (phase.id === IDS.phase1) {
       phase.name = "Years 1–2 · Preclinical medicine";
       phase.description =
-        "Build the basic science and organ-system knowledge you’ll use throughout medical school.";
+        "Build your preclinical foundation through the core sciences and organ systems.";
     }
     if (phase.id === IDS.phase2) {
       phase.name = "Years 3–4 · Clinical medicine";

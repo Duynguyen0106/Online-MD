@@ -230,8 +230,7 @@ function GateCard({
       <p className="mt-2 min-h-16 text-xs leading-5 text-[var(--muted)]">
         {unlocked
           ? "Ready when you are."
-          : reason ??
-            "Complete the module lessons and assessment before these questions become available."}
+          : reason ?? "Complete the module before starting the question bank."}
       </p>
       <Button
         className="mt-3"
