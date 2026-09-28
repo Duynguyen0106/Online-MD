@@ -13,7 +13,7 @@ export async function setLessonMedicalReview(formData: FormData) {
   ) as MedicalReviewStatus;
   const notes = String(formData.get("notes") ?? "") || undefined;
   const reason = String(formData.get("reason") ?? "Faculty review update");
-  if (!lessonId) return { ok: false as const, error: "Missing lesson" };
+  if (!lessonId) return;
 
   const allowed: MedicalReviewStatus[] = [
     "DRAFT",
@@ -23,9 +23,7 @@ export async function setLessonMedicalReview(formData: FormData) {
     "NEEDS_REVIEW",
     "ARCHIVED",
   ];
-  if (!allowed.includes(reviewStatus)) {
-    return { ok: false as const, error: "Invalid status" };
-  }
+  if (!allowed.includes(reviewStatus)) return;
 
   await upsertMedicalReview({
     lessonId,
@@ -36,5 +34,4 @@ export async function setLessonMedicalReview(formData: FormData) {
   });
   revalidatePath("/faculty/medical-review");
   revalidatePath(`/faculty/lessons/${lessonId}`);
-  return { ok: true as const };
 }

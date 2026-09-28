@@ -2,7 +2,6 @@ import Link from "next/link";
 import { AppShell } from "@/components/shared/app-shell";
 import { FacultyLibrary } from "@/components/faculty/faculty-library";
 import { getObjectives, getPhases } from "@/lib/curriculum/accessors";
-import { Badge } from "@/components/ui/badge";
 
 export default async function FacultyPage() {
   const phases = await getPhases();

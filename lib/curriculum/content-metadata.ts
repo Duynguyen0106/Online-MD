@@ -451,7 +451,6 @@ export function getQuestionMeta(
 ): QuestionContentMeta {
   const o = QUESTION_META_OVERRIDES[questionId] ?? {};
   return {
-    questionId,
     cognitiveLevel: o.cognitiveLevel ?? fallback?.cognitiveLevel ?? "RECALL",
     reviewStatus: o.reviewStatus ?? "NEEDS_REVIEW",
     guidelineSensitive: o.guidelineSensitive ?? false,
