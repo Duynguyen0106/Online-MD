@@ -1,0 +1,429 @@
+[
+  {
+    "lessonId": "les-cv-2",
+    "title": "Ischemic Heart Disease & ACS",
+    "flag": "ACS: MONA historical teaching — verify contemporary pathway framing",
+    "excerpt": "e RCA vs LCx, and list immediate goals: MONA-BASH historically taught vs contemporary ABC + dual antiplatelet + anticoagulation + reperfusion pathway per ACLS/g",
+    "priority": "MEDIUM"
+  },
+  {
+    "lessonId": "les-cv-2",
+    "title": "Ischemic Heart Disease & ACS",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cv-3",
+    "title": "Heart Failure & Foundational Therapy",
+    "flag": "HF: possibly outdated ACEI+BB+diuretic-only framing",
+    "excerpt": "HFrEF therapy (conceptual pillars) ARNI/ACEI/ARB, evidence-based beta-blockers, mineralocorticoid receptor antagonists, SGLT2 inhibitors — plus diuretics for vo",
+    "priority": "HIGH"
+  },
+  {
+    "lessonId": "les-cv-5",
+    "title": "Tachyarrhythmia Safety Framework",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cv-8",
+    "title": "Cardiac Tamponade Physiology",
+    "flag": "Tamponade: imprecise 'kills preload' language",
+    "excerpt": "ssure equalizes diastolic pressures and kills preload. **Pericardial pressure equalizes diastolic pressures and kills preload..** Place this node in the pathwa",
+    "priority": "HIGH"
+  },
+  {
+    "lessonId": "les-cat-y2-cv-ecg-intervals",
+    "title": "ECG Intervals & Blocks",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-cv-sports",
+    "title": "Athlete’s Heart vs Pathology",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-1",
+    "title": "GFR & Filtration Barrier",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-2",
+    "title": "Tubular Transport & Diuretics",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-4",
+    "title": "Hyponatremia Diagnostic Framework",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-5",
+    "title": "Hyperkalemia Emergency Framework",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "Hyperkalemia Emergency Framework 1. The basics # Hyperkalemia Emergency Framework **Module:** Renal & Acid–Base ## Wha",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-6",
+    "title": "CKD Staging & Complications",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-7",
+    "title": "Nephritic vs Nephrotic Syndromes",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-8",
+    "title": "Diuretic Sites of Action",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-gfr-auto",
+    "title": "GFR Autoregulation",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-tubular-transport",
+    "title": "Nephron Transport Map",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-concentrating",
+    "title": "Urine Concentration & Dilution",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-volume-sensors",
+    "title": "Volume Sensing & RAAS–ANP",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-na-disorders",
+    "title": "Sodium Disorders Framework",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-k-homeostasis",
+    "title": "Potassium Internal/External Balance",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "in/β2 shift 2. Aldosterone excretion 3. HyperK ECG 4. HypoK arrhythmias 5. Transcellular shifts ## Learning objectives 1. Explain the core mechanism of **Pota",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-acidbase-renal",
+    "title": "Renal Acid–Base Handling",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-aki-path",
+    "title": "AKI Pathotypes",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-ckd-mbd",
+    "title": "CKD–MBD Pathophysiology",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-nephrotic-detail",
+    "title": "Nephrotic Syndrome Mechanisms",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-nephritic-detail",
+    "title": "Nephritic Syndrome Mechanisms",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-stones",
+    "title": "Kidney Stone Pathogenesis",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-uti-ascent",
+    "title": "UTI Ascending Infection Biology",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-diuretic-deep",
+    "title": "Diuretic Resistance Mechanisms",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-renal-pharm",
+    "title": "Drugs and the Kidney",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-ca-phos-renal",
+    "title": "Renal Calcium–Phosphate Handling",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-pregnancy",
+    "title": "Renal Physiology of Pregnancy",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-obstruction",
+    "title": "Obstructive Uropathy Pathophysiology",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-transplant",
+    "title": "Transplant Kidney Physiology Concepts",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-toxins",
+    "title": "Nephrotoxin Mechanisms Map",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-genetic",
+    "title": "Genetic Kidney Diseases Overview",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-cardiorenal",
+    "title": "Cardiorenal Syndromes",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-hepatorenal",
+    "title": "Hepatorenal Pathophysiology",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-stone-meta",
+    "title": "Metabolic Evaluation of Stones",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-ren-dialysis",
+    "title": "Dialysis Physiology Comparison",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-renal-3",
+    "title": "Acid–Base Disorder Framework",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "anemia, mineral bone disease, acidosis, hyperkalemia, volume) structure both acute and chronic care. Nephrotoxic stacks and renally cleared drugs are daily safe",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-endo-4",
+    "title": "Adrenal Insufficiency & Cushing Axis",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "aldosterone, ↑ACTH (hyperpigmentation), hyperkalemia/hyponatremia. Crisis = shock needing stress-dose steroids + fluids. **Secondary**: pituitary ACTH↓ → cort",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-heme-7",
+    "title": "Tumor Lysis Syndrome",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "urinol/rasburicase per protocol), treat hyperkalemia, dialysis if needed. High-risk: Burkitt, ALL, bulky lymphomas, high WBC AML — anticipate TLS before indu",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-heme-transfusion-massive",
+    "title": "Massive Transfusion Physiology",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "coagulopathy 2. Hypocalcemia citrate 3. HyperK 4. Ratios 5. Hypothermia ## Learning objectives 1. Explain the core mechanism of **Massive Transfusion Physiolo",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-neuro-basal-ganglia",
+    "title": "Basal Ganglia Circuits",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": " modulation 3. Hypokinetic Parkinson 4. Hyperkinetic Huntington/hemiballismus 5. Dystonia ## Learning objectives 1. Explain the core mechanism of **Basal Gang",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y2-neuro-muscle-channel",
+    "title": "Channelopathies of Nerve & Muscle",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "2. Periodic paralysis 3. MG contrast 4. HyperK periodic 5. Triggers ## Learning objectives 1. Explain the core mechanism of **Channelopathies of Nerve & Muscl",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y1-ph-pk-advanced",
+    "title": "Clinical Pharmacokinetics Problem Solving",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y1-ph-renal2",
+    "title": "RAAS Drug Sequence Reasoning",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": " ARB alternative 3. ARNI concept 4. MRA hyperK 5. Aliskiren ## Learning objectives 1. Explain the core mechanism of **RAAS Drug Sequence Reasoning** without n",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-im-chest-pain",
+    "title": "Chest Pain Pathways",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-im-electrolytes-ward",
+    "title": "Ward Electrolyte Emergencies",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ystem. ## What this chapter covers 1. HyperK 2. HypoNa symptomatic 3. HyperCa 4. HypoMg 5. Refeeding ## Learning objectives 1. Recognize presentations of **",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-im-vte-ward",
+    "title": "VTE Diagnosis & Treatment Principles",
+    "flag": "PERC/Wells: ensure not substitute for pretest probability",
+    "excerpt": " ## What this chapter covers 1. Wells/PERC conceptual 2. Anticoag vs IVC filter 3. Provoked duration 4. Cancer VTE 5. Bleeding risk ## Learning objectives 1",
+    "priority": "MEDIUM"
+  },
+  {
+    "lessonId": "les-cat-y4-im-icu-shock",
+    "title": "ICU Shock Teams & Monitoring",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ystem. ## What this chapter covers 1. ScvO2 concepts 2. Pressor matching 3. Ultrasound hemodynamics 4. Lactate kinetics 5. Goals ## Learning objectives 1. R",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-im-acs-ed",
+    "title": "ACS Pathway in the ED",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-im-dka-hhs",
+    "title": "DKA vs HHS Management",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ystem. ## What this chapter covers 1. Fluid first 2. Insulin infusion after K check 3. Close anion gap in DKA 4. Avoid premature SQ switch 5. Cerebral edema c",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-im-pe-workup",
+    "title": "Pulmonary Embolism Workup",
+    "flag": "PERC/Wells: ensure not substitute for pretest probability",
+    "excerpt": " ## What this chapter covers 1. Wells/PERC framing 2. D-dimer when low probability 3. CTPA vs V/Q 4. Massive vs submassive signs 5. Anticoagulation when high ",
+    "priority": "MEDIUM"
+  },
+  {
+    "lessonId": "les-cat-y3-im-syncope",
+    "title": "Syncope Risk Stratification",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-im-2",
+    "title": "Chest Pain & ACS Reasoning",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-ob-shoulder",
+    "title": "Shoulder Dystocia HELPERR",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-gyn-cervical-ca-screen",
+    "title": "Cervical Cancer Screening Updates",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-psych-qtc",
+    "title": "Psychotropics & QTc Risk",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y4-fm-sports",
+    "title": "Sports Medicine for FM",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  },
+  {
+    "lessonId": "les-cat-y3-fm-prevention",
+    "title": "USPSTF Prevention Prioritization",
+    "flag": "Compressed student-facing title/description",
+    "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
+    "priority": "LOW"
+  }
+]

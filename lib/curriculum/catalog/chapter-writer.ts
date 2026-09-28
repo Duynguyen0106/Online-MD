@@ -271,6 +271,14 @@ ${checklist}
 ### Ready for quiz
 
 Pass threshold ≥80%. Afterward, add the flashcard (**${topic.cardFront}** → ${topic.cardBack}) to spaced repetition so the chapter does not collapse back into a summary.
+
+### Sources
+
+| Guideline / reference | Status |
+| --- | --- |
+| Authoritative society guidance or primary literature for **${topic.title}** | REFERENCE_REVIEW_REQUIRED |
+
+Last reviewed: not yet medically approved. Faculty should attach verified citations before claiming guideline currency. Exact doses, thresholds, and trial statistics belong to primary sources.
 `;
 }
 

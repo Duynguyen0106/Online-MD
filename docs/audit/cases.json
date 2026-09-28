@@ -1,0 +1,301 @@
+[
+  {
+    "id": "case-cv-1",
+    "title": "Progressive Dyspnea and Orthophnea",
+    "moduleId": "mod-cv",
+    "stageCount": 2,
+    "stages": [
+      "List your leading diagnosis and the physiologic mechanism of the crackles/edema.",
+      "Outline initial management priorities and which drug classes modify disease long"
+    ],
+    "objectiveCount": 2,
+    "teachingPointsLen": 128,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-endo-1",
+    "title": "Polyuria, Polydipsia, and Altered Mentation",
+    "moduleId": "mod-endo",
+    "stageCount": 2,
+    "stages": [
+      "Is this closer to DKA or HHS, and which labs drive your call?",
+      "Outline initial management priorities (ABCs, fluids, electrolytes, insulin timin"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 109,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-im-1",
+    "title": "Exertional Chest Pressure on the Wards",
+    "moduleId": "mod-im",
+    "stageCount": 2,
+    "stages": [
+      "Classify the ACS phenotype and list immediate orders.",
+      "What findings would convert this to a STEMI-equivalent pathway?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 118,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-surg-1",
+    "title": "Sudden Severe Abdominal Pain",
+    "moduleId": "mod-surg",
+    "stageCount": 2,
+    "stages": [
+      "What is your leading diagnosis category and why?",
+      "List resuscitation and surgical priorities before imaging delays care."
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 109,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-cv-1",
+    "title": "Warm Shock After Pneumonia",
+    "moduleId": "mod-cv",
+    "stageCount": 2,
+    "stages": [
+      "Name the shock category and the two physiologic drivers of hypotension.",
+      "List parallel first-hour priorities (educational framework, not a hospital proto"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 97,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-pulm-1",
+    "title": "Sudden Dyspnea After Orthopedic Surgery",
+    "moduleId": "mod-pulm",
+    "stageCount": 2,
+    "stages": [
+      "State the leading diagnosis and the gas-exchange mechanism.",
+      "What bedside findings would raise concern for massive/high-risk PE?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 81,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-gi-1",
+    "title": "Hematemesis in Decompensated Cirrhosis",
+    "moduleId": "mod-gi",
+    "stageCount": 2,
+    "stages": [
+      "Link portal hypertension to the bleeding source.",
+      "Order your first five actions in parallel."
+    ],
+    "objectiveCount": 2,
+    "teachingPointsLen": 118,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-renal-1",
+    "title": "Na 118 and Confusion",
+    "moduleId": "mod-renal",
+    "stageCount": 2,
+    "stages": [
+      "Classify the hyponatremia (tonicity + volume).",
+      "What diagnoses remain after excluding adrenal/thyroid failure?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 110,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-heme-1",
+    "title": "Fatigue and Microcytosis",
+    "moduleId": "mod-heme",
+    "stageCount": 2,
+    "stages": [
+      "Classify the anemia and name the most likely mechanism.",
+      "What evaluations follow after confirming iron deficiency?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 67,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-obgyn-1",
+    "title": "First-Trimester Pain and Spotting",
+    "moduleId": "mod-obgyn",
+    "stageCount": 2,
+    "stages": [
+      "What life-threatening diagnosis must be excluded first?",
+      "List immediate priorities before definitive imaging/OR."
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 88,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-psych-1",
+    "title": "Overnight Confusion on the Wards",
+    "moduleId": "mod-psych",
+    "stageCount": 2,
+    "stages": [
+      "Delirium vs primary psychosis — which features decide?",
+      "Name three precipitant categories to review."
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 95,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-renal-2",
+    "title": "Peaked T Waves on the Monitor",
+    "moduleId": "mod-renal",
+    "stageCount": 2,
+    "stages": [
+      "List the three physiologic goals of hyperkalemia therapy in order.",
+      "Which therapies only temporize vs definitively remove potassium?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 75,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-neuro-1",
+    "title": "Fever and Stiff Neck",
+    "moduleId": "mod-neuro",
+    "stageCount": 2,
+    "stages": [
+      "What diagnosis are you racing against and why is time critical?",
+      "When might you image before LP, and what must not be delayed?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 94,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-gi-2",
+    "title": "Epigastric Pain to the Back",
+    "moduleId": "mod-gi",
+    "stageCount": 2,
+    "stages": [
+      "Does this meet diagnostic criteria without CT?",
+      "Name early management priorities (educational)."
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 88,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-msk-1",
+    "title": "Hot MTP Joint at Night",
+    "moduleId": "mod-msk",
+    "stageCount": 2,
+    "stages": [
+      "What must you still exclude before treating as gout alone?",
+      "Which crystal finding confirms gout?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 69,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-psych-2",
+    "title": "Day 2 Off Alcohol",
+    "moduleId": "mod-psych",
+    "stageCount": 2,
+    "stages": [
+      "Name the syndrome and the first-line medication class.",
+      "What vitamin do you give and why?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 83,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-endo-2",
+    "title": "Stones, Bones, and a High Calcium",
+    "moduleId": "mod-endo",
+    "stageCount": 2,
+    "stages": [
+      "Is this PTH-dependent or independent hypercalcemia?",
+      "Name two complications of prolonged disease."
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 72,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-surg-2",
+    "title": "RUQ Pain and a Positive Murphy Sign",
+    "moduleId": "mod-surg",
+    "stageCount": 2,
+    "stages": [
+      "Colic or cholecystitis — what features decide?",
+      "First imaging and disposition thinking?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 73,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-pulm-2",
+    "title": "ABG After an Opioid Overdose",
+    "moduleId": "mod-pulm",
+    "stageCount": 2,
+    "stages": [
+      "Name the primary acid–base disorder.",
+      "What is the immediate physiologic priority?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 72,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-heme-2",
+    "title": "Electrolytes After Induction",
+    "moduleId": "mod-heme",
+    "stageCount": 2,
+    "stages": [
+      "Syndrome name and the dangerous electrolytes?",
+      "List parallel management priorities."
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 83,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-neuro-2",
+    "title": "Fatigable Ptosis",
+    "moduleId": "mod-neuro",
+    "stageCount": 2,
+    "stages": [
+      "Most likely diagnosis and anatomic site of failure?",
+      "What crisis feature would force airway priority?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 80,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-obgyn-2",
+    "title": "Turtle Sign on the Labor Floor",
+    "moduleId": "mod-obgyn",
+    "stageCount": 2,
+    "stages": [
+      "Name the emergency and the first two maneuvers.",
+      "Which maneuver must you avoid?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 64,
+    "hasPresentation": true
+  },
+  {
+    "id": "case-id-1",
+    "title": "Fever and a New Murmur in an IVDU",
+    "moduleId": "mod-id",
+    "stageCount": 2,
+    "stages": [
+      "Syndrome and most likely valve?",
+      "Why are blood cultures drawn before antibiotics when stable enough?"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 73,
+    "hasPresentation": true
+  }
+]

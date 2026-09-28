@@ -1,0 +1,190 @@
+{
+  "program": {
+    "id": "prog-md-online",
+    "name": "Online MD — Integrated Curriculum"
+  },
+  "counts": {
+    "phases": 2,
+    "modules": 22,
+    "lessons": 884,
+    "contentBlocks": 4343,
+    "objectives": 881,
+    "quizQuestions": 884,
+    "qbankQuestions": 24,
+    "clinicalCases": 23,
+    "flashcards": 846,
+    "lessonsMissingObjectives": 5,
+    "lessonsWithCompressedTitle": 2,
+    "lessonsMissingReferenceSection": 482,
+    "guidelineSensitiveLessonCount": 806,
+    "vagueObjectiveCount": 1,
+    "titleOverlapPairs": 131,
+    "quizRowsNeedingAttention": 869,
+    "conceptFlagCount": 61
+  },
+  "objectivesPerLessonDistribution": {
+    "0": 5,
+    "1": 876,
+    "2": 3,
+    "3-5": 0,
+    "6+": 0
+  },
+  "quizObjectiveCoverage": {
+    "withObjective": 884,
+    "withoutObjective": 0
+  },
+  "qbankObjectiveCoverage": {
+    "withObjective": 24,
+    "withoutObjective": 0
+  },
+  "phases": [
+    {
+      "id": "phase-foundations",
+      "name": "Years 1–2 · Preclinical medicine",
+      "kind": "foundations",
+      "usmleFocus": "step1",
+      "modules": [
+        {
+          "id": "mod-cell-mol",
+          "title": "Cells, Molecules & Mechanisms of Disease",
+          "lessons": 48,
+          "core": false
+        },
+        {
+          "id": "mod-cv",
+          "title": "Cardiovascular System",
+          "lessons": 33,
+          "core": false
+        },
+        {
+          "id": "mod-pulm",
+          "title": "Respiratory System",
+          "lessons": 32,
+          "core": false
+        },
+        {
+          "id": "mod-renal",
+          "title": "Renal & Acid–Base",
+          "lessons": 33,
+          "core": false
+        },
+        {
+          "id": "mod-gi",
+          "title": "Gastrointestinal & Hepatology",
+          "lessons": 31,
+          "core": false
+        },
+        {
+          "id": "mod-endo",
+          "title": "Endocrine & Reproductive",
+          "lessons": 31,
+          "core": false
+        },
+        {
+          "id": "mod-heme",
+          "title": "Hematology & Oncology Foundations",
+          "lessons": 32,
+          "core": false
+        },
+        {
+          "id": "mod-neuro",
+          "title": "Neurosciences & Behavior",
+          "lessons": 32,
+          "core": false
+        },
+        {
+          "id": "mod-msk",
+          "title": "Musculoskeletal & Rheumatology",
+          "lessons": 32,
+          "core": false
+        },
+        {
+          "id": "mod-id",
+          "title": "Host Defense, Microbiology & Infectious Disease",
+          "lessons": 54,
+          "core": false
+        },
+        {
+          "id": "mod-biochem",
+          "title": "Biochemistry & Metabolism",
+          "lessons": 48,
+          "core": false
+        },
+        {
+          "id": "mod-anatomy",
+          "title": "Anatomy, Embryology & Imaging Correlation",
+          "lessons": 40,
+          "core": false
+        },
+        {
+          "id": "mod-immuno",
+          "title": "Immunology",
+          "lessons": 32,
+          "core": false
+        },
+        {
+          "id": "mod-pharm",
+          "title": "Pharmacology Foundations",
+          "lessons": 34,
+          "core": false
+        },
+        {
+          "id": "mod-epi",
+          "title": "Epidemiology, Biostatistics & Prevention",
+          "lessons": 14,
+          "core": false
+        },
+        {
+          "id": "mod-ethics",
+          "title": "Ethics, Professionalism & Health Systems",
+          "lessons": 12,
+          "core": false
+        }
+      ]
+    },
+    {
+      "id": "phase-clerkships",
+      "name": "Years 3–4 · Clinical medicine",
+      "kind": "clerkship_core",
+      "usmleFocus": "step2ck",
+      "modules": [
+        {
+          "id": "mod-im",
+          "title": "Internal Medicine Clerkship",
+          "lessons": 71,
+          "core": true
+        },
+        {
+          "id": "mod-surg",
+          "title": "Surgery Clerkship",
+          "lessons": 60,
+          "core": true
+        },
+        {
+          "id": "mod-peds",
+          "title": "Pediatrics Clerkship",
+          "lessons": 52,
+          "core": true
+        },
+        {
+          "id": "mod-obgyn",
+          "title": "Obstetrics & Gynecology Clerkship",
+          "lessons": 55,
+          "core": true
+        },
+        {
+          "id": "mod-psych",
+          "title": "Psychiatry Clerkship",
+          "lessons": 53,
+          "core": true
+        },
+        {
+          "id": "mod-fm",
+          "title": "Family Medicine Clerkship",
+          "lessons": 55,
+          "core": true
+        }
+      ]
+    }
+  ]
+}

@@ -171,7 +171,7 @@ export const wave5Objectives: Objective[] = [
     id: "obj-peds-6",
     code: "OBJ-P2-PEDS-006",
     statement:
-      "Screen developmental milestones at key ages and know when to refer.",
+      "Identify age-key developmental milestone delays and select when specialty referral is indicated.",
     usmleStep: "step2ck",
     organSystem: "Multisystem",
     physicianTask: "Diagnosis",
