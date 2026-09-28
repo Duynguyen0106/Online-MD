@@ -29,10 +29,10 @@ export function AcceptInviteForm({ token }: { token: string }) {
       }}
     >
       <h1 className="font-[family-name:var(--font-display)] text-2xl">
-        Accept faculty/admin invite
+        Accept your invitation
       </h1>
       <p className="text-sm text-[var(--muted)]">
-        Invite-only provisioning. Students cannot use this path to escalate roles.
+        Faculty and administrator accounts require an invitation.
       </p>
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Full name</span>

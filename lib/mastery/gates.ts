@@ -43,10 +43,10 @@ export async function evaluateLessonMastery(
     allBlocksViewed,
     quizPass,
     reason: mastered
-      ? "All content viewed and formative quiz passed"
+      ? "Lesson sections viewed and quiz passed"
       : !allBlocksViewed
-        ? "View all content blocks"
-        : `Score at least ${Math.round(threshold * 100)}% on the formative quiz`,
+        ? "Review all sections of this lesson"
+        : `Score at least ${Math.round(threshold * 100)}% on the quiz`,
   };
 }
 
@@ -81,10 +81,10 @@ export async function evaluateModuleMastery(
     lessonsMastered,
     examPassed,
     reason: mastered
-      ? "All lessons mastered and module exam passed"
+      ? "Lessons and module assessment complete"
       : !lessonsMastered
-        ? "Master all lessons first"
-        : `Pass the module exam (≥${Math.round(mod.examPassThreshold * 100)}%)`,
+        ? "Complete the lessons first"
+        : `Pass the module assessment (≥${Math.round(mod.examPassThreshold * 100)}%)`,
   };
 }
 
@@ -139,7 +139,7 @@ export async function canAccessModuleQbank(
   return {
     unlocked: false,
     scope: `module:${moduleId}`,
-    reason: `Module Qbank locked until mastery. ${evaluation.reason}.`,
+    reason: `Complete the module lessons and assessment before these questions become available. ${evaluation.reason}.`,
   };
 }
 
@@ -152,14 +152,14 @@ export async function canAccessStep1Qbank(
     return {
       unlocked: false,
       scope: "step1",
-      reason: "Step 1 Qbank unlock rule is disabled by admin.",
+      reason: "Step 1 question bank access is currently turned off.",
     };
   }
   const foundations = (await getPhases()).find(
     (p) => p.phaseKind === "foundations",
   );
   if (!foundations) {
-    return { unlocked: false, scope: "step1", reason: "Foundations phase missing" };
+    return { unlocked: false, scope: "step1", reason: "Preclinical curriculum not found" };
   }
   const pending = foundations.modules.filter(
     (m) => userState.moduleProgress[m.id]?.state !== "mastered",
@@ -170,7 +170,7 @@ export async function canAccessStep1Qbank(
   return {
     unlocked: false,
     scope: "step1",
-    reason: `Step 1 Qbank unlocks after all Phase 1 modules are mastered (${pending.length} remaining).`,
+    reason: `Complete the preclinical modules before starting the Step 1 question bank (${pending.length} remaining).`,
   };
 }
 
@@ -183,7 +183,7 @@ export async function canAccessStep2CkQbank(
     return {
       unlocked: false,
       scope: "step2ck",
-      reason: "Step 2 CK Qbank unlock rule is disabled by admin.",
+      reason: "Step 2 CK question bank access is currently turned off.",
     };
   }
   const clerkships = (await getAllModules()).filter((m) => m.isCoreClerkship);
@@ -196,7 +196,7 @@ export async function canAccessStep2CkQbank(
   return {
     unlocked: false,
     scope: "step2ck",
-    reason: `Step 2 CK Qbank unlocks after all core clerkship modules are mastered (${pending.length} remaining).`,
+    reason: `Complete the core clinical rotations before starting the Step 2 CK question bank (${pending.length} remaining).`,
   };
 }
 

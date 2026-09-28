@@ -28,7 +28,7 @@ export function ExamRunner({
     return (
       <div className="rounded-xl border border-amber-300 bg-amber-50 p-6 text-amber-950">
         <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
-          Module exam locked
+          Assessment not available yet
         </h2>
         <p className="text-sm">{lockedReason}</p>
       </div>
@@ -79,15 +79,28 @@ export function ExamRunner({
           });
         }}
       >
-        Submit module exam
+        Submit assessment
       </Button>
       {result ? (
-        <p className="text-sm">
-          Score {percent(result.score)} —{" "}
-          {result.passed ? "Passed — module mastery possible" : `Need ≥${percent(passThreshold)}`}
+        <div className="space-y-1 text-sm">
+          <p className="font-medium">
+            {result.passed ? "Assessment complete" : "Keep reviewing"}
+          </p>
+          <p>
+            You scored {percent(result.score)}.
+            {result.passed
+              ? " You can now continue to the next part of the curriculum."
+              : ` Need ≥${percent(passThreshold)} to pass.`}
+          </p>
+        </div>
+      ) : null}
+      {error ? (
+        <p className="text-sm text-[var(--danger)]">
+          {error === "Submit failed"
+            ? "Something went wrong. Please try again."
+            : error}
         </p>
       ) : null}
-      {error ? <p className="text-sm text-[var(--danger)]">{error}</p> : null}
     </div>
   );
 }

@@ -21,10 +21,10 @@ export default async function QbankPage() {
   const questions = getQbankQuestions();
 
   return (
-    <AppShell title="USMLE Qbank">
-      <p className="mb-6 max-w-3xl text-sm text-[var(--muted)]">
-        Assessment layer only. Module banks unlock after module mastery; Step 1 after all Phase 1
-        modules; Step 2 CK after all core clerkships. Server actions reject locked starts.
+    <AppShell title="Question bank">
+      <p className="mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
+        Learn first. Practice second. Complete the lessons and assessments before moving on to the
+        question bank for that part of the curriculum.
       </p>
       <QbankPanel
         modules={modules.map((m) => ({ id: m.id, title: m.title }))}

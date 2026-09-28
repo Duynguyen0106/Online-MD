@@ -17,7 +17,7 @@ const sans = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Online MD",
   description:
-    "Content-first MD curriculum with mastery gates before USMLE Qbank unlock.",
+    "A structured medical curriculum from basic science to organ systems and core clinical rotations.",
 };
 
 export default function RootLayout({

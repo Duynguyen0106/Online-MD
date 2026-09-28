@@ -43,12 +43,12 @@ export function CasePlayer({ clinicalCase }: { clinicalCase: ClinicalCase }) {
           });
         }}
       >
-        Request Faculty AI feedback
+        Check my reasoning
       </Button>
       {feedback ? (
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 text-sm leading-7">
           <h3 className="mb-2 font-[family-name:var(--font-display)] text-xl">
-            Expert feedback
+            Feedback
           </h3>
           <p>{feedback.overallAssessment}</p>
           <p className="mt-3 font-medium">Strengths</p>

@@ -69,14 +69,14 @@ export function QuizRunner({
             });
           }}
         >
-          Submit quiz
+          Submit answers
         </Button>
         {result ? (
           <p className="text-sm">
-            Score {percent(result.score)} —{" "}
+            {Math.round(result.score * questions.length)}/{questions.length} correct
             {result.passed
-              ? `Passed (≥${percent(passThreshold)})`
-              : `Need ≥${percent(passThreshold)} for mastery`}
+              ? ` · Passed`
+              : ` · Need ≥${percent(passThreshold)} to continue`}
           </p>
         ) : null}
       </div>

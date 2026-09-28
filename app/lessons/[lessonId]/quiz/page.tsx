@@ -17,10 +17,12 @@ export default async function LessonQuizPage({
   const questions = await getFormativeQuestionsLive(lessonId);
 
   return (
-    <AppShell title={`Formative quiz · ${lesson.title}`}>
-      <p className="mb-6 text-sm text-[var(--muted)]">
-        Pass threshold {Math.round(lesson.quizPassThreshold * 100)}%. Combined with full content
-        viewing, this unlocks lesson mastery.
+    <AppShell title="Check your understanding">
+      <p className="mb-2 text-sm text-[var(--muted)]">{lesson.title}</p>
+      <p className="mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
+        Take this short quiz before moving on. Pass threshold:{" "}
+        {Math.round(lesson.quizPassThreshold * 100)}%. Review the lesson sections first if you
+        haven’t already.
       </p>
       <QuizRunner
         lessonId={lessonId}

@@ -24,15 +24,17 @@ export function LoginForm() {
             router.push("/dashboard");
             router.refresh();
           } catch (err) {
-            setError(err instanceof Error ? err.message : "Login failed");
+            setError(
+              err instanceof Error
+                ? err.message
+                : "We couldn’t sign you in. Please try again.",
+            );
           }
         });
       }}
     >
-      <h1 className="font-[family-name:var(--font-display)] text-2xl">Student login</h1>
-      <p className="text-sm text-[var(--muted)]">
-        Demo auth. Faculty/admin accounts are invite-only — use an invite link or the role switcher.
-      </p>
+      <h1 className="font-[family-name:var(--font-display)] text-2xl">Welcome back</h1>
+      <p className="text-sm text-[var(--muted)]">Continue where you left off.</p>
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Email</span>
         <input
@@ -46,11 +48,13 @@ export function LoginForm() {
       </Button>
       {error ? <p className="text-sm text-[var(--danger)]">{error}</p> : null}
       <p className="text-xs text-[var(--muted)]">
-        Need an account?{" "}
+        Don’t have an account?{" "}
         <Link href="/signup" className="underline">
-          Student signup
+          Create one
         </Link>
-        . Faculty/admin need an invite.
+      </p>
+      <p className="text-xs text-[var(--muted)]">
+        Faculty and administrator accounts require an invitation.
       </p>
     </form>
   );

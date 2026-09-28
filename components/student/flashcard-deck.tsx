@@ -29,7 +29,7 @@ export function FlashcardDeck({
   if (!card) {
     return (
       <p className="text-[var(--muted)]">
-        No cards due. Spaced-repetition intervals will bring them back later.
+        You’re caught up. Come back later for cards that are due for review.
       </p>
     );
   }
@@ -37,7 +37,7 @@ export function FlashcardDeck({
   return (
     <div className="mx-auto max-w-xl space-y-4">
       <p className="text-sm text-[var(--muted)]">
-        {due.length} due · SuperMemo-2 scheduling
+        {due.length} card{due.length === 1 ? "" : "s"} due for review
       </p>
       <button
         type="button"

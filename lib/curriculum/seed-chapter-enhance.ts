@@ -135,41 +135,39 @@ export function enhanceThinSeedLesson(
       id: `blk-enh-${lesson.id}-ch1`,
       conceptId,
       blockType: "reading",
-      title: "I. Foundations & learning goals",
+      title: "1. The basics",
       sequence: 1,
       bodyMd: `# ${lesson.title}
 
 **Module:** ${module.title}
 
-## Chapter overview
+## What you’ll learn
 
-This lesson develops **${lesson.title}** as a textbook-style chapter for mastery learning. Read for mechanism and clinical consequence—not buzzwords alone.
-
-## Learning objectives
+By the end of this lesson, you should be able to:
 
 1. Explain the core ideas of **${lesson.title}** without notes.
-2. Connect each major control point to a bedside or laboratory phenotype.
-3. Discriminate look-alike mechanisms or diagnoses.
-4. Teach a short vignette answer aloud before the formative quiz.
+2. Connect each major control point to a bedside or laboratory finding.
+3. Distinguish look-alike mechanisms or diagnoses.
+4. Walk through a short clinical vignette before the quiz.
 
-## Study path
+## How to use this lesson
 
-Foundations → Core chapter → Clinical bridge → Synthesis → any diagrams/videos/vignettes in this lesson → quiz (≥80%).
+Start with the basics, work through the mechanism, connect it to patients, then review the key points and take the quiz.
 `,
     },
     {
       id: `blk-enh-${lesson.id}-ch2`,
       conceptId,
       blockType: "reading",
-      title: "II. Core mechanisms (chapter)",
+      title: "2. How it works",
       sequence: 2,
-      bodyMd: `## ${lesson.title} — core mechanisms
+      bodyMd: `## ${lesson.title} — how it works
 
-### High-yield reference detail
+### Key points
 
 ${enrichment || `Rebuild **${lesson.title}** from first principles: definition → regulation → failure mode → clinical bridge.`}
 
-### Integrated teaching notes from this lesson
+### Teaching notes from this lesson
 
 ${prior || `Use the module objectives and quiz stems to reconstruct the pathway for **${lesson.title}**.`}
 
@@ -185,11 +183,11 @@ ${(points.length ? points : [lesson.title]).map((p, i) => `### ${i + 1}. ${p}
       id: `blk-enh-${lesson.id}-ch3`,
       conceptId,
       blockType: "reading",
-      title: "III. Clinical correlation",
+      title: "3. Why it matters clinically",
       sequence: 3,
-      bodyMd: `## Clinical correlation — ${lesson.title}
+      bodyMd: `## Why it matters clinically — ${lesson.title}
 
-Translate each control point into something observable in a patient cared for under **${module.title}**: a symptom, exam finding, lab pattern, imaging clue, or drug effect.
+Translate each control point into something you can observe in a patient: a symptom, exam finding, lab pattern, imaging clue, or drug effect.
 
 ### Clinical threads
 
@@ -209,27 +207,27 @@ ${(points.length ? points : [lesson.title]).map((p, i) => `| ${i + 1} | ${p} | P
       id: `blk-enh-${lesson.id}-ch4`,
       conceptId,
       blockType: "reading",
-      title: "IV. Synthesis, pitfalls & self-check",
+      title: "4. Put it together",
       sequence: 4,
-      bodyMd: `## Synthesis — ${lesson.title}
+      bodyMd: `## Put it together — ${lesson.title}
 
-### One-paragraph summary
+### Summary
 
-**${lesson.title}** (module: ${module.title}) is mastered when you can teach a continuous story through: ${(points.length ? points : [lesson.title]).join("; ")}.
+**${lesson.title}** (module: ${module.title}) comes together when you can teach a continuous story through: ${(points.length ? points : [lesson.title]).join("; ")}.
 
-### Pitfalls
+### Common mistakes
 
-1. Summary-only reading without regulation/phenotype  
-2. Isolated facts without pathway links  
-3. Missing the look-alike  
-4. Skipping teach-back before the quiz  
+1. Reading summaries without understanding regulation and phenotype  
+2. Memorizing isolated facts without pathway links  
+3. Missing the look-alike diagnosis  
+4. Skipping a quick teach-back before the quiz  
 
 ### Self-check
 
 ${(points.length ? points : [lesson.title]).map((p, i) => `- [ ] ${i + 1}. I can teach: *${p}*`).join("\n")}
-- [ ] I can state one clinical consequence and one misconception.
+- [ ] I can state one clinical consequence and one common misconception.
 
-Pass the formative quiz at ≥80%, then space the flashcards.
+Then check your understanding with the quiz (≥80%), and review the flashcards later.
 `,
     },
     ...extras,

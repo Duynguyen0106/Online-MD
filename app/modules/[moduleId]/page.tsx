@@ -4,6 +4,11 @@ import { AppShell } from "@/components/shared/app-shell";
 import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
+  formatProgressState,
+  lessonActionLabel,
+  moduleDescription,
+} from "@/lib/copy/student";
+import {
   getClinicalCases,
   getLessonBlocks,
   getModule,
@@ -14,6 +19,7 @@ import {
   evaluateLessonMastery,
   evaluateModuleMastery,
 } from "@/lib/mastery/gates";
+import { percent } from "@/lib/utils";
 
 export default async function ModulePage({
   params,
@@ -28,95 +34,126 @@ export default async function ModulePage({
   const qbank = await canAccessModuleQbank(state, moduleId);
   const mp = state.moduleProgress[moduleId];
   const relatedCases = getClinicalCases(moduleId);
+  const progressPct = mp?.percentComplete ?? 0;
 
   const checklist = await Promise.all(
-    mod.lessons.map(async (lesson) => {
+    mod.lessons.map(async (lesson, index) => {
       const lp = state.lessonProgress[lesson.id];
       const blocks = getLessonBlocks(lesson);
       const viewed = new Set(lp?.viewedBlockIds ?? []);
       const evalLesson = await evaluateLessonMastery(lesson.id, lp);
       return {
+        index: index + 1,
         lesson,
         lp,
         blocksTotal: blocks.length,
         blocksViewed: blocks.filter((b) => viewed.has(b.id)).length,
         quizScore: lp?.lastFormativeScore,
         mastery: evalLesson,
+        summary:
+          lesson.concepts[0]?.summary ??
+          "Core concepts, clinical connections, and a short check of your understanding.",
       };
     }),
   );
 
   return (
     <AppShell title={mod.title}>
-      <p className="mb-6 max-w-3xl text-[var(--muted)]">{mod.description}</p>
+      <p className="-mt-2 mb-6 max-w-3xl text-[var(--muted)]">
+        {moduleDescription(mod.id, mod.description)}
+      </p>
       <div className="mb-8 grid gap-4 md:grid-cols-3">
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <p className="text-xs text-[var(--muted)]">Module progress</p>
+          <p className="text-xs text-[var(--muted)]">Your progress</p>
+          <p className="mt-2 text-2xl font-[family-name:var(--font-display)]">
+            {percent(progressPct)} complete
+          </p>
           <div className="mt-3">
-            <ProgressBar value={mp?.percentComplete ?? 0} />
+            <ProgressBar value={progressPct} />
           </div>
-          <Badge className="mt-3">{mp?.state ?? "not_started"}</Badge>
+          <Badge className="mt-3">{formatProgressState(mp?.state)}</Badge>
+          <p className="mt-3 text-xs text-[var(--muted)]">
+            Complete the lessons and assessment to finish this module.
+          </p>
         </div>
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <p className="text-xs text-[var(--muted)]">Mastery gate</p>
-          <p className="mt-2 text-sm">{mastery.reason}</p>
+          <p className="text-xs text-[var(--muted)]">Module assessment</p>
+          <p className="mt-2 text-sm leading-6">{mastery.reason}</p>
+          <Button asChild size="sm" className="mt-3" variant="secondary">
+            <Link href={`/modules/${mod.id}/exam`}>
+              {mastery.examPassed ? "Review assessment" : "Start assessment"}
+            </Link>
+          </Button>
         </div>
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <p className="text-xs text-[var(--muted)]">Module Qbank</p>
-          <p className="mt-2 text-sm">
-            {qbank.unlocked ? "Unlocked" : qbank.reason}
+          <p className="text-xs text-[var(--muted)]">Question bank</p>
+          <p className="mt-2 text-sm leading-6">
+            {qbank.unlocked
+              ? "Questions are available for this module."
+              : qbank.reason}
           </p>
           {qbank.unlocked ? (
             <Button asChild size="sm" className="mt-3">
-              <Link href="/qbank">Open Qbank</Link>
+              <Link href="/qbank">Practice questions</Link>
             </Button>
           ) : (
             <Button size="sm" className="mt-3" disabled>
-              Locked
+              Not yet available
             </Button>
           )}
         </div>
       </div>
 
-      <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl">
-        Learning path checklist
-      </h2>
+      <h2 className="mb-1 font-[family-name:var(--font-display)] text-xl">Lessons</h2>
+      <p className="mb-4 max-w-3xl text-sm text-[var(--muted)]">
+        Work through the lessons in order. Each lesson covers the core concepts, clinical
+        connections, and a short check of your understanding.
+      </p>
       <div className="space-y-3">
         {checklist.map((row) => (
           <div
             key={row.lesson.id}
-            className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3"
+            className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-4"
           >
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <Link
-                href={`/lessons/${row.lesson.id}`}
-                className="font-medium text-[var(--brand-strong)] hover:underline"
-              >
-                {row.lesson.title}
-              </Link>
-              <Badge>{row.lp?.state ?? "not_started"}</Badge>
-            </div>
-            <ul className="mt-2 space-y-1 text-xs text-[var(--muted)]">
-              <li>
-                {row.mastery.allBlocksViewed ? "✓" : "○"} Content blocks{" "}
-                {row.blocksViewed}/{row.blocksTotal}
-              </li>
-              <li>
-                {row.mastery.quizPass ? "✓" : "○"} Formative quiz{" "}
-                {row.quizScore != null
-                  ? `${Math.round(row.quizScore * 100)}%`
-                  : "not attempted"}{" "}
-                (need ≥{Math.round(row.lesson.quizPassThreshold * 100)}%)
-              </li>
-              <li>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
+                <p className="text-xs text-[var(--muted)]">Lesson {row.index}</p>
                 <Link
-                  className="underline"
+                  href={`/lessons/${row.lesson.id}`}
+                  className="font-medium text-[var(--brand-strong)] hover:underline"
+                >
+                  {row.lesson.title}
+                </Link>
+                <p className="mt-1 text-sm text-[var(--muted)]">{row.summary}</p>
+                <ul className="mt-2 space-y-1 text-xs text-[var(--muted)]">
+                  <li>
+                    {row.mastery.allBlocksViewed ? "✓" : "○"} Sections reviewed{" "}
+                    {row.blocksViewed}/{row.blocksTotal}
+                  </li>
+                  <li>
+                    {row.mastery.quizPass ? "✓" : "○"} Check your understanding{" "}
+                    {row.quizScore != null
+                      ? `${Math.round(row.quizScore * 100)}%`
+                      : "Not completed"}{" "}
+                    (need ≥{Math.round(row.lesson.quizPassThreshold * 100)}%)
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col items-end gap-2">
+                <Badge>{formatProgressState(row.lp?.state)}</Badge>
+                <Button asChild size="sm">
+                  <Link href={`/lessons/${row.lesson.id}`}>
+                    {lessonActionLabel(row.lp?.state)}
+                  </Link>
+                </Button>
+                <Link
+                  className="text-xs underline text-[var(--muted)]"
                   href={`/lessons/${row.lesson.id}/quiz`}
                 >
-                  Open quiz
+                  Take the quiz
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -124,7 +161,7 @@ export default async function ModulePage({
       {relatedCases.length > 0 ? (
         <section className="mt-8">
           <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl">
-            Related clinical cases
+            Clinical cases
           </h2>
           <ul className="space-y-2 text-sm">
             {relatedCases.map((c) => (
@@ -141,13 +178,17 @@ export default async function ModulePage({
         </section>
       ) : null}
 
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className="mt-8 flex flex-wrap items-center gap-3">
         <Button asChild>
-          <Link href={`/modules/${mod.id}/exam`}>Module exam</Link>
+          <Link href={`/modules/${mod.id}/exam`}>
+            {mastery.examPassed ? "Review assessment" : "Start assessment"}
+          </Link>
         </Button>
-        <Badge>
-          Exam {mastery.examPassed ? "passed" : "required after lessons"}
-        </Badge>
+        <p className="text-sm text-[var(--muted)]">
+          {mastery.examPassed
+            ? "Assessment complete"
+            : "Complete the lessons and module assessment first."}
+        </p>
       </div>
     </AppShell>
   );

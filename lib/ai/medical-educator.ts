@@ -28,19 +28,19 @@ Role constraints:
 function offlineTutor(message: string, context: string): TutorOutput {
   const excerpt = context.slice(0, 1200);
   return tutorOutputSchema.parse({
-    reply: `**Faculty AI (offline expert mode)**\n\nYou asked: “${message.trim()}”\n\nApply the Online MD teaching arc:\n1. Name the core mechanism\n2. Link mechanism → bedside findings\n3. Build a short differential\n4. Separate what is urgent now vs what can wait for workup\n5. Return to the relevant lesson for mastery before Qbank\n\nCurriculum/domain context:\n${excerpt}\n\nEnable AI_ENABLED + AI_API_KEY for full live medical-educator responses. Verify critical decisions with primary sources and faculty.`,
+    reply: `**Study help (offline)**\n\nYou asked: “${message.trim()}”\n\nWork through it this way:\n1. Name the core mechanism\n2. Link the mechanism to bedside findings\n3. Build a short differential\n4. Separate what is urgent now from what can wait\n5. Return to the related lesson before practicing questions\n\nLesson context:\n${excerpt}\n\nThis is an offline study aid. Verify important decisions with your faculty and primary sources.`,
     relatedObjectiveIds: [],
     keyTeachingPoints: [
       "Mechanism before memorization",
       "Urgent stabilization vs definitive therapy",
-      "Master lessons before using Qbank as assessment",
+      "Learn the lesson before relying on practice questions",
     ],
     disclaimers: [
       "Educational simulation only — not clinical advice for real patients",
-      "Offline fallback (configure AI_API_KEY for live expert model)",
+      "Offline study aid",
     ],
     uncertaintyNotes: [
-      "Live model unavailable; scaffolding uses curriculum + domain map heuristics",
+      "Live model unavailable; response uses the selected lesson context",
     ],
   });
 }
