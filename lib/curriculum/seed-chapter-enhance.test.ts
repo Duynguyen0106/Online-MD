@@ -1,11 +1,13 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { program } from "@/lib/curriculum/seed";
+import { applyCurriculumExpansions } from "@/lib/curriculum/expansions";
 import {
   enhanceProgramSeedLessons,
   enhanceThinSeedLesson,
   lessonAlreadyTeachesMechanism,
 } from "@/lib/curriculum/seed-chapter-enhance";
+import type { Program } from "@/lib/types/domain";
 
 function readingChars(lesson: {
   concepts: { blocks: { blockType: string; bodyMd?: string }[] }[];
@@ -21,8 +23,8 @@ function readingChars(lesson: {
   return n;
 }
 
-function findLesson(id: string) {
-  for (const phase of program.phases) {
+function findLesson(id: string, root: Program = program) {
+  for (const phase of root.phases) {
     for (const mod of phase.modules) {
       const lesson = mod.lessons.find((l) => l.id === id);
       if (lesson) return { lesson, mod };
@@ -52,6 +54,12 @@ describe("seed-chapter-enhance", () => {
       .join("\n");
     assert.match(body, /Sources|citations for this lesson are being verified/i);
     assert.match(body, /Control-point checklist/);
+    assert.doesNotMatch(body, /\|\s*Clinical prediction\s*\|/);
+    assert.doesNotMatch(
+      body,
+      /\|\s*Phenotype, lab, imaging, or drug effect when this node fails\s*\|/,
+    );
+    assert.match(body, /Clinical bridge — teach-back/);
   });
 
   it("leaves catalog lessons untouched", () => {
@@ -132,5 +140,31 @@ describe("seed-chapter-enhance", () => {
       ),
     );
     assert.ok(hasFig);
+  });
+
+  it("light-enhances diagram-backed thin P0s without Bridge prediction tables", () => {
+    const expanded = applyCurriculumExpansions(
+      structuredClone(program) as Program,
+    );
+    for (const id of ["les-renal-2", "les-renal-3", "les-id-2"] as const) {
+      const hit = findLesson(id, expanded);
+      assert.ok(hit, id);
+      assert.equal(lessonAlreadyTeachesMechanism(hit.lesson), true, id);
+      const enhanced = enhanceThinSeedLesson(
+        structuredClone(hit.lesson),
+        hit.mod,
+      );
+      assert.ok(readingChars(enhanced) >= 4000, id);
+      const body = enhanced.concepts
+        .flatMap((c) => c.blocks)
+        .map((b) => b.bodyMd || "")
+        .join("\n");
+      assert.doesNotMatch(body, /\|\s*Clinical prediction\s*\|/, id);
+      assert.doesNotMatch(body, /Control-point checklist/, id);
+      assert.ok(
+        enhanced.concepts.some((c) => !c.id.startsWith("con-enh-")),
+        `${id} should keep original concepts`,
+      );
+    }
   });
 });

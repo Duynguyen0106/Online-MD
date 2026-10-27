@@ -167,14 +167,17 @@ ${topic.quizExplain}
 
 export function buildChapterClinical(topic: CatalogTopic): string {
   const clinical = isClinical(topic.year);
-  const rows = topic.points
+  // Numbered teach-back lists — never a 3-column table with blank "Clinical prediction" cells.
+  const chapterRules = topic.points
     .map(
       (p, i) =>
-        `| ${i + 1} | ${p} | ${
-          clinical
-            ? "Decision-changing finding or next timed action"
-            : "Expected phenotype, lab, or drug effect"
-        } |`,
+        `${i + 1}. **${p}** — name one decision-changing finding or next timed action yourself (this page does not fill that cell).`,
+    )
+    .join("\n");
+  const mechanismAnchors = topic.points
+    .map(
+      (p, i) =>
+        `${i + 1}. **${p}** — name one phenotype, lab, imaging clue, or drug effect yourself (this page does not fill that cell).`,
     )
     .join("\n");
 
@@ -197,11 +200,9 @@ Carry three lines on the board:
 
 Choose tests that change management. For each major result, know the branch: *if A, do X; if B, do Y*. Start disease-directed therapy when waiting for certainty causes harm, then reassess on a short clock. Exact drug doses and institutional pathways belong to current guidelines—this chapter teaches the physiologic order of operations.
 
-### Working table
+### Chapter rules — teach-back
 
-| # | Chapter rule | Clinical prediction |
-| --- | --- | --- |
-${rows}
+${chapterRules}
 
 ### Disposition thinking
 
@@ -224,11 +225,9 @@ A preclerkship chapter is unfinished until the mechanism predicts a patient. For
 3. **Toxic or pharmacologic hit** — Which drugs or toxins act here, and what clue follows?  
 4. **Developmental or genetic variant** — How might a congenital defect present across the lifespan?
 
-### Correlation table
+### Mechanism anchors — teach-back
 
-| # | Mechanism anchor | Clinical prediction |
-| --- | --- | --- |
-${rows}
+${mechanismAnchors}
 
 ### Labs and imaging as experiments
 
@@ -274,11 +273,9 @@ Pass threshold ≥80%. Afterward, add the flashcard (**${topic.cardFront}** → 
 
 ### Sources
 
-| Guideline / reference | Status |
-| --- | --- |
-| Authoritative society guidance or primary literature for **${topic.title}** | REFERENCE_REVIEW_REQUIRED |
+Citations for this lesson are being verified by faculty. Treat doses, numeric cutoffs, and trial statistics as belonging to primary sources and current society guidance — not as standalone orders from this page.
 
-Last reviewed: not yet medically approved. Faculty should attach verified citations before claiming guideline currency. Exact doses, thresholds, and trial statistics belong to primary sources.
+*Faculty marker: REFERENCE_REVIEW_REQUIRED — attach verified citations for **${topic.title}** in medical review before claiming guideline currency.*
 `;
 }
 

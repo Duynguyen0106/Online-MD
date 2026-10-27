@@ -594,6 +594,12 @@
     "level": "PRECLINICAL"
   },
   {
+    "id": "les-renal-2",
+    "title": "Tubular Transport & Diuretics",
+    "module": "Renal & Acid–Base",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-renal-4",
     "title": "Hyponatremia Diagnostic Framework",
     "module": "Renal & Acid–Base",
@@ -752,6 +758,12 @@
   {
     "id": "les-cat-y2-ren-dialysis",
     "title": "Dialysis Physiology Comparison",
+    "module": "Renal & Acid–Base",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-renal-3",
+    "title": "Acid–Base Disorder Framework",
     "module": "Renal & Acid–Base",
     "level": "PRECLINICAL"
   },
@@ -2940,12 +2952,6 @@
     "level": "CLERKSHIP"
   },
   {
-    "id": "les-im-4",
-    "title": "AKI Bedside Framework",
-    "module": "Internal Medicine Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
     "id": "les-im-5",
     "title": "Community Pneumonia — Disposition Framework",
     "module": "Internal Medicine Clerkship",
@@ -3354,12 +3360,6 @@
     "level": "CLERKSHIP"
   },
   {
-    "id": "les-surg-3",
-    "title": "Appendicitis Clinical Pattern",
-    "module": "Surgery Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
     "id": "les-surg-7",
     "title": "Preoperative Risk Thinking",
     "module": "Surgery Clerkship",
@@ -3686,6 +3686,12 @@
   {
     "id": "les-peds-1",
     "title": "Fever in the Young Infant — Reasoning Frame",
+    "module": "Pediatrics Clerkship",
+    "level": "CLERKSHIP"
+  },
+  {
+    "id": "les-peds-4",
+    "title": "Bronchiolitis — Supportive Care Reasoning",
     "module": "Pediatrics Clerkship",
     "level": "CLERKSHIP"
   },

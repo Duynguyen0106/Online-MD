@@ -725,7 +725,7 @@
         "id": "les-renal-2",
         "title": "Tubular Transport & Diuretics",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-renal-4",
@@ -911,7 +911,7 @@
         "id": "les-renal-3",
         "title": "Acid–Base Disorder Framework",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       }
     ]
   },
@@ -2243,7 +2243,7 @@
         "id": "les-id-2",
         "title": "Sepsis Recognition & Empiric Logic",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       }
     ]
   },

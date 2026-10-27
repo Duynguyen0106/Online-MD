@@ -371,7 +371,7 @@ async function main() {
           .map((b) => b.bodyMd || "")
           .join("\n");
         const hasRefSection =
-          /##?\s*sources\b|##?\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED/i.test(
+          /#{1,3}\s*sources\b|#{1,3}\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED|citations for this lesson are being verified/i.test(
             body,
           );
         const row = lessonRows.find((r) => r.lessonId === lesson.id)!;
