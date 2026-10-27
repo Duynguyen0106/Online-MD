@@ -1,23 +1,25 @@
 # Curriculum Recommendations
 
-**Date:** 2026-09-28 · **Pedagogy update:** 2026-10-27  
+**Date:** 2026-09-28 · **Pedagogy update:** 2026-10-27 · **Fix-everything:** 2026-10-27  
 **Principle:** Progress Foundations → Physiology → Pathophysiology → Pharmacology → Organ-system medicine → Clinical presentation → Reasoning → Diagnosis → Management → Cases → Assessment → Spaced review.  
 **Constraint:** Recommendations first. Execute only safe, non-destructive changes unless a qualified reviewer directs otherwise.
 
 ---
 
-## Pedagogy pass status (2026-10-27)
+## Fix-everything + pedagogy status (2026-10-27)
 
 | Recommendation | Status |
 | --- | --- |
 | Stop mismatched seed padding; original teaching first | **Done** (`factualEnrichmentForSeedLesson`) |
-| Wire existing + new mechanism figures into P0 seeds | **Done** (CV/renal/ID + 5 new SVGs) |
-| Extend high-yield cases to 4-stage pattern | **Done** for fever / HHS / hyperK / meningitis (11 total 4-stage) |
-| High-yield formatives (mechanism / next-step) | **Done** (+6 items on ACS/HF/shock/sepsis/ABG) |
+| Fix enrichment false positives (hold / NIV / hemolysis) | **Done** + regression tests |
+| Gate enhancement scaffold when cores already teach | **Done** (light enhance path) |
+| Wire existing + new mechanism figures into P0 seeds | **Done** (CV/renal/ID + GFR Starling + prior SVGs) |
+| Extend high-yield cases to 4-stage pattern | **Done** for presentation-priority set (**18** total 4-stage) |
+| High-yield formatives (mechanism / next-step) | **Done** (+6 items; near-miss distractors tightened) |
 | Retitle same-module PFT overlap + learner_level | **Done** (`les-pulm-2` foundational; catalog advanced companion) |
 | Faculty medical review of HIGH pathways | **Still open** — do not invent cutoffs |
 | Grow qbank beyond 24 with sign-off | **Still open** |
-| Remaining 13 two-stage cases | **Backlog** — prioritize by presentation traffic |
+| Remaining 6 two-stage cases | **Backlog** — heme/OB/MSK/surg/neuro residuals |
 
 ---
 

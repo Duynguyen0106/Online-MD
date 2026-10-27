@@ -578,17 +578,27 @@ export const wave3ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "y1",
-        prompt: "Delirium vs primary psychosis — which features decide?",
-        expectedFocus: "Acute fluctuating attention favors delirium",
+        prompt: "Problem representation: delirium vs primary psychosis — which features decide?",
+        expectedFocus: "Acute fluctuating attention/awareness favors delirium over primary psychosis",
       },
       {
         id: "y2",
-        prompt: "Name three precipitant categories to review.",
-        expectedFocus: "Infection, meds, metabolic/electrolyte, hypoxia, pain, retention",
+        prompt: "Name can’t-miss medical threats before attributing everything to “sundowning.”",
+        expectedFocus: "Hypoxia, hypoglycemia, sepsis, withdrawal, intracranial event, retention/constipation — threat filter",
+      },
+      {
+        id: "y3",
+        prompt: "List precipitant categories to review and the educational first moves (not a sedation protocol).",
+        expectedFocus: "Infection, meds, metabolic/electrolyte, hypoxia, pain, retention; treat causes, reorient, avoid reflex antipsychotics",
+      },
+      {
+        id: "y4",
+        prompt: "After initial workup and environmental measures, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "Attention serials, vitals, precipitant labs, sleep–wake pattern — reassess rather than escalating sedation blindly",
       },
     ],
     teachingPoints:
-      "Treat delirium by finding precipitants; antipsychotics are not a substitute for medical workup.",
+      "Treat delirium by finding precipitants; antipsychotics are not a substitute for medical workup; reassess attention and causes after each step.",
     objectiveIds: ["obj-psych-4"],
     status: "published",
   },

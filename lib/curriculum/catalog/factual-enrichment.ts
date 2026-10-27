@@ -168,7 +168,8 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Cirrhosis complications.** Ascites, SBP, variceal bleed, encephalopathy, and hepatorenal physiology dominate ward care. Diagnostic paracentesis is early in new ascites/decompensation. Lactulose/rifaximin address encephalopathy; alcohol cessation and infection hunt are perpetual themes.`,
   },
   {
-    test: /anemia workup|mcv|ferritin|hemolysis|b12 deficiency|iron deficien/i,
+    // Avoid bare "hemolysis" — bacteriology α/β-hemolysis and lab speciation trees must not pull the anemia bank.
+    test: /anemia workup|mcv|ferritin|hemolysis workup|hemolytic anemia|intravascular hemolysis|extravascular hemolysis|autoimmune hemolysis|b12 deficiency|iron deficien/i,
     prose: `**Anemia framework.** MCV sorts micro/normo/macrocytic paths. Iron deficiency needs a bleeding/source evaluation in adults. Hemolysis shows ↑LDH, ↓haptoglobin, ↑indirect bili ± reticulocytosis. B12/folate deficiency yields megaloblastic changes—replace and find the cause.`,
   },
   {
@@ -192,7 +193,8 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**AKI.** Prerenal vs ATN vs post-renal. Volume, nephrotoxins, and obstruction imaging come early. AEIOU recalls urgent dialysis triggers. Hold ACEI/ARB/NSAID during hypovolemic stress.`,
   },
   {
-    test: /copd|asthma|bronchodil|spo2|niv|noninvasive/i,
+    // Word-bound NIV — bare "niv" matched inside "universal" (sepsis catalog FP).
+    test: /copd|asthma|bronchodil|spo2|\bniv\b|non-?invasive(?:\s+ventil|\s+ventilation|\s+positive)?/i,
     prose: `**Obstructive lung care.** COPD exacerbations: controlled O₂ targets, bronchodilators, steroids, selective antibiotics, NIV for hypercapnic failure. Asthma: repeated SABA, early steroids, escalate for severe obstruction. Teach inhaler technique.`,
   },
   {
@@ -392,7 +394,8 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**Study designs & screening.** RCTs reduce confounding for interventions; cohorts establish sequence; case–control suits rare outcomes. Screening harms include false positives and overdiagnosis; lead-time/length-time biases inflate apparent survival.`,
   },
   {
-    test: /consent|capacity|justice|equity|confidentiality|error disclosure|resource allocation/i,
+    // Avoid bare "capacity" / "justice" — those substrings hit unrelated chapters (e.g. functional capacity, social justice phrasing).
+    test: /informed consent|decision-?making capacity|\bincapacit(?:y|ated)\b|distributive justice|health equity|confidentiality|error disclosure|resource allocation/i,
     prose: `**Ethics.** Capacity is decision-specific (understand, appreciate, reason, express). Consent needs material risks/alternatives. Confidentiality has safety exceptions. Disclose harmful errors honestly. Scarce resources demand transparent, equitable triage criteria.`,
   },
   {
@@ -572,9 +575,27 @@ export function factualEnrichmentForTopic(topic: TopicLike): string {
 }
 
 /**
+ * Loose hematology / ethics tokens that may appear in unrelated teaching points
+ * (e.g. bacteriology "hemolysis"). On the seed path these require a title hit.
+ */
+const SEED_TITLE_GATED: RegExp[] = [
+  /anemia workup|mcv|ferritin|hemolysis workup|hemolytic anemia|intravascular hemolysis|extravascular hemolysis|autoimmune hemolysis|b12 deficiency|iron deficien/i,
+  /anemia production|reticulocyte|hemolysis workup|coagulopath|neutropenic fever|tumor lysis/i,
+  /informed consent|decision-?making capacity|\bincapacit(?:y|ated)\b|distributive justice|health equity|confidentiality|error disclosure|resource allocation/i,
+  /\bhold\b|5150|involuntary\s+(?:hold|commitment|treatment)|grave disability|decision-?making capacity|(?:medical|decisional)\s+capacity|\bincapacit(?:y|ated)\b/i,
+];
+
+function seedRequiresTitle(snipTest: RegExp): boolean {
+  return SEED_TITLE_GATED.some(
+    (gated) => gated.source === snipTest.source && gated.flags === snipTest.flags,
+  );
+}
+
+/**
  * Seed-lesson enrichment: keyword hits against title + teaching points only.
  * Skips always-on category/organ banks (those pad catalog chapters but dilute seeds).
  * Caps snippets so matched context stays secondary to original teaching notes.
+ * Loose hematology/ethics banks require a title match (E3).
  */
 export function factualEnrichmentForSeedLesson(topic: {
   title: string;
@@ -584,10 +605,11 @@ export function factualEnrichmentForSeedLesson(topic: {
   const pointsBlob = topic.points.join(" \n ");
   const hits: string[] = [];
   for (const snip of [...SNIPPETS, ...DEEP_SNIPPETS]) {
-    // Require a hit on the lesson title or an explicit teaching point — not module/organ labels.
-    if (snip.test.test(title) || snip.test.test(pointsBlob)) {
-      pushUnique(hits, snip.prose);
-    }
+    const titleHit = snip.test.test(title);
+    const pointsHit = snip.test.test(pointsBlob);
+    if (!titleHit && !pointsHit) continue;
+    if (!titleHit && seedRequiresTitle(snip.test)) continue;
+    pushUnique(hits, snip.prose);
     if (hits.length >= 3) break;
   }
   return hits.join("\n\n");

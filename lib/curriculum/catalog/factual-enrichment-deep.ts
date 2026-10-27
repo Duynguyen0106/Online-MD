@@ -298,7 +298,9 @@ Many antipsychotics and some antidepressants prolong ventricular repolarization 
 Clozapine uniquely requires ANC monitoring because of agranulocytosis risk, and vigilance for myocarditis (early fever, tachycardia, troponin/CRP changes), dose-related seizures, severe constipation progressing to ileus, orthostasis, sialorrhea, and smoking-related shifts in drug levels (smoking induces CYP1A2; cessation raises levels). Metabolic monitoring (weight, glucose, lipids) applies broadly to second-generation antipsychotics. These safety systems are why clozapine saves lives in treatment-resistant schizophrenia only when labs and bowel regimens are real, not theoretical. Teach patients and families the fever and infection warning signs that trigger same-day contact.`,
   },
   {
-    test: /hold|5150|involuntary|grave disability|capacity|decision-?making capacity/i,
+    // Word-bound "hold" — bare /hold/ matched inside "threshold" (PH hemodynamic FP).
+    // Drop bare "capacity" — it matched functional/vital capacity and similar.
+    test: /\bhold\b|5150|involuntary\s+(?:hold|commitment|treatment)|grave disability|decision-?making capacity|(?:medical|decisional)\s+capacity|\bincapacit(?:y|ated)\b/i,
     prose: `**Decision-making capacity & involuntary care — textbook chapter.**
 
 Capacity is decision-specific and can fluctuate with delirium, intoxication, psychosis, and pain. The four elements: understand the relevant information, appreciate the situation and consequences, reason about options, and express a consistent choice. Diagnosis alone does not equal incapacity; a patient with schizophrenia may retain capacity for many medical decisions. Document the conversation, the patient’s words, and why the threshold was or was not met. When capacity is lacking for a needed decision, identify the appropriate surrogate and emergency exceptions.

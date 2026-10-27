@@ -48,13 +48,15 @@
     "id": "case-surg-1",
     "title": "Sudden Severe Abdominal Pain",
     "moduleId": "mod-surg",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "What is your leading diagnosis category and why?",
-      "List resuscitation and surgical priorities before imaging delays care."
+      "Problem representation: what diagnosis category fits, and which exam findings dr",
+      "Name can’t-miss threats before locking into a single organ diagnosis.",
+      "List resuscitation and surgical priorities before imaging delays care (education",
+      "After initial resuscitation and source-control planning, what reassessment tells"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 109,
+    "teachingPointsLen": 145,
     "hasPresentation": true
   },
   {
@@ -162,13 +164,15 @@
     "id": "case-psych-1",
     "title": "Overnight Confusion on the Wards",
     "moduleId": "mod-psych",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Delirium vs primary psychosis — which features decide?",
-      "Name three precipitant categories to review."
+      "Problem representation: delirium vs primary psychosis — which features decide?",
+      "Name can’t-miss medical threats before attributing everything to “sundowning.”",
+      "List precipitant categories to review and the educational first moves (not a sed",
+      "After initial workup and environmental measures, what reassessment tells you the"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 95,
+    "teachingPointsLen": 142,
     "hasPresentation": true
   },
   {
@@ -205,13 +209,15 @@
     "id": "case-gi-2",
     "title": "Epigastric Pain to the Back",
     "moduleId": "mod-gi",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Does this meet diagnostic criteria without CT?",
-      "Name early management priorities (educational)."
+      "Problem representation: does this meet diagnostic criteria without CT?",
+      "Name can’t-miss concurrent threats before locking into uncomplicated pancreatiti",
+      "Name early management priorities (educational sequencing, not a fluid recipe).",
+      "After initial supportive care, what reassessment tells you the plan is working o"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 88,
+    "teachingPointsLen": 142,
     "hasPresentation": true
   },
   {
@@ -231,26 +237,30 @@
     "id": "case-psych-2",
     "title": "Day 2 Off Alcohol",
     "moduleId": "mod-psych",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Name the syndrome and the first-line medication class.",
-      "What vitamin do you give and why?"
+      "Problem representation: name the syndrome and the severity clues in the vignette",
+      "Name can’t-miss threats before treating this as simple anxiety.",
+      "Outline educational first moves (class-level, not a dosing protocol).",
+      "After initial therapy, what reassessment tells you the plan is working or failin"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 83,
+    "teachingPointsLen": 137,
     "hasPresentation": true
   },
   {
     "id": "case-endo-2",
     "title": "Stones, Bones, and a High Calcium",
     "moduleId": "mod-endo",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Is this PTH-dependent or independent hypercalcemia?",
-      "Name two complications of prolonged disease."
+      "Problem representation: is this PTH-dependent or independent hypercalcemia?",
+      "Name can’t-miss alternate threats on the hypercalcemia board before locking in.",
+      "Name complications of prolonged disease and the educational next evaluation step",
+      "After initial workup, what reassessment or follow-up findings change urgency?"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 72,
+    "teachingPointsLen": 126,
     "hasPresentation": true
   },
   {
@@ -270,26 +280,30 @@
     "id": "case-pulm-2",
     "title": "ABG After an Opioid Overdose",
     "moduleId": "mod-pulm",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Name the primary acid–base disorder.",
-      "What is the immediate physiologic priority?"
+      "Problem representation: name the primary acid–base disorder and the supporting n",
+      "Name can’t-miss concurrent threats while you interpret the ABG.",
+      "What is the immediate physiologic priority (educational, not a device recipe)?",
+      "After initial airway support / reversal thinking, what reassessment tells you th"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 72,
+    "teachingPointsLen": 109,
     "hasPresentation": true
   },
   {
     "id": "case-heme-2",
     "title": "Electrolytes After Induction",
     "moduleId": "mod-heme",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Syndrome name and the dangerous electrolytes?",
-      "List parallel management priorities."
+      "Problem representation: syndrome name and the dangerous electrolyte pattern?",
+      "Name can’t-miss threats before treating this as “just abnormal labs.”",
+      "List parallel management priorities (educational framework; regimens need local/",
+      "After initial measures, what reassessment tells you the plan is working or faili"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 83,
+    "teachingPointsLen": 130,
     "hasPresentation": true
   },
   {

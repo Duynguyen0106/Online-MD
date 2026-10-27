@@ -554,17 +554,27 @@ export const wave4ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "g1",
-        prompt: "Does this meet diagnostic criteria without CT?",
-        expectedFocus: "Yes — pain + lipase ≥3× ULN",
+        prompt: "Problem representation: does this meet diagnostic criteria without CT?",
+        expectedFocus: "Yes — characteristic pain + lipase ≥3× ULN meets usual diagnostic teaching criteria",
       },
       {
         id: "g2",
-        prompt: "Name early management priorities (educational).",
-        expectedFocus: "Fluids, analgesia, NPO/early nutrition per pathway, find cause",
+        prompt: "Name can’t-miss concurrent threats before locking into uncomplicated pancreatitis.",
+        expectedFocus: "Shock/SIRS, cholangitis if biliary, ACS/perforation mimics — threat filter",
+      },
+      {
+        id: "g3",
+        prompt: "Name early management priorities (educational sequencing, not a fluid recipe).",
+        expectedFocus: "ABCs/fluids conceptually, analgesia, nutrition pathway, find and treat cause (alcohol vs gallstone)",
+      },
+      {
+        id: "g4",
+        prompt: "After initial supportive care, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "Pain, vitals/perfusion, urine output, emerging organ failure or biliary obstruction signs — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "Pancreatitis is a clinical + lab diagnosis; early care is supportive and cause-directed.",
+      "Pancreatitis is a clinical + lab diagnosis; early care is supportive and cause-directed; reassess for organ failure and biliary complications.",
     objectiveIds: ["obj-gi-5"],
     status: "published",
   },

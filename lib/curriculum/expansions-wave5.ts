@@ -558,17 +558,27 @@ export const wave5ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "w1",
-        prompt: "Name the syndrome and the first-line medication class.",
-        expectedFocus: "Alcohol withdrawal — benzodiazepines",
+        prompt: "Problem representation: name the syndrome and the severity clues in the vignette.",
+        expectedFocus: "Alcohol withdrawal with autonomic hyperactivity and hallucinosis — time course after stopping drinking",
       },
       {
         id: "w2",
-        prompt: "What vitamin do you give and why?",
-        expectedFocus: "Thiamine to prevent Wernicke encephalopathy",
+        prompt: "Name can’t-miss threats before treating this as simple anxiety.",
+        expectedFocus: "Seizure, DTs, aspiration, concurrent infection/trauma, Wernicke — threat filter",
+      },
+      {
+        id: "w3",
+        prompt: "Outline educational first moves (class-level, not a dosing protocol).",
+        expectedFocus: "Benzodiazepines for withdrawal; thiamine to prevent Wernicke; supportive monitoring",
+      },
+      {
+        id: "w4",
+        prompt: "After initial therapy, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "HR/BP/tremor, mentation, seizure watch, CIWA-style trend — reassess rather than stack sedatives blindly",
       },
     ],
     teachingPoints:
-      "Treat withdrawal aggressively; thiamine before prolonged glucose when risk is high.",
+      "Treat withdrawal aggressively; thiamine before prolonged glucose when risk is high; reassess autonomic and mental status after each step.",
     objectiveIds: ["obj-psych-6"],
     status: "published",
   },
@@ -581,17 +591,27 @@ export const wave5ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "c1",
-        prompt: "Is this PTH-dependent or independent hypercalcemia?",
-        expectedFocus: "PTH-dependent — primary hyperparathyroidism",
+        prompt: "Problem representation: is this PTH-dependent or independent hypercalcemia?",
+        expectedFocus: "PTH-dependent — primary hyperparathyroidism pattern (↑Ca, ↑PTH, ↓/low-normal phosphate)",
       },
       {
         id: "c2",
-        prompt: "Name two complications of prolonged disease.",
-        expectedFocus: "Nephrolithiasis, bone disease, neuropsych symptoms, constipation",
+        prompt: "Name can’t-miss alternate threats on the hypercalcemia board before locking in.",
+        expectedFocus: "Malignancy-associated hypercalcemia, vitamin D excess, granulomatous disease — still consider if PTH were suppressed",
+      },
+      {
+        id: "c3",
+        prompt: "Name complications of prolonged disease and the educational next evaluation steps (not operative orders).",
+        expectedFocus: "Nephrolithiasis, bone disease, neuropsych symptoms, constipation; confirm biochemistry, assess bones/kidneys, surgical candidacy concepts",
+      },
+      {
+        id: "c4",
+        prompt: "After initial workup, what reassessment or follow-up findings change urgency?",
+        expectedFocus: "Rising calcium, renal impairment, fracture risk, symptomatic crisis — escalate rather than reassure on a single clinic value",
       },
     ],
     teachingPoints:
-      "Always check PTH with hypercalcemia — it splits the entire differential.",
+      "Always check PTH with hypercalcemia — it splits the entire differential; reassess severity and target-organ effects over time.",
     objectiveIds: ["obj-endo-5"],
     status: "published",
   },

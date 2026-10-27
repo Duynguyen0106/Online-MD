@@ -507,17 +507,27 @@ export const wave6ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "a1",
-        prompt: "Name the primary acid–base disorder.",
-        expectedFocus: "Acute respiratory acidosis",
+        prompt: "Problem representation: name the primary acid–base disorder and the supporting numbers.",
+        expectedFocus: "Acute respiratory acidosis — low pH, high PaCO2, near-normal HCO3",
       },
       {
         id: "a2",
-        prompt: "What is the immediate physiologic priority?",
-        expectedFocus: "Airway/ventilation — reverse hypoventilation",
+        prompt: "Name can’t-miss concurrent threats while you interpret the ABG.",
+        expectedFocus: "Airway failure, aspiration, co-ingestions, trauma — threat filter",
+      },
+      {
+        id: "a3",
+        prompt: "What is the immediate physiologic priority (educational, not a device recipe)?",
+        expectedFocus: "Airway/ventilation — reverse hypoventilation; oxygenation follows airway support",
+      },
+      {
+        id: "a4",
+        prompt: "After initial airway support / reversal thinking, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "Mentation, RR/tidal adequacy, SpO2/ABG trend — reassess rather than chasing a single gas number",
       },
     ],
     teachingPoints:
-      "ABGs diagnose the process; treating the cause (ventilation) comes first.",
+      "ABGs diagnose the process; treating the cause (ventilation) comes first; reassess gas exchange after support.",
     objectiveIds: ["obj-pulm-6"],
     status: "published",
   },
@@ -530,17 +540,27 @@ export const wave6ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "t1",
-        prompt: "Syndrome name and the dangerous electrolytes?",
-        expectedFocus: "TLS — hyperK, hyperPO4, hyperuricemia, hypoCa",
+        prompt: "Problem representation: syndrome name and the dangerous electrolyte pattern?",
+        expectedFocus: "TLS — hyperK, hyperPO4, hyperuricemia, hypoCa with rising creatinine",
       },
       {
         id: "t2",
-        prompt: "List parallel management priorities.",
-        expectedFocus: "IV fluids, uric acid control, treat hyperK, monitor renal/telemetry",
+        prompt: "Name can’t-miss threats before treating this as “just abnormal labs.”",
+        expectedFocus: "Arrhythmia from hyperK, renal failure, symptomatic hypocalcemia — threat filter",
+      },
+      {
+        id: "t3",
+        prompt: "List parallel management priorities (educational framework; regimens need local/oncology review).",
+        expectedFocus: "IV fluids, uric acid control concepts, treat hyperK, monitor renal/telemetry — REFERENCE_REVIEW_REQUIRED for agents",
+      },
+      {
+        id: "t4",
+        prompt: "After initial measures, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "K/ECG, urine output/Cr, uric acid/PO4/Ca trend — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "TLS is predictable in bulky/chemosensitive tumors — prevent and treat aggressively.",
+      "TLS is predictable in bulky/chemosensitive tumors — prevent and treat aggressively; reassess electrolytes and ECG after each step.",
     objectiveIds: ["obj-heme-7"],
     status: "published",
   },
