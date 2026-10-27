@@ -74,7 +74,7 @@ export const CLINICAL_PROBLEMS: ClinicalProblem[] = [
       "les-im-3",
       "les-cat-y3-im-syncope",
     ],
-    caseIds: [],
+    caseIds: ["case-im-2"],
   },
   {
     slug: "fever",

@@ -9,36 +9,44 @@
 
 ## Refresh findings (2026-10-27)
 
-Inventory re-run (`npm run audit:medical`):
+### Fix-pass inventory (after safe remediations)
 
-| Metric | Value |
-| --- | --- |
-| Lessons / objectives / quizzes / qbank / cases / flashcards | 884 / 3206 / 884 / 24 / **23 unique** / 846 |
-| Lessons missing objectives | **0** |
-| Vague-verb objectives (after capacity topic fix) | **0** (was 4 template artifacts) |
-| Guideline-sensitive keyword hits | 807 (broad scan; not approval) |
-| Quiz rows needing attention | 174 |
-| Title overlap pairs (Jaccard ≥0.45) | 126 |
+| Metric | Before fix-pass | After |
+| --- | --- | --- |
+| Lessons / objectives / quizzes / qbank / cases / flashcards | 884 / 3206 / 884 / 24 / 23 / 846 | 884 / **3422** / 884 / 24 / **24** / 846 |
+| Lessons missing objectives | 0 | **0** |
+| Objectives per lesson | many singles | **all lessons 3–5** |
+| Vague-verb objectives | 0–4 | **0** |
+| Lessons missing Sources / `REFERENCE_REVIEW_REQUIRED` | 64 | **0** |
+| Exact title collisions | 1 (Low Back Pain) | **0** |
+| Quiz rows needing attention | 174 | **83** (guideline-sensitive stems/explanations only; distractor gaps closed) |
+| Title overlap pairs (Jaccard ≥0.45) | 126 | 125 (soft lexical; not exact dupes) |
+| Guideline-sensitive keyword hits | 807 | 807 (broad scan; not approval) |
 
-### Safe remediations in this refresh
+### Safe remediations applied
 
-1. **Duplicate case ID** — `expansions-depth.ts` reused `case-cv-1` for “Warm Shock After Pneumonia,” colliding with seed “Progressive Dyspnea and Orthophnea.” Renamed to **`case-cv-2`**; unique-ID regression test added.
-2. **P0 shock pathway** — linked `case-cv-2` on `/presentations/shock` (was empty despite a live shock case).
-3. **Capacity objectives** — catalog points `"Understand"` / `"Appreciate"` produced nonsensical generated objectives; rewritten to noun phrases for the four abilities (no new clinical claims).
-4. **Competency Interpretation column** — was empty (0 objectives). `normalizeCompetencyDomain` now honors Interpret-led statements (currently **1** objective; most interpret skills remain under Diagnosis task tags). Cognitive-level metadata would populate this domain more honestly.
-5. **Audit script** — HF ACEI+BB+diuretic flag no longer false-positives contemporary GDMT lists that already include ARNI/SGLT2.
+1. **Duplicate case ID** — depth “Warm Shock” renamed **`case-cv-2`**; unique-ID test added; linked on `/presentations/shock`.
+2. **Syncope case** — added `case-im-2` from existing syncope teaching (no new thresholds); linked on `/presentations/syncope`.
+3. **Capacity objectives** — replaced bare Understand/Appreciate teaching points with noun phrases.
+4. **Sources footers** — `ensureSourcesFooter` on seed/wave lessons (`REFERENCE_REVIEW_REQUIRED`; no invented DOIs).
+5. **Quiz distractor teaching** — pedagogical footer when explanations lacked why/correct/distractor language (no new medical claims).
+6. **Objective coverage** — supplemental objectives derived from existing concept summaries so every lesson has 3–5 measurable statements.
+7. **Exact-title hygiene** — FM back pain, peds asthma acute, CAP disposition retitled to distinguish complementary lessons.
+8. **Vague module copy** — replaced student/seed “Understand …” module blurbs with measurable verbs.
+9. **Competency Interpretation** — Interpret-led statements map into the heatmap domain.
+10. **Audit script** — HF GDMT false-positive fixed; PERC flag respects pretest/adjunct framing.
+
+### Intentionally NOT “fixed” (human / medical gate)
+
+- PH hemodynamic cutoffs, ACS reperfusion detail, VTE/PERC clinical validation, DKA/HHS insulin–K protocols, vent/ARDS numbers, pregnancy/pediatric septic shock, oncologic emergency regimens — remain on `MEDICAL_REVIEW_REQUIRED.md`.
+- 807 guideline-sensitive keyword hits and 83 guideline-flagged quiz rows — flagged, not auto-rewritten.
+- Soft Jaccard title overlaps — educator judgment for consolidate vs keep.
+- No claim of medical approval; competency scores remain study evidence only.
 
 ### P0 presentation index (medical-safety check)
 
-- All 10 presentation lesson/case IDs resolve in the live graph.
-- Summaries are one-sentence educational framing only (no doses, thresholds, or guideline claims).
-- Student disclaimer present: educational pathways only; regimens belong to supervised care.
-- Syncope still has **no** dedicated case (recommend-only; do not invent).
-- Competency scores remain labeled as study evidence, not certification.
-
-### Prior HIGH remediations still needing human sign-off
-
-Tamponade “kills preload” wording and sepsis Hour-1 title were previously softened in content/metadata, but items stay on `MEDICAL_REVIEW_REQUIRED.md` until a physician approves. PH definition, ACS/VTE/DKA/vent pathways unchanged in claim.
+- All 10 presentation lesson/case IDs resolve; summaries are framing-only.
+- Shock → `case-cv-2`; syncope → `case-im-2`.
 
 ---
 

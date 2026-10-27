@@ -1147,7 +1147,7 @@ Both can be fatal; airway/cooling/fluids first.`,
   L(
     IDS.modPeds,
     "les-peds-7",
-    "Pediatric Asthma Exacerbation",
+    "Pediatric Asthma Exacerbation — Acute Priorities",
     "peds-asthma-exacerbation",
     7,
     30,

@@ -10,16 +10,6 @@
     "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
-    "a": "les-msk-3",
-    "aTitle": "Low Back Pain Red Flags",
-    "aModule": "Musculoskeletal & Rheumatology",
-    "b": "les-cat-y3-fm-back-pain",
-    "bTitle": "Low Back Pain Red Flags",
-    "bModule": "Family Medicine Clerkship",
-    "score": 1,
-    "classificationHint": "FOUNDATIONAL vs CLINICAL"
-  },
-  {
     "a": "les-cat-y1-id-viruses-dna",
     "aTitle": "DNA Virus Families",
     "aModule": "Host Defense, Microbiology & Infectious Disease",
@@ -308,6 +298,16 @@
     "bModule": "Cells, Molecules & Mechanisms of Disease",
     "score": 0.6,
     "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-msk-3",
+    "aTitle": "Low Back Pain Red Flags",
+    "aModule": "Musculoskeletal & Rheumatology",
+    "b": "les-cat-y3-fm-back-pain",
+    "bTitle": "Low Back Pain Red Flags — Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.6,
+    "classificationHint": "FOUNDATIONAL vs CLINICAL"
   },
   {
     "a": "les-cat-y3-surg-appendicitis-surg",
@@ -760,16 +760,6 @@
     "classificationHint": "FOUNDATIONAL vs CLINICAL"
   },
   {
-    "a": "les-im-1",
-    "aTitle": "Community-Acquired Pneumonia",
-    "aModule": "Internal Medicine Clerkship",
-    "b": "les-im-5",
-    "bTitle": "Community Pneumonia Disposition",
-    "bModule": "Internal Medicine Clerkship",
-    "score": 0.5,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
-  },
-  {
     "a": "les-cat-y3-im-chest-pain",
     "aTitle": "Chest Pain Pathways",
     "aModule": "Internal Medicine Clerkship",
@@ -888,16 +878,6 @@
     "bModule": "Surgery Clerkship",
     "score": 0.5,
     "classificationHint": "LEVEL DISTINCTION"
-  },
-  {
-    "a": "les-peds-7",
-    "aTitle": "Pediatric Asthma Exacerbation",
-    "aModule": "Pediatrics Clerkship",
-    "b": "les-cat-y3-peds-asthma-exac",
-    "bTitle": "Pediatric Asthma Exacerbation — Action Plan and Disposition",
-    "bModule": "Pediatrics Clerkship",
-    "score": 0.5,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
     "a": "les-cat-y3-peds-card-peds",
@@ -1195,6 +1175,16 @@
     "aModule": "Family Medicine Clerkship",
     "b": "les-cat-y3-fm-depression-pc",
     "bTitle": "PHQ-9 in Primary Care",
+    "bModule": "Family Medicine Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-cat-y3-fm-pain-fm",
+    "aTitle": "Chronic Pain in Primary Care",
+    "aModule": "Family Medicine Clerkship",
+    "b": "les-cat-y3-fm-back-pain",
+    "bTitle": "Low Back Pain Red Flags — Primary Care",
     "bModule": "Family Medicine Clerkship",
     "score": 0.5,
     "classificationHint": "SAME_MODULE_CONSOLIDATE?"

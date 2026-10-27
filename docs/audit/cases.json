@@ -65,6 +65,19 @@
     "hasPresentation": true
   },
   {
+    "id": "case-im-2",
+    "title": "Brief Loss of Consciousness on the Ward",
+    "moduleId": "mod-im",
+    "stageCount": 2,
+    "stages": [
+      "Sort the event into reflex, orthostatic, or cardiac syncope categories and list ",
+      "Name the immediate bedside evaluations you would prioritize before disposition p"
+    ],
+    "objectiveCount": 1,
+    "teachingPointsLen": 87,
+    "hasPresentation": true
+  },
+  {
     "id": "case-pulm-1",
     "title": "Sudden Dyspnea After Orthopedic Surgery",
     "moduleId": "mod-pulm",

@@ -5,8 +5,10 @@ import {
   objectives as baseObjectives,
   qbankQuestions as baseQbank,
   quizQuestions as baseQuiz,
+  program as seedProgram,
 } from "@/lib/curriculum/seed";
 import {
+  applyCurriculumExpansions,
   depthClinicalCases,
   depthFlashcards,
   depthObjectives,
@@ -46,6 +48,8 @@ import {
   catalogObjectives,
   catalogQuizQuestions,
 } from "@/lib/curriculum/expansions";
+import { ensureQuizBankTeaching } from "@/lib/curriculum/ensure-quiz-explanations";
+import { supplementalObjectivesForProgram } from "@/lib/curriculum/ensure-objective-coverage";
 import type {
   Lesson,
   Module,
@@ -54,7 +58,7 @@ import type {
   QuizQuestion,
 } from "@/lib/types/domain";
 
-const quizQuestions = [
+const quizQuestions = ensureQuizBankTeaching([
   ...baseQuiz,
   ...extraQuizQuestions,
   ...depthQuizQuestions,
@@ -64,8 +68,8 @@ const quizQuestions = [
   ...wave6QuizQuestions,
   ...wave7QuizQuestions,
   ...catalogQuizQuestions,
-];
-const objectives = [
+]);
+const baseObjectiveBank = [
   ...baseObjectives,
   ...extraObjectives,
   ...depthObjectives,
@@ -75,6 +79,15 @@ const objectives = [
   ...wave6Objectives,
   ...wave7Objectives,
   ...catalogObjectives,
+];
+const objectives = [
+  ...baseObjectiveBank,
+  ...supplementalObjectivesForProgram(
+    applyCurriculumExpansions(
+      structuredClone(seedProgram) as Program,
+    ).phases,
+    baseObjectiveBank,
+  ),
 ];
 const flashcards = [
   ...baseFlashcards,

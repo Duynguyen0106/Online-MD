@@ -422,7 +422,8 @@ async function main() {
       "HIGH",
     ],
     [
-      /PERC\b(?![^\n]{0,80}(pretest|pre-test|clinical judgment))/i,
+      // Flag only when pretest/adjunct framing is absent both before and after PERC.
+      /(?<!pretest[^\n]{0,80})(?<!pre-test[^\n]{0,80})(?<!adjunct[^\n]{0,40})\bPERC\b(?![^\n]{0,80}(pretest|pre-test|clinical judgment|adjunct|not substitute))/i,
       "PERC/Wells: ensure not substitute for pretest probability",
       "MEDIUM",
     ],

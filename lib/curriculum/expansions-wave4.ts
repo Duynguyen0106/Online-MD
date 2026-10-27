@@ -963,7 +963,7 @@ Severity scores exist clinically — learn organ-failure thinking, not memorizin
     {
       id: "les-im-5",
       moduleId: IDS.modIm,
-      title: "Community Pneumonia Disposition",
+      title: "Community Pneumonia — Disposition Framework",
       slug: "im-cap-disposition",
       sequence: 5,
       estimatedMinutes: 30,

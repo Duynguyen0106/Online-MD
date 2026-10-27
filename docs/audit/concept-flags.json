@@ -329,13 +329,6 @@
     "priority": "LOW"
   },
   {
-    "lessonId": "les-cat-y3-im-vte-ward",
-    "title": "VTE Diagnosis & Treatment Principles",
-    "flag": "PERC/Wells: ensure not substitute for pretest probability",
-    "excerpt": "rs 1. Pretest probability before Wells/PERC tools 2. Anticoag vs IVC filter concepts 3. Provoked duration concepts 4. Cancer VTE 5. Bleeding risk vs VTE risk ",
-    "priority": "MEDIUM"
-  },
-  {
     "lessonId": "les-cat-y4-im-icu-shock",
     "title": "ICU Shock Teams & Monitoring",
     "flag": "Compressed student-facing title/description",
@@ -355,13 +348,6 @@
     "flag": "Compressed student-facing title/description",
     "excerpt": "ystem. ## What this chapter covers 1. Fluid first 2. Insulin infusion after K check 3. Close anion gap in DKA 4. Avoid premature SQ switch 5. Cerebral edema c",
     "priority": "LOW"
-  },
-  {
-    "lessonId": "les-cat-y3-im-pe-workup",
-    "title": "Pulmonary Embolism Workup",
-    "flag": "PERC/Wells: ensure not substitute for pretest probability",
-    "excerpt": "mate pretest probability first 2. Wells/PERC as adjuncts not substitutes 3. D-dimer when low probability 4. CTPA vs V/Q 5. Massive vs submassive signs ## Learn",
-    "priority": "MEDIUM"
   },
   {
     "lessonId": "les-cat-y3-im-syncope",

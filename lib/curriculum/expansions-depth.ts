@@ -546,6 +546,34 @@ export const depthClinicalCases: ClinicalCase[] = [
     status: "published",
   },
   {
+    // Mirrors existing syncope lesson framing (les-im-3 / syncope physiology) — no new thresholds.
+    id: "case-im-2",
+    moduleId: IDS.modIm,
+    title: "Brief Loss of Consciousness on the Ward",
+    presentationMd:
+      "72-year-old briefly loses consciousness while standing to leave a chair; recovers within a minute. Bystanders deny seizure-like activity. Orthostatic symptoms earlier that morning; ECG available at bedside.",
+    stages: [
+      {
+        id: "syn1",
+        prompt:
+          "Sort the event into reflex, orthostatic, or cardiac syncope categories and list red flags that force a cardiac-first workup.",
+        expectedFocus:
+          "Use the existing syncope framework: exertional/supine syncope, abnormal ECG, structural heart disease, family sudden death → cardiac urgency; otherwise reflex vs orthostatic sorting",
+      },
+      {
+        id: "syn2",
+        prompt:
+          "Name the immediate bedside evaluations you would prioritize before disposition planning (educational priorities, not a protocol).",
+        expectedFocus:
+          "Orthostatic vitals, ECG review, glucose if indicated, targeted history for prodrome vs cardiac clues — aligned with Syncope — Cardiac vs Reflex teaching",
+      },
+    ],
+    teachingPoints:
+      "Syncope workup starts with category and red-flag filtering, not indiscriminate testing.",
+    objectiveIds: ["obj-im-3"],
+    status: "published",
+  },
+  {
     id: "case-pulm-1",
     moduleId: IDS.modPulm,
     title: "Sudden Dyspnea After Orthopedic Surgery",
