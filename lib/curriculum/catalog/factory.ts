@@ -6,10 +6,12 @@ import type {
 } from "@/lib/types/domain";
 import type { CatalogBundle, CatalogTopic } from "@/lib/curriculum/catalog/types";
 import {
-  buildChapterClinical,
-  buildChapterCore,
+  buildChapterBoardPearl,
+  buildChapterDiagnostics,
   buildChapterFraming,
-  buildChapterSynthesis,
+  buildChapterManagement,
+  buildChapterPathophysiology,
+  buildChapterPresentation,
   buildChapterVignette,
 } from "@/lib/curriculum/catalog/chapter-writer";
 
@@ -112,7 +114,6 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
       objectiveId: objId,
     });
 
-    const clinical = topic.year >= 3;
     const lesson: Lesson = {
       id: lessonId,
       moduleId: topic.moduleId,
@@ -132,40 +133,52 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
           summary: topic.points[0] ?? topic.title,
           blocks: [
             reading(
-              `blk-${topic.key}-ch1`,
+              `blk-${topic.key}-ch0`,
               conceptId,
-              "1. The basics",
+              "0. Chapter overview",
               1,
               buildChapterFraming(topic),
             ),
             reading(
+              `blk-${topic.key}-ch1`,
+              conceptId,
+              "1. Core Pathophysiology",
+              2,
+              buildChapterPathophysiology(topic),
+            ),
+            reading(
               `blk-${topic.key}-ch2`,
               conceptId,
-              clinical ? "2. Clinical approach" : "2. How it works",
-              2,
-              buildChapterCore(topic),
+              "2. Clinical Presentation",
+              3,
+              buildChapterPresentation(topic),
             ),
             reading(
               `blk-${topic.key}-ch3`,
               conceptId,
-              clinical
-                ? "3. Why it matters clinically"
-                : "3. Why it matters clinically",
-              3,
-              buildChapterClinical(topic),
+              "3. Diagnostic Approach",
+              4,
+              buildChapterDiagnostics(topic),
             ),
             reading(
               `blk-${topic.key}-ch4`,
               conceptId,
-              "4. Put it together",
-              4,
-              buildChapterSynthesis(topic),
+              "4. Management & Pharmacology",
+              5,
+              buildChapterManagement(topic),
+            ),
+            reading(
+              `blk-${topic.key}-ch5`,
+              conceptId,
+              "5. High-Yield Board Pearl",
+              6,
+              buildChapterBoardPearl(topic),
             ),
             vignette(
               `blk-${topic.key}-case`,
               conceptId,
               "Clinical case",
-              5,
+              7,
               buildChapterVignette(topic),
             ),
           ],
