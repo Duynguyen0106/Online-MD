@@ -21,6 +21,8 @@ const facultyLinks = [
 
 const studentLinks = [
   { href: "/dashboard", label: "Dashboard" },
+  { href: "/competency", label: "Competency" },
+  { href: "/presentations", label: "Presentations" },
   { href: "/flashcards", label: "Flashcards" },
   { href: "/qbank", label: "Question bank" },
   { href: "/tutor", label: "Ask a question" },

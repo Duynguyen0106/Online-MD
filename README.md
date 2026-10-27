@@ -64,3 +64,5 @@ Demo file store (`.data/`) remains active while `DEMO_MODE=true`. Health check: 
 
 - [Implementation plan](docs/IMPLEMENTATION_PLAN.md)
 - [Curriculum notes](docs/CURRICULUM.md)
+- [Medical-tutor.vn structure comparison](docs/COMPARISON_MEDICAL_TUTOR_VN.md)
+- [MT.vn capability prototype priorities](docs/MT_VN_CAPABILITY_PROTOTYPE_PRIORITIES.md)

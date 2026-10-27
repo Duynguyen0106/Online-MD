@@ -86,6 +86,18 @@ export const STUDENT_COPY = {
   assessmentComplete: "Assessment complete",
   tryAgain: "Try again",
   notCompleted: "Not completed",
+  competencyTitle: "Competency map",
+  competencyIntro:
+    "See where your lesson progress and assessments concentrate across modules and skill domains.",
+  competencyDisclaimer:
+    "Study evidence from your progress — not a clinical competency certificate.",
+  competencyWidgetTitle: "Focus areas",
+  competencyViewMap: "View competency map",
+  presentationsTitle: "Approach by presentation",
+  presentationsIntro:
+    "Browse high-yield clinical presentations and jump into linked lessons and cases already in the curriculum.",
+  presentationsDisclaimer:
+    "Educational pathways only. Exact thresholds and regimens belong to supervised clinical care and current guidelines.",
 } as const;
 
 /** Default human descriptions for known modules (by id). Fallback to seed description. */
