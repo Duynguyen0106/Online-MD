@@ -27,7 +27,11 @@ export function CompetencyHeatmap({
   const visible = compact ? rows.slice(0, 8) : rows;
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-[var(--border)] bg-[var(--surface)]">
+    <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)]">
+      <p className="border-b border-[var(--border)] px-3 py-2 text-[11px] text-[var(--muted)] md:hidden">
+        Scroll horizontally to see all competency domains.
+      </p>
+      <div className="overflow-x-auto">
       <table className="w-full min-w-[720px] border-collapse text-left text-sm">
         <thead>
           <tr className="border-b border-[var(--border)] text-xs text-[var(--muted)]">
@@ -101,6 +105,7 @@ export function CompetencyHeatmap({
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

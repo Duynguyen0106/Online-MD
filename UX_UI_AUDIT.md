@@ -1,8 +1,8 @@
 # UX / UI Audit
 
-**Date:** 2026-10-27  
+**Date:** 2026-10-27 · **Pass 2:** same day  
 **Scope:** Student, faculty, and admin surfaces (App Router + shared shell)  
-**Method:** Code inspection of routes, shell, players, gates, and copy; P0 remediations in the same pass  
+**Method:** Code inspection of routes, shell, players, gates, and copy; P0 then P1 remediations  
 **Status:** Structural / interaction audit. Not a visual redesign or accessibility certification.
 
 ---
@@ -40,19 +40,24 @@ Design tokens: Fraunces + Source Sans 3; teal clinical palette in [`app/globals.
 | V2 | Cases cards lacked hover lift used elsewhere | Matched presentation/dashboard hover |
 | A1 | Role switcher select lacked accessible name | `aria-label="Demo role"` |
 
-### P1 — recommended next (not in this PR)
+### P1 — fixed in pass 2
+
+| ID | Finding | Fix |
+| --- | --- | --- |
+| N5 | Eight student nav items compete on desktop | Grouped **Learn** / **Practice** with separators |
+| N6 | Role switcher showed role enum only | Options show `fullName (role)` |
+| L1 | Lesson player dense | Sticky sidebar, section progress bar, reviewed dots |
+| L2 | Competency heatmap overflow | Mobile scroll hint + existing horizontal scroll |
+| F1 | Faculty objectives dumped 3k+ rows | Search, module filter, 25/page pagination |
+| AD1 | Admin unlock-rules system jargon | Student-voice scope/state labels (“On for students”) |
+| A2 | No skip-link / weak focus | Skip to content + global `:focus-visible` |
+| A3 | Color-only progress | Lesson progress pairs bar % with “N of M reviewed” text |
+
+### P1 — still open
 
 | ID | Finding | Recommendation |
 | --- | --- | --- |
-| N5 | Eight student nav items compete on desktop | Group Learn / Practice or collapse secondary links |
-| N6 | Role switcher shows role enum only (`student`) | Show display name + role |
-| L1 | Lesson player is dense (sidebar + long chapters) | Sticky progress + clearer section completion |
-| L2 | Competency heatmap may overflow on small screens | Horizontal scroll affordance / compact mode |
-| F1 | Faculty objectives table dumps 3k+ rows on one page | Search / pagination / module filter |
 | F2 | Faculty editors are form-heavy without sticky save | Sticky save bar + unsaved warning |
-| AD1 | Admin unlock-rules copy still more “system” than “education” | Align labels with student voice |
-| A2 | Focus rings / skip-link not audited | Add skip-to-content + visible `:focus-visible` |
-| A3 | Color-only progress (emerald badges) | Pair with text (already mostly done; keep pairing) |
 
 ### P2 — later
 
@@ -98,4 +103,4 @@ flowchart LR
 ## 5. Verification
 
 - `npx tsc --noEmit`, `npm run lint`, `npm test`, `npm run mastery`, `npm run build`
-- Manual: mobile Menu opens student links; faculty sees Medical review; locked qbank shows friendly reason only
+- Manual: mobile Menu shows Learn/Practice groups; skip link focuses main; faculty objectives filter/paginate; lesson sidebar sticky with progress

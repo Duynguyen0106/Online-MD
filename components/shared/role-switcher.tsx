@@ -24,7 +24,7 @@ export function RoleSwitcher({ currentUserId }: { currentUserId: string }) {
     >
       {DEMO_USERS.map((u) => (
         <option key={u.id} value={u.id}>
-          {u.role}
+          {u.fullName} ({u.role})
         </option>
       ))}
     </select>

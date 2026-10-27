@@ -6,6 +6,35 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { UnlockRule } from "@/lib/types/domain";
 
+function scopeLabel(scope: UnlockRule["scope"]): string {
+  switch (scope) {
+    case "module_qbank":
+      return "Module question bank";
+    case "phase_step1_qbank":
+      return "Step 1 question bank";
+    case "clerkship_step2_qbank":
+      return "Step 2 CK question bank";
+    case "custom":
+      return "Custom access rule";
+    default:
+      return String(scope).replaceAll("_", " ");
+  }
+}
+
+function stateLabel(state: UnlockRule["minModuleState"]): string {
+  switch (state) {
+    case "not_started":
+      return "Not started";
+    case "in_progress":
+      return "In progress";
+    case "completed":
+    case "mastered":
+      return "Complete";
+    default:
+      return String(state).replaceAll("_", " ");
+  }
+}
+
 export function UnlockRulesPanel({ rules }: { rules: UnlockRule[] }) {
   const [pending, startTransition] = useTransition();
 
@@ -19,12 +48,13 @@ export function UnlockRulesPanel({ rules }: { rules: UnlockRule[] }) {
           <div>
             <p className="font-medium">{rule.name}</p>
             <p className="text-xs text-[var(--muted)]">
-              scope: {rule.scope} · min state: {rule.minModuleState}
+              {scopeLabel(rule.scope)} · students need module status:{" "}
+              {stateLabel(rule.minModuleState)}
             </p>
           </div>
           <div className="flex items-center gap-2">
             <Badge className={rule.isActive ? "bg-emerald-50 text-emerald-800" : ""}>
-              {rule.isActive ? "active" : "disabled"}
+              {rule.isActive ? "On for students" : "Turned off"}
             </Badge>
             <Button
               size="sm"
@@ -39,7 +69,7 @@ export function UnlockRulesPanel({ rules }: { rules: UnlockRule[] }) {
                 });
               }}
             >
-              {rule.isActive ? "Disable" : "Enable"}
+              {rule.isActive ? "Turn off" : "Turn on"}
             </Button>
           </div>
         </div>
