@@ -2,12 +2,38 @@ import type { ContentBlock, Lesson, Module } from "@/lib/types/domain";
 import { CV_FIVE_PART } from "@/lib/curriculum/authored/five-part/cv";
 import { PULM_FIVE_PART } from "@/lib/curriculum/authored/five-part/pulm";
 import { RENAL_FIVE_PART } from "@/lib/curriculum/authored/five-part/renal";
+import { GI_FIVE_PART } from "@/lib/curriculum/authored/five-part/gi";
+import { ENDO_FIVE_PART } from "@/lib/curriculum/authored/five-part/endo";
+import { HEME_FIVE_PART } from "@/lib/curriculum/authored/five-part/heme";
+import { NEURO_FIVE_PART } from "@/lib/curriculum/authored/five-part/neuro";
+import { MSK_FIVE_PART } from "@/lib/curriculum/authored/five-part/msk";
+import { ID_FIVE_PART } from "@/lib/curriculum/authored/five-part/id";
+import { IM_FIVE_PART } from "@/lib/curriculum/authored/five-part/im";
+import { SURG_FIVE_PART } from "@/lib/curriculum/authored/five-part/surg";
+import { PEDS_FIVE_PART } from "@/lib/curriculum/authored/five-part/peds";
+import { OBGYN_FIVE_PART } from "@/lib/curriculum/authored/five-part/obgyn";
+import { PSYCH_FIVE_PART } from "@/lib/curriculum/authored/five-part/psych";
+import { FM_FIVE_PART } from "@/lib/curriculum/authored/five-part/fm";
+import { CELL_MOL_FIVE_PART } from "@/lib/curriculum/authored/five-part/cell-mol";
 
 /** Hand-authored five-part chapter bodies keyed by lesson id. */
 export const AUTHORED_FIVE_PART: Record<string, string> = {
   ...CV_FIVE_PART,
   ...PULM_FIVE_PART,
   ...RENAL_FIVE_PART,
+  ...GI_FIVE_PART,
+  ...ENDO_FIVE_PART,
+  ...HEME_FIVE_PART,
+  ...NEURO_FIVE_PART,
+  ...MSK_FIVE_PART,
+  ...ID_FIVE_PART,
+  ...IM_FIVE_PART,
+  ...SURG_FIVE_PART,
+  ...PEDS_FIVE_PART,
+  ...OBGYN_FIVE_PART,
+  ...PSYCH_FIVE_PART,
+  ...FM_FIVE_PART,
+  ...CELL_MOL_FIVE_PART,
 };
 
 const SOURCES_FOOTER_RE =
@@ -67,8 +93,6 @@ Citations for this lesson are being verified by faculty. Treat doses, numeric cu
         summary: first.summary || lesson.title,
         blocks,
       },
-      // Drop trailing concepts whose readings were merged; keep only if they
-      // had non-reading blocks already folded into `preserved`.
     ],
   };
 }

@@ -8,17 +8,9 @@ import { buildCatalogBundle } from "@/lib/curriculum/catalog/factory";
 import { FOUR_YEAR_TOPICS } from "@/lib/curriculum/catalog/topics-generated";
 
 describe("authored five-part handcrafted chapters", () => {
-  it("registers CV + pulm handcrafted lessons with five-part headings", () => {
-    const ids = Object.keys(AUTHORED_FIVE_PART).sort();
-    assert.equal(ids.length, 23);
-    assert.ok(
-      ids.every(
-        (id) =>
-          id.startsWith("les-cv-") ||
-          id.startsWith("les-pulm-") ||
-          id.startsWith("les-renal-"),
-      ),
-    );
+  it("registers all 113 handcrafted lessons with five-part headings", () => {
+    const ids = Object.keys(AUTHORED_FIVE_PART);
+    assert.equal(ids.length, 113);
     for (const body of Object.values(AUTHORED_FIVE_PART)) {
       assert.match(body, /## 1\. Core Pathophysiology/);
       assert.match(body, /## 2\. Clinical Presentation/);
@@ -26,6 +18,22 @@ describe("authored five-part handcrafted chapters", () => {
       assert.match(body, /## 4\. Management & Pharmacology/);
       assert.match(body, /## 5\. High-Yield Board Pearl/);
       assert.match(body, /REFERENCE_REVIEW_REQUIRED/);
+    }
+  });
+
+  it("covers every non-catalog lesson id in the expanded program", () => {
+    const expanded = applyCurriculumExpansions(structuredClone(program));
+    const handcrafted: string[] = [];
+    for (const phase of expanded.phases) {
+      for (const mod of phase.modules) {
+        for (const lesson of mod.lessons) {
+          if (!lesson.id.startsWith("les-cat-")) handcrafted.push(lesson.id);
+        }
+      }
+    }
+    assert.equal(handcrafted.length, 113);
+    for (const id of handcrafted) {
+      assert.ok(AUTHORED_FIVE_PART[id], `missing authored chapter for ${id}`);
     }
   });
 

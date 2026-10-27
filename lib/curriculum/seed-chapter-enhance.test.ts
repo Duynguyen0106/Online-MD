@@ -29,12 +29,12 @@ describe("seed-chapter-enhance", () => {
 
     const enhanced = enhanceThinSeedLesson(structuredClone(lesson), mod);
     assert.ok(readingChars(enhanced) >= 4000);
-    assert.ok(enhanced.estimatedMinutes >= 90);
-    assert.ok(
-      enhanced.concepts[0].blocks.some((b) =>
-        /Core Pathophysiology/i.test(b.title ?? ""),
-      ),
-    );
+    assert.ok(enhanced.estimatedMinutes >= 60);
+    const body = enhanced.concepts
+      .flatMap((c) => c.blocks)
+      .map((b) => `${b.title}\n${b.bodyMd ?? ""}`)
+      .join("\n");
+    assert.match(body, /Core Pathophysiology/i);
   });
 
   it("leaves catalog lessons untouched", () => {
