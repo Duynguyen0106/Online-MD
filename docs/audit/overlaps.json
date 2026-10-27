@@ -30,16 +30,6 @@
     "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
-    "a": "les-im-5",
-    "aTitle": "Community Pneumonia Disposition",
-    "aModule": "Internal Medicine Clerkship",
-    "b": "les-cat-y3-im-cap-admit",
-    "bTitle": "Community Pneumonia Disposition",
-    "bModule": "Internal Medicine Clerkship",
-    "score": 1,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
-  },
-  {
     "a": "les-cat-y3-im-goals-care",
     "aTitle": "Goals of Care Conversations",
     "aModule": "Internal Medicine Clerkship",
@@ -48,36 +38,6 @@
     "bModule": "Internal Medicine Clerkship",
     "score": 1,
     "classificationHint": "LEVEL DISTINCTION"
-  },
-  {
-    "a": "les-cat-y3-im-onc-emerg",
-    "aTitle": "Oncologic Emergencies",
-    "aModule": "Internal Medicine Clerkship",
-    "b": "les-cat-y4-im-onco-emerg",
-    "bTitle": "Oncologic Emergencies",
-    "bModule": "Internal Medicine Clerkship",
-    "score": 1,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
-  },
-  {
-    "a": "les-peds-7",
-    "aTitle": "Pediatric Asthma Exacerbation",
-    "aModule": "Pediatrics Clerkship",
-    "b": "les-cat-y3-peds-asthma-exac",
-    "bTitle": "Pediatric Asthma Exacerbation",
-    "bModule": "Pediatrics Clerkship",
-    "score": 1,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
-  },
-  {
-    "a": "les-psych-3",
-    "aTitle": "Suicide Risk Assessment Essentials",
-    "aModule": "Psychiatry Clerkship",
-    "b": "les-cat-y3-psych-si-assess",
-    "bTitle": "Suicide Risk Assessment Essentials",
-    "bModule": "Psychiatry Clerkship",
-    "score": 1,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
     "a": "les-cat-y3-fm-msk-fm",
@@ -388,16 +348,6 @@
     "bModule": "Pharmacology Foundations",
     "score": 0.5,
     "classificationHint": "CROSS_MODULE_OVERLAP"
-  },
-  {
-    "a": "les-cv-1",
-    "aTitle": "Cardiac Electrophysiology & Mechanics",
-    "aModule": "Cardiovascular System",
-    "b": "les-cat-y2-cv-excitation",
-    "bTitle": "Cardiac Electrophysiology Gradients",
-    "bModule": "Cardiovascular System",
-    "score": 0.5,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
     "a": "les-cat-y2-cv-acs-path",
@@ -820,16 +770,6 @@
     "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
-    "a": "les-im-1",
-    "aTitle": "Community-Acquired Pneumonia",
-    "aModule": "Internal Medicine Clerkship",
-    "b": "les-cat-y3-im-cap-admit",
-    "bTitle": "Community Pneumonia Disposition",
-    "bModule": "Internal Medicine Clerkship",
-    "score": 0.5,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
-  },
-  {
     "a": "les-cat-y3-im-chest-pain",
     "aTitle": "Chest Pain Pathways",
     "aModule": "Internal Medicine Clerkship",
@@ -948,6 +888,16 @@
     "bModule": "Surgery Clerkship",
     "score": 0.5,
     "classificationHint": "LEVEL DISTINCTION"
+  },
+  {
+    "a": "les-peds-7",
+    "aTitle": "Pediatric Asthma Exacerbation",
+    "aModule": "Pediatrics Clerkship",
+    "b": "les-cat-y3-peds-asthma-exac",
+    "bTitle": "Pediatric Asthma Exacerbation — Action Plan and Disposition",
+    "bModule": "Pediatrics Clerkship",
+    "score": 0.5,
+    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
   },
   {
     "a": "les-cat-y3-peds-card-peds",

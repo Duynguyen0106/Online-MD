@@ -406,7 +406,8 @@ async function main() {
       "HIGH",
     ],
     [
-      /ACE inhibitor \+ beta.?blocker \+ diuretic|ACEI.*beta.?blocker.*diuretic(?!.*SGLT)/i,
+      // Match ACEI+BB+diuretic triad only when ARNI/SGLT2 are absent nearby (avoid false + on GDMT lists).
+      /(?:ACE inhibitor|ACEI|ACE-I)(?![\s\S]{0,220}(?:ARNI|SGLT2))(?:[\s\S]{0,120}(?:beta-?blocker|β-blocker))(?:[\s\S]{0,120}diuretic)/i,
       "HF: possibly outdated ACEI+BB+diuretic-only framing",
       "HIGH",
     ],

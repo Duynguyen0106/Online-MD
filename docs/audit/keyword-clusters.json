@@ -9,7 +9,7 @@
     },
     {
       "id": "les-cat-y2-cv-excitation",
-      "title": "Cardiac Electrophysiology Gradients",
+      "title": "Cardiac Electrophysiology Gradients — Pacemaker Currents & Antiarrhythmic Map",
       "module": "Cardiovascular System",
       "level": "PRECLINICAL",
       "phase": "Years 1–2 · Preclinical medicine"
@@ -118,7 +118,7 @@
     },
     {
       "id": "les-cat-y2-cv-hf-mechanisms",
-      "title": "Heart Failure Mechanisms HFrEF/HFpEF",
+      "title": "Heart Failure Mechanisms — HFrEF, HFmrEF, and HFpEF",
       "module": "Cardiovascular System",
       "level": "STEP_1",
       "phase": "Years 1–2 · Preclinical medicine"
@@ -282,7 +282,7 @@
     },
     {
       "id": "les-cat-y3-im-cap-admit",
-      "title": "Community Pneumonia Disposition",
+      "title": "Community-Acquired Pneumonia — Severity Scores and Site-of-Care",
       "module": "Internal Medicine Clerkship",
       "level": "CLERKSHIP",
       "phase": "Years 3–4 · Clinical medicine"
@@ -319,7 +319,7 @@
     },
     {
       "id": "les-cat-y3-im-sepsis-hour1",
-      "title": "Hour-1 Sepsis Bundle",
+      "title": "Sepsis Recognition, Early Care, and Reassessment",
       "module": "Internal Medicine Clerkship",
       "level": "CLERKSHIP",
       "phase": "Years 3–4 · Clinical medicine"

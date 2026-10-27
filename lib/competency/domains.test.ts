@@ -26,4 +26,15 @@ describe("normalizeCompetencyDomain", () => {
   it("falls back to knowledge", () => {
     assert.equal(normalizeCompetencyDomain("Something else"), "knowledge");
   });
+
+  it("maps Interpret-led statements to interpretation", () => {
+    assert.equal(
+      normalizeCompetencyDomain(
+        "Knowledge",
+        "Physiology",
+        "Interpret V/Q relationships and West zones of pulmonary blood flow.",
+      ),
+      "interpretation",
+    );
+  });
 });

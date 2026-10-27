@@ -258,6 +258,12 @@
     "level": "PRECLINICAL"
   },
   {
+    "id": "les-cv-8",
+    "title": "Cardiac Tamponade Physiology",
+    "module": "Cardiovascular System",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-cat-y2-cv-hemodynamics",
     "title": "CV Hemodynamics — Pressure, Flow, Resistance",
     "module": "Cardiovascular System",
@@ -271,7 +277,7 @@
   },
   {
     "id": "les-cat-y2-cv-excitation",
-    "title": "Cardiac Electrophysiology Gradients",
+    "title": "Cardiac Electrophysiology Gradients — Pacemaker Currents & Antiarrhythmic Map",
     "module": "Cardiovascular System",
     "level": "PRECLINICAL"
   },
@@ -295,7 +301,7 @@
   },
   {
     "id": "les-cat-y2-cv-hf-mechanisms",
-    "title": "Heart Failure Mechanisms HFrEF/HFpEF",
+    "title": "Heart Failure Mechanisms — HFrEF, HFmrEF, and HFpEF",
     "module": "Cardiovascular System",
     "level": "STEP_1"
   },
@@ -1537,7 +1543,7 @@
   },
   {
     "id": "les-cat-y1-id-spirochetes",
-    "title": "Spirochetes",
+    "title": "Spirochetes — Syphilis, Lyme, and Leptospira",
     "module": "Host Defense, Microbiology & Infectious Disease",
     "level": "PRECLINICAL"
   },
@@ -3019,7 +3025,7 @@
   },
   {
     "id": "les-cat-y3-im-onc-emerg",
-    "title": "Oncologic Emergencies",
+    "title": "Oncologic Emergencies — Core Clerkship",
     "module": "Internal Medicine Clerkship",
     "level": "CLERKSHIP"
   },
@@ -3115,7 +3121,7 @@
   },
   {
     "id": "les-cat-y3-im-sepsis-hour1",
-    "title": "Hour-1 Sepsis Bundle",
+    "title": "Sepsis Recognition, Early Care, and Reassessment",
     "module": "Internal Medicine Clerkship",
     "level": "CLERKSHIP"
   },
@@ -3145,7 +3151,7 @@
   },
   {
     "id": "les-cat-y3-im-cap-admit",
-    "title": "Community Pneumonia Disposition",
+    "title": "Community-Acquired Pneumonia — Severity Scores and Site-of-Care",
     "module": "Internal Medicine Clerkship",
     "level": "CLERKSHIP"
   },
@@ -3271,9 +3277,9 @@
   },
   {
     "id": "les-cat-y4-im-onco-emerg",
-    "title": "Oncologic Emergencies",
+    "title": "Oncologic Emergencies — ICU / Sub-Internship",
     "module": "Internal Medicine Clerkship",
-    "level": "CLERKSHIP"
+    "level": "ADVANCED_CLINICAL"
   },
   {
     "id": "les-cat-y4-im-goals-icu",
@@ -3361,7 +3367,7 @@
   },
   {
     "id": "les-cat-y3-surg-bowel-obstruct",
-    "title": "SBO vs LBO",
+    "title": "Small vs Large Bowel Obstruction",
     "module": "Surgery Clerkship",
     "level": "CLERKSHIP"
   },
@@ -3817,7 +3823,7 @@
   },
   {
     "id": "les-cat-y3-peds-asthma-exac",
-    "title": "Pediatric Asthma Exacerbation",
+    "title": "Pediatric Asthma Exacerbation — Action Plan and Disposition",
     "module": "Pediatrics Clerkship",
     "level": "CLERKSHIP"
   },
@@ -4387,7 +4393,7 @@
   },
   {
     "id": "les-cat-y3-psych-si-assess",
-    "title": "Suicide Risk Assessment Essentials",
+    "title": "Suicide Risk Assessment — Safety Planning Depth",
     "module": "Psychiatry Clerkship",
     "level": "CLERKSHIP"
   },

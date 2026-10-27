@@ -14,25 +14,11 @@
     "priority": "LOW"
   },
   {
-    "lessonId": "les-cv-3",
-    "title": "Heart Failure & Foundational Therapy",
-    "flag": "HF: possibly outdated ACEI+BB+diuretic-only framing",
-    "excerpt": "HFrEF therapy (conceptual pillars) ARNI/ACEI/ARB, evidence-based beta-blockers, mineralocorticoid receptor antagonists, SGLT2 inhibitors — plus diuretics for vo",
-    "priority": "HIGH"
-  },
-  {
     "lessonId": "les-cv-5",
     "title": "Tachyarrhythmia Safety Framework",
     "flag": "Compressed student-facing title/description",
     "excerpt": "ctrolytes, drugs, and clinical syndrome—hyperkalemia (peaked T, P flattening, sine wave), TCA overdose (wide QRS, R in aVR), digoxin effect, and intracranial ev",
     "priority": "LOW"
-  },
-  {
-    "lessonId": "les-cv-8",
-    "title": "Cardiac Tamponade Physiology",
-    "flag": "Tamponade: imprecise 'kills preload' language",
-    "excerpt": "ssure equalizes diastolic pressures and kills preload. **Pericardial pressure equalizes diastolic pressures and kills preload..** Place this node in the pathwa",
-    "priority": "HIGH"
   },
   {
     "lessonId": "les-cat-y2-cv-ecg-intervals",
@@ -346,7 +332,7 @@
     "lessonId": "les-cat-y3-im-vte-ward",
     "title": "VTE Diagnosis & Treatment Principles",
     "flag": "PERC/Wells: ensure not substitute for pretest probability",
-    "excerpt": " ## What this chapter covers 1. Wells/PERC conceptual 2. Anticoag vs IVC filter 3. Provoked duration 4. Cancer VTE 5. Bleeding risk ## Learning objectives 1",
+    "excerpt": "rs 1. Pretest probability before Wells/PERC tools 2. Anticoag vs IVC filter concepts 3. Provoked duration concepts 4. Cancer VTE 5. Bleeding risk vs VTE risk ",
     "priority": "MEDIUM"
   },
   {
@@ -374,7 +360,7 @@
     "lessonId": "les-cat-y3-im-pe-workup",
     "title": "Pulmonary Embolism Workup",
     "flag": "PERC/Wells: ensure not substitute for pretest probability",
-    "excerpt": " ## What this chapter covers 1. Wells/PERC framing 2. D-dimer when low probability 3. CTPA vs V/Q 4. Massive vs submassive signs 5. Anticoagulation when high ",
+    "excerpt": "mate pretest probability first 2. Wells/PERC as adjuncts not substitutes 3. D-dimer when low probability 4. CTPA vs V/Q 5. Massive vs submassive signs ## Learn",
     "priority": "MEDIUM"
   },
   {

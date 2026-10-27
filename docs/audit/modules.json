@@ -367,7 +367,7 @@
       },
       {
         "id": "les-cat-y2-cv-excitation",
-        "title": "Cardiac Electrophysiology Gradients",
+        "title": "Cardiac Electrophysiology Gradients — Pacemaker Currents & Antiarrhythmic Map",
         "level": "PRECLINICAL",
         "minutes": 300
       },
@@ -391,7 +391,7 @@
       },
       {
         "id": "les-cat-y2-cv-hf-mechanisms",
-        "title": "Heart Failure Mechanisms HFrEF/HFpEF",
+        "title": "Heart Failure Mechanisms — HFrEF, HFmrEF, and HFpEF",
         "level": "STEP_1",
         "minutes": 300
       },
@@ -1989,7 +1989,7 @@
       },
       {
         "id": "les-cat-y1-id-spirochetes",
-        "title": "Spirochetes",
+        "title": "Spirochetes — Syphilis, Lyme, and Leptospira",
         "level": "PRECLINICAL",
         "minutes": 300
       },
@@ -3541,7 +3541,7 @@
       },
       {
         "id": "les-cat-y3-im-onc-emerg",
-        "title": "Oncologic Emergencies",
+        "title": "Oncologic Emergencies — Core Clerkship",
         "level": "CLERKSHIP",
         "minutes": 240
       },
@@ -3637,7 +3637,7 @@
       },
       {
         "id": "les-cat-y3-im-sepsis-hour1",
-        "title": "Hour-1 Sepsis Bundle",
+        "title": "Sepsis Recognition, Early Care, and Reassessment",
         "level": "CLERKSHIP",
         "minutes": 240
       },
@@ -3667,7 +3667,7 @@
       },
       {
         "id": "les-cat-y3-im-cap-admit",
-        "title": "Community Pneumonia Disposition",
+        "title": "Community-Acquired Pneumonia — Severity Scores and Site-of-Care",
         "level": "CLERKSHIP",
         "minutes": 240
       },
@@ -3793,8 +3793,8 @@
       },
       {
         "id": "les-cat-y4-im-onco-emerg",
-        "title": "Oncologic Emergencies",
-        "level": "CLERKSHIP",
+        "title": "Oncologic Emergencies — ICU / Sub-Internship",
+        "level": "ADVANCED_CLINICAL",
         "minutes": 240
       },
       {
@@ -3911,7 +3911,7 @@
       },
       {
         "id": "les-cat-y3-surg-bowel-obstruct",
-        "title": "SBO vs LBO",
+        "title": "Small vs Large Bowel Obstruction",
         "level": "CLERKSHIP",
         "minutes": 240
       },
@@ -4389,7 +4389,7 @@
       },
       {
         "id": "les-cat-y3-peds-asthma-exac",
-        "title": "Pediatric Asthma Exacerbation",
+        "title": "Pediatric Asthma Exacerbation — Action Plan and Disposition",
         "level": "CLERKSHIP",
         "minutes": 240
       },
@@ -5045,7 +5045,7 @@
       },
       {
         "id": "les-cat-y3-psych-si-assess",
-        "title": "Suicide Risk Assessment Essentials",
+        "title": "Suicide Risk Assessment — Safety Planning Depth",
         "level": "CLERKSHIP",
         "minutes": 240
       },

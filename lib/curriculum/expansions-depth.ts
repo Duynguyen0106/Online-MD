@@ -522,19 +522,20 @@ export const depthFlashcards: Flashcard[] = [
 
 export const depthClinicalCases: ClinicalCase[] = [
   {
-    id: "case-cv-1",
+    // Distinct from seed case-cv-1 (Progressive Dyspnea / HFrEF congestion).
+    id: "case-cv-2",
     moduleId: IDS.modCvb,
     title: "Warm Shock After Pneumonia",
     presentationMd:
       "68-year-old with CAP becomes hypotensive, warm extremities, lactate elevated, bounding pulses.",
     stages: [
       {
-        id: "cv1",
+        id: "cv2a",
         prompt: "Name the shock category and the two physiologic drivers of hypotension.",
         expectedFocus: "Distributive/septic — vasodilation + relative hypovolemia/capillary leak",
       },
       {
-        id: "cv2",
+        id: "cv2b",
         prompt: "List parallel first-hour priorities (educational framework, not a hospital protocol).",
         expectedFocus: "Cultures, timely antibiotics, fluids for perfusion, source-control thinking",
       },

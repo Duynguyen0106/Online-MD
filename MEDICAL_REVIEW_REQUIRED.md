@@ -1,8 +1,10 @@
 # Medical Review Required
 
-**Date:** 2026-09-28  
+**Date:** 2026-09-28 · **Refresh note:** 2026-10-27  
 **Rule:** Do not invent corrections. Flag uncertain statements for a qualified physician/medical educator.  
 **Statuses used after remediation:** items remain `NEEDS_REVIEW` / `MEDICAL_REVIEW` until a human approves.
+
+**Agent remediations (not medical approval):** tamponade preload wording softened; sepsis lesson retitled toward recognition/reassessment; duplicate `case-cv-1` ID fixed (`case-cv-2` warm shock). Confirm or revise below.
 
 ---
 
@@ -10,9 +12,9 @@
 
 | File | Lesson | Statement / issue | Why it needs review | Suggested source type | Priority |
 | --- | --- | --- | --- | --- | --- |
-| `lib/curriculum/expansions-wave7.ts` | `les-cv-8` Cardiac Tamponade Physiology | Summary used “kills preload” | Physiologically imprecise; risks wrong mental model of obstructive shock | Standard physiology / critical care text; ESC/AHA pericardial disease statements | HIGH |
+| `lib/curriculum/expansions-wave7.ts` | `les-cv-8` Cardiac Tamponade Physiology | Summary previously used “kills preload” (softened; confirm diastolic-filling framing) | Physiologically imprecise; risks wrong mental model of obstructive shock | Standard physiology / critical care text; ESC/AHA pericardial disease statements | HIGH |
 | `lib/curriculum/catalog/topics-generated.ts` | `les-cat-y2-cv-ph` Pulmonary Hypertension Groups | Hemodynamic definition of PH | Thresholds have changed historically; obsolete mPAP cutoffs must not be taught as current without labeling | ESC/ERS pulmonary hypertension guidelines (current edition) | HIGH |
-| `lib/curriculum/catalog/topics-generated.ts` | `les-cat-y3-im-sepsis-hour1` Hour-1 Sepsis Bundle | Bundle framed as lesson title/checklist | Hour-1 language can be read as inflexible universal checklist | SSC / sepsis consensus; teach recognition, cultures when appropriate, timely antimicrobials, source control, reassessment | HIGH |
+| `lib/curriculum/catalog/topics-generated.ts` | `les-cat-y3-im-sepsis-hour1` (title now *Sepsis Recognition, Early Care, and Reassessment*) | Former Hour-1 checklist framing (retitled; confirm educational intent) | Hour-1 language can be read as inflexible universal checklist | SSC / sepsis consensus; teach recognition, cultures when appropriate, timely antimicrobials, source control, reassessment | HIGH |
 | `lib/curriculum/seed.ts` + IM catalog | ACS management pathways | Antiplatelet, anticoagulation, reperfusion strategy | Rapidly evolving, guideline-defined | AHA/ACC ACS guidelines; institutional pathways | HIGH |
 | `lib/curriculum/expansions.ts` + catalog | Sepsis recognition & empiric logic | Empiric antibiotics, fluids, pressors | High-stakes, local resistance, timing nuances | SSC; local antibiogram (label as local) | HIGH |
 | Catalog / seed IM | VTE / PE / Wells / PERC | Prediction rules and anticoagulation | Must not replace pretest probability; bleeding risk varies | CHEST / ASH / ESC PE guidance; validation literature | HIGH |

@@ -41,25 +41,38 @@ export const COMPETENCY_DOMAIN_SHORT: Record<CompetencyDomainId, string> = {
 
 /**
  * Map raw Objective.physicianTask / contentCategory strings onto the 8 domains.
+ * Optional statement first-verb hints fill Interpretation when metadata is coarse.
  * Unmapped tasks fall into Knowledge.
  */
 export function normalizeCompetencyDomain(
   physicianTask: string,
   contentCategory?: string,
+  statement?: string,
 ): CompetencyDomainId {
   const task = physicianTask.trim().toLowerCase();
   const cat = (contentCategory ?? "").trim().toLowerCase();
+  const stmt = (statement ?? "").trim().toLowerCase();
 
+  // Primary physician tasks win over statement verbs.
+  if (task === "diagnosis" || task.includes("diagnos")) return "diagnosis";
+  if (task === "management" || task.includes("manag")) return "management";
+  if (task === "patient care" || task.includes("patient care")) {
+    return "patient_care";
+  }
+  // Interpretation before scientific-concepts/mechanism fallbacks so "Interpret …"
+  // objectives are not swallowed by coarse Knowledge tags.
+  if (
+    task.includes("interpret") ||
+    cat.includes("imaging") ||
+    /^\s*interpret\b/.test(stmt)
+  ) {
+    return "interpretation";
+  }
   if (
     task.includes("scientific concepts") ||
     task === "medical knowledge / scientific concepts"
   ) {
     return "scientific_concepts";
-  }
-  if (task === "diagnosis" || task.includes("diagnos")) return "diagnosis";
-  if (task === "management" || task.includes("manag")) return "management";
-  if (task === "patient care" || task.includes("patient care")) {
-    return "patient_care";
   }
   if (
     cat.includes("physiology") ||
@@ -86,9 +99,6 @@ export function normalizeCompetencyDomain(
     (task === "knowledge" || task.includes("knowledge"))
   ) {
     return "mechanisms";
-  }
-  if (task.includes("interpret") || cat.includes("imaging")) {
-    return "interpretation";
   }
   if (task === "knowledge" || task.includes("knowledge")) return "knowledge";
   return "knowledge";

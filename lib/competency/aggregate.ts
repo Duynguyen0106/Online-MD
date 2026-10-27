@@ -79,6 +79,7 @@ export async function buildCompetencyMatrix(
     const domain = normalizeCompetencyDomain(
       obj.physicianTask,
       obj.contentCategory,
+      obj.statement,
     );
     for (const lid of obj.lessonIds) {
       if (!lessonDomains.has(lid)) lessonDomains.set(lid, new Set());
