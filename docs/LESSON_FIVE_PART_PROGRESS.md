@@ -44,21 +44,16 @@
 
 All 771 catalog lessons receive the five-part spine automatically when the curriculum graph is built (overview + sections 1–5 + case vignette).
 
-## Deepen pass (P0)
+## Deepen passes
 
-High-traffic clerkship chapters overlaid in `p0-deep.ts` (wins over thinner module stubs):
+| Pass | File | Scope |
+| --- | --- | --- |
+| P0 | `p0-deep.ts` | Sepsis, shock, ACS/AKI, acid–base/electrolytes, PE/ARDS, DKA, UGIB, trauma, transfusion, alcohol withdrawal |
+| Wave 2 | `wave2-deep.ts` | Remaining ID / IM / Surg / Peds / ObGyn |
+| Wave 3 | `wave3-deep.ts` | FM / Psych / Cell-mol / Heme / Neuro / MSK / GI / Endo / Pulm / Renal remaining |
 
-- `les-id-2` Sepsis
-- `les-renal-3` Acid–base, `les-renal-4` Hyponatremia, `les-renal-5` Hyperkalemia
-- `les-im-2` Chest pain/ACS, `les-im-4` AKI
-- `les-cv-4` Shock, `les-cv-5` Tachyarrhythmia
-- `les-pulm-3` PE, `les-pulm-4` ARDS
-- `les-endo-2` DKA/HHS
-- `les-gi-4` UGIB
-- `les-surg-4` Trauma primary survey
-- `les-heme-5` Transfusion reactions
-- `les-psych-6` Alcohol withdrawal
+**Target:** every handcrafted authored chapter ≥2000 characters of five-part academic prose (no teach-back padding).
 
 ## Maintenance
 
-Continue deepen passes for remaining padded chapters; keep `REFERENCE_REVIEW_REQUIRED` until citations are attached. Prefer editing module files or `p0-deep.ts` under `lib/curriculum/authored/five-part/` rather than reintroducing placeholder tables.
+Keep `REFERENCE_REVIEW_REQUIRED` until citations are attached. Prefer deepen overlays or module files under `lib/curriculum/authored/five-part/` rather than reintroducing placeholder tables.

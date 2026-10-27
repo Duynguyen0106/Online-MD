@@ -28,13 +28,14 @@ describe("seed-chapter-enhance", () => {
     assert.ok(readingChars(lesson) < 4000);
 
     const enhanced = enhanceThinSeedLesson(structuredClone(lesson), mod);
-    assert.ok(readingChars(enhanced) >= 4000);
+    assert.ok(readingChars(enhanced) >= 2000);
     assert.ok(enhanced.estimatedMinutes >= 60);
     const body = enhanced.concepts
       .flatMap((c) => c.blocks)
       .map((b) => `${b.title}\n${b.bodyMd ?? ""}`)
       .join("\n");
     assert.match(body, /Core Pathophysiology/i);
+    assert.doesNotMatch(body, /Extra rehearsal pass/i);
   });
 
   it("leaves catalog lessons untouched", () => {
