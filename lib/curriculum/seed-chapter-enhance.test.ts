@@ -21,9 +21,9 @@ function readingChars(lesson: {
 }
 
 describe("seed-chapter-enhance", () => {
-  it("expands thin seed lessons to textbook-length readings", () => {
+  it("expands thin seed lessons to textbook-length five-part readings", () => {
     const mod = program.phases[0].modules[0];
-    const lesson = mod.lessons.find((l) => l.id === "les-cell-1");
+    const lesson = mod.lessons.find((l) => l.id === "les-cell-2");
     assert.ok(lesson);
     assert.ok(readingChars(lesson) < 4000);
 
@@ -32,7 +32,7 @@ describe("seed-chapter-enhance", () => {
     assert.ok(enhanced.estimatedMinutes >= 90);
     assert.ok(
       enhanced.concepts[0].blocks.some((b) =>
-        b.title?.includes("How it works"),
+        /Core Pathophysiology/i.test(b.title ?? ""),
       ),
     );
   });

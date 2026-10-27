@@ -570,3 +570,44 @@ export function factualEnrichmentForTopic(topic: TopicLike): string {
 
   return hits.join("\n\n");
 }
+
+/**
+ * Loose hematology / ethics tokens that may appear in unrelated teaching points
+ * (e.g. bacteriology "hemolysis"). On the seed path these require a title hit.
+ */
+const SEED_TITLE_GATED: RegExp[] = [
+  /anemia workup|mcv|ferritin|hemolysis workup|hemolytic anemia|intravascular hemolysis|extravascular hemolysis|autoimmune hemolysis|b12 deficiency|iron deficien/i,
+  /anemia production|reticulocyte|hemolysis workup|coagulopath|neutropenic fever|tumor lysis/i,
+  /informed consent|decision-?making capacity|\bincapacit(?:y|ated)\b|distributive justice|health equity|confidentiality|error disclosure|resource allocation/i,
+  /\bhold\b|5150|involuntary\s+(?:hold|commitment|treatment)|grave disability|decision-?making capacity|(?:medical|decisional)\s+capacity|\bincapacit(?:y|ated)\b/i,
+];
+
+function seedRequiresTitle(snipTest: RegExp): boolean {
+  return SEED_TITLE_GATED.some(
+    (gated) => gated.source === snipTest.source && gated.flags === snipTest.flags,
+  );
+}
+
+/**
+ * Seed-lesson enrichment: keyword hits against title + teaching points only.
+ * Skips always-on category/organ banks (those pad catalog chapters but dilute seeds).
+ * Caps snippets so matched context stays secondary to original teaching notes.
+ * Loose hematology/ethics banks require a title match (E3).
+ */
+export function factualEnrichmentForSeedLesson(topic: {
+  title: string;
+  points: string[];
+}): string {
+  const title = topic.title;
+  const pointsBlob = topic.points.join(" \n ");
+  const hits: string[] = [];
+  for (const snip of [...SNIPPETS, ...DEEP_SNIPPETS]) {
+    const titleHit = snip.test.test(title);
+    const pointsHit = snip.test.test(pointsBlob);
+    if (!titleHit && !pointsHit) continue;
+    if (!titleHit && seedRequiresTitle(snip.test)) continue;
+    pushUnique(hits, snip.prose);
+    if (hits.length >= 3) break;
+  }
+  return hits.join("\n\n");
+}
