@@ -1,9 +1,11 @@
 # Medical Content Audit
 
-**Date:** 2026-09-28  
+**Date:** 2026-09-28 (baseline) · **Five-part refresh:** 2026-10-27  
 **Scope:** Live Online MD curriculum graph (seed + expansion waves + 4-year catalog)  
 **Method:** Inspect-only inventory via `scripts/medical-content-audit.ts` → `docs/audit/*.json`, plus targeted review of cardiovascular, sepsis, VTE, and heart-failure pathways.  
 **Status:** Structural and educational audit. **Not medical approval.**
+
+> **2026-10-27 five-part audit:** All 884 lessons now carry the five-part spine. Full findings, safety heuristics, and remediation backlog → [`docs/FIVE_PART_CURRICULUM_AUDIT.md`](docs/FIVE_PART_CURRICULUM_AUDIT.md) · machine output `docs/audit/five-part-audit.json` · `npm run audit:five-part`.
 
 ---
 
