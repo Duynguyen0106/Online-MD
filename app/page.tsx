@@ -62,7 +62,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="font-[family-name:var(--font-display)] text-3xl tracking-tight">
           A medical-school curriculum, built for self-paced study
         </h2>
@@ -97,7 +97,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-[var(--border)] bg-[var(--surface)]">
-        <div className="mx-auto max-w-5xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="font-[family-name:var(--font-display)] text-3xl tracking-tight">
             Learn first. Practice second.
           </h2>
