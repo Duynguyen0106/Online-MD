@@ -255,10 +255,20 @@ export function enhanceThinSeedLesson(
   // Prefer hand-authored five-part chapters when available (module-by-module expansion).
   const authored = tryApplyAuthoredFivePart(lesson, module);
   if (authored) {
+    const authoredBody = authored.concepts
+      .flatMap((c) => c.blocks.map((b) => b.bodyMd ?? ""))
+      .join("\n");
+    // Five-part academic chapters stand on their own once they clear a prose floor;
+    // do not dilute them with repetitive teach-back padding.
+    if (HAS_FIVE_PART_RE.test(authoredBody) && readingChars(authored) >= 2000) {
+      return ensureSourcesFooter({
+        ...authored,
+        estimatedMinutes: Math.max(authored.estimatedMinutes, 60),
+      });
+    }
     if (readingChars(authored) >= MIN_READING_CHARS) {
       return ensureSourcesFooter(authored);
     }
-    // Academic five-part bodies may be concise; pad with rehearsal only (no invented medicine).
     return lightEnhanceThinSeedLesson(authored, module);
   }
 

@@ -15,6 +15,7 @@ import { OBGYN_FIVE_PART } from "@/lib/curriculum/authored/five-part/obgyn";
 import { PSYCH_FIVE_PART } from "@/lib/curriculum/authored/five-part/psych";
 import { FM_FIVE_PART } from "@/lib/curriculum/authored/five-part/fm";
 import { CELL_MOL_FIVE_PART } from "@/lib/curriculum/authored/five-part/cell-mol";
+import { P0_DEEP_FIVE_PART } from "@/lib/curriculum/authored/five-part/p0-deep";
 
 /** Hand-authored five-part chapter bodies keyed by lesson id. */
 export const AUTHORED_FIVE_PART: Record<string, string> = {
@@ -34,6 +35,8 @@ export const AUTHORED_FIVE_PART: Record<string, string> = {
   ...PSYCH_FIVE_PART,
   ...FM_FIVE_PART,
   ...CELL_MOL_FIVE_PART,
+  // P0 deepen-pass overlays win over thinner module stubs.
+  ...P0_DEEP_FIVE_PART,
 };
 
 const SOURCES_FOOTER_RE =

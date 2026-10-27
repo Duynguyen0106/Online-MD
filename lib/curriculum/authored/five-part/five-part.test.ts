@@ -4,6 +4,7 @@ import { program } from "@/lib/curriculum/seed";
 import { applyCurriculumExpansions } from "@/lib/curriculum/expansions";
 import { enhanceProgramSeedLessons } from "@/lib/curriculum/seed-chapter-enhance";
 import { AUTHORED_FIVE_PART } from "@/lib/curriculum/authored/five-part";
+import { P0_DEEP_FIVE_PART } from "@/lib/curriculum/authored/five-part/p0-deep";
 import { buildCatalogBundle } from "@/lib/curriculum/catalog/factory";
 import { FOUR_YEAR_TOPICS } from "@/lib/curriculum/catalog/topics-generated";
 
@@ -68,6 +69,42 @@ describe("authored five-part handcrafted chapters", () => {
       ),
       "les-cv-2 should keep its clinical vignette",
     );
+  });
+});
+
+describe("P0 deepen-pass overlays", () => {
+  it("replaces thin stubs with deepened academic chapters", () => {
+    const ids = Object.keys(P0_DEEP_FIVE_PART);
+    assert.ok(ids.length >= 12);
+    for (const id of ids) {
+      const body = AUTHORED_FIVE_PART[id];
+      assert.ok(body, id);
+      assert.equal(body, P0_DEEP_FIVE_PART[id], id);
+      assert.ok(body.length >= 2000, `${id} still thin (${body.length})`);
+      assert.match(body, /## 1\. Core Pathophysiology/);
+      assert.match(body, /## 5\. High-Yield Board Pearl/);
+      assert.doesNotMatch(body, /Extra rehearsal pass/i);
+    }
+  });
+
+  it("enhanced P0 lessons serve deepen-pass prose without teach-back padding", () => {
+    const enhanced = enhanceProgramSeedLessons(
+      applyCurriculumExpansions(structuredClone(program)),
+    );
+    const lessons = enhanced.phases.flatMap((p) =>
+      p.modules.flatMap((m) => m.lessons),
+    );
+    for (const id of Object.keys(P0_DEEP_FIVE_PART)) {
+      const lesson = lessons.find((l) => l.id === id);
+      assert.ok(lesson, id);
+      const body = lesson.concepts
+        .flatMap((c) => c.blocks)
+        .map((b) => b.bodyMd ?? "")
+        .join("\n");
+      assert.doesNotMatch(body, /Extra rehearsal pass/i, id);
+      assert.doesNotMatch(body, /## Teach-back —/i, id);
+      assert.match(body, /## 1\. Core Pathophysiology/, id);
+    }
   });
 });
 

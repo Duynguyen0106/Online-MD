@@ -44,6 +44,21 @@
 
 All 771 catalog lessons receive the five-part spine automatically when the curriculum graph is built (overview + sections 1–5 + case vignette).
 
+## Deepen pass (P0)
+
+High-traffic clerkship chapters overlaid in `p0-deep.ts` (wins over thinner module stubs):
+
+- `les-id-2` Sepsis
+- `les-renal-3` Acid–base, `les-renal-4` Hyponatremia, `les-renal-5` Hyperkalemia
+- `les-im-2` Chest pain/ACS, `les-im-4` AKI
+- `les-cv-4` Shock, `les-cv-5` Tachyarrhythmia
+- `les-pulm-3` PE, `les-pulm-4` ARDS
+- `les-endo-2` DKA/HHS
+- `les-gi-4` UGIB
+- `les-surg-4` Trauma primary survey
+- `les-heme-5` Transfusion reactions
+- `les-psych-6` Alcohol withdrawal
+
 ## Maintenance
 
-Deepen individual chapters during faculty review; keep `REFERENCE_REVIEW_REQUIRED` until citations are attached. Prefer editing module files under `lib/curriculum/authored/five-part/` rather than reintroducing placeholder tables.
+Continue deepen passes for remaining padded chapters; keep `REFERENCE_REVIEW_REQUIRED` until citations are attached. Prefer editing module files or `p0-deep.ts` under `lib/curriculum/authored/five-part/` rather than reintroducing placeholder tables.
