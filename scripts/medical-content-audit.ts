@@ -320,6 +320,11 @@ async function main() {
     })
     .filter((r) => r.issues.length > 0 || r.guidelineSensitive);
 
+  const quizRowsWithIssues = quizIssues.filter((r) => r.issues.length > 0);
+  const quizGuidelineSensitiveOnly = quizIssues.filter(
+    (r) => r.issues.length === 0 && r.guidelineSensitive,
+  );
+
   const qbankIssues = qbank.map((q) => {
     const issues: string[] = [];
     if (!q.objectiveId) issues.push("Missing objective");
@@ -428,12 +433,17 @@ async function main() {
       "MEDIUM",
     ],
     [
-      /\bMONA\b/,
+      // Flag MONA only when historical vs contemporary framing is absent nearby.
+      /\bMONA\b(?![\s\S]{0,120}(historic|contemporary|vs\s+contemporary|ACLS))/i,
       "ACS: MONA historical teaching — verify contemporary pathway framing",
       "MEDIUM",
     ],
+  ];
+
+  // Title-only compressed labels (do NOT scan bodies — "hyperkalemia" false-positived HyperK).
+  const compressedTitleScans: Array<[RegExp, string, string]> = [
     [
-      /HyperK|Fluid first|^Modes$|ScvO2 concepts/i,
+      /^(HyperK|Fluid first|Modes|ScvO2 concepts)$/i,
       "Compressed student-facing title/description",
       "LOW",
     ],
@@ -447,6 +457,17 @@ async function main() {
           .map((b) => `${b.title}\n${b.bodyMd || ""}`)
           .join("\n");
         const hay = `${lesson.title}\n${body}`;
+        for (const [re, flag, priority] of compressedTitleScans) {
+          if (re.test(lesson.title.trim())) {
+            conceptFlags.push({
+              lessonId: lesson.id,
+              title: lesson.title,
+              flag,
+              excerpt: lesson.title,
+              priority,
+            });
+          }
+        }
         for (const [re, flag, priority] of scans) {
           const m = hay.match(re);
           if (m) {
@@ -482,7 +503,9 @@ async function main() {
       guidelineSensitiveLessonCount: guidelineSensitiveLessons.length,
       vagueObjectiveCount: vagueObjectives.length,
       titleOverlapPairs: overlaps.length,
-      quizRowsNeedingAttention: quizIssues.length,
+      // Structural/pedagogical issues only (not guideline-keyword hits alone).
+      quizRowsNeedingAttention: quizRowsWithIssues.length,
+      quizGuidelineSensitiveOnly: quizGuidelineSensitiveOnly.length,
       conceptFlagCount: conceptFlags.length,
     },
     objectivesPerLessonDistribution: lessonsObjCountDist,

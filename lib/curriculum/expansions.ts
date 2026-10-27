@@ -556,13 +556,23 @@ export const extraClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "i1",
-        prompt: "Classify the ACS phenotype and list immediate orders.",
-        expectedFocus: "NSTEMI / NSTE-ACS; ECG, ASA, anticoagulation per pathway, anti-ischemic care",
+        prompt: "List immediate life threats on the chest-pain differential before locking into ACS alone.",
+        expectedFocus: "ACS, aortic syndrome, PE, tension pneumothorax, esophageal rupture — threat filter first",
       },
       {
         id: "i2",
+        prompt: "Classify the ACS phenotype and list immediate educational orders (not a hospital protocol).",
+        expectedFocus: "NSTEMI / NSTE-ACS; ECG serials, antiplatelet/anticoagulation concepts per pathway, anti-ischemic care — REFERENCE_REVIEW_REQUIRED for regimens",
+      },
+      {
+        id: "i3",
         prompt: "What findings would convert this to a STEMI-equivalent pathway?",
         expectedFocus: "ST elevation, new LBBB meeting criteria, posterior MI equivalents, ongoing instability",
+      },
+      {
+        id: "i4",
+        prompt: "After initial stabilization, which reassessment findings change urgency?",
+        expectedFocus: "Ongoing pain, instability, rising trop with ECG evolution — escalate monitoring/invasive timing discussion",
       },
     ],
     teachingPoints:

@@ -1087,7 +1087,7 @@ Demand ischemia (type 2 MI) occurs when supply cannot meet increased demand with
                       "Vignette: inferior STEMI",
                       2,
                       `62M with diaphoresis; ECG shows ST elevation in II, III, aVF with reciprocal depression in aVL.  
-Localize the wall, anticipate RCA vs LCx, and list immediate goals: MONA-BASH historically taught vs contemporary ABC + dual antiplatelet + anticoagulation + reperfusion pathway per ACLS/guidelines.`,
+Localize the wall, anticipate RCA vs LCx, and list immediate goals. **Educational note:** MONA-BASH is historical teaching vocabulary only — contrast with contemporary ABC + dual antiplatelet + anticoagulation + reperfusion thinking (verify current ACLS/society pathways; REFERENCE_REVIEW_REQUIRED).`,
                     ),
                   ],
                 },
@@ -2105,8 +2105,18 @@ export const clinicalCases: ClinicalCase[] = [
       },
       {
         id: "stage-2",
+        prompt: "Name immediate threats to rule out before attributing everything to chronic HF congestion.",
+        expectedFocus: "ACS trigger, arrhythmia, infection, medication non-adherence, anemia — threat filter before disposition",
+      },
+      {
+        id: "stage-3",
         prompt: "Outline initial management priorities and which drug classes modify disease long-term.",
         expectedFocus: "Oxygen/diuresis/hemodynamic support as needed; GDMT pillars for HFrEF",
+      },
+      {
+        id: "stage-4",
+        prompt: "After initial diuresis, what reassessment findings tell you the congestion plan is working or failing?",
+        expectedFocus: "Symptoms, oxygenation, urine output, renal trend, perfusion — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:

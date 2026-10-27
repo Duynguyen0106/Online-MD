@@ -3,10 +3,12 @@
     "id": "case-cv-1",
     "title": "Progressive Dyspnea and Orthophnea",
     "moduleId": "mod-cv",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
       "List your leading diagnosis and the physiologic mechanism of the crackles/edema.",
-      "Outline initial management priorities and which drug classes modify disease long"
+      "Name immediate threats to rule out before attributing everything to chronic HF c",
+      "Outline initial management priorities and which drug classes modify disease long",
+      "After initial diuresis, what reassessment findings tell you the congestion plan "
     ],
     "objectiveCount": 2,
     "teachingPointsLen": 128,
@@ -29,10 +31,12 @@
     "id": "case-im-1",
     "title": "Exertional Chest Pressure on the Wards",
     "moduleId": "mod-im",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Classify the ACS phenotype and list immediate orders.",
-      "What findings would convert this to a STEMI-equivalent pathway?"
+      "List immediate life threats on the chest-pain differential before locking into A",
+      "Classify the ACS phenotype and list immediate educational orders (not a hospital",
+      "What findings would convert this to a STEMI-equivalent pathway?",
+      "After initial stabilization, which reassessment findings change urgency?"
     ],
     "objectiveCount": 1,
     "teachingPointsLen": 118,
@@ -55,10 +59,12 @@
     "id": "case-cv-2",
     "title": "Warm Shock After Pneumonia",
     "moduleId": "mod-cv",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
       "Name the shock category and the two physiologic drivers of hypotension.",
-      "List parallel first-hour priorities (educational framework, not a hospital proto"
+      "What competing shock categories must you still keep on the differential in a pos",
+      "List parallel first-hour priorities (educational framework, not a hospital proto",
+      "After initial fluids and antimicrobials, which reassessment signals guide the ne"
     ],
     "objectiveCount": 1,
     "teachingPointsLen": 97,
@@ -68,10 +74,12 @@
     "id": "case-im-2",
     "title": "Brief Loss of Consciousness on the Ward",
     "moduleId": "mod-im",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
       "Sort the event into reflex, orthostatic, or cardiac syncope categories and list ",
-      "Name the immediate bedside evaluations you would prioritize before disposition p"
+      "Name the immediate bedside evaluations you would prioritize before disposition p",
+      "Which historical features would make reflex syncope more likely than orthostatic",
+      "State one disposition principle after the immediate workup (educational, not a p"
     ],
     "objectiveCount": 1,
     "teachingPointsLen": 87,
@@ -81,10 +89,12 @@
     "id": "case-pulm-1",
     "title": "Sudden Dyspnea After Orthopedic Surgery",
     "moduleId": "mod-pulm",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
       "State the leading diagnosis and the gas-exchange mechanism.",
-      "What bedside findings would raise concern for massive/high-risk PE?"
+      "What bedside findings would raise concern for massive/high-risk PE?",
+      "Before imaging, what pretest-probability thinking belongs on your short differen",
+      "After stabilization thinking, what reassessment finding would escalate urgency?"
     ],
     "objectiveCount": 1,
     "teachingPointsLen": 81,
@@ -94,10 +104,12 @@
     "id": "case-gi-1",
     "title": "Hematemesis in Decompensated Cirrhosis",
     "moduleId": "mod-gi",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
       "Link portal hypertension to the bleeding source.",
-      "Order your first five actions in parallel."
+      "Name competing upper-GI bleed sources you still keep on the differential.",
+      "Order your first five actions in parallel.",
+      "Which reassessment signals show resuscitation is succeeding or failing?"
     ],
     "objectiveCount": 2,
     "teachingPointsLen": 118,
@@ -107,10 +119,12 @@
     "id": "case-renal-1",
     "title": "Na 118 and Confusion",
     "moduleId": "mod-renal",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
       "Classify the hyponatremia (tonicity + volume).",
-      "What diagnoses remain after excluding adrenal/thyroid failure?"
+      "What diagnoses remain after excluding adrenal/thyroid failure?",
+      "Which neurologic findings would push you toward more urgent sodium correction th",
+      "State the educational principle for correction pace without citing a specific pr"
     ],
     "objectiveCount": 1,
     "teachingPointsLen": 110,

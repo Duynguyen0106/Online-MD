@@ -19,8 +19,9 @@
     "guidelineSensitiveLessonCount": 807,
     "vagueObjectiveCount": 0,
     "titleOverlapPairs": 125,
-    "quizRowsNeedingAttention": 83,
-    "conceptFlagCount": 57
+    "quizRowsNeedingAttention": 0,
+    "quizGuidelineSensitiveOnly": 83,
+    "conceptFlagCount": 0
   },
   "objectivesPerLessonDistribution": {
     "0": 0,

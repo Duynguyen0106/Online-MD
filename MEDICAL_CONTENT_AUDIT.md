@@ -11,17 +11,20 @@
 
 ### Fix-pass inventory (after safe remediations)
 
-| Metric | Before fix-pass | After |
-| --- | --- | --- |
-| Lessons / objectives / quizzes / qbank / cases / flashcards | 884 / 3206 / 884 / 24 / 23 / 846 | 884 / **3422** / 884 / 24 / **24** / 846 |
-| Lessons missing objectives | 0 | **0** |
-| Objectives per lesson | many singles | **all lessons 3–5** |
-| Vague-verb objectives | 0–4 | **0** |
-| Lessons missing Sources / `REFERENCE_REVIEW_REQUIRED` | 64 | **0** |
-| Exact title collisions | 1 (Low Back Pain) | **0** |
-| Quiz rows needing attention | 174 | **83** (guideline-sensitive stems/explanations only; distractor gaps closed) |
-| Title overlap pairs (Jaccard ≥0.45) | 126 | 125 (soft lexical; not exact dupes) |
-| Guideline-sensitive keyword hits | 807 | 807 (broad scan; not approval) |
+| Metric | Baseline → pass 1 → **pass 2** |
+| --- | --- |
+| Lessons / objectives / quizzes / qbank / cases / flashcards | 884 / 3206 / 884 / 24 / 23 / 846 → 884 / **3422** / 884 / 24 / **24** / 846 |
+| Lessons missing objectives | 0 → **0** |
+| Objectives per lesson | many singles → **all 3–5** |
+| Vague-verb objectives | 0–4 → **0** |
+| Lessons missing Sources / `REFERENCE_REVIEW_REQUIRED` | 64 → **0** |
+| Exact title collisions | 1 → **0** |
+| Quiz rows needing attention (structural) | 174 → 83 → **0** |
+| Quiz guideline-sensitive only (separate) | — → — → **83** (flagged, not auto-rewritten) |
+| Concept flags (tamponade/HF/MONA/HyperK scans) | 57–60 → **0** (false-positive HyperK scan fixed; MONA framed) |
+| Cases with ≥4 reasoning stages | 0 → **7** high-yield |
+| Title overlap pairs (Jaccard ≥0.45) | 126 → 125 (soft lexical; not exact dupes) |
+| Guideline-sensitive keyword hits | 807 (broad scan; not approval) |
 
 ### Safe remediations applied
 
@@ -35,6 +38,7 @@
 8. **Vague module copy** — replaced student/seed “Understand …” module blurbs with measurable verbs.
 9. **Competency Interpretation** — Interpret-led statements map into the heatmap domain.
 10. **Audit script** — HF GDMT false-positive fixed; PERC flag respects pretest/adjunct framing.
+11. **Pass 2** — HyperK body false-positives removed; MONA only flags when historical framing absent; guideline quiz disclaimer footers; 7 high-yield cases expanded to 4 stages; PH lesson metadata → `MEDICAL_REVIEW`.
 
 ### Intentionally NOT “fixed” (human / medical gate)
 

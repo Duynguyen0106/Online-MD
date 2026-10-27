@@ -225,6 +225,31 @@ export const LESSON_META_OVERRIDES: Record<string, Partial<LessonContentMeta>> =
         },
       ],
     },
+    "les-cat-y2-cv-pulmonary-htn": {
+      learnerLevel: "STEP_1",
+      educationalRole: "FOUNDATIONAL",
+      system: "Cardiovascular",
+      subject: "Pathophysiology",
+      reviewStatus: "MEDICAL_REVIEW",
+      guidelineSensitive: true,
+      nextReview: "2027-01-28",
+      version: 1,
+      versionHistory: [
+        {
+          version: 1,
+          date: "2026-10-27",
+          changedBy: "curriculum-audit",
+          reason:
+            "PH hemodynamic definitions are guideline-sensitive; teach groups/mechanism; verify mPAP cutoffs before stating numbers",
+        },
+      ],
+      references: [
+        {
+          label: "ESC/ERS pulmonary hypertension guideline family",
+          status: "REFERENCE_REVIEW_REQUIRED",
+        },
+      ],
+    },
     "les-cat-y3-im-sepsis-hour1": {
       learnerLevel: "CLERKSHIP",
       educationalRole: "CLINICAL_APPLICATION",

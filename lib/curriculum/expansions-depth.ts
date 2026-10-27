@@ -536,8 +536,18 @@ export const depthClinicalCases: ClinicalCase[] = [
       },
       {
         id: "cv2b",
+        prompt: "What competing shock categories must you still keep on the differential in a post-pneumonia patient?",
+        expectedFocus: "Cardiogenic (sepsis-induced cardiomyopathy), obstructive (PE), hypovolemic — classify before pressor choice",
+      },
+      {
+        id: "cv2c",
         prompt: "List parallel first-hour priorities (educational framework, not a hospital protocol).",
         expectedFocus: "Cultures, timely antibiotics, fluids for perfusion, source-control thinking",
+      },
+      {
+        id: "cv2d",
+        prompt: "After initial fluids and antimicrobials, which reassessment signals guide the next step?",
+        expectedFocus: "Perfusion (mentals, lactate trend, urine), volume tolerance, need for vasopressor thinking — reassess, do not checklist blindly",
       },
     ],
     teachingPoints:
@@ -567,6 +577,20 @@ export const depthClinicalCases: ClinicalCase[] = [
         expectedFocus:
           "Orthostatic vitals, ECG review, glucose if indicated, targeted history for prodrome vs cardiac clues — aligned with Syncope — Cardiac vs Reflex teaching",
       },
+      {
+        id: "syn3",
+        prompt:
+          "Which historical features would make reflex syncope more likely than orthostatic or cardiac causes?",
+        expectedFocus:
+          "Prodrome (nausea/diaphoresis), situational trigger, brief duration with rapid recovery — still respect red flags",
+      },
+      {
+        id: "syn4",
+        prompt:
+          "State one disposition principle after the immediate workup (educational, not a protocol).",
+        expectedFocus:
+          "Unstable/red-flag syncope stays monitored; clear reflex/orthostatic patterns may allow outpatient completion after safety teaching",
+      },
     ],
     teachingPoints:
       "Syncope workup starts with category and red-flag filtering, not indiscriminate testing.",
@@ -590,6 +614,16 @@ export const depthClinicalCases: ClinicalCase[] = [
         prompt: "What bedside findings would raise concern for massive/high-risk PE?",
         expectedFocus: "Hypotension, RV strain signs, syncope",
       },
+      {
+        id: "p3",
+        prompt: "Before imaging, what pretest-probability thinking belongs on your short differential?",
+        expectedFocus: "Post-op PE vs atelectasis, pneumonia, bleeding/anemia, fluid overload — pretest before tools",
+      },
+      {
+        id: "p4",
+        prompt: "After stabilization thinking, what reassessment finding would escalate urgency?",
+        expectedFocus: "Worsening hypoxia, hypotension, or RV strain signs — escalate monitoring/support pathway",
+      },
     ],
     teachingPoints:
       "Clear lungs + sudden hypoxia after surgery is PE until the workup says otherwise.",
@@ -610,8 +644,18 @@ export const depthClinicalCases: ClinicalCase[] = [
       },
       {
         id: "g2",
+        prompt: "Name competing upper-GI bleed sources you still keep on the differential.",
+        expectedFocus: "Ulcer, Mallory–Weiss, portal gastropathy — still resuscitate first",
+      },
+      {
+        id: "g3",
         prompt: "Order your first five actions in parallel.",
         expectedFocus: "Airway, IV access, volume/blood products, GI endoscopy pathway",
+      },
+      {
+        id: "g4",
+        prompt: "Which reassessment signals show resuscitation is succeeding or failing?",
+        expectedFocus: "Mentation, BP/perfusion, ongoing hematemesis, urine output — reassess while arranging endoscopy",
       },
     ],
     teachingPoints:
@@ -635,6 +679,16 @@ export const depthClinicalCases: ClinicalCase[] = [
         id: "r2",
         prompt: "What diagnoses remain after excluding adrenal/thyroid failure?",
         expectedFocus: "SIADH / drug-related / malignancy-related ADH excess patterns",
+      },
+      {
+        id: "r3",
+        prompt: "Which neurologic findings would push you toward more urgent sodium correction thinking?",
+        expectedFocus: "Seizure, deep coma, herniation signs — severity guides urgency (protocol-sensitive; REFERENCE_REVIEW_REQUIRED)",
+      },
+      {
+        id: "r4",
+        prompt: "State the educational principle for correction pace without citing a specific protocol number.",
+        expectedFocus: "Correct carefully; overshoot risks osmotic demyelination — verify institutional targets",
       },
     ],
     teachingPoints:

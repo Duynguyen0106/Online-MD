@@ -4,7 +4,7 @@
     "stem": "Frank–Starling mechanism primarily describes the relationship between:",
     "hasObjective": true,
     "objectiveId": "obj-cv-2",
-    "explanationLen": 232,
+    "explanationLen": 388,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -13,7 +13,7 @@
     "stem": "Unstable angina differs from NSTEMI primarily by:",
     "hasObjective": true,
     "objectiveId": "obj-cv-3",
-    "explanationLen": 232,
+    "explanationLen": 388,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -25,7 +25,7 @@
     "stem": "Initial outpatient therapy for a hemodynamically stable adult with CAP and no comorbidities often includes:",
     "hasObjective": true,
     "objectiveId": "obj-im-1",
-    "explanationLen": 295,
+    "explanationLen": 451,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -37,7 +37,7 @@
     "stem": "A patient with glucose 900 mg/dL, minimal ketones, and serum osmolality 340 mOsm/kg is most consistent with:",
     "hasObjective": true,
     "objectiveId": "obj-endo-2",
-    "explanationLen": 259,
+    "explanationLen": 415,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -49,7 +49,7 @@
     "stem": "First priorities for suspected ACS in a stable adult typically include:",
     "hasObjective": true,
     "objectiveId": "obj-im-2",
-    "explanationLen": 243,
+    "explanationLen": 399,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -61,7 +61,7 @@
     "stem": "In suspected bacterial sepsis, the earliest management priority after ABCs is:",
     "hasObjective": true,
     "objectiveId": "obj-id-2",
-    "explanationLen": 269,
+    "explanationLen": 425,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -73,7 +73,7 @@
     "stem": "Bilateral infiltrates, PaO2/FiO2 ≤300, and noncardiogenic context after sepsis best supports:",
     "hasObjective": true,
     "objectiveId": "obj-pulm-4",
-    "explanationLen": 277,
+    "explanationLen": 433,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -85,7 +85,7 @@
     "stem": "ACS most often begins with which plaque event?",
     "hasObjective": true,
     "objectiveId": "obj-cv-8",
-    "explanationLen": 237,
+    "explanationLen": 393,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -97,7 +97,7 @@
     "stem": "Child asthma exacerbation with hypoxia and poor air movement — priority?",
     "hasObjective": true,
     "objectiveId": "obj-peds-7",
-    "explanationLen": 230,
+    "explanationLen": 386,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -109,7 +109,7 @@
     "stem": "Regarding Allergy & Anaphylaxis Mechanisms, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-imm-allergy",
-    "explanationLen": 214,
+    "explanationLen": 370,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -121,7 +121,7 @@
     "stem": "Regarding Antibiotic Mechanism Families, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-ph-abx-mech",
-    "explanationLen": 206,
+    "explanationLen": 362,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -133,7 +133,7 @@
     "stem": "Regarding ACS Pathophysiology Deep Dive, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-cv-acs-path",
-    "explanationLen": 260,
+    "explanationLen": 416,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -145,7 +145,7 @@
     "stem": "Regarding ARDS Pathobiology, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-pulm-ards-path",
-    "explanationLen": 256,
+    "explanationLen": 412,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -157,7 +157,7 @@
     "stem": "Regarding Potassium Internal/External Balance, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-ren-k-homeostasis",
-    "explanationLen": 204,
+    "explanationLen": 360,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -169,7 +169,7 @@
     "stem": "Regarding Islet Physiology & Insulin Action, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-endo-islet",
-    "explanationLen": 240,
+    "explanationLen": 396,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -181,7 +181,7 @@
     "stem": "Regarding DKA vs HHS Mechanisms Deep Dive, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-endo-dka-hhs-path",
-    "explanationLen": 244,
+    "explanationLen": 400,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -193,7 +193,7 @@
     "stem": "Regarding Lipodystrophy & Insulin Resistance Extremes, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-endo-lipodystrophy",
-    "explanationLen": 272,
+    "explanationLen": 428,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -205,7 +205,7 @@
     "stem": "Which statement about Anticoagulant & Antiplatelet Mechanisms is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-heme-heme-pharm",
-    "explanationLen": 214,
+    "explanationLen": 370,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -217,7 +217,7 @@
     "stem": "Which statement about Ischemic vs Hemorrhagic Stroke Biology is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-neuro-stroke-path",
-    "explanationLen": 226,
+    "explanationLen": 382,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -229,7 +229,7 @@
     "stem": "Which statement about Pediatric Orthopedic Growth Issues is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-msk-pediatric-ortho",
-    "explanationLen": 270,
+    "explanationLen": 426,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -241,7 +241,7 @@
     "stem": "Which statement about Sepsis Immunopathophysiology is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-id-sepsis-path",
-    "explanationLen": 286,
+    "explanationLen": 442,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -253,7 +253,7 @@
     "stem": "Which statement about Invasive Fungal Disease Host Risks is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-id-fungal-deep",
-    "explanationLen": 184,
+    "explanationLen": 340,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -265,7 +265,7 @@
     "stem": "Which statement about Antibiotic Resistance Mechanisms is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-id-abx-resist",
-    "explanationLen": 244,
+    "explanationLen": 400,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -277,7 +277,7 @@
     "stem": "Which statement about Chest Pain Pathways is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-chest-pain",
-    "explanationLen": 251,
+    "explanationLen": 407,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -289,7 +289,7 @@
     "stem": "Which statement about Inpatient Fever & Sepsis Bundles is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-fever-inpatient",
-    "explanationLen": 291,
+    "explanationLen": 447,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -313,7 +313,7 @@
     "stem": "Which statement about Atrial Fibrillation Rate/Rhythm/Stroke Risk is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-afib-ward",
-    "explanationLen": 265,
+    "explanationLen": 421,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -337,7 +337,7 @@
     "stem": "Which statement about Pediatric Surgical Emergencies is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-surg-pediatric-surg",
-    "explanationLen": 313,
+    "explanationLen": 469,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -349,7 +349,7 @@
     "stem": "Which is most accurate regarding Pediatric Respiratory Emergencies?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-resp-peds",
-    "explanationLen": 271,
+    "explanationLen": 427,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -361,7 +361,7 @@
     "stem": "Which is most accurate regarding Pediatric Cardiology Essentials?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-card-peds",
-    "explanationLen": 261,
+    "explanationLen": 417,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -373,7 +373,7 @@
     "stem": "Which is most accurate regarding Pediatric GI Emergencies?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-gi-peds",
-    "explanationLen": 265,
+    "explanationLen": 421,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -385,7 +385,7 @@
     "stem": "Which is most accurate regarding Pediatric Neurology Essentials?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-neuro-peds",
-    "explanationLen": 293,
+    "explanationLen": 449,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -397,7 +397,7 @@
     "stem": "Which is most accurate regarding Pediatric Hematology?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-heme-peds",
-    "explanationLen": 269,
+    "explanationLen": 425,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -409,7 +409,7 @@
     "stem": "Which is most accurate regarding Pediatric Endocrinology?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-endo-peds",
-    "explanationLen": 263,
+    "explanationLen": 419,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -421,7 +421,7 @@
     "stem": "Which is most accurate regarding Pediatric Infectious Rashes & Exanthems?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-id-peds",
-    "explanationLen": 293,
+    "explanationLen": 449,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -433,7 +433,7 @@
     "stem": "Which is most accurate regarding Pediatric Allergy & Anaphylaxis?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-allergy-peds",
-    "explanationLen": 275,
+    "explanationLen": 431,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -445,7 +445,7 @@
     "stem": "Which is most accurate regarding Pediatric Rheumatology?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-rheum-peds",
-    "explanationLen": 291,
+    "explanationLen": 447,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -457,7 +457,7 @@
     "stem": "Which is most accurate regarding Pediatric Immunization Schedule Logic?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-vaccine-peds",
-    "explanationLen": 281,
+    "explanationLen": 437,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -469,7 +469,7 @@
     "stem": "Which is most accurate regarding Pediatric Ethics & Assent?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-peds-ethics",
-    "explanationLen": 269,
+    "explanationLen": 425,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -481,7 +481,7 @@
     "stem": "Which is most accurate regarding ICU Shock Teams & Monitoring?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-icu-shock",
-    "explanationLen": 253,
+    "explanationLen": 409,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -493,7 +493,7 @@
     "stem": "Which is most accurate regarding Mechanical Ventilation Basics?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-icu-vent",
-    "explanationLen": 271,
+    "explanationLen": 427,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -505,7 +505,7 @@
     "stem": "Which is most accurate regarding Advanced Nephrology Consults?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-nephro-adv",
-    "explanationLen": 271,
+    "explanationLen": 427,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -517,7 +517,7 @@
     "stem": "Which is most accurate regarding Vascular Surgery Decision Making?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-surg-subi-vascular",
-    "explanationLen": 279,
+    "explanationLen": 435,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -529,7 +529,7 @@
     "stem": "Which is most accurate regarding Pediatric Surgery Sub-I?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-surg-subi-peds-surg",
-    "explanationLen": 291,
+    "explanationLen": 447,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -541,7 +541,7 @@
     "stem": "Which is most accurate regarding Heme Pharmacology Expanded?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-ph-heme",
-    "explanationLen": 242,
+    "explanationLen": 398,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -553,7 +553,7 @@
     "stem": "Which is most accurate regarding Antibiotic Clinical Pharmacology?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-ph-abx2",
-    "explanationLen": 294,
+    "explanationLen": 450,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -565,7 +565,7 @@
     "stem": "Which is most accurate regarding Pulmonary Pathology High-Yield?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-path-lung-path",
-    "explanationLen": 242,
+    "explanationLen": 398,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -577,7 +577,7 @@
     "stem": "Most accurate statement about Biofilm Infections?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-id-biofilm",
-    "explanationLen": 260,
+    "explanationLen": 416,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -589,7 +589,7 @@
     "stem": "Most accurate statement about Pediatric Critical Care Essentials?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-peds-icu",
-    "explanationLen": 281,
+    "explanationLen": 437,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -601,7 +601,7 @@
     "stem": "Most accurate statement about Pediatric Hematology-Oncology Urgencies?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-peds-hemeonc",
-    "explanationLen": 299,
+    "explanationLen": 455,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -613,7 +613,7 @@
     "stem": "Most accurate statement about Pediatric Cardiology Advanced?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-peds-cards-adv",
-    "explanationLen": 295,
+    "explanationLen": 451,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -625,7 +625,7 @@
     "stem": "Which statement about Cytokine Storm & Sepsis Immunology is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-imm-cytokine2",
-    "explanationLen": 250,
+    "explanationLen": 406,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -637,7 +637,7 @@
     "stem": "Which statement about Mixed Autonomic Clinical Scenarios is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-ph-ans-mixed",
-    "explanationLen": 248,
+    "explanationLen": 404,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -649,7 +649,7 @@
     "stem": "Which statement about Antibiotic PK/PD Targets is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-ph-abx3",
-    "explanationLen": 220,
+    "explanationLen": 376,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -661,7 +661,7 @@
     "stem": "Which statement about Pediatric Pharmacology Principles is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-ph-peds",
-    "explanationLen": 234,
+    "explanationLen": 390,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -673,7 +673,7 @@
     "stem": "Which statement about Evidence Hierarchies & Guidelines is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y1-epi-guidelines",
-    "explanationLen": 256,
+    "explanationLen": 412,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -685,7 +685,7 @@
     "stem": "Which statement about Revascularization Physiology PCI vs CABG is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-cv-revascular",
-    "explanationLen": 206,
+    "explanationLen": 362,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -697,7 +697,7 @@
     "stem": "Which statement about Dialysis Physiology Comparison is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-ren-dialysis",
-    "explanationLen": 224,
+    "explanationLen": 380,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -709,7 +709,7 @@
     "stem": "Which statement about Incretin Biology & Obesity Pharmacology Concepts is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y2-endo-obesity2",
-    "explanationLen": 278,
+    "explanationLen": 434,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -721,7 +721,7 @@
     "stem": "Regarding ACS Pathway in the ED, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-acs-ed",
-    "explanationLen": 273,
+    "explanationLen": 429,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -733,7 +733,7 @@
     "stem": "What principle best guides initial sepsis care on the wards?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-sepsis-hour1",
-    "explanationLen": 415,
+    "explanationLen": 571,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -745,7 +745,7 @@
     "stem": "Regarding DKA vs HHS Management, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-dka-hhs",
-    "explanationLen": 285,
+    "explanationLen": 441,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -757,7 +757,7 @@
     "stem": "Regarding Acute Stroke Code on Wards, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-stroke-alert",
-    "explanationLen": 275,
+    "explanationLen": 431,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -769,7 +769,7 @@
     "stem": "What best guides CAP site-of-care decisions?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-cap-admit",
-    "explanationLen": 276,
+    "explanationLen": 432,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -781,7 +781,7 @@
     "stem": "Regarding Inpatient AKI Framework, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-im-aki-workup",
-    "explanationLen": 260,
+    "explanationLen": 416,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -793,7 +793,7 @@
     "stem": "Regarding Pediatric Dehydration & ORS, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-dehydration",
-    "explanationLen": 276,
+    "explanationLen": 432,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -805,7 +805,7 @@
     "stem": "What underpins initial care of a pediatric asthma exacerbation?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-asthma-exac",
-    "explanationLen": 274,
+    "explanationLen": 430,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -817,7 +817,7 @@
     "stem": "Regarding Pediatric UTI & Imaging, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-uti",
-    "explanationLen": 270,
+    "explanationLen": 426,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -829,7 +829,7 @@
     "stem": "Regarding Pediatric Seizure First Aid & Workup, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-seizure",
-    "explanationLen": 257,
+    "explanationLen": 413,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -841,7 +841,7 @@
     "stem": "Regarding Pediatric Anaphylaxis, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-anaphylaxis",
-    "explanationLen": 257,
+    "explanationLen": 413,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -853,7 +853,7 @@
     "stem": "Regarding New-Onset Pediatric Diabetes, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-diabetes-new",
-    "explanationLen": 270,
+    "explanationLen": 426,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -865,7 +865,7 @@
     "stem": "Regarding Pediatric Obesity Counseling, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-obesity",
-    "explanationLen": 268,
+    "explanationLen": 424,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -877,7 +877,7 @@
     "stem": "Regarding Pediatric Sleep & Safety, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-peds-sleep",
-    "explanationLen": 269,
+    "explanationLen": 425,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -889,7 +889,7 @@
     "stem": "Regarding URI Antibiotic Stewardship, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y3-fm-uri",
-    "explanationLen": 268,
+    "explanationLen": 424,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -901,7 +901,7 @@
     "stem": "Regarding Mechanical Ventilation Goals, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-vent-basics",
-    "explanationLen": 260,
+    "explanationLen": 416,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -913,7 +913,7 @@
     "stem": "Regarding ARDS Berlin Definition Care, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-ards",
-    "explanationLen": 243,
+    "explanationLen": 399,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -925,7 +925,7 @@
     "stem": "Regarding Septic Shock Beyond Hour-1, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-septic-shock",
-    "explanationLen": 265,
+    "explanationLen": 421,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -937,7 +937,7 @@
     "stem": "Regarding Complicated ACS ICU Care, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-acs-icu",
-    "explanationLen": 262,
+    "explanationLen": 418,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -949,7 +949,7 @@
     "stem": "Regarding CRRT Indications Mindset, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-im-aki-icu",
-    "explanationLen": 269,
+    "explanationLen": 425,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -961,7 +961,7 @@
     "stem": "Regarding Pediatric Septic Shock Nuances, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-peds-picu-sepsis",
-    "explanationLen": 267,
+    "explanationLen": 423,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -973,7 +973,7 @@
     "stem": "Regarding Pediatric DKA Cerebral Edema, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-peds-dka-cerebral",
-    "explanationLen": 293,
+    "explanationLen": 449,
     "issues": [],
     "guidelineSensitive": true
   },
@@ -985,7 +985,7 @@
     "stem": "Regarding Complex Ambulatory Multimorbidity, which statement is most accurate?",
     "hasObjective": true,
     "objectiveId": "obj-cat-y4-fm-complex-amb",
-    "explanationLen": 267,
+    "explanationLen": 423,
     "issues": [],
     "guidelineSensitive": true
   }

@@ -4,7 +4,7 @@
 **Rule:** Do not invent corrections. Flag uncertain statements for a qualified physician/medical educator.  
 **Statuses used after remediation:** items remain `NEEDS_REVIEW` / `MEDICAL_REVIEW` until a human approves.
 
-**Agent remediations (not medical approval):** tamponade preload wording softened; sepsis lesson retitled toward recognition/reassessment; duplicate `case-cv-1` ID fixed (`case-cv-2` warm shock). Confirm or revise below.
+**Agent remediations (not medical approval):** tamponade preload wording softened; sepsis lesson retitled toward recognition/reassessment; duplicate `case-cv-1` ID fixed (`case-cv-2` warm shock); exact-title collisions cleared; vague module blurbs rewritten; Sources/`REFERENCE_REVIEW_REQUIRED` footers added; quiz distractor + guideline disclaimers appended; high-yield cases expanded to 4 reasoning stages; PH lesson metadata escalated to `MEDICAL_REVIEW`. Confirm or revise below.
 
 ---
 
@@ -13,7 +13,7 @@
 | File | Lesson | Statement / issue | Why it needs review | Suggested source type | Priority |
 | --- | --- | --- | --- | --- | --- |
 | `lib/curriculum/expansions-wave7.ts` | `les-cv-8` Cardiac Tamponade Physiology | Summary previously used “kills preload” (softened; confirm diastolic-filling framing) | Physiologically imprecise; risks wrong mental model of obstructive shock | Standard physiology / critical care text; ESC/AHA pericardial disease statements | HIGH |
-| `lib/curriculum/catalog/topics-generated.ts` | `les-cat-y2-cv-ph` Pulmonary Hypertension Groups | Hemodynamic definition of PH | Thresholds have changed historically; obsolete mPAP cutoffs must not be taught as current without labeling | ESC/ERS pulmonary hypertension guidelines (current edition) | HIGH |
+| `lib/curriculum/catalog/topics-generated.ts` | `les-cat-y2-cv-pulmonary-htn` Pulmonary Hypertension Groups | Hemodynamic definition of PH (chapter already says verify before teaching numbers; metadata now `MEDICAL_REVIEW`) | Thresholds have changed historically; obsolete mPAP cutoffs must not be taught as current without labeling | ESC/ERS pulmonary hypertension guidelines (current edition) | HIGH |
 | `lib/curriculum/catalog/topics-generated.ts` | `les-cat-y3-im-sepsis-hour1` (title now *Sepsis Recognition, Early Care, and Reassessment*) | Former Hour-1 checklist framing (retitled; confirm educational intent) | Hour-1 language can be read as inflexible universal checklist | SSC / sepsis consensus; teach recognition, cultures when appropriate, timely antimicrobials, source control, reassessment | HIGH |
 | `lib/curriculum/seed.ts` + IM catalog | ACS management pathways | Antiplatelet, anticoagulation, reperfusion strategy | Rapidly evolving, guideline-defined | AHA/ACC ACS guidelines; institutional pathways | HIGH |
 | `lib/curriculum/expansions.ts` + catalog | Sepsis recognition & empiric logic | Empiric antibiotics, fluids, pressors | High-stakes, local resistance, timing nuances | SSC; local antibiogram (label as local) | HIGH |
@@ -36,8 +36,8 @@
 | Catalog VTE lessons | Wells/PERC conceptual bullets | Pretest probability relationship under-taught | Rules are tools, not substitutes | Clinical prediction rule primers + PE guidelines | MEDIUM |
 | Catalog antibiotic / CAP lessons | Empiric regimens | Local resistance and host factors | Avoid universal regimens | ATS/IDSA CAP; local stewardship | MEDIUM |
 | Catalog stroke lessons | Time windows / thrombolysis / thrombectomy | Eligibility criteria change | Stroke systems of care statements | AHA/ASA stroke guidelines | MEDIUM |
-| Formative catalog bank | 17 ultra-short explanations | Teaching quality | Expand without inventing new medical claims | Parent chapter mechanism text | MEDIUM |
-| Exact duplicate lesson titles | CAP disposition, pediatric asthma, suicide assessment, onc emergencies | Assessment/progress confusion | Educator decides consolidate vs distinguish | Curriculum committee | MEDIUM |
+| Formative catalog bank | Ultra-short explanations | Teaching quality | Agent appended non-claim distractor/guideline footers; faculty should still deepen mechanism teaching | Parent chapter mechanism text | MEDIUM *(partially remediated)* |
+| Exact duplicate lesson titles | CAP disposition, pediatric asthma, suicide assessment, onc emergencies, FM back pain | Assessment/progress confusion | Retitled to distinguish complementary lessons (2026-10-27) | Curriculum committee | LOW *(remediated structurally)* |
 
 ---
 
@@ -47,8 +47,8 @@
 | --- | --- | --- | --- | --- | --- |
 | Catalog titles | `Spirochetes`, `SBO vs LBO`, other compressed labels | Student-facing clarity | Educational hygiene, not clinical danger | Style guide | LOW |
 | Catalog objectives | `Explain and apply: {title}` | Weak measurability | Pedagogy | Bloom-aligned objective rewrite from existing points | LOW |
-| Module descriptions | e.g. “Understand the heart…” | Vague marketing-ish verbs | Pedagogy | Rewrite with measurable outcomes | LOW |
-| Cases (all) | 2-stage structure | Limited clinical reasoning rehearsal | Instructional design | Expand stages after content lock | LOW |
+| Module descriptions | e.g. “Understand the heart…” | Vague marketing-ish verbs | Pedagogy | Student/seed blurbs rewritten (2026-10-27) | LOW *(remediated)* |
+| Cases (high-yield subset) | Previously 2-stage; dyspnea/shock/syncope/PE/GI bleed/hyponatremia/chest pain expanded to 4 | Limited clinical reasoning rehearsal | Instructional design | Remaining cases still 2-stage | LOW *(partial)* |
 
 ---
 
