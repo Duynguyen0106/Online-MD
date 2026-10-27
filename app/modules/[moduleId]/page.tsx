@@ -7,6 +7,7 @@ import {
   formatProgressState,
   lessonActionLabel,
   moduleDescription,
+  STUDENT_COPY,
 } from "@/lib/copy/student";
 import {
   buildLessonMeta,
@@ -101,15 +102,13 @@ export default async function ModulePage({
           </Button>
         </div>
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <p className="text-xs text-[var(--muted)]">Question bank</p>
+          <p className="text-xs text-[var(--muted)]">{STUDENT_COPY.questionBank}</p>
           <p className="mt-2 text-sm leading-6">
-            {qbank.unlocked
-              ? "Questions are available for this module."
-              : qbank.reason}
+            {qbank.unlocked ? STUDENT_COPY.qbankAvailable : qbank.reason}
           </p>
           {qbank.unlocked ? (
             <Button asChild size="sm" className="mt-3">
-              <Link href="/qbank">Practice questions</Link>
+              <Link href="/qbank">{STUDENT_COPY.practiceQuestions}</Link>
             </Button>
           ) : (
             <Button size="sm" className="mt-3" disabled>

@@ -42,7 +42,7 @@ export function ExamRunner({
           key={q.id}
           className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
         >
-          <legend className="px-1 text-sm text-[var(--muted)]">Item {i + 1}</legend>
+          <legend className="px-1 text-sm text-[var(--muted)]">Question {i + 1}</legend>
           <p className="mb-4 text-[15px] leading-7">{q.stem}</p>
           <div className="space-y-2">
             {q.choices.map((c) => (

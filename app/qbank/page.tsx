@@ -1,5 +1,6 @@
 import { AppShell } from "@/components/shared/app-shell";
 import { QbankPanel } from "@/components/student/qbank-panel";
+import { STUDENT_COPY } from "@/lib/copy/student";
 import { getAllModules, getQbankQuestions } from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
 import {
@@ -21,10 +22,9 @@ export default async function QbankPage() {
   const questions = getQbankQuestions();
 
   return (
-    <AppShell title="Question bank">
+    <AppShell title={STUDENT_COPY.questionBank}>
       <p className="mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
-        Learn first. Practice second. Complete the lessons and assessments before moving on to the
-        question bank for that part of the curriculum.
+        {STUDENT_COPY.learnFirstPracticeSecond} {STUDENT_COPY.qbankIntro}
       </p>
       <QbankPanel
         modules={modules.map((m) => ({ id: m.id, title: m.title }))}

@@ -60,14 +60,12 @@ export default async function DashboardPage() {
       </div>
       <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
         <section className="animate-fade-up rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
-          <p className="text-sm text-[var(--muted)]">Continue learning</p>
+          <p className="text-sm text-[var(--muted)]">{STUDENT_COPY.continueLearning}</p>
           <h2 className="mt-1 font-[family-name:var(--font-display)] text-2xl">
             {next ? next.title : "Curriculum complete"}
           </h2>
           <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-            {next
-              ? nextSummary
-              : "You’ve finished the available lessons. Practice with the question bank when you’re ready."}
+            {next ? nextSummary : STUDENT_COPY.curriculumComplete}
           </p>
           {next ? (
             <Button asChild className="mt-5">
@@ -77,7 +75,7 @@ export default async function DashboardPage() {
             </Button>
           ) : (
             <Button asChild className="mt-5">
-              <Link href="/qbank">Practice questions</Link>
+              <Link href="/qbank">{STUDENT_COPY.practiceQuestions}</Link>
             </Button>
           )}
         </section>

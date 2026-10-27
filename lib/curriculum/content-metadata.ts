@@ -500,6 +500,28 @@ export function formatLearnerLevel(level: LearnerLevel): string {
   }
 }
 
+export function formatEducationalRole(
+  role: NonNullable<LessonContentMeta["educationalRole"]> | string,
+): string {
+  switch (role) {
+    case "FOUNDATIONAL":
+      return "Foundational";
+    case "CLINICAL_APPLICATION":
+      return "Clinical application";
+    case "ADVANCED":
+      return "Advanced";
+    case "CASE":
+      return "Case";
+    case "REVIEW":
+      return "Review";
+    default:
+      return String(role)
+        .replaceAll("_", " ")
+        .toLowerCase()
+        .replace(/^\w/, (c) => c.toUpperCase());
+  }
+}
+
 export function formatReviewStatus(status: MedicalReviewStatus): string {
   switch (status) {
     case "DRAFT":

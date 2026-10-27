@@ -10,6 +10,8 @@ export function RoleSwitcher({ currentUserId }: { currentUserId: string }) {
   return (
     <select
       name="userId"
+      aria-label="Demo role"
+      title="Switch demo role"
       defaultValue={currentUserId}
       disabled={pending}
       className="h-9 rounded-md border border-[var(--border)] bg-[var(--surface)] px-2 text-xs"

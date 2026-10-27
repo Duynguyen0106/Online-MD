@@ -128,18 +128,26 @@ export async function canAccessModuleQbank(
   moduleId: string,
 ): Promise<QbankUnlock> {
   const rules = await listUnlockRules();
-  const rule = rules.find((r) => r.scope === "module_qbank" && r.isActive);
+  const rule = rules.find((r) => r.scope === "module_qbank");
   if (rule && !rule.isActive) {
-    return { unlocked: false, scope: `module:${moduleId}`, reason: "Rule inactive" };
+    return {
+      unlocked: false,
+      scope: `module:${moduleId}`,
+      reason: "Module question bank access is currently turned off.",
+    };
   }
   const evaluation = await evaluateModuleMastery(moduleId, userState);
   if (evaluation.mastered) {
     return { unlocked: true, scope: `module:${moduleId}` };
   }
+  const mod = await getModule(moduleId);
+  const thresholdPct = Math.round((mod?.examPassThreshold ?? 0.7) * 100);
   return {
     unlocked: false,
     scope: `module:${moduleId}`,
-    reason: `Complete the module lessons and assessment before these questions become available. ${evaluation.reason}.`,
+    reason: !evaluation.lessonsMastered
+      ? "Complete the module lessons before these questions become available."
+      : `Pass the module assessment (≥${thresholdPct}%) before these questions become available.`,
   };
 }
 
@@ -159,7 +167,11 @@ export async function canAccessStep1Qbank(
     (p) => p.phaseKind === "foundations",
   );
   if (!foundations) {
-    return { unlocked: false, scope: "step1", reason: "Preclinical curriculum not found" };
+    return {
+      unlocked: false,
+      scope: "step1",
+      reason: "Preclinical modules aren’t available in this build yet.",
+    };
   }
   const pending = foundations.modules.filter(
     (m) => userState.moduleProgress[m.id]?.state !== "mastered",

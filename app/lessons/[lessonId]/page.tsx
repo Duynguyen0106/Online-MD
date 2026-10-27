@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { LessonPlayer } from "@/components/student/lesson-player";
 import {
   buildLessonMeta,
+  formatEducationalRole,
   formatLearnerLevel,
 } from "@/lib/curriculum/content-metadata";
 import {
@@ -46,7 +47,7 @@ export default async function LessonPage({
         <Badge>{formatLearnerLevel(meta.learnerLevel)}</Badge>
         {meta.educationalRole ? (
           <Badge className="border-[var(--border)] bg-transparent">
-            {meta.educationalRole.replaceAll("_", " ")}
+            {formatEducationalRole(meta.educationalRole)}
           </Badge>
         ) : null}
       </div>
