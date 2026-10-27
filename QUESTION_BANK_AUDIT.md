@@ -1,21 +1,23 @@
 # Question Bank Audit
 
-**Date:** 2026-09-28  
+**Date:** 2026-09-28 · **Refresh:** 2026-10-27  
 **Scope:** 884 formative quiz questions + 24 qbank questions  
 **Note:** Not medical approval. Priorities reflect educational/process risk.
 
 ## Summary
 
-| Metric | Count |
+| Metric | Count (refresh) |
 | --- | --- |
 | Formative questions | 884 |
 | Qbank questions | 24 |
 | Formative with objectiveId | 884 |
 | Qbank with objectiveId | 24 |
-| Weak/short explanations (<40 chars) | 17 |
-| Explanations lacking distractor teaching (heuristic) | 497 |
-| Stems matching “which…most accurate / following is true” pattern | 400 |
+| Weak/short explanations (<40 chars) | **0** (post ensure-quiz-explanations) |
+| Explanations lacking distractor teaching (heuristic) | **0** pedagogical gaps; **83** remaining quiz audit rows are guideline-sensitive only |
+| Stems matching “which…most accurate / following is true” pattern | still common in catalog (template debt) |
 | Qbank items needing attention | 0 |
+
+**2026-10-27 fix:** `ensureQuizExplanationTeaching` appends a non-claim distractor-teaching footer when explanations lacked why/correct/distractor language. Do not treat this as medical review of stems.
 
 ## Systemic patterns
 
