@@ -57,7 +57,7 @@ Design tokens: Fraunces + Source Sans 3; teal clinical palette in [`app/globals.
 
 | ID | Finding | Recommendation |
 | --- | --- | --- |
-| F2 | Faculty editors are form-heavy without sticky save | Sticky save bar + unsaved warning |
+| F2 | Faculty lesson editor lacked sticky save | **Fixed (pass 3):** sticky save bar + dirty detection + `beforeunload` warning |
 
 ### P2 — later
 
