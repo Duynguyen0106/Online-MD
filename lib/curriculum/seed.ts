@@ -792,7 +792,7 @@ export const program: Program = {
       phaseKind: "foundations",
       usmleFocus: "step1",
       description:
-        "Build the basic science and organ-system knowledge you’ll use throughout medical school.",
+        "Build your preclinical foundation through the core sciences and organ systems.",
       modules: [
         {
           id: IDS.modCell,
@@ -1657,7 +1657,7 @@ S. aureus vs strep vs enterococcus distinctions clarify dozens of clinical vigne
           title: "Internal Medicine Clerkship",
           slug: "internal-medicine",
           sequence: 1,
-          description: "Learn how to approach common adult patients, from the first presentation through diagnosis and initial management.",
+          description: "Learn how to approach common adult patients, from the initial presentation through diagnosis and treatment.",
           isCoreClerkship: true,
           status: "published",
           examPassThreshold: 0.7,

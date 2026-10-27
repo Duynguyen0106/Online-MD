@@ -32,6 +32,21 @@ export function lessonActionLabel(state: ProgressState | string | undefined): st
   }
 }
 
+/** Section progress line for lesson cards (never exposes “content blocks”). */
+export function formatSectionProgress(viewed: number, total: number): string {
+  if (total <= 0) return "No sections yet";
+  if (viewed <= 0) return `0 of ${total} sections complete`;
+  if (viewed >= total) return "Complete";
+  return `${viewed} of ${total} sections complete`;
+}
+
+/** Quiz status line for lesson cards (never says “formative”). */
+export function formatQuizProgress(score: number | undefined, passed: boolean): string {
+  if (passed) return "Quiz complete";
+  if (score != null) return `${Math.round(score * 100)}% · Keep reviewing`;
+  return "Check your understanding";
+}
+
 export function formatBlockType(blockType: string): string {
   switch (blockType) {
     case "video":
@@ -81,11 +96,13 @@ export const STUDENT_COPY = {
   qbankIntro:
     "Complete the lessons and assessments before moving on to the question bank for that part of the curriculum.",
   qbankAvailable: "Questions are available for this module.",
-  qbankLockedModule:
-    "Complete the module lessons and assessment before these questions become available.",
+  qbankLockedModule: "Complete the module before starting the question bank.",
+  continueSupporting:
+    "Complete the lesson and check your understanding before moving on.",
   assessmentComplete: "Assessment complete",
   tryAgain: "Try again",
   notCompleted: "Not completed",
+  moduleProgressHint: "Complete the lessons and assessment to finish this module.",
   competencyTitle: "Competency map",
   competencyIntro:
     "See where your lesson progress and assessments concentrate across modules and skill domains.",
@@ -137,7 +154,7 @@ export const MODULE_DESCRIPTIONS: Record<string, string> = {
   "mod-id":
     "Learn how the immune system responds to infection and how to recognize important pathogens.",
   "mod-im":
-    "Learn how to approach common adult patients, from the first presentation through diagnosis and initial management.",
+    "Learn how to approach common adult patients, from the initial presentation through diagnosis and treatment.",
   "mod-surg":
     "Build a practical framework for common surgical presentations, perioperative care, and the initial assessment of the surgical patient.",
   "mod-peds":

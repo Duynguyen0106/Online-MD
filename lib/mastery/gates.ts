@@ -83,7 +83,7 @@ export async function evaluateModuleMastery(
     reason: mastered
       ? "Lessons and module assessment complete"
       : !lessonsMastered
-        ? "Complete the lessons first"
+        ? "Complete the lessons and assessment to finish this module."
         : `Pass the module assessment (≥${Math.round(mod.examPassThreshold * 100)}%)`,
   };
 }
@@ -182,7 +182,7 @@ export async function canAccessStep1Qbank(
   return {
     unlocked: false,
     scope: "step1",
-    reason: `Complete the preclinical modules before starting the Step 1 question bank (${pending.length} remaining).`,
+    reason: `Complete the preclinical curriculum before moving on to the Step 1 question bank (${pending.length} remaining).`,
   };
 }
 
