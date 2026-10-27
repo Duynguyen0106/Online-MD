@@ -460,7 +460,7 @@ Management: restore perfusion if prerenal, stop nephrotoxins, relieve obstructio
 Cardiorenal and hepatorenal syndromes remind you that the kidney often fails secondarily—fix the parent organ while supporting filtration. Contrast exposure risk is multiplicative with GFR, diabetes, and volume depletion; hydration strategies and alternative imaging matter. Rhabdomyolysis AKI needs volume and monitoring for electrolyte storms. Post-obstructive diuresis can be profound after relief of chronic obstruction—replace thoughtfully. Never ignore anuria; it is obstruction, vascular catastrophe, or severe ATN until proven otherwise.`,
   },
   {
-    test: /\bstroke\b|\btia\b|nihss|thrombolysis|alteplase|large.?vessel|hemorrhag/i,
+    test: /\bstroke\b(?!\s*volume)|\btia\b|nihss|thrombolysis|alteplase|large.?vessel|hemorrhag/i,
     prose: `**Acute stroke syndromes — textbook chapter.**
 
 Hyperacute focal neurologic deficits are vascular until proven otherwise. Time last known well, glucose, NIHSS, and noncontrast CT (to exclude hemorrhage) gate thrombolysis decisions; vascular imaging identifies large-vessel occlusion for thrombectomy pathways. Hemorrhagic stroke management prioritizes ABC, blood-pressure parameters, coagulopathy reversal, and neurosurgical consultation as indicated. Mimics include seizure with Todd paresis, migraine, hypoglycemia, and functional neurologic disorder—still treat as stroke until imaging and course declare otherwise when uncertainty is high.

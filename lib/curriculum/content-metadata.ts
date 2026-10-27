@@ -250,6 +250,99 @@ export const LESSON_META_OVERRIDES: Record<string, Partial<LessonContentMeta>> =
         },
       ],
     },
+    "les-pulm-2": {
+      learnerLevel: "PRECLINICAL",
+      educationalRole: "FOUNDATIONAL",
+      system: "Respiratory",
+      subject: "Physiology",
+      reviewStatus: "NEEDS_REVIEW",
+      guidelineSensitive: false,
+      version: 1,
+      versionHistory: [
+        {
+          version: 1,
+          date: "2026-10-27",
+          changedBy: "pedagogy-pass",
+          reason: "Foundational spirometry pattern lesson; catalog companion is advanced PFT deep dive",
+        },
+      ],
+      references: [
+        {
+          label: "Pulmonary function testing (educational)",
+          status: "REFERENCE_REVIEW_REQUIRED",
+        },
+      ],
+    },
+    "les-cat-y2-pulm-obstruct-restrict": {
+      learnerLevel: "STEP_1",
+      educationalRole: "ADVANCED",
+      system: "Respiratory",
+      subject: "Pathophysiology",
+      reviewStatus: "NEEDS_REVIEW",
+      guidelineSensitive: false,
+      version: 1,
+      versionHistory: [
+        {
+          version: 1,
+          date: "2026-10-27",
+          changedBy: "pedagogy-pass",
+          reason:
+            "Retitled as advanced PFT companion to les-pulm-2 to reduce same-module title collision",
+        },
+      ],
+      references: [
+        {
+          label: "Advanced PFT pattern recognition",
+          status: "REFERENCE_REVIEW_REQUIRED",
+        },
+      ],
+    },
+    "les-renal-1": {
+      learnerLevel: "PRECLINICAL",
+      educationalRole: "FOUNDATIONAL",
+      system: "Renal / Urinary",
+      subject: "Physiology",
+      reviewStatus: "NEEDS_REVIEW",
+      guidelineSensitive: false,
+      version: 2,
+      versionHistory: [
+        {
+          version: 2,
+          date: "2026-10-27",
+          changedBy: "pedagogy-pass",
+          reason: "Expanded Starling/GFR teaching lead; no new numeric clinical claims",
+        },
+      ],
+      references: [
+        {
+          label: "GFR and filtration barrier physiology",
+          status: "REFERENCE_REVIEW_REQUIRED",
+        },
+      ],
+    },
+    "les-id-1": {
+      learnerLevel: "PRECLINICAL",
+      educationalRole: "FOUNDATIONAL",
+      system: "Infectious Disease",
+      subject: "Microbiology",
+      reviewStatus: "NEEDS_REVIEW",
+      guidelineSensitive: false,
+      version: 2,
+      versionHistory: [
+        {
+          version: 2,
+          date: "2026-10-27",
+          changedBy: "pedagogy-pass",
+          reason: "Expanded host–microbe branching lab logic; gram-stain figure attached",
+        },
+      ],
+      references: [
+        {
+          label: "Bacteriology laboratory algorithms",
+          status: "REFERENCE_REVIEW_REQUIRED",
+        },
+      ],
+    },
     "les-cat-y3-im-sepsis-hour1": {
       learnerLevel: "CLERKSHIP",
       educationalRole: "CLINICAL_APPLICATION",

@@ -4,6 +4,7 @@ import { program } from "@/lib/curriculum/seed";
 import {
   enhanceProgramSeedLessons,
   enhanceThinSeedLesson,
+  lessonAlreadyTeachesMechanism,
 } from "@/lib/curriculum/seed-chapter-enhance";
 
 function readingChars(lesson: {
@@ -20,14 +21,24 @@ function readingChars(lesson: {
   return n;
 }
 
-describe("seed-chapter-enhance", () => {
-  it("expands thin seed lessons to textbook-length readings", () => {
-    const mod = program.phases[0].modules[0];
-    const lesson = mod.lessons.find((l) => l.id === "les-cell-1");
-    assert.ok(lesson);
-    assert.ok(readingChars(lesson) < 4000);
+function findLesson(id: string) {
+  for (const phase of program.phases) {
+    for (const mod of phase.modules) {
+      const lesson = mod.lessons.find((l) => l.id === id);
+      if (lesson) return { lesson, mod };
+    }
+  }
+  return null;
+}
 
-    const enhanced = enhanceThinSeedLesson(structuredClone(lesson), mod);
+describe("seed-chapter-enhance", () => {
+  it("expands thin stub lessons with the full textbook scaffold", () => {
+    const hit = findLesson("les-endo-1");
+    assert.ok(hit);
+    assert.ok(readingChars(hit.lesson) < 4000);
+    assert.equal(lessonAlreadyTeachesMechanism(hit.lesson), false);
+
+    const enhanced = enhanceThinSeedLesson(structuredClone(hit.lesson), hit.mod);
     assert.ok(readingChars(enhanced) >= 4000);
     assert.ok(enhanced.estimatedMinutes >= 90);
     assert.ok(
@@ -39,7 +50,8 @@ describe("seed-chapter-enhance", () => {
       .flatMap((c) => c.blocks)
       .map((b) => b.bodyMd || "")
       .join("\n");
-    assert.match(body, /confirm doses, thresholds, and regimens/i);
+    assert.match(body, /confirm doses, thresholds, and regimens|Sources/i);
+    assert.match(body, /Control-point checklist/);
   });
 
   it("leaves catalog lessons untouched", () => {
@@ -87,5 +99,38 @@ describe("seed-chapter-enhance", () => {
       }
     }
     assert.ok(n >= 20);
+  });
+
+  it("light-enhances CV electrophysiology without scaffold noise or ETC/stroke banks", () => {
+    const hit = findLesson("les-cv-1");
+    assert.ok(hit);
+    assert.equal(lessonAlreadyTeachesMechanism(hit.lesson), true);
+    const enhanced = enhanceThinSeedLesson(structuredClone(hit.lesson), hit.mod);
+    assert.ok(readingChars(enhanced) >= 4000);
+    const body = enhanced.concepts
+      .flatMap((c) => c.blocks)
+      .map((b) => b.bodyMd || "")
+      .join("\n");
+    assert.doesNotMatch(body, /Control-point checklist/);
+    assert.doesNotMatch(body, /\*\*ETC \/ OXPHOS\.\*\*/);
+    assert.doesNotMatch(body, /Acute stroke syndromes/);
+    assert.match(body, /phase|action potential|Na|repolar/i);
+    assert.match(body, /Teach-back|Sources|citations for this lesson are being verified/i);
+    // Original concept structure preserved (not replaced by con-enh-*).
+    assert.ok(enhanced.concepts.some((c) => c.id === "con-cv-1a"));
+  });
+
+  it("attaches a GFR Starling figure on les-renal-1", () => {
+    const hit = findLesson("les-renal-1");
+    assert.ok(hit);
+    const hasFig = hit.lesson.concepts.some((c) =>
+      c.blocks.some(
+        (b) =>
+          b.blockType === "diagram" &&
+          (b.bodyMd?.includes("gfr-starling") ||
+            b.title?.toLowerCase().includes("starling")),
+      ),
+    );
+    assert.ok(hasFig);
   });
 });

@@ -66,6 +66,30 @@
     "guidelineSensitive": true
   },
   {
+    "id": "qq-cv-2b",
+    "lessonId": "les-cv-2",
+    "lessonTitle": "Ischemic Heart Disease & ACS",
+    "moduleTitle": "Cardiovascular System",
+    "stem": "Plaque disruption with occlusive coronary thrombosis and ST elevation is best conceptualized as which ACS fork?",
+    "hasObjective": true,
+    "objectiveId": "obj-cv-3",
+    "explanationLen": 343,
+    "issues": [],
+    "guidelineSensitive": true
+  },
+  {
+    "id": "qq-id-2b",
+    "lessonId": "les-id-2",
+    "lessonTitle": "Sepsis Recognition & Empiric Logic",
+    "moduleTitle": "Host Defense, Microbiology & Infectious Disease",
+    "stem": "In the sepsis mechanism cascade, endothelial injury and microvascular failure sit downstream of:",
+    "hasObjective": true,
+    "objectiveId": "obj-id-2",
+    "explanationLen": 480,
+    "issues": [],
+    "guidelineSensitive": true
+  },
+  {
     "id": "qq-pulm-4",
     "lessonId": "les-pulm-4",
     "lessonTitle": "ARDS & Pulmonary Edema Distinctions",

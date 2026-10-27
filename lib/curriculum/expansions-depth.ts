@@ -6,6 +6,7 @@ import type {
   QbankQuestion,
   QuizQuestion,
 } from "@/lib/types/domain";
+import { figureMarkdownById } from "@/lib/curriculum/catalog/chapter-figures";
 import { IDS } from "@/lib/curriculum/seed";
 
 /**
@@ -797,9 +798,9 @@ Exact fluid/pressor protocols are institutional. Learn *why* a therapy matches p
                   diagram(
                     "blk-cv-4a-d",
                     "con-cv-4a",
-                    "Hemodynamic sketch",
+                    "Shock phenotypes",
                     2,
-                    `Sketch a 2×2: **preload** (low vs high) vs **SVR** (low vs high). Place septic (low SVR), hypovolemic (low preload), cardiogenic (high preload + high SVR), obstructive PE (RV strain pattern).`,
+                    figureMarkdownById("shock-phenotypes"),
                   ),
                   vignette(
                     "blk-cv-4a-x",

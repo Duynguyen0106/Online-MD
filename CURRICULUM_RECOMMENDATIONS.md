@@ -1,8 +1,23 @@
 # Curriculum Recommendations
 
-**Date:** 2026-09-28  
+**Date:** 2026-09-28 · **Pedagogy update:** 2026-10-27  
 **Principle:** Progress Foundations → Physiology → Pathophysiology → Pharmacology → Organ-system medicine → Clinical presentation → Reasoning → Diagnosis → Management → Cases → Assessment → Spaced review.  
 **Constraint:** Recommendations first. Execute only safe, non-destructive changes unless a qualified reviewer directs otherwise.
+
+---
+
+## Pedagogy pass status (2026-10-27)
+
+| Recommendation | Status |
+| --- | --- |
+| Stop mismatched seed padding; original teaching first | **Done** (`factualEnrichmentForSeedLesson`) |
+| Wire existing + new mechanism figures into P0 seeds | **Done** (CV/renal/ID + 5 new SVGs) |
+| Extend high-yield cases to 4-stage pattern | **Done** for fever / HHS / hyperK / meningitis (11 total 4-stage) |
+| High-yield formatives (mechanism / next-step) | **Done** (+6 items on ACS/HF/shock/sepsis/ABG) |
+| Retitle same-module PFT overlap + learner_level | **Done** (`les-pulm-2` foundational; catalog advanced companion) |
+| Faculty medical review of HIGH pathways | **Still open** — do not invent cutoffs |
+| Grow qbank beyond 24 with sign-off | **Still open** |
+| Remaining 13 two-stage cases | **Backlog** — prioritize by presentation traffic |
 
 ---
 
@@ -11,7 +26,7 @@
 1. **Tag every lesson** with `learner_level` and show badges in module lists (core vs advanced).  
 2. Expand **Objective records to 3–5 measurable statements** per lesson; stop relying only on in-chapter objective lists.  
 3. Map each quiz/qbank item to one primary objective + cognitive level.  
-4. Add **Sources** footers with verified citations or `REFERENCE_REVIEW_REQUIRED`.  
+4. Add **Sources** footers with verified citations (student copy stays neutral until verified).  
 5. Grow clinical cases toward multi-stage reasoning; do not mass-generate cases.  
 6. Keep complementary foundation/clinical pairs; retitle same-level duplicates.  
 7. Introduce a faculty **Medical content review** queue (not student-visible).

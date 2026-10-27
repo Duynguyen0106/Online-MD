@@ -6,6 +6,7 @@ import type {
   QbankQuestion,
   QuizQuestion,
 } from "@/lib/types/domain";
+import { figureMarkdownById } from "@/lib/curriculum/catalog/chapter-figures";
 import { IDS } from "@/lib/curriculum/seed";
 import {
   applyDepthExpansions,
@@ -440,7 +441,122 @@ export const extraQuizQuestions: QuizQuestion[] = [
     explanation:
       "Prevention counseling is shared decision-making: benefits, harms, alternatives, and values.",
   },
+  // Pedagogy pass — extra formatives on P0 presentations (mechanism / localization / next-step).
+  {
+    id: "qq-cv-2b",
+    lessonId: "les-cv-2",
+    sequence: 2,
+    objectiveId: "obj-cv-3",
+    stem: "Plaque disruption with occlusive coronary thrombosis and ST elevation is best conceptualized as which ACS fork?",
+    choices: [
+      { id: "qq-cv-2b-c0", text: "STEMI pathway — emergent reperfusion thinking" },
+      { id: "qq-cv-2b-c1", text: "Demand (type 2) ischemia without atherothrombosis" },
+      { id: "qq-cv-2b-c2", text: "Unstable angina without biomarker or ECG urgency" },
+      { id: "qq-cv-2b-c3", text: "Chronic stable angina only" },
+    ],
+    correctChoiceId: "qq-cv-2b-c0",
+    explanation:
+      "Occlusive atherothrombosis with STEMI criteria maps to the emergent reperfusion fork; type 2 MI is a different mechanism. Exact regimens require faculty/guideline review (REFERENCE_REVIEW_REQUIRED).",
+  },
+  {
+    id: "qq-cv-2c",
+    lessonId: "les-cv-2",
+    sequence: 3,
+    objectiveId: "obj-cv-3",
+    stem: "ST elevation in V1–V4 most typically localizes to which coronary territory?",
+    choices: [
+      { id: "qq-cv-2c-c0", text: "LAD — anterior wall / septum" },
+      { id: "qq-cv-2c-c1", text: "RCA — inferior wall only" },
+      { id: "qq-cv-2c-c2", text: "LCx — always isolated posterior wall" },
+      { id: "qq-cv-2c-c3", text: "Coronary sinus venous drainage" },
+    ],
+    correctChoiceId: "qq-cv-2c-c0",
+    explanation:
+      "V1–V4 view the anterior wall/septum, typically LAD territory (anatomic variants exist).",
+  },
+  {
+    id: "qq-cv-3b",
+    lessonId: "les-cv-3",
+    sequence: 2,
+    objectiveId: "obj-cv-4",
+    stem: "On a flattened Frank–Starling curve in decompensated HFrEF, giving more preload most often produces:",
+    choices: [
+      {
+        id: "qq-cv-3b-c0",
+        text: "More congestion without proportional stroke-volume gain",
+      },
+      { id: "qq-cv-3b-c1", text: "Unlimited linear rise in stroke volume forever" },
+      { id: "qq-cv-3b-c2", text: "Immediate cure of diastolic stiffness alone" },
+      { id: "qq-cv-3b-c3", text: "Guaranteed conversion to HFpEF" },
+    ],
+    correctChoiceId: "qq-cv-3b-c0",
+    explanation:
+      "When the Starling curve flattens, extra volume congests without matching forward flow — the educational rationale for careful congestion management.",
+  },
+  {
+    id: "qq-cv-4b",
+    lessonId: "les-cv-4",
+    sequence: 2,
+    objectiveId: "obj-cv-5",
+    stem: "Warm extremities, low SVR physiology, and infection point most strongly to which shock bucket?",
+    choices: [
+      { id: "qq-cv-4b-c0", text: "Distributive (e.g., early septic)" },
+      { id: "qq-cv-4b-c1", text: "Cardiogenic pump failure with high SVR" },
+      { id: "qq-cv-4b-c2", text: "Tamponade obstructive physiology alone" },
+      { id: "qq-cv-4b-c3", text: "Hemorrhagic hypovolemia with flat neck veins only" },
+    ],
+    correctChoiceId: "qq-cv-4b-c0",
+    explanation:
+      "Warm, vasodilated perfusion with infection physiology is the distributive/septic teaching phenotype; confirm with the full shock map.",
+  },
+  {
+    id: "qq-id-2b",
+    lessonId: "les-id-2",
+    sequence: 2,
+    objectiveId: "obj-id-2",
+    stem: "In the sepsis mechanism cascade, endothelial injury and microvascular failure sit downstream of:",
+    choices: [
+      {
+        id: "qq-id-2b-c0",
+        text: "Pathogen/danger signals and cytokine amplification",
+      },
+      { id: "qq-id-2b-c1", text: "Isolated anxiety without inflammatory signaling" },
+      { id: "qq-id-2b-c2", text: "Only chronic osteoarthritis pathways" },
+      { id: "qq-id-2b-c3", text: "Vitamin C deficiency as the sole cause" },
+    ],
+    correctChoiceId: "qq-id-2b-c0",
+    explanation:
+      "Educational cascade: PAMP/DAMP signals → cytokine wave → endothelial injury → organ hypoperfusion. Bedside actions interrupt this clock; exact bundles need local/guideline review.",
+  },
+  {
+    id: "qq-renal-3b",
+    lessonId: "les-renal-3",
+    sequence: 2,
+    objectiveId: "obj-renal-3",
+    stem: "After identifying acidemia, the next branching step in the acid–base spine is to:",
+    choices: [
+      {
+        id: "qq-renal-3b-c0",
+        text: "Decide primary metabolic vs respiratory process using HCO3 and PCO2",
+      },
+      { id: "qq-renal-3b-c1", text: "Name every possible cause before looking at pH" },
+      { id: "qq-renal-3b-c2", text: "Skip anion gap if the patient looks well" },
+      { id: "qq-renal-3b-c3", text: "Assume compensation is always perfect" },
+    ],
+    correctChoiceId: "qq-renal-3b-c0",
+    explanation:
+      "pH → primary process (metabolic vs respiratory) → gap/compensation checks → cause list. Skipping the spine invites mixed-disorder misses.",
+  },
 ];
+
+/** Lesson id → extra formative quiz ids from the pedagogy pass. */
+export const pedagogyFormativeIds: Record<string, string[]> = {
+  "les-cv-2": ["qq-cv-2b", "qq-cv-2c"],
+  "les-cv-3": ["qq-cv-3b"],
+  "les-cv-4": ["qq-cv-4b"],
+  "les-id-2": ["qq-id-2b"],
+  "les-renal-3": ["qq-renal-3b"],
+};
 
 export const extraQbankQuestions: QbankQuestion[] = [
   {
@@ -533,17 +649,27 @@ export const extraClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "e1",
-        prompt: "Is this closer to DKA or HHS, and which labs drive your call?",
+        prompt: "Problem representation: is this closer to DKA or HHS, and which labs drive your call?",
         expectedFocus: "HHS — marked hyperosmolality, minimal ketosis",
       },
       {
         id: "e2",
+        prompt: "Name can’t-miss triggers and threats before focusing only on glucose numbers.",
+        expectedFocus: "Infection/gastroenteritis trigger, hypovolemic shock, arrhythmia from electrolyte shifts — threat filter",
+      },
+      {
+        id: "e3",
         prompt: "Outline initial management priorities (ABCs, fluids, electrolytes, insulin timing).",
-        expectedFocus: "Volume first, correct K carefully, insulin after adequate K",
+        expectedFocus: "Volume first, correct K carefully, insulin after adequate K — educational sequencing, not a protocol dump",
+      },
+      {
+        id: "e4",
+        prompt: "After the first liters of fluid, what reassessment findings tell you the plan is working or failing?",
+        expectedFocus: "Mentation, perfusion, urine output, glucose/osmolality trend, potassium — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "HHS is a hyperosmolar emergency; fluid resuscitation precedes insulin, and potassium must be watched closely.",
+      "HHS is a hyperosmolar emergency; fluid resuscitation precedes insulin, and potassium must be watched closely; reassess perfusion and labs after each step.",
     objectiveIds: ["obj-endo-2"],
     status: "published",
   },
@@ -637,6 +763,39 @@ function vignette(
     sequence,
     bodyMd,
   };
+}
+
+function diagram(
+  id: string,
+  conceptId: string,
+  title: string,
+  sequence: number,
+  bodyMd: string,
+) {
+  return {
+    id,
+    conceptId,
+    blockType: "diagram" as const,
+    title,
+    sequence,
+    bodyMd,
+  };
+}
+
+function applyPedagogyFormatives(program: Program): void {
+  for (const phase of program.phases) {
+    for (const mod of phase.modules) {
+      for (const lesson of mod.lessons) {
+        const extras = pedagogyFormativeIds[lesson.id];
+        if (!extras?.length) continue;
+        const merged = [...lesson.quizQuestionIds];
+        for (const id of extras) {
+          if (!merged.includes(id)) merged.push(id);
+        }
+        lesson.quizQuestionIds = merged;
+      }
+    }
+  }
 }
 
 /** Mutates a cloned program by appending new lessons to existing modules. */
@@ -735,6 +894,13 @@ ABCs → aggressive isotonic fluids → monitor/replace K → insulin after K is
 5. If compensation is off, diagnose a **mixed** disorder.
 
 Gold mark / delta gap methods help uncover metabolic alkalosis hiding beside HAGMA.`,
+                ),
+                diagram(
+                  "blk-renal-3a-d",
+                  "con-renal-3a",
+                  "Acid–base decision spine",
+                  2,
+                  figureMarkdownById("acid-base-fork"),
                 ),
               ],
             },
@@ -974,6 +1140,20 @@ Resuscitate while arranging definitive imaging/OR — do not serial-exam an unst
                   `Think in parallel: ABCs/perfusion → cultures without delaying drugs → empiric antibiotics matched to suspected source and local resistance → source control.  
 Narrow therapy when microbiology returns. Educational goal is reasoning, not memorizing one hospital antibiogram.`,
                 ),
+                diagram(
+                  "blk-id-2a-d",
+                  "con-id-2a",
+                  "Sepsis first actions",
+                  2,
+                  figureMarkdownById("sepsis-bundle"),
+                ),
+                diagram(
+                  "blk-id-2a-d2",
+                  "con-id-2a",
+                  "Sepsis mechanism cascade",
+                  3,
+                  figureMarkdownById("sepsis-immunopath"),
+                ),
               ],
             },
           ],
@@ -1133,5 +1313,6 @@ Anchor to guideline families (e.g., USPSTF-style reasoning) while adapting to co
       }
     }
   }
+  applyPedagogyFormatives(program);
   return program;
 }

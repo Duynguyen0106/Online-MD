@@ -7,6 +7,7 @@ import type {
   QbankQuestion,
   QuizQuestion,
 } from "@/lib/types/domain";
+import { figureMarkdownById } from "@/lib/curriculum/catalog/chapter-figures";
 
 /** Stable IDs for curriculum graph */
 export const IDS = {
@@ -1010,11 +1011,18 @@ Nodal cells lack robust INa upstrokes; phase 0 is Ca2+-dependent — explaining 
 ### ECG bridge
 Atrial depolarization → P wave; ventricular depolarization → QRS; ventricular repolarization → T wave. Conduction delays prolong PR or widen QRS depending on site.`,
                     ),
+                    diagram(
+                      "blk-cv-1a-d",
+                      "con-cv-1a",
+                      "Action potential phases",
+                      2,
+                      figureMarkdownById("action-potential"),
+                    ),
                     video(
                       "blk-cv-1a-v",
                       "con-cv-1a",
                       "Recommended video: cardiac AP (public anatomy/physiology)",
-                      2,
+                      3,
                       "https://www.youtube.com/watch?v=UTAIas9bEwk",
                     ),
                   ],
@@ -1081,11 +1089,25 @@ Atherosclerotic plaque disruption → thrombosis.
 
 Demand ischemia (type 2 MI) occurs when supply cannot meet increased demand without acute atherothrombosis as the primary event.`,
                     ),
+                    diagram(
+                      "blk-cv-2a-d1",
+                      "con-cv-2a",
+                      "Coronary territories ↔ ECG",
+                      2,
+                      figureMarkdownById("coronary-ecg"),
+                    ),
+                    diagram(
+                      "blk-cv-2a-d2",
+                      "con-cv-2a",
+                      "ACS plaque-to-pathway fork",
+                      3,
+                      figureMarkdownById("acs-pathway"),
+                    ),
                     vignette(
                       "blk-cv-2a-x",
                       "con-cv-2a",
                       "Vignette: inferior STEMI",
-                      2,
+                      4,
                       `62M with diaphoresis; ECG shows ST elevation in II, III, aVF with reciprocal depression in aVL.  
 Localize the wall, anticipate RCA vs LCx, and list immediate goals. **Educational note:** MONA-BASH is historical teaching vocabulary only — contrast with contemporary ABC + dual antiplatelet + anticoagulation + reperfusion thinking (verify current ACLS/society pathways; REFERENCE_REVIEW_REQUIRED).`,
                     ),
@@ -1131,6 +1153,13 @@ Contemporary teaching centers on disease-modifying classes — ARNI/ACEI/ARB, ev
 ### Sources
 - Heart failure guideline-directed medical therapy — \`REFERENCE_REVIEW_REQUIRED\` (attach current AHA/ACC/HFSA or equivalent after faculty review).
 - Educational material — confirm doses, thresholds, and regimens with current guidelines and supervised clinical care.`,
+                    ),
+                    diagram(
+                      "blk-cv-3a-d",
+                      "con-cv-3a",
+                      "Frank–Starling and phenotypes",
+                      2,
+                      figureMarkdownById("frank-starling-hf"),
                     ),
                   ],
                 },
@@ -1276,8 +1305,23 @@ DLCO low in emphysema, ILD, pulmonary vascular disease; relatively preserved in 
                       "con-renal-1a",
                       "GFR determinants",
                       1,
-                      `GFR depends on net filtration pressure and Kf. Afferent constriction ↓GFR; moderate efferent constriction ↑GFR (as with angiotensin II).  
-Clearance of inulin ≈ GFR; PAH ≈ RPF (with assumptions). Filtration fraction = GFR/RPF.`,
+                      `## Start with Starling forces (glomerulus)
+
+Net filtration pressure ≈ (P_gc − P_bs) − (π_gc − π_bs). Capillary hydrostatic pressure (P_gc) favors filtration; plasma oncotic pressure (π_gc) opposes it. Kf (filtration coefficient) scales how much GFR you get for a given net pressure.
+
+## Afferent vs efferent tone
+
+- **Afferent constriction** ↓ glomerular plasma flow and usually ↓GFR.  
+- **Moderate efferent constriction** (classic angiotensin II teaching) raises P_gc and can **preserve or raise GFR** when flow falls — until extreme constriction collapses filtration.  
+- Filtration fraction = GFR / RPF; it rises when GFR is preserved while RPF falls.
+
+## Clearance anchors
+
+Inulin (or iothalamate) clearance ≈ GFR; PAH clearance approximates RPF with extraction assumptions. Use these as *definitions*, then map drugs and disease onto the afferent/efferent story rather than memorizing isolated arrows.
+
+### Teach-back
+
+Name one maneuver that lowers GFR via afferent tone and one that raises filtration fraction via efferent tone.`,
                     ),
                   ],
                 },
@@ -1308,6 +1352,13 @@ Clearance of inulin ≈ GFR; PAH ≈ RPF (with assumptions). Filtration fraction
                       1,
                       `Acetazolamide → PCT carbonic anhydrase. Loop diuretics → TAL NKCC2. Thiazides → DCT NCC. K+-sparing → principal cell ENaC or aldosterone receptor.  
 Loops are most potent; thiazides preferred in HTN; spironolactone disease-modifying in HFrEF.`,
+                    ),
+                    diagram(
+                      "blk-renal-2a-d",
+                      "con-renal-2a",
+                      "Nephron diuretic map",
+                      2,
+                      figureMarkdownById("nephron-map"),
                     ),
                   ],
                 },
@@ -1629,8 +1680,35 @@ Monoarthritis → always consider septic arthritis until proven otherwise in acu
                       "con-id-1a",
                       "Bug desk reference habits",
                       1,
-                      `Build branching algorithms rather than isolated flashcards: Gram → shape → arrangement → catalase → coagulase/hemolysis → specialty tests.  
-S. aureus vs strep vs enterococcus distinctions clarify dozens of clinical vignettes.`,
+                      `## Host–microbe lab logic
+
+Do not memorize organism lists in isolation. Build a **branching algorithm** that mirrors how the lab and the ward talk:
+
+1. **Gram reaction** (positive vs negative)  
+2. **Shape** (coccus vs rod) and **arrangement** (clusters, chains, pairs)  
+3. **Catalase** (staph vs strep/enterococcus fork among Gram(+) cocci)  
+4. **Coagulase / hemolysis / specialty tests** that finish the speciation story  
+
+## High-yield forks
+
+- **S. aureus** (catalase+, coagulase+) vs coagulase-negative staphylococci  
+- **β-hemolytic strep** vs **enterococcus** (different niches and resistance teaching)  
+- Gram(−) rods then ask: lactose? oxidase? — before jumping to empiric lists  
+
+## Clinical bridge
+
+Each fork predicts a syndrome family (skin/soft tissue, endocarditis, UTI, pneumonia) without inventing a hospital antibiogram. When you later choose empiric therapy, you are applying this tree plus local resistance — not replacing the tree with a single memorized drug.
+
+### Teach-back
+
+Walk Gram(+) cocci from Gram stain to catalase to coagulase out loud in under 60 seconds.`,
+                    ),
+                    diagram(
+                      "blk-id-1a-d",
+                      "con-id-1a",
+                      "Gram-stain decision tree",
+                      2,
+                      figureMarkdownById("gram-stain"),
                     ),
                   ],
                 },
