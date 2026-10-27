@@ -11,10 +11,13 @@ export default async function CasePage({
   const { caseId } = await params;
   const clinical = getClinicalCase(caseId);
   if (!clinical) notFound();
+  const progressive = clinical.format === "progressive";
   return (
     <AppShell title={clinical.title}>
       <p className="-mt-4 mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
-        Clinical case. Think through the presentation before revealing the answer.
+        {progressive
+          ? "Progressive clinical case. Each answer unlocks the next disclosure—do not skip ahead."
+          : "Clinical case. Think through the presentation before revealing the answer."}
       </p>
       <CasePlayer clinicalCase={clinical} />
     </AppShell>
