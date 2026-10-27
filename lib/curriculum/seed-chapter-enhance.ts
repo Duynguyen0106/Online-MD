@@ -101,6 +101,69 @@ function enrichmentContext(module: Module): {
   return { contentCategory: "Pathophysiology", organSystem: "Multisystem" };
 }
 
+const SOURCES_FOOTER = `
+
+### Sources
+
+| Guideline / reference | Status |
+| --- | --- |
+| Authoritative society guidance or primary literature for this lesson | REFERENCE_REVIEW_REQUIRED |
+
+Last reviewed: not yet medically approved. Faculty should attach verified citations before claiming guideline currency. Exact doses, thresholds, and trial statistics belong to primary sources.
+`;
+
+const HAS_SOURCES_RE =
+  /##?\s*sources\b|##?\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED/i;
+
+/** Append a REFERENCE_REVIEW_REQUIRED Sources block when missing (no invented citations). */
+export function ensureSourcesFooter(lesson: Lesson): Lesson {
+  const body = lesson.concepts
+    .flatMap((c) => c.blocks)
+    .map((b) => b.bodyMd || "")
+    .join("\n");
+  if (HAS_SOURCES_RE.test(body)) return lesson;
+
+  let appended = false;
+  const concepts = lesson.concepts.map((c) => {
+    if (appended) return c;
+    const readingBlocks = c.blocks.filter((b) => b.blockType === "reading");
+    const target = readingBlocks[readingBlocks.length - 1];
+    if (!target?.bodyMd?.trim()) return c;
+    appended = true;
+    return {
+      ...c,
+      blocks: c.blocks.map((b) =>
+        b.id === target.id
+          ? { ...b, bodyMd: `${(b.bodyMd ?? "").trimEnd()}\n${SOURCES_FOOTER}` }
+          : b,
+      ),
+    };
+  });
+
+  if (!appended) {
+    // No reading block — add a short sources-only reading on the first concept.
+    const first = concepts[0];
+    if (!first) return lesson;
+    const conceptId = first.id;
+    concepts[0] = {
+      ...first,
+      blocks: [
+        ...first.blocks,
+        {
+          id: `blk-src-${lesson.id}`,
+          conceptId,
+          blockType: "reading",
+          title: "Sources",
+          sequence: first.blocks.length + 1,
+          bodyMd: `# Sources\n${SOURCES_FOOTER}`,
+        },
+      ],
+    };
+  }
+
+  return { ...lesson, concepts };
+}
+
 /**
  * Expand thin seed/expansion lessons into textbook-style chapter blocks
  * while preserving diagrams, videos, and vignettes.
@@ -110,7 +173,9 @@ export function enhanceThinSeedLesson(
   module: Module,
 ): Lesson {
   if (lesson.id.startsWith("les-cat-")) return lesson;
-  if (readingChars(lesson) >= MIN_READING_CHARS) return lesson;
+  if (readingChars(lesson) >= MIN_READING_CHARS) {
+    return ensureSourcesFooter(lesson);
+  }
 
   const points = collectPoints(lesson);
   const ctx = enrichmentContext(module);
@@ -228,12 +293,13 @@ ${(points.length ? points : [lesson.title]).map((p, i) => `- [ ] ${i + 1}. I can
 - [ ] I can state one clinical consequence and one common misconception.
 
 Then check your understanding with the quiz (≥80%), and review the flashcards later.
+${SOURCES_FOOTER}
 `,
     },
     ...extras,
   ];
 
-  return {
+  return ensureSourcesFooter({
     ...lesson,
     estimatedMinutes: Math.max(lesson.estimatedMinutes, 90),
     concepts: [
@@ -246,7 +312,7 @@ Then check your understanding with the quiz (≥80%), and review the flashcards 
         blocks: chapterBlocks,
       },
     ],
-  };
+  });
 }
 
 export function enhanceProgramSeedLessons<
@@ -255,7 +321,7 @@ export function enhanceProgramSeedLessons<
   for (const phase of program.phases) {
     for (const mod of phase.modules) {
       mod.lessons = mod.lessons.map((lesson) =>
-        enhanceThinSeedLesson(lesson, mod),
+        ensureSourcesFooter(enhanceThinSeedLesson(lesson, mod)),
       );
     }
   }

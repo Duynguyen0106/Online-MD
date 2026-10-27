@@ -522,26 +522,79 @@ export const depthFlashcards: Flashcard[] = [
 
 export const depthClinicalCases: ClinicalCase[] = [
   {
-    id: "case-cv-1",
+    // Distinct from seed case-cv-1 (Progressive Dyspnea / HFrEF congestion).
+    id: "case-cv-2",
     moduleId: IDS.modCvb,
     title: "Warm Shock After Pneumonia",
     presentationMd:
       "68-year-old with CAP becomes hypotensive, warm extremities, lactate elevated, bounding pulses.",
     stages: [
       {
-        id: "cv1",
+        id: "cv2a",
         prompt: "Name the shock category and the two physiologic drivers of hypotension.",
         expectedFocus: "Distributive/septic — vasodilation + relative hypovolemia/capillary leak",
       },
       {
-        id: "cv2",
+        id: "cv2b",
+        prompt: "What competing shock categories must you still keep on the differential in a post-pneumonia patient?",
+        expectedFocus: "Cardiogenic (sepsis-induced cardiomyopathy), obstructive (PE), hypovolemic — classify before pressor choice",
+      },
+      {
+        id: "cv2c",
         prompt: "List parallel first-hour priorities (educational framework, not a hospital protocol).",
         expectedFocus: "Cultures, timely antibiotics, fluids for perfusion, source-control thinking",
+      },
+      {
+        id: "cv2d",
+        prompt: "After initial fluids and antimicrobials, which reassessment signals guide the next step?",
+        expectedFocus: "Perfusion (mentals, lactate trend, urine), volume tolerance, need for vasopressor thinking — reassess, do not checklist blindly",
       },
     ],
     teachingPoints:
       "Distributive shock is a tone problem plus capillary leak; treat infection and perfusion together.",
     objectiveIds: ["obj-cv-5"],
+    status: "published",
+  },
+  {
+    // Mirrors existing syncope lesson framing (les-im-3 / syncope physiology) — no new thresholds.
+    id: "case-im-2",
+    moduleId: IDS.modIm,
+    title: "Brief Loss of Consciousness on the Ward",
+    presentationMd:
+      "72-year-old briefly loses consciousness while standing to leave a chair; recovers within a minute. Bystanders deny seizure-like activity. Orthostatic symptoms earlier that morning; ECG available at bedside.",
+    stages: [
+      {
+        id: "syn1",
+        prompt:
+          "Sort the event into reflex, orthostatic, or cardiac syncope categories and list red flags that force a cardiac-first workup.",
+        expectedFocus:
+          "Use the existing syncope framework: exertional/supine syncope, abnormal ECG, structural heart disease, family sudden death → cardiac urgency; otherwise reflex vs orthostatic sorting",
+      },
+      {
+        id: "syn2",
+        prompt:
+          "Name the immediate bedside evaluations you would prioritize before disposition planning (educational priorities, not a protocol).",
+        expectedFocus:
+          "Orthostatic vitals, ECG review, glucose if indicated, targeted history for prodrome vs cardiac clues — aligned with Syncope — Cardiac vs Reflex teaching",
+      },
+      {
+        id: "syn3",
+        prompt:
+          "Which historical features would make reflex syncope more likely than orthostatic or cardiac causes?",
+        expectedFocus:
+          "Prodrome (nausea/diaphoresis), situational trigger, brief duration with rapid recovery — still respect red flags",
+      },
+      {
+        id: "syn4",
+        prompt:
+          "State one disposition principle after the immediate workup (educational, not a protocol).",
+        expectedFocus:
+          "Unstable/red-flag syncope stays monitored; clear reflex/orthostatic patterns may allow outpatient completion after safety teaching",
+      },
+    ],
+    teachingPoints:
+      "Syncope workup starts with category and red-flag filtering, not indiscriminate testing.",
+    objectiveIds: ["obj-im-3"],
     status: "published",
   },
   {
@@ -560,6 +613,16 @@ export const depthClinicalCases: ClinicalCase[] = [
         id: "p2",
         prompt: "What bedside findings would raise concern for massive/high-risk PE?",
         expectedFocus: "Hypotension, RV strain signs, syncope",
+      },
+      {
+        id: "p3",
+        prompt: "Before imaging, what pretest-probability thinking belongs on your short differential?",
+        expectedFocus: "Post-op PE vs atelectasis, pneumonia, bleeding/anemia, fluid overload — pretest before tools",
+      },
+      {
+        id: "p4",
+        prompt: "After stabilization thinking, what reassessment finding would escalate urgency?",
+        expectedFocus: "Worsening hypoxia, hypotension, or RV strain signs — escalate monitoring/support pathway",
       },
     ],
     teachingPoints:
@@ -581,8 +644,18 @@ export const depthClinicalCases: ClinicalCase[] = [
       },
       {
         id: "g2",
+        prompt: "Name competing upper-GI bleed sources you still keep on the differential.",
+        expectedFocus: "Ulcer, Mallory–Weiss, portal gastropathy — still resuscitate first",
+      },
+      {
+        id: "g3",
         prompt: "Order your first five actions in parallel.",
         expectedFocus: "Airway, IV access, volume/blood products, GI endoscopy pathway",
+      },
+      {
+        id: "g4",
+        prompt: "Which reassessment signals show resuscitation is succeeding or failing?",
+        expectedFocus: "Mentation, BP/perfusion, ongoing hematemesis, urine output — reassess while arranging endoscopy",
       },
     ],
     teachingPoints:
@@ -606,6 +679,16 @@ export const depthClinicalCases: ClinicalCase[] = [
         id: "r2",
         prompt: "What diagnoses remain after excluding adrenal/thyroid failure?",
         expectedFocus: "SIADH / drug-related / malignancy-related ADH excess patterns",
+      },
+      {
+        id: "r3",
+        prompt: "Which neurologic findings would push you toward more urgent sodium correction thinking?",
+        expectedFocus: "Seizure, deep coma, herniation signs — severity guides urgency (protocol-sensitive; REFERENCE_REVIEW_REQUIRED)",
+      },
+      {
+        id: "r4",
+        prompt: "State the educational principle for correction pace without citing a specific protocol number.",
+        expectedFocus: "Correct carefully; overshoot risks osmotic demyelination — verify institutional targets",
       },
     ],
     teachingPoints:

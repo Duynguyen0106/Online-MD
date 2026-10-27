@@ -35,6 +35,11 @@ describe("seed-chapter-enhance", () => {
         b.title?.includes("How it works"),
       ),
     );
+    const body = enhanced.concepts
+      .flatMap((c) => c.blocks)
+      .map((b) => b.bodyMd || "")
+      .join("\n");
+    assert.match(body, /REFERENCE_REVIEW_REQUIRED/);
   });
 
   it("leaves catalog lessons untouched", () => {

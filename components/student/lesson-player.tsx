@@ -32,14 +32,38 @@ export function LessonPlayer({
   const isVideo = active?.blockType === "video";
   const activeIndex = blocks.findIndex((b) => b.id === active?.id);
   const hasNext = activeIndex >= 0 && activeIndex < blocks.length - 1;
+  const reviewedCount = blocks.filter((b) => viewed.has(b.id)).length;
+  const progressPct =
+    blocks.length === 0 ? 0 : Math.round((reviewedCount / blocks.length) * 100);
 
   return (
     <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
-      <aside className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3">
+      <aside className="h-fit rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3 lg:sticky lg:top-20">
         <p className="mb-2 text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
           Lesson sections
         </p>
-        <ul className="space-y-1">
+        <div className="mb-3 px-1">
+          <div className="mb-1 flex items-center justify-between text-[10px] text-[var(--muted)]">
+            <span>
+              {reviewedCount} of {blocks.length} reviewed
+            </span>
+            <span>{progressPct}%</span>
+          </div>
+          <div
+            className="h-1.5 overflow-hidden rounded-full bg-[var(--surface-2)]"
+            role="progressbar"
+            aria-valuenow={progressPct}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label="Lesson section progress"
+          >
+            <div
+              className="h-full rounded-full bg-[var(--brand)] transition-all"
+              style={{ width: `${progressPct}%` }}
+            />
+          </div>
+        </div>
+        <ul className="max-h-[50vh] space-y-1 overflow-y-auto lg:max-h-[calc(100vh-14rem)]">
           {lesson.concepts.map((concept) => (
             <li key={concept.id}>
               <ul className="mb-2 space-y-1">
@@ -55,10 +79,23 @@ export function LessonPlayer({
                           : "hover:bg-[var(--surface-2)]",
                       )}
                     >
-                      <span className="block truncate">{block.title}</span>
-                      <span className="text-[10px] text-[var(--muted)]">
-                        {formatBlockType(block.blockType)}
-                        {viewed.has(block.id) ? " · reviewed" : ""}
+                      <span className="flex items-start gap-1.5">
+                        <span
+                          className={cn(
+                            "mt-0.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full",
+                            viewed.has(block.id)
+                              ? "bg-emerald-600"
+                              : "bg-[var(--border)]",
+                          )}
+                          aria-hidden
+                        />
+                        <span className="min-w-0">
+                          <span className="block truncate">{block.title}</span>
+                          <span className="text-[10px] text-[var(--muted)]">
+                            {formatBlockType(block.blockType)}
+                            {viewed.has(block.id) ? " · reviewed" : ""}
+                          </span>
+                        </span>
                       </span>
                     </button>
                   </li>

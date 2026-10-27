@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import { saveFacultyLesson } from "@/actions/admin";
 import { Button } from "@/components/ui/button";
 import { newId } from "@/lib/demo/ids";
@@ -15,6 +15,24 @@ export function LessonEditorForm({ lesson }: { lesson: Lesson }) {
   );
   const [message, setMessage] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const [baseline, setBaseline] = useState(() =>
+    snapshot(lesson.title, lesson.estimatedMinutes, lesson.quizPassThreshold, lesson.concepts),
+  );
+
+  const dirty = useMemo(
+    () => snapshot(title, minutes, threshold, concepts) !== baseline,
+    [title, minutes, threshold, concepts, baseline],
+  );
+
+  useEffect(() => {
+    if (!dirty) return;
+    const onBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = "";
+    };
+    window.addEventListener("beforeunload", onBeforeUnload);
+    return () => window.removeEventListener("beforeunload", onBeforeUnload);
+  }, [dirty]);
 
   function updateBlock(
     conceptIdx: number,
@@ -50,8 +68,27 @@ export function LessonEditorForm({ lesson }: { lesson: Lesson }) {
     });
   }
 
+  function save() {
+    setMessage(null);
+    startTransition(async () => {
+      try {
+        await saveFacultyLesson({
+          lessonId: lesson.id,
+          title,
+          estimatedMinutes: minutes,
+          quizPassThreshold: threshold,
+          concepts,
+        });
+        setBaseline(snapshot(title, minutes, threshold, concepts));
+        setMessage("Saved. Students will see the updated lesson.");
+      } catch (e) {
+        setMessage(e instanceof Error ? e.message : "Save failed");
+      }
+    });
+  }
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-24">
       <div className="grid gap-4 md:grid-cols-3">
         <label className="text-sm md:col-span-2">
           <span className="mb-1 block text-[var(--muted)]">Title</span>
@@ -180,31 +217,31 @@ export function LessonEditorForm({ lesson }: { lesson: Lesson }) {
         </section>
       ))}
 
-      <div className="flex items-center gap-3">
-        <Button
-          disabled={pending}
-          onClick={() => {
-            setMessage(null);
-            startTransition(async () => {
-              try {
-                await saveFacultyLesson({
-                  lessonId: lesson.id,
-                  title,
-                  estimatedMinutes: minutes,
-                  quizPassThreshold: threshold,
-                  concepts,
-                });
-                setMessage("Saved. Students will see the updated lesson.");
-              } catch (e) {
-                setMessage(e instanceof Error ? e.message : "Save failed");
-              }
-            });
-          }}
-        >
-          Save lesson
-        </Button>
-        {message ? <p className="text-sm text-[var(--muted)]">{message}</p> : null}
+      <div
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--border)] bg-[color-mix(in_oklab,var(--surface)_92%,transparent)] backdrop-blur-md"
+        role="region"
+        aria-label="Save lesson"
+      >
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+          <p className="text-sm text-[var(--muted)]">
+            {dirty
+              ? "Unsaved changes — save before leaving this page."
+              : message ?? "All changes saved."}
+          </p>
+          <Button disabled={pending || !dirty} onClick={save}>
+            {pending ? "Saving…" : "Save lesson"}
+          </Button>
+        </div>
       </div>
     </div>
   );
+}
+
+function snapshot(
+  title: string,
+  minutes: number,
+  threshold: number,
+  concepts: Concept[],
+) {
+  return JSON.stringify({ title, minutes, threshold, concepts });
 }

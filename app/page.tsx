@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { STUDENT_COPY } from "@/lib/copy/student";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <header className="border-b border-[var(--border)] bg-[var(--surface)]">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link
             href="/"
             className="font-[family-name:var(--font-display)] text-lg tracking-tight text-[var(--brand-strong)]"
@@ -31,16 +32,15 @@ export default function HomePage() {
               "linear-gradient(145deg, var(--hero-a) 0%, var(--hero-b) 55%, #0f766e 100%)",
           }}
         />
-        <div className="relative mx-auto max-w-5xl px-6 py-20 text-white md:py-28">
+        <div className="relative mx-auto max-w-6xl px-6 py-20 text-white md:py-28">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-white/75">
             Online MD
           </p>
           <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-tight md:text-6xl">
-            Learn medicine from the ground up.
+            {STUDENT_COPY.productTagline}
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/90 md:text-xl">
-            A structured medical curriculum that takes you from basic science to organ systems and
-            then into the core clinical rotations.
+            {STUDENT_COPY.productSubhead}
           </p>
           <p className="mt-4 max-w-2xl text-base text-white/80">
             Study the lessons, check your understanding, and build the knowledge you need before
@@ -62,7 +62,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="font-[family-name:var(--font-display)] text-3xl tracking-tight">
           A medical-school curriculum, built for self-paced study
         </h2>
@@ -97,7 +97,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-[var(--border)] bg-[var(--surface)]">
-        <div className="mx-auto max-w-5xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="font-[family-name:var(--font-display)] text-3xl tracking-tight">
             Learn first. Practice second.
           </h2>

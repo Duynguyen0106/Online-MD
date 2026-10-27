@@ -103,6 +103,18 @@ export const STUDENT_COPY = {
   tryAgain: "Try again",
   notCompleted: "Not completed",
   moduleProgressHint: "Complete the lessons and assessment to finish this module.",
+  competencyTitle: "Competency map",
+  competencyIntro:
+    "See where your lesson progress and assessments concentrate across modules and skill domains.",
+  competencyDisclaimer:
+    "Study evidence from your progress — not a clinical competency certificate.",
+  competencyWidgetTitle: "Focus areas",
+  competencyViewMap: "View competency map",
+  presentationsTitle: "Approach by presentation",
+  presentationsIntro:
+    "Browse high-yield clinical presentations and jump into linked lessons and cases already in the curriculum.",
+  presentationsDisclaimer:
+    "Educational pathways only. Exact thresholds and regimens belong to supervised clinical care and current guidelines.",
 } as const;
 
 /** Default human descriptions for known modules (by id). Fallback to seed description. */
@@ -116,29 +128,29 @@ export const MODULE_DESCRIPTIONS: Record<string, string> = {
   "mod-anatomy":
     "Connect anatomy and development to clinical findings and medical imaging.",
   "mod-immuno":
-    "Understand innate and adaptive immunity, hypersensitivity, autoimmunity, transplantation, and vaccines.",
+    "Map innate and adaptive immunity onto hypersensitivity, autoimmunity, transplantation, and vaccines.",
   "mod-pharm":
     "Learn how drugs move through the body, how they work, and how to recognize important drug effects and toxicities.",
   "mod-epi":
-    "Learn how to interpret medical evidence, understand risk, and evaluate clinical studies.",
+    "Interpret medical evidence, quantify risk, and evaluate clinical studies.",
   "mod-ethics":
     "Work through the ethical and professional issues that come up in clinical practice.",
   "mod-cv":
-    "Understand how the heart and circulation work, then apply that knowledge to common cardiovascular diseases.",
+    "Build from cardiac electrophysiology and hemodynamics to ischemic disease, heart failure phenotypes, shock, and valvular/pericardial pathophysiology.",
   "mod-pulm":
     "Learn how ventilation and gas exchange work, then apply them to common lung diseases.",
   "mod-renal":
-    "Understand kidney function, fluid balance, electrolytes, and acid–base disorders.",
+    "Explain kidney function, fluid balance, electrolytes, and acid–base disorders.",
   "mod-gi":
     "Learn how the GI tract and liver work and how common diseases disrupt them.",
   "mod-endo":
-    "Understand hormonal regulation and the major endocrine and reproductive disorders.",
+    "Explain hormonal regulation and the major endocrine and reproductive disorders.",
   "mod-heme":
     "Build a framework for anemia, bleeding, clotting, and cancer.",
   "mod-neuro":
     "Learn how the nervous system works and how to approach common neurologic problems.",
   "mod-msk":
-    "Understand bones, joints, muscles, and the immune diseases that affect connective tissue.",
+    "Connect bones, joints, and muscles to the immune diseases that affect connective tissue.",
   "mod-id":
     "Learn how the immune system responds to infection and how to recognize important pathogens.",
   "mod-im":
@@ -148,9 +160,9 @@ export const MODULE_DESCRIPTIONS: Record<string, string> = {
   "mod-peds":
     "Learn how common pediatric problems present differently from adults and how to approach the child and family in clinical practice.",
   "mod-obgyn":
-    "Understand common problems in pregnancy, reproductive health, and women’s health through a clinical framework.",
+    "Apply a clinical framework to common problems in pregnancy, reproductive health, and women’s health.",
   "mod-psych":
-    "Learn how to approach common psychiatric presentations, establish a differential diagnosis, and understand the principles of treatment.",
+    "Approach common psychiatric presentations, build a differential, and state treatment principles.",
   "mod-fm":
     "Apply clinical reasoning across common problems seen in primary care and longitudinal medicine.",
 };

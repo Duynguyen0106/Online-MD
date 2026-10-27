@@ -40,7 +40,7 @@ function emptyState(): StudentState {
 
 async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
-  let state = emptyState();
+  const state = emptyState();
 
   const locked = await canAccessModuleQbank(state, IDS.modCell);
   if (locked.unlocked) throw new Error("Expected Cell Qbank locked at start");

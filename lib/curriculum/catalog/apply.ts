@@ -76,7 +76,7 @@ export function ensureFourYearModules(program: Program): Program {
     slug: "immunology",
     sequence: 0,
     description:
-      "Understand innate and adaptive immunity, hypersensitivity, autoimmunity, transplantation, and vaccines.",
+      "Map innate and adaptive immunity onto hypersensitivity, autoimmunity, transplantation, and vaccines.",
     isCoreClerkship: false,
     status: "published",
     examPassThreshold: 0.7,

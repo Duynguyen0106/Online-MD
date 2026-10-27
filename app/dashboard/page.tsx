@@ -10,6 +10,11 @@ import {
   moduleDescription,
 } from "@/lib/copy/student";
 import {
+  buildCompetencyMatrix,
+  topCompetencyGaps,
+} from "@/lib/competency/aggregate";
+import { COMPETENCY_DOMAIN_LABELS } from "@/lib/competency/domains";
+import {
   getAllLessons,
   getAllModules,
   getNextLesson,
@@ -39,6 +44,10 @@ export default async function DashboardPage() {
   const step1 = await canAccessStep1Qbank(state);
   const step2 = await canAccessStep2CkQbank(state);
   const nextProgress = next ? state.lessonProgress[next.id] : undefined;
+  const nextSummary =
+    next?.concepts[0]?.summary ?? STUDENT_COPY.continueSupporting;
+  const competencyRows = await buildCompetencyMatrix(state);
+  const gaps = topCompetencyGaps(competencyRows, 3);
 
   return (
     <AppShell title="Your learning dashboard">
@@ -50,14 +59,12 @@ export default async function DashboardPage() {
       </div>
       <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
         <section className="animate-fade-up rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
-          <p className="text-sm text-[var(--muted)]">Continue learning</p>
+          <p className="text-sm text-[var(--muted)]">{STUDENT_COPY.continueLearning}</p>
           <h2 className="mt-1 font-[family-name:var(--font-display)] text-2xl">
             {next ? next.title : "Curriculum complete"}
           </h2>
           <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-            {next
-              ? STUDENT_COPY.continueSupporting
-              : STUDENT_COPY.curriculumComplete}
+            {next ? nextSummary : STUDENT_COPY.curriculumComplete}
           </p>
           {next ? (
             <Button asChild className="mt-5">
@@ -67,7 +74,7 @@ export default async function DashboardPage() {
             </Button>
           ) : (
             <Button asChild className="mt-5">
-              <Link href="/qbank">Practice questions</Link>
+              <Link href="/qbank">{STUDENT_COPY.practiceQuestions}</Link>
             </Button>
           )}
         </section>
@@ -95,6 +102,59 @@ export default async function DashboardPage() {
           </div>
         </section>
       </div>
+
+      <section className="mt-6 grid gap-6 lg:grid-cols-2">
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
+          <div className="mb-3 flex items-center justify-between gap-2">
+            <h2 className="font-[family-name:var(--font-display)] text-lg">
+              {STUDENT_COPY.competencyWidgetTitle}
+            </h2>
+            <Link
+              href="/competency"
+              className="text-xs text-[var(--brand-strong)] underline"
+            >
+              {STUDENT_COPY.competencyViewMap}
+            </Link>
+          </div>
+          <p className="mb-3 text-xs text-[var(--muted)]">
+            {STUDENT_COPY.competencyDisclaimer}
+          </p>
+          {gaps.length === 0 ? (
+            <p className="text-sm text-[var(--muted)]">
+              Complete a few lessons to see suggested focus areas.
+            </p>
+          ) : (
+            <ul className="space-y-2 text-sm">
+              {gaps.map((g) => (
+                <li key={`${g.moduleId}-${g.domain}`} className="flex flex-wrap gap-2">
+                  <Badge>{COMPETENCY_DOMAIN_LABELS[g.domain]}</Badge>
+                  <span>{g.moduleTitle}</span>
+                  {g.nextLessonId ? (
+                    <Link
+                      className="text-[var(--brand-strong)] underline"
+                      href={`/lessons/${g.nextLessonId}`}
+                    >
+                      Continue
+                    </Link>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
+          <h2 className="mb-2 font-[family-name:var(--font-display)] text-lg">
+            {STUDENT_COPY.presentationsTitle}
+          </h2>
+          <p className="mb-4 text-sm leading-6 text-[var(--muted)]">
+            Jump into clerkship reasoning by clinical presentation — chest pain,
+            shock, AKI, and more — using lessons and cases already in the curriculum.
+          </p>
+          <Button asChild variant="secondary" size="sm">
+            <Link href="/presentations">Browse presentations</Link>
+          </Button>
+        </div>
+      </section>
 
       <div className="mt-10 space-y-10">
         {phases.map((phase) => (

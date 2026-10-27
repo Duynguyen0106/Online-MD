@@ -18,7 +18,7 @@ export default function CasesIndexPage() {
             <Link
               key={c.id}
               href={`/cases/${c.id}`}
-              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 hover:border-[var(--brand)]"
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--brand)]"
             >
               <h2 className="mb-2 font-medium">{c.title}</h2>
               <p className="line-clamp-3 text-sm text-[var(--muted)]">{c.presentationMd}</p>

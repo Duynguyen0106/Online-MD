@@ -12,9 +12,14 @@ import {
   moduleDescription,
 } from "@/lib/copy/student";
 import {
+  buildLessonMeta,
+  formatLearnerLevel,
+} from "@/lib/curriculum/content-metadata";
+import {
   getClinicalCases,
   getLessonBlocks,
   getModule,
+  getPhaseForModule,
 } from "@/lib/curriculum/accessors";
 import { readStudentState } from "@/lib/demo/store";
 import {
@@ -32,6 +37,7 @@ export default async function ModulePage({
   const { moduleId } = await params;
   const mod = await getModule(moduleId);
   if (!mod) notFound();
+  const phase = await getPhaseForModule(moduleId);
   const state = await readStudentState();
   const moduleStatus = await evaluateModuleMastery(moduleId, state);
   const qbank = await canAccessModuleQbank(state, moduleId);
@@ -45,6 +51,13 @@ export default async function ModulePage({
       const blocks = getLessonBlocks(lesson);
       const viewed = new Set(lp?.viewedBlockIds ?? []);
       const evalLesson = await evaluateLessonMastery(lesson.id, lp);
+      const meta = buildLessonMeta({
+        lessonId: lesson.id,
+        moduleId: mod.id,
+        title: lesson.title,
+        phaseKind: phase?.phaseKind,
+        isCoreClerkship: mod.isCoreClerkship,
+      });
       return {
         index: index + 1,
         lesson,
@@ -52,7 +65,9 @@ export default async function ModulePage({
         blocksTotal: blocks.length,
         blocksViewed: blocks.filter((b) => viewed.has(b.id)).length,
         quizScore: lp?.lastFormativeScore,
-        evalLesson,
+        mastery: evalLesson,
+        learnerLevel: meta.learnerLevel,
+        educationalRole: meta.educationalRole,
         summary:
           lesson.concepts[0]?.summary ??
           "Core concepts, clinical connections, and a short check of your understanding.",
@@ -89,15 +104,13 @@ export default async function ModulePage({
           </Button>
         </div>
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <p className="text-xs text-[var(--muted)]">Question bank</p>
+          <p className="text-xs text-[var(--muted)]">{STUDENT_COPY.questionBank}</p>
           <p className="mt-2 text-sm leading-6">
-            {qbank.unlocked
-              ? STUDENT_COPY.qbankAvailable
-              : STUDENT_COPY.qbankLockedModule}
+            {qbank.unlocked ? STUDENT_COPY.qbankAvailable : qbank.reason}
           </p>
           {qbank.unlocked ? (
             <Button asChild size="sm" className="mt-3">
-              <Link href="/qbank">Practice questions</Link>
+              <Link href="/qbank">{STUDENT_COPY.practiceQuestions}</Link>
             </Button>
           ) : (
             <Button size="sm" className="mt-3" disabled>
@@ -130,17 +143,25 @@ export default async function ModulePage({
                 <p className="mt-1 text-sm text-[var(--muted)]">{row.summary}</p>
                 <ul className="mt-2 space-y-1 text-xs text-[var(--muted)]">
                   <li>
-                    {row.evalLesson.allBlocksViewed ? "✓" : "○"}{" "}
+                    {row.mastery.allBlocksViewed ? "✓" : "○"}{" "}
                     {formatSectionProgress(row.blocksViewed, row.blocksTotal)}
                   </li>
                   <li>
-                    {row.evalLesson.quizPass ? "✓" : "○"}{" "}
-                    {formatQuizProgress(row.quizScore, row.evalLesson.quizPass)}
+                    {row.mastery.quizPass ? "✓" : "○"}{" "}
+                    {formatQuizProgress(row.quizScore, row.mastery.quizPass)}
                   </li>
                 </ul>
               </div>
               <div className="flex flex-col items-end gap-2">
                 <Badge>{formatProgressState(row.lp?.state)}</Badge>
+                <Badge className="border-[var(--border)] bg-transparent">
+                  {formatLearnerLevel(row.learnerLevel)}
+                </Badge>
+                {row.educationalRole === "ADVANCED" ? (
+                  <Badge className="border-amber-300 bg-amber-50 text-amber-900">
+                    Advanced
+                  </Badge>
+                ) : null}
                 <Button asChild size="sm">
                   <Link href={`/lessons/${row.lesson.id}`}>
                     {lessonActionLabel(row.lp?.state)}

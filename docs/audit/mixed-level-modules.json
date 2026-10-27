@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mod-pulm",
+    "title": "Respiratory System",
+    "levels": [
+      "PRECLINICAL",
+      "STEP_1",
+      "ADVANCED_CLINICAL"
+    ],
+    "lessonCount": 32
+  },
+  {
+    "id": "mod-immuno",
+    "title": "Immunology",
+    "levels": [
+      "PRECLINICAL",
+      "STEP_1",
+      "ADVANCED_CLINICAL"
+    ],
+    "lessonCount": 32
+  }
+]

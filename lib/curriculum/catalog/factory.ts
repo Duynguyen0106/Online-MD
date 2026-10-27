@@ -70,27 +70,38 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
       text,
     }));
 
+    const correctText = topic.quizChoices[topic.quizCorrect];
+    const explanation = enhanceCatalogExplanation(
+      topic.quizExplain,
+      correctText,
+      topic.year >= 3,
+    );
+
     quizQuestions.push({
       id: quizId,
       lessonId,
       stem: topic.quizStem,
       choices: choiceObjs,
       correctChoiceId: choiceObjs[topic.quizCorrect].id,
-      explanation: topic.quizExplain,
+      explanation,
       objectiveId: objId,
       sequence: 1,
     });
 
-    objectives.push({
-      id: objId,
-      code: `OBJ-Y${topic.year}-${topic.key.toUpperCase().slice(0, 24)}`,
-      statement: `Explain and apply: ${topic.title}`,
-      usmleStep: topic.year <= 2 ? "step1" : "step2ck",
-      organSystem: topic.organSystem,
-      physicianTask: topic.physicianTask ?? "Knowledge",
-      contentCategory: topic.contentCategory,
-      moduleId: topic.moduleId,
-      lessonIds: [lessonId],
+    const objStatements = measurableObjectivesForTopic(topic);
+    objStatements.forEach((statement, i) => {
+      const id = i === 0 ? objId : `${objId}-${i + 1}`;
+      objectives.push({
+        id,
+        code: `OBJ-Y${topic.year}-${topic.key.toUpperCase().slice(0, 20)}-${i + 1}`,
+        statement,
+        usmleStep: topic.year <= 2 ? "step1" : "step2ck",
+        organSystem: topic.organSystem,
+        physicianTask: topic.physicianTask ?? "Knowledge",
+        contentCategory: topic.contentCategory,
+        moduleId: topic.moduleId,
+        lessonIds: [lessonId],
+      });
     });
 
     flashcards.push({
@@ -167,4 +178,49 @@ export function buildCatalogBundle(topics: CatalogTopic[]): CatalogBundle {
   }
 
   return { lessonsByModule, objectives, quizQuestions, flashcards };
+}
+
+function enhanceCatalogExplanation(
+  explain: string,
+  correctText: string,
+  clinical: boolean,
+): string {
+  const trimmed = explain.trim();
+  if (
+    /correct answer:|why not the others:|why:/i.test(trimmed) &&
+    trimmed.length >= 80
+  ) {
+    return trimmed;
+  }
+  const whyNot = clinical
+    ? "Why not the others: they skip pretest probability, invent unsupported rules, or reverse the safe order of operations taught in this chapter."
+    : "Why not the others: they contradict the pathway regulation or phenotype emphasized in this chapter.";
+  if (trimmed.length >= 80) {
+    return `Correct answer: ${correctText}\n\nWhy: ${trimmed}\n\n${whyNot}`;
+  }
+  return `Correct answer: ${correctText}\n\nWhy: ${trimmed}\n\n${whyNot}`;
+}
+
+function measurableObjectivesForTopic(topic: CatalogTopic): string[] {
+  const clinical = topic.year >= 3;
+  const points = topic.points.slice(0, 4);
+  if (points.length === 0) {
+    return [
+      clinical
+        ? `Recognize presentations of ${topic.title} and select the first management priority.`
+        : `Explain the core mechanism of ${topic.title} and predict one clinical consequence.`,
+    ];
+  }
+  return points.map((p, i) => {
+    if (clinical) {
+      if (i === 0) return `Recognize how ${p} changes acuity or the first action in ${topic.title}.`;
+      if (i === 1) return `Differentiate competing explanations using ${p} when evaluating ${topic.title}.`;
+      if (i === 2) return `Select initial investigations or therapies related to ${p} for ${topic.title}.`;
+      return `Reassess response using ${p} after initial management of ${topic.title}.`;
+    }
+    if (i === 0) return `Explain ${p} as a control point in ${topic.title}.`;
+    if (i === 1) return `Describe regulation and failure modes involving ${p} in ${topic.title}.`;
+    if (i === 2) return `Predict clinical or laboratory consequences when ${p} is disrupted.`;
+    return `Compare ${p} with the closest look-alike mechanism in ${topic.title}.`;
+  });
 }

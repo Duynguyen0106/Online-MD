@@ -3,6 +3,7 @@
 import { useMemo, useState, useTransition } from "react";
 import { startQbankAttempt, submitQbankAttempt } from "@/actions/learning";
 import { Button } from "@/components/ui/button";
+import { STUDENT_COPY } from "@/lib/copy/student";
 import type { QbankQuestion } from "@/lib/types/domain";
 import { cn, percent } from "@/lib/utils";
 
@@ -57,7 +58,7 @@ export function QbankPanel({
         <p className="mt-2 text-xs text-[var(--muted)]">
           {selectedLocked
             ? moduleGates[moduleId]
-            : "Questions are available for this module."}
+            : STUDENT_COPY.qbankAvailable}
         </p>
       </div>
 
