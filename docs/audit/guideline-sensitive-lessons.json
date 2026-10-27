@@ -1,5 +1,11 @@
 [
   {
+    "id": "les-cell-1",
+    "title": "From Gene to Protein to Phenotype",
+    "module": "Cells, Molecules & Mechanisms of Disease",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-cat-y1-cell-dna-rep",
     "title": "DNA Replication Fidelity & Repair",
     "module": "Cells, Molecules & Mechanisms of Disease",
@@ -237,6 +243,12 @@
     "id": "les-cat-y1-cell-environ2",
     "title": "Chemical & Physical Injury Pathology",
     "module": "Cells, Molecules & Mechanisms of Disease",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-cv-1",
+    "title": "Cardiac Electrophysiology & Mechanics",
+    "module": "Cardiovascular System",
     "level": "PRECLINICAL"
   },
   {
@@ -576,6 +588,12 @@
     "level": "PRECLINICAL"
   },
   {
+    "id": "les-renal-1",
+    "title": "GFR & Filtration Barrier",
+    "module": "Renal & Acid–Base",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-renal-4",
     "title": "Hyponatremia Diagnostic Framework",
     "module": "Renal & Acid–Base",
@@ -736,6 +754,12 @@
     "title": "Dialysis Physiology Comparison",
     "module": "Renal & Acid–Base",
     "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-gi-2",
+    "title": "Portal Hypertension & Liver Failure",
+    "module": "Gastrointestinal & Hepatology",
+    "level": "STEP_1"
   },
   {
     "id": "les-gi-3",
@@ -1515,6 +1539,12 @@
     "id": "les-cat-y2-msk-imaging",
     "title": "MSK Imaging Selection",
     "module": "Musculoskeletal & Rheumatology",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-id-1",
+    "title": "Bacteriology Laboratory Logic",
+    "module": "Host Defense, Microbiology & Infectious Disease",
     "level": "PRECLINICAL"
   },
   {

@@ -1,10 +1,27 @@
 # Medical Content Audit
 
-**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27  
+**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27 · **Fix-everything:** 2026-10-27  
 **Scope:** Live Online MD curriculum graph (seed + expansion waves + 4-year catalog) + MT.vn P0 surfaces  
 **Method:** Inspect-only inventory via `scripts/medical-content-audit.ts` → `docs/audit/*.json`, plus targeted review of cardiovascular, sepsis, VTE, heart-failure pathways, and P0 presentation/competency metadata.  
 **Status:** Structural and educational audit. **Not medical approval.**  
-**Expert re-audit:** [`MEDICAL_EXPERT_AUDIT.md`](MEDICAL_EXPERT_AUDIT.md) (post-pedagogy teaching-quality pass).
+**Expert re-audit:** [`MEDICAL_EXPERT_AUDIT.md`](MEDICAL_EXPERT_AUDIT.md) (post–fix-everything teaching-quality pass).
+
+---
+
+## Fix-everything pass (2026-10-27)
+
+Safe automations only — no invented cutoffs/regimens; HIGH faculty gate unchanged.
+
+| Metric | After fix-everything |
+| --- | --- |
+| Lessons / objectives / quizzes / qbank / cases | 884 / 3422 / **890** / 24 / 24 |
+| Content blocks | **4337** (light enhance preserves cores; less scaffold churn) |
+| Structural zeros | **held** |
+| Cases with ≥4 stages | **18** / 6 remaining 2-stage |
+| Guideline-sensitive lessons / quiz rows | 808 / 85 (flagged only) |
+| Enrichment FPs | `hold`⊂threshold, `niv`⊂universal, bacteriology→anemia **fixed** + tests |
+| Seed enhancement | Light path when mechanism already taught (no Control-point wrap on CV cores) |
+| New figure | `gfr-starling` on `les-renal-1` |
 
 ---
 

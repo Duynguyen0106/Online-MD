@@ -485,9 +485,18 @@ export const extraQuizQuestions: QuizQuestion[] = [
         id: "qq-cv-3b-c0",
         text: "More congestion without proportional stroke-volume gain",
       },
-      { id: "qq-cv-3b-c1", text: "Unlimited linear rise in stroke volume forever" },
-      { id: "qq-cv-3b-c2", text: "Immediate cure of diastolic stiffness alone" },
-      { id: "qq-cv-3b-c3", text: "Guaranteed conversion to HFpEF" },
+      {
+        id: "qq-cv-3b-c1",
+        text: "Stroke volume keeps rising linearly with preload with no plateau",
+      },
+      {
+        id: "qq-cv-3b-c2",
+        text: "Filling pressures fall while forward flow is ignored",
+      },
+      {
+        id: "qq-cv-3b-c3",
+        text: "The ventricle converts automatically from HFrEF to HFpEF physiology",
+      },
     ],
     correctChoiceId: "qq-cv-3b-c0",
     explanation:
@@ -520,13 +529,22 @@ export const extraQuizQuestions: QuizQuestion[] = [
         id: "qq-id-2b-c0",
         text: "Pathogen/danger signals and cytokine amplification",
       },
-      { id: "qq-id-2b-c1", text: "Isolated anxiety without inflammatory signaling" },
-      { id: "qq-id-2b-c2", text: "Only chronic osteoarthritis pathways" },
-      { id: "qq-id-2b-c3", text: "Vitamin C deficiency as the sole cause" },
+      {
+        id: "qq-id-2b-c1",
+        text: "Isolated macrovascular CAD without host inflammatory signaling",
+      },
+      {
+        id: "qq-id-2b-c2",
+        text: "Primary adrenal failure as the usual first step in every infection",
+      },
+      {
+        id: "qq-id-2b-c3",
+        text: "Iatrogenic fluid overload as the initiating molecular signal",
+      },
     ],
     correctChoiceId: "qq-id-2b-c0",
     explanation:
-      "Educational cascade: PAMP/DAMP signals → cytokine wave → endothelial injury → organ hypoperfusion. Bedside actions interrupt this clock; exact bundles need local/guideline review.",
+      "Educational cascade: PAMP/DAMP signals → cytokine wave → endothelial injury → organ hypoperfusion. Bedside actions interrupt this clock; exact bundles need local/guideline review. Near-misses (CAD, adrenal failure, fluid overload) matter clinically but are not the upstream molecular cascade taught here.",
   },
   {
     id: "qq-renal-3b",
@@ -715,17 +733,27 @@ export const extraClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "s1",
-        prompt: "What is your leading diagnosis category and why?",
-        expectedFocus: "Perforated viscus / peritonitis — rigid abdomen, systemic signs",
+        prompt: "Problem representation: what diagnosis category fits, and which exam findings drive it?",
+        expectedFocus: "Perforated viscus / peritonitis — rigid abdomen, silent belly, systemic signs",
       },
       {
         id: "s2",
-        prompt: "List resuscitation and surgical priorities before imaging delays care.",
-        expectedFocus: "ABCs, IV access, fluids, broad antibiotics, surgical consult, avoid delaying OR for unstable peritonitis",
+        prompt: "Name can’t-miss threats before locking into a single organ diagnosis.",
+        expectedFocus: "Septic/hypovolemic shock, ongoing contamination, missed mesenteric ischemia or vascular catastrophe — threat filter",
+      },
+      {
+        id: "s3",
+        prompt: "List resuscitation and surgical priorities before imaging delays care (educational sequencing).",
+        expectedFocus: "ABCs, IV access, fluids, broad antibiotics, surgical consult; do not delay OR for unstable peritonitis waiting on perfect imaging",
+      },
+      {
+        id: "s4",
+        prompt: "After initial resuscitation and source-control planning, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "Perfusion, lactate/urine trend, fever, abdominal exam, need to escalate to definitive OR — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "Diffuse peritonitis is a surgical emergency. Resuscitate in parallel with definitive source control planning.",
+      "Diffuse peritonitis is a surgical emergency. Resuscitate in parallel with definitive source control planning; reassess perfusion after each step.",
     objectiveIds: ["obj-surg-2"],
     status: "published",
   },

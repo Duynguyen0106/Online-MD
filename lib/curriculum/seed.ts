@@ -1323,6 +1323,13 @@ Inulin (or iothalamate) clearance ≈ GFR; PAH clearance approximates RPF with e
 
 Name one maneuver that lowers GFR via afferent tone and one that raises filtration fraction via efferent tone.`,
                     ),
+                    diagram(
+                      "blk-renal-1a-d",
+                      "con-renal-1a",
+                      "Glomerular Starling / GFR map",
+                      2,
+                      figureMarkdownById("gfr-starling"),
+                    ),
                   ],
                 },
               ],

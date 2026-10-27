@@ -50,7 +50,11 @@ describe("seed-chapter-enhance", () => {
       .flatMap((c) => c.blocks)
       .map((b) => b.bodyMd || "")
       .join("\n");
+<<<<<<< HEAD
     assert.match(body, /confirm doses, thresholds, and regimens|Sources/i);
+=======
+    assert.match(body, /Sources|citations for this lesson are being verified/i);
+>>>>>>> a666906 (Fix enrichment false positives and safe pedagogy residuals)
     assert.match(body, /Control-point checklist/);
   });
 
@@ -115,7 +119,7 @@ describe("seed-chapter-enhance", () => {
     assert.doesNotMatch(body, /\*\*ETC \/ OXPHOS\.\*\*/);
     assert.doesNotMatch(body, /Acute stroke syndromes/);
     assert.match(body, /phase|action potential|Na|repolar/i);
-    assert.match(body, /Teach-back|Sources|citations for this lesson are being verified/i);
+    assert.match(body, /Teach-back|confirm doses, thresholds, and regimens|Sources/i);
     // Original concept structure preserved (not replaced by con-enh-*).
     assert.ok(enhanced.concepts.some((c) => c.id === "con-cv-1a"));
   });

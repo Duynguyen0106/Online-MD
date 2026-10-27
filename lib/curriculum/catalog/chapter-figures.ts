@@ -267,6 +267,27 @@ export const CHAPTER_FIGURES: ChapterFigure[] = [
     `, "Acid-base diagnostic fork"),
   },
   {
+    id: "gfr-starling",
+    title: "Glomerular Starling forces & GFR",
+    caption: "Net filtration ≈ (P_gc − P_bs) − (π_gc − π_bs); afferent vs efferent tone moves P_gc and filtration fraction.",
+    test: /gfr|filtration barrier|starling forces|glomerular filtration|filtration fraction|afferent|efferent constriction/i,
+    titleTest: /gfr|filtration|starling|glomerul/i,
+    categories: /pathophysiol|physiolog|renal|clinical|internal/i,
+    svg: svgShell(640, 280, `
+      ${title("GFR — Starling forces in the glomerulus")}
+      ${box(40, 70, 150, 55, "P_gc\nHydrostatic ↑", "#f3e8df")}
+      ${box(220, 70, 150, 55, "π_gc\nOncotic ↓", soft)}
+      ${box(400, 70, 180, 55, "Net filtration\n× Kf → GFR", "#f3e8df")}
+      ${arrow(190, 97, 220, 97)}
+      ${arrow(370, 97, 400, 97)}
+      ${box(40, 160, 170, 55, "Afferent\nconstrict → ↓GFR", soft)}
+      ${box(240, 160, 200, 55, "Moderate efferent\nconstrict → ↑P_gc / FF", "#f3e8df")}
+      ${box(470, 160, 130, 55, "FF =\nGFR / RPF", soft)}
+      <text x="40" y="250" font-family="Georgia, serif" font-size="12" fill="${muted}">P_bs and π_bs usually small; teach tone → pressure → filtration before memorizing drug arrows</text>
+      <text x="40" y="270" font-family="Georgia, serif" font-size="11" fill="${accent}">Educational schematic — not a patient-specific pressure trace</text>
+    `, "Glomerular Starling forces and GFR schematic"),
+  },
+  {
     id: "aki-branches",
     title: "AKI pre-renal / intrinsic / post-renal",
     caption: "Volume and obstruction first; then ATN/AIN/glomerular forks with urine studies.",
