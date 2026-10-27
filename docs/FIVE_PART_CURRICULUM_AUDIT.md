@@ -23,9 +23,18 @@
 **Conditions (not blockers for merge of structure work, but required before claiming clinical readiness):**
 
 1. Faculty must still attach citations — every lesson carries `REFERENCE_REVIEW_REQUIRED`.  
-2. Catalog prose remains **template-enriched**, not hand-authored specialty text (all 771 hit scaffold openers).  
-3. **91 / 113** handcrafted chapters still rely on the shared clerkship-integration floor footer to clear 2000 chars — deepen content is real but uneven.  
+2. Catalog prose remains **generator-enriched** (organ/year section frames + one-shot mechanism banks), not hand-authored specialty text.  
+3. **72 / 113** handcrafted chapters still carry the shared clerkship-integration floor footer; **64 / 113** now also receive injected **Additional mechanism context** from keyword banks.  
 4. Several handcrafted pairs are pedagogically overlapping and should be differentiated or merged in a later editorial pass.
+
+### Enrichment pass (post-audit deepen)
+
+| Change | Effect |
+| --- | --- |
+| `section-frames.ts` | Organ/year-aware frames for Pathophys / Presentation / Dx / Rx |
+| `chapter-writer.ts` | Keyword banks once in Core Pathophysiology; bridge synthesis; salted openers |
+| `withAcademicFloor` | Injects `factualEnrichmentForSeedLesson` before floor/Sources |
+| Seed enrichment cap | Raised 3 → 5; title-gated organ fallback when hits &lt; 2 |
 
 ---
 
