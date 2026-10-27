@@ -1,5 +1,5 @@
 import type { ContentBlock, Lesson, Module } from "@/lib/types/domain";
-import { factualEnrichmentForTopic } from "@/lib/curriculum/catalog/factual-enrichment";
+import { factualEnrichmentForSeedLesson } from "@/lib/curriculum/catalog/factual-enrichment";
 
 const MIN_READING_CHARS = 4000;
 
@@ -48,72 +48,17 @@ function nonReadingBlocks(lesson: Lesson): ContentBlock[] {
   return out;
 }
 
-/** Map seed modules to catalog enrichment category/organ labels. */
-function enrichmentContext(module: Module): {
-  contentCategory: string;
-  organSystem: string;
-} {
-  const id = module.id;
-  if (id === "mod-cell-mol")
-    return { contentCategory: "Cell Biology", organSystem: "Multisystem" };
-  if (id === "mod-cv")
-    return { contentCategory: "Pathophysiology", organSystem: "Cardiovascular" };
-  if (id === "mod-pulm")
-    return { contentCategory: "Pathophysiology", organSystem: "Respiratory" };
-  if (id === "mod-renal")
-    return { contentCategory: "Pathophysiology", organSystem: "Renal / Urinary" };
-  if (id === "mod-gi")
-    return {
-      contentCategory: "Pathophysiology",
-      organSystem: "Gastrointestinal",
-    };
-  if (id === "mod-endo")
-    return { contentCategory: "Pathophysiology", organSystem: "Endocrine" };
-  if (id === "mod-heme")
-    return {
-      contentCategory: "Pathophysiology",
-      organSystem: "Hematopoietic / Lymphoreticular",
-    };
-  if (id === "mod-neuro")
-    return { contentCategory: "Pathophysiology", organSystem: "Nervous System" };
-  if (id === "mod-msk")
-    return {
-      contentCategory: "Pathophysiology",
-      organSystem: "Musculoskeletal",
-    };
-  if (id === "mod-id")
-    return { contentCategory: "Microbiology", organSystem: "Multisystem" };
-  if (id === "mod-im")
-    return { contentCategory: "Internal Medicine", organSystem: "Multisystem" };
-  if (id === "mod-surg")
-    return { contentCategory: "Surgery", organSystem: "Multisystem" };
-  if (id === "mod-peds")
-    return { contentCategory: "Pediatrics", organSystem: "Pediatric" };
-  if (id === "mod-obgyn")
-    return {
-      contentCategory: "Obstetrics & Gynecology",
-      organSystem: "Reproductive",
-    };
-  if (id === "mod-psych")
-    return { contentCategory: "Psychiatry", organSystem: "Behavioral Health" };
-  if (id === "mod-fm")
-    return { contentCategory: "Family Medicine", organSystem: "Multisystem" };
-  return { contentCategory: "Pathophysiology", organSystem: "Multisystem" };
-}
-
 const SOURCES_FOOTER = `
 
 ### Sources
 
-| Guideline / reference | Status |
-| --- | --- |
-| Authoritative society guidance or primary literature for this lesson | REFERENCE_REVIEW_REQUIRED |
+Citations for this lesson are being verified by faculty. Treat doses, numeric cutoffs, and trial statistics as belonging to primary sources and current society guidance — not as standalone orders from this page.
 
-Last reviewed: not yet medically approved. Faculty should attach verified citations before claiming guideline currency. Exact doses, thresholds, and trial statistics belong to primary sources.
+*Faculty marker: attach verified citations in medical review before claiming guideline currency.*
 `;
 
 const HAS_SOURCES_RE =
-  /##?\s*sources\b|##?\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED/i;
+  /##?\s*sources\b|##?\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED|citations for this lesson are being verified/i;
 
 /** Append a REFERENCE_REVIEW_REQUIRED Sources block when missing (no invented citations). */
 export function ensureSourcesFooter(lesson: Lesson): Lesson {
@@ -178,14 +123,9 @@ export function enhanceThinSeedLesson(
   }
 
   const points = collectPoints(lesson);
-  const ctx = enrichmentContext(module);
-  const enrichment = factualEnrichmentForTopic({
+  const enrichment = factualEnrichmentForSeedLesson({
     title: lesson.title,
     points: points.length ? points : [lesson.title],
-    quizExplain: points[0] ?? lesson.title,
-    cardBack: module.title,
-    contentCategory: ctx.contentCategory,
-    organSystem: ctx.organSystem,
   });
 
   const prior = existingReadingMarkdown(lesson);
@@ -217,7 +157,7 @@ By the end of this lesson, you should be able to:
 
 ## How to use this lesson
 
-Start with the basics, work through the mechanism, connect it to patients, then review the key points and take the quiz.
+Start with the original teaching notes, work through the mechanism, connect it to patients, then review the key points and take the quiz.
 `,
     },
     {
@@ -228,13 +168,9 @@ Start with the basics, work through the mechanism, connect it to patients, then 
       sequence: 2,
       bodyMd: `## ${lesson.title} — how it works
 
-### Key points
-
-${enrichment || `Rebuild **${lesson.title}** from first principles: definition → regulation → failure mode → clinical bridge.`}
-
 ### Teaching notes from this lesson
 
-${prior || `Use the module objectives and quiz stems to reconstruct the pathway for **${lesson.title}**.`}
+${prior || `Rebuild **${lesson.title}** from first principles: definition → regulation → failure mode → clinical bridge.`}
 
 ### Control-point checklist
 
@@ -242,6 +178,15 @@ ${(points.length ? points : [lesson.title]).map((p, i) => `### ${i + 1}. ${p}
 
 **${p}.** Place this node in the pathway for **${lesson.title}**, state what increases/decreases its activity, and name the phenotype when it fails. Tie the finding back to **${module.title}** so the mechanism predicts disease rather than remaining abstract.
 `).join("\n")}
+
+${
+  enrichment
+    ? `### Additional context
+
+${enrichment}
+`
+    : ""
+}
 `,
     },
     {
@@ -253,6 +198,10 @@ ${(points.length ? points : [lesson.title]).map((p, i) => `### ${i + 1}. ${p}
       bodyMd: `## Why it matters clinically — ${lesson.title}
 
 Translate each control point into something you can observe in a patient: a symptom, exam finding, lab pattern, imaging clue, or drug effect.
+
+### Mechanism storyline
+
+Teach **${lesson.title}** as one continuous story through these anchors (in order): ${(points.length ? points : [lesson.title]).join(" → ")}. At each step, name the regulated variable, the compensatory response, and the bedside finding that compensation creates. When compensation becomes maladaptive, that is usually where the disease phenotype appears in **${module.title}**.
 
 ### Clinical threads
 

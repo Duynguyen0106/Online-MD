@@ -7,20 +7,20 @@
     "phases": 2,
     "modules": 22,
     "lessons": 884,
-    "contentBlocks": 4343,
+    "contentBlocks": 4352,
     "objectives": 3422,
-    "quizQuestions": 884,
+    "quizQuestions": 890,
     "qbankQuestions": 24,
     "clinicalCases": 24,
     "flashcards": 846,
     "lessonsMissingObjectives": 0,
     "lessonsWithCompressedTitle": 0,
     "lessonsMissingReferenceSection": 0,
-    "guidelineSensitiveLessonCount": 807,
+    "guidelineSensitiveLessonCount": 803,
     "vagueObjectiveCount": 0,
     "titleOverlapPairs": 125,
     "quizRowsNeedingAttention": 0,
-    "quizGuidelineSensitiveOnly": 83,
+    "quizGuidelineSensitiveOnly": 85,
     "conceptFlagCount": 0
   },
   "objectivesPerLessonDistribution": {
@@ -31,7 +31,7 @@
     "6+": 0
   },
   "quizObjectiveCoverage": {
-    "withObjective": 884,
+    "withObjective": 890,
     "withoutObjective": 0
   },
   "qbankObjectiveCoverage": {

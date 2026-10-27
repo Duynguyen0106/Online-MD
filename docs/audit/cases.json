@@ -18,13 +18,15 @@
     "id": "case-endo-1",
     "title": "Polyuria, Polydipsia, and Altered Mentation",
     "moduleId": "mod-endo",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Is this closer to DKA or HHS, and which labs drive your call?",
-      "Outline initial management priorities (ABCs, fluids, electrolytes, insulin timin"
+      "Problem representation: is this closer to DKA or HHS, and which labs drive your ",
+      "Name can’t-miss triggers and threats before focusing only on glucose numbers.",
+      "Outline initial management priorities (ABCs, fluids, electrolytes, insulin timin",
+      "After the first liters of fluid, what reassessment findings tell you the plan is"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 109,
+    "teachingPointsLen": 154,
     "hasPresentation": true
   },
   {
@@ -173,26 +175,30 @@
     "id": "case-renal-2",
     "title": "Peaked T Waves on the Monitor",
     "moduleId": "mod-renal",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "List the three physiologic goals of hyperkalemia therapy in order.",
-      "Which therapies only temporize vs definitively remove potassium?"
+      "Problem representation: what emergency does peaked T waves plus rising QRS width",
+      "Name can’t-miss concurrent threats while you address potassium.",
+      "List the three physiologic goals of hyperkalemia therapy in order, and which ste",
+      "After membrane stabilization and a shift dose, what reassessment tells you the p"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 75,
+    "teachingPointsLen": 111,
     "hasPresentation": true
   },
   {
     "id": "case-neuro-1",
     "title": "Fever and Stiff Neck",
     "moduleId": "mod-neuro",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "What diagnosis are you racing against and why is time critical?",
-      "When might you image before LP, and what must not be delayed?"
+      "Problem representation: what diagnosis are you racing against and why is time cr",
+      "Name can’t-miss complications before the LP logistics debate.",
+      "When might you image before LP, and what must not be delayed?",
+      "After first antibiotics and cultures, what reassessment findings tell you the pl"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 94,
+    "teachingPointsLen": 124,
     "hasPresentation": true
   },
   {
@@ -316,13 +322,15 @@
     "id": "case-id-1",
     "title": "Fever and a New Murmur in an IVDU",
     "moduleId": "mod-id",
-    "stageCount": 2,
+    "stageCount": 4,
     "stages": [
-      "Syndrome and most likely valve?",
-      "Why are blood cultures drawn before antibiotics when stable enough?"
+      "Problem representation: syndrome and most likely valve?",
+      "Name can’t-miss complications before locking into a routine fever workup.",
+      "Why draw blood cultures before antibiotics when the patient is stable enough, an",
+      "After cultures and initial therapy, what reassessment tells you the plan is work"
     ],
     "objectiveCount": 1,
-    "teachingPointsLen": 73,
+    "teachingPointsLen": 115,
     "hasPresentation": true
   }
 ]

@@ -36,7 +36,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**TCA cycle.** Acetyl-CoA condenses with oxaloacetate via citrate synthase. NADH/FADH₂ feed the ETC. Anaplerosis (e.g., pyruvate carboxylase) refills intermediates. PDH and α-KGDH require thiamine, lipoic acid, CoA, FAD, and NAD⁺—linking thiamine deficiency and arsenic teaching to this chapter.`,
   },
   {
-    test: /etc|electron transport|oxidative phosphorylation|complex i|cytochrome|uncoupl/i,
+    test: /\betc\b|electron transport|oxidative phosphorylation|complex\s*i\b|cytochrome|uncoupl/i,
     prose: `**ETC / OXPHOS.** Complexes I–IV transfer electrons to O₂ while pumping protons; ATP synthase uses the proton motive force. Site-specific inhibitors (cyanide/CO at IV; oligomycin at ATP synthase) and uncouplers (heat without ATP) create classic toxidromes. High-demand tissues (CNS, heart) declare injury early.`,
   },
   {
@@ -200,7 +200,7 @@ Glucose is phosphorylated by **hexokinase** (most tissues; low Km; inhibited by 
     prose: `**PE.** Pretest probability guides D-dimer vs CTPA/VQ. Massive PE = hypotension; submassive shows RV strain. Anticoagulate when suspicion is high and bleeding risk allows; systemic thrombolysis is for selected high-risk cases.`,
   },
   {
-    test: /\bstroke\b|\btpa\b|\btnk\b|last known well|\bich\b|intracranial hemorrhage/i,
+    test: /\bstroke\b(?!\s*volume)|\btpa\b|\btnk\b|last known well|\bich\b|intracranial hemorrhage/i,
     prose: `**Stroke.** Last known well, glucose, noncontrast CT to exclude bleed. Thrombolysis is time-bound; LVO may need thrombectomy. BP targets differ around thrombolysis. Do not give antiplatelets until hemorrhage is excluded when reperfusion is planned.`,
   },
   {
@@ -568,5 +568,27 @@ export function factualEnrichmentForTopic(topic: TopicLike): string {
   matchFallback(hits, organ, ORGAN_FALLBACK);
   matchFallback(hits, organ, DEEP_ORGAN);
 
+  return hits.join("\n\n");
+}
+
+/**
+ * Seed-lesson enrichment: keyword hits against title + teaching points only.
+ * Skips always-on category/organ banks (those pad catalog chapters but dilute seeds).
+ * Caps snippets so matched context stays secondary to original teaching notes.
+ */
+export function factualEnrichmentForSeedLesson(topic: {
+  title: string;
+  points: string[];
+}): string {
+  const title = topic.title;
+  const pointsBlob = topic.points.join(" \n ");
+  const hits: string[] = [];
+  for (const snip of [...SNIPPETS, ...DEEP_SNIPPETS]) {
+    // Require a hit on the lesson title or an explicit teaching point — not module/organ labels.
+    if (snip.test.test(title) || snip.test.test(pointsBlob)) {
+      pushUnique(hits, snip.prose);
+    }
+    if (hits.length >= 3) break;
+  }
   return hits.join("\n\n");
 }

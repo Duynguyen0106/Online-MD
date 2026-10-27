@@ -39,7 +39,7 @@ describe("seed-chapter-enhance", () => {
       .flatMap((c) => c.blocks)
       .map((b) => b.bodyMd || "")
       .join("\n");
-    assert.match(body, /REFERENCE_REVIEW_REQUIRED/);
+    assert.match(body, /Sources|citations for this lesson are being verified/i);
   });
 
   it("leaves catalog lessons untouched", () => {
@@ -87,5 +87,26 @@ describe("seed-chapter-enhance", () => {
       }
     }
     assert.ok(n >= 20);
+  });
+
+  it("leads CV electrophysiology with original notes, not ETC/stroke banks", () => {
+    const mod = program.phases
+      .flatMap((p) => p.modules)
+      .find((m) => m.id === "mod-cv");
+    assert.ok(mod);
+    const lesson = mod.lessons.find((l) => l.id === "les-cv-1");
+    assert.ok(lesson);
+    const enhanced = enhanceThinSeedLesson(structuredClone(lesson), mod);
+    const how = enhanced.concepts[0].blocks.find((b) =>
+      b.title?.includes("How it works"),
+    );
+    assert.ok(how?.bodyMd);
+    const idxNotes = how.bodyMd.indexOf("Teaching notes from this lesson");
+    const idxExtra = how.bodyMd.indexOf("Additional context");
+    assert.ok(idxNotes >= 0);
+    if (idxExtra >= 0) assert.ok(idxNotes < idxExtra);
+    assert.doesNotMatch(how.bodyMd, /\*\*ETC \/ OXPHOS\.\*\*/);
+    assert.doesNotMatch(how.bodyMd, /Acute stroke syndromes/);
+    assert.match(how.bodyMd, /phase|action potential|Na|repolar/i);
   });
 });
