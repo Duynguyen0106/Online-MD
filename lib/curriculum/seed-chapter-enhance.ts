@@ -15,13 +15,29 @@ function readingChars(lesson: Lesson): number {
   return n;
 }
 
+/** Prefer short titles over paragraph-length summaries as teach-back anchors. */
+function shortAnchor(text: string, fallback: string): string {
+  const t = text.trim();
+  if (!t) return fallback;
+  // Full sentences make poor list labels — keep a compact lead clause.
+  if (t.length > 80 || /[.!?].+\S/.test(t)) {
+    const clause = t.split(/[.;]/)[0]?.trim() ?? t;
+    return clause.length > 72 ? `${clause.slice(0, 69).trimEnd()}…` : clause;
+  }
+  return t;
+}
+
 function collectPoints(lesson: Lesson): string[] {
   const points: string[] = [];
   for (const c of lesson.concepts) {
-    if (c.summary) points.push(c.summary);
+    // Prefer reading titles (short labels) before concept summaries.
     for (const b of c.blocks) {
-      if (b.blockType === "reading" && b.title) points.push(b.title);
+      if (b.blockType === "reading" && b.title) {
+        points.push(shortAnchor(b.title, lesson.title));
+      }
     }
+    if (c.title) points.push(shortAnchor(c.title, lesson.title));
+    if (c.summary) points.push(shortAnchor(c.summary, c.title || lesson.title));
   }
   return [...new Set(points)].slice(0, 6);
 }
@@ -127,8 +143,9 @@ export function lessonAlreadyTeachesMechanism(lesson: Lesson): boolean {
     /starling|action potential|phase\s*[0-4]|afferent|efferent|filtration fraction|preload|afterload|pamp|damp|anion gap|gram.?stain|territor|acs spectrum|mechanis/i.test(
       body,
     );
+  // Diagram + any real notes (incl. short nephron/ABG/sepsis maps) → light enhance.
   // Diagram stubs with almost no prose still need the full scaffold.
-  if (hasDiagram && (body.length >= 500 || headingCount >= 2)) return true;
+  if (hasDiagram && (body.length >= 200 || headingCount >= 2)) return true;
   if (body.length >= 600 && headingCount >= 2 && mechanismCue) return true;
   if (hasTable && body.length >= 500) return true;
   return false;
@@ -327,11 +344,11 @@ Teach **${lesson.title}** as one continuous story through these anchors (in orde
 3. **Toxic/pharmacologic hit** — Which agents act here?  
 4. **Look-alike** — What is the most important mimic, and what discriminates it?
 
-### Bridge table
+### Clinical bridge — teach-back
 
-| # | Anchor | Clinical prediction |
-| --- | --- | --- |
-${(points.length ? points : [lesson.title]).map((p, i) => `| ${i + 1} | ${p} | Phenotype, lab, imaging, or drug effect when this node fails |`).join("\n")}
+For each anchor below, **you** name one phenotype, lab, imaging clue, or drug effect. This page does not fill that cell — blank prediction columns confuse students into thinking the homework text is the answer.
+
+${(points.length ? points : [lesson.title]).map((p, i) => `${i + 1}. **${p}** — write one clinical consequence yourself.`).join("\n")}
 `,
     },
     {

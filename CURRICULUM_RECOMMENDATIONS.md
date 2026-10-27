@@ -20,6 +20,8 @@
 | Faculty medical review of HIGH pathways | **Still open** — do not invent cutoffs |
 | Grow qbank beyond 24 with sign-off | **Still open** |
 | Remaining 6 two-stage cases | **Backlog** — heme/OB/MSK/surg/neuro residuals |
+| Remove empty Clinical-prediction tables (seed + catalog) | **Done** — teach-back lists; Sources prose |
+| Light-enhance diagram P0s (renal-2/3, id-2) | **Done** |
 
 ---
 

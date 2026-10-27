@@ -1,10 +1,23 @@
 # Medical Content Audit
 
-**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27 · **Fix-everything:** 2026-10-27  
+**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27 · **Fix-everything:** 2026-10-27 · **Structure/tables:** 2026-10-27  
 **Scope:** Live Online MD curriculum graph (seed + expansion waves + 4-year catalog) + MT.vn P0 surfaces  
 **Method:** Inspect-only inventory via `scripts/medical-content-audit.ts` → `docs/audit/*.json`, plus targeted review of cardiovascular, sepsis, VTE, heart-failure pathways, and P0 presentation/competency metadata.  
 **Status:** Structural and educational audit. **Not medical approval.**  
-**Expert re-audit:** [`MEDICAL_EXPERT_AUDIT.md`](MEDICAL_EXPERT_AUDIT.md) (post–fix-everything teaching-quality pass).
+**Expert re-audit:** [`MEDICAL_EXPERT_AUDIT.md`](MEDICAL_EXPERT_AUDIT.md) (chapter structure + table hygiene).
+
+---
+
+## Chapter structure / table hygiene (2026-10-27)
+
+| Change | Detail |
+| --- | --- |
+| Seed Bridge table | Removed `# \| Anchor \| Clinical prediction` placeholders → teach-back list |
+| Catalog Correlation/Working | Removed blank prediction columns → numbered teach-backs |
+| Catalog Sources | Status grid → neutral Sources prose (faculty marker retained) |
+| Light enhance | `les-renal-2`, `les-renal-3`, `les-id-2` skip full scaffold |
+| Kept | `les-cv-1` Phase \| Event \| Key current (real teaching) |
+| Blocks after pass | **4331**; structural zeros **held** |
 
 ---
 
