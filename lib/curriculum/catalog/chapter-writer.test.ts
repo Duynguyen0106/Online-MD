@@ -98,6 +98,58 @@ describe("chapter-writer five-part pedagogy", () => {
     assert.match(md, /Board pearl/);
   });
 
+  it("injects organ-aware section frames and keeps mechanism banks in pathophysiology only", () => {
+    const topic = sampleTopic(3, {
+      key: "acs-enrich",
+      title: "Acute Coronary Syndromes",
+      organSystem: "Cardiovascular",
+      contentCategory: "Pathophysiology",
+      points: [
+        "Thin-cap fibroatheroma",
+        "Platelet cascade",
+        "Occlusive thrombus",
+      ],
+      quizExplain: "Ischemia time and reperfusion strategy dominate.",
+    });
+    const patho = buildChapterPathophysiology(topic);
+    const clinical = buildChapterPresentation(topic);
+    const dx = buildChapterDiagnostics(topic);
+    const rx = buildChapterManagement(topic);
+
+    assert.match(patho, /Continuous mechanism story/);
+    assert.match(patho, /Pathway bridge/);
+    assert.match(clinical, /Recognition script/);
+    assert.match(clinical, /Presentation bridge/);
+    assert.match(dx, /Decision-changing data/);
+    assert.match(dx, /Diagnostic bridge/);
+    assert.match(rx, /Physiologic order of operations/);
+    assert.match(rx, /Management bridge/);
+    assert.match(patho, /perfusion, congestion, ischemia/);
+
+    // Keyword banks appear in pathophysiology; clinical/dx/rx should not re-paste
+    // the same deep bank blocks (dedupe enrichment across sections).
+    const bankMarker = /\*\*[^*]+— textbook core\.\*\*/;
+    const pathoBanks = patho.match(bankMarker)?.length ?? 0;
+    const clinicalBanks = clinical.match(bankMarker)?.length ?? 0;
+    const dxBanks = dx.match(bankMarker)?.length ?? 0;
+    const rxBanks = rx.match(bankMarker)?.length ?? 0;
+    assert.ok(pathoBanks >= 0);
+    assert.equal(clinicalBanks, 0);
+    assert.equal(dxBanks, 0);
+    assert.equal(rxBanks, 0);
+  });
+
+  it("preclerkship presentation uses phenotype bridge frame", () => {
+    const md = buildChapterPresentation(
+      sampleTopic(2, {
+        title: "Cardiac Action Potential",
+        organSystem: "Cardiovascular",
+      }),
+    );
+    assert.match(md, /Phenotype bridge/);
+    assert.doesNotMatch(md, /Recognition script/);
+  });
+
   it("deprecated aliases still resolve without blank prediction columns", () => {
     const topics = [
       sampleTopic(2, {

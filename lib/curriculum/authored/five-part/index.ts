@@ -18,6 +18,7 @@ import { CELL_MOL_FIVE_PART } from "@/lib/curriculum/authored/five-part/cell-mol
 import { P0_DEEP_FIVE_PART } from "@/lib/curriculum/authored/five-part/p0-deep";
 import { WAVE2_DEEP_FIVE_PART } from "@/lib/curriculum/authored/five-part/wave2-deep";
 import { WAVE3_DEEP_FIVE_PART } from "@/lib/curriculum/authored/five-part/wave3-deep";
+import { factualEnrichmentForSeedLesson } from "@/lib/curriculum/catalog/factual-enrichment";
 
 /** Shared floor so deepened chapters clear ≥2000 chars without teach-back noise. */
 const CLERKSHIP_INTEGRATION_FLOOR = `
@@ -35,12 +36,69 @@ Exact doses, numeric diagnostic cutoffs, infusion recipes, ventilator settings, 
 
 const ACADEMIC_FLOOR = 2000;
 
+/** Pull title + teaching headings from an authored markdown chapter for enrichment. */
+function extractTitleAndPoints(body: string): { title: string; points: string[] } {
+  const titleMatch = /^#\s+(.+)$/m.exec(body);
+  const title = titleMatch?.[1]?.trim() ?? "Lesson";
+  const points: string[] = [];
+  for (const m of body.matchAll(/^###\s+(.+)$/gm)) {
+    const h = m[1].trim();
+    if (
+      /^(Sources|Faculty|Self-check|Teach-back|Pitfalls|Pocket|Remember|How the|Differential|Decision|First-line|Toxicity|Disposition|Ready for|USMLE|Scientific|Key mechanism|Control-point|Presentation anchors|Diagnostic nodes|Pharmacologic|Pathway bridge|Presentation bridge|Diagnostic bridge|Management bridge|Continuous mechanism|Recognition script|Phenotype bridge|Decision-changing|Physiologic order|Therapeutics as)/i.test(
+        h,
+      )
+    ) {
+      continue;
+    }
+    if (h.length > 140) continue;
+    points.push(h);
+    if (points.length >= 8) break;
+  }
+  if (points.length < 2) {
+    for (const m of body.matchAll(/\*\*([^*]{8,80})\*\*/g)) {
+      const t = m[1].trim();
+      if (/Year |REFERENCE|Faculty|Board pearl/i.test(t)) continue;
+      if (!points.includes(t)) points.push(t);
+      if (points.length >= 6) break;
+    }
+  }
+  return { title, points: points.length ? points : [title] };
+}
+
+function injectMechanismEnrichment(body: string): string {
+  const { title, points } = extractTitleAndPoints(body);
+  const enrichment = factualEnrichmentForSeedLesson({ title, points });
+  if (!enrichment) return body;
+  // Skip if this bank (or its lead sentence) is already present.
+  const lead = enrichment.slice(0, 72);
+  if (lead && body.includes(lead)) return body;
+
+  const block = `
+
+## Additional mechanism context
+
+${enrichment}
+`;
+
+  if (/^#{1,3}\s+Sources\b/im.test(body)) {
+    return body.replace(/^#{1,3}\s+Sources\b/im, `${block.trim()}\n\n$&`);
+  }
+  if (/Clerkship integration & safety/i.test(body)) {
+    return body.replace(
+      /## Clerkship integration & safety/i,
+      `${block.trim()}\n\n## Clerkship integration & safety`,
+    );
+  }
+  return `${body.trimEnd()}${block}`;
+}
+
 function withAcademicFloor(
   chapters: Record<string, string>,
 ): Record<string, string> {
   const out: Record<string, string> = {};
   for (const [id, body] of Object.entries(chapters)) {
-    let next = body.trimEnd();
+    void id;
+    let next = injectMechanismEnrichment(body.trimEnd());
     if (next.length < ACADEMIC_FLOOR) {
       next = `${next}${CLERKSHIP_INTEGRATION_FLOOR}`;
     }

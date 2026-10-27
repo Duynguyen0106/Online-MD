@@ -1,9 +1,13 @@
 import type { CatalogTopic } from "@/lib/curriculum/catalog/types";
-import {
-  factualEnrichment,
-  factualEnrichmentForTopic,
-} from "@/lib/curriculum/catalog/factual-enrichment";
+import { factualEnrichmentForTopic } from "@/lib/curriculum/catalog/factual-enrichment";
 import { figuresMarkdownForTopic } from "@/lib/curriculum/catalog/chapter-figures";
+import {
+  diagnosticFrame,
+  managementFrame,
+  pathophysFrame,
+  presentationFrame,
+  topicSalt,
+} from "@/lib/curriculum/catalog/section-frames";
 
 function yearLabel(year: 1 | 2 | 3 | 4): string {
   if (year === 1) return "Year 1 — Mechanisms & Foundations";
@@ -16,9 +20,41 @@ function isClinical(year: 1 | 2 | 3 | 4): boolean {
   return year >= 3;
 }
 
+function pickOpener(openers: string[], topic: CatalogTopic, index: number): string {
+  return openers[topicSalt(topic, index + 17) % openers.length];
+}
+
+function bridgeSynthesis(
+  topic: CatalogTopic,
+  section: "pathophys" | "clinical" | "diagnostic" | "management",
+): string {
+  const chain = topic.points.join(" → ");
+  const title = topic.title;
+  const organ = topic.organSystem;
+  if (section === "pathophys") {
+    return `### Pathway bridge
+
+One continuous mechanism for **${title}** runs: ${chain}. Do not leave any node as an isolated buzzword—each step should predict the next regulator, failure mode, or phenotype inside the **${organ}** map.`;
+  }
+  if (section === "clinical") {
+    return `### Presentation bridge
+
+At the bedside, the same spine reads as a timed story: ${chain}. For **${title}**, ask which finding arrives first, which escalates acuity, and which mimic would share early features in **${organ}** disease.`;
+  }
+  if (section === "diagnostic") {
+    return `### Diagnostic bridge
+
+Map tests onto the chapter spine—${chain}—so each result confirms, revises, or falsifies a node in **${title}**. Prefer the smallest panel that changes the branch over an exhaustive **${organ}** workup.`;
+  }
+  return `### Management bridge
+
+Therapy should walk the spine in reverse physiologic order: ${chain}. Name the class that acts on each critical node of **${title}**, one on-target toxicity, and the reassessment finding that would prove the pathway wrong in **${organ}** care.`;
+}
+
 /**
  * Turn a compact teaching bullet into textbook-style prose.
  * Declarative content only — no “fill in the blank” study prompts.
+ * Keyword banks live once at topic level (pathophysiology), not on every point × section.
  */
 function proseForPoint(
   point: string,
@@ -31,10 +67,11 @@ function proseForPoint(
   const organ = topic.organSystem;
   const cat = topic.contentCategory;
   const clinical = isClinical(topic.year);
-  const localFacts = factualEnrichment(`${point} ${title}`);
-  const factsBlock = localFacts
-    ? `${localFacts}\n\n`
-    : `**${point}** is a primary teaching node in **${title}**. State what increases or decreases its activity, what fails when it is lost, and what bedside or laboratory finding follows.\n\n`;
+  const neighbors = topic.points.filter((p) => p !== point);
+  const neighborHint =
+    neighbors.length > 0
+      ? `Neighbor nodes in this chapter include: ${neighbors.slice(0, 3).join("; ")}.`
+      : `Hold this node against the chapter emphasis: ${topic.quizExplain}`;
 
   if (section === "pathophys") {
     const openers = [
@@ -42,13 +79,15 @@ function proseForPoint(
       `**${point}.** Regulation decides whether this node supports homeostasis or produces disease in **${title}**. Physiologic “on” and “off” signals belong in the same paragraph as the definition.`,
       `**${point}.** Failure at this node should predict a nameable phenotype—clinical finding, lab pattern, imaging clue, or drug effect—inside the **${organ}** map.`,
       `**${point}.** Discriminate this node from its neighbor in **${title}** by compartment, cofactor, hormonal state, or the syndrome that appears when only this step is hit.`,
+      `**${point}.** Treat toxins and therapeutics that act here as pathway experiments: name the molecular target and the expected physiologic change before any regimen details.`,
+      `**${point}.** When compensation at this node becomes maladaptive, that is usually where **${title}** declares itself clinically in **${organ}** teaching.`,
     ];
-    const opener = openers[Math.min(index, openers.length - 1)];
+    const opener = pickOpener(openers, topic, index);
     return `### ${n}. ${point}
 
 ${opener}
 
-${factsBlock}Hold the control point, its regulators, and one phenotype as a single teachable paragraph. Toxins and therapeutics that act here are experiments on the pathway: name the target and the expected physiologic change (exact regimens belong to current guidelines).
+State what increases or decreases activity at **${point}**, what fails when it is lost, and one bedside or laboratory finding that follows. ${neighborHint}
 `;
   }
 
@@ -59,19 +98,23 @@ ${factsBlock}Hold the control point, its regulators, and one phenotype as a sing
           `**${point}.** Once the syndrome is on the board, this checkpoint decides which symptoms and exam findings are decision-changing versus decorative.`,
           `**${point}.** Later in the encounter, this finding prevents premature closure—ask what look-alike in **${organ}** disease would share early features.`,
           `**${point}.** At reassessment, this presentation clue usually reveals whether the pathway identification was correct.`,
+          `**${point}.** Vital-sign trajectory around this finding often outranks a single normal snapshot when **${title}** is evolving.`,
+          `**${point}.** Pair this presentation clue with one red-flag alternative that would force escalation in the next 15 minutes.`,
         ]
       : [
           `**${point}.** Translate this mechanism node into what the patient reports and what you can elicit on exam when **${title}** is active.`,
           `**${point}.** Name the symptom–sign pair that follows when this control point fails inside **${organ}** disease.`,
           `**${point}.** Contrast the phenotype of loss-of-function versus gain-of-function at this node.`,
           `**${point}.** Identify the bedside finding that would force you to revise the mechanism story for **${title}**.`,
+          `**${point}.** Convert regulation at this node into a timed clinical story—onset, progression, and associated features.`,
+          `**${point}.** Ask which exam maneuver raises or lowers the probability of **${title}** versus its closest mimic.`,
         ];
-    const opener = openers[Math.min(index, openers.length - 1)];
+    const opener = pickOpener(openers, topic, index);
     return `### ${n}. ${point}
 
 ${opener}
 
-${factsBlock}Build a hypothesis-driven history and exam: every element should support or weaken **${title}** or a can’t-miss alternative in the **${organ}** domain.
+Build a hypothesis-driven history and exam around **${point}**: every element should support or weaken **${title}** or a can’t-miss alternative in the **${organ}** domain. ${neighborHint}
 `;
   }
 
@@ -82,19 +125,23 @@ ${factsBlock}Build a hypothesis-driven history and exam: every element should su
           `**${point}.** For this rule, know the if/then: *if A, do X; if B, do Y*. Decorative labs delay care.`,
           `**${point}.** Imaging and ECG/pathology correlation should map to the mechanism of **${title}**, not to a shopping list.`,
           `**${point}.** Reassessment labs are part of diagnosis: the wrong trajectory means the pathway was misidentified.`,
+          `**${point}.** Bundle the first panel so results that matter for **${point}** return together when minutes matter.`,
+          `**${point}.** Pre-commit to the branch this result would open before you order it for **${title}**.`,
         ]
       : [
           `**${point}.** Ask which laboratory or imaging result must rise, fall, or redistribute if this mechanism node is correct.`,
           `**${point}.** Treat diagnostics as experiments on **${title}**: expected pattern → revision rule if the pattern fails.`,
           `**${point}.** Discriminating studies separate this pathway from its closest look-alike in **${organ}** teaching.`,
           `**${point}.** Pathology or ECG correlation should land on a named structure or current when this node fails.`,
+          `**${point}.** Prefer one falsifying study for **${point}** over an unfocused panel that never revises the story.`,
+          `**${point}.** Link the expected result for **${point}** to the phenotype you would teach at the board.`,
         ];
-    const opener = openers[Math.min(index, openers.length - 1)];
+    const opener = pickOpener(openers, topic, index);
     return `### ${n}. ${point}
 
 ${opener}
 
-${factsBlock}Prefer a short decision-changing panel over exhaustive testing. Exact cutoffs and institutional pathways belong to primary sources and current society guidance.
+Prefer a short decision-changing panel tied to **${point}** over exhaustive testing. Exact cutoffs and institutional pathways belong to primary sources and current society guidance. ${neighborHint}
 `;
   }
 
@@ -105,19 +152,25 @@ ${factsBlock}Prefer a short decision-changing panel over exhaustive testing. Exa
         `**${point}.** Map this rule to a drug class or intervention class—mechanism of action first, then major on-target toxicities.`,
         `**${point}.** Sequencing matters: name what must precede the next agent, and what finding forces escalation.`,
         `**${point}.** Disposition and reassessment clocks are management, not afterthoughts, for **${organ}** presentations of **${title}**.`,
+        `**${point}.** Tie this intervention to a physiologic goal (preload, afterload, rate, inflammation, source control, obstruction).`,
+        `**${point}.** Name the monitoring need that proves this step helped—or that the pathway for **${title}** was wrong.`,
       ]
     : [
         `**${point}.** Name the therapeutic class that acts at this node and the expected physiologic change in **${title}**.`,
         `**${point}.** Pair every mechanism-targeted therapy with its major on-target toxicity or monitoring need.`,
         `**${point}.** Distinguish disease-modifying therapy from supportive care for congestion, perfusion, or inflammation.`,
         `**${point}.** Hold conceptual first-line thinking; verify exact regimens, dosing, and sequencing against current guidelines before clinical use.`,
+        `**${point}.** Therapy reverses the pathway at **${point}**: target → physiologic change → clinical endpoint → toxicity.`,
+        `**${point}.** Separate class identity from standing-order details—this page teaches mechanism, not institutional recipes.`,
       ];
-  const opener = openers[Math.min(index, openers.length - 1)];
+  const opener = pickOpener(openers, topic, index);
   return `### ${n}. ${point}
 
 ${opener}
 
-${factsBlock}*Faculty marker: REFERENCE_REVIEW_REQUIRED — do not treat this chapter as a standing order set. Exact doses, durations, and numeric cutoffs require primary sources.*
+Hold conceptual first-line thinking for **${point}**; verify exact regimens elsewhere. ${neighborHint}
+
+*Faculty marker: REFERENCE_REVIEW_REQUIRED — do not treat this chapter as a standing order set. Exact doses, durations, and numeric cutoffs require primary sources.*
 `;
 }
 
@@ -170,6 +223,8 @@ export function buildChapterPathophysiology(topic: CatalogTopic): string {
 
   return `## 1. Core Pathophysiology — ${topic.title}
 
+${pathophysFrame(topic)}
+
 ### Scientific / physiologic frame
 
 A regulated process in **${topic.organSystem}** ${topic.contentCategory.toLowerCase()} maintains homeostasis; disease appears when the process is deficient, excessive, mistimed, or mislocalized. **${topic.title}** develops cellular/molecular mechanisms, hemodynamics, or biochemistry in chapter form. Each heading below is a major control point.
@@ -181,6 +236,8 @@ ${figuresBlock}
 ### Control-point sections
 
 ${sections}
+
+${bridgeSynthesis(topic, "pathophys")}
 
 ### Synthesis line
 
@@ -203,6 +260,8 @@ export function buildChapterPresentation(topic: CatalogTopic): string {
 
   return `## 2. Clinical Presentation — ${topic.title}
 
+${presentationFrame(topic)}
+
 ### How the patient looks
 
 ${
@@ -223,6 +282,8 @@ Carry three lines on the board:
 
 ${sections}
 
+${bridgeSynthesis(topic, "clinical")}
+
 ### Teach-back
 
 ${teachBack}
@@ -239,6 +300,8 @@ export function buildChapterDiagnostics(topic: CatalogTopic): string {
 
   return `## 3. Diagnostic Approach — ${topic.title}
 
+${diagnosticFrame(topic)}
+
 ### High-yield data strategy
 
 Choose tests that change management. For each major result, know the branch: *if A, do X; if B, do Y*. Correlate labs, imaging, and ECG/pathology with the mechanism of **${topic.title}** rather than collecting an unfocused panel.
@@ -254,6 +317,8 @@ Choose tests that change management. For each major result, know the branch: *if
 ### Diagnostic nodes
 
 ${sections}
+
+${bridgeSynthesis(topic, "diagnostic")}
 
 ### Chapter rules — teach-back
 
@@ -277,6 +342,8 @@ export function buildChapterManagement(topic: CatalogTopic): string {
 
   return `## 4. Management & Pharmacology — ${topic.title}
 
+${managementFrame(topic)}
+
 ### First-line thinking (conceptual)
 
 ${
@@ -288,6 +355,8 @@ ${
 ### Pharmacologic / interventional nodes
 
 ${sections}
+
+${bridgeSynthesis(topic, "management")}
 
 ### Toxicity & monitoring literacy
 

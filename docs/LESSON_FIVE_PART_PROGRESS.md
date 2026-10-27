@@ -44,6 +44,8 @@
 
 All 771 catalog lessons receive the five-part spine automatically when the curriculum graph is built (overview + sections 1–5 + case vignette).
 
+**Enrichment pass:** `section-frames.ts` injects organ/year-aware Clinical · Diagnostic · Management frames; keyword banks from `factualEnrichmentForTopic` appear once in Core Pathophysiology (not re-pasted on every point × section); bridge-synthesis paragraphs tie all teaching points into one arc.
+
 ## Deepen passes
 
 | Pass | File | Scope |
@@ -53,6 +55,8 @@ All 771 catalog lessons receive the five-part spine automatically when the curri
 | Wave 3 | `wave3-deep.ts` | FM / Psych / Cell-mol / Heme / Neuro / MSK / GI / Endo / Pulm / Renal remaining |
 
 **Target:** every handcrafted authored chapter ≥2000 characters of five-part academic prose (no teach-back padding).
+
+**Enrichment:** `withAcademicFloor` injects `factualEnrichmentForSeedLesson` (cap 5; title-gated organ fallback) as **Additional mechanism context** before the clerkship safety floor / Sources footer.
 
 ## Maintenance
 

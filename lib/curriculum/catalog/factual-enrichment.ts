@@ -593,6 +593,7 @@ function seedRequiresTitle(snipTest: RegExp): boolean {
  * Skips always-on category/organ banks (those pad catalog chapters but dilute seeds).
  * Caps snippets so matched context stays secondary to original teaching notes.
  * Loose hematology/ethics banks require a title match (E3).
+ * Lightweight organ fallback applies only when the **title** matches an organ keyword.
  */
 export function factualEnrichmentForSeedLesson(topic: {
   title: string;
@@ -607,7 +608,16 @@ export function factualEnrichmentForSeedLesson(topic: {
     if (!titleHit && !pointsHit) continue;
     if (!titleHit && seedRequiresTitle(snip.test)) continue;
     pushUnique(hits, snip.prose);
-    if (hits.length >= 3) break;
+    if (hits.length >= 5) break;
+  }
+  // Title-gated organ frame only — never dump category banks onto unrelated seeds.
+  if (hits.length < 2) {
+    for (const fb of ORGAN_FALLBACK) {
+      if (fb.test.test(title)) {
+        pushUnique(hits, fb.prose);
+        break;
+      }
+    }
   }
   return hits.join("\n\n");
 }
