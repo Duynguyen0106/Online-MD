@@ -10,8 +10,15 @@ import { FOUR_YEAR_TOPICS } from "@/lib/curriculum/catalog/topics-generated";
 describe("authored five-part handcrafted chapters", () => {
   it("registers CV + pulm handcrafted lessons with five-part headings", () => {
     const ids = Object.keys(AUTHORED_FIVE_PART).sort();
-    assert.equal(ids.length, 15);
-    assert.ok(ids.every((id) => id.startsWith("les-cv-") || id.startsWith("les-pulm-")));
+    assert.equal(ids.length, 23);
+    assert.ok(
+      ids.every(
+        (id) =>
+          id.startsWith("les-cv-") ||
+          id.startsWith("les-pulm-") ||
+          id.startsWith("les-renal-"),
+      ),
+    );
     for (const body of Object.values(AUTHORED_FIVE_PART)) {
       assert.match(body, /## 1\. Core Pathophysiology/);
       assert.match(body, /## 2\. Clinical Presentation/);

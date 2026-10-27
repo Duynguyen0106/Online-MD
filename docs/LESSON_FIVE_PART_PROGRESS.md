@@ -23,7 +23,7 @@
 | --- | ---: | --- |
 | mod-cv | 8 | **Done** (`cv.ts`: les-cv-1…8) |
 | mod-pulm | 7 | **Done** (`pulm.ts`: les-pulm-1…7) |
-| mod-renal | 8 | Pending |
+| mod-renal | 8 | **Done** (`renal.ts`: les-renal-1…8) |
 | mod-gi | 6 | Pending |
 | mod-endo | 6 | Pending |
 | mod-heme | 7 | Pending |
@@ -44,4 +44,4 @@ All 771 catalog lessons receive the five-part spine automatically when the curri
 
 ## Next pass
 
-Author `lib/curriculum/authored/five-part/renal.ts` (les-renal-1…8), register in `authored/five-part/index.ts`, then continue module-by-module.
+Author `lib/curriculum/authored/five-part/gi.ts` next, then endo → heme → remaining clerkship modules.

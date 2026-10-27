@@ -1,11 +1,13 @@
 import type { ContentBlock, Lesson, Module } from "@/lib/types/domain";
 import { CV_FIVE_PART } from "@/lib/curriculum/authored/five-part/cv";
 import { PULM_FIVE_PART } from "@/lib/curriculum/authored/five-part/pulm";
+import { RENAL_FIVE_PART } from "@/lib/curriculum/authored/five-part/renal";
 
 /** Hand-authored five-part chapter bodies keyed by lesson id. */
 export const AUTHORED_FIVE_PART: Record<string, string> = {
   ...CV_FIVE_PART,
   ...PULM_FIVE_PART,
+  ...RENAL_FIVE_PART,
 };
 
 const SOURCES_FOOTER_RE =
