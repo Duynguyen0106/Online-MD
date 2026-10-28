@@ -1,0 +1,1570 @@
+{
+  "generatedAt": "2026-10-28T14:19:44.534Z",
+  "disclaimer": "Heuristic pathology depth audit vs public USMLE-style classic topics. Does NOT use or reproduce any copyrighted textbook (including Harsh Mohan). Not medical approval.",
+  "summary": {
+    "dedicated": 24,
+    "embedded": 5,
+    "thin": 1,
+    "missing": 0
+  },
+  "missingOrThin": [
+    {
+      "id": "mi-timeline",
+      "title": "MI morphologic timeline",
+      "depth": "thin",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 1,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 1
+    }
+  ],
+  "embedded": [
+    {
+      "id": "amyloidosis",
+      "title": "Amyloidosis",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 26,
+      "bodyHitTopics": 5,
+      "incidentalBodyLessons": 26
+    },
+    {
+      "id": "carcinogenesis",
+      "title": "Chemical / radiation / microbial carcinogenesis",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 122,
+      "bodyHitTopics": 8,
+      "incidentalBodyLessons": 122
+    },
+    {
+      "id": "paraneoplastic",
+      "title": "Paraneoplastic syndromes",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 4,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 4
+    },
+    {
+      "id": "skin-tumors",
+      "title": "Skin tumors (BCC/SCC/melanoma)",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 6,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 6
+    },
+    {
+      "id": "cell-adaptations",
+      "title": "Cellular adaptations suite",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 333,
+      "bodyHitTopics": 6,
+      "incidentalBodyLessons": 333
+    }
+  ],
+  "dedicated": [
+    {
+      "id": "calcification",
+      "title": "Pathologic calcification",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-calcify",
+          "title": "Pathologic Calcification",
+          "catalog": true,
+          "chars": 19616
+        }
+      ],
+      "dedicatedTopics": [
+        "Pathologic Calcification"
+      ],
+      "bodyHitLessons": 19,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 18
+    },
+    {
+      "id": "pigments",
+      "title": "Endogenous pigments (hemosiderin, lipofuscin, melanin, bilirubin)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-pigments",
+          "title": "Pathologic Pigments & Storage",
+          "catalog": true,
+          "chars": 17505
+        }
+      ],
+      "dedicatedTopics": [
+        "Pathologic Pigments & Storage"
+      ],
+      "bodyHitLessons": 53,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 52
+    },
+    {
+      "id": "edema-types",
+      "title": "Edema mechanisms (hydrostatic/oncotic/lymphatic)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-path-hemodynamic",
+          "title": "Edema, Congestion, Shock Pathology",
+          "catalog": true,
+          "chars": 26287
+        },
+        {
+          "id": "les-pulm-4",
+          "title": "ARDS & Pulmonary Edema Distinctions",
+          "catalog": false,
+          "chars": 15080
+        },
+        {
+          "id": "les-cat-y1-imm-allergy2",
+          "title": "Urticaria Angioedema Anaphylaxis Spectrum",
+          "catalog": true,
+          "chars": 22071
+        },
+        {
+          "id": "les-cat-y4-peds-dka-cerebral",
+          "title": "Pediatric DKA Cerebral Edema",
+          "catalog": true,
+          "chars": 28453
+        }
+      ],
+      "dedicatedTopics": [
+        "Edema, Congestion, Shock Pathology",
+        "Urticaria Angioedema Anaphylaxis Spectrum",
+        "Pediatric DKA Cerebral Edema"
+      ],
+      "bodyHitLessons": 325,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 321
+    },
+    {
+      "id": "infarct-red-white",
+      "title": "Red vs white infarct",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-path-thrombosis-path",
+          "title": "Thrombosis, Embolism & Infarction Pathology",
+          "catalog": true,
+          "chars": 19970
+        }
+      ],
+      "dedicatedTopics": [
+        "Thrombosis, Embolism & Infarction Pathology"
+      ],
+      "bodyHitLessons": 2,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 1
+    },
+    {
+      "id": "shock-stages",
+      "title": "Shock stages / morphology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-path-hemodynamic",
+          "title": "Edema, Congestion, Shock Pathology",
+          "catalog": true,
+          "chars": 26287
+        },
+        {
+          "id": "les-cv-4",
+          "title": "Shock Classification by Mechanism",
+          "catalog": false,
+          "chars": 13502
+        },
+        {
+          "id": "les-cat-y2-cv-shock-micro",
+          "title": "Shock Microcirculation & Lactate",
+          "catalog": true,
+          "chars": 31574
+        },
+        {
+          "id": "les-cat-y4-im-icu-shock",
+          "title": "ICU Shock Teams & Monitoring",
+          "catalog": true,
+          "chars": 19885
+        }
+      ],
+      "dedicatedTopics": [
+        "Shock Microcirculation & Lactate",
+        "ICU Shock Teams & Monitoring",
+        "Edema, Congestion, Shock Pathology",
+        "Shock Differentiation at the Bedside"
+      ],
+      "bodyHitLessons": 315,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 307
+    },
+    {
+      "id": "grading-staging",
+      "title": "Tumor grading vs staging",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-renal-6",
+          "title": "CKD Staging & Complications",
+          "catalog": false,
+          "chars": 12561
+        },
+        {
+          "id": "les-cat-y4-gyn-onc-staging",
+          "title": "Gyn Oncology Staging Mindset",
+          "catalog": true,
+          "chars": 21084
+        },
+        {
+          "id": "les-cat-y3-fm-ckd",
+          "title": "CKD Staging in Primary Care",
+          "catalog": true,
+          "chars": 21735
+        }
+      ],
+      "dedicatedTopics": [
+        "CKD Staging in Primary Care",
+        "Gyn Oncology Staging Mindset"
+      ],
+      "bodyHitLessons": 147,
+      "bodyHitTopics": 7,
+      "incidentalBodyLessons": 144
+    },
+    {
+      "id": "hypersensitivity-I-IV",
+      "title": "Hypersensitivity types I–IV",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-immunopath2",
+          "title": "Hypersensitivity Tissue Examples",
+          "catalog": true,
+          "chars": 20792
+        },
+        {
+          "id": "les-cat-y1-imm-hypersense",
+          "title": "Hypersensitivity Types I–IV",
+          "catalog": true,
+          "chars": 17392
+        }
+      ],
+      "dedicatedTopics": [
+        "Hypersensitivity Types I–IV",
+        "Hypersensitivity Tissue Examples"
+      ],
+      "bodyHitLessons": 99,
+      "bodyHitTopics": 12,
+      "incidentalBodyLessons": 97
+    },
+    {
+      "id": "transplant-rejection",
+      "title": "Transplant rejection types",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-ren-transplant",
+          "title": "Transplant Kidney Physiology Concepts",
+          "catalog": true,
+          "chars": 17878
+        },
+        {
+          "id": "les-cat-y2-id-transplant-inf",
+          "title": "Infections After Solid Organ Transplant",
+          "catalog": true,
+          "chars": 18576
+        },
+        {
+          "id": "les-cat-y1-imm-transplant",
+          "title": "Transplant Rejection Timing",
+          "catalog": true,
+          "chars": 18723
+        },
+        {
+          "id": "les-cat-y3-surg-transplant-surg",
+          "title": "Transplant Basics for Students",
+          "catalog": true,
+          "chars": 19617
+        }
+      ],
+      "dedicatedTopics": [
+        "Transplant Rejection Timing",
+        "Transplant Basics for Students",
+        "Transplant Surgery Exposure",
+        "Transplant Kidney Physiology Concepts"
+      ],
+      "bodyHitLessons": 805,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 799
+    },
+    {
+      "id": "tb-primary-secondary",
+      "title": "Primary vs secondary TB morphology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-pulm-tb-immuno",
+          "title": "TB Granuloma Immunology",
+          "catalog": true,
+          "chars": 17861
+        },
+        {
+          "id": "les-id-6",
+          "title": "Tuberculosis — Latent vs Active",
+          "catalog": false,
+          "chars": 12021
+        },
+        {
+          "id": "les-cat-y1-id-mycobacteria2",
+          "title": "TB Diagnostics & Latency Biology",
+          "catalog": true,
+          "chars": 18859
+        }
+      ],
+      "dedicatedTopics": [
+        "TB Granuloma Immunology",
+        "TB Diagnostics & Latency Biology"
+      ],
+      "bodyHitLessons": 302,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 299
+    },
+    {
+      "id": "atherosclerosis-morph",
+      "title": "Atherosclerosis morphology / complications",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cv-7",
+          "title": "Atherosclerosis to Plaque Rupture",
+          "catalog": false,
+          "chars": 13118
+        }
+      ],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 2,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 1
+    },
+    {
+      "id": "glomerular-patterns",
+      "title": "Nephritic vs nephrotic patterns",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-renal-7",
+          "title": "Nephritic vs Nephrotic Syndromes",
+          "catalog": false,
+          "chars": 12765
+        },
+        {
+          "id": "les-cat-y2-ren-nephrotic-detail",
+          "title": "Nephrotic Syndrome Mechanisms",
+          "catalog": true,
+          "chars": 18052
+        },
+        {
+          "id": "les-cat-y2-ren-nephritic-detail",
+          "title": "Nephritic Syndrome Mechanisms",
+          "catalog": true,
+          "chars": 18505
+        }
+      ],
+      "dedicatedTopics": [
+        "Nephrotic Syndrome Mechanisms",
+        "Nephritic Syndrome Mechanisms"
+      ],
+      "bodyHitLessons": 53,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 50
+    },
+    {
+      "id": "cirrhosis-morph",
+      "title": "Cirrhosis / hepatic failure morphology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-gi-3",
+          "title": "Portal Hypertension & Cirrhosis Complications",
+          "catalog": false,
+          "chars": 13025
+        },
+        {
+          "id": "les-im-7",
+          "title": "Cirrhosis Decompensation on the Wards",
+          "catalog": false,
+          "chars": 13175
+        },
+        {
+          "id": "les-cat-y3-im-cirrhosis-ward",
+          "title": "Cirrhosis Ward Management",
+          "catalog": true,
+          "chars": 20523
+        }
+      ],
+      "dedicatedTopics": [
+        "Cirrhosis Ward Management"
+      ],
+      "bodyHitLessons": 38,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 35
+    },
+    {
+      "id": "ibd-compare",
+      "title": "Crohn vs UC pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-gi-6",
+          "title": "IBD — Crohn vs Ulcerative Colitis",
+          "catalog": false,
+          "chars": 12435
+        },
+        {
+          "id": "les-cat-y2-gi-ibd-path",
+          "title": "IBD Immunopathology",
+          "catalog": true,
+          "chars": 17426
+        }
+      ],
+      "dedicatedTopics": [
+        "IBD Immunopathology"
+      ],
+      "bodyHitLessons": 2,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 0
+    },
+    {
+      "id": "lung-obstructive",
+      "title": "Obstructive vs restrictive lung pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-pulm-2",
+          "title": "Obstructive & Restrictive Patterns",
+          "catalog": false,
+          "chars": 12429
+        },
+        {
+          "id": "les-pulm-5",
+          "title": "Asthma & COPD Mechanisms",
+          "catalog": false,
+          "chars": 13067
+        },
+        {
+          "id": "les-cat-y2-pulm-obstruct-restrict",
+          "title": "Obstructive vs Restrictive Patterns",
+          "catalog": true,
+          "chars": 19350
+        },
+        {
+          "id": "les-cat-y2-pulm-copd-path",
+          "title": "COPD — Emphysema & Chronic Bronchitis",
+          "catalog": true,
+          "chars": 18509
+        }
+      ],
+      "dedicatedTopics": [
+        "Obstructive vs Restrictive Patterns",
+        "COPD — Emphysema & Chronic Bronchitis",
+        "Interstitial Lung Disease Patterns",
+        "COPD Exacerbation Inpatient Care"
+      ],
+      "bodyHitLessons": 374,
+      "bodyHitTopics": 12,
+      "incidentalBodyLessons": 367
+    },
+    {
+      "id": "anemia-class",
+      "title": "Anemia classification (production/destruction/loss)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-heme-1",
+          "title": "Approach to Anemia",
+          "catalog": false,
+          "chars": 12169
+        },
+        {
+          "id": "les-heme-3",
+          "title": "Anemia Classification Framework",
+          "catalog": false,
+          "chars": 12606
+        },
+        {
+          "id": "les-cat-y2-heme-anemia-micro",
+          "title": "Microcytic Anemia Mechanisms",
+          "catalog": true,
+          "chars": 20440
+        },
+        {
+          "id": "les-cat-y2-heme-anemia-macro",
+          "title": "Macrocytic Anemia Mechanisms",
+          "catalog": true,
+          "chars": 19123
+        }
+      ],
+      "dedicatedTopics": [
+        "Microcytic Anemia Mechanisms",
+        "Macrocytic Anemia Mechanisms",
+        "Anemia Workup on Medicine"
+      ],
+      "bodyHitLessons": 169,
+      "bodyHitTopics": 21,
+      "incidentalBodyLessons": 164
+    },
+    {
+      "id": "leukemia-lymphoma",
+      "title": "Leukemia / lymphoma frameworks",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-heme-6",
+          "title": "Acute Leukemia Recognition",
+          "catalog": false,
+          "chars": 12874
+        },
+        {
+          "id": "les-cat-y2-heme-lymphoma",
+          "title": "Lymphoma Biology Hodgkin vs NHL",
+          "catalog": true,
+          "chars": 17587
+        }
+      ],
+      "dedicatedTopics": [
+        "Lymphoma Biology Hodgkin vs NHL"
+      ],
+      "bodyHitLessons": 884,
+      "bodyHitTopics": 106,
+      "incidentalBodyLessons": 882
+    },
+    {
+      "id": "diabetes-morph",
+      "title": "Diabetes mellitus pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-endo-6",
+          "title": "Diabetes Chronic Complications",
+          "catalog": false,
+          "chars": 12051
+        },
+        {
+          "id": "les-cat-y2-endo-dm-path",
+          "title": "Diabetes Mellitus Mechanisms",
+          "catalog": true,
+          "chars": 17944
+        },
+        {
+          "id": "les-cat-y3-peds-diabetes-new",
+          "title": "New-Onset Pediatric Diabetes",
+          "catalog": true,
+          "chars": 20628
+        },
+        {
+          "id": "les-cat-y3-ob-gdm",
+          "title": "Gestational Diabetes Care",
+          "catalog": true,
+          "chars": 18116
+        }
+      ],
+      "dedicatedTopics": [
+        "Diabetes Mellitus Mechanisms",
+        "Outpatient Diabetes Care",
+        "New-Onset Pediatric Diabetes",
+        "Gestational Diabetes Care"
+      ],
+      "bodyHitLessons": 337,
+      "bodyHitTopics": 21,
+      "incidentalBodyLessons": 330
+    },
+    {
+      "id": "thyroid-path",
+      "title": "Thyroid pathology (goiter, Graves, Hashimoto, neoplasm)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-endo-1",
+          "title": "Thyroid Axis & Clinical Patterns",
+          "catalog": false,
+          "chars": 12036
+        },
+        {
+          "id": "les-endo-3",
+          "title": "Thyroid Emergencies",
+          "catalog": false,
+          "chars": 12422
+        },
+        {
+          "id": "les-cat-y2-endo-thyroid-phys",
+          "title": "Thyroid Hormone Synthesis & Action",
+          "catalog": true,
+          "chars": 18849
+        },
+        {
+          "id": "les-cat-y2-endo-thyroid-disease",
+          "title": "Hyper/Hypothyroid Pathophysiology",
+          "catalog": true,
+          "chars": 17533
+        }
+      ],
+      "dedicatedTopics": [
+        "Thyroid Hormone Synthesis & Action",
+        "Hyper/Hypothyroid Pathophysiology",
+        "Thyroid/Parathyroid Surgical Disease",
+        "Neck Triangles & Thyroid Anatomy"
+      ],
+      "bodyHitLessons": 9,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 0
+    },
+    {
+      "id": "breast-ca",
+      "title": "Breast carcinoma pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-anat-breast",
+          "title": "Breast Anatomy & Lymphatics",
+          "catalog": true,
+          "chars": 17688
+        },
+        {
+          "id": "les-cat-y3-surg-breast",
+          "title": "Breast Disease Surgical Framework",
+          "catalog": true,
+          "chars": 20931
+        },
+        {
+          "id": "les-cat-y3-surg-breast-mass",
+          "title": "Breast Mass Triple Assessment",
+          "catalog": true,
+          "chars": 23261
+        },
+        {
+          "id": "les-cat-y3-ob-breast-obgyn",
+          "title": "Breast Care in Women's Health",
+          "catalog": true,
+          "chars": 19884
+        }
+      ],
+      "dedicatedTopics": [
+        "Breast Disease Surgical Framework",
+        "Breast Care in Women's Health",
+        "Breast Anatomy & Lymphatics",
+        "Breast Mass Triple Assessment"
+      ],
+      "bodyHitLessons": 10,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 6
+    },
+    {
+      "id": "cervical-ca",
+      "title": "Cervical neoplasia / HPV",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-epigenetics",
+          "title": "Epigenetics in Medicine",
+          "catalog": true,
+          "chars": 19673
+        },
+        {
+          "id": "les-cat-y2-heme-transfusion-deep",
+          "title": "Transfusion Medicine Deep Dive",
+          "catalog": true,
+          "chars": 20264
+        },
+        {
+          "id": "les-cat-y2-id-travel",
+          "title": "Travel Medicine Pathogen Map",
+          "catalog": true,
+          "chars": 20342
+        },
+        {
+          "id": "les-cat-y1-bc-enzyme-kinetics",
+          "title": "Enzyme Kinetics for Medicine",
+          "catalog": true,
+          "chars": 18491
+        }
+      ],
+      "dedicatedTopics": [
+        "Vaccine Immunology",
+        "Transfusion Medicine Deep Dive",
+        "Travel Medicine Pathogen Map",
+        "Anemia Workup on Medicine"
+      ],
+      "bodyHitLessons": 572,
+      "bodyHitTopics": 51,
+      "incidentalBodyLessons": 556
+    },
+    {
+      "id": "prostate-path",
+      "title": "Prostate pathology (BPH vs carcinoma)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-anat-pelvis-male",
+          "title": "Male Pelvic Viscera & Prostate Zones",
+          "catalog": true,
+          "chars": 19494
+        }
+      ],
+      "dedicatedTopics": [
+        "Male Pelvic Viscera & Prostate Zones"
+      ],
+      "bodyHitLessons": 12,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 11
+    },
+    {
+      "id": "cns-tumors",
+      "title": "CNS tumors / herniation",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-neuro-6",
+          "title": "Raised ICP & Herniation Patterns",
+          "catalog": false,
+          "chars": 12678
+        }
+      ],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 23,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 22
+    },
+    {
+      "id": "bone-tumors",
+      "title": "Primary bone tumors",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-msk-bone-tumor",
+          "title": "Bone Tumor Patterns",
+          "catalog": true,
+          "chars": 20448
+        }
+      ],
+      "dedicatedTopics": [
+        "Bone Tumor Patterns"
+      ],
+      "bodyHitLessons": 53,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 52
+    },
+    {
+      "id": "malaria-tb-extra",
+      "title": "Classic infectious morphologies (TB, abscess, viral inclusions)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-id-6",
+          "title": "Tuberculosis — Latent vs Active",
+          "catalog": false,
+          "chars": 12021
+        },
+        {
+          "id": "les-cat-y1-id-anaerobes",
+          "title": "Anaerobes & Abscess Microbiology",
+          "catalog": true,
+          "chars": 17332
+        }
+      ],
+      "dedicatedTopics": [
+        "Anaerobes & Abscess Microbiology"
+      ],
+      "bodyHitLessons": 171,
+      "bodyHitTopics": 11,
+      "incidentalBodyLessons": 169
+    }
+  ],
+  "thinHandcraftedGeneralPathSample": [],
+  "catalogOnlyDedicatedSample": [],
+  "all": [
+    {
+      "id": "amyloidosis",
+      "title": "Amyloidosis",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 26,
+      "bodyHitTopics": 5,
+      "incidentalBodyLessons": 26
+    },
+    {
+      "id": "calcification",
+      "title": "Pathologic calcification",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-calcify",
+          "title": "Pathologic Calcification",
+          "catalog": true,
+          "chars": 19616
+        }
+      ],
+      "dedicatedTopics": [
+        "Pathologic Calcification"
+      ],
+      "bodyHitLessons": 19,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 18
+    },
+    {
+      "id": "pigments",
+      "title": "Endogenous pigments (hemosiderin, lipofuscin, melanin, bilirubin)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-pigments",
+          "title": "Pathologic Pigments & Storage",
+          "catalog": true,
+          "chars": 17505
+        }
+      ],
+      "dedicatedTopics": [
+        "Pathologic Pigments & Storage"
+      ],
+      "bodyHitLessons": 53,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 52
+    },
+    {
+      "id": "edema-types",
+      "title": "Edema mechanisms (hydrostatic/oncotic/lymphatic)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-path-hemodynamic",
+          "title": "Edema, Congestion, Shock Pathology",
+          "catalog": true,
+          "chars": 26287
+        },
+        {
+          "id": "les-pulm-4",
+          "title": "ARDS & Pulmonary Edema Distinctions",
+          "catalog": false,
+          "chars": 15080
+        },
+        {
+          "id": "les-cat-y1-imm-allergy2",
+          "title": "Urticaria Angioedema Anaphylaxis Spectrum",
+          "catalog": true,
+          "chars": 22071
+        },
+        {
+          "id": "les-cat-y4-peds-dka-cerebral",
+          "title": "Pediatric DKA Cerebral Edema",
+          "catalog": true,
+          "chars": 28453
+        }
+      ],
+      "dedicatedTopics": [
+        "Edema, Congestion, Shock Pathology",
+        "Urticaria Angioedema Anaphylaxis Spectrum",
+        "Pediatric DKA Cerebral Edema"
+      ],
+      "bodyHitLessons": 325,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 321
+    },
+    {
+      "id": "infarct-red-white",
+      "title": "Red vs white infarct",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-path-thrombosis-path",
+          "title": "Thrombosis, Embolism & Infarction Pathology",
+          "catalog": true,
+          "chars": 19970
+        }
+      ],
+      "dedicatedTopics": [
+        "Thrombosis, Embolism & Infarction Pathology"
+      ],
+      "bodyHitLessons": 2,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 1
+    },
+    {
+      "id": "shock-stages",
+      "title": "Shock stages / morphology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-path-hemodynamic",
+          "title": "Edema, Congestion, Shock Pathology",
+          "catalog": true,
+          "chars": 26287
+        },
+        {
+          "id": "les-cv-4",
+          "title": "Shock Classification by Mechanism",
+          "catalog": false,
+          "chars": 13502
+        },
+        {
+          "id": "les-cat-y2-cv-shock-micro",
+          "title": "Shock Microcirculation & Lactate",
+          "catalog": true,
+          "chars": 31574
+        },
+        {
+          "id": "les-cat-y4-im-icu-shock",
+          "title": "ICU Shock Teams & Monitoring",
+          "catalog": true,
+          "chars": 19885
+        }
+      ],
+      "dedicatedTopics": [
+        "Shock Microcirculation & Lactate",
+        "ICU Shock Teams & Monitoring",
+        "Edema, Congestion, Shock Pathology",
+        "Shock Differentiation at the Bedside"
+      ],
+      "bodyHitLessons": 315,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 307
+    },
+    {
+      "id": "carcinogenesis",
+      "title": "Chemical / radiation / microbial carcinogenesis",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 122,
+      "bodyHitTopics": 8,
+      "incidentalBodyLessons": 122
+    },
+    {
+      "id": "paraneoplastic",
+      "title": "Paraneoplastic syndromes",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 4,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 4
+    },
+    {
+      "id": "grading-staging",
+      "title": "Tumor grading vs staging",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-renal-6",
+          "title": "CKD Staging & Complications",
+          "catalog": false,
+          "chars": 12561
+        },
+        {
+          "id": "les-cat-y4-gyn-onc-staging",
+          "title": "Gyn Oncology Staging Mindset",
+          "catalog": true,
+          "chars": 21084
+        },
+        {
+          "id": "les-cat-y3-fm-ckd",
+          "title": "CKD Staging in Primary Care",
+          "catalog": true,
+          "chars": 21735
+        }
+      ],
+      "dedicatedTopics": [
+        "CKD Staging in Primary Care",
+        "Gyn Oncology Staging Mindset"
+      ],
+      "bodyHitLessons": 147,
+      "bodyHitTopics": 7,
+      "incidentalBodyLessons": 144
+    },
+    {
+      "id": "hypersensitivity-I-IV",
+      "title": "Hypersensitivity types I–IV",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-immunopath2",
+          "title": "Hypersensitivity Tissue Examples",
+          "catalog": true,
+          "chars": 20792
+        },
+        {
+          "id": "les-cat-y1-imm-hypersense",
+          "title": "Hypersensitivity Types I–IV",
+          "catalog": true,
+          "chars": 17392
+        }
+      ],
+      "dedicatedTopics": [
+        "Hypersensitivity Types I–IV",
+        "Hypersensitivity Tissue Examples"
+      ],
+      "bodyHitLessons": 99,
+      "bodyHitTopics": 12,
+      "incidentalBodyLessons": 97
+    },
+    {
+      "id": "transplant-rejection",
+      "title": "Transplant rejection types",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-ren-transplant",
+          "title": "Transplant Kidney Physiology Concepts",
+          "catalog": true,
+          "chars": 17878
+        },
+        {
+          "id": "les-cat-y2-id-transplant-inf",
+          "title": "Infections After Solid Organ Transplant",
+          "catalog": true,
+          "chars": 18576
+        },
+        {
+          "id": "les-cat-y1-imm-transplant",
+          "title": "Transplant Rejection Timing",
+          "catalog": true,
+          "chars": 18723
+        },
+        {
+          "id": "les-cat-y3-surg-transplant-surg",
+          "title": "Transplant Basics for Students",
+          "catalog": true,
+          "chars": 19617
+        }
+      ],
+      "dedicatedTopics": [
+        "Transplant Rejection Timing",
+        "Transplant Basics for Students",
+        "Transplant Surgery Exposure",
+        "Transplant Kidney Physiology Concepts"
+      ],
+      "bodyHitLessons": 805,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 799
+    },
+    {
+      "id": "tb-primary-secondary",
+      "title": "Primary vs secondary TB morphology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-pulm-tb-immuno",
+          "title": "TB Granuloma Immunology",
+          "catalog": true,
+          "chars": 17861
+        },
+        {
+          "id": "les-id-6",
+          "title": "Tuberculosis — Latent vs Active",
+          "catalog": false,
+          "chars": 12021
+        },
+        {
+          "id": "les-cat-y1-id-mycobacteria2",
+          "title": "TB Diagnostics & Latency Biology",
+          "catalog": true,
+          "chars": 18859
+        }
+      ],
+      "dedicatedTopics": [
+        "TB Granuloma Immunology",
+        "TB Diagnostics & Latency Biology"
+      ],
+      "bodyHitLessons": 302,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 299
+    },
+    {
+      "id": "atherosclerosis-morph",
+      "title": "Atherosclerosis morphology / complications",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cv-7",
+          "title": "Atherosclerosis to Plaque Rupture",
+          "catalog": false,
+          "chars": 13118
+        }
+      ],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 2,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 1
+    },
+    {
+      "id": "mi-timeline",
+      "title": "MI morphologic timeline",
+      "depth": "thin",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 1,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 1
+    },
+    {
+      "id": "glomerular-patterns",
+      "title": "Nephritic vs nephrotic patterns",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-renal-7",
+          "title": "Nephritic vs Nephrotic Syndromes",
+          "catalog": false,
+          "chars": 12765
+        },
+        {
+          "id": "les-cat-y2-ren-nephrotic-detail",
+          "title": "Nephrotic Syndrome Mechanisms",
+          "catalog": true,
+          "chars": 18052
+        },
+        {
+          "id": "les-cat-y2-ren-nephritic-detail",
+          "title": "Nephritic Syndrome Mechanisms",
+          "catalog": true,
+          "chars": 18505
+        }
+      ],
+      "dedicatedTopics": [
+        "Nephrotic Syndrome Mechanisms",
+        "Nephritic Syndrome Mechanisms"
+      ],
+      "bodyHitLessons": 53,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 50
+    },
+    {
+      "id": "cirrhosis-morph",
+      "title": "Cirrhosis / hepatic failure morphology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-gi-3",
+          "title": "Portal Hypertension & Cirrhosis Complications",
+          "catalog": false,
+          "chars": 13025
+        },
+        {
+          "id": "les-im-7",
+          "title": "Cirrhosis Decompensation on the Wards",
+          "catalog": false,
+          "chars": 13175
+        },
+        {
+          "id": "les-cat-y3-im-cirrhosis-ward",
+          "title": "Cirrhosis Ward Management",
+          "catalog": true,
+          "chars": 20523
+        }
+      ],
+      "dedicatedTopics": [
+        "Cirrhosis Ward Management"
+      ],
+      "bodyHitLessons": 38,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 35
+    },
+    {
+      "id": "ibd-compare",
+      "title": "Crohn vs UC pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-gi-6",
+          "title": "IBD — Crohn vs Ulcerative Colitis",
+          "catalog": false,
+          "chars": 12435
+        },
+        {
+          "id": "les-cat-y2-gi-ibd-path",
+          "title": "IBD Immunopathology",
+          "catalog": true,
+          "chars": 17426
+        }
+      ],
+      "dedicatedTopics": [
+        "IBD Immunopathology"
+      ],
+      "bodyHitLessons": 2,
+      "bodyHitTopics": 1,
+      "incidentalBodyLessons": 0
+    },
+    {
+      "id": "lung-obstructive",
+      "title": "Obstructive vs restrictive lung pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-pulm-2",
+          "title": "Obstructive & Restrictive Patterns",
+          "catalog": false,
+          "chars": 12429
+        },
+        {
+          "id": "les-pulm-5",
+          "title": "Asthma & COPD Mechanisms",
+          "catalog": false,
+          "chars": 13067
+        },
+        {
+          "id": "les-cat-y2-pulm-obstruct-restrict",
+          "title": "Obstructive vs Restrictive Patterns",
+          "catalog": true,
+          "chars": 19350
+        },
+        {
+          "id": "les-cat-y2-pulm-copd-path",
+          "title": "COPD — Emphysema & Chronic Bronchitis",
+          "catalog": true,
+          "chars": 18509
+        }
+      ],
+      "dedicatedTopics": [
+        "Obstructive vs Restrictive Patterns",
+        "COPD — Emphysema & Chronic Bronchitis",
+        "Interstitial Lung Disease Patterns",
+        "COPD Exacerbation Inpatient Care"
+      ],
+      "bodyHitLessons": 374,
+      "bodyHitTopics": 12,
+      "incidentalBodyLessons": 367
+    },
+    {
+      "id": "anemia-class",
+      "title": "Anemia classification (production/destruction/loss)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-heme-1",
+          "title": "Approach to Anemia",
+          "catalog": false,
+          "chars": 12169
+        },
+        {
+          "id": "les-heme-3",
+          "title": "Anemia Classification Framework",
+          "catalog": false,
+          "chars": 12606
+        },
+        {
+          "id": "les-cat-y2-heme-anemia-micro",
+          "title": "Microcytic Anemia Mechanisms",
+          "catalog": true,
+          "chars": 20440
+        },
+        {
+          "id": "les-cat-y2-heme-anemia-macro",
+          "title": "Macrocytic Anemia Mechanisms",
+          "catalog": true,
+          "chars": 19123
+        }
+      ],
+      "dedicatedTopics": [
+        "Microcytic Anemia Mechanisms",
+        "Macrocytic Anemia Mechanisms",
+        "Anemia Workup on Medicine"
+      ],
+      "bodyHitLessons": 169,
+      "bodyHitTopics": 21,
+      "incidentalBodyLessons": 164
+    },
+    {
+      "id": "leukemia-lymphoma",
+      "title": "Leukemia / lymphoma frameworks",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-heme-6",
+          "title": "Acute Leukemia Recognition",
+          "catalog": false,
+          "chars": 12874
+        },
+        {
+          "id": "les-cat-y2-heme-lymphoma",
+          "title": "Lymphoma Biology Hodgkin vs NHL",
+          "catalog": true,
+          "chars": 17587
+        }
+      ],
+      "dedicatedTopics": [
+        "Lymphoma Biology Hodgkin vs NHL"
+      ],
+      "bodyHitLessons": 884,
+      "bodyHitTopics": 106,
+      "incidentalBodyLessons": 882
+    },
+    {
+      "id": "diabetes-morph",
+      "title": "Diabetes mellitus pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-endo-6",
+          "title": "Diabetes Chronic Complications",
+          "catalog": false,
+          "chars": 12051
+        },
+        {
+          "id": "les-cat-y2-endo-dm-path",
+          "title": "Diabetes Mellitus Mechanisms",
+          "catalog": true,
+          "chars": 17944
+        },
+        {
+          "id": "les-cat-y3-peds-diabetes-new",
+          "title": "New-Onset Pediatric Diabetes",
+          "catalog": true,
+          "chars": 20628
+        },
+        {
+          "id": "les-cat-y3-ob-gdm",
+          "title": "Gestational Diabetes Care",
+          "catalog": true,
+          "chars": 18116
+        }
+      ],
+      "dedicatedTopics": [
+        "Diabetes Mellitus Mechanisms",
+        "Outpatient Diabetes Care",
+        "New-Onset Pediatric Diabetes",
+        "Gestational Diabetes Care"
+      ],
+      "bodyHitLessons": 337,
+      "bodyHitTopics": 21,
+      "incidentalBodyLessons": 330
+    },
+    {
+      "id": "thyroid-path",
+      "title": "Thyroid pathology (goiter, Graves, Hashimoto, neoplasm)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-endo-1",
+          "title": "Thyroid Axis & Clinical Patterns",
+          "catalog": false,
+          "chars": 12036
+        },
+        {
+          "id": "les-endo-3",
+          "title": "Thyroid Emergencies",
+          "catalog": false,
+          "chars": 12422
+        },
+        {
+          "id": "les-cat-y2-endo-thyroid-phys",
+          "title": "Thyroid Hormone Synthesis & Action",
+          "catalog": true,
+          "chars": 18849
+        },
+        {
+          "id": "les-cat-y2-endo-thyroid-disease",
+          "title": "Hyper/Hypothyroid Pathophysiology",
+          "catalog": true,
+          "chars": 17533
+        }
+      ],
+      "dedicatedTopics": [
+        "Thyroid Hormone Synthesis & Action",
+        "Hyper/Hypothyroid Pathophysiology",
+        "Thyroid/Parathyroid Surgical Disease",
+        "Neck Triangles & Thyroid Anatomy"
+      ],
+      "bodyHitLessons": 9,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 0
+    },
+    {
+      "id": "breast-ca",
+      "title": "Breast carcinoma pathology",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-anat-breast",
+          "title": "Breast Anatomy & Lymphatics",
+          "catalog": true,
+          "chars": 17688
+        },
+        {
+          "id": "les-cat-y3-surg-breast",
+          "title": "Breast Disease Surgical Framework",
+          "catalog": true,
+          "chars": 20931
+        },
+        {
+          "id": "les-cat-y3-surg-breast-mass",
+          "title": "Breast Mass Triple Assessment",
+          "catalog": true,
+          "chars": 23261
+        },
+        {
+          "id": "les-cat-y3-ob-breast-obgyn",
+          "title": "Breast Care in Women's Health",
+          "catalog": true,
+          "chars": 19884
+        }
+      ],
+      "dedicatedTopics": [
+        "Breast Disease Surgical Framework",
+        "Breast Care in Women's Health",
+        "Breast Anatomy & Lymphatics",
+        "Breast Mass Triple Assessment"
+      ],
+      "bodyHitLessons": 10,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 6
+    },
+    {
+      "id": "cervical-ca",
+      "title": "Cervical neoplasia / HPV",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-cell-epigenetics",
+          "title": "Epigenetics in Medicine",
+          "catalog": true,
+          "chars": 19673
+        },
+        {
+          "id": "les-cat-y2-heme-transfusion-deep",
+          "title": "Transfusion Medicine Deep Dive",
+          "catalog": true,
+          "chars": 20264
+        },
+        {
+          "id": "les-cat-y2-id-travel",
+          "title": "Travel Medicine Pathogen Map",
+          "catalog": true,
+          "chars": 20342
+        },
+        {
+          "id": "les-cat-y1-bc-enzyme-kinetics",
+          "title": "Enzyme Kinetics for Medicine",
+          "catalog": true,
+          "chars": 18491
+        }
+      ],
+      "dedicatedTopics": [
+        "Vaccine Immunology",
+        "Transfusion Medicine Deep Dive",
+        "Travel Medicine Pathogen Map",
+        "Anemia Workup on Medicine"
+      ],
+      "bodyHitLessons": 572,
+      "bodyHitTopics": 51,
+      "incidentalBodyLessons": 556
+    },
+    {
+      "id": "prostate-path",
+      "title": "Prostate pathology (BPH vs carcinoma)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y1-anat-pelvis-male",
+          "title": "Male Pelvic Viscera & Prostate Zones",
+          "catalog": true,
+          "chars": 19494
+        }
+      ],
+      "dedicatedTopics": [
+        "Male Pelvic Viscera & Prostate Zones"
+      ],
+      "bodyHitLessons": 12,
+      "bodyHitTopics": 2,
+      "incidentalBodyLessons": 11
+    },
+    {
+      "id": "cns-tumors",
+      "title": "CNS tumors / herniation",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-neuro-6",
+          "title": "Raised ICP & Herniation Patterns",
+          "catalog": false,
+          "chars": 12678
+        }
+      ],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 23,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 22
+    },
+    {
+      "id": "skin-tumors",
+      "title": "Skin tumors (BCC/SCC/melanoma)",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 6,
+      "bodyHitTopics": 3,
+      "incidentalBodyLessons": 6
+    },
+    {
+      "id": "bone-tumors",
+      "title": "Primary bone tumors",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-cat-y2-msk-bone-tumor",
+          "title": "Bone Tumor Patterns",
+          "catalog": true,
+          "chars": 20448
+        }
+      ],
+      "dedicatedTopics": [
+        "Bone Tumor Patterns"
+      ],
+      "bodyHitLessons": 53,
+      "bodyHitTopics": 4,
+      "incidentalBodyLessons": 52
+    },
+    {
+      "id": "malaria-tb-extra",
+      "title": "Classic infectious morphologies (TB, abscess, viral inclusions)",
+      "depth": "dedicated",
+      "dedicatedLessons": [
+        {
+          "id": "les-id-6",
+          "title": "Tuberculosis — Latent vs Active",
+          "catalog": false,
+          "chars": 12021
+        },
+        {
+          "id": "les-cat-y1-id-anaerobes",
+          "title": "Anaerobes & Abscess Microbiology",
+          "catalog": true,
+          "chars": 17332
+        }
+      ],
+      "dedicatedTopics": [
+        "Anaerobes & Abscess Microbiology"
+      ],
+      "bodyHitLessons": 171,
+      "bodyHitTopics": 11,
+      "incidentalBodyLessons": 169
+    },
+    {
+      "id": "cell-adaptations",
+      "title": "Cellular adaptations suite",
+      "depth": "embedded",
+      "dedicatedLessons": [],
+      "dedicatedTopics": [],
+      "bodyHitLessons": 333,
+      "bodyHitTopics": 6,
+      "incidentalBodyLessons": 333
+    }
+  ]
+}

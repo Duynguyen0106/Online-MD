@@ -1,0 +1,958 @@
+{
+  "generatedAt": "2026-10-28T14:19:43.492Z",
+  "method": "Keyword/heuristic coverage of USMLE-style general & systemic pathology pillars against Online MD lessons, catalog topics, objectives, and cases. Not a chapter-by-chapter comparison to any copyrighted textbook. Not medical approval.",
+  "inventory": {
+    "modules": 22,
+    "lessons": 884,
+    "catalogTopics": 771,
+    "objectives": 3422,
+    "cases": 25
+  },
+  "byRating": {
+    "strong": 22,
+    "adequate": 0,
+    "thin": 0,
+    "gap": 0
+  },
+  "pillars": [
+    {
+      "id": "cell-injury",
+      "domain": "general",
+      "title": "Cell injury, death, adaptations",
+      "rating": "strong",
+      "counts": {
+        "lessons": 627,
+        "catalogTopics": 27,
+        "objectives": 42,
+        "cases": 3
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Gluconeogenesis — Bypass Steps",
+        "Apoptosis Pathways",
+        "Lysosomes, Autophagy & Storage Diseases",
+        "Coronary Anatomy & Ischemia Territories",
+        "Pulmonary Hypertension Groups"
+      ]
+    },
+    {
+      "id": "inflammation",
+      "domain": "general",
+      "title": "Acute & chronic inflammation",
+      "rating": "strong",
+      "counts": {
+        "lessons": 759,
+        "catalogTopics": 41,
+        "objectives": 62,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Pelvic Floor & Perineum",
+        "Retroperitoneal Anatomy",
+        "Innate Immune Sensors & Effectors",
+        "Complement Deficiencies & Regulation",
+        "Primary Immunodeficiencies Map"
+      ]
+    },
+    {
+      "id": "repair",
+      "domain": "general",
+      "title": "Tissue repair & wound healing",
+      "rating": "strong",
+      "counts": {
+        "lessons": 430,
+        "catalogTopics": 30,
+        "objectives": 49,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Vitamins as Enzyme Cofactors",
+        "DNA Replication Fidelity & Repair",
+        "Collagen Synthesis & Scurvy/OI",
+        "ECM, Integrins & Metastasis",
+        "Allergy & Anaphylaxis Mechanisms"
+      ]
+    },
+    {
+      "id": "hemodynamic",
+      "domain": "general",
+      "title": "Hemodynamic disorders (edema, thrombosis, embolism, shock)",
+      "rating": "strong",
+      "counts": {
+        "lessons": 884,
+        "catalogTopics": 149,
+        "objectives": 1462,
+        "cases": 6
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "ECM, Integrins & Metastasis",
+        "Complement Deficiencies & Regulation",
+        "Vaccine Immunology",
+        "Adrenergic Pharmacology",
+        "Medical Mycology Map"
+      ]
+    },
+    {
+      "id": "neoplasia",
+      "domain": "general",
+      "title": "Neoplasia (benign/malignant, invasion, staging)",
+      "rating": "strong",
+      "counts": {
+        "lessons": 610,
+        "catalogTopics": 29,
+        "objectives": 62,
+        "cases": 1
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "ECM, Integrins & Metastasis",
+        "Cell Cycle Checkpoints",
+        "Oncogenes vs Tumor Suppressors",
+        "Tumor Immunology Basics",
+        "DNA Virus Families"
+      ]
+    },
+    {
+      "id": "genetic",
+      "domain": "general",
+      "title": "Genetic disorders & congenital malformations",
+      "rating": "strong",
+      "counts": {
+        "lessons": 580,
+        "catalogTopics": 29,
+        "objectives": 48,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Amino Acid Metabolism & Urea Cycle",
+        "Collagen Synthesis & Scurvy/OI",
+        "Mitochondrial Genetics & Disease",
+        "Embryonic Folding & Body Cavities",
+        "Foregut Development & Malformations"
+      ]
+    },
+    {
+      "id": "immunopath",
+      "domain": "general",
+      "title": "Immunopathology (hypersensitivity, autoimmunity, transplant)",
+      "rating": "strong",
+      "counts": {
+        "lessons": 863,
+        "catalogTopics": 61,
+        "objectives": 103,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "MHC Restriction & Antigen Presentation",
+        "T Cell Activation & Tolerance",
+        "Hypersensitivity Types I–IV",
+        "Primary Immunodeficiencies Map",
+        "Transplant Rejection Timing"
+      ]
+    },
+    {
+      "id": "infectious",
+      "domain": "general",
+      "title": "Infectious disease pathology patterns",
+      "rating": "strong",
+      "counts": {
+        "lessons": 828,
+        "catalogTopics": 92,
+        "objectives": 160,
+        "cases": 3
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Translation & Targeting",
+        "Pelvic Floor & Perineum",
+        "Retroperitoneal Anatomy",
+        "Complement Deficiencies & Regulation",
+        "Primary Immunodeficiencies Map"
+      ]
+    },
+    {
+      "id": "environmental",
+      "domain": "general",
+      "title": "Environmental / nutritional pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 823,
+        "catalogTopics": 59,
+        "objectives": 97,
+        "cases": 2
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Glycolysis Regulation & Clinical Failure Points",
+        "ETC, OXPHOS & Uncouplers",
+        "Vitamins as Enzyme Cofactors",
+        "Collagen Synthesis & Scurvy/OI",
+        "Cholinergic Pharmacology"
+      ]
+    },
+    {
+      "id": "pediatric-path",
+      "domain": "general",
+      "title": "Pediatric / perinatal pathology themes",
+      "rating": "strong",
+      "counts": {
+        "lessons": 792,
+        "catalogTopics": 46,
+        "objectives": 200,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Embryonic Folding & Body Cavities",
+        "Pharmacology in Special Populations",
+        "Adult Congenital Lesions Overview",
+        "Pediatric Orthopedic Growth Issues",
+        "CNS Infection Pathogens by Age"
+      ]
+    },
+    {
+      "id": "cv-path",
+      "domain": "systemic",
+      "title": "Cardiovascular pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 760,
+        "catalogTopics": 27,
+        "objectives": 50,
+        "cases": 1
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Mediastinal Compartments",
+        "Cardiac Cycle Wiggers Correlation",
+        "Valvular Stenosis & Regurgitation Physics",
+        "Pericardial Disease Spectrum",
+        "Aortic Aneurysm & Dissection Mechanisms"
+      ]
+    },
+    {
+      "id": "resp-path",
+      "domain": "systemic",
+      "title": "Respiratory pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 789,
+        "catalogTopics": 42,
+        "objectives": 106,
+        "cases": 3
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Histamine, Serotonin & Eicosanoids",
+        "Justice, Allocation & Health Equity",
+        "Asthma Pathobiology",
+        "COPD — Emphysema & Chronic Bronchitis",
+        "Interstitial Lung Disease Patterns"
+      ]
+    },
+    {
+      "id": "renal-path",
+      "domain": "systemic",
+      "title": "Renal / urinary pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 443,
+        "catalogTopics": 35,
+        "objectives": 82,
+        "cases": 1
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cat-y1-cell-dna-rep",
+          "title": "DNA Replication Fidelity & Repair"
+        },
+        {
+          "id": "les-cat-y1-cell-oncogenes",
+          "title": "Oncogenes vs Tumor Suppressors"
+        },
+        {
+          "id": "les-cat-y2-path-hemodynamic",
+          "title": "Edema, Congestion, Shock Pathology"
+        },
+        {
+          "id": "les-cat-y2-path-thrombosis-path",
+          "title": "Thrombosis, Embolism & Infarction Pathology"
+        },
+        {
+          "id": "les-cat-y2-path-inflammation-path",
+          "title": "Acute & Chronic Inflammation Pathology"
+        }
+      ],
+      "sampleTopics": [
+        "Informed Consent & Capacity",
+        "GFR Autoregulation",
+        "Volume Sensing & RAAS–ANP",
+        "AKI Pathotypes",
+        "CKD–MBD Pathophysiology"
+      ]
+    },
+    {
+      "id": "gi-path",
+      "domain": "systemic",
+      "title": "GI / hepatobiliary pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 209,
+        "catalogTopics": 29,
+        "objectives": 62,
+        "cases": 3
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cat-y1-cell-apoptosis",
+          "title": "Apoptosis Pathways"
+        },
+        {
+          "id": "les-cat-y1-cell-cellcycle",
+          "title": "Cell Cycle Checkpoints"
+        },
+        {
+          "id": "les-cat-y1-cell-oncogenes",
+          "title": "Oncogenes vs Tumor Suppressors"
+        },
+        {
+          "id": "les-cat-y1-cell-lysosome",
+          "title": "Lysosomes, Autophagy & Storage Diseases"
+        },
+        {
+          "id": "les-cat-y2-path-vascular-path",
+          "title": "Blood Vessel Pathology"
+        }
+      ],
+      "sampleTopics": [
+        "Foregut Development & Malformations",
+        "Gastric Acid Secretion & Ulcer Biology",
+        "Exocrine Pancreas Physiology & Pancreatitis",
+        "Nutrient Absorption & Malabsorption",
+        "Hepatic Lobule & Injury Patterns"
+      ]
+    },
+    {
+      "id": "heme-path",
+      "domain": "systemic",
+      "title": "Hematopathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 884,
+        "catalogTopics": 118,
+        "objectives": 1407,
+        "cases": 3
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Glycolysis Regulation & Clinical Failure Points",
+        "Pentose Phosphate Pathway",
+        "Vaccine Immunology",
+        "Staph vs Strep Clinical Bacteriology",
+        "Medical Mycology Map"
+      ]
+    },
+    {
+      "id": "endo-path",
+      "domain": "systemic",
+      "title": "Endocrine pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 884,
+        "catalogTopics": 184,
+        "objectives": 590,
+        "cases": 4
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "ECM, Integrins & Metastasis",
+        "Pharyngeal Apparatus",
+        "Cardiac Embryology & Fetal Circulation",
+        "CNS Neural Tube Development",
+        "Foregut Development & Malformations"
+      ]
+    },
+    {
+      "id": "breast-repro",
+      "domain": "systemic",
+      "title": "Breast & female genital pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 741,
+        "catalogTopics": 56,
+        "objectives": 145,
+        "cases": 2
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Oncogenes vs Tumor Suppressors",
+        "Lysosomes, Autophagy & Storage Diseases",
+        "Outbreak Investigation Steps",
+        "Nephrotic Syndrome Mechanisms",
+        "Nephritic Syndrome Mechanisms"
+      ]
+    },
+    {
+      "id": "male-repro",
+      "domain": "systemic",
+      "title": "Male genital / prostate pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 24,
+        "catalogTopics": 5,
+        "objectives": 6,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-6",
+          "title": "Invasion & Metastasis Steps"
+        },
+        {
+          "id": "les-cat-y1-cell-ecm",
+          "title": "ECM, Integrins & Metastasis"
+        },
+        {
+          "id": "les-cat-y1-cell-immunopath2",
+          "title": "Hypersensitivity Tissue Examples"
+        },
+        {
+          "id": "les-cat-y2-cv-devices",
+          "title": "CIEDs & Hemodynamic Support Concepts"
+        },
+        {
+          "id": "les-cat-y2-cv-revascular",
+          "title": "Revascularization Physiology PCI vs CABG"
+        }
+      ],
+      "sampleTopics": [
+        "When Pediatrics Refers to Surgery",
+        "Men's Health in FM",
+        "Pelvic Viscera & Spaces",
+        "Male Pelvic Viscera & Prostate Zones",
+        "Mixed Autonomic Clinical Scenarios"
+      ]
+    },
+    {
+      "id": "cns-path",
+      "domain": "systemic",
+      "title": "CNS / neuropathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 884,
+        "catalogTopics": 118,
+        "objectives": 238,
+        "cases": 3
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cell-1",
+          "title": "From Gene to Protein to Phenotype"
+        },
+        {
+          "id": "les-cell-2",
+          "title": "Cell Injury, Death & Adaptation"
+        },
+        {
+          "id": "les-cell-3",
+          "title": "Acute Inflammation Mediator Sequence"
+        },
+        {
+          "id": "les-cell-4",
+          "title": "Innate vs Adaptive Immunity"
+        },
+        {
+          "id": "les-cell-5",
+          "title": "Cellular Adaptations & Dysplasia"
+        }
+      ],
+      "sampleTopics": [
+        "Embryonic Folding & Body Cavities",
+        "Innate Immune Sensors & Effectors",
+        "Allergy & Anaphylaxis Mechanisms",
+        "Sedative-Hypnotic Mechanisms",
+        "Antibiotic Mechanism Families"
+      ]
+    },
+    {
+      "id": "msk-path",
+      "domain": "systemic",
+      "title": "Bone, joint, soft tissue pathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 118,
+        "catalogTopics": 12,
+        "objectives": 30,
+        "cases": 1
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cat-y1-cell-collagen",
+          "title": "Collagen Synthesis & Scurvy/OI"
+        },
+        {
+          "id": "les-endo-1",
+          "title": "Thyroid Axis & Clinical Patterns"
+        },
+        {
+          "id": "les-endo-3",
+          "title": "Thyroid Emergencies"
+        },
+        {
+          "id": "les-endo-4",
+          "title": "Adrenal Insufficiency & Cushing Axis"
+        },
+        {
+          "id": "les-endo-5",
+          "title": "Hypercalcemia — PTH Fork"
+        }
+      ],
+      "sampleTopics": [
+        "Bone Remodeling Endocrine Control",
+        "Bone Physiology & Remodeling",
+        "Bone Tumor Patterns",
+        "Osteomyelitis & Septic Joint Biology",
+        "Advanced Endocrinology Consults"
+      ]
+    },
+    {
+      "id": "derm-path",
+      "domain": "systemic",
+      "title": "Dermatopathology",
+      "rating": "strong",
+      "counts": {
+        "lessons": 54,
+        "catalogTopics": 10,
+        "objectives": 13,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-cat-y1-cell-cellcycle",
+          "title": "Cell Cycle Checkpoints"
+        },
+        {
+          "id": "les-cat-y1-cell-tsg2",
+          "title": "Tumor Suppressor Networks"
+        },
+        {
+          "id": "les-cat-y2-neuro-ascending",
+          "title": "Ascending Sensory Pathways"
+        },
+        {
+          "id": "les-cat-y2-msk-peripheral-nerve",
+          "title": "Peripheral Nerve Injury Grades"
+        },
+        {
+          "id": "les-cat-y2-msk-spondylo",
+          "title": "Spondyloarthropathy Mechanisms"
+        }
+      ],
+      "sampleTopics": [
+        "Medical Mycology Map",
+        "Ascending Sensory Pathways",
+        "Peripheral Nerve Injury Grades",
+        "Spondyloarthropathy Mechanisms",
+        "Inpatient Dermatology Emergencies"
+      ]
+    },
+    {
+      "id": "eye-ent",
+      "domain": "systemic",
+      "title": "Eye / ENT pathology themes",
+      "rating": "strong",
+      "counts": {
+        "lessons": 7,
+        "catalogTopics": 5,
+        "objectives": 10,
+        "cases": 0
+      },
+      "sampleLessons": [
+        {
+          "id": "les-endo-6",
+          "title": "Diabetes Chronic Complications"
+        },
+        {
+          "id": "les-heme-6",
+          "title": "Acute Leukemia Recognition"
+        },
+        {
+          "id": "les-cat-y1-bc-fructose",
+          "title": "Fructose & Galactose Metabolism"
+        },
+        {
+          "id": "les-cat-y1-anat-larynx",
+          "title": "Larynx & Airway Clinical Anatomy"
+        },
+        {
+          "id": "les-cat-y1-ph-ans-mixed",
+          "title": "Mixed Autonomic Clinical Scenarios"
+        }
+      ],
+      "sampleTopics": [
+        "Fructose & Galactose Metabolism",
+        "Larynx & Airway Clinical Anatomy",
+        "Mixed Autonomic Clinical Scenarios",
+        "Acute Otitis Media Decisions",
+        "URI Antibiotic Stewardship"
+      ]
+    }
+  ],
+  "depthProbes": [
+    {
+      "id": "necrosis-vs-apoptosis",
+      "label": "Necrosis AND apoptosis both taught",
+      "present": true
+    },
+    {
+      "id": "coagulative-liquefactive",
+      "label": "Coagulative AND liquefactive necrosis named",
+      "present": true
+    },
+    {
+      "id": "metaplasia-dysplasia",
+      "label": "Metaplasia AND dysplasia named",
+      "present": true
+    },
+    {
+      "id": "benign-malignant",
+      "label": "Benign vs malignant language",
+      "present": true
+    },
+    {
+      "id": "thrombosis-embolism",
+      "label": "Thrombosis AND embolism",
+      "present": true
+    },
+    {
+      "id": "acute-chronic-inflam",
+      "label": "Acute AND chronic inflammation cues",
+      "present": true
+    },
+    {
+      "id": "oncogene-suppressor",
+      "label": "Oncogene AND tumor suppressor cues",
+      "present": true
+    }
+  ]
+}
