@@ -46,6 +46,7 @@ import {
   catalogObjectives,
   catalogQuizQuestions,
 } from "@/lib/curriculum/expansions";
+import { authoredClinicalCases } from "@/lib/curriculum/cases";
 import type {
   Lesson,
   Module,
@@ -106,6 +107,7 @@ const clinicalCases = [
   ...wave5ClinicalCases,
   ...wave6ClinicalCases,
   ...wave7ClinicalCases,
+  ...authoredClinicalCases,
 ];
 
 export function getQuestionMap() {
