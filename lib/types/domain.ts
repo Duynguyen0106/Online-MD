@@ -176,15 +176,51 @@ export interface QbankQuestion {
   difficulty: number;
 }
 
+/** One multiple-choice option inside a progressive clinical case stage. */
+export interface CaseStageChoice {
+  id: string;
+  text: string;
+  /** Brief rationale shown after the learner selects this option. */
+  explanation?: string;
+}
+
+/**
+ * A progressive-disclosure or free-text reasoning stage.
+ * Legacy cases only set `id` / `prompt` / `expectedFocus`.
+ * Progressive cases add `revealMd`, optional MCQ fields, and wrap-up teaching.
+ */
+export interface CaseStage {
+  id: string;
+  prompt: string;
+  expectedFocus: string;
+  /** Information newly disclosed when this stage unlocks. */
+  revealMd?: string;
+  choices?: CaseStageChoice[];
+  correctChoiceId?: string;
+  /** Teaching shown after the learner answers (or for wrap-up stages). */
+  teachingMd?: string;
+  /** `wrapup` stages are educational only (no forced MCQ gate). */
+  kind?: "decision" | "wrapup";
+}
+
 export interface ClinicalCase {
   id: string;
   moduleId?: string;
   title: string;
   presentationMd: string;
-  stages: { id: string; prompt: string; expectedFocus: string }[];
+  /**
+   * `progressive` = step-gated disclosure with MCQs.
+   * `freeform` / omitted = classic simultaneous free-text stages.
+   */
+  format?: "freeform" | "progressive";
+  stages: CaseStage[];
   teachingPoints: string;
   objectiveIds: string[];
   status: PublishStatus;
+  /** Short index-card blurb (optional). */
+  summary?: string;
+  organSystem?: string;
+  difficulty?: "clerkship" | "advanced";
 }
 
 export interface DemoUser {
