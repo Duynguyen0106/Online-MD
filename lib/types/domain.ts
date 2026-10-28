@@ -318,6 +318,19 @@ export interface TutorThread {
   createdAt: string;
 }
 
+/** Clerkship procedure / clinical-skills tracker status. */
+export type SkillPracticeStatus =
+  | "not_started"
+  | "simulated"
+  | "verified";
+
+export interface SkillProgress {
+  skillId: string;
+  status: SkillPracticeStatus;
+  updatedAt: string;
+  notes?: string;
+}
+
 export interface StudentState {
   userId: string;
   lessonProgress: Record<string, LessonProgress>;
@@ -328,4 +341,6 @@ export interface StudentState {
   qbankAttempts: QbankAttempt[];
   caseAttempts: CaseAttempt[];
   tutorThreads: TutorThread[];
+  /** Optional for older saved progress files; treated as {} when missing. */
+  skillProgress?: Record<string, SkillProgress>;
 }

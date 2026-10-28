@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { switchDemoUser } from "@/actions/learning";
 import { DEMO_USERS } from "@/lib/demo/users";
 
 export function RoleSwitcher({ currentUserId }: { currentUserId: string }) {
+  const router = useRouter();
   const [pending, startTransition] = useTransition();
 
   return (
@@ -19,6 +21,7 @@ export function RoleSwitcher({ currentUserId }: { currentUserId: string }) {
         const userId = e.target.value;
         startTransition(async () => {
           await switchDemoUser(userId);
+          router.refresh();
         });
       }}
     >

@@ -19,6 +19,7 @@ function emptyState(userId: string): StudentState {
     qbankAttempts: [],
     caseAttempts: [],
     tutorThreads: [],
+    skillProgress: {},
   };
 }
 
