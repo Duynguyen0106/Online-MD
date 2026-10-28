@@ -8,10 +8,7 @@ export default async function SkillsPage() {
   const initialProgress = state.skillProgress ?? {};
 
   return (
-    <AppShell title={STUDENT_COPY.skillsTitle}>
-      <p className="-mt-4 mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
-        {STUDENT_COPY.skillsIntro}
-      </p>
+    <AppShell title={STUDENT_COPY.skillsTitle} description={STUDENT_COPY.skillsIntro}>
       <SkillsTracker initialProgress={initialProgress} />
     </AppShell>
   );

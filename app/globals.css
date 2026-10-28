@@ -152,3 +152,38 @@ body {
 .skip-to-content:focus {
   transform: translateY(0);
 }
+
+/* Shared form controls — keep focus, border, and fill consistent across pages */
+.field-control {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--foreground);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-control:hover {
+  border-color: color-mix(in oklab, var(--brand) 35%, var(--border));
+}
+
+.field-control:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring) 25%, transparent);
+}
+
+select.field-control {
+  height: 2.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+textarea.field-control {
+  resize: vertical;
+  min-height: 5rem;
+}

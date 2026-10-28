@@ -43,17 +43,18 @@ export function SignupForm() {
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Full name</span>
         <input
-          className="h-10 w-full rounded-md border border-[var(--border)] px-3"
+          className="field-control"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           required
+          autoComplete="name"
         />
       </label>
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Email</span>
         <input
           type="email"
-          className="h-10 w-full rounded-md border border-[var(--border)] px-3"
+          className="field-control"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required

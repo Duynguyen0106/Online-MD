@@ -29,7 +29,7 @@ function FreeformCasePlayer({ clinicalCase }: { clinicalCase: ClinicalCase }) {
             Stage {i + 1}: {stage.prompt}
           </p>
           <textarea
-            className="min-h-28 w-full rounded-md border border-[var(--border)] bg-[var(--background)] p-3 text-sm"
+            className="field-control min-h-28"
             value={responses[stage.id] ?? ""}
             onChange={(e) =>
               setResponses((r) => ({ ...r, [stage.id]: e.target.value }))
@@ -285,7 +285,7 @@ function ProgressiveCasePlayer({
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 space-y-3">
           <p className="text-sm font-medium">Optional written reflection</p>
           <textarea
-            className="min-h-24 w-full rounded-md border border-[var(--border)] bg-[var(--background)] p-3 text-sm"
+            className="field-control min-h-24"
             placeholder="One-sentence problem representation, can’t-miss mimic, and first timed action…"
             value={reflections}
             onChange={(e) => setReflections(e.target.value)}

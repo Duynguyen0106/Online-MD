@@ -31,10 +31,9 @@ export function ClassAnalyticsDashboard({ facultyName }: { facultyName: string }
 
   return (
     <div className="space-y-8">
-      <p className="-mt-2 text-sm leading-6 text-[var(--muted)]">
-        Mock class analytics for <span className="font-medium text-[var(--foreground)]">{facultyName}</span>
-        . Use this to spot remediation targets before small-group sessions. Demo data only — not a
-        live gradebook.
+      <p className="text-sm text-[var(--muted)]">
+        Viewing as{" "}
+        <span className="font-medium text-[var(--foreground)]">{facultyName}</span>
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

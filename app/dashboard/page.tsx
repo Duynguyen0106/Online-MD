@@ -33,7 +33,10 @@ export default async function DashboardPage() {
 
   if (user.role === "faculty") {
     return (
-      <AppShell title="Class analytics & remediation">
+      <AppShell
+        title="Class analytics & remediation"
+        description="Mock cohort signals for tutorial planning. Demo data only—not a live gradebook."
+      >
         <ClassAnalyticsDashboard facultyName={user.fullName} />
       </AppShell>
     );
@@ -61,10 +64,10 @@ export default async function DashboardPage() {
   const gaps = topCompetencyGaps(competencyRows, 3);
 
   return (
-    <AppShell title="Your learning dashboard">
-      <p className="-mt-4 mb-6 text-[var(--muted)]">
-        Keep going from where you left off.
-      </p>
+    <AppShell
+      title="Your learning dashboard"
+      description="Keep going from where you left off—lessons, competency focus, presentations, and skills in one place."
+    >
       <div className="mb-4 flex justify-end">
         <ResetProgressButton />
       </div>
