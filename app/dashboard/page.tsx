@@ -103,7 +103,7 @@ export default async function DashboardPage() {
         </section>
       </div>
 
-      <section className="mt-6 grid gap-6 lg:grid-cols-2">
+      <section className="mt-6 grid gap-6 lg:grid-cols-3">
         <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
           <div className="mb-3 flex items-center justify-between gap-2">
             <h2 className="font-[family-name:var(--font-display)] text-lg">
@@ -152,6 +152,17 @@ export default async function DashboardPage() {
           </p>
           <Button asChild variant="secondary" size="sm">
             <Link href="/presentations">Browse presentations</Link>
+          </Button>
+        </div>
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
+          <h2 className="mb-2 font-[family-name:var(--font-display)] text-lg">
+            {STUDENT_COPY.skillsWidgetTitle}
+          </h2>
+          <p className="mb-4 text-sm leading-6 text-[var(--muted)]">
+            {STUDENT_COPY.skillsWidgetBody}
+          </p>
+          <Button asChild variant="secondary" size="sm">
+            <Link href="/skills">{STUDENT_COPY.skillsViewTracker}</Link>
           </Button>
         </div>
       </section>
