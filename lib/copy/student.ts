@@ -115,6 +115,11 @@ export const STUDENT_COPY = {
     "Browse high-yield clinical presentations and jump into linked lessons and cases already in the curriculum.",
   presentationsDisclaimer:
     "Educational pathways only. Exact thresholds and regimens belong to supervised clinical care and current guidelines.",
+  libraryTitle: "Open textbooks",
+  libraryIntro:
+    "Free and openly licensed anatomy, physiology, pathology, pharmacology, and microbiology companions you can read alongside Online MD lessons.",
+  libraryPolicy:
+    "We link OpenStax and similar OERs for reading. We do not paste commercial textbooks or unauthorized PDF mirrors into the curriculum.",
 } as const;
 
 /** Default human descriptions for known modules (by id). Fallback to seed description. */

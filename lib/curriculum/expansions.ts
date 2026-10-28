@@ -56,6 +56,14 @@ import {
   wave7QuizQuestions,
 } from "@/lib/curriculum/expansions-wave7";
 import {
+  applyOpenOerExpansions,
+  openOerClinicalCases,
+  openOerFlashcards,
+  openOerObjectives,
+  openOerQbankQuestions,
+  openOerQuizQuestions,
+} from "@/lib/curriculum/expansions-open-oer";
+import {
   applyFourYearCatalog,
   catalogFlashcards,
   catalogObjectives,
@@ -93,6 +101,11 @@ export {
   wave7Objectives,
   wave7QbankQuestions,
   wave7QuizQuestions,
+  openOerClinicalCases,
+  openOerFlashcards,
+  openOerObjectives,
+  openOerQbankQuestions,
+  openOerQuizQuestions,
   catalogFlashcards,
   catalogObjectives,
   catalogQuizQuestions,
@@ -647,6 +660,7 @@ export function applyCurriculumExpansions(program: Program): Program {
   applyWave5Expansions(program);
   applyWave6Expansions(program);
   applyWave7Expansions(program);
+  applyOpenOerExpansions(program);
   applyFourYearCatalog(program);
   for (const phase of program.phases) {
     for (const mod of phase.modules) {

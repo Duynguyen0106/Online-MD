@@ -44,6 +44,11 @@ import {
   wave7Objectives,
   wave7QbankQuestions,
   wave7QuizQuestions,
+  openOerClinicalCases,
+  openOerFlashcards,
+  openOerObjectives,
+  openOerQbankQuestions,
+  openOerQuizQuestions,
   catalogFlashcards,
   catalogObjectives,
   catalogQuizQuestions,
@@ -68,6 +73,7 @@ const quizQuestions = ensureQuizBankTeaching([
   ...wave5QuizQuestions,
   ...wave6QuizQuestions,
   ...wave7QuizQuestions,
+  ...openOerQuizQuestions,
   ...catalogQuizQuestions,
 ]);
 const baseObjectiveBank = [
@@ -79,6 +85,7 @@ const baseObjectiveBank = [
   ...wave5Objectives,
   ...wave6Objectives,
   ...wave7Objectives,
+  ...openOerObjectives,
   ...catalogObjectives,
 ];
 const objectives = [
@@ -99,6 +106,7 @@ const flashcards = [
   ...wave5Flashcards,
   ...wave6Flashcards,
   ...wave7Flashcards,
+  ...openOerFlashcards,
   ...catalogFlashcards,
 ];
 const qbankQuestions = [
@@ -110,6 +118,7 @@ const qbankQuestions = [
   ...wave5QbankQuestions,
   ...wave6QbankQuestions,
   ...wave7QbankQuestions,
+  ...openOerQbankQuestions,
 ];
 const clinicalCases = [
   ...baseCases,
@@ -120,6 +129,7 @@ const clinicalCases = [
   ...wave5ClinicalCases,
   ...wave6ClinicalCases,
   ...wave7ClinicalCases,
+  ...openOerClinicalCases,
   ...authoredClinicalCases,
 ];
 
