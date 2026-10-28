@@ -72,3 +72,8 @@ export const caseResponseSchema = z.object({
   caseId: z.string().min(1),
   responses: z.record(z.string(), z.string()),
 });
+
+export const setSkillStatusSchema = z.object({
+  skillId: z.string().min(1),
+  status: z.enum(["not_started", "simulated", "verified"]),
+});

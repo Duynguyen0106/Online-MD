@@ -5,11 +5,11 @@ import { STUDENT_COPY } from "@/lib/copy/student";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      <header className="border-b border-[var(--border)] bg-[var(--surface)]">
+      <header className="border-b border-[var(--border)] bg-[var(--surface)]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="font-[family-name:var(--font-display)] text-lg tracking-tight text-[var(--brand-strong)]"
+            className="font-[family-name:var(--font-display)] text-xl tracking-tight text-[var(--brand-strong)]"
           >
             Online MD
           </Link>
@@ -26,25 +26,30 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0 opacity-95"
+          className="pointer-events-none absolute inset-0"
+          aria-hidden
           style={{
             background:
               "linear-gradient(145deg, var(--hero-a) 0%, var(--hero-b) 55%, #0f766e 100%)",
           }}
         />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-30"
+          aria-hidden
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 40%), radial-gradient(circle at 80% 0%, rgba(196,163,90,0.25), transparent 35%)",
+          }}
+        />
         <div className="relative mx-auto max-w-6xl px-6 py-20 text-white md:py-28">
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-white/75">
+          <p className="mb-3 font-[family-name:var(--font-display)] text-3xl tracking-tight text-white md:text-4xl">
             Online MD
           </p>
-          <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-tight md:text-6xl">
+          <h1 className="max-w-3xl font-[family-name:var(--font-display)] text-4xl leading-tight md:text-5xl">
             {STUDENT_COPY.productTagline}
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-white/90 md:text-xl">
+          <p className="mt-5 max-w-xl text-lg text-white/90 md:text-xl">
             {STUDENT_COPY.productSubhead}
-          </p>
-          <p className="mt-4 max-w-2xl text-base text-white/80">
-            Study the lessons, check your understanding, and build the knowledge you need before
-            moving on to question banks.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-white text-[var(--hero-a)] hover:bg-white/90">
@@ -66,7 +71,7 @@ export default function HomePage() {
         <h2 className="font-[family-name:var(--font-display)] text-3xl tracking-tight">
           A medical-school curriculum, built for self-paced study
         </h2>
-        <div className="mt-10 grid gap-8 md:grid-cols-3">
+        <div className="mt-10 grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="text-lg font-semibold text-[var(--brand-strong)]">
               Preclinical foundations
@@ -99,16 +104,11 @@ export default function HomePage() {
       <section className="border-t border-[var(--border)] bg-[var(--surface)]">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="font-[family-name:var(--font-display)] text-3xl tracking-tight">
-            Learn first. Practice second.
+            {STUDENT_COPY.learnFirstPracticeSecond}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--muted)]">
-            Online MD is designed around a simple idea: understand the material before relying on
-            questions to teach it.
-          </p>
-          <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--muted)]">
-            Each lesson gives you the core concepts, clinical connections, and a short check of
-            your understanding. Once you’ve worked through the curriculum, the question bank
-            becomes the next step.
+            Understand the material before relying on questions to teach it. Lessons, checks for
+            understanding, cases, and a skills tracker come first—question banks second.
           </p>
           <Button asChild className="mt-8">
             <Link href="/signup">Start with the first lesson</Link>

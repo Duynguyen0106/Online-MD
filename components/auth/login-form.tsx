@@ -38,9 +38,10 @@ export function LoginForm() {
       <label className="block text-sm">
         <span className="mb-1 block text-[var(--muted)]">Email</span>
         <input
-          className="h-10 w-full rounded-md border border-[var(--border)] px-3"
+          className="field-control"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          autoComplete="username"
         />
       </label>
       <Button disabled={pending} type="submit" className="w-full">

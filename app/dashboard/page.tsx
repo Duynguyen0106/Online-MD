@@ -3,6 +3,7 @@ import { AppShell } from "@/components/shared/app-shell";
 import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ResetProgressButton } from "@/components/student/reset-progress-button";
+import { ClassAnalyticsDashboard } from "@/components/faculty/class-analytics-dashboard";
 import {
   STUDENT_COPY,
   formatProgressState,
@@ -20,7 +21,7 @@ import {
   getNextLesson,
   getPhases,
 } from "@/lib/curriculum/accessors";
-import { readStudentState } from "@/lib/demo/store";
+import { getSessionUser, readStudentState } from "@/lib/demo/store";
 import {
   canAccessStep1Qbank,
   canAccessStep2CkQbank,
@@ -28,6 +29,19 @@ import {
 import { percent } from "@/lib/utils";
 
 export default async function DashboardPage() {
+  const user = await getSessionUser();
+
+  if (user.role === "faculty") {
+    return (
+      <AppShell
+        title="Class analytics & remediation"
+        description="Mock cohort signals for tutorial planning. Demo data only—not a live gradebook."
+      >
+        <ClassAnalyticsDashboard facultyName={user.fullName} />
+      </AppShell>
+    );
+  }
+
   const state = await readStudentState();
   const masteredLessons = new Set(
     Object.values(state.lessonProgress)
@@ -50,10 +64,10 @@ export default async function DashboardPage() {
   const gaps = topCompetencyGaps(competencyRows, 3);
 
   return (
-    <AppShell title="Your learning dashboard">
-      <p className="-mt-4 mb-6 text-[var(--muted)]">
-        Keep going from where you left off.
-      </p>
+    <AppShell
+      title="Your learning dashboard"
+      description="Keep going from where you left off—lessons, competency focus, presentations, and skills in one place."
+    >
       <div className="mb-4 flex justify-end">
         <ResetProgressButton />
       </div>
@@ -103,7 +117,7 @@ export default async function DashboardPage() {
         </section>
       </div>
 
-      <section className="mt-6 grid gap-6 lg:grid-cols-2">
+      <section className="mt-6 grid gap-6 lg:grid-cols-3">
         <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
           <div className="mb-3 flex items-center justify-between gap-2">
             <h2 className="font-[family-name:var(--font-display)] text-lg">
@@ -152,6 +166,17 @@ export default async function DashboardPage() {
           </p>
           <Button asChild variant="secondary" size="sm">
             <Link href="/presentations">Browse presentations</Link>
+          </Button>
+        </div>
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
+          <h2 className="mb-2 font-[family-name:var(--font-display)] text-lg">
+            {STUDENT_COPY.skillsWidgetTitle}
+          </h2>
+          <p className="mb-4 text-sm leading-6 text-[var(--muted)]">
+            {STUDENT_COPY.skillsWidgetBody}
+          </p>
+          <Button asChild variant="secondary" size="sm">
+            <Link href="/skills">{STUDENT_COPY.skillsViewTracker}</Link>
           </Button>
         </div>
       </section>
