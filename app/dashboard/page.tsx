@@ -3,6 +3,7 @@ import { AppShell } from "@/components/shared/app-shell";
 import { Badge, ProgressBar } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ResetProgressButton } from "@/components/student/reset-progress-button";
+import { ClassAnalyticsDashboard } from "@/components/faculty/class-analytics-dashboard";
 import {
   STUDENT_COPY,
   formatProgressState,
@@ -20,7 +21,7 @@ import {
   getNextLesson,
   getPhases,
 } from "@/lib/curriculum/accessors";
-import { readStudentState } from "@/lib/demo/store";
+import { getSessionUser, readStudentState } from "@/lib/demo/store";
 import {
   canAccessStep1Qbank,
   canAccessStep2CkQbank,
@@ -28,6 +29,16 @@ import {
 import { percent } from "@/lib/utils";
 
 export default async function DashboardPage() {
+  const user = await getSessionUser();
+
+  if (user.role === "faculty") {
+    return (
+      <AppShell title="Class analytics & remediation">
+        <ClassAnalyticsDashboard facultyName={user.fullName} />
+      </AppShell>
+    );
+  }
+
   const state = await readStudentState();
   const masteredLessons = new Set(
     Object.values(state.lessonProgress)
