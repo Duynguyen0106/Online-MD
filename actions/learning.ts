@@ -46,6 +46,7 @@ import { getClinicalSkill } from "@/lib/curriculum/skills";
 export async function switchDemoUser(userId: string) {
   await setSessionUserId(userId);
   revalidatePath("/", "layout");
+  revalidatePath("/dashboard");
   return { ok: true as const };
 }
 
