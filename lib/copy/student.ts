@@ -115,6 +115,13 @@ export const STUDENT_COPY = {
     "Browse high-yield clinical presentations and jump into linked lessons and cases already in the curriculum.",
   presentationsDisclaimer:
     "Educational pathways only. Exact thresholds and regimens belong to supervised clinical care and current guidelines.",
+  skillsTitle: "Procedures & clinical skills",
+  skillsIntro:
+    "Track core clerkship procedures from not started → simulation practice → verified/observed. This is a personal learning checklist, not hospital credentialling.",
+  skillsWidgetTitle: "Procedures & skills",
+  skillsWidgetBody:
+    "Log venipuncture, Foley placement, suturing, POCUS/CXR reads, and more as you practice in simulation or under observation.",
+  skillsViewTracker: "Open skills tracker",
 } as const;
 
 /** Default human descriptions for known modules (by id). Fallback to seed description. */

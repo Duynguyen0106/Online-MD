@@ -34,12 +34,14 @@ import {
   caseResponseSchema,
   markBlockSchema,
   reviewCardSchema,
+  setSkillStatusSchema,
   startQbankSchema,
   submitExamSchema,
   submitQbankSchema,
   submitQuizSchema,
   tutorMessageSchema,
 } from "@/lib/validations/schemas";
+import { getClinicalSkill } from "@/lib/curriculum/skills";
 
 export async function switchDemoUser(userId: string) {
   await setSessionUserId(userId);
@@ -387,4 +389,26 @@ export async function submitCaseAttempt(input: unknown) {
 
   revalidatePath(`/cases/${parsed.caseId}`);
   return { ok: true as const, attemptId, feedback };
+}
+
+export async function setSkillPracticeStatus(input: unknown) {
+  const parsed = setSkillStatusSchema.parse(input);
+  if (!getClinicalSkill(parsed.skillId)) {
+    throw new Error("Unknown clinical skill");
+  }
+
+  await updateStudentState((s) => {
+    const skillProgress = { ...(s.skillProgress ?? {}) };
+    skillProgress[parsed.skillId] = {
+      skillId: parsed.skillId,
+      status: parsed.status,
+      updatedAt: new Date().toISOString(),
+    };
+    s.skillProgress = skillProgress;
+    return s;
+  });
+
+  revalidatePath("/skills");
+  revalidatePath("/dashboard");
+  return { ok: true as const };
 }

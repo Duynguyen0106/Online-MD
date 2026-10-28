@@ -25,6 +25,7 @@ const studentLinks: AppNavLink[] = [
   { href: "/dashboard", label: "Dashboard", group: "Learn" },
   { href: "/competency", label: "Competency", group: "Learn" },
   { href: "/presentations", label: "Presentations", group: "Learn" },
+  { href: "/skills", label: "Skills", group: "Learn" },
   { href: "/flashcards", label: "Flashcards", group: "Practice" },
   { href: "/qbank", label: "Question bank", group: "Practice" },
   { href: "/tutor", label: "Ask a question", group: "Practice" },
