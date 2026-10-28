@@ -48,12 +48,9 @@ import {
   catalogObjectives,
   catalogQuizQuestions,
 } from "@/lib/curriculum/expansions";
-<<<<<<< HEAD
 import { ensureQuizBankTeaching } from "@/lib/curriculum/ensure-quiz-explanations";
 import { supplementalObjectivesForProgram } from "@/lib/curriculum/ensure-objective-coverage";
-=======
 import { authoredClinicalCases } from "@/lib/curriculum/cases";
->>>>>>> 0f0d3e0 (Add progressive Acute Mesenteric Ischemia clinical case)
 import type {
   Lesson,
   Module,
