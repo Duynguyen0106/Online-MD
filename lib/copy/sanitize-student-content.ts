@@ -17,10 +17,19 @@ const REFERENCE_TOKEN_RE = /\bREFERENCE_REVIEW_REQUIRED\b/g;
 const STATUS_CELL_RE =
   /\|\s*Authoritative society guidance or primary literature for[^\n|]*\|\s*REFERENCE_REVIEW_REQUIRED\s*\|/gi;
 
+/** Drop curriculum-author plumbing that is not teaching content. */
+const READY_FOR_QUIZ_SECTION_RE =
+  /(?:^|\n)#{2,3}\s*Ready for quiz\b[\s\S]*?(?=(?:\n#{1,3}\s+)|\s*$)/gi;
+
+const THIN_VIGNETTE_META_RE =
+  /(?:^|\n)(?:A learner is asked to explain[^\n]*|On rounds, a patient presentation hinges on[^\n]*|Teach .+ using mechanism[^\n]*|Outline the mechanism, one clinical consequence[^\n]*|State the mechanism, expected findings[^\n]*)\n?/gi;
+
 export function sanitizeStudentMarkdown(input: string | undefined | null): string {
   if (!input) return "";
   let out = input;
 
+  out = out.replace(READY_FOR_QUIZ_SECTION_RE, "\n");
+  out = out.replace(THIN_VIGNETTE_META_RE, "\n");
   out = out.replace(FACULTY_LINE_RE, "");
   out = out.replace(LAST_REVIEWED_UNAPPROVED_RE, STUDENT_SOURCES_LAST_REVIEWED);
   out = out.replace(NOT_YET_APPROVED_RE, "pending faculty medical review");

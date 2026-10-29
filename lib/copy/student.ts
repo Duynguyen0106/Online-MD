@@ -121,8 +121,6 @@ export const STUDENT_COPY = {
 export const MODULE_DESCRIPTIONS: Record<string, string> = {
   "mod-cell-mol":
     "Learn the cellular and molecular processes that underlie disease.",
-  "mod-cell":
-    "Learn the cellular and molecular processes that underlie disease.",
   "mod-biochem":
     "Build the metabolic foundations you’ll use throughout medicine.",
   "mod-anatomy":

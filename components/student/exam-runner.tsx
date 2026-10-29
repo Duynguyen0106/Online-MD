@@ -35,6 +35,20 @@ export function ExamRunner({
     );
   }
 
+  if (questions.length === 0) {
+    return (
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+          Assessment questions not ready
+        </h2>
+        <p className="text-sm text-[var(--muted)]">
+          This module does not have assessment questions yet. Finish any remaining
+          lessons, then check back after the next content update.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       {questions.map((q, i) => (

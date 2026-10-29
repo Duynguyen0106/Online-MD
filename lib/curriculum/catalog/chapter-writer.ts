@@ -268,10 +268,6 @@ ${checklist}
 - [ ] I can name one can’t-miss alternative.  
 - [ ] I can state the first action I would take if this appeared tonight.
 
-### Ready for quiz
-
-Pass threshold ≥80%. Afterward, add the flashcard (**${topic.cardFront}** → ${topic.cardBack}) to spaced repetition so the chapter does not collapse back into a summary.
-
 ### Sources
 
 Exact doses, thresholds, and trial statistics for **${topic.title}** belong to primary sources and current society guidelines. Confirm details in supervised clinical care.

@@ -69,7 +69,19 @@ export default async function CompetencyPage() {
         </section>
       ) : null}
 
-      <CompetencyHeatmap rows={rows} />
+      {rows.length === 0 ? (
+        <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+          <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+            No modules to map yet
+          </h2>
+          <p className="text-sm text-[var(--muted)]">
+            Competency evidence appears once published modules are in the
+            curriculum. Start from your dashboard when lessons are available.
+          </p>
+        </div>
+      ) : (
+        <CompetencyHeatmap rows={rows} />
+      )}
     </AppShell>
   );
 }
