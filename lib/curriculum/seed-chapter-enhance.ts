@@ -168,12 +168,24 @@ export function ensureSourcesFooter(lesson: Lesson): Lesson {
  * Expand thin seed/expansion lessons into textbook-style chapter blocks
  * while preserving diagrams, videos, and vignettes.
  */
+/** Hand-authored five-part chapters should not be overwritten by the generic expander. */
+function hasFivePartSpine(lesson: Lesson): boolean {
+  const titles = lesson.concepts
+    .flatMap((c) => c.blocks)
+    .map((b) => b.title ?? "");
+  return (
+    titles.some((t) => /how it works/i.test(t)) &&
+    titles.some((t) => /why it matters clinically/i.test(t))
+  );
+}
+
 export function enhanceThinSeedLesson(
   lesson: Lesson,
   module: Module,
 ): Lesson {
   if (lesson.id.startsWith("les-cat-")) return lesson;
-  if (readingChars(lesson) >= MIN_READING_CHARS) {
+  // Reference hand-authored lessons (e.g. les-cv-2 ACS) keep their spine.
+  if (hasFivePartSpine(lesson) || readingChars(lesson) >= MIN_READING_CHARS) {
     return ensureSourcesFooter(lesson);
   }
 
@@ -226,22 +238,30 @@ Start with the basics, work through the mechanism, connect it to patients, then 
       blockType: "reading",
       title: "2. How it works",
       sequence: 2,
-      bodyMd: `## ${lesson.title} — how it works
+      bodyMd: `## How it works — ${lesson.title}
 
-### Key points
+*Reference pattern:* core mechanism first, then classification/nuances. Prefer clinical reasoning language over meta “chapter method” prose. See \`les-cv-2\` (Ischemic Heart Disease & ACS) for the hand-authored model.
 
-${enrichment || `Rebuild **${lesson.title}** from first principles: definition → regulation → failure mode → clinical bridge.`}
+### 1. Core mechanism (start here)
 
-### Teaching notes from this lesson
+${enrichment || `State the main pathway for **${lesson.title}** in one continuous story: normal → stressed → failed. Name the primary failure mode that produces the bedside syndrome.`}
 
-${prior || `Use the module objectives and quiz stems to reconstruct the pathway for **${lesson.title}**.`}
+### 2. Build from the lesson anchors
 
-### Control-point checklist
+${(points.length ? points : [lesson.title]).map((p, i) => `#### ${i + 1}. ${p}
 
-${(points.length ? points : [lesson.title]).map((p, i) => `### ${i + 1}. ${p}
-
-**${p}.** Place this node in the pathway for **${lesson.title}**, state what increases/decreases its activity, and name the phenotype when it fails. Tie the finding back to **${module.title}** so the mechanism predicts disease rather than remaining abstract.
+Place **${p}** in the pathway. What increases or decreases it? What phenotype appears when it fails? Predict one finding you could defend on rounds.
 `).join("\n")}
+
+### 3. Nuances (open after the core is solid)
+
+${prior || `Add the exceptions and modifiers that change management once the core mechanism is clear—without burying the spine.`}
+
+### 4. Self-check
+
+- Can you teach the core mechanism without notes?  
+- Can you place each anchor above in that story?  
+- What is the first nuance that most often tricks learners?
 `,
     },
     {
@@ -252,20 +272,33 @@ ${(points.length ? points : [lesson.title]).map((p, i) => `### ${i + 1}. ${p}
       sequence: 3,
       bodyMd: `## Why it matters clinically — ${lesson.title}
 
-Translate each control point into something you can observe in a patient: a symptom, exam finding, lab pattern, imaging clue, or drug effect.
+*Reference pattern:* decisions → pitfalls → look-alikes. Bound to this lesson’s objectives, not generic organ essays. See \`les-cv-2\` for the hand-authored model.
 
-### Clinical threads
+### 1. Decisions this mechanism changes
 
-1. **Loss of function** — What syndrome appears when the pathway cannot meet demand?  
-2. **Gain of function** — What appears when a brake is lost?  
-3. **Toxic/pharmacologic hit** — Which agents act here?  
-4. **Look-alike** — What is the most important mimic, and what discriminates it?
+For each anchor, name what you would **do or watch for** at the bedside (order, monitor, escalate, or counsel)—not a full guideline dump.
 
-### Bridge table
-
-| # | Anchor | Clinical prediction |
+| # | Anchor | Clinical move |
 | --- | --- | --- |
-${(points.length ? points : [lesson.title]).map((p, i) => `| ${i + 1} | ${p} | Phenotype, lab, imaging, or drug effect when this node fails |`).join("\n")}
+${(points.length ? points : [lesson.title]).map((p, i) => `| ${i + 1} | ${p} | Finding, next step, or monitoring priority when this node fails |`).join("\n")}
+
+### 2. Common pitfalls
+
+1. Skipping the core mechanism and jumping to memorized labels  
+2. Missing the time-critical branch (what must be acted on *now*?)  
+3. Treating a historical teaching mnemonic as a modern protocol  
+4. Forgetting serial data when the first test can be falsely reassuring  
+
+### 3. Look-alikes
+
+| Look-alike | Why it fools you | Discriminator |
+| --- | --- | --- |
+| Closest mimic of **${lesson.title}** | Shared symptom or lab pattern | History, exam, or test that splits the differential |
+| Second mimic | Overlapping urgency or imaging | Explicit “not this because…” clue |
+
+### 4. Bedside synthesis prompt
+
+Unstable? → Critical test now? → Working classification? → Explicit look-alike still on the board?
 `,
     },
     {
