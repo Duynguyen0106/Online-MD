@@ -8,8 +8,21 @@ import {
   canAccessStep1Qbank,
   canAccessStep2CkQbank,
 } from "@/lib/mastery/gates";
+import type { QbankBankParam } from "@/lib/routes/practice";
 
-export default async function QbankPage() {
+function parseBank(raw: string | string[] | undefined): QbankBankParam {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  if (value === "step1" || value === "step2ck" || value === "module") return value;
+  return "module";
+}
+
+export default async function QbankPage({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = (await searchParams) ?? {};
+  const initialBank = parseBank(params.bank);
   const state = await readStudentState();
   const modules = await getAllModules();
   const moduleGates: Record<string, string | undefined> = {};
@@ -32,6 +45,7 @@ export default async function QbankPage() {
         step1Reason={step1.unlocked ? undefined : step1.reason}
         step2Reason={step2.unlocked ? undefined : step2.reason}
         questionsPreview={questions}
+        initialBank={initialBank}
       />
     </AppShell>
   );
