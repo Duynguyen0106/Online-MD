@@ -8,6 +8,7 @@ import { markBlockViewed } from "@/actions/learning";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { formatBlockType } from "@/lib/copy/student";
+import { sanitizeStudentMarkdown } from "@/lib/copy/sanitize-student-content";
 import type { ContentBlock, Lesson, LessonProgress } from "@/lib/types/domain";
 import { cn } from "@/lib/utils";
 
@@ -148,7 +149,7 @@ export function LessonPlayer({
         {active?.bodyMd ? (
           <article className="prose-lesson max-w-none text-[15px] leading-7 text-[var(--foreground)]">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {active.bodyMd}
+              {sanitizeStudentMarkdown(active.bodyMd)}
             </ReactMarkdown>
           </article>
         ) : null}

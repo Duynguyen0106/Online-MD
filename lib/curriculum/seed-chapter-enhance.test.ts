@@ -39,7 +39,7 @@ describe("seed-chapter-enhance", () => {
       .flatMap((c) => c.blocks)
       .map((b) => b.bodyMd || "")
       .join("\n");
-    assert.match(body, /REFERENCE_REVIEW_REQUIRED/);
+    assert.match(body, /confirm doses, thresholds, and regimens/i);
   });
 
   it("leaves catalog lessons untouched", () => {

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shared/app-shell";
 import { QuizRunner } from "@/components/student/quiz-runner";
+import { sanitizeStudentMarkdown } from "@/lib/copy/sanitize-student-content";
 import {
   getFormativeQuestionsLive,
   getLesson,
@@ -14,7 +15,10 @@ export default async function LessonQuizPage({
   const { lessonId } = await params;
   const lesson = await getLesson(lessonId);
   if (!lesson) notFound();
-  const questions = await getFormativeQuestionsLive(lessonId);
+  const questions = (await getFormativeQuestionsLive(lessonId)).map((q) => ({
+    ...q,
+    explanation: sanitizeStudentMarkdown(q.explanation),
+  }));
 
   return (
     <AppShell title="Check your understanding">

@@ -26,11 +26,30 @@ export function FlashcardDeck({
   const [pending, startTransition] = useTransition();
   const card = due[index] ?? due[0];
 
+  if (cards.length === 0) {
+    return (
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+          No flashcards yet
+        </h2>
+        <p className="text-sm text-[var(--muted)]">
+          Cards appear as lessons are published. Start a lesson from your dashboard,
+          then return here to review key points.
+        </p>
+      </div>
+    );
+  }
+
   if (!card) {
     return (
-      <p className="text-[var(--muted)]">
-        You’re caught up. Come back later for cards that are due for review.
-      </p>
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+          You’re caught up
+        </h2>
+        <p className="text-sm text-[var(--muted)]">
+          No cards are due right now. Come back later for the next review round.
+        </p>
+      </div>
     );
   }
 

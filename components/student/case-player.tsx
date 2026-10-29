@@ -5,19 +5,21 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { submitCaseAttempt } from "@/actions/learning";
 import { Button } from "@/components/ui/button";
+import { sanitizeStudentMarkdown } from "@/lib/copy/sanitize-student-content";
 import type { CaseFeedback } from "@/lib/validations/schemas";
 import type { CaseStage, ClinicalCase } from "@/lib/types/domain";
 
 function FreeformCasePlayer({ clinicalCase }: { clinicalCase: ClinicalCase }) {
   const [responses, setResponses] = useState<Record<string, string>>({});
   const [feedback, setFeedback] = useState<CaseFeedback | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
   return (
     <div className="space-y-6">
       <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 prose prose-sm max-w-none dark:prose-invert">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {clinicalCase.presentationMd}
+          {sanitizeStudentMarkdown(clinicalCase.presentationMd)}
         </ReactMarkdown>
       </article>
       {clinicalCase.stages.map((stage, i) => (
@@ -41,16 +43,30 @@ function FreeformCasePlayer({ clinicalCase }: { clinicalCase: ClinicalCase }) {
         disabled={pending}
         onClick={() => {
           startTransition(async () => {
-            const res = await submitCaseAttempt({
-              caseId: clinicalCase.id,
-              responses,
-            });
-            setFeedback(res.feedback);
+            setError(null);
+            try {
+              const res = await submitCaseAttempt({
+                caseId: clinicalCase.id,
+                responses,
+              });
+              setFeedback(res.feedback);
+            } catch (e) {
+              setError(
+                e instanceof Error
+                  ? e.message
+                  : "Could not check your reasoning. Try again.",
+              );
+            }
           });
         }}
       >
         Check my reasoning
       </Button>
+      {error ? (
+        <p className="text-sm text-amber-800" role="alert">
+          {error}
+        </p>
+      ) : null}
       {feedback ? <FeedbackPanel feedback={feedback} /> : null}
     </div>
   );
@@ -97,6 +113,7 @@ function ProgressiveCasePlayer({
 }) {
   const [stepIndex, setStepIndex] = useState(0);
   const [selections, setSelections] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [wrapupsOpened, setWrapupsOpened] = useState<Record<string, boolean>>(
     {},
   );
@@ -148,12 +165,12 @@ function ProgressiveCasePlayer({
       <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 prose prose-sm max-w-none dark:prose-invert">
         {stepIndex === 0 ? (
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {clinicalCase.presentationMd}
+            {sanitizeStudentMarkdown(clinicalCase.presentationMd)}
           </ReactMarkdown>
         ) : null}
         {stage.revealMd ? (
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {stage.revealMd}
+            {sanitizeStudentMarkdown(stage.revealMd)}
           </ReactMarkdown>
         ) : null}
       </article>
@@ -253,7 +270,9 @@ function ProgressiveCasePlayer({
               {isCorrect ? "Correct direction." : "Not the best next move."}
             </p>
             {selectedChoice.explanation ? (
-              <p className="mt-2">{selectedChoice.explanation}</p>
+              <p className="mt-2">
+                {sanitizeStudentMarkdown(selectedChoice.explanation)}
+              </p>
             ) : null}
             {!isCorrect && stage.correctChoiceId ? (
               <p className="mt-2 text-[var(--muted)]">
@@ -265,7 +284,7 @@ function ProgressiveCasePlayer({
             {stage.teachingMd ? (
               <div className="mt-3 prose prose-sm max-w-none dark:prose-invert">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {stage.teachingMd}
+                  {sanitizeStudentMarkdown(stage.teachingMd)}
                 </ReactMarkdown>
               </div>
             ) : null}
@@ -275,7 +294,7 @@ function ProgressiveCasePlayer({
         {isWrapup && stage.teachingMd && wrapupsOpened[stage.id] ? (
           <div className="mt-4 prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {stage.teachingMd}
+              {sanitizeStudentMarkdown(stage.teachingMd)}
             </ReactMarkdown>
           </div>
         ) : null}
@@ -294,28 +313,42 @@ function ProgressiveCasePlayer({
             disabled={pending}
             onClick={() => {
               startTransition(async () => {
-                const responses: Record<string, string> = { ...selections };
-                if (reflections.trim()) {
-                  responses[`${stage.id}-reflection`] = reflections.trim();
-                }
-                for (const s of clinicalCase.stages) {
-                  if (s.choices && selections[s.id]) {
-                    const choice = s.choices.find(
-                      (c) => c.id === selections[s.id],
-                    );
-                    responses[s.id] = choice?.text ?? selections[s.id];
+                setSubmitError(null);
+                try {
+                  const responses: Record<string, string> = { ...selections };
+                  if (reflections.trim()) {
+                    responses[`${stage.id}-reflection`] = reflections.trim();
                   }
+                  for (const s of clinicalCase.stages) {
+                    if (s.choices && selections[s.id]) {
+                      const choice = s.choices.find(
+                        (c) => c.id === selections[s.id],
+                      );
+                      responses[s.id] = choice?.text ?? selections[s.id];
+                    }
+                  }
+                  const res = await submitCaseAttempt({
+                    caseId: clinicalCase.id,
+                    responses,
+                  });
+                  setFeedback(res.feedback);
+                } catch (e) {
+                  setSubmitError(
+                    e instanceof Error
+                      ? e.message
+                      : "Could not check your reasoning. Try again.",
+                  );
                 }
-                const res = await submitCaseAttempt({
-                  caseId: clinicalCase.id,
-                  responses,
-                });
-                setFeedback(res.feedback);
               });
             }}
           >
             Check my reasoning
           </Button>
+          {submitError ? (
+            <p className="text-sm text-amber-800" role="alert">
+              {submitError}
+            </p>
+          ) : null}
         </div>
       ) : null}
 

@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import Link from "next/link";
 import { submitFormativeQuiz } from "@/actions/learning";
 import { Button } from "@/components/ui/button";
+import { sanitizeStudentMarkdown } from "@/lib/copy/sanitize-student-content";
 import type { QuizQuestion } from "@/lib/types/domain";
 import { cn, percent } from "@/lib/utils";
 
@@ -19,7 +21,25 @@ export function QuizRunner({
   const [result, setResult] = useState<{ score: number; passed: boolean } | null>(
     null,
   );
+  const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+
+  if (questions.length === 0) {
+    return (
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+          Quiz not ready yet
+        </h2>
+        <p className="mb-4 text-sm text-[var(--muted)]">
+          This lesson does not have quiz questions yet. Continue with the reading,
+          then check back after the next content update.
+        </p>
+        <Button asChild variant="secondary">
+          <Link href={`/lessons/${lessonId}`}>Back to lesson</Link>
+        </Button>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -55,22 +75,38 @@ export function QuizRunner({
             ))}
           </div>
           {result ? (
-            <p className="mt-3 text-sm text-[var(--muted)]">{q.explanation}</p>
+            <p className="mt-3 text-sm text-[var(--muted)]">
+              {sanitizeStudentMarkdown(q.explanation)}
+            </p>
           ) : null}
         </fieldset>
       ))}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         <Button
           disabled={pending || Object.keys(responses).length < questions.length}
           onClick={() => {
             startTransition(async () => {
-              const res = await submitFormativeQuiz({ lessonId, responses });
-              setResult({ score: res.score, passed: res.passed });
+              setError(null);
+              try {
+                const res = await submitFormativeQuiz({ lessonId, responses });
+                setResult({ score: res.score, passed: res.passed });
+              } catch (e) {
+                setError(
+                  e instanceof Error
+                    ? e.message
+                    : "Could not submit the quiz. Try again.",
+                );
+              }
             });
           }}
         >
           Submit answers
         </Button>
+        {error ? (
+          <p className="text-sm text-amber-800" role="alert">
+            {error}
+          </p>
+        ) : null}
         {result ? (
           <p className="text-sm">
             {Math.round(result.score * questions.length)}/{questions.length} correct

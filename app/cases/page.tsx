@@ -11,7 +11,15 @@ export default function CasesIndexPage() {
         lessons when you can. Progressive cases unlock history, exam, and imaging step by step.
       </p>
       {cases.length === 0 ? (
-        <p className="text-sm text-[var(--muted)]">No clinical cases are available yet.</p>
+        <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+          <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+            No clinical cases yet
+          </h2>
+          <p className="text-sm text-[var(--muted)]">
+            Cases appear as modules publish clinical practice material. Continue with
+            lessons from your dashboard in the meantime.
+          </p>
+        </div>
       ) : (
         <div className="grid gap-3 md:grid-cols-2">
           {cases.map((c) => (

@@ -14,8 +14,14 @@ import {
   getObjectivesForLesson,
   getPhaseForModule,
 } from "@/lib/curriculum/accessors";
+import {
+  formatStudentLastReviewed,
+  formatStudentReferenceLine,
+  sanitizeStudentMarkdown,
+} from "@/lib/copy/sanitize-student-content";
 import { getMedicalReview } from "@/lib/demo/medical-review-store";
 import { readStudentState } from "@/lib/demo/store";
+import type { Lesson } from "@/lib/types/domain";
 
 export default async function LessonPage({
   params,
@@ -27,7 +33,6 @@ export default async function LessonPage({
   if (!lesson) notFound();
   const mod = await getModuleForLesson(lessonId);
   const phase = mod ? await getPhaseForModule(mod.id) : undefined;
-  const blocks = getLessonBlocks(lesson);
   const objectives = getObjectivesForLesson(lessonId);
   const state = await readStudentState();
   const meta = buildLessonMeta({
@@ -40,6 +45,8 @@ export default async function LessonPage({
   const review = await getMedicalReview(lessonId);
   const lastReviewed = review?.lastReviewed ?? meta.lastReviewed;
   const references = meta.references;
+  const studentLesson = sanitizeLessonForStudent(lesson);
+  const blocks = getLessonBlocks(studentLesson);
 
   return (
     <AppShell title={lesson.title}>
@@ -67,7 +74,7 @@ export default async function LessonPage({
         </section>
       ) : null}
       <LessonPlayer
-        lesson={lesson}
+        lesson={studentLesson}
         blocks={blocks}
         progress={state.lessonProgress[lessonId]}
         moduleId={mod?.id ?? lesson.moduleId}
@@ -79,17 +86,33 @@ export default async function LessonPage({
         <ul className="space-y-1 text-xs leading-5 text-[var(--muted)]">
           {references.map((ref) => (
             <li key={ref.label}>
-              {ref.citation ?? ref.label}
-              {ref.status === "REFERENCE_REVIEW_REQUIRED"
-                ? " — reference review required"
-                : null}
+              {formatStudentReferenceLine({
+                label: ref.label,
+                citation: ref.citation,
+                status: ref.status,
+              })}
             </li>
           ))}
         </ul>
         <p className="mt-2 text-xs text-[var(--muted)]">
-          Last reviewed: {lastReviewed ?? "not yet medically approved"}
+          {formatStudentLastReviewed(lastReviewed)}
         </p>
       </section>
     </AppShell>
   );
+}
+
+function sanitizeLessonForStudent(lesson: Lesson): Lesson {
+  return {
+    ...lesson,
+    concepts: lesson.concepts.map((concept) => ({
+      ...concept,
+      blocks: concept.blocks.map((block) => ({
+        ...block,
+        bodyMd: block.bodyMd
+          ? sanitizeStudentMarkdown(block.bodyMd)
+          : block.bodyMd,
+      })),
+    })),
+  };
 }

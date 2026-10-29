@@ -8,7 +8,7 @@ const DISTRACTOR_FOOTER =
   " Why not the others: each distractor conflicts with the mechanism taught in this lesson—map every choice back to the reading before reattempting.";
 
 const GUIDELINE_FOOTER =
-  " Educational framing only — confirm doses, windows, and regimens against current institutional protocols and society guidelines (REFERENCE_REVIEW_REQUIRED).";
+  " Educational framing only — confirm doses, windows, and regimens against current institutional protocols and society guidelines.";
 
 /**
  * Ensure formative explanations include pedagogical framing without inventing
@@ -28,7 +28,7 @@ export function ensureQuizExplanationTeaching(
   const hay = `${question.stem} ${explanation}`;
   if (
     GUIDELINE_SENSITIVE.test(hay) &&
-    !explanation.includes("REFERENCE_REVIEW_REQUIRED")
+    !explanation.includes("confirm doses, windows, and regimens")
   ) {
     explanation = `${explanation}${GUIDELINE_FOOTER}`;
   }

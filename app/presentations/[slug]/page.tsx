@@ -68,7 +68,8 @@ export default async function PresentationDetailPage({
         </h2>
         {lessonRows.filter(Boolean).length === 0 ? (
           <p className="text-sm text-[var(--muted)]">
-            No linked lessons in the current curriculum graph.
+            No linked lessons yet for this presentation. Check Clinical cases below,
+            or browse the module list from your dashboard.
           </p>
         ) : (
           <ul className="space-y-2">
