@@ -11,7 +11,7 @@
         "id": "les-cell-1",
         "title": "From Gene to Protein to Phenotype",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-cell-2",
@@ -309,25 +309,25 @@
         "id": "les-cv-1",
         "title": "Cardiac Electrophysiology & Mechanics",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 50
       },
       {
         "id": "les-cv-2",
         "title": "Ischemic Heart Disease & ACS",
         "level": "STEP_1",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-cv-3",
         "title": "Heart Failure & Foundational Therapy",
         "level": "STEP_1",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-cv-4",
         "title": "Shock Classification by Mechanism",
         "level": "STEP_1",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-cv-5",
@@ -575,8 +575,8 @@
       },
       {
         "id": "les-cat-y2-pulm-obstruct-restrict",
-        "title": "Obstructive vs Restrictive Patterns",
-        "level": "PRECLINICAL",
+        "title": "Obstructive vs Restrictive Patterns — Advanced PFT Companion",
+        "level": "ADVANCED_CLINICAL",
         "minutes": 300
       },
       {
@@ -719,7 +719,7 @@
         "id": "les-renal-1",
         "title": "GFR & Filtration Barrier",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-renal-2",
@@ -927,13 +927,13 @@
         "id": "les-gi-2",
         "title": "Portal Hypertension & Liver Failure",
         "level": "STEP_1",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-gi-3",
         "title": "Portal Hypertension & Cirrhosis Complications",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-gi-4",
@@ -1925,7 +1925,7 @@
         "id": "les-id-1",
         "title": "Bacteriology Laboratory Logic",
         "level": "PRECLINICAL",
-        "minutes": 90
+        "minutes": 45
       },
       {
         "id": "les-id-3",

@@ -1,5 +1,11 @@
 [
   {
+    "id": "les-cell-1",
+    "title": "From Gene to Protein to Phenotype",
+    "module": "Cells, Molecules & Mechanisms of Disease",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-cat-y1-cell-dna-rep",
     "title": "DNA Replication Fidelity & Repair",
     "module": "Cells, Molecules & Mechanisms of Disease",
@@ -252,6 +258,18 @@
     "level": "STEP_1"
   },
   {
+    "id": "les-cv-3",
+    "title": "Heart Failure & Foundational Therapy",
+    "module": "Cardiovascular System",
+    "level": "STEP_1"
+  },
+  {
+    "id": "les-cv-4",
+    "title": "Shock Classification by Mechanism",
+    "module": "Cardiovascular System",
+    "level": "STEP_1"
+  },
+  {
     "id": "les-cv-7",
     "title": "Atherosclerosis to Plaque Rupture",
     "module": "Cardiovascular System",
@@ -420,12 +438,6 @@
     "level": "PRECLINICAL"
   },
   {
-    "id": "les-pulm-6",
-    "title": "ABG Interpretation Framework",
-    "module": "Respiratory System",
-    "level": "PRECLINICAL"
-  },
-  {
     "id": "les-cat-y2-pulm-mech-ventil",
     "title": "Respiratory Mechanics & Compliance",
     "module": "Respiratory System",
@@ -445,9 +457,9 @@
   },
   {
     "id": "les-cat-y2-pulm-obstruct-restrict",
-    "title": "Obstructive vs Restrictive Patterns",
+    "title": "Obstructive vs Restrictive Patterns — Advanced PFT Companion",
     "module": "Respiratory System",
-    "level": "PRECLINICAL"
+    "level": "ADVANCED_CLINICAL"
   },
   {
     "id": "les-cat-y2-pulm-asthma-path",
@@ -573,6 +585,24 @@
     "id": "les-cat-y2-pulm-rehab",
     "title": "Pulmonary Rehabilitation Physiology",
     "module": "Respiratory System",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-renal-1",
+    "title": "GFR & Filtration Barrier",
+    "module": "Renal & Acid–Base",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-renal-4",
+    "title": "Hyponatremia Diagnostic Framework",
+    "module": "Renal & Acid–Base",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-renal-5",
+    "title": "Hyperkalemia Emergency Framework",
+    "module": "Renal & Acid–Base",
     "level": "PRECLINICAL"
   },
   {
@@ -726,9 +756,15 @@
     "level": "PRECLINICAL"
   },
   {
-    "id": "les-renal-3",
-    "title": "Acid–Base Disorder Framework",
-    "module": "Renal & Acid–Base",
+    "id": "les-gi-2",
+    "title": "Portal Hypertension & Liver Failure",
+    "module": "Gastrointestinal & Hepatology",
+    "level": "STEP_1"
+  },
+  {
+    "id": "les-gi-3",
+    "title": "Portal Hypertension & Cirrhosis Complications",
+    "module": "Gastrointestinal & Hepatology",
     "level": "PRECLINICAL"
   },
   {
@@ -1038,10 +1074,10 @@
     "level": "PRECLINICAL"
   },
   {
-    "id": "les-heme-6",
-    "title": "Acute Leukemia Recognition",
+    "id": "les-heme-7",
+    "title": "Tumor Lysis Syndrome",
     "module": "Hematology & Oncology Foundations",
-    "level": "PRECLINICAL"
+    "level": "STEP_1"
   },
   {
     "id": "les-cat-y2-heme-heme-synth",
@@ -1350,6 +1386,12 @@
     "level": "PRECLINICAL"
   },
   {
+    "id": "les-msk-4",
+    "title": "Crystal Arthropathy vs Infection",
+    "module": "Musculoskeletal & Rheumatology",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-cat-y2-msk-bone-phys",
     "title": "Bone Physiology & Remodeling",
     "module": "Musculoskeletal & Rheumatology",
@@ -1500,14 +1542,26 @@
     "level": "PRECLINICAL"
   },
   {
+    "id": "les-id-1",
+    "title": "Bacteriology Laboratory Logic",
+    "module": "Host Defense, Microbiology & Infectious Disease",
+    "level": "PRECLINICAL"
+  },
+  {
     "id": "les-id-3",
     "title": "Community Infection Empiric Logic",
     "module": "Host Defense, Microbiology & Infectious Disease",
     "level": "PRECLINICAL"
   },
   {
-    "id": "les-id-5",
-    "title": "UTI vs Pyelonephritis",
+    "id": "les-id-4",
+    "title": "HIV Opportunistic Infection Map",
+    "module": "Host Defense, Microbiology & Infectious Disease",
+    "level": "PRECLINICAL"
+  },
+  {
+    "id": "les-id-6",
+    "title": "Tuberculosis — Latent vs Active",
     "module": "Host Defense, Microbiology & Infectious Disease",
     "level": "PRECLINICAL"
   },
@@ -2886,12 +2940,6 @@
     "level": "CLERKSHIP"
   },
   {
-    "id": "les-im-3",
-    "title": "Syncope — Cardiac vs Reflex",
-    "module": "Internal Medicine Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
     "id": "les-im-4",
     "title": "AKI Bedside Framework",
     "module": "Internal Medicine Clerkship",
@@ -3306,12 +3354,6 @@
     "level": "CLERKSHIP"
   },
   {
-    "id": "les-surg-1",
-    "title": "Shock & Resuscitation Priorities",
-    "module": "Surgery Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
     "id": "les-surg-3",
     "title": "Appendicitis Clinical Pattern",
     "module": "Surgery Clerkship",
@@ -3648,20 +3690,8 @@
     "level": "CLERKSHIP"
   },
   {
-    "id": "les-peds-3",
-    "title": "Fever in the Young Infant",
-    "module": "Pediatrics Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
     "id": "les-peds-5",
     "title": "Dehydration in Gastroenteritis",
-    "module": "Pediatrics Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
-    "id": "les-peds-6",
-    "title": "Developmental Milestone Surveillance",
     "module": "Pediatrics Clerkship",
     "level": "CLERKSHIP"
   },
@@ -3939,18 +3969,6 @@
     "id": "les-cat-y4-peds-child-life",
     "title": "Procedural Comfort & Child Life",
     "module": "Pediatrics Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
-    "id": "les-peds-2",
-    "title": "Well-Child Prevention Visit",
-    "module": "Pediatrics Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
-    "id": "les-obgyn-4",
-    "title": "Postpartum Hemorrhage — 4 Ts",
-    "module": "Obstetrics & Gynecology Clerkship",
     "level": "CLERKSHIP"
   },
   {
@@ -4524,12 +4542,6 @@
     "level": "CLERKSHIP"
   },
   {
-    "id": "les-fm-1",
-    "title": "Preventive Care & Undifferentiated Symptoms",
-    "module": "Family Medicine Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
     "id": "les-fm-3",
     "title": "Hypertension First-Line Reasoning",
     "module": "Family Medicine Clerkship",
@@ -4538,12 +4550,6 @@
   {
     "id": "les-fm-4",
     "title": "Type 2 Diabetes First Steps",
-    "module": "Family Medicine Clerkship",
-    "level": "CLERKSHIP"
-  },
-  {
-    "id": "les-fm-5",
-    "title": "Outpatient Asthma Control",
     "module": "Family Medicine Clerkship",
     "level": "CLERKSHIP"
   },

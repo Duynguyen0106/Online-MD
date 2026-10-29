@@ -267,6 +267,27 @@ export const CHAPTER_FIGURES: ChapterFigure[] = [
     `, "Acid-base diagnostic fork"),
   },
   {
+    id: "gfr-starling",
+    title: "Glomerular Starling forces & GFR",
+    caption: "Net filtration ≈ (P_gc − P_bs) − (π_gc − π_bs); afferent vs efferent tone moves P_gc and filtration fraction.",
+    test: /gfr|filtration barrier|starling forces|glomerular filtration|filtration fraction|afferent|efferent constriction/i,
+    titleTest: /gfr|filtration|starling|glomerul/i,
+    categories: /pathophysiol|physiolog|renal|clinical|internal/i,
+    svg: svgShell(640, 280, `
+      ${title("GFR — Starling forces in the glomerulus")}
+      ${box(40, 70, 150, 55, "P_gc\nHydrostatic ↑", "#f3e8df")}
+      ${box(220, 70, 150, 55, "π_gc\nOncotic ↓", soft)}
+      ${box(400, 70, 180, 55, "Net filtration\n× Kf → GFR", "#f3e8df")}
+      ${arrow(190, 97, 220, 97)}
+      ${arrow(370, 97, 400, 97)}
+      ${box(40, 160, 170, 55, "Afferent\nconstrict → ↓GFR", soft)}
+      ${box(240, 160, 200, 55, "Moderate efferent\nconstrict → ↑P_gc / FF", "#f3e8df")}
+      ${box(470, 160, 130, 55, "FF =\nGFR / RPF", soft)}
+      <text x="40" y="250" font-family="Georgia, serif" font-size="12" fill="${muted}">P_bs and π_bs usually small; teach tone → pressure → filtration before memorizing drug arrows</text>
+      <text x="40" y="270" font-family="Georgia, serif" font-size="11" fill="${accent}">Educational schematic — not a patient-specific pressure trace</text>
+    `, "Glomerular Starling forces and GFR schematic"),
+  },
+  {
     id: "aki-branches",
     title: "AKI pre-renal / intrinsic / post-renal",
     caption: "Volume and obstruction first; then ATN/AIN/glomerular forks with urine studies.",
@@ -1287,22 +1308,96 @@ export const CHAPTER_FIGURES: ChapterFigure[] = [
   {
     id: "acs-pathway",
     title: "ACS pathway fork",
-    caption: "ECG within minutes, aspirin/anticoagulation as indicated, STEMI reperfusion clock vs UA/NSTEMI risk pathway.",
-    test: /acs pathway|stemi|nstemi|acute coronary|complicated acs/i,
-    titleTest: /acs|stemi|nstemi|coronary|chest pain pathway/i,
-    categories: /internal|clinical|advanced|family/i,
+    caption: "Plaque disruption → thrombosis → STEMI reperfusion clock vs UA/NSTEMI risk pathway (conceptual educational fork).",
+    test: /acs pathway|stemi|nstemi|acute coronary|complicated acs|ischemic heart|plaque rupture|atherothromb/i,
+    titleTest: /acs|stemi|nstemi|coronary|chest pain|ischemic|plaque|atherosclerosis/i,
+    categories: /internal|clinical|advanced|family|pathophysiol|cardiovascular/i,
+    svg: svgShell(640, 270, `
+      ${title("ACS — plaque to pathway")}
+      ${box(30, 70, 130, 45, "Plaque\ndisruption", soft)}
+      ${arrow(160, 92, 200, 92)}
+      ${box(200, 70, 120, 45, "Thrombus", "#f3e8df")}
+      ${arrow(320, 92, 360, 92)}
+      ${box(360, 55, 120, 35, "STEMI", soft)}
+      ${box(360, 100, 120, 35, "UA/NSTEMI", soft)}
+      ${arrow(480, 72, 520, 72)}
+      ${arrow(480, 117, 520, 117)}
+      ${box(520, 50, 100, 40, "Reperfuse", "#f3e8df")}
+      ${box(520, 105, 100, 40, "Risk path", soft)}
+      <text x="30" y="175" font-family="Georgia, serif" font-size="12" fill="${muted}">ECG first · Educational fork only — verify current reperfusion / antithrombotic pathways</text>
+      <text x="30" y="200" font-family="Georgia, serif" font-size="12" fill="${accent}">Demand (type 2) ischemia is a different mechanism than acute atherothrombosis</text>
+    `, "ACS plaque-to-pathway fork"),
+  },
+  {
+    id: "coronary-ecg",
+    title: "Coronary territories ↔ ECG leads",
+    caption: "LAD → anterior (V1–V4); LCx → lateral (I, aVL, V5–V6); RCA → inferior (II, III, aVF) — typical teaching map, not every anatomic variant.",
+    test: /coronary territor|lad|lcx|\brca\b|inferior stemi|anterior wall|ecg lead/i,
+    titleTest: /coronary|acs|stemi|ischemic|ecg|electrocardi/i,
+    categories: /pathophysiol|cardiovascular|clinical|internal|advanced/i,
+    svg: svgShell(640, 260, `
+      ${title("Coronary territory → ECG (typical)")}
+      ${box(40, 80, 160, 70, "LAD\nAnterior / septum\nV1–V4", "#f3e8df")}
+      ${box(240, 80, 160, 70, "LCx\nLateral wall\nI, aVL, V5–V6", soft)}
+      ${box(440, 80, 160, 70, "RCA\nInferior wall\nII, III, aVF", soft)}
+      <text x="40" y="190" font-family="Georgia, serif" font-size="12" fill="${muted}">RCA often supplies SA/AV nodal branches · Reciprocal changes support the localization story</text>
+      <text x="40" y="215" font-family="Georgia, serif" font-size="12" fill="${accent}">Ask: which wall? which artery? what must happen next?</text>
+    `, "Coronary territories and ECG leads"),
+  },
+  {
+    id: "ph-pre-post",
+    title: "Pre- vs post-capillary PH map",
+    caption: "Educational grouping by upstream vs downstream pressure drivers — verify current hemodynamic definitions with faculty before teaching numeric cutoffs.",
+    test: /pulmonary hypertension|pulmonary arterial|pre-?capillary|post-?capillary|group [1-5] ph|\bpah\b/i,
+    titleTest: /pulmonary hyper|pah|pre-?capillary|post-?capillary|ph group/i,
+    categories: /pathophysiol|cardiovascular|clinical|internal|advanced|respirat/i,
+    svg: svgShell(640, 270, `
+      ${title("PH — pre- vs post-capillary framing")}
+      ${box(40, 75, 250, 90, "Pre-capillary pattern\nPulmonary arterial side\n↑ PVR thinking", "#f3e8df")}
+      ${box(350, 75, 250, 90, "Post-capillary pattern\nLeft-heart / venous side\n↑ Filling-pressure thinking", soft)}
+      <text x="40" y="200" font-family="Georgia, serif" font-size="12" fill="${muted}">Groups 1–5 are classification language — do not invent mPAP/PCWP cutoffs here</text>
+      <text x="40" y="225" font-family="Georgia, serif" font-size="12" fill="${accent}">Faculty: attach current ESC/ERS definitions before numeric teaching</text>
+    `, "Pre versus post capillary pulmonary hypertension map"),
+  },
+  {
+    id: "sepsis-immunopath",
+    title: "Sepsis immunopath cascade",
+    caption: "Pathogen signals → cytokine amplification → endothelial injury → microvascular failure / organ dysfunction — mechanism companion to bedside first actions.",
+    test: /sepsis immunopath|septic shock|cytokine|endothelial|pamp|sirs physiolog/i,
+    titleTest: /sepsis|septic|cytokine|endothelial|immunopath|host defense/i,
+    categories: /pathophysiol|microbiol|clinical|internal|advanced|immunol/i,
     svg: svgShell(640, 250, `
-      ${title("ACS — ECG then pathway")}
-      ${box(40, 75, 140, 50, "ABCs +\nECG", "#f3e8df")}
-      ${arrow(180, 100, 230, 100)}
-      ${box(230, 60, 160, 40, "STEMI", soft)}
-      ${box(230, 115, 160, 40, "UA/NSTEMI", soft)}
-      ${arrow(390, 80, 440, 80)}
-      ${arrow(390, 135, 440, 135)}
-      ${box(440, 55, 160, 50, "Reperfusion\nclock", "#f3e8df")}
-      ${box(440, 120, 160, 50, "Risk ± early\ninvasive", soft)}
-      <text x="40" y="210" font-family="Georgia, serif" font-size="12" fill="${muted}">Aspirin early unless contraindicated · Don't delay reperfusion for troponin</text>
-    `, "ACS clinical pathway"),
+      ${title("Sepsis mechanism cascade")}
+      ${box(20, 85, 110, 50, "PAMP /\nDAMP", soft)}
+      ${arrow(130, 110, 160, 110)}
+      ${box(160, 85, 110, 50, "Cytokine\nwave", "#f3e8df")}
+      ${arrow(270, 110, 300, 110)}
+      ${box(300, 85, 120, 50, "Endothelium\nleak / clot", soft)}
+      ${arrow(420, 110, 450, 110)}
+      ${box(450, 85, 150, 50, "Organ\nhypoperfusion", "#f3e8df")}
+      <text x="20" y="180" font-family="Georgia, serif" font-size="12" fill="${muted}">Bedside bundle answers the clock; this figure answers the mechanism</text>
+      <text x="20" y="205" font-family="Georgia, serif" font-size="12" fill="${accent}">Ask which step fluids, antimicrobials, and source control are trying to interrupt</text>
+    `, "Sepsis immunopathology cascade"),
+  },
+  {
+    id: "frank-starling-hf",
+    title: "Frank–Starling and HF phenotypes",
+    caption: "Within limits, ↑ preload raises SV; the decompensated HFrEF curve flattens — volume then congests without proportional forward flow. HFpEF emphasizes stiff filling.",
+    test: /frank.?starling|hfref|hfpef|heart failure|preload responsiveness|ejection fraction phenotype/i,
+    titleTest: /frank|starling|heart failure|hfref|hfpef|hfmr|preload|gdmt/i,
+    categories: /pathophysiol|cardiovascular|clinical|internal|advanced/i,
+    svg: svgShell(640, 280, `
+      ${title("Frank–Starling → HF phenotype intuition")}
+      <polyline points="80,220 140,180 220,130 320,100 420,90" fill="none" stroke="${brand}" stroke-width="3"/>
+      <polyline points="80,220 160,200 260,185 360,175 460,170" fill="none" stroke="${accent}" stroke-width="3"/>
+      <text x="330" y="85" font-family="Georgia, serif" font-size="12" fill="${brand}">Compensated curve</text>
+      <text x="360" y="165" font-family="Georgia, serif" font-size="12" fill="${accent}">Flattened HFrEF curve</text>
+      <text x="70" y="250" font-family="Georgia, serif" font-size="12" fill="${muted}">Preload →</text>
+      <text x="40" y="120" font-family="Georgia, serif" font-size="12" fill="${muted}" transform="rotate(-90 40,120)">SV</text>
+      ${box(480, 70, 140, 55, "HFrEF\nPump / remodeling", soft)}
+      ${box(480, 145, 140, 55, "HFpEF\nStiff filling", "#f3e8df")}
+      <text x="70" y="270" font-family="Georgia, serif" font-size="11" fill="${muted}">Educational sketch — not a patient-specific PV loop</text>
+    `, "Frank-Starling and heart failure phenotypes"),
   },
 ];
 
@@ -1342,6 +1437,22 @@ export function figuresMarkdownForTopic(topic: CatalogTopic): string {
   return `### Teaching figures
 
 ${blocks.join("\n")}`;
+}
+
+/** Markdown for a single known figure id — used by seed/wave diagram blocks. */
+export function figureMarkdownById(id: string): string {
+  const f = CHAPTER_FIGURES.find((fig) => fig.id === id);
+  if (!f) {
+    return `![${id}](/figures/${id}.svg)`;
+  }
+  return `### ${f.title}
+
+![${f.title}](/figures/${f.id}.svg)
+
+*${f.caption}*
+
+**Notice:** Use this schematic to teach one idea, then ask one question about the labeled fork or current before moving on.
+`;
 }
 
 /** Write all figure SVGs into public/figures (idempotent). */

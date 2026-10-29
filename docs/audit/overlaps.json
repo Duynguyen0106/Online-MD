@@ -1,15 +1,5 @@
 [
   {
-    "a": "les-pulm-2",
-    "aTitle": "Obstructive & Restrictive Patterns",
-    "aModule": "Respiratory System",
-    "b": "les-cat-y2-pulm-obstruct-restrict",
-    "bTitle": "Obstructive vs Restrictive Patterns",
-    "bModule": "Respiratory System",
-    "score": 1,
-    "classificationHint": "SAME_MODULE_CONSOLIDATE?"
-  },
-  {
     "a": "les-cat-y1-id-viruses-dna",
     "aTitle": "DNA Virus Families",
     "aModule": "Host Defense, Microbiology & Infectious Disease",
@@ -298,6 +288,16 @@
     "bModule": "Cells, Molecules & Mechanisms of Disease",
     "score": 0.6,
     "classificationHint": "SAME_MODULE_CONSOLIDATE?"
+  },
+  {
+    "a": "les-pulm-2",
+    "aTitle": "Obstructive & Restrictive Patterns",
+    "aModule": "Respiratory System",
+    "b": "les-cat-y2-pulm-obstruct-restrict",
+    "bTitle": "Obstructive vs Restrictive Patterns — Advanced PFT Companion",
+    "bModule": "Respiratory System",
+    "score": 0.6,
+    "classificationHint": "LEVEL DISTINCTION"
   },
   {
     "a": "les-msk-3",

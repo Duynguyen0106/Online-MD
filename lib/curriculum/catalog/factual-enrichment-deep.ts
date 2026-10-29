@@ -298,7 +298,9 @@ Many antipsychotics and some antidepressants prolong ventricular repolarization 
 Clozapine uniquely requires ANC monitoring because of agranulocytosis risk, and vigilance for myocarditis (early fever, tachycardia, troponin/CRP changes), dose-related seizures, severe constipation progressing to ileus, orthostasis, sialorrhea, and smoking-related shifts in drug levels (smoking induces CYP1A2; cessation raises levels). Metabolic monitoring (weight, glucose, lipids) applies broadly to second-generation antipsychotics. These safety systems are why clozapine saves lives in treatment-resistant schizophrenia only when labs and bowel regimens are real, not theoretical. Teach patients and families the fever and infection warning signs that trigger same-day contact.`,
   },
   {
-    test: /hold|5150|involuntary|grave disability|capacity|decision-?making capacity/i,
+    // Word-bound "hold" — bare /hold/ matched inside "threshold" (PH hemodynamic FP).
+    // Drop bare "capacity" — it matched functional/vital capacity and similar.
+    test: /\bhold\b|5150|involuntary\s+(?:hold|commitment|treatment)|grave disability|decision-?making capacity|(?:medical|decisional)\s+capacity|\bincapacit(?:y|ated)\b/i,
     prose: `**Decision-making capacity & involuntary care — textbook chapter.**
 
 Capacity is decision-specific and can fluctuate with delirium, intoxication, psychosis, and pain. The four elements: understand the relevant information, appreciate the situation and consequences, reason about options, and express a consistent choice. Diagnosis alone does not equal incapacity; a patient with schizophrenia may retain capacity for many medical decisions. Document the conversation, the patient’s words, and why the threshold was or was not met. When capacity is lacking for a needed decision, identify the appropriate surrogate and emergency exceptions.
@@ -460,7 +462,7 @@ Management: restore perfusion if prerenal, stop nephrotoxins, relieve obstructio
 Cardiorenal and hepatorenal syndromes remind you that the kidney often fails secondarily—fix the parent organ while supporting filtration. Contrast exposure risk is multiplicative with GFR, diabetes, and volume depletion; hydration strategies and alternative imaging matter. Rhabdomyolysis AKI needs volume and monitoring for electrolyte storms. Post-obstructive diuresis can be profound after relief of chronic obstruction—replace thoughtfully. Never ignore anuria; it is obstruction, vascular catastrophe, or severe ATN until proven otherwise.`,
   },
   {
-    test: /\bstroke\b|\btia\b|nihss|thrombolysis|alteplase|large.?vessel|hemorrhag/i,
+    test: /\bstroke\b(?!\s*volume)|\btia\b|nihss|thrombolysis|alteplase|large.?vessel|hemorrhag/i,
     prose: `**Acute stroke syndromes — textbook chapter.**
 
 Hyperacute focal neurologic deficits are vascular until proven otherwise. Time last known well, glucose, NIHSS, and noncontrast CT (to exclude hemorrhage) gate thrombolysis decisions; vascular imaging identifies large-vessel occlusion for thrombectomy pathways. Hemorrhagic stroke management prioritizes ABC, blood-pressure parameters, coagulopathy reversal, and neurosurgical consultation as indicated. Mimics include seizure with Todd paresis, migraine, hypoglycemia, and functional neurologic disorder—still treat as stroke until imaging and course declare otherwise when uncertainty is high.

@@ -1,8 +1,27 @@
 # Curriculum Recommendations
 
-**Date:** 2026-09-28  
+**Date:** 2026-09-28 · **Pedagogy update:** 2026-10-27 · **Fix-everything:** 2026-10-27 · **Plan land:** 2026-10-29  
 **Principle:** Progress Foundations → Physiology → Pathophysiology → Pharmacology → Organ-system medicine → Clinical presentation → Reasoning → Diagnosis → Management → Cases → Assessment → Spaced review.  
 **Constraint:** Recommendations first. Execute only safe, non-destructive changes unless a qualified reviewer directs otherwise.
+
+---
+
+## Fix-everything + pedagogy status (2026-10-29)
+
+| Recommendation | Status |
+| --- | --- |
+| Stop mismatched seed padding; original teaching first | **Done** (`factualEnrichmentForSeedLesson`) |
+| Fix enrichment false positives (hold / NIV / hemolysis) | **Done** + regression tests |
+| Gate enhancement scaffold when cores already teach | **Done** (light enhance path) |
+| Wire existing + new mechanism figures into P0 seeds | **Done** (CV/renal/ID + GFR Starling + prior SVGs) |
+| Extend high-yield cases to 4-stage pattern | **Done** for presentation-priority set (+ AMI progressive on main) |
+| High-yield formatives (mechanism / next-step) | **Done** (+6 items; near-miss distractors tightened) |
+| Retitle same-module PFT overlap + learner_level | **Done** (`les-pulm-2` foundational; catalog advanced companion) |
+| Presentation study sets + concept TOC titles | **Done** (2026-10-29) |
+| Student Sources free of faculty audit jargon | **Done** (sanitize + `STUDENT_SOURCES_FOOTER`) |
+| Faculty medical review of HIGH pathways | **Still open** — do not invent cutoffs |
+| Grow qbank beyond 24 with sign-off | **Still open** |
+| Remaining two-stage cases | **Backlog** — heme/OB/MSK/surg/neuro residuals |
 
 ---
 
@@ -11,7 +30,7 @@
 1. **Tag every lesson** with `learner_level` and show badges in module lists (core vs advanced).  
 2. Expand **Objective records to 3–5 measurable statements** per lesson; stop relying only on in-chapter objective lists.  
 3. Map each quiz/qbank item to one primary objective + cognitive level.  
-4. Add **Sources** footers with verified citations or `REFERENCE_REVIEW_REQUIRED`.  
+4. Add **Sources** footers with verified citations (student copy stays neutral until verified).  
 5. Grow clinical cases toward multi-stage reasoning; do not mass-generate cases.  
 6. Keep complementary foundation/clinical pairs; retitle same-level duplicates.  
 7. Introduce a faculty **Medical content review** queue (not student-visible).

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="Coronary territories and ECG leads">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7faf8"/>
+  <rect x="1" y="1" width="638" height="258" fill="none" stroke="#c5d4cb" stroke-width="1"/>
+  
+      <text x="24" y="28" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a2f">Coronary territory → ECG (typical)</text>
+      <rect x="40" y="80" width="160" height="70" rx="6" fill="#f3e8df" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="120" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">LAD</text>
+<text x="120" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Anterior / septum</text>
+<text x="120" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">V1–V4</text>
+      <rect x="240" y="80" width="160" height="70" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="320" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">LCx</text>
+<text x="320" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Lateral wall</text>
+<text x="320" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">I, aVL, V5–V6</text>
+      <rect x="440" y="80" width="160" height="70" rx="6" fill="#e3eee8" stroke="#2f6f5e" stroke-width="1.5"/>
+  <text x="520" y="101" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">RCA</text>
+<text x="520" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">Inferior wall</text>
+<text x="520" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1a3a2f">II, III, aVF</text>
+      <text x="40" y="190" font-family="Georgia, serif" font-size="12" fill="#5c7268">RCA often supplies SA/AV nodal branches · Reciprocal changes support the localization story</text>
+      <text x="40" y="215" font-family="Georgia, serif" font-size="12" fill="#b86b3c">Ask: which wall? which artery? what must happen next?</text>
+    
+</svg>

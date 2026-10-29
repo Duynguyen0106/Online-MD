@@ -631,17 +631,27 @@ export const wave7ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "ie1",
-        prompt: "Syndrome and most likely valve?",
-        expectedFocus: "Right-sided infective endocarditis — tricuspid",
+        prompt: "Problem representation: syndrome and most likely valve?",
+        expectedFocus: "Right-sided infective endocarditis — tricuspid; septic pulmonary emboli explain nodules",
       },
       {
         id: "ie2",
-        prompt: "Why are blood cultures drawn before antibiotics when stable enough?",
-        expectedFocus: "Maximize microbiologic yield to guide prolonged therapy",
+        prompt: "Name can’t-miss complications before locking into a routine fever workup.",
+        expectedFocus: "Septic emboli, right-heart failure, left-sided involvement, severe sepsis — threat filter",
+      },
+      {
+        id: "ie3",
+        prompt: "Why draw blood cultures before antibiotics when the patient is stable enough, and what else starts in parallel?",
+        expectedFocus: "Maximize microbiologic yield to guide prolonged therapy; start timely antibiotics and source evaluation",
+      },
+      {
+        id: "ie4",
+        prompt: "After cultures and initial therapy, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "Fever curve, hemodynamics, culture speciation, murmur/embolic course — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "IVDU endocarditis seeds the lungs; get cultures and start timely therapy.",
+      "IVDU endocarditis seeds the lungs; get cultures and start timely therapy; reassess fever, emboli, and microbiology.",
     objectiveIds: ["obj-id-7"],
     status: "published",
   },

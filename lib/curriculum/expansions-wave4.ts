@@ -488,17 +488,27 @@ export const wave4ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "k1",
-        prompt: "List the three physiologic goals of hyperkalemia therapy in order.",
-        expectedFocus: "Stabilize membrane → shift K in → remove K / treat cause",
+        prompt: "Problem representation: what emergency does peaked T waves plus rising QRS width declare?",
+        expectedFocus: "Severe hyperkalemia with membrane instability — ECG changes make it an emergency",
       },
       {
         id: "k2",
-        prompt: "Which therapies only temporize vs definitively remove potassium?",
-        expectedFocus: "Insulin/beta-agonists shift; dialysis/binders remove",
+        prompt: "Name can’t-miss concurrent threats while you address potassium.",
+        expectedFocus: "Missed dialysis / AKI progression, arrhythmia, digoxin context if present — threat filter",
+      },
+      {
+        id: "k3",
+        prompt: "List the three physiologic goals of hyperkalemia therapy in order, and which steps only temporize.",
+        expectedFocus: "Stabilize membrane → shift K in → remove K / treat cause; insulin/β-agonists shift; dialysis/binders remove",
+      },
+      {
+        id: "k4",
+        prompt: "After membrane stabilization and a shift dose, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "ECG morphology, K trend, urine output / dialysis plan — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "ECG changes make hyperkalemia an emergency; shifting buys time for removal.",
+      "ECG changes make hyperkalemia an emergency; shifting buys time for removal; reassess ECG and K after each step.",
     objectiveIds: ["obj-renal-5"],
     status: "published",
   },
@@ -511,17 +521,27 @@ export const wave4ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "n1",
-        prompt: "What diagnosis are you racing against and why is time critical?",
+        prompt: "Problem representation: what diagnosis are you racing against and why is time critical?",
         expectedFocus: "Bacterial meningitis — delayed antibiotics worsen outcomes",
       },
       {
         id: "n2",
+        prompt: "Name can’t-miss complications before the LP logistics debate.",
+        expectedFocus: "Septic shock, herniation risk, encephalitis overlap — threat filter",
+      },
+      {
+        id: "n3",
         prompt: "When might you image before LP, and what must not be delayed?",
-        expectedFocus: "Focal neuro signs/papilledema/instability → image; still give timely abx",
+        expectedFocus: "Focal neuro signs/papilledema/instability → image; still give timely antibiotics and cultures",
+      },
+      {
+        id: "n4",
+        prompt: "After first antibiotics and cultures, what reassessment findings tell you the plan is working or failing?",
+        expectedFocus: "Mentation, fever, hemodynamics, CSF/culture results — reassess rather than wait passively on a single test",
       },
     ],
     teachingPoints:
-      "Suspect bacterial meningitis → cultures and antibiotics promptly; sequence LP/CT thoughtfully.",
+      "Suspect bacterial meningitis → cultures and antibiotics promptly; sequence LP/CT thoughtfully; reassess mentation and shock.",
     objectiveIds: ["obj-neuro-5"],
     status: "published",
   },
@@ -534,17 +554,27 @@ export const wave4ClinicalCases: ClinicalCase[] = [
     stages: [
       {
         id: "g1",
-        prompt: "Does this meet diagnostic criteria without CT?",
-        expectedFocus: "Yes — pain + lipase ≥3× ULN",
+        prompt: "Problem representation: does this meet diagnostic criteria without CT?",
+        expectedFocus: "Yes — characteristic pain + lipase ≥3× ULN meets usual diagnostic teaching criteria",
       },
       {
         id: "g2",
-        prompt: "Name early management priorities (educational).",
-        expectedFocus: "Fluids, analgesia, NPO/early nutrition per pathway, find cause",
+        prompt: "Name can’t-miss concurrent threats before locking into uncomplicated pancreatitis.",
+        expectedFocus: "Shock/SIRS, cholangitis if biliary, ACS/perforation mimics — threat filter",
+      },
+      {
+        id: "g3",
+        prompt: "Name early management priorities (educational sequencing, not a fluid recipe).",
+        expectedFocus: "ABCs/fluids conceptually, analgesia, nutrition pathway, find and treat cause (alcohol vs gallstone)",
+      },
+      {
+        id: "g4",
+        prompt: "After initial supportive care, what reassessment tells you the plan is working or failing?",
+        expectedFocus: "Pain, vitals/perfusion, urine output, emerging organ failure or biliary obstruction signs — reassess rather than stack therapies blindly",
       },
     ],
     teachingPoints:
-      "Pancreatitis is a clinical + lab diagnosis; early care is supportive and cause-directed.",
+      "Pancreatitis is a clinical + lab diagnosis; early care is supportive and cause-directed; reassess for organ failure and biliary complications.",
     objectiveIds: ["obj-gi-5"],
     status: "published",
   },

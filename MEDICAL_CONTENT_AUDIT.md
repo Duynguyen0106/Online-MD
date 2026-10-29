@@ -1,9 +1,72 @@
 # Medical Content Audit
 
-**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27  
+**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27 · **Fix-everything:** 2026-10-27 · **Plan land on main:** 2026-10-29  
 **Scope:** Live Online MD curriculum graph (seed + expansion waves + 4-year catalog) + MT.vn P0 surfaces  
 **Method:** Inspect-only inventory via `scripts/medical-content-audit.ts` → `docs/audit/*.json`, plus targeted review of cardiovascular, sepsis, VTE, heart-failure pathways, and P0 presentation/competency metadata.  
-**Status:** Structural and educational audit. **Not medical approval.**
+**Status:** Structural and educational audit. **Not medical approval.**  
+**Expert re-audit:** [`MEDICAL_EXPERT_AUDIT.md`](MEDICAL_EXPERT_AUDIT.md) (post–fix-everything teaching-quality pass).
+
+---
+
+## Plan land refresh (2026-10-29)
+
+Rebased pedagogy branch onto main (AMI case + student UX sanitize + competency evidence). Re-ran `npm run audit:medical`.
+
+| Metric | Value |
+| --- | --- |
+| Lessons / objectives / quizzes / qbank / cases / flashcards | 884 / 3422 / **890** / 24 / **25** / 846 |
+| Content blocks | **4337** |
+| Structural zeros (missing objs/refs/vague/concept flags/quiz structural) | **held** |
+| Guideline-sensitive lessons / quiz rows | 808 / 85 (flagged only) |
+| Soft title overlaps | 125 |
+| Student Sources / meta | Student sanitize strips Ready-for-quiz + unapproved jargon; enhance uses `STUDENT_SOURCES_FOOTER` |
+| Product pedagogy | Presentation **Study set** (flashcards + practice quiz CTA); concept titles in lesson TOC |
+
+Pedagogy plan workstreams A–E delivered on this branch; HIGH faculty gate unchanged.
+
+---
+
+## Fix-everything pass (2026-10-27)
+
+Safe automations only — no invented cutoffs/regimens; HIGH faculty gate unchanged.
+
+| Metric | After fix-everything |
+| --- | --- |
+| Lessons / objectives / quizzes / qbank / cases | 884 / 3422 / **890** / 24 / 24 |
+| Content blocks | **4337** (light enhance preserves cores; less scaffold churn) |
+| Structural zeros | **held** |
+| Cases with ≥4 stages | **18** / 6 remaining 2-stage |
+| Guideline-sensitive lessons / quiz rows | 808 / 85 (flagged only) |
+| Enrichment FPs | `hold`⊂threshold, `niv`⊂universal, bacteriology→anemia **fixed** + tests |
+| Seed enhancement | Light path when mechanism already taught (no Control-point wrap on CV cores) |
+| New figure | `gfr-starling` on `les-renal-1` |
+
+---
+
+## Pedagogy pass (2026-10-27)
+
+Teaching-quality pass (illustrations + deliberate practice). No invented doses/cutoffs.
+
+| Metric | After pedagogy pass |
+| --- | --- |
+| Lessons / objectives / quizzes / qbank / cases | 884 / 3422 / **890** / 24 / 24 |
+| Content blocks | **4352** (diagram embeds added) |
+| Structural zeros (missing objs/refs/vague/concept flags/quiz structural) | **held** |
+| Cases with ≥4 stages | **11** (was 7; fever/HHS/hyperK/meningitis expanded) |
+| Guideline-sensitive lessons / quiz rows | 803 / 85 (flagged only) |
+| Seed enhancement | Original teaching notes first; category/organ bank dump removed; ETC/stroke false positives fixed |
+| New/updated figures | `coronary-ecg`, `acs-pathway` (plaque fork), `ph-pre-post`, `sepsis-immunopath`, `frank-starling-hf` + seed embeds of existing SVGs |
+| Student Sources footer | Neutral “citations being verified” (no raw medical-approval jargon) |
+
+### Pedagogy remediations applied
+
+1. Constrained `factualEnrichmentForSeedLesson` — title/points only, max 3 snippets; teaching notes lead.  
+2. Embedded existing SVGs into `les-cv-1/4`, `les-renal-2/3`, `les-id-1/2`.  
+3. New mechanism SVGs for coronary–ECG, ACS fork, PH map, sepsis immunopath, Frank–Starling/HF.  
+4. Extended `case-id-1`, `case-endo-1`, `case-renal-2`, `case-neuro-1` to 4-stage pattern.  
+5. Added 6 high-yield formative items on ACS/HF/shock/sepsis/acid–base (review-flagged where guideline-adjacent).  
+6. Expanded `les-renal-1` / `les-id-1` cores; retitled catalog PFT companion; learner_level metadata.  
+7. Softened student-facing Sources copy (faculty medical gate unchanged).
 
 ---
 

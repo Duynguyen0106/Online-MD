@@ -67,7 +67,12 @@ export function LessonPlayer({
         <ul className="max-h-[50vh] space-y-1 overflow-y-auto lg:max-h-[calc(100vh-14rem)]">
           {lesson.concepts.map((concept) => (
             <li key={concept.id}>
-              <ul className="mb-2 space-y-1">
+              {concept.title ? (
+                <p className="mb-1 px-2 pt-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--muted)]">
+                  {concept.title}
+                </p>
+              ) : null}
+              <ul className="mb-3 space-y-1">
                 {concept.blocks.map((block) => (
                   <li key={block.id}>
                     <button
