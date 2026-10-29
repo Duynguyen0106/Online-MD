@@ -25,6 +25,7 @@ import {
   canAccessStep1Qbank,
   canAccessStep2CkQbank,
 } from "@/lib/mastery/gates";
+import { PRACTICE_ROUTES, qbankHref } from "@/lib/routes/practice";
 import { percent } from "@/lib/utils";
 
 export default async function DashboardPage() {
@@ -74,7 +75,9 @@ export default async function DashboardPage() {
             </Button>
           ) : (
             <Button asChild className="mt-5">
-              <Link href="/qbank">{STUDENT_COPY.practiceQuestions}</Link>
+              <Link href={PRACTICE_ROUTES.qbank}>
+                {STUDENT_COPY.practiceQuestions}
+              </Link>
             </Button>
           )}
         </section>
@@ -91,15 +94,46 @@ export default async function DashboardPage() {
             {percent(modules.length ? completedModules / modules.length : 0)} complete
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
-            <Badge className={step1.unlocked ? "bg-emerald-50 text-emerald-800" : ""}>
-              Step 1 question bank
-              {step1.unlocked ? " · Available" : ""}
-            </Badge>
-            <Badge className={step2.unlocked ? "bg-emerald-50 text-emerald-800" : ""}>
-              Step 2 CK question bank
-              {step2.unlocked ? " · Available" : ""}
-            </Badge>
+            <Link
+              href={qbankHref("step1")}
+              className="inline-flex"
+              aria-label="Open Step 1 question bank"
+            >
+              <Badge
+                className={
+                  step1.unlocked
+                    ? "bg-emerald-50 text-emerald-800 hover:ring-1 hover:ring-emerald-300"
+                    : "hover:ring-1 hover:ring-[var(--border)]"
+                }
+              >
+                Step 1 question bank
+                {step1.unlocked ? " · Available" : ""}
+              </Badge>
+            </Link>
+            <Link
+              href={qbankHref("step2ck")}
+              className="inline-flex"
+              aria-label="Open Step 2 CK question bank"
+            >
+              <Badge
+                className={
+                  step2.unlocked
+                    ? "bg-emerald-50 text-emerald-800 hover:ring-1 hover:ring-emerald-300"
+                    : "hover:ring-1 hover:ring-[var(--border)]"
+                }
+              >
+                Step 2 CK question bank
+                {step2.unlocked ? " · Available" : ""}
+              </Badge>
+            </Link>
           </div>
+          <p className="mt-2 text-xs text-[var(--muted)]">
+            Opens the question bank at{" "}
+            <Link className="underline" href={PRACTICE_ROUTES.qbank}>
+              /qbank
+            </Link>
+            . Banks unlock after you finish the related curriculum.
+          </p>
         </section>
       </div>
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getSessionUser } from "@/lib/demo/store";
 import { AppNav, type AppNavLink } from "@/components/shared/app-nav";
 import { RoleSwitcher } from "@/components/shared/role-switcher";
+import { PRACTICE_ROUTES } from "@/lib/routes/practice";
 
 const adminLinks: AppNavLink[] = [
   { href: "/admin/analytics", label: "Analytics" },
@@ -21,14 +22,15 @@ const facultyLinks: AppNavLink[] = [
   { href: "/dashboard", label: "Student view" },
 ];
 
+/** Canonical Practice destinations: /qbank and /cases (not /question-bank or /clinical-cases). */
 const studentLinks: AppNavLink[] = [
   { href: "/dashboard", label: "Dashboard", group: "Learn" },
   { href: "/competency", label: "Competency", group: "Learn" },
   { href: "/presentations", label: "Presentations", group: "Learn" },
-  { href: "/flashcards", label: "Flashcards", group: "Practice" },
-  { href: "/qbank", label: "Question bank", group: "Practice" },
-  { href: "/tutor", label: "Ask a question", group: "Practice" },
-  { href: "/cases", label: "Clinical cases", group: "Practice" },
+  { href: PRACTICE_ROUTES.flashcards, label: "Flashcards", group: "Practice" },
+  { href: PRACTICE_ROUTES.qbank, label: "Question bank", group: "Practice" },
+  { href: PRACTICE_ROUTES.tutor, label: "Ask a question", group: "Practice" },
+  { href: PRACTICE_ROUTES.cases, label: "Clinical cases", group: "Practice" },
 ];
 
 export async function AppShell({

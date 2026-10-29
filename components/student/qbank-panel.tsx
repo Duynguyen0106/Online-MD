@@ -13,12 +13,14 @@ export function QbankPanel({
   step1Reason,
   step2Reason,
   questionsPreview,
+  initialBank = "module",
 }: {
   modules: { id: string; title: string }[];
   moduleGates: Record<string, string | undefined>;
   step1Reason?: string;
   step2Reason?: string;
   questionsPreview: QbankQuestion[];
+  initialBank?: "module" | "step1" | "step2ck";
 }) {
   const unlockedModules = useMemo(
     () => modules.filter((m) => !moduleGates[m.id]),
@@ -64,7 +66,9 @@ export function QbankPanel({
 
       <div className="grid gap-4 md:grid-cols-3">
         <GateCard
+          id="qbank-module"
           title="Module question bank"
+          highlighted={initialBank === "module"}
           reason={selectedLocked ? moduleGates[moduleId] : undefined}
           unlocked={!selectedLocked}
           onStart={() =>
@@ -91,7 +95,9 @@ export function QbankPanel({
           pending={pending}
         />
         <GateCard
+          id="qbank-step1"
           title="Step 1 question bank"
+          highlighted={initialBank === "step1"}
           reason={step1Reason}
           unlocked={!step1Reason}
           onStart={() =>
@@ -118,7 +124,9 @@ export function QbankPanel({
           pending={pending}
         />
         <GateCard
+          id="qbank-step2ck"
           title="Step 2 CK question bank"
+          highlighted={initialBank === "step2ck"}
           reason={step2Reason}
           unlocked={!step2Reason}
           onStart={() =>
@@ -213,20 +221,32 @@ export function QbankPanel({
 }
 
 function GateCard({
+  id,
   title,
   reason,
   unlocked,
   onStart,
   pending,
+  highlighted,
 }: {
+  id?: string;
   title: string;
   reason?: string;
   unlocked: boolean;
   onStart: () => void;
   pending: boolean;
+  highlighted?: boolean;
 }) {
   return (
-    <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
+    <div
+      id={id}
+      className={cn(
+        "rounded-xl border bg-[var(--surface)] p-4",
+        highlighted
+          ? "border-[var(--brand)] ring-2 ring-[var(--brand-soft)]"
+          : "border-[var(--border)]",
+      )}
+    >
       <h3 className="font-medium">{title}</h3>
       <p className="mt-2 min-h-16 text-xs leading-5 text-[var(--muted)]">
         {unlocked
