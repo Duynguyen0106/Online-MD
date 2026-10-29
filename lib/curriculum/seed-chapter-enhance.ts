@@ -1,5 +1,6 @@
 import type { ContentBlock, Lesson, Module } from "@/lib/types/domain";
 import { factualEnrichmentForTopic } from "@/lib/curriculum/catalog/factual-enrichment";
+import { STUDENT_SOURCES_FOOTER } from "@/lib/copy/sanitize-student-content";
 
 const MIN_READING_CHARS = 4000;
 
@@ -101,19 +102,10 @@ function enrichmentContext(module: Module): {
   return { contentCategory: "Pathophysiology", organSystem: "Multisystem" };
 }
 
-const SOURCES_FOOTER = `
-
-### Sources
-
-| Guideline / reference | Status |
-| --- | --- |
-| Authoritative society guidance or primary literature for this lesson | REFERENCE_REVIEW_REQUIRED |
-
-Last reviewed: not yet medically approved. Faculty should attach verified citations before claiming guideline currency. Exact doses, thresholds, and trial statistics belong to primary sources.
-`;
+const SOURCES_FOOTER = STUDENT_SOURCES_FOOTER;
 
 const HAS_SOURCES_RE =
-  /##?\s*sources\b|##?\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED/i;
+  /##?\s*sources\b|##?\s*references\b|guideline \/ reference|REFERENCE_REVIEW_REQUIRED|confirm doses, thresholds/i;
 
 /** Append a REFERENCE_REVIEW_REQUIRED Sources block when missing (no invented citations). */
 export function ensureSourcesFooter(lesson: Lesson): Lesson {

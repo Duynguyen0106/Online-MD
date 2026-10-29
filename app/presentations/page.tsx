@@ -25,30 +25,42 @@ export default async function PresentationsPage() {
       <p className="-mt-4 mb-6 max-w-3xl text-sm leading-6 text-[var(--muted)]">
         {STUDENT_COPY.presentationsIntro}
       </p>
-      <div className="grid gap-3 md:grid-cols-2">
-        {problems.map((p) => (
-          <Link
-            key={p.slug}
-            href={`/presentations/${p.slug}`}
-            className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--brand)]"
-          >
-            <div className="mb-2 flex flex-wrap items-center gap-2">
-              <h2 className="font-medium">{p.title}</h2>
-              <Badge>
-                {p.lessonIds.length} lesson
-                {p.lessonIds.length === 1 ? "" : "s"}
-              </Badge>
-              {p.caseIds.length > 0 ? (
+      {problems.length === 0 ? (
+        <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+          <h2 className="mb-2 font-[family-name:var(--font-display)] text-xl">
+            No presentations linked yet
+          </h2>
+          <p className="text-sm text-[var(--muted)]">
+            Presentation pathways appear when lessons or cases are tagged. Browse
+            modules from your dashboard in the meantime.
+          </p>
+        </div>
+      ) : (
+        <div className="grid gap-3 md:grid-cols-2">
+          {problems.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/presentations/${p.slug}`}
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--brand)]"
+            >
+              <div className="mb-2 flex flex-wrap items-center gap-2">
+                <h2 className="font-medium">{p.title}</h2>
                 <Badge>
-                  {p.caseIds.length} case
-                  {p.caseIds.length === 1 ? "" : "s"}
+                  {p.lessonIds.length} lesson
+                  {p.lessonIds.length === 1 ? "" : "s"}
                 </Badge>
-              ) : null}
-            </div>
-            <p className="text-sm leading-6 text-[var(--muted)]">{p.summary}</p>
-          </Link>
-        ))}
-      </div>
+                {p.caseIds.length > 0 ? (
+                  <Badge>
+                    {p.caseIds.length} case
+                    {p.caseIds.length === 1 ? "" : "s"}
+                  </Badge>
+                ) : null}
+              </div>
+              <p className="text-sm leading-6 text-[var(--muted)]">{p.summary}</p>
+            </Link>
+          ))}
+        </div>
+      )}
     </AppShell>
   );
 }

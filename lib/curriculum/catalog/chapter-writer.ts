@@ -274,11 +274,9 @@ Pass threshold ≥80%. Afterward, add the flashcard (**${topic.cardFront}** → 
 
 ### Sources
 
-| Guideline / reference | Status |
-| --- | --- |
-| Authoritative society guidance or primary literature for **${topic.title}** | REFERENCE_REVIEW_REQUIRED |
+Exact doses, thresholds, and trial statistics for **${topic.title}** belong to primary sources and current society guidelines. Confirm details in supervised clinical care.
 
-Last reviewed: not yet medically approved. Faculty should attach verified citations before claiming guideline currency. Exact doses, thresholds, and trial statistics belong to primary sources.
+Educational material — confirm doses, thresholds, and regimens with current guidelines and supervised clinical care.
 `;
 }
 

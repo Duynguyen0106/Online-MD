@@ -1130,7 +1130,7 @@ Contemporary teaching centers on disease-modifying classes — ARNI/ACEI/ARB, ev
 
 ### Sources
 - Heart failure guideline-directed medical therapy — \`REFERENCE_REVIEW_REQUIRED\` (attach current AHA/ACC/HFSA or equivalent after faculty review).
-- Last reviewed: not yet medically approved.`,
+- Educational material — confirm doses, thresholds, and regimens with current guidelines and supervised clinical care.`,
                     ),
                   ],
                 },
