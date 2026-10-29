@@ -15,7 +15,7 @@
 | Structural hygiene | **A** | Objectives/refs/vague verbs/concept flags/quiz structure remain zero |
 | Handcrafted P0 cores (CV/renal/ID) | **A−** | Real teaching leads; light enhance preserves cores; GFR figure added |
 | Figures | **A−** | Mechanism schematics teach; PH still refuses numbers; GFR Starling map live |
-| Cases | **B+** | **18** four-stage / **6** two-stage; presentation-priority expansions done |
+| Cases | **B+** | **19** four-stage / **6** two-stage; presentation-priority expansions + AMI progressive |
 | High-yield formatives | **B+** | Near-miss distractors improved on sepsis/HF items |
 | Catalog chapters | **B−** | Enrichment false positives (hold/NIV/hemolysis) fixed with tests |
 | Faculty medical gate | **Incomplete** | All HIGH items on `MEDICAL_REVIEW_REQUIRED.md` still open |
@@ -33,7 +33,7 @@
 | Missing objectives · vague verbs · missing Sources · concept flags · quiz structural gaps | **0** |
 | Guideline-sensitive lessons · guideline quiz rows | **808** · **85** |
 | Soft title overlaps | 125 |
-| Cases 4-stage / 2-stage | **18** / **6** |
+| Cases 4-stage / 2-stage | **19** / **6** |
 
 ---
 
