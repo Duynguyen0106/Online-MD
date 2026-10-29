@@ -1,11 +1,19 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shared/app-shell";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  PresentationCaseList,
+  PresentationHowToUse,
+  PresentationLessonList,
+  type PathwayCaseRow,
+  type PathwayLessonRow,
+} from "@/components/student/presentation-pathway";
 import {
   filterExistingProblemLinks,
   getClinicalProblem,
+  pathwayLinkCounts,
+  problemLessonIds,
 } from "@/lib/curriculum/clinical-problem-tags";
 import {
   getAllLessons,
@@ -15,6 +23,26 @@ import {
   getModuleForLesson,
 } from "@/lib/curriculum/accessors";
 import { STUDENT_COPY } from "@/lib/copy/student";
+
+async function resolveLessonRows(
+  ids: string[],
+  role: "foundation" | "reasoning",
+): Promise<PathwayLessonRow[]> {
+  const rows = await Promise.all(
+    ids.map(async (id) => {
+      const lesson = await getLesson(id);
+      if (!lesson) return null;
+      const mod = await getModuleForLesson(id);
+      return {
+        id: lesson.id,
+        title: lesson.title,
+        moduleTitle: mod?.title ?? lesson.moduleId,
+        role,
+      } satisfies PathwayLessonRow;
+    }),
+  );
+  return rows.filter((r): r is PathwayLessonRow => r != null);
+}
 
 export default async function PresentationDetailPage({
   params,
@@ -33,28 +61,49 @@ export default async function PresentationDetailPage({
     new Set(cases.map((c) => c.id)),
   );
 
-  const lessonRows = await Promise.all(
-    filtered.lessonIds.map(async (id) => {
-      const lesson = await getLesson(id);
-      const mod = await getModuleForLesson(id);
-      return lesson
-        ? { lesson, moduleTitle: mod?.title ?? lesson.moduleId }
-        : null;
-    }),
+  const counts = pathwayLinkCounts(filtered);
+  if (counts.lessons + counts.cases === 0) notFound();
+
+  const foundationRows = await resolveLessonRows(
+    filtered.foundationLessonIds,
+    "foundation",
+  );
+  const reasoningRows = await resolveLessonRows(
+    filtered.reasoningLessonIds,
+    "reasoning",
   );
 
-  const caseRows = filtered.caseIds
+  // Defensive: if a tagged ID somehow failed getLesson, still surface nothing broken.
+  const resolvedLessonIds = new Set(
+    [...foundationRows, ...reasoningRows].map((r) => r.id),
+  );
+  const missingTagged = problemLessonIds(filtered).filter(
+    (id) => !resolvedLessonIds.has(id),
+  );
+
+  const caseRows: PathwayCaseRow[] = filtered.caseIds
     .map((id) => getClinicalCase(id))
-    .filter(Boolean);
+    .filter((c): c is NonNullable<typeof c> => Boolean(c))
+    .map((c) => ({
+      id: c.id,
+      title: c.title,
+      format: c.format,
+    }));
 
   return (
     <AppShell title={filtered.title}>
       <p className="-mt-4 mb-2 max-w-3xl text-sm leading-6 text-[var(--muted)]">
         {filtered.summary}
       </p>
-      <p className="mb-6 text-xs text-[var(--muted)]">
+      <p className="mb-4 text-xs text-[var(--muted)]">
         {STUDENT_COPY.presentationsDisclaimer}
       </p>
+      <p className="mb-6 text-xs text-[var(--muted)]">
+        {counts.lessons} linked lesson{counts.lessons === 1 ? "" : "s"} ·{" "}
+        {counts.cases} clinical case{counts.cases === 1 ? "" : "s"}
+      </p>
+
+      <PresentationHowToUse />
 
       <div className="mb-6">
         <Button asChild variant="outline" size="sm">
@@ -62,67 +111,24 @@ export default async function PresentationDetailPage({
         </Button>
       </div>
 
-      <section className="mb-8">
-        <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl">
-          Lessons
-        </h2>
-        {lessonRows.filter(Boolean).length === 0 ? (
-          <p className="text-sm text-[var(--muted)]">
-            No linked lessons in the current curriculum graph.
-          </p>
-        ) : (
-          <ul className="space-y-2">
-            {lessonRows.map((row) =>
-              row ? (
-                <li
-                  key={row.lesson.id}
-                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3"
-                >
-                  <Link
-                    href={`/lessons/${row.lesson.id}`}
-                    className="font-medium text-[var(--brand-strong)] hover:underline"
-                  >
-                    {row.lesson.title}
-                  </Link>
-                  <p className="mt-1 text-xs text-[var(--muted)]">
-                    {row.moduleTitle}
-                  </p>
-                </li>
-              ) : null,
-            )}
-          </ul>
-        )}
-      </section>
+      <PresentationLessonList
+        title="1. Foundational lessons"
+        emptyLabel="No foundational lessons linked in the current curriculum graph."
+        rows={foundationRows}
+      />
+      <PresentationLessonList
+        title="2. Reasoning lessons"
+        emptyLabel="No reasoning lessons linked in the current curriculum graph."
+        rows={reasoningRows}
+      />
+      <PresentationCaseList rows={caseRows} />
 
-      <section>
-        <h2 className="mb-3 font-[family-name:var(--font-display)] text-xl">
-          Clinical cases
-        </h2>
-        {caseRows.length === 0 ? (
-          <p className="text-sm text-[var(--muted)]">
-            No linked cases yet for this presentation.
-          </p>
-        ) : (
-          <ul className="space-y-2">
-            {caseRows.map((c) =>
-              c ? (
-                <li
-                  key={c.id}
-                  className="flex flex-wrap items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3"
-                >
-                  <Link
-                    href={`/cases/${c.id}`}
-                    className="font-medium text-[var(--brand-strong)] hover:underline"
-                  >
-                    {c.title}
-                  </Link>
-                  <Badge>Case</Badge>
-                </li>
-              ) : null,
-            )}
-          </ul>
-        )}
-      </section>
+      {missingTagged.length > 0 ? (
+        <p className="mt-6 text-xs text-[var(--muted)]">
+          Some tagged resources are temporarily unavailable:{" "}
+          {missingTagged.join(", ")}.
+        </p>
+      ) : null}
     </AppShell>
   );
 }

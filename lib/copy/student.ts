@@ -115,6 +115,19 @@ export const STUDENT_COPY = {
     "Browse high-yield clinical presentations and jump into linked lessons and cases already in the curriculum.",
   presentationsDisclaimer:
     "Educational pathways only. Exact thresholds and regimens belong to supervised clinical care and current guidelines.",
+  presentationsHowToTitle: "How to use this pathway",
+  presentationsHowToBody:
+    "Work each presentation in order so mechanisms support bedside reasoning before you practice with cases.",
+  presentationsHowToStep1:
+    "Foundational lessons — organ-system mechanisms and vocabulary",
+  presentationsHowToStep2:
+    "Reasoning lessons — clerkship differentials, threat filters, and first moves",
+  presentationsHowToStep3:
+    "Clinical cases — apply the pathway; do not skip ahead to the answer",
+  presentationsFeaturedEyebrow: "Ready for presentation pathways",
+  presentationsFeaturedBody:
+    "You have enough organ-system or clerkship progress to approach patients by chief complaint. Start with a pathway, then finish its linked cases.",
+  presentationsFeaturedCta: "Open all pathways",
 } as const;
 
 /** Default human descriptions for known modules (by id). Fallback to seed description. */
