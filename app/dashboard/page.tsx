@@ -11,6 +11,7 @@ import {
 } from "@/lib/copy/student";
 import {
   buildCompetencyMatrix,
+  competencyModuleActivity,
   topCompetencyGaps,
 } from "@/lib/competency/aggregate";
 import { COMPETENCY_DOMAIN_LABELS } from "@/lib/competency/domains";
@@ -47,7 +48,10 @@ export default async function DashboardPage() {
   const nextSummary =
     next?.concepts[0]?.summary ?? STUDENT_COPY.continueSupporting;
   const competencyRows = await buildCompetencyMatrix(state);
-  const gaps = topCompetencyGaps(competencyRows, 3);
+  const activity = await competencyModuleActivity(state);
+  const gaps = topCompetencyGaps(competencyRows, 3, {
+    moduleActivityMs: activity,
+  });
 
   return (
     <AppShell title="Your learning dashboard">
@@ -129,12 +133,12 @@ export default async function DashboardPage() {
                 <li key={`${g.moduleId}-${g.domain}`} className="flex flex-wrap gap-2">
                   <Badge>{COMPETENCY_DOMAIN_LABELS[g.domain]}</Badge>
                   <span>{g.moduleTitle}</span>
-                  {g.nextLessonId ? (
+                  {g.nextHref ? (
                     <Link
                       className="text-[var(--brand-strong)] underline"
-                      href={`/lessons/${g.nextLessonId}`}
+                      href={g.nextHref}
                     >
-                      Continue
+                      {g.nextKind === "quiz" ? "Continue quiz" : "Continue"}
                     </Link>
                   ) : null}
                 </li>

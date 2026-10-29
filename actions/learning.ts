@@ -82,6 +82,7 @@ export async function markBlockViewed(input: unknown) {
 
   revalidatePath(`/lessons/${parsed.lessonId}`);
   revalidatePath("/dashboard");
+  revalidatePath("/competency");
   return { ok: true as const, progress: state.lessonProgress[parsed.lessonId] };
 }
 
@@ -131,6 +132,7 @@ export async function submitFormativeQuiz(input: unknown) {
   revalidatePath(`/lessons/${parsed.lessonId}`);
   revalidatePath(`/lessons/${parsed.lessonId}/quiz`);
   revalidatePath("/dashboard");
+  revalidatePath("/competency");
   return {
     ok: true as const,
     score,
@@ -191,6 +193,7 @@ export async function submitModuleExam(input: unknown) {
   revalidatePath(`/modules/${mod.id}/exam`);
   revalidatePath("/qbank");
   revalidatePath("/dashboard");
+  revalidatePath("/competency");
   return { ok: true as const, score, passed };
 }
 
