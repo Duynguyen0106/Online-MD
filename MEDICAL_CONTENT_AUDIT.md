@@ -1,10 +1,28 @@
 # Medical Content Audit
 
-**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27 · **Fix-everything:** 2026-10-27  
+**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Pedagogy pass:** 2026-10-27 · **Expert re-audit:** 2026-10-27 · **Fix-everything:** 2026-10-27 · **Plan land on main:** 2026-10-29  
 **Scope:** Live Online MD curriculum graph (seed + expansion waves + 4-year catalog) + MT.vn P0 surfaces  
 **Method:** Inspect-only inventory via `scripts/medical-content-audit.ts` → `docs/audit/*.json`, plus targeted review of cardiovascular, sepsis, VTE, heart-failure pathways, and P0 presentation/competency metadata.  
 **Status:** Structural and educational audit. **Not medical approval.**  
 **Expert re-audit:** [`MEDICAL_EXPERT_AUDIT.md`](MEDICAL_EXPERT_AUDIT.md) (post–fix-everything teaching-quality pass).
+
+---
+
+## Plan land refresh (2026-10-29)
+
+Rebased pedagogy branch onto main (AMI case + student UX sanitize + competency evidence). Re-ran `npm run audit:medical`.
+
+| Metric | Value |
+| --- | --- |
+| Lessons / objectives / quizzes / qbank / cases / flashcards | 884 / 3422 / **890** / 24 / **25** / 846 |
+| Content blocks | **4337** |
+| Structural zeros (missing objs/refs/vague/concept flags/quiz structural) | **held** |
+| Guideline-sensitive lessons / quiz rows | 808 / 85 (flagged only) |
+| Soft title overlaps | 125 |
+| Student Sources / meta | Student sanitize strips Ready-for-quiz + unapproved jargon; enhance uses `STUDENT_SOURCES_FOOTER` |
+| Product pedagogy | Presentation **Study set** (flashcards + practice quiz CTA); concept titles in lesson TOC |
+
+Pedagogy plan workstreams A–E delivered on this branch; HIGH faculty gate unchanged.
 
 ---
 

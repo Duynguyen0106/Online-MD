@@ -346,5 +346,20 @@
     "objectiveCount": 1,
     "teachingPointsLen": 115,
     "hasPresentation": true
+  },
+  {
+    "id": "case-ami-1",
+    "title": "Pain Out of Proportion — Acute Mesenteric Ischemia",
+    "moduleId": "mod-surg",
+    "stageCount": 4,
+    "stages": [
+      "Based on the chief complaint and triage vitals alone, which leading diagnosis be",
+      "Given the HPI and exam, what is the highest-yield next diagnostic test?",
+      "CTA confirms the diagnosis. What is the definitive diagnosis and the primary man",
+      "Educational wrap-up — pathophysiology and board pearls (no additional gate)."
+    ],
+    "objectiveCount": 2,
+    "teachingPointsLen": 332,
+    "hasPresentation": true
   }
 ]

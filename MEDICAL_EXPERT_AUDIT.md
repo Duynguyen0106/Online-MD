@@ -1,8 +1,8 @@
 # Medical Expert Re-Audit (post–fix-everything pass)
 
-**Date:** 2026-10-27  
+**Date:** 2026-10-27 · **Reconfirm:** 2026-10-29 (rebased onto main; audit re-run)  
 **Auditor posture:** Experienced medical educator (mechanisms → phenotype → reasoning → assessment)  
-**Baseline:** `cursor/medical-pedagogy-pass-405e` (post–pedagogy + safe fix pass)  
+**Baseline:** `cursor/medical-pedagogy-pass-405e` (post–pedagogy + safe fix pass + main sync)  
 **Method:** `npm run audit:medical` + regression tests for enrichment FPs + live sampling  
 **Status:** Educational audit. **Not medical approval. Not a license to invent cutoffs or regimens.**
 
@@ -29,7 +29,7 @@
 | Metric | Value |
 | --- | --- |
 | Lessons / objectives / blocks | 884 / 3422 / 4337 |
-| Formative quizzes / qbank / cases / flashcards | **890** / 24 / 24 / 846 |
+| Formative quizzes / qbank / cases / flashcards | **890** / 24 / **25** / 846 |
 | Missing objectives · vague verbs · missing Sources · concept flags · quiz structural gaps | **0** |
 | Guideline-sensitive lessons · guideline quiz rows | **808** · **85** |
 | Soft title overlaps | 125 |

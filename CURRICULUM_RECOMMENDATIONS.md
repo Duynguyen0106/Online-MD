@@ -1,12 +1,12 @@
 # Curriculum Recommendations
 
-**Date:** 2026-09-28 · **Pedagogy update:** 2026-10-27 · **Fix-everything:** 2026-10-27  
+**Date:** 2026-09-28 · **Pedagogy update:** 2026-10-27 · **Fix-everything:** 2026-10-27 · **Plan land:** 2026-10-29  
 **Principle:** Progress Foundations → Physiology → Pathophysiology → Pharmacology → Organ-system medicine → Clinical presentation → Reasoning → Diagnosis → Management → Cases → Assessment → Spaced review.  
 **Constraint:** Recommendations first. Execute only safe, non-destructive changes unless a qualified reviewer directs otherwise.
 
 ---
 
-## Fix-everything + pedagogy status (2026-10-27)
+## Fix-everything + pedagogy status (2026-10-29)
 
 | Recommendation | Status |
 | --- | --- |
@@ -14,12 +14,14 @@
 | Fix enrichment false positives (hold / NIV / hemolysis) | **Done** + regression tests |
 | Gate enhancement scaffold when cores already teach | **Done** (light enhance path) |
 | Wire existing + new mechanism figures into P0 seeds | **Done** (CV/renal/ID + GFR Starling + prior SVGs) |
-| Extend high-yield cases to 4-stage pattern | **Done** for presentation-priority set (**18** total 4-stage) |
+| Extend high-yield cases to 4-stage pattern | **Done** for presentation-priority set (+ AMI progressive on main) |
 | High-yield formatives (mechanism / next-step) | **Done** (+6 items; near-miss distractors tightened) |
 | Retitle same-module PFT overlap + learner_level | **Done** (`les-pulm-2` foundational; catalog advanced companion) |
+| Presentation study sets + concept TOC titles | **Done** (2026-10-29) |
+| Student Sources free of faculty audit jargon | **Done** (sanitize + `STUDENT_SOURCES_FOOTER`) |
 | Faculty medical review of HIGH pathways | **Still open** — do not invent cutoffs |
 | Grow qbank beyond 24 with sign-off | **Still open** |
-| Remaining 6 two-stage cases | **Backlog** — heme/OB/MSK/surg/neuro residuals |
+| Remaining two-stage cases | **Backlog** — heme/OB/MSK/surg/neuro residuals |
 
 ---
 

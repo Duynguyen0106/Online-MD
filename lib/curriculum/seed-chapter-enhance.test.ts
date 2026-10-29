@@ -50,11 +50,7 @@ describe("seed-chapter-enhance", () => {
       .flatMap((c) => c.blocks)
       .map((b) => b.bodyMd || "")
       .join("\n");
-<<<<<<< HEAD
     assert.match(body, /confirm doses, thresholds, and regimens|Sources/i);
-=======
-    assert.match(body, /Sources|citations for this lesson are being verified/i);
->>>>>>> a666906 (Fix enrichment false positives and safe pedagogy residuals)
     assert.match(body, /Control-point checklist/);
   });
 
