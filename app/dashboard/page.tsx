@@ -17,9 +17,17 @@ import { COMPETENCY_DOMAIN_LABELS } from "@/lib/competency/domains";
 import {
   getAllLessons,
   getAllModules,
+  getClinicalCases,
   getNextLesson,
   getPhases,
 } from "@/lib/curriculum/accessors";
+import {
+  featuredPresentationProblems,
+  filterExistingProblemLinks,
+  listClinicalProblems,
+  pathwayLinkCounts,
+  shouldFeaturePresentationPathways,
+} from "@/lib/curriculum/clinical-problem-tags";
 import { readStudentState } from "@/lib/demo/store";
 import {
   canAccessStep1Qbank,
@@ -48,6 +56,42 @@ export default async function DashboardPage() {
     next?.concepts[0]?.summary ?? STUDENT_COPY.continueSupporting;
   const competencyRows = await buildCompetencyMatrix(state);
   const gaps = topCompetencyGaps(competencyRows, 3);
+
+  const clerkshipModuleIds = modules
+    .filter((m) => m.isCoreClerkship)
+    .map((m) => m.id);
+  const organModuleIds = [
+    ...new Set(
+      listClinicalProblems().flatMap((p) => p.relatedModuleIds),
+    ),
+  ];
+  const featurePathways = shouldFeaturePresentationPathways({
+    moduleProgress: state.moduleProgress,
+    clerkshipModuleIds,
+    organModuleIds,
+  });
+  const masteredModuleIds = new Set(
+    modules
+      .filter((m) => state.moduleProgress[m.id]?.state === "mastered")
+      .map((m) => m.id),
+  );
+  const liveLessonIds = new Set(lessons.map((l) => l.id));
+  const liveCaseIds = new Set(getClinicalCases().map((c) => c.id));
+  const liveProblems = listClinicalProblems()
+    .map((p) => filterExistingProblemLinks(p, liveLessonIds, liveCaseIds))
+    .filter((p) => {
+      const c = pathwayLinkCounts(p);
+      return c.lessons + c.cases > 0;
+    });
+  const featuredProblems = featurePathways
+    ? featuredPresentationProblems(liveProblems, masteredModuleIds, {
+        forceAll: clerkshipModuleIds.some((id) => {
+          const s = state.moduleProgress[id]?.state;
+          return s === "in_progress" || s === "completed" || s === "mastered";
+        }),
+        limit: 6,
+      })
+    : [];
 
   return (
     <AppShell title="Your learning dashboard">
@@ -103,7 +147,53 @@ export default async function DashboardPage() {
         </section>
       </div>
 
-      <section className="mt-6 grid gap-6 lg:grid-cols-2">
+      {featurePathways && featuredProblems.length > 0 ? (
+        <section className="mt-6 rounded-2xl border border-[var(--brand)]/30 bg-[var(--surface)] p-6">
+          <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--brand-strong)]">
+              {STUDENT_COPY.presentationsFeaturedEyebrow}
+            </p>
+            <Link
+              href="/presentations"
+              className="text-xs text-[var(--brand-strong)] underline"
+            >
+              {STUDENT_COPY.presentationsFeaturedCta}
+            </Link>
+          </div>
+          <h2 className="font-[family-name:var(--font-display)] text-2xl">
+            {STUDENT_COPY.presentationsTitle}
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--muted)]">
+            {STUDENT_COPY.presentationsFeaturedBody}
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProblems.map((p) => {
+              const counts = pathwayLinkCounts(p);
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/presentations/${p.slug}`}
+                  className="rounded-xl border border-[var(--border)] bg-[var(--background)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--brand)]"
+                >
+                  <div className="mb-2 flex flex-wrap items-center gap-2">
+                    <h3 className="font-medium">{p.title}</h3>
+                    <Badge>
+                      {counts.lessons}L · {counts.cases}C
+                    </Badge>
+                  </div>
+                  <p className="line-clamp-2 text-xs leading-5 text-[var(--muted)]">
+                    {p.summary}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
+
+      <section
+        className={`mt-6 grid gap-6 ${featurePathways ? "lg:grid-cols-1" : "lg:grid-cols-2"}`}
+      >
         <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
           <div className="mb-3 flex items-center justify-between gap-2">
             <h2 className="font-[family-name:var(--font-display)] text-lg">
@@ -142,18 +232,21 @@ export default async function DashboardPage() {
             </ul>
           )}
         </div>
-        <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
-          <h2 className="mb-2 font-[family-name:var(--font-display)] text-lg">
-            {STUDENT_COPY.presentationsTitle}
-          </h2>
-          <p className="mb-4 text-sm leading-6 text-[var(--muted)]">
-            Jump into clerkship reasoning by clinical presentation — chest pain,
-            shock, AKI, and more — using lessons and cases already in the curriculum.
-          </p>
-          <Button asChild variant="secondary" size="sm">
-            <Link href="/presentations">Browse presentations</Link>
-          </Button>
-        </div>
+        {!featurePathways ? (
+          <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5">
+            <h2 className="mb-2 font-[family-name:var(--font-display)] text-lg">
+              {STUDENT_COPY.presentationsTitle}
+            </h2>
+            <p className="mb-4 text-sm leading-6 text-[var(--muted)]">
+              After you finish related organ-system modules—or once you enter
+              Years 3–4—pathways like chest pain, shock, and AKI appear here with
+              linked lessons and cases.
+            </p>
+            <Button asChild variant="secondary" size="sm">
+              <Link href="/presentations">Browse presentations</Link>
+            </Button>
+          </div>
+        ) : null}
       </section>
 
       <div className="mt-10 space-y-10">
