@@ -312,10 +312,10 @@ export function topCompetencyGaps(
     for (const domain of COMPETENCY_DOMAINS) {
       const cell = row.cells[domain];
       if (cell.score >= 0.95) continue;
-      // Weakness × recent activity. Partial evidence (sections/quizzes started)
-      // outranks untouched zeros in the same module so Suggested focus stays actionable.
+      // Weakness × recent activity. Meaningful partial evidence (sections/quizzes
+      // started) outranks untouched zeros so Suggested focus stays actionable.
       let priority = (1 - cell.score) * (0.25 + 0.75 * activity);
-      if (cell.score > 0 && cell.score < 0.95) {
+      if (cell.score >= 0.1 && cell.score < 0.95) {
         priority += 0.35;
       }
       gaps.push({
