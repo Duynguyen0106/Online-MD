@@ -105,7 +105,7 @@ export const STUDENT_COPY = {
   moduleProgressHint: "Complete the lessons and assessment to finish this module.",
   competencyTitle: "Competency map",
   competencyIntro:
-    "See where your lesson progress and assessments concentrate across modules and skill domains.",
+    "Evidence updates as you complete lesson sections and quizzes. Suggested focus highlights weaker skill domains from your recent study.",
   competencyDisclaimer:
     "Study evidence from your progress — not a clinical competency certificate.",
   competencyWidgetTitle: "Focus areas",

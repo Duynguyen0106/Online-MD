@@ -4,16 +4,24 @@ import { CompetencyHeatmap } from "@/components/student/competency-heatmap";
 import { Badge } from "@/components/ui/badge";
 import {
   buildCompetencyMatrix,
+  competencyModuleActivity,
   topCompetencyGaps,
 } from "@/lib/competency/aggregate";
 import { COMPETENCY_DOMAIN_LABELS } from "@/lib/competency/domains";
 import { STUDENT_COPY } from "@/lib/copy/student";
 import { readStudentState } from "@/lib/demo/store";
 
+function continueLabel(kind: string | null | undefined) {
+  if (kind === "quiz") return "Continue quiz";
+  if (kind === "module") return "Open module";
+  return "Continue lesson";
+}
+
 export default async function CompetencyPage() {
   const state = await readStudentState();
   const rows = await buildCompetencyMatrix(state);
-  const gaps = topCompetencyGaps(rows, 5);
+  const activity = await competencyModuleActivity(state);
+  const gaps = topCompetencyGaps(rows, 5, { moduleActivityMs: activity });
 
   return (
     <AppShell title={STUDENT_COPY.competencyTitle}>
@@ -40,12 +48,12 @@ export default async function CompetencyPage() {
                 <span className="text-xs text-[var(--muted)]">
                   {Math.round(g.score * 100)}% evidence
                 </span>
-                {g.nextLessonId ? (
+                {g.nextHref ? (
                   <Link
-                    href={`/lessons/${g.nextLessonId}`}
+                    href={g.nextHref}
                     className="text-xs text-[var(--brand-strong)] underline"
                   >
-                    Continue lesson
+                    {continueLabel(g.nextKind)}
                   </Link>
                 ) : (
                   <Link

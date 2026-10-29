@@ -44,9 +44,7 @@ export function CompetencyHeatmap({
                 className="p-2 text-center font-medium"
                 title={COMPETENCY_DOMAIN_LABELS[d]}
               >
-                {compact
-                  ? COMPETENCY_DOMAIN_SHORT[d]
-                  : COMPETENCY_DOMAIN_SHORT[d]}
+                {COMPETENCY_DOMAIN_SHORT[d]}
               </th>
             ))}
             <th className="p-2 text-center font-medium">Next</th>
@@ -71,9 +69,9 @@ export function CompetencyHeatmap({
               </td>
               {domains.map((domain: CompetencyDomainId) => {
                 const cell = row.cells[domain];
-                const href = row.nextLessonId
-                  ? `/lessons/${row.nextLessonId}`
-                  : `/modules/${row.moduleId}`;
+                const href =
+                  cell.nextHref ??
+                  (row.nextHref || `/modules/${row.moduleId}`);
                 return (
                   <td key={domain} className="p-1.5 text-center">
                     <Link
@@ -90,12 +88,12 @@ export function CompetencyHeatmap({
                 );
               })}
               <td className="p-2 text-center text-xs">
-                {row.nextLessonId ? (
+                {row.nextHref ? (
                   <Link
-                    href={`/lessons/${row.nextLessonId}`}
+                    href={row.nextHref}
                     className="text-[var(--brand-strong)] underline"
                   >
-                    Continue
+                    {row.nextKind === "quiz" ? "Continue quiz" : "Continue"}
                   </Link>
                 ) : (
                   <span className="text-[var(--muted)]">—</span>
