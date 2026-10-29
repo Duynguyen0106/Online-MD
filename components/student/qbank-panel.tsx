@@ -47,18 +47,24 @@ export function QbankPanel({
             value={moduleId}
             onChange={(e) => setModuleId(e.target.value)}
           >
-            {modules.map((m) => (
-              <option key={m.id} value={m.id}>
-                {m.title}
-                {moduleGates[m.id] ? " (not yet available)" : ""}
-              </option>
-            ))}
+            {modules.length === 0 ? (
+              <option value="">No modules published</option>
+            ) : (
+              modules.map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.title}
+                  {moduleGates[m.id] ? " (locked)" : ""}
+                </option>
+              ))
+            )}
           </select>
         </label>
         <p className="mt-2 text-xs text-[var(--muted)]">
-          {selectedLocked
-            ? moduleGates[moduleId]
-            : STUDENT_COPY.qbankAvailable}
+          {modules.length === 0
+            ? "Question banks appear once modules are published."
+            : selectedLocked
+              ? moduleGates[moduleId]
+              : STUDENT_COPY.qbankAvailable}
         </p>
       </div>
 
@@ -157,57 +163,89 @@ export function QbankPanel({
           <h2 className="font-[family-name:var(--font-display)] text-xl">
             Practice session
           </h2>
-          {activeQuestions.map((q, i) => (
-            <fieldset
-              key={q.id}
-              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
+          {activeQuestions.length === 0 ? (
+            <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+              <p className="text-sm text-[var(--muted)]">
+                No questions loaded for this session. Try another bank or finish
+                more lessons first.
+              </p>
+            </div>
+          ) : (
+            activeQuestions.map((q, i) => (
+              <fieldset
+                key={q.id}
+                className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
+              >
+                <legend className="text-sm text-[var(--muted)]">
+                  Question {i + 1}
+                </legend>
+                <p className="mb-3 text-sm leading-7">{q.stem}</p>
+                <div className="space-y-2">
+                  {q.choices.map((c) => (
+                    <label
+                      key={c.id}
+                      className={cn(
+                        "flex gap-2 rounded-lg border border-[var(--border)] px-3 py-2 text-sm",
+                        responses[q.id] === c.id && "bg-[var(--brand-soft)]",
+                      )}
+                    >
+                      <input
+                        type="radio"
+                        name={q.id}
+                        checked={responses[q.id] === c.id}
+                        onChange={() =>
+                          setResponses((r) => ({ ...r, [q.id]: c.id }))
+                        }
+                      />
+                      {c.text}
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+            ))
+          )}
+          {activeQuestions.length > 0 ? (
+            <Button
+              disabled={pending}
+              onClick={() => {
+                startTransition(async () => {
+                  setError(null);
+                  try {
+                    const res = await submitQbankAttempt({
+                      attemptId,
+                      responses,
+                    });
+                    setScore(res.score);
+                  } catch (e) {
+                    setError(
+                      e instanceof Error
+                        ? e.message
+                        : "Could not submit answers. Try again.",
+                    );
+                  }
+                });
+              }}
             >
-              <legend className="text-sm text-[var(--muted)]">Question {i + 1}</legend>
-              <p className="mb-3 text-sm leading-7">{q.stem}</p>
-              <div className="space-y-2">
-                {q.choices.map((c) => (
-                  <label
-                    key={c.id}
-                    className={cn(
-                      "flex gap-2 rounded-lg border border-[var(--border)] px-3 py-2 text-sm",
-                      responses[q.id] === c.id && "bg-[var(--brand-soft)]",
-                    )}
-                  >
-                    <input
-                      type="radio"
-                      name={q.id}
-                      checked={responses[q.id] === c.id}
-                      onChange={() =>
-                        setResponses((r) => ({ ...r, [q.id]: c.id }))
-                      }
-                    />
-                    {c.text}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-          ))}
-          <Button
-            disabled={pending}
-            onClick={() => {
-              startTransition(async () => {
-                const res = await submitQbankAttempt({ attemptId, responses });
-                setScore(res.score);
-              });
-            }}
-          >
-            Submit answers
-          </Button>
+              Submit answers
+            </Button>
+          ) : null}
           {score !== null ? (
             <p className="text-sm">Session score {percent(score)}</p>
           ) : null}
         </div>
       ) : (
-        <p className="text-sm text-[var(--muted)]">
-          Complete the related lessons and assessments first. The question bank is for practice
-          after you’ve learned the material.
-        </p>
+        <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+          <p className="text-sm text-[var(--muted)]">
+            Complete the related lessons and assessments first. The question bank is
+            for practice after you’ve learned the material.
+          </p>
+        </div>
       )}
+      {error ? (
+        <p className="text-sm text-amber-800" role="alert">
+          {error}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -239,7 +277,7 @@ function GateCard({
         disabled={!unlocked || pending}
         onClick={onStart}
       >
-        {unlocked ? "Start questions" : "Not yet available"}
+        {unlocked ? "Start questions" : "Locked"}
       </Button>
     </div>
   );

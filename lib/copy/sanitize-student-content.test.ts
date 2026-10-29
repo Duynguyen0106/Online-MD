@@ -35,6 +35,24 @@ Last reviewed: not yet medically approved. Faculty should attach verified citati
     assert.doesNotMatch(out, /REFERENCE_REVIEW_REQUIRED/);
     assert.match(out, /CTA is preferred/);
   });
+
+  it("strips Ready for quiz plumbing before Sources", () => {
+    const raw = `Teaching body.
+
+### Ready for quiz
+
+Pass threshold ≥80%. Afterward, add the flashcard (**PFK-1**) to spaced repetition so the chapter does not collapse back into a summary.
+
+### Sources
+
+Exact doses belong to primary sources.`;
+    const out = sanitizeStudentMarkdown(raw);
+    assert.doesNotMatch(out, /Ready for quiz/i);
+    assert.doesNotMatch(out, /Pass threshold/i);
+    assert.doesNotMatch(out, /spaced repetition/i);
+    assert.match(out, /Teaching body/);
+    assert.match(out, /### Sources/);
+  });
 });
 
 describe("formatStudentLastReviewed", () => {
