@@ -1,9 +1,10 @@
 # Medical Content Audit
 
-**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27  
+**Date:** 2026-09-28 (baseline) · **Refresh:** 2026-10-27 · **Full-app re-run:** 2026-10-27 (post-merge `d33588d`)  
 **Scope:** Live Online MD curriculum graph (seed + expansion waves + 4-year catalog) + MT.vn P0 surfaces  
 **Method:** Inspect-only inventory via `scripts/medical-content-audit.ts` → `docs/audit/*.json`, plus targeted review of cardiovascular, sepsis, VTE, heart-failure pathways, and P0 presentation/competency metadata.  
-**Status:** Structural and educational audit. **Not medical approval.**
+**Status:** Structural and educational audit. **Not medical approval.**  
+**Companion:** [`FULL_APP_AUDIT.md`](FULL_APP_AUDIT.md) · [`TECHNICAL_HEALTH_AUDIT.md`](TECHNICAL_HEALTH_AUDIT.md) · [`UX_UI_AUDIT.md`](UX_UI_AUDIT.md)
 
 ---
 
