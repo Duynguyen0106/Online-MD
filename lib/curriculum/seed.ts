@@ -7,6 +7,7 @@ import type {
   QbankQuestion,
   QuizQuestion,
 } from "@/lib/types/domain";
+import { ischemicHeartAcsLesson } from "@/lib/curriculum/lessons/ischemic-heart-acs";
 
 /** Stable IDs for curriculum graph */
 export const IDS = {
@@ -1044,55 +1045,7 @@ Pressure–volume loops integrate these concepts for valvular disease and cardio
                 },
               ],
             },
-            {
-              id: "les-cv-2",
-              moduleId: IDS.modCvb,
-              title: "Ischemic Heart Disease & ACS",
-              slug: "cv-acs",
-              sequence: 2,
-              estimatedMinutes: 45,
-              status: "published",
-              quizPassThreshold: 0.8,
-              quizQuestionIds: ["qq-cv-2"],
-              concepts: [
-                {
-                  id: "con-cv-2a",
-                  lessonId: "les-cv-2",
-                  title: "Coronary territories and ACS classification",
-                  sequence: 1,
-                  summary:
-                    "LAD/LCx/RCA territories; STEMI vs NSTE-ACS defined by ECG and biomarkers.",
-                  blocks: [
-                    reading(
-                      "blk-cv-2a-r",
-                      "con-cv-2a",
-                      "Coronary anatomy & ACS",
-                      1,
-                      `## Territories (typical)
-- **LAD**: anterior wall, septum ± apex (V1–V4).
-- **LCx**: lateral wall (I, aVL, V5–V6).
-- **RCA**: inferior wall (II, III, aVF); often SA/AV nodal branches.
-
-## ACS spectrum
-Atherosclerotic plaque disruption → thrombosis.
-- **Unstable angina**: ischemia without troponin rise.
-- **NSTEMI**: troponin(+), no ST elevation meeting STEMI criteria.
-- **STEMI**: occlusive thrombus with ST elevation (or equivalent) → emergent reperfusion.
-
-Demand ischemia (type 2 MI) occurs when supply cannot meet increased demand without acute atherothrombosis as the primary event.`,
-                    ),
-                    vignette(
-                      "blk-cv-2a-x",
-                      "con-cv-2a",
-                      "Vignette: inferior STEMI",
-                      2,
-                      `62M with diaphoresis; ECG shows ST elevation in II, III, aVF with reciprocal depression in aVL.  
-Localize the wall, anticipate RCA vs LCx, and list immediate goals. **Educational note:** MONA-BASH is historical teaching vocabulary only — contrast with contemporary ABC + dual antiplatelet + anticoagulation + reperfusion thinking (verify current ACLS/society pathways; REFERENCE_REVIEW_REQUIRED).`,
-                    ),
-                  ],
-                },
-              ],
-            },
+            ischemicHeartAcsLesson,
             {
               id: "les-cv-3",
               moduleId: IDS.modCvb,
